@@ -1,0 +1,156 @@
+
+
+data_AVS_bmrb_pdb_report_28061
+
+save_AVS_chem_shift_analysis
+    _AVS_report.Sf_category          AVS_report
+    _AVS_report.Sf_framecode         AVS_chem_shift_analysis
+    _AVS_report.Entry_ID             28061
+    _AVS_report.ID                   1
+    _AVS_report.Software_ID          1
+    _AVS_report.Software_label       $AVS
+
+loop_
+    _AVS_analysis.Assembly_ID
+    _AVS_analysis.Entity_assembly_ID
+    _AVS_analysis.Entity_ID
+    _AVS_analysis.Comp_index_ID
+    _AVS_analysis.Comp_ID
+    _AVS_analysis.Comp_overall_assignment_score
+    _AVS_analysis.Comp_typing_score
+    _AVS_analysis.Comp_SRO_score
+    _AVS_analysis.Comp_1H_shifts_analysis_status
+    _AVS_analysis.Comp_13C_shifts_analysis_status
+    _AVS_analysis.Comp_15N_shifts_analysis_status
+    _AVS_analysis.SRO_rule_break
+    _AVS_analysis.SRO_rule_break_probability
+    _AVS_analysis.Entry_ID
+    _AVS_analysis.AVS_report_ID
+
+ 1 1 1 148 VAL Anomalous Consistent Consistent Consistent Anomalous Consistent  . .  28061 1 
+
+stop_
+
+loop_
+    _AVS_analysis.Assembly_ID
+    _AVS_analysis.Entity_assembly_ID
+    _AVS_analysis.Entity_ID
+    _AVS_analysis.Comp_index_ID
+    _AVS_analysis.Comp_ID
+    _AVS_analysis.Atom_ID
+    _AVS_analysis.Observed_chem_shift
+    _AVS_analysis.Observed_chem_shift_typing
+    _AVS_analysis.Stat_chem_shift_expected
+    _AVS_analysis.Stat_chem_shift_std
+    _AVS_analysis.Stat_chem_shift_chi_sqr
+    _AVS_analysis.Entry_ID
+    _AVS_analysis.AVS_report_ID
+
+ 1 1 1 148 VAL C 183.705 A 175.62 1.9  2.0880e-05  28061 1 
+ 1 1 1 148 VAL CA 60.520 . 62.49 2.86  4.9094e-01  28061 1 
+ 1 1 1 148 VAL CB 35.805 . 32.73 1.79  8.5819e-02  28061 1 
+ 1 1 1 148 VAL CG1 22.984 . 21.49 1.36  2.7197e-01  28061 1 
+ 1 1 1 148 VAL CG2 22.386 . 21.26 1.56  4.7042e-01  28061 1 
+ 1 1 1 148 VAL H 7.077 . 8.29 0.67  7.0227e-02  28061 1 
+ 1 1 1 148 VAL HA 4.637 . 4.19 0.58  4.4089e-01  28061 1 
+ 1 1 1 148 VAL HB 1.773 . 1.98 0.32  5.1771e-01  28061 1 
+ 1 1 1 148 VAL HG11 1.074 . 0.83 0.26  3.4801e-01  28061 1 
+ 1 1 1 148 VAL HG12 1.074 . 0.83 0.26  3.4801e-01  28061 1 
+ 1 1 1 148 VAL HG13 1.074 . 0.83 0.26  3.4801e-01  28061 1 
+ 1 1 1 148 VAL HG21 1.009 . 0.8 0.28  4.5541e-01  28061 1 
+ 1 1 1 148 VAL HG22 1.009 . 0.8 0.28  4.5541e-01  28061 1 
+ 1 1 1 148 VAL HG23 1.009 . 0.8 0.28  4.5541e-01  28061 1 
+ 1 1 1 148 VAL N 116.520 . 121.14 4.54  3.0886e-01  28061 1 
+
+stop_
+
+loop_
+    _AVS_analysis.Assembly_ID
+    _AVS_analysis.Entity_assembly_ID
+    _AVS_analysis.Entity_ID
+    _AVS_analysis.Comp_index_ID
+    _AVS_analysis.Comp_ID
+    _AVS_analysis.PRTL_comp_type
+    _AVS_analysis.PRTL_probability_score
+    _AVS_analysis.Entry_ID
+    _AVS_analysis.AVS_report_ID
+
+ 1 1 1 148 VAL CYS 0.71  28061 1 
+ 1 1 1 148 VAL VAL 0.28  28061 1 
+
+stop_
+
+
+save_
+
+save_AVS
+_Software.Sf_category          software
+_Software.Sf_framecode         AVS
+_Software.Entry_ID             28061
+_Software.ID                   1
+_Software.Name                "AutoPeak - validate_assignments"
+_Software.Version              2011-12-10
+_Software.Details             
+;
+Original version modified by BMRB to export results in a BMRB STAR format. Changed status "Misassigned" to "Anomalous"
+;
+
+  loop_
+     _Vendor.Name
+     _Vendor.Address
+     _Vendor.Electronic_address
+     _Vendor.Entry_ID
+     _Vendor.Software_ID
+
+  "Hunter Moseley"
+
+;
+Center for Advanced Biotechnology and Medicine
+Rutgers University
+679 Hoes Lane, Piscataway NJ 08854-5638
+;
+
+  hunter@cabm.rutgers.edu
+  28061   1 
+
+  stop_
+
+  loop_
+    _Task.Task
+    _Task.Entry_ID
+    _Task.Software_ID
+
+  "validate protein chemical shift assignments"  28061   1 
+
+  stop_
+
+  loop_
+    _Software_citation.Citation_ID
+    _Software_citation.Citation_label
+    _Software_citation.Entry_ID
+    _Software_citation.Software_ID
+
+  2  $AVS_citation  28061   1 
+
+  stop_
+
+save_
+
+save_AVS_citation
+  _Citation.Sf_category       citation
+  _Citation.Sf_framecode      AVS_citation
+  _Citation.Entry_ID          28061
+  _Citation.ID                2
+  _Citation.Class             citation
+  _Citation.PubMed_ID         14872126
+  _Citation.Full_citation
+;
+Moseley HN, Sahota G, Montelione GT., Assignment validation software suite 
+for the evaluation and presentation of protein resonance assignment data.
+J Biomol NMR. 28, 341-55 (2004)
+;
+
+  _Citation.Status           published
+  _Citation.Type             journal
+
+save_

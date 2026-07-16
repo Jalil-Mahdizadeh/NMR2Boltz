@@ -95,7 +95,13 @@ class RawAlternative:
     def dedup_key(self) -> tuple[Any, ...]:
         def endpoint_key(endpoint: Endpoint) -> tuple[Any, ...]:
             expression = endpoint.atom_expression or ""
-            is_set_expression = any(symbol in expression for symbol in ("%", "*", "x", "y"))
+            # NMR-STAR conversions of XPLOR/CNS restraints commonly retain
+            # "#" as the author-level digit wildcard. Topology resolution
+            # normalizes it to NEF "%"; recognize it here as well so repeated
+            # canonical expansion rows are collapsed before projection.
+            is_set_expression = any(
+                symbol in expression for symbol in ("%", "*", "#", "x", "y")
+            )
             # Canonical expansion rows for an author atom set are deduplicated.
             # For a plain author atom name, differing canonical atoms remain
             # separate alternatives rather than being silently discarded.

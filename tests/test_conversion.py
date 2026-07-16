@@ -75,6 +75,19 @@ def test_nmrstar_author_wildcard_rows_are_deduplicated():
     assert len(report.ambiguous_groups) == 1
 
 
+def test_nmrstar_legacy_xplor_wildcard_rows_are_deduplicated(tmp_path):
+    source = (FIXTURES / "example.str").read_text(encoding="utf-8")
+    path = tmp_path / "legacy-wildcard.str"
+    path.write_text(source.replace("HG1%", "HG1#").replace("HB%", "HB#"), encoding="utf-8")
+
+    parsed = parse_star_document(path)
+    group1 = next(group for group in parsed.restraint_groups if group.restraint_id == "1")
+
+    assert len(group1.alternatives) == 1
+    assert group1.alternatives[0].endpoint1.atom_expression == "HG1#"
+    assert set(group1.alternatives[0].row_ids) == {"1", "2", "3"}
+
+
 def test_embedded_custom_component_topology():
     path = FIXTURES / "custom_component.nef"
     parsed = parse_star_document(path)

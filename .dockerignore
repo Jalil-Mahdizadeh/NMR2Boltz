@@ -6,6 +6,9 @@
 __pycache__
 *.py[cod]
 *.egg-info
+workspace
+graphify-out
+tmp
 validation
 validation_outputs
 dist

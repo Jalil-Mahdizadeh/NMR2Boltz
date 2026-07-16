@@ -59,19 +59,21 @@ nmr2boltz convert experiment.nef --residue-map residue_map.tsv -o converted
 Build:
 
 ```bash
-docker build -t nmr2boltz:0.1.0 .
+docker build -t nmr2boltz:0.1.0-validated .
 ```
 
-Run with the current directory mounted at `/data`:
+Keep real inputs and outputs under `workspace/` and mount that directory at
+`/workspace` for every run:
 
 ```bash
-docker run --rm -u "$(id -u):$(id -g)" \
-  -v "$PWD:/data" \
-  nmr2boltz:0.1.0 \
-  convert /data/experiment.nef -o /data/converted
+docker run --rm --network none --read-only --tmpfs /tmp:size=64m \
+  -v "$PWD/workspace:/workspace" \
+  nmr2boltz:0.1.0-validated \
+  convert /workspace/input/experiment.nef -o /workspace/output/converted
 ```
 
-The image runs as an unprivileged user by default. The `-u` option makes created files owned by the invoking host user on Linux.
+The image runs as numeric UID/GID 65532 by default. On Linux, add
+`-u "$(id -u):$(id -g)"` if host-owned output files are preferred.
 
 ## Output files
 
@@ -167,6 +169,8 @@ If any alternative or atom-set branch in an OR group cannot be projected safely,
 ## Documentation
 
 - `docs/SCIENTIFIC_METHOD.md`: derivation, format interpretation, assumptions, and validation plan for NMR experts.
+- `output/pdf/SCIENTIFIC_METHOD.pdf`: rendered and visually verified scientific-method artifact.
+- `workspace/output/REAL_TEST_6M6O.md`: real deposited-data benchmark, exact distance results, limitations, and reproduction paths.
 - `docs/BOLTZUI_UNION_EXTENSION.md`: proposed representation and implementation path for ambiguity-aware atom contacts.
 - `docs/EXPERT_REVIEW_CHECKLIST.md`: decisions that should be reviewed before production use.
 

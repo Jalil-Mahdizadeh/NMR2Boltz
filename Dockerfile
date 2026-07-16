@@ -21,5 +21,6 @@ RUN python -m pip install --upgrade pip==26.1.2 setuptools==83.0.0 wheel==0.47.0
     && python -m pip install --no-build-isolation --no-deps .
 
 WORKDIR /work
+USER 65532:65532
 ENTRYPOINT ["nmr2boltz"]
 CMD ["--help"]
