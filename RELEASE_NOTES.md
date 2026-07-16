@@ -23,4 +23,6 @@ The default mode does not turn unresolved OR alternatives into simultaneous rest
 
 ## Validation
 
-See `VALIDATION.md`, `validation/final_status.txt`, and `validation/test_report.txt`. The release gate additionally checks compressed inputs, output schemas, the built wheel in a fresh environment, the source-tree wrapper, and the expert PDF.
+See `VALIDATION.md` and `workspace/output/REAL_TEST_6M6O.md`. The current
+validation covers regression tests, deterministic randomized stress tests,
+container isolation, and a 10-model deposited-data benchmark for PDB 6M6O.

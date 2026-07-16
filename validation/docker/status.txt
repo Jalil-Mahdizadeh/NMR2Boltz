@@ -1,2 +1,0 @@
-docker_available=no
-docker_build_exit=not_run

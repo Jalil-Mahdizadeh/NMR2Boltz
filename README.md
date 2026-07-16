@@ -169,7 +169,6 @@ If any alternative or atom-set branch in an OR group cannot be projected safely,
 ## Documentation
 
 - `docs/SCIENTIFIC_METHOD.md`: derivation, format interpretation, assumptions, and validation plan for NMR experts.
-- `output/pdf/SCIENTIFIC_METHOD.pdf`: rendered and visually verified scientific-method artifact.
 - `workspace/output/REAL_TEST_6M6O.md`: real deposited-data benchmark, exact distance results, limitations, and reproduction paths.
 - `docs/BOLTZUI_UNION_EXTENSION.md`: proposed representation and implementation path for ambiguity-aware atom contacts.
 - `docs/EXPERT_REVIEW_CHECKLIST.md`: decisions that should be reviewed before production use.

@@ -1,4 +1,0 @@
-examples/bond_lengths.json
-examples/example.nef
-examples/proposed_union_schema.yaml
-examples/residue_map.tsv

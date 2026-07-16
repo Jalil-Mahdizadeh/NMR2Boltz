@@ -477,21 +477,37 @@ A production validation should include at least four levels.
 
 The following checks were executed on 2026-07-16 against the source bundle used to build this PDF:
 
-- all 30 Pytest regression, format, topology, logic, and robustness tests passed;
+- all 31 Pytest regression, format, topology, logic, and robustness tests passed;
 - Python byte compilation passed for source, tests, and the stress harness;
-- 50,000 randomized sum-r6 implication cases and 50,000 constructive triangle-inequality cases passed in the final Docker image;
-- 12,500 outward-rounding cases and 5,000 randomized OR-max/AND-min order-invariance cases passed;
+- 100,000 randomized sum-r6 implication cases and 100,000 constructive triangle-inequality cases passed in the final Docker image;
+- 25,000 outward-rounding cases and 10,000 randomized OR-max/AND-min order-invariance cases passed;
 - all 850 explicit hydrogens in the built-in protein and nucleic-acid topologies resolved to one finite, positive parent-bond envelope;
 - NEF, NMR-STAR, compressed NEF, embedded custom-component topology, all three averaging policies, and 32 deterministic ambiguity hypotheses were exercised;
 - strict-mode and non-finite-input failure paths returned their documented exit codes, 3 and 2;
 - the production image ran as UID 65532 with no network, a read-only root filesystem, a 64 MB temporary filesystem, 128 MB memory, and 0.5 CPU; dependency consistency passed `pip check`;
 - the deterministic code graph contained 118 nodes, 410 edges, and 13 communities, with no missing endpoints, dangling edges, self-loops, duplicate edges, or collapsed multiedges.
 
-The final local image tags are `nmr2boltz:0.1.0-validated` and `nmr2boltz:latest`; the validated image digest is `sha256:75db8d3cf837a857f65faf382d92b813a9f8a1a00831941a74a1c8ed89b3af50` and its reported size is 57,851,981 bytes. The Python base image is pinned by digest and direct plus transitive runtime packages are version-pinned.
+The only final local image tag is `nmr2boltz:0.1.0-validated`; its digest is
+`sha256:ee0bb2c1c79cf569fe274e363add28f4d39ec0f3d6201d22c68a0576c05fa74b`,
+its default runtime user is `65532:65532`, and Docker reports a 242 MB size.
+The Python base image is pinned by digest and direct plus transitive runtime
+packages are version-pinned.
 
 External semantics were checked at fixed revisions: BoltzUI `c3e5c7f6ae80d9261c357a0951a0929c50a1115d`, NEF `9ab6bc023a406c87df407837597efecaf289fe55`, and the NMR-STAR dictionary `35c6e32a4c948de8d9bf8b367dfab1217a216c0a`.
 
-No GPU Boltz structure-prediction campaign or experimental-structure benchmark was run. Accordingly, these results support robustness and generality of parsing, logical projection, topology resolution, serialization, and container execution. Predictive efficacy, restraint-satisfaction rates, and improvement over unrestrained Boltz remain empirical questions requiring the controls in Sections 11.3 and 11.4.
+A real experimental-structure benchmark was run against PDB 6M6O and linked
+BMRB entry 28061. PDB and mmCIF coordinates agreed exactly for 30,820 atom
+instances across 10 conformers. The NOE-only conversion emitted 2,707 contacts;
+25,350 model/contact cases had satisfied source antecedents, with zero failures
+of the projected heavy-atom implication. Detailed per-model results and the two
+deposited source-restraint inconsistencies are reported in
+`workspace/output/REAL_TEST_6M6O.md`.
+
+No GPU Boltz structure-prediction campaign was run. Accordingly, these results
+support robustness and generality of parsing, logical projection, topology
+resolution, serialization, and container execution, but do not establish
+improvement over unrestrained Boltz. The PDF rendering of this document was not
+regenerated during the 6M6O follow-up at the user's request.
 
 ---
 

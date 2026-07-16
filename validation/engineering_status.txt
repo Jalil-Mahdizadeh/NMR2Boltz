@@ -1,3 +1,0 @@
-pip_check=0
-ruff_install=1
-ruff_check=99
