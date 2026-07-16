@@ -1,0 +1,16 @@
+.git
+.gitignore
+.venv
+.release_venv
+.pytest_cache
+__pycache__
+*.py[cod]
+*.egg-info
+validation
+validation_outputs
+dist
+tests
+docs
+examples
+*.zip
+*.tar.gz

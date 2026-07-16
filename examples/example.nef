@@ -1,0 +1,53 @@
+data_example_nef
+
+save_nef_molecular_system
+_nef_molecular_system.sf_category nef_molecular_system
+_nef_molecular_system.sf_framecode nef_molecular_system
+loop_
+_nef_sequence.index
+_nef_sequence.chain_code
+_nef_sequence.sequence_code
+_nef_sequence.residue_name
+_nef_sequence.linking
+_nef_sequence.residue_variant
+1 A 10 VAL start .
+2 A 10A ALA middle .
+3 A 12 TYR middle .
+4 A 13 LEU middle .
+5 A 14 GLY end .
+stop_
+save_
+
+save_distance_restraints
+_nef_distance_restraint_list.sf_category nef_distance_restraint_list
+_nef_distance_restraint_list.sf_framecode distance_restraints
+_nef_distance_restraint_list.potential_type square-well
+_nef_distance_restraint_list.restraint_origin noe
+loop_
+_nef_distance_restraint.index
+_nef_distance_restraint.restraint_id
+_nef_distance_restraint.restraint_combination_id
+_nef_distance_restraint.chain_code_1
+_nef_distance_restraint.sequence_code_1
+_nef_distance_restraint.residue_name_1
+_nef_distance_restraint.atom_name_1
+_nef_distance_restraint.chain_code_2
+_nef_distance_restraint.sequence_code_2
+_nef_distance_restraint.residue_name_2
+_nef_distance_restraint.atom_name_2
+_nef_distance_restraint.weight
+_nef_distance_restraint.target_value
+_nef_distance_restraint.target_value_uncertainty
+_nef_distance_restraint.lower_limit
+_nef_distance_restraint.upper_limit
+_nef_distance_restraint.lower_linear_limit
+_nef_distance_restraint.upper_linear_limit
+1 1 . A 10 VAL HG1% A 10A ALA HB% 1.0 . . . 4.0 . .
+2 2 . A 12 TYR HD% A 13 LEU HD1% 1.0 . . . 4.0 . .
+3 3 . A 10 VAL H A 12 TYR HD1 1.0 . . . 3.0 . .
+4 4 . A 10A ALA HA A 14 GLY HA2 1.0 3.5 0.5 . . . .
+5 5 . A 10A ALA HB1 A 10A ALA HB2 1.0 . . . 3.0 . .
+6 6 . A 10 VAL CA A 13 LEU CB 1.0 . . . 5.0 . .
+7 7 . A 10 VAL HG1% A 13 LEU HD1% 1.0 . . . 19.0 . .
+stop_
+save_

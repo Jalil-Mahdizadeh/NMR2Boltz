@@ -1,0 +1,232 @@
+from __future__ import annotations
+
+from dataclasses import asdict, dataclass, field
+from typing import Any
+
+NULL_VALUES = {None, "", ".", "?"}
+
+
+def clean(value: Any) -> str | None:
+    """Return a stripped STAR value or ``None`` for STAR null tokens."""
+    if value is None:
+        return None
+    text = str(value).strip()
+    return None if text in {"", ".", "?"} else text
+
+
+def as_float(value: Any) -> float | None:
+    text = clean(value)
+    if text is None:
+        return None
+    try:
+        result = float(text)
+    except (TypeError, ValueError):
+        return None
+    if result != result or result in {float("inf"), float("-inf")}:
+        return None
+    return result
+
+
+@dataclass(frozen=True, order=True)
+class BoltzAtom:
+    chain: str
+    residue_index: int
+    atom_name: str
+
+    def display(self) -> str:
+        return f"{self.chain}:{self.residue_index}:{self.atom_name}"
+
+
+@dataclass
+class SequenceRecord:
+    source_chain: str
+    source_sequence_code: str
+    residue_name: str
+    boltz_chain: str
+    boltz_residue_index: int
+    source: str
+    aliases: list[tuple[str, str, str]] = field(default_factory=list)
+    warnings: list[str] = field(default_factory=list)
+
+
+@dataclass
+class Endpoint:
+    chain_code: str | None
+    sequence_code: str | None
+    residue_name: str | None
+    atom_expression: str | None
+    canonical_chain_code: str | None = None
+    canonical_sequence_code: str | None = None
+    canonical_residue_name: str | None = None
+    canonical_atom_hint: str | None = None
+
+    def display(self) -> str:
+        return ":".join(
+            [
+                self.chain_code or "?",
+                self.sequence_code or "?",
+                self.residue_name or "?",
+                self.atom_expression or "?",
+            ]
+        )
+
+
+@dataclass
+class RawAlternative:
+    source_format: str
+    list_name: str
+    restraint_id: str
+    endpoint1: Endpoint
+    endpoint2: Endpoint
+    upper_bound: float | None
+    lower_bound: float | None = None
+    target_value: float | None = None
+    target_uncertainty: float | None = None
+    upper_linear_limit: float | None = None
+    weight: float | None = None
+    origin: str | None = None
+    combination_id: str | None = None
+    member_id: str | None = None
+    member_logic_code: str | None = None
+    row_ids: list[str] = field(default_factory=list)
+    bound_source: str = "explicit_upper_bound"
+    warnings: list[str] = field(default_factory=list)
+
+    def dedup_key(self) -> tuple[Any, ...]:
+        def endpoint_key(endpoint: Endpoint) -> tuple[Any, ...]:
+            expression = endpoint.atom_expression or ""
+            is_set_expression = any(symbol in expression for symbol in ("%", "*", "x", "y"))
+            # Canonical expansion rows for an author atom set are deduplicated.
+            # For a plain author atom name, differing canonical atoms remain
+            # separate alternatives rather than being silently discarded.
+            canonical_hint = None if is_set_expression else endpoint.canonical_atom_hint
+            return (
+                endpoint.chain_code,
+                endpoint.sequence_code,
+                endpoint.residue_name,
+                endpoint.atom_expression,
+                canonical_hint,
+            )
+
+        e1 = endpoint_key(self.endpoint1)
+        e2 = endpoint_key(self.endpoint2)
+        ends = tuple(sorted((e1, e2), key=lambda item: tuple(x or "" for x in item)))
+        return (
+            ends,
+            self.upper_bound,
+            self.lower_bound,
+            self.target_value,
+            self.target_uncertainty,
+            self.upper_linear_limit,
+            self.weight,
+            self.combination_id,
+            self.bound_source,
+        )
+
+
+@dataclass
+class RestraintGroup:
+    source_format: str
+    list_name: str
+    restraint_id: str
+    alternatives: list[RawAlternative]
+    origin: str | None = None
+    complex_logic: bool = False
+    warnings: list[str] = field(default_factory=list)
+
+    @property
+    def group_id(self) -> str:
+        return f"{self.list_name}:{self.restraint_id}"
+
+
+@dataclass
+class AtomChoice:
+    atom_name: str
+    element: str
+    parent_atom: str
+    bond_length_upper: float
+    resolution_source: str
+    warnings: list[str] = field(default_factory=list)
+
+
+@dataclass
+class AtomSetChoice:
+    atoms: list[AtomChoice]
+    expression: str
+    assignment_key: str | None = None
+    semantics: str = "explicit"
+    warnings: list[str] = field(default_factory=list)
+
+
+@dataclass
+class ProjectedAlternative:
+    atom1: BoltzAtom
+    atom2: BoltzAtom
+    max_distance: float
+    source_upper_bound: float
+    averaging_policy: str
+    averaging_factor: float
+    explicit_pair_count: int
+    bond_offset: float
+    group_id: str
+    source_observation: dict[str, Any] = field(default_factory=dict)
+    source_rows: list[str] = field(default_factory=list)
+    source_endpoints: list[str] = field(default_factory=list)
+    warnings: list[str] = field(default_factory=list)
+
+    @property
+    def pair_key(self) -> tuple[BoltzAtom, BoltzAtom]:
+        return tuple(sorted((self.atom1, self.atom2)))  # type: ignore[return-value]
+
+
+@dataclass
+class EmittedConstraint:
+    atom1: BoltzAtom
+    atom2: BoltzAtom
+    max_distance: float
+    source_groups: list[str]
+    raw_projected_distance: float
+    boltz_adjustment: str | None = None
+    provenance: list[dict[str, Any]] = field(default_factory=list)
+
+    @property
+    def pair_key(self) -> tuple[BoltzAtom, BoltzAtom]:
+        return tuple(sorted((self.atom1, self.atom2)))  # type: ignore[return-value]
+
+
+@dataclass
+class AmbiguousGroup:
+    group_id: str
+    restraint_id: str
+    list_name: str
+    alternatives: list[ProjectedAlternative]
+    reason: str
+    source_format: str
+    origin: str | None = None
+    warnings: list[str] = field(default_factory=list)
+
+
+@dataclass
+class Rejection:
+    group_id: str
+    reason: str
+    details: str
+    row_ids: list[str] = field(default_factory=list)
+    endpoint: str | None = None
+
+
+@dataclass
+class ConversionReport:
+    input_file: str
+    detected_format: str
+    settings: dict[str, Any]
+    sequence_map: list[SequenceRecord]
+    emitted_constraints: list[EmittedConstraint]
+    ambiguous_groups: list[AmbiguousGroup]
+    rejections: list[Rejection]
+    warnings: list[str]
+    statistics: dict[str, Any]
+    source_restraint_groups: list[RestraintGroup] = field(default_factory=list)
+
+    def to_dict(self) -> dict[str, Any]:
+        return asdict(self)

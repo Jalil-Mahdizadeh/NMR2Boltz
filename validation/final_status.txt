@@ -1,0 +1,8 @@
+pip_bootstrap=1
+pip_install=1
+compile=0
+pytest=1
+nef_cli=127
+nmrstar_cli=127
+custom_cli=127
+help=127

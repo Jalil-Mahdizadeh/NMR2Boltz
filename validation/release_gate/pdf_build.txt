@@ -1,0 +1,74 @@
+Traceback (most recent call last):
+  File "/opt/pyvenv/lib/python3.13/site-packages/reportlab/platypus/paraparser.py", line 3218, in parse
+    self.feed(text)
+    ~~~~~~~~~^^^^^^
+  File "/usr/lib/python3.13/html/parser.py", line 129, in feed
+    self.goahead(0)
+    ~~~~~~~~~~~~^^^
+  File "/usr/lib/python3.13/html/parser.py", line 191, in goahead
+    k = self.parse_endtag(i)
+  File "/usr/lib/python3.13/html/parser.py", line 432, in parse_endtag
+    self.handle_endtag(elem)
+    ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/opt/pyvenv/lib/python3.13/site-packages/reportlab/platypus/paraparser.py", line 3254, in handle_endtag
+    end()
+    ~~~^^
+  File "/opt/pyvenv/lib/python3.13/site-packages/reportlab/platypus/paraparser.py", line 2612, in end_i
+    self._pop('i')
+    ~~~~~~~~~^^^^^
+  File "/opt/pyvenv/lib/python3.13/site-packages/reportlab/platypus/paraparser.py", line 3066, in _pop
+    raise ValueError('Parse error: saw </%s> instead of expected </%s>' % (tag,frag.__tag__))
+ValueError: Parse error: saw </i> instead of expected </font>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/data/nmr2boltz_toolkit/scripts/build_methods_pdf.py", line 375, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/mnt/data/nmr2boltz_toolkit/scripts/build_methods_pdf.py", line 368, in main
+    story = parse_markdown(source.read_text(encoding="utf-8"), frame._width)
+  File "/mnt/data/nmr2boltz_toolkit/scripts/build_methods_pdf.py", line 313, in parse_markdown
+    Paragraph(
+    ~~~~~~~~~^
+        f"<b>{numbered.group(1)}.</b> {inline_markup(numbered.group(2))}",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        STYLES["number"],
+        ^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/opt/pyvenv/lib/python3.13/site-packages/reportlab/platypus/paragraph.py", line 1861, in __init__
+    self._setup(text, style, bulletText or getattr(style,'bulletText',None), frags, cleanBlockQuotedText)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/pyvenv/lib/python3.13/site-packages/reportlab/platypus/paragraph.py", line 1882, in _setup
+    style, frags, bulletTextFrags = _parser.parse(text,style)
+                                    ~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/opt/pyvenv/lib/python3.13/site-packages/reportlab/platypus/paraparser.py", line 3220, in parse
+    annotateException('\nparagraph text %s caused exception' % ascii(text))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/pyvenv/lib/python3.13/site-packages/reportlab/lib/utils.py", line 1176, in annotateException
+    rl_reraise(t,t(sep.join((_ for _ in (msg,str(v),postMsg) if _))),b)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/pyvenv/lib/python3.13/site-packages/reportlab/lib/utils.py", line 138, in rl_reraise
+    raise v.with_traceback(b)
+  File "/opt/pyvenv/lib/python3.13/site-packages/reportlab/platypus/paraparser.py", line 3218, in parse
+    self.feed(text)
+    ~~~~~~~~~^^^^^^
+  File "/usr/lib/python3.13/html/parser.py", line 129, in feed
+    self.goahead(0)
+    ~~~~~~~~~~~~^^^
+  File "/usr/lib/python3.13/html/parser.py", line 191, in goahead
+    k = self.parse_endtag(i)
+  File "/usr/lib/python3.13/html/parser.py", line 432, in parse_endtag
+    self.handle_endtag(elem)
+    ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/opt/pyvenv/lib/python3.13/site-packages/reportlab/platypus/paraparser.py", line 3254, in handle_endtag
+    end()
+    ~~~^^
+  File "/opt/pyvenv/lib/python3.13/site-packages/reportlab/platypus/paraparser.py", line 2612, in end_i
+    self._pop('i')
+    ~~~~~~~~~^^^^^
+  File "/opt/pyvenv/lib/python3.13/site-packages/reportlab/platypus/paraparser.py", line 3066, in _pop
+    raise ValueError('Parse error: saw </%s> instead of expected </%s>' % (tag,frag.__tag__))
+ValueError: 
+paragraph text '<para><b>3.</b> *<i><font name="DocMono">%</font> and <font name="DocMono"></i></font> are atom-name wildcards.*<i> <font name="DocMono">%</font> denotes a sequence of digits and <font name="DocMono"></i></font> a general non-whitespace string.</para>' caused exception Parse error: saw </i> instead of expected </font>

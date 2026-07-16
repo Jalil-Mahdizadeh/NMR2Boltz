@@ -1,0 +1,7 @@
+Release assembled: 2026-07-14 UTC
+Python used for validation: Python 3.13.5
+Functional validation: FAIL
+Engineering gate: 
+Release gate: 
+Docker status: docker_available=no;docker_build_exit=not_run;
+Target: BoltzUI atom_contact on Boltz 2.2.1

@@ -1,0 +1,514 @@
+from __future__ import annotations
+
+import math
+from dataclasses import dataclass
+from itertools import product
+from typing import Any
+
+from .model import (
+    AmbiguousGroup,
+    BoltzAtom,
+    ConversionReport,
+    EmittedConstraint,
+    ProjectedAlternative,
+    Rejection,
+    RestraintGroup,
+)
+from .star import ParsedStarDocument, StarDataError
+from .topology import TopologyLibrary, TopologyResolutionError
+
+
+@dataclass
+class ProjectionSettings:
+    averaging_policy: str = "sum-r6"
+    projection_margin: float = 0.0
+    pseudoatom_policy: str = "reject"
+    boltz_min_distance: float = 2.0
+    boltz_max_distance: float = 20.0
+    min_sequence_separation: int = 0
+    include_intraresidue: bool = True
+
+    def validate(self) -> None:
+        if self.averaging_policy not in {"sum-r6", "mean-r6", "hard-or"}:
+            raise ValueError(f"Unsupported averaging policy: {self.averaging_policy}")
+        if self.pseudoatom_policy not in {"reject", "atomset"}:
+            raise ValueError(f"Unsupported pseudoatom policy: {self.pseudoatom_policy}")
+        if not math.isfinite(self.projection_margin):
+            raise ValueError("Projection margin must be finite.")
+        if self.projection_margin < 0:
+            raise ValueError("Projection margin must be non-negative.")
+        if not math.isfinite(self.boltz_min_distance):
+            raise ValueError("Boltz minimum distance must be finite.")
+        if not math.isfinite(self.boltz_max_distance):
+            raise ValueError("Boltz maximum distance must be finite.")
+        if self.boltz_min_distance <= 0:
+            raise ValueError("Boltz minimum distance must be positive.")
+        if self.boltz_max_distance < self.boltz_min_distance:
+            raise ValueError("Boltz maximum distance must be >= minimum distance.")
+        if self.min_sequence_separation < 0:
+            raise ValueError("Minimum sequence separation must be non-negative.")
+
+    def as_dict(self) -> dict[str, Any]:
+        return {
+            "averaging_policy": self.averaging_policy,
+            "projection_margin_angstrom": self.projection_margin,
+            "pseudoatom_policy": self.pseudoatom_policy,
+            "boltz_min_distance_angstrom": self.boltz_min_distance,
+            "boltz_max_distance_angstrom": self.boltz_max_distance,
+            "min_sequence_separation": self.min_sequence_separation,
+            "include_intraresidue": self.include_intraresidue,
+        }
+
+
+def _averaging_factor(policy: str, explicit_pair_count: int) -> float:
+    if explicit_pair_count < 1:
+        raise ValueError("Atom-set expansion produced zero explicit pairs.")
+    if policy == "sum-r6":
+        return explicit_pair_count ** (1.0 / 6.0)
+    return 1.0
+
+
+def _canonical_pair(atom1: BoltzAtom, atom2: BoltzAtom) -> tuple[BoltzAtom, BoltzAtom]:
+    return tuple(sorted((atom1, atom2)))  # type: ignore[return-value]
+
+
+def project_document(
+    parsed: ParsedStarDocument,
+    *,
+    input_file: str,
+    topology_library: TopologyLibrary,
+    settings: ProjectionSettings,
+    parser_settings: dict[str, Any] | None = None,
+) -> ConversionReport:
+    settings.validate()
+    for topology in parsed.embedded_topologies:
+        topology_library.register(topology, replace=True)
+
+    safe_by_group: list[ProjectedAlternative] = []
+    ambiguous: list[AmbiguousGroup] = []
+    rejections: list[Rejection] = []
+    warnings = list(parsed.warnings)
+
+    for group in parsed.restraint_groups:
+        if group.complex_logic:
+            rejections.append(
+                Rejection(
+                    group_id=group.group_id,
+                    reason="complex_restraint_combination_logic",
+                    details=(
+                        "The restraint uses a non-null combination identifier. It was preserved in the "
+                        "audit report but not flattened into a Boltz AND/OR expression."
+                    ),
+                    row_ids=_row_ids(group),
+                )
+            )
+            continue
+        projected, group_rejections = _project_group(
+            group,
+            parsed=parsed,
+            topology_library=topology_library,
+            settings=settings,
+        )
+        rejections.extend(group_rejections)
+        if projected and group_rejections:
+            rejections.append(
+                Rejection(
+                    group_id=group.group_id,
+                    reason="partially_unprojectable_or_group",
+                    details=(
+                        "At least one source OR alternative or atom-set branch could not be projected. "
+                        "The remaining alternatives were not emitted because doing so would strengthen "
+                        "the source disjunction."
+                    ),
+                    row_ids=_row_ids(group),
+                )
+            )
+            continue
+        if not projected:
+            if not group_rejections:
+                rejections.append(
+                    Rejection(
+                        group_id=group.group_id,
+                        reason="no_projectable_alternative",
+                        details="No heavy-atom alternative could be constructed.",
+                        row_ids=_row_ids(group),
+                    )
+                )
+            continue
+
+        merged = _merge_or_alternatives(projected)
+        if len(merged) == 1:
+            candidate = merged[0]
+            if not settings.include_intraresidue and (
+                candidate.atom1.chain == candidate.atom2.chain
+                and candidate.atom1.residue_index == candidate.atom2.residue_index
+            ):
+                rejections.append(
+                    Rejection(
+                        group_id=group.group_id,
+                        reason="intraresidue_filtered",
+                        details="The projected restraint is intraresidue and was removed by policy.",
+                        row_ids=candidate.source_rows,
+                    )
+                )
+                continue
+            if (
+                settings.min_sequence_separation > 0
+                and candidate.atom1.chain == candidate.atom2.chain
+                and abs(candidate.atom1.residue_index - candidate.atom2.residue_index)
+                < settings.min_sequence_separation
+            ):
+                rejections.append(
+                    Rejection(
+                        group_id=group.group_id,
+                        reason="sequence_separation_filtered",
+                        details=(
+                            f"Projected residue separation is below {settings.min_sequence_separation}."
+                        ),
+                        row_ids=candidate.source_rows,
+                    )
+                )
+                continue
+            safe_by_group.append(candidate)
+        else:
+            ambiguous.append(
+                AmbiguousGroup(
+                    group_id=group.group_id,
+                    restraint_id=group.restraint_id,
+                    list_name=group.list_name,
+                    alternatives=merged,
+                    reason=(
+                        "The original restraint is a disjunction whose alternatives map to multiple "
+                        "distinct heavy-atom pairs. Emitting all pairs would convert OR into AND."
+                    ),
+                    source_format=group.source_format,
+                    origin=group.origin,
+                    warnings=list(group.warnings),
+                )
+            )
+
+    emitted, final_rejections = _merge_independent_constraints(safe_by_group, settings)
+    rejections.extend(final_rejections)
+
+    statistics = {
+        "restraint_groups_read": len(parsed.restraint_groups),
+        "source_alternatives_read": sum(len(group.alternatives) for group in parsed.restraint_groups),
+        "safe_groups_before_pair_deduplication": len(safe_by_group),
+        "emitted_unique_heavy_atom_constraints": len(emitted),
+        "ambiguous_or_groups_not_emitted": len(ambiguous),
+        "rejection_records": len(rejections),
+        "sequence_records": len(parsed.sequence_resolver.records),
+        "embedded_component_topologies": len(parsed.embedded_topologies),
+    }
+    combined_settings = dict(parser_settings or {})
+    combined_settings.update(settings.as_dict())
+    return ConversionReport(
+        input_file=input_file,
+        detected_format=parsed.detected_format,
+        settings=combined_settings,
+        sequence_map=parsed.sequence_resolver.records,
+        emitted_constraints=emitted,
+        ambiguous_groups=ambiguous,
+        rejections=rejections,
+        warnings=warnings,
+        statistics=statistics,
+        source_restraint_groups=parsed.restraint_groups,
+    )
+
+
+def _project_group(
+    group: RestraintGroup,
+    *,
+    parsed: ParsedStarDocument,
+    topology_library: TopologyLibrary,
+    settings: ProjectionSettings,
+) -> tuple[list[ProjectedAlternative], list[Rejection]]:
+    projected: list[ProjectedAlternative] = []
+    rejections: list[Rejection] = []
+    for alternative in group.alternatives:
+        if alternative.upper_bound is None:
+            rejections.append(
+                Rejection(
+                    group_id=group.group_id,
+                    reason="missing_upper_bound",
+                    details=(
+                        "No usable upper bound was available under the selected missing-upper policy."
+                    ),
+                    row_ids=alternative.row_ids,
+                )
+            )
+            continue
+        if not math.isfinite(alternative.upper_bound) or alternative.upper_bound <= 0:
+            rejections.append(
+                Rejection(
+                    group_id=group.group_id,
+                    reason="invalid_upper_bound",
+                    details=f"Upper bound must be positive and finite; got {alternative.upper_bound!r}.",
+                    row_ids=alternative.row_ids,
+                )
+            )
+            continue
+        if alternative.endpoint1.atom_expression is None or alternative.endpoint2.atom_expression is None:
+            rejections.append(
+                Rejection(
+                    group_id=group.group_id,
+                    reason="missing_atom_identifier",
+                    details="One or both atom expressions are missing.",
+                    row_ids=alternative.row_ids,
+                )
+            )
+            continue
+        try:
+            residue1, map_warnings1 = parsed.sequence_resolver.resolve(alternative.endpoint1)
+            residue2, map_warnings2 = parsed.sequence_resolver.resolve(alternative.endpoint2)
+        except StarDataError as exc:
+            rejections.append(
+                Rejection(
+                    group_id=group.group_id,
+                    reason="unresolved_residue_mapping",
+                    details=str(exc),
+                    row_ids=alternative.row_ids,
+                )
+            )
+            continue
+        comp1 = alternative.endpoint1.canonical_residue_name or residue1.residue_name
+        comp2 = alternative.endpoint2.canonical_residue_name or residue2.residue_name
+        try:
+            endpoint_choices1 = topology_library.resolve_expression(
+                comp1,
+                alternative.endpoint1.atom_expression,
+                canonical_hint=alternative.endpoint1.canonical_atom_hint,
+                pseudoatom_policy=settings.pseudoatom_policy,
+            )
+            endpoint_choices2 = topology_library.resolve_expression(
+                comp2,
+                alternative.endpoint2.atom_expression,
+                canonical_hint=alternative.endpoint2.canonical_atom_hint,
+                pseudoatom_policy=settings.pseudoatom_policy,
+            )
+        except TopologyResolutionError as exc:
+            rejections.append(
+                Rejection(
+                    group_id=group.group_id,
+                    reason="unresolved_atom_topology",
+                    details=str(exc),
+                    row_ids=alternative.row_ids,
+                    endpoint=f"{alternative.endpoint1.display()} -- {alternative.endpoint2.display()}",
+                )
+            )
+            continue
+
+        source_observation = {
+            "bound_source": alternative.bound_source,
+            "explicit_or_derived_upper_bound": alternative.upper_bound,
+            "lower_bound": alternative.lower_bound,
+            "target_value": alternative.target_value,
+            "target_uncertainty": alternative.target_uncertainty,
+            "upper_linear_limit": alternative.upper_linear_limit,
+            "weight": alternative.weight,
+            "origin": alternative.origin,
+            "combination_id": alternative.combination_id,
+            "member_id": alternative.member_id,
+            "member_logic_code": alternative.member_logic_code,
+        }
+
+        for set1, set2 in product(endpoint_choices1, endpoint_choices2):
+            explicit_pair_count = len(set1.atoms) * len(set2.atoms)
+            factor = _averaging_factor(settings.averaging_policy, explicit_pair_count)
+            by_parent_pair: dict[tuple[BoltzAtom, BoltzAtom], dict[str, Any]] = {}
+            same_parent_pair_seen = False
+            for atom1, atom2 in product(set1.atoms, set2.atoms):
+                parent1 = BoltzAtom(
+                    chain=residue1.boltz_chain,
+                    residue_index=residue1.boltz_residue_index,
+                    atom_name=atom1.parent_atom,
+                )
+                parent2 = BoltzAtom(
+                    chain=residue2.boltz_chain,
+                    residue_index=residue2.boltz_residue_index,
+                    atom_name=atom2.parent_atom,
+                )
+                if parent1 == parent2:
+                    same_parent_pair_seen = True
+                    continue
+                pair = _canonical_pair(parent1, parent2)
+                offset = atom1.bond_length_upper + atom2.bond_length_upper
+                threshold = (
+                    factor * alternative.upper_bound
+                    + offset
+                    + settings.projection_margin
+                )
+                current = by_parent_pair.get(pair)
+                detail = {
+                    "threshold": threshold,
+                    "offset": offset,
+                    "atom_pair": f"{atom1.atom_name}--{atom2.atom_name}",
+                }
+                if current is None or threshold > current["threshold"]:
+                    by_parent_pair[pair] = detail
+            if same_parent_pair_seen:
+                reason = (
+                    "same_heavy_parent_atom"
+                    if not by_parent_pair
+                    else "atom_set_contains_same_heavy_parent_pair"
+                )
+                details = (
+                    "Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot "
+                    "use as an atom-contact pair."
+                    if not by_parent_pair
+                    else (
+                        "At least one explicit pair in this atom-set branch maps to the same heavy "
+                        "parent. That branch provides no conservative constraint on the other parent "
+                        "pairs, so none of them were emitted."
+                    )
+                )
+                rejections.append(
+                    Rejection(
+                        group_id=group.group_id,
+                        reason=reason,
+                        details=details,
+                        row_ids=alternative.row_ids,
+                    )
+                )
+                continue
+            if not by_parent_pair:
+                continue
+            common_warnings = list(dict.fromkeys(
+                alternative.warnings
+                + group.warnings
+                + map_warnings1
+                + map_warnings2
+                + set1.warnings
+                + set2.warnings
+            ))
+            source_endpoint = (
+                f"{alternative.endpoint1.display()} -- {alternative.endpoint2.display()}"
+            )
+            for (parent1, parent2), detail in by_parent_pair.items():
+                projected.append(
+                    ProjectedAlternative(
+                        atom1=parent1,
+                        atom2=parent2,
+                        max_distance=float(detail["threshold"]),
+                        source_upper_bound=float(alternative.upper_bound),
+                        averaging_policy=settings.averaging_policy,
+                        averaging_factor=factor,
+                        explicit_pair_count=explicit_pair_count,
+                        bond_offset=float(detail["offset"]),
+                        group_id=group.group_id,
+                        source_observation=dict(source_observation),
+                        source_rows=list(alternative.row_ids),
+                        source_endpoints=[source_endpoint],
+                        warnings=common_warnings,
+                    )
+                )
+    return projected, rejections
+
+
+def _merge_or_alternatives(
+    alternatives: list[ProjectedAlternative],
+) -> list[ProjectedAlternative]:
+    """Merge duplicate heavy pairs inside one OR group.
+
+    For the same pair, ``d <= u1 OR d <= u2`` is exactly ``d <= max(u1, u2)``.
+    Using the minimum here would accidentally strengthen the original restraint.
+    """
+    merged: dict[tuple[BoltzAtom, BoltzAtom], ProjectedAlternative] = {}
+    for alternative in alternatives:
+        pair = alternative.pair_key
+        if pair not in merged:
+            merged[pair] = alternative
+            continue
+        current = merged[pair]
+        if alternative.max_distance > current.max_distance:
+            replacement = alternative
+            replacement.source_rows = list(dict.fromkeys(current.source_rows + alternative.source_rows))
+            replacement.source_endpoints = list(
+                dict.fromkeys(current.source_endpoints + alternative.source_endpoints)
+            )
+            replacement.warnings = list(dict.fromkeys(current.warnings + alternative.warnings))
+            merged[pair] = replacement
+        else:
+            current.source_rows = list(dict.fromkeys(current.source_rows + alternative.source_rows))
+            current.source_endpoints = list(
+                dict.fromkeys(current.source_endpoints + alternative.source_endpoints)
+            )
+            current.warnings = list(dict.fromkeys(current.warnings + alternative.warnings))
+    return sorted(merged.values(), key=lambda item: item.pair_key)
+
+
+def _merge_independent_constraints(
+    projected: list[ProjectedAlternative],
+    settings: ProjectionSettings,
+) -> tuple[list[EmittedConstraint], list[Rejection]]:
+    """Merge independent restraint groups that happen to target the same pair.
+
+    Independent restraint groups are conjunctive. Thus ``d <= u1 AND d <= u2``
+    becomes ``d <= min(u1, u2)``.
+    """
+    grouped: dict[tuple[BoltzAtom, BoltzAtom], list[ProjectedAlternative]] = {}
+    for item in projected:
+        grouped.setdefault(item.pair_key, []).append(item)
+    emitted: list[EmittedConstraint] = []
+    rejections: list[Rejection] = []
+    for pair, items in sorted(grouped.items()):
+        raw = min(item.max_distance for item in items)
+        source_groups = list(dict.fromkeys(item.group_id for item in items))
+        provenance = [
+            {
+                "group_id": item.group_id,
+                "projected_upper_bound": item.max_distance,
+                "source_upper_bound": item.source_upper_bound,
+                "averaging_policy": item.averaging_policy,
+                "averaging_factor": item.averaging_factor,
+                "explicit_pair_count": item.explicit_pair_count,
+                "bond_offset": item.bond_offset,
+                "source_observation": dict(item.source_observation),
+                "source_rows": item.source_rows,
+                "source_endpoints": item.source_endpoints,
+                "warnings": item.warnings,
+            }
+            for item in items
+        ]
+        adjustment: str | None = None
+        if raw > settings.boltz_max_distance:
+            rejections.append(
+                Rejection(
+                    group_id=",".join(source_groups),
+                    reason="projected_bound_exceeds_boltz_maximum",
+                    details=(
+                        f"Conservative heavy-atom upper bound {raw:.6g} A exceeds Boltz atom_contact "
+                        f"maximum {settings.boltz_max_distance:.6g} A. It was not clipped because "
+                        "clipping would strengthen the restraint."
+                    ),
+                    row_ids=list(
+                        dict.fromkeys(row for item in items for row in item.source_rows)
+                    ),
+                )
+            )
+            continue
+        adjusted = raw
+        if raw < settings.boltz_min_distance:
+            adjusted = settings.boltz_min_distance
+            adjustment = (
+                f"raised from {raw:.6g} to Boltz minimum {settings.boltz_min_distance:.6g} A; "
+                "this weakens rather than strengthens the restraint"
+            )
+        emitted.append(
+            EmittedConstraint(
+                atom1=pair[0],
+                atom2=pair[1],
+                max_distance=adjusted,
+                source_groups=source_groups,
+                raw_projected_distance=raw,
+                boltz_adjustment=adjustment,
+                provenance=provenance,
+            )
+        )
+    return emitted, rejections
+
+
+def _row_ids(group: RestraintGroup) -> list[str]:
+    return list(
+        dict.fromkeys(row for alternative in group.alternatives for row in alternative.row_ids)
+    )

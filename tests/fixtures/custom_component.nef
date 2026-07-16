@@ -1,0 +1,58 @@
+data_custom_component
+
+save_system
+_nef_molecular_system.sf_category nef_molecular_system
+_nef_molecular_system.sf_framecode system
+loop_
+_nef_sequence.index
+_nef_sequence.chain_code
+_nef_sequence.sequence_code
+_nef_sequence.residue_name
+_nef_sequence.linking
+_nef_sequence.residue_variant
+1 L 1 LIG single .
+2 A 1 ALA single .
+stop_
+save_
+
+save_lig_chem_comp
+_Chem_comp.Sf_category chem_comp
+_Chem_comp.Sf_framecode lig_chem_comp
+_Chem_comp.ID LIG
+loop_
+_Chem_comp_atom.Comp_ID
+_Chem_comp_atom.Atom_ID
+_Chem_comp_atom.Type_symbol
+LIG C1 C
+LIG H11 H
+LIG H12 H
+stop_
+loop_
+_Chem_comp_bond.Comp_ID
+_Chem_comp_bond.Atom_ID_1
+_Chem_comp_bond.Atom_ID_2
+LIG C1 H11
+LIG C1 H12
+stop_
+save_
+
+save_restraints
+_nef_distance_restraint_list.sf_category nef_distance_restraint_list
+_nef_distance_restraint_list.sf_framecode restraints
+_nef_distance_restraint_list.restraint_origin noe
+loop_
+_nef_distance_restraint.index
+_nef_distance_restraint.restraint_id
+_nef_distance_restraint.restraint_combination_id
+_nef_distance_restraint.chain_code_1
+_nef_distance_restraint.sequence_code_1
+_nef_distance_restraint.residue_name_1
+_nef_distance_restraint.atom_name_1
+_nef_distance_restraint.chain_code_2
+_nef_distance_restraint.sequence_code_2
+_nef_distance_restraint.residue_name_2
+_nef_distance_restraint.atom_name_2
+_nef_distance_restraint.upper_limit
+1 1 . L 1 LIG H1% A 1 ALA HA 4.0
+stop_
+save_

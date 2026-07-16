@@ -1,0 +1,22 @@
+version: 1
+sequences:
+  - protein:
+      id: A
+      sequence: AVTY
+      msa: empty
+constraints:
+  - atom_contact_union:
+      id: noe_42
+      alternatives:
+        - atom1: [A, 2, CB]
+          atom2: [A, 4, CD1]
+          max_distance: 6.35
+        - atom1: [A, 2, CB]
+          atom2: [A, 4, CD2]
+          max_distance: 6.35
+      force: true
+      logic: OR
+      provenance:
+        source_format: NEF
+        restraint_id: 42
+        projection_policy: sum-r6

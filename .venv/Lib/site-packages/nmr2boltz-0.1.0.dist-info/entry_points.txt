@@ -1,0 +1,2 @@
+[console_scripts]
+nmr2boltz = nmr2boltz.cli:main
