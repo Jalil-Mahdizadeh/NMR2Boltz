@@ -666,11 +666,13 @@ def _extract_nmrstar_sequence(entry: Any, chain_map: dict[str, str]) -> Sequence
             source_seq = str(row["author_seq"])
             residue = str(row["author_comp"])
             aliases: list[tuple[str, str, str]] = []
-            for alias_chain in {
-                source_chain,
-                str(row["assembly_id"] or ""),
-                str(row["asym"] or ""),
-            }:
+            for alias_chain in sorted(
+                {
+                    source_chain,
+                    str(row["assembly_id"] or ""),
+                    str(row["asym"] or ""),
+                }
+            ):
                 if alias_chain:
                     aliases.append((alias_chain, str(row["comp_index"]), str(row["comp_id"])))
                     aliases.append((alias_chain, source_seq, residue))

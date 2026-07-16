@@ -477,7 +477,7 @@ A production validation should include at least four levels.
 
 The following checks were executed on 2026-07-16 against the source bundle used to build this PDF:
 
-- all 31 Pytest regression, format, topology, logic, and robustness tests passed;
+- all 39 Pytest regression, format, topology, logic, target-validation, and robustness tests passed;
 - Python byte compilation passed for source, tests, and the stress harness;
 - 100,000 randomized sum-r6 implication cases and 100,000 constructive triangle-inequality cases passed in the final Docker image;
 - 25,000 outward-rounding cases and 10,000 randomized OR-max/AND-min order-invariance cases passed;

@@ -1,5 +1,17 @@
 # nmr2boltz toolkit release notes
 
+## Unreleased
+
+- Added fail-fast `--target-yaml` validation for chain IDs, residue indices,
+  canonical residue identities, declared modifications, mapping collisions, and
+  emitted-contact positions.
+- Added the versioned, checksum-aware `nmr2boltz benchmark` command and seeded
+  it with the real 6M6O conversion expectations.
+- Made NMR-STAR sequence-alias provenance ordering deterministic across Python
+  hash seeds and container runs.
+- Expanded the regression suite from 31 to 39 tests, including protein,
+  DNA, RNA, and modified-polymer target validation.
+
 Release date: 2026-07-14
 
 This research-grade reference implementation converts NEF 1.1 and NMR-STAR distance restraints into heavy-atom upper-bound constraints for the BoltzUI `atom_contact` extension.

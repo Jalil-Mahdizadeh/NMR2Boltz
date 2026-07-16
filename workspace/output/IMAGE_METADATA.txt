@@ -1,6 +1,6 @@
 image=nmr2boltz:0.1.0-validated
-digest=sha256:ee0bb2c1c79cf569fe274e363add28f4d39ec0f3d6201d22c68a0576c05fa74b
-reported_size=242MB
+digest=sha256:bb97a627d721afb4985caf3c5b86a48486b70f0cd1436b0129149ad172a22405
+reported_size=243MB
 default_user=65532:65532
 entrypoint=["nmr2boltz"]
 command=["--help"]

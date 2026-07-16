@@ -61,6 +61,12 @@ def test_nmrstar_author_wildcard_rows_are_deduplicated():
     path = FIXTURES / "example.str"
     parsed = parse_star_document(path)
     assert parsed.detected_format == "nmr-star"
+    assert parsed.sequence_resolver.records[0].aliases == [
+        ("1", "1", "VAL"),
+        ("1", "10", "VAL"),
+        ("A", "1", "VAL"),
+        ("A", "10", "VAL"),
+    ]
     group1 = next(group for group in parsed.restraint_groups if group.restraint_id == "1")
     assert len(group1.alternatives) == 1
     assert group1.alternatives[0].endpoint1.atom_expression == "HG1%"

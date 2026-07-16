@@ -70,9 +70,14 @@ The ensemble comparator also handles protonation-specific wildcard membership ex
 
 The Dockerfile now declares UID/GID 65532 as its default runtime user. A no-user-override smoke test confirmed uid=65532 and gid=65532.
 
+The Boltz target sequence is now machine-validated instead of relying on the
+manual sequence-map checklist. The checksum-pinned `workspace/benchmark.yaml`
+case verified all 185 mapped residues and all 2,707 emitted constraints against
+`workspace/input/6M6O_boltz.yaml`, with zero target-validation errors or warnings.
+
 ## Robustness tests
 
-The final image passed all 31 Pytest tests and a containerized deterministic stress run containing:
+The final image passed all 39 Pytest tests and a containerized deterministic stress run containing:
 
 - 100,000 randomized unnormalized sum-r6 implication cases;
 - 100,000 constructive triangle-inequality projection cases;
@@ -86,8 +91,8 @@ The final image passed all 31 Pytest tests and a containerized deterministic str
 Only one nmr2boltz image remains:
 
 - image: nmr2boltz:0.1.0-validated
-- digest: sha256:ee0bb2c1c79cf569fe274e363add28f4d39ec0f3d6201d22c68a0576c05fa74b
-- reported size: 242 MB
+- digest: sha256:bb97a627d721afb4985caf3c5b86a48486b70f0cd1436b0129149ad172a22405
+- reported size: 243 MB
 - default user: 65532:65532
 
 Every conversion, comparison, smoke, and stress container run mounted the repository workspace at /workspace. Runs used no network and a read-only root filesystem.
@@ -102,6 +107,7 @@ Every conversion, comparison, smoke, and stress container run mounted the reposi
 - Per-group source summary: workspace/output/coordinate_comparison/source_restraint_summary.csv
 - Machine-readable result: workspace/output/coordinate_comparison/summary.json
 - Stress result: workspace/output/STRESS_VALIDATION.json
+- Target-aware benchmark result: workspace/output/benchmark/benchmark_summary.json
 
 ## Scientific interpretation and limit
 

@@ -21,9 +21,11 @@ curl.exe -L https://bmrb.io/ftp/pub/bmrb/entry_directories/bmr28061/validation/A
 
 docker --host $dockerHost build --tag $image .
 
-docker --host $dockerHost run --rm --network none --read-only --tmpfs /tmp:size=64m --memory 512m --cpus 1 --user 65532:65532 --mount "type=bind,source=$hostWorkspace,target=/workspace" $image convert /workspace/input/6M6O_nmr-data.str -o /workspace/output/nmr2boltz_all --hypotheses 32 --seed 6060
+docker --host $dockerHost run --rm --network none --read-only --tmpfs /tmp:size=64m --memory 512m --cpus 1 --user 65532:65532 --mount "type=bind,source=$hostWorkspace,target=/workspace" $image convert /workspace/input/6M6O_nmr-data.str --target-yaml /workspace/input/6M6O_boltz.yaml -o /workspace/output/nmr2boltz_all --hypotheses 32 --seed 6060
 
-docker --host $dockerHost run --rm --network none --read-only --tmpfs /tmp:size=64m --memory 512m --cpus 1 --user 65532:65532 --mount "type=bind,source=$hostWorkspace,target=/workspace" $image convert /workspace/input/6M6O_nmr-data.str -o /workspace/output/nmr2boltz_noe --origin noe --hypotheses 32 --seed 6060
+docker --host $dockerHost run --rm --network none --read-only --tmpfs /tmp:size=64m --memory 512m --cpus 1 --user 65532:65532 --mount "type=bind,source=$hostWorkspace,target=/workspace" $image convert /workspace/input/6M6O_nmr-data.str --target-yaml /workspace/input/6M6O_boltz.yaml -o /workspace/output/nmr2boltz_noe --origin noe --hypotheses 32 --seed 6060
+
+docker --host $dockerHost run --rm --network none --read-only --tmpfs /tmp:size=64m --memory 1g --cpus 2 --user 65532:65532 --mount "type=bind,source=$hostWorkspace,target=/workspace" $image benchmark /workspace/benchmark.yaml -o /workspace/output/benchmark
 
 docker --host $dockerHost run --rm --network none --read-only --tmpfs /tmp:size=64m --memory 1g --cpus 2 --user 65532:65532 --mount "type=bind,source=$hostWorkspace,target=/workspace" --mount "type=bind,source=$hostRepo,target=/repo,readonly" --entrypoint python $image /repo/validation/compare_ensemble.py --report /workspace/output/nmr2boltz_noe/conversion_report.json --pdb /workspace/input/6M6O.pdb --cif /workspace/input/6M6O.cif --output-dir /workspace/output/coordinate_comparison --tolerance 0.000001
 

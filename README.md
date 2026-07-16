@@ -54,6 +54,16 @@ A             24B                   GLY                  A            25
 nmr2boltz convert experiment.nef --residue-map residue_map.tsv -o converted
 ```
 
+The safer production path also supplies the exact Boltz input. Conversion stops
+before writing executable constraints if a mapped chain, residue index, declared
+modification, or residue identity is incompatible with that target:
+
+```bash
+nmr2boltz convert experiment.nef \
+  --target-yaml boltz_input.yaml \
+  -o converted
+```
+
 ## Docker
 
 Build:
@@ -74,6 +84,25 @@ docker run --rm --network none --read-only --tmpfs /tmp:size=64m \
 
 The image runs as numeric UID/GID 65532 by default. On Linux, add
 `-u "$(id -u):$(id -g)"` if host-owned output files are preferred.
+
+## Reproducible benchmark manifests
+
+`nmr2boltz benchmark` runs one or more conversions from a versioned YAML
+manifest, verifies optional SHA-256 checksums, validates the sequence mapping
+against the exact Boltz target, and compares observed audit metrics with pinned
+expectations:
+
+```bash
+nmr2boltz benchmark workspace/benchmark.yaml \
+  -o workspace/output/benchmark
+```
+
+Each case records its complete conversion bundle and a suite-level
+`benchmark_summary.json`. A target mismatch, checksum mismatch, conversion
+exception, or changed expected metric fails that case without preventing the
+remaining corpus from running. `workspace/benchmark.yaml` contains the first
+real-data case, 6M6O, and is the template for adding chemically and
+format-diverse entries.
 
 ## Output files
 

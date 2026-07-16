@@ -5,9 +5,11 @@ import sys
 from pathlib import Path
 
 from . import __version__
+from .benchmark import BenchmarkManifestError, run_benchmark
 from .output import write_outputs
 from .project import ProjectionSettings, project_document
 from .star import StarDataError, parse_star_document
+from .target import TargetValidationError, validate_report_against_target
 from .topology import TopologyLibrary, TopologyResolutionError
 
 
@@ -72,6 +74,14 @@ def build_parser() -> argparse.ArgumentParser:
         help=(
             "CSV/TSV/JSON mapping source_chain, source_sequence_code, source_residue_name to "
             "boltz_chain and boltz_residue_index."
+        ),
+    )
+    convert.add_argument(
+        "--target-yaml",
+        type=Path,
+        help=(
+            "Validate every mapped chain, residue index, and residue identity against the exact "
+            "Boltz input YAML before writing executable constraints."
         ),
     )
     convert.add_argument(
@@ -159,6 +169,24 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Exit with status 3 if any ambiguity or rejection remains after writing the audit outputs.",
     )
+    benchmark = subparsers.add_parser(
+        "benchmark",
+        help="Run a versioned, checksum-aware conversion benchmark manifest.",
+    )
+    benchmark.add_argument("manifest", type=Path, help="Benchmark manifest YAML (schema version 1).")
+    benchmark.add_argument(
+        "-o",
+        "--output-dir",
+        type=Path,
+        help="Output directory (default: <manifest_stem>_results).",
+    )
+    benchmark.add_argument(
+        "--case",
+        action="append",
+        default=[],
+        metavar="ID",
+        help="Run only one named case; repeat to select multiple cases.",
+    )
     return parser
 
 
@@ -219,6 +247,10 @@ def command_convert(args: argparse.Namespace) -> int:
         settings=settings,
         parser_settings=parser_settings,
     )
+    if args.target_yaml:
+        target_validation = validate_report_against_target(report, args.target_yaml)
+        target_validation.require_valid()
+        report.target_validation = target_validation.to_dict()
     output_dir = args.output_dir or args.input.with_name(f"{args.input.stem}_nmr2boltz")
     written = write_outputs(
         report,
@@ -231,11 +263,33 @@ def command_convert(args: argparse.Namespace) -> int:
     print(f"Boltz constraints emitted: {len(report.emitted_constraints)}")
     print(f"Ambiguous OR groups quarantined: {len(report.ambiguous_groups)}")
     print(f"Rejection records: {len(report.rejections)}")
+    if report.target_validation:
+        print(
+            "Boltz target validation: PASS "
+            f"({report.target_validation['checked_sequence_records']} sequence records; "
+            f"{report.target_validation['warning_count']} warning(s))"
+        )
     print(f"Output directory: {output_dir.resolve()}")
     print(f"Files written: {len(written)}")
     if args.strict and (report.ambiguous_groups or report.rejections):
         return 3
     return 0
+
+
+def command_benchmark(args: argparse.Namespace) -> int:
+    output_dir = args.output_dir or args.manifest.with_name(f"{args.manifest.stem}_results")
+    run = run_benchmark(
+        args.manifest,
+        output_dir,
+        selected_cases=set(args.case) or None,
+    )
+    for case in run.cases:
+        details = case.error or "; ".join(case.mismatches)
+        suffix = f" - {details}" if details else ""
+        print(f"{case.case_id}: {case.status.upper()}{suffix}")
+    print(f"Benchmark: {run.passed} passed, {run.failed} failed")
+    print(f"Summary: {(Path(run.output_directory) / 'benchmark_summary.json').resolve()}")
+    return 0 if run.failed == 0 else 4
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -244,8 +298,16 @@ def main(argv: list[str] | None = None) -> int:
     try:
         if args.command == "convert":
             return command_convert(args)
+        if args.command == "benchmark":
+            return command_benchmark(args)
         parser.error(f"Unknown command: {args.command}")
-    except (ValueError, StarDataError, TopologyResolutionError) as exc:
+    except (
+        BenchmarkManifestError,
+        ValueError,
+        StarDataError,
+        TargetValidationError,
+        TopologyResolutionError,
+    ) as exc:
         print(f"nmr2boltz: error: {exc}", file=sys.stderr)
         return 2
     return 2

@@ -233,6 +233,7 @@ class ConversionReport:
     warnings: list[str]
     statistics: dict[str, Any]
     source_restraint_groups: list[RestraintGroup] = field(default_factory=list)
+    target_validation: dict[str, Any] | None = None
 
     def to_dict(self) -> dict[str, Any]:
         return asdict(self)
