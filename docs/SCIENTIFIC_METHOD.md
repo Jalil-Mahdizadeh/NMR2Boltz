@@ -486,27 +486,29 @@ restraint ID, including groups rejected on one side.
 
 Each row is classified as:
 
-- `expected_format_difference` when the corresponding deposits encode different
-  wildcard atom sets, explicit OR rows, x/y assignments, canonical expansions,
-  or geometric pseudoatoms;
+- `expected_format_difference` only when a tested predicate proves wildcard
+  atom set versus explicit OR members, x/y assignment versus a compatible
+  physical set, rejected geometric Q/M pseudoatom handling, or a verified
+  canonical naming alias with identical physical atoms and destinations;
 - `deposition_inconsistency` when a corresponding restraint is absent, its bound
   differs, or its sequence/residue identifiers resolve inconsistently;
 - `parser_projection_bug` only after a reproducible implementation defect is
   verified; or
 - `unresolved` whenever the available evidence is insufficient.
 
-The normal corpus command fails closed if any implication fails, any coordinate
-needed by an emitted contact is unresolved in a deposited model, any audit row
-is unresolved or marks a parser/projection bug, or the reviewed audit digest or
-metric snapshot changes. A run still writes its evidence before returning a
-nonzero exit. This prevents denominator omission and baseline drift from being
-mistaken for robustness.
+The normal corpus command fails closed if any implication fails, any audit row
+is unresolved or marks a parser/projection bug, the reviewed audit digest or
+metric snapshot changes, or the exact reviewed missing-coordinate set changes.
+Known corpus limitations are pinned by contact identity, bound, provenance, and
+digest rather than waived by count. A run still writes its evidence before
+returning a nonzero exit. This prevents denominator omission and baseline drift
+from being mistaken for robustness.
 
 ### 11.5 Executed validation record
 
 The following checks were executed on 2026-07-17 against the current source tree:
 
-- all 44 Pytest regression, format, topology, logic, target-validation, ensemble-alignment, and robustness tests passed;
+- all 55 Pytest regression, format, topology, logic, target-validation, ensemble-alignment, and robustness tests passed;
 - Python byte compilation passed for source, tests, and the stress harness;
 - 100,000 randomized sum-r6 implication cases and 100,000 constructive triangle-inequality cases passed in the final Docker image;
 - 25,000 outward-rounding cases and 10,000 randomized OR-max/AND-min order-invariance cases passed;
@@ -522,10 +524,13 @@ External semantics were checked at fixed revisions: BoltzUI `c3e5c7f6ae80d9261c3
 
 A paired-format benchmark was run for 12 deposited NMR structures. All 24 NEF
 and NMR-STAR conversions completed, including two valid empty distance
-conversions for 8S8O. Conservative defaults emitted 13,004 NEF and 11,841
+conversions for 8S8O. Conservative defaults emitted 13,010 NEF and 11,841
 NMR-STAR contacts. Resolved contact/model satisfaction against the deposited
 ensembles was 99.88% and 99.86%, respectively. The projected implication had
-zero failures in 390,810 cases with satisfied source antecedents. Exact
+zero failures in 390,930 cases with satisfied source antecedents. The 4,195-row
+format audit contains 4,136 allowlisted expected differences, 59 deposition
+inconsistencies, zero unresolved rows, and zero remaining parser/projection
+bugs. Exact
 pair-and-bound parity was observed for three positive-distance cases; the
 remaining discrepancies are retained as explicit audit evidence rather than
 being silently approximated.

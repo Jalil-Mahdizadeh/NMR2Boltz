@@ -1,15 +1,14 @@
 {
-  "row_count": 166,
-  "digest_sha256": "906db96cb5ee3a4c78bc7cbeabc162d80939d21ea328c11895e8114d910b29d3",
+  "row_count": 160,
+  "digest_sha256": "f13e00d1cbe82f23975e58ef7b077e2fb4dcdff0f012210d014f82d7231f3c7a",
   "discrepancy_type_counts": {
-    "different_bound": 160,
-    "star_only": 6
+    "different_bound": 160
   },
   "classification_counts": {
-    "expected_format_difference": 166
+    "expected_format_difference": 160
   },
   "case_counts": {
-    "8R1X": 166
+    "8R1X": 160
   },
   "unresolved_count": 0,
   "parser_projection_bug_count": 0

@@ -6,6 +6,7 @@ import csv
 import hashlib
 import json
 from collections import Counter
+from itertools import product
 from pathlib import Path
 from typing import Any
 
@@ -185,6 +186,47 @@ def _physical_set(endpoint: dict[str, Any], topology: TopologyLibrary) -> tuple[
     return json.dumps(rendered, separators=(",", ":"), sort_keys=True), handling
 
 
+def _physical_atoms(
+    rendered: str, destination: tuple[str, int] | None
+) -> tuple[tuple[str, int, str, str], ...]:
+    """Return canonical proton/parent identities from a resolved endpoint."""
+    if rendered.startswith("ERROR:") or destination is None:
+        return ()
+    atoms: set[tuple[str, int, str, str]] = set()
+    for choice in json.loads(rendered):
+        names = [str(atom).upper() for atom in choice.get("atoms", [])]
+        parents = [str(atom).upper() for atom in choice.get("parents", [])]
+        if len(parents) == 1:
+            atoms.update(
+                (destination[0], destination[1], name, parents[0]) for name in names
+            )
+        elif len(parents) == len(names):
+            atoms.update(
+                (destination[0], destination[1], name, parent)
+                for name, parent in zip(names, parents)
+            )
+    return tuple(sorted(atoms))
+
+
+def _semantic_kinds(rendered: str, handling: str) -> tuple[str, ...]:
+    kinds = {handling}
+    if not rendered.startswith("ERROR:"):
+        for choice in json.loads(rendered):
+            semantics = str(choice.get("semantics") or "")
+            if "atom-set" in semantics:
+                kinds.add("physical_atom_set")
+            if "stereo" in semantics:
+                kinds.add("stereospecific_assignment_alternative")
+    return tuple(sorted(kinds))
+
+
+def _physical_pairs(
+    atoms1: tuple[tuple[str, int, str, str], ...],
+    atoms2: tuple[tuple[str, int, str, str], ...],
+) -> tuple[tuple[tuple[str, int, str, str], tuple[str, int, str, str]], ...]:
+    return tuple(sorted({tuple(sorted(pair)) for pair in product(atoms1, atoms2)}))
+
+
 def _format_evidence(
     report: dict[str, Any],
     constraint: dict[str, Any] | None,
@@ -203,17 +245,26 @@ def _format_evidence(
     handling: list[str] = []
     source_bounds: list[float] = []
     representation: list[Any] = []
+    semantic_groups: dict[str, dict[str, Any]] = {}
     destinations: dict[str, set[tuple[tuple[str, int] | None, tuple[str, int] | None]]] = {}
     for group in selected:
         group_label = _group_id(group)
+        normalized_group = _normalize_group_id(group_label)
         restraint_ids.append(group_label)
         group_representation: list[Any] = []
+        semantic_alternatives: list[dict[str, Any]] = []
         group_destinations: set[
             tuple[tuple[str, int] | None, tuple[str, int] | None]
         ] = set()
         for alternative in group["alternatives"]:
             endpoint1 = alternative["endpoint1"]
             endpoint2 = alternative["endpoint2"]
+            destination1 = _endpoint_destination(
+                endpoint1, exact_sequence, loose_sequence
+            )
+            destination2 = _endpoint_destination(
+                endpoint2, exact_sequence, loose_sequence
+            )
             expression = (
                 f'{endpoint1.get("atom_expression")}--{endpoint2.get("atom_expression")}'
             )
@@ -236,6 +287,10 @@ def _format_evidence(
             )
             set1, handling1 = _physical_set(endpoint1, topology)
             set2, handling2 = _physical_set(endpoint2, topology)
+            atoms1 = _physical_atoms(set1, destination1)
+            atoms2 = _physical_atoms(set2, destination2)
+            kinds1 = _semantic_kinds(set1, handling1)
+            kinds2 = _semantic_kinds(set2, handling2)
             rows = [str(row) for row in alternative.get("row_ids", [])]
             row_ids.extend(rows)
             expressions.append(f"{group_label}[{','.join(rows)}]:{expression}")
@@ -251,11 +306,38 @@ def _format_evidence(
             group_representation.append(
                 (expression, expansion_signature, set1, set2)
             )
-            destination1 = _endpoint_destination(
-                endpoint1, exact_sequence, loose_sequence
-            )
-            destination2 = _endpoint_destination(
-                endpoint2, exact_sequence, loose_sequence
+            semantic_alternatives.append(
+                {
+                    "raw_signature": tuple(
+                        sorted(
+                            (
+                                (
+                                    destination1,
+                                    str(endpoint1.get("atom_expression") or "").upper(),
+                                    str(endpoint1.get("canonical_atom_hint") or "").upper(),
+                                    set1,
+                                ),
+                                (
+                                    destination2,
+                                    str(endpoint2.get("atom_expression") or "").upper(),
+                                    str(endpoint2.get("canonical_atom_hint") or "").upper(),
+                                    set2,
+                                ),
+                            ),
+                            key=repr,
+                        )
+                    ),
+                    "physical_pairs": _physical_pairs(atoms1, atoms2),
+                    "kinds": tuple(sorted(set(kinds1) | set(kinds2))),
+                    "unverified_heavy_atoms": tuple(
+                        sorted(
+                            atom
+                            for rendered, atoms in ((set1, atoms1), (set2, atoms2))
+                            if "explicit-heavy-unlisted" in rendered
+                            for atom in atoms
+                        )
+                    ),
+                }
             )
             group_destinations.add(
                 tuple(
@@ -266,9 +348,43 @@ def _format_evidence(
                 )  # type: ignore[arg-type]
             )
         representation.append(
-            (_normalize_group_id(group_label), tuple(group_representation))
+            (normalized_group, tuple(group_representation))
         )
-        destinations[_normalize_group_id(group_label)] = group_destinations
+        destinations[normalized_group] = group_destinations
+        semantic_groups[normalized_group] = {
+            "alternatives": tuple(semantic_alternatives),
+            "raw_signature": tuple(
+                sorted(
+                    (alternative["raw_signature"] for alternative in semantic_alternatives),
+                    key=repr,
+                )
+            ),
+            "physical_alternative_signature": tuple(
+                sorted(
+                    (
+                        alternative["physical_pairs"]
+                        for alternative in semantic_alternatives
+                    ),
+                    key=repr,
+                )
+            ),
+            "physical_pairs": frozenset(
+                pair
+                for alternative in semantic_alternatives
+                for pair in alternative["physical_pairs"]
+            ),
+            "kinds": frozenset(
+                kind
+                for alternative in semantic_alternatives
+                for kind in alternative["kinds"]
+            ),
+            "unverified_heavy_atoms": frozenset(
+                atom
+                for alternative in semantic_alternatives
+                for atom in alternative["unverified_heavy_atoms"]
+            ),
+            "rejection_reasons": frozenset(rejections.get(normalized_group, [])),
+        }
 
     provenance = constraint.get("provenance", []) if constraint else []
     pair_counts = [int(item["explicit_pair_count"]) for item in provenance]
@@ -290,6 +406,7 @@ def _format_evidence(
         ),
         "present_group_keys": sorted(key for key in matched_keys if key in groups),
         "representation": representation,
+        "semantic_groups": semantic_groups,
         "destinations": destinations,
         "final_bound": float(constraint["max_distance"]) if constraint else None,
     }
@@ -311,6 +428,144 @@ def _bounds_by_group(
         for key in matched_keys
         if key in groups
     }
+
+
+def _wildcard_set_vs_explicit_or(
+    first: dict[str, Any], second: dict[str, Any]
+) -> bool:
+    """Prove wildcard atom-set syntax versus explicit OR-member syntax."""
+    for wildcard, explicit in ((first, second), (second, first)):
+        if wildcard["rejection_reasons"] or explicit["rejection_reasons"]:
+            continue
+        if "physical_atom_set" not in wildcard["kinds"]:
+            continue
+        if wildcard["kinds"] & {
+            "stereospecific_assignment_alternative",
+            "rejected_geometric_pseudoatom",
+            "unresolved_atom_expression",
+        }:
+            continue
+        if explicit["kinds"] & {
+            "stereospecific_assignment_alternative",
+            "rejected_geometric_pseudoatom",
+            "unresolved_atom_expression",
+        }:
+            continue
+        wildcard_pairs = wildcard["physical_pairs"]
+        explicit_pairs = explicit["physical_pairs"]
+        atomset_alternatives = [
+            set(pairs)
+            for pairs in wildcard["physical_alternative_signature"]
+            if len(pairs) > 1
+        ]
+        member_alternatives = [
+            set(pairs) for pairs in explicit["physical_alternative_signature"]
+        ]
+        if (
+            wildcard_pairs
+            and explicit_pairs
+            and explicit_pairs <= wildcard_pairs
+            and atomset_alternatives
+            and member_alternatives
+            and all(member <= wildcard_pairs for member in member_alternatives)
+            and (
+                explicit["kinds"] == {"explicit_atom_or_alias"}
+                or len(explicit["alternatives"]) > len(wildcard["alternatives"])
+                or (
+                    "explicit_atom_or_alias" in explicit["kinds"]
+                    and explicit_pairs < wildcard_pairs
+                )
+            )
+        ):
+            return True
+    return False
+
+
+def _stereo_assignment_vs_physical_set(
+    first: dict[str, Any], second: dict[str, Any]
+) -> bool:
+    """Prove x/y assignment possibilities versus a resolved physical atom set."""
+    allowed_stereo_rejections = {
+        frozenset(),
+        frozenset(
+            {"partially_unprojectable_or_group", "same_heavy_parent_atom"}
+        ),
+    }
+    for stereo, physical in ((first, second), (second, first)):
+        if (
+            stereo["rejection_reasons"] not in allowed_stereo_rejections
+            or physical["rejection_reasons"]
+        ):
+            continue
+        if "stereospecific_assignment_alternative" not in stereo["kinds"]:
+            continue
+        if "rejected_geometric_pseudoatom" in stereo["kinds"]:
+            continue
+        if physical["kinds"] & {
+            "stereospecific_assignment_alternative",
+            "rejected_geometric_pseudoatom",
+            "unresolved_atom_expression",
+        }:
+            continue
+        stereo_pairs = stereo["physical_pairs"]
+        physical_pairs = physical["physical_pairs"]
+        if (
+            stereo_pairs
+            and physical_pairs
+            and (physical_pairs <= stereo_pairs or stereo_pairs <= physical_pairs)
+        ):
+            return True
+    return False
+
+
+def _rejected_geometric_pseudoatom(
+    first: dict[str, Any], second: dict[str, Any]
+) -> bool:
+    """Prove a conservative Q/M pseudoatom rejection against resolved evidence."""
+    for pseudoatom, resolved in ((first, second), (second, first)):
+        if "rejected_geometric_pseudoatom" not in pseudoatom["kinds"]:
+            continue
+        if "rejected_geometric_pseudoatom" in resolved["kinds"]:
+            continue
+        if pseudoatom["rejection_reasons"] != {"unresolved_atom_topology"}:
+            continue
+        if resolved["rejection_reasons"] or not resolved["physical_pairs"]:
+            continue
+        return True
+    return False
+
+
+def _verified_canonical_alias(
+    first: dict[str, Any], second: dict[str, Any]
+) -> bool:
+    """Prove different explicit names resolve to the same atoms and OR structure."""
+    explicit = {"explicit_atom_or_alias"}
+    return bool(
+        first["kinds"] == explicit
+        and second["kinds"] == explicit
+        and first["physical_pairs"]
+        and first["physical_pairs"] == second["physical_pairs"]
+        and first["physical_alternative_signature"]
+        == second["physical_alternative_signature"]
+        and first["raw_signature"] != second["raw_signature"]
+        and not first["rejection_reasons"]
+        and not second["rejection_reasons"]
+    )
+
+
+ALLOWLIST_PREDICATES = (
+    ("wildcard_set_vs_explicit_or", _wildcard_set_vs_explicit_or),
+    ("stereo_assignment_vs_physical_set", _stereo_assignment_vs_physical_set),
+    ("rejected_geometric_pseudoatom", _rejected_geometric_pseudoatom),
+    ("verified_canonical_alias", _verified_canonical_alias),
+)
+
+
+def _strictly_equivalent(first: dict[str, Any], second: dict[str, Any]) -> bool:
+    return bool(
+        first["raw_signature"] == second["raw_signature"]
+        and first["rejection_reasons"] == second["rejection_reasons"]
+    )
 
 
 def _classify(
@@ -349,16 +604,68 @@ def _classify(
             "source_residue_numbering_difference",
             "Corresponding restraint IDs resolve to different target residues in the two deposited sequence maps.",
         )
-    if nef["representation"] != star["representation"] or rejection_reasons:
+    unverified_heavy_differences = [
+        key
+        for key in matched_keys
+        if nef["semantic_groups"][key]["unverified_heavy_atoms"]
+        != star["semantic_groups"][key]["unverified_heavy_atoms"]
+        and (
+            nef["semantic_groups"][key]["unverified_heavy_atoms"]
+            or star["semantic_groups"][key]["unverified_heavy_atoms"]
+        )
+    ]
+    if unverified_heavy_differences:
+        return (
+            "deposition_inconsistency",
+            "unverified_heavy_atom_name_difference",
+            "Corresponding source rows use different unverified heavy-atom names in groups "
+            + ", ".join(sorted(unverified_heavy_differences))
+            + "; topology cannot prove them equivalent.",
+        )
+    allowed: set[str] = set()
+    unrecognized: list[str] = []
+    equivalent: list[str] = []
+    for key in sorted(matched_keys):
+        nef_semantics = nef["semantic_groups"][key]
+        star_semantics = star["semantic_groups"][key]
+        if _strictly_equivalent(nef_semantics, star_semantics):
+            equivalent.append(key)
+            continue
+        matched_predicates = [
+            code
+            for code, predicate in ALLOWLIST_PREDICATES
+            if predicate(nef_semantics, star_semantics)
+        ]
+        if matched_predicates:
+            allowed.update(matched_predicates)
+        else:
+            unrecognized.append(key)
+    if unrecognized:
+        return (
+            "unresolved",
+            "unrecognized_semantic_difference",
+            "Source groups "
+            + ", ".join(unrecognized)
+            + " differ but satisfy no tested semantic allowlist predicate.",
+        )
+    if allowed:
         return (
             "expected_format_difference",
-            "format_atom_semantics_difference",
-            "The formats encode different atom-set, assignment, canonical-expansion, or pseudoatom semantics; conservative projection preserves that difference.",
+            "+".join(sorted(allowed)),
+            "Every non-equivalent source group is proven by an explicit semantic allowlist predicate: "
+            + ", ".join(sorted(allowed))
+            + ".",
+        )
+    if equivalent and len(equivalent) == len(matched_keys):
+        return (
+            "parser_projection_bug",
+            "equivalent_source_evidence_changed_projection",
+            "Equivalent source evidence produced a different projected pair or final bound.",
         )
     return (
         "unresolved",
-        "projection_difference_without_source_evidence",
-        "The output differs although the audited source evidence is equivalent; parser/projection review is required.",
+        "unclassified_projection_difference",
+        "The discrepancy satisfies neither a deposition rule nor a tested semantic predicate.",
     )
 
 

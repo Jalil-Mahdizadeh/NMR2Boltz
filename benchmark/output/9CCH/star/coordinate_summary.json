@@ -55,11 +55,12 @@
     "violated_model_cases": 0,
     "missing_model_cases": 160,
     "constraints_missing_in_any_model": 8,
-    "missing_constraint_examples": [
+    "missing_coordinate_contacts": [
       {
         "constraint_id": "C01559",
         "atom1": "B:12:CB",
         "atom2": "B:48:ZN*",
+        "upper_bound_angstrom": 3.4,
         "models_resolved": 0,
         "source_groups": "XPLOR-NIH_distance_restraints_3:14"
       },
@@ -67,6 +68,7 @@
         "constraint_id": "C01569",
         "atom1": "B:12:SG",
         "atom2": "B:48:ZN*",
+        "upper_bound_angstrom": 2.36,
         "models_resolved": 0,
         "source_groups": "XPLOR-NIH_distance_restraints_3:2"
       },
@@ -74,6 +76,7 @@
         "constraint_id": "C01640",
         "atom1": "B:15:CB",
         "atom2": "B:48:ZN*",
+        "upper_bound_angstrom": 3.4,
         "models_resolved": 0,
         "source_groups": "XPLOR-NIH_distance_restraints_3:17"
       },
@@ -81,6 +84,7 @@
         "constraint_id": "C01646",
         "atom1": "B:15:SG",
         "atom2": "B:48:ZN*",
+        "upper_bound_angstrom": 2.36,
         "models_resolved": 0,
         "source_groups": "XPLOR-NIH_distance_restraints_3:5"
       },
@@ -88,6 +92,7 @@
         "constraint_id": "C01859",
         "atom1": "B:26:CB",
         "atom2": "B:48:ZN*",
+        "upper_bound_angstrom": 3.4,
         "models_resolved": 0,
         "source_groups": "XPLOR-NIH_distance_restraints_3:20"
       },
@@ -95,6 +100,7 @@
         "constraint_id": "C01863",
         "atom1": "B:26:SG",
         "atom2": "B:48:ZN*",
+        "upper_bound_angstrom": 2.36,
         "models_resolved": 0,
         "source_groups": "XPLOR-NIH_distance_restraints_3:8"
       },
@@ -102,6 +108,7 @@
         "constraint_id": "C01913",
         "atom1": "B:29:CB",
         "atom2": "B:48:ZN*",
+        "upper_bound_angstrom": 3.4,
         "models_resolved": 0,
         "source_groups": "XPLOR-NIH_distance_restraints_3:23"
       },
@@ -109,6 +116,73 @@
         "constraint_id": "C01915",
         "atom1": "B:29:SG",
         "atom2": "B:48:ZN*",
+        "upper_bound_angstrom": 2.36,
+        "models_resolved": 0,
+        "source_groups": "XPLOR-NIH_distance_restraints_3:11"
+      }
+    ],
+    "missing_constraint_examples": [
+      {
+        "constraint_id": "C01559",
+        "atom1": "B:12:CB",
+        "atom2": "B:48:ZN*",
+        "upper_bound_angstrom": 3.4,
+        "models_resolved": 0,
+        "source_groups": "XPLOR-NIH_distance_restraints_3:14"
+      },
+      {
+        "constraint_id": "C01569",
+        "atom1": "B:12:SG",
+        "atom2": "B:48:ZN*",
+        "upper_bound_angstrom": 2.36,
+        "models_resolved": 0,
+        "source_groups": "XPLOR-NIH_distance_restraints_3:2"
+      },
+      {
+        "constraint_id": "C01640",
+        "atom1": "B:15:CB",
+        "atom2": "B:48:ZN*",
+        "upper_bound_angstrom": 3.4,
+        "models_resolved": 0,
+        "source_groups": "XPLOR-NIH_distance_restraints_3:17"
+      },
+      {
+        "constraint_id": "C01646",
+        "atom1": "B:15:SG",
+        "atom2": "B:48:ZN*",
+        "upper_bound_angstrom": 2.36,
+        "models_resolved": 0,
+        "source_groups": "XPLOR-NIH_distance_restraints_3:5"
+      },
+      {
+        "constraint_id": "C01859",
+        "atom1": "B:26:CB",
+        "atom2": "B:48:ZN*",
+        "upper_bound_angstrom": 3.4,
+        "models_resolved": 0,
+        "source_groups": "XPLOR-NIH_distance_restraints_3:20"
+      },
+      {
+        "constraint_id": "C01863",
+        "atom1": "B:26:SG",
+        "atom2": "B:48:ZN*",
+        "upper_bound_angstrom": 2.36,
+        "models_resolved": 0,
+        "source_groups": "XPLOR-NIH_distance_restraints_3:8"
+      },
+      {
+        "constraint_id": "C01913",
+        "atom1": "B:29:CB",
+        "atom2": "B:48:ZN*",
+        "upper_bound_angstrom": 3.4,
+        "models_resolved": 0,
+        "source_groups": "XPLOR-NIH_distance_restraints_3:23"
+      },
+      {
+        "constraint_id": "C01915",
+        "atom1": "B:29:SG",
+        "atom2": "B:48:ZN*",
+        "upper_bound_angstrom": 2.36,
         "models_resolved": 0,
         "source_groups": "XPLOR-NIH_distance_restraints_3:11"
       }

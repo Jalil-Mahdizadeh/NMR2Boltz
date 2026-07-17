@@ -84,6 +84,8 @@ docker run --rm --network none --read-only --tmpfs /tmp:size=64m \
 
 The image runs as numeric UID/GID 65532 by default. On Linux, add
 `-u "$(id -u):$(id -g)"` if host-owned output files are preferred.
+The validated image identifier, digest, offline/non-root smoke evidence, and
+6M6O reproduction are recorded in [`VALIDATION.md`](VALIDATION.md).
 
 ## Reproducible benchmarks
 
@@ -122,12 +124,21 @@ averaging policy, source/projected bounds, and classification.
 Files with valid sequence data but no distance-restraint loop produce an empty,
 auditable conversion instead of failing format detection.
 
+An `expected_format_difference` is accepted only through a tested semantic
+allowlist: wildcard atom set versus explicit OR members, x/y assignment versus
+a compatible physical set, rejected geometric Q/M pseudoatoms, or a verified
+canonical naming alias. Unknown representation or rejection differences remain
+`unresolved` and fail CI.
+
 The reviewed scientific interpretation of the current corpus is documented in
 [`docs/BENCHMARK_DISCREPANCY_FINDINGS.md`](docs/BENCHMARK_DISCREPANCY_FINDINGS.md).
 
 The corpus command is also a fail-closed CI gate. It exits nonzero for any
-projection implication failure, unresolved format discrepancy, missing
-coordinate resolution, or change from the reviewed audit/metric baseline.
+projection implication failure, unresolved format discrepancy,
+parser/projection bug, changed discrepancy digest, changed scientific metric,
+or changed reviewed missing-coordinate set. Known coordinate limitations are
+pinned by every contact identity, bound, source provenance, and a digest; they
+are not count-only waivers.
 Replacing the baseline is deliberately explicit and must follow scientific
 review:
 

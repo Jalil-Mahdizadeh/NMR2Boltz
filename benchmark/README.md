@@ -46,8 +46,10 @@ same bounds within 1e-6 Å. High PDB satisfaction does not replace parity review
 and is not an independent Boltz prediction-accuracy result.
 
 The command is fail-closed: execution errors, implication failures, unresolved
-discrepancies, missing heavy-atom coordinate resolution, and changes from
-`reviewed_baseline.json` all produce a nonzero exit. The audit files are still
-written on a scientific gate failure so the cause remains inspectable. Baseline
-replacement requires the explicit `--write-reviewed-baseline` flag and should
-only follow review of every changed row and metric.
+discrepancies, parser/projection bugs, discrepancy-digest changes, scientific
+metric changes, and changes to the exact reviewed missing-coordinate set all
+produce a nonzero exit. The reviewed set contains full contact identities,
+bounds, source provenance, and a SHA-256 digest rather than a count-only waiver.
+Audit files are still written on failure so the cause remains inspectable.
+Baseline replacement requires the explicit `--write-reviewed-baseline` flag
+and should only follow review of every changed row and metric.

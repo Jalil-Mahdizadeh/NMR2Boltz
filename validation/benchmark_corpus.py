@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import math
 import shutil
@@ -141,6 +142,17 @@ def _coordinate_summary(report: Any, pdb_path: Path, tolerance: float) -> dict[s
     missing_constraints = [
         row for row in heavy_summary if row["models_resolved"] != len(model_ids)
     ]
+    missing_contact_records = [
+        {
+            "constraint_id": row["constraint_id"],
+            "atom1": row["atom1"],
+            "atom2": row["atom2"],
+            "upper_bound_angstrom": row["upper_bound"],
+            "models_resolved": row["models_resolved"],
+            "source_groups": row["source_groups"],
+        }
+        for row in missing_constraints
+    ]
     return {
         "pdb": pdb_path.as_posix(),
         "model_count": len(model_ids),
@@ -166,16 +178,8 @@ def _coordinate_summary(report: Any, pdb_path: Path, tolerance: float) -> dict[s
             "violated_model_cases": violated,
             "missing_model_cases": missing,
             "constraints_missing_in_any_model": len(missing_constraints),
-            "missing_constraint_examples": [
-                {
-                    "constraint_id": row["constraint_id"],
-                    "atom1": row["atom1"],
-                    "atom2": row["atom2"],
-                    "models_resolved": row["models_resolved"],
-                    "source_groups": row["source_groups"],
-                }
-                for row in missing_constraints[:50]
-            ],
+            "missing_coordinate_contacts": missing_contact_records,
+            "missing_constraint_examples": missing_contact_records[:50],
             "satisfaction_fraction_of_resolved": satisfied / resolved if resolved else None,
             "constraints_resolved_in_every_model": sum(
                 row["models_resolved"] == len(model_ids) for row in heavy_summary
@@ -374,15 +378,61 @@ def _metric_snapshot(run: dict[str, Any]) -> dict[str, Any]:
     return {"cases": cases}
 
 
+def _missing_coordinate_review(run: dict[str, Any]) -> dict[str, Any]:
+    """Pin every reviewed coordinate gap by scientific identity and digest."""
+    contacts: list[dict[str, Any]] = []
+    counts: Counter[str] = Counter()
+    for case in run["cases"]:
+        if case["status"] != "pass":
+            continue
+        for format_name in ("nef", "star"):
+            heavy = case["formats"][format_name]["coordinates"][
+                "heavy_atom_constraints"
+            ]
+            for item in heavy.get("missing_coordinate_contacts", []):
+                atom1, atom2 = sorted((str(item["atom1"]), str(item["atom2"])))
+                source_groups = sorted(
+                    group
+                    for group in str(item.get("source_groups") or "").split(";")
+                    if group
+                )
+                contact = {
+                    "contact_id": f'{case["case_id"]}|{format_name}|{atom1}--{atom2}',
+                    "case_id": case["case_id"],
+                    "format": format_name,
+                    "atom1": atom1,
+                    "atom2": atom2,
+                    "upper_bound_angstrom": float(item["upper_bound_angstrom"]),
+                    "source_groups": source_groups,
+                }
+                contacts.append(contact)
+                counts[f'{case["case_id"]}:{format_name}'] += 1
+    contacts.sort(
+        key=lambda item: (
+            item["contact_id"],
+            item["upper_bound_angstrom"],
+            item["source_groups"],
+        )
+    )
+    payload = json.dumps(contacts, separators=(",", ":"), sort_keys=True)
+    return {
+        "digest_sha256": hashlib.sha256(payload.encode("utf-8")).hexdigest(),
+        "contact_count": len(contacts),
+        "case_format_counts": dict(sorted(counts.items())),
+        "contacts": contacts,
+    }
+
+
 def _baseline_payload(run: dict[str, Any]) -> dict[str, Any]:
     audit = run["discrepancy_audit"]
     return {
-        "schema_version": 1,
+        "schema_version": 2,
         "audit_review": {
             "digest_sha256": audit["digest_sha256"],
             "row_count": audit["row_count"],
             "classification_counts": audit["classification_counts"],
         },
+        "reviewed_missing_coordinates": _missing_coordinate_review(run),
         "metrics": _metric_snapshot(run),
     }
 
@@ -399,16 +449,6 @@ def _evaluate_gate(run: dict[str, Any], baseline_path: Path) -> dict[str, Any]:
     if implication_failures:
         failures.append(
             {"reason": "projection_implication_failure", "count": implication_failures}
-        )
-    missing_constraints = sum(
-        run["aggregate"]["formats"].get(name, {}).get(
-            "constraints_missing_in_any_model", 0
-        )
-        for name in ("nef", "star")
-    )
-    if missing_constraints:
-        failures.append(
-            {"reason": "missing_coordinate_resolution", "count": missing_constraints}
         )
     unresolved = int(run["discrepancy_audit"]["unresolved_count"])
     if unresolved:
@@ -432,6 +472,28 @@ def _evaluate_gate(run: dict[str, Any], baseline_path: Path) -> dict[str, Any]:
                     "observed": current["audit_review"],
                 }
             )
+        if baseline.get("reviewed_missing_coordinates") != current[
+            "reviewed_missing_coordinates"
+        ]:
+            expected_coordinates = baseline.get("reviewed_missing_coordinates") or {}
+            observed_coordinates = current["reviewed_missing_coordinates"]
+            failures.append(
+                {
+                    "reason": "changed_reviewed_missing_coordinate_set",
+                    "expected_digest_sha256": expected_coordinates.get(
+                        "digest_sha256"
+                    ),
+                    "observed_digest_sha256": observed_coordinates[
+                        "digest_sha256"
+                    ],
+                    "expected_contact_count": expected_coordinates.get(
+                        "contact_count"
+                    ),
+                    "observed_contact_count": observed_coordinates[
+                        "contact_count"
+                    ],
+                }
+            )
         if baseline.get("metrics") != current["metrics"]:
             failures.append({"reason": "unreviewed_metric_change"})
     return {
@@ -450,6 +512,7 @@ def _markdown(run: dict[str, Any]) -> str:
     aggregate = run["aggregate"]
     audit = run["discrepancy_audit"]
     gate = run["gate"]
+    coordinate_review = _missing_coordinate_review(run)
     lines = [
         "# nmr2boltz paired-format benchmark",
         "",
@@ -494,7 +557,9 @@ def _markdown(run: dict[str, Any]) -> str:
             f"- {audit['row_count']} NEF-only, STAR-only, or different-bound contacts were audited to source rows and physical proton sets.",
             f"- Classifications: {audit['classification_counts'].get('expected_format_difference', 0)} scientifically expected format differences; {audit['classification_counts'].get('deposition_inconsistency', 0)} deposition inconsistencies; {audit['unresolved_count']} unresolved; {audit['parser_projection_bug_count']} parser/projection bugs.",
             f"- Reviewed audit digest: `{audit['digest_sha256']}`.",
+            "- `expected_format_difference` is allowlisted only for wildcard-set versus explicit OR, x/y assignment versus a compatible physical set, rejected Q/M pseudoatoms, or verified canonical aliases.",
             "- 9PQH contains 43 contact discrepancies caused by its NEF sequence/residue numbering conflict; its remaining two different-bound rows are the expected explicit-OR versus wildcard atom-set distinction.",
+            "- 9CCH contains 16 deposition inconsistencies because `ZN` and `ZN*` are unverified heavy-atom names that topology cannot prove equivalent.",
             "- 43JX, 6M6O, 9SGX, and 9VUY differences are justified by explicit-OR, wildcard atom-set, x/y assignment, or rejected geometric-pseudoatom semantics.",
             "",
             "## Fail-closed gate",
@@ -502,7 +567,8 @@ def _markdown(run: dict[str, Any]) -> str:
             f"- Gate status: **{gate['status'].upper()}** ({gate['failure_count']} failure {'category' if gate['failure_count'] == 1 else 'categories'}).",
             f"- Coordinate resolution gaps: {nef['constraints_missing_in_any_model']} NEF and {star['constraints_missing_in_any_model']} STAR contacts. These are not omitted from the denominator silently.",
             "- The current gaps are 45 contacts per format in partial-coordinate 8R1X and 8 contacts per format in 9CCH restraints that deposit `ZN`/`ZN*` on GLN 48 rather than the coordinate zinc residue.",
-            "- Any implication failure, missing coordinate, unresolved discrepancy, audit-digest change, or metric snapshot change makes the command exit nonzero.",
+            f"- The exact 106-contact reviewed coordinate set is pinned by digest `{coordinate_review['digest_sha256']}`; any addition, removal, identity, bound, or provenance change fails CI.",
+            "- Any implication failure, unresolved discrepancy, parser/projection bug, discrepancy-digest change, scientific-metric change, or reviewed-coordinate-set change makes the command exit nonzero.",
             "",
             "This validates conversion safety and format behavior against structures refined with the deposited restraints; it is not an independent Boltz prediction-accuracy benchmark.",
             "",

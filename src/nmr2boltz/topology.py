@@ -168,7 +168,10 @@ def _compile_atom_pattern(expression: str) -> tuple[re.Pattern[str], list[str]]:
             xy_names.append(group_name)
             # Non-greedy is important for HGx%: HG11 should resolve branch x=1,
             # while the '%' consumes the final proton number.
-            pieces.append(fr"(?P<{group_name}>[0-9']+?)")
+            # NEF x/y replaces a stereochemical numeric suffix. Apostrophes
+            # are literal parts of nucleotide atom names (for example H4')
+            # and must never be consumed as an assignment branch.
+            pieces.append(fr"(?P<{group_name}>[0-9]+?)")
         else:
             pieces.append(re.escape(char))
     pieces.append("$")

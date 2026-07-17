@@ -4,9 +4,9 @@ Input: benchmark/input/9KG4/9kg4_nmr-data.nef
 Detected format: nef
 Restraint groups read: 553
 Source alternatives read: 554
-Safe groups before pair deduplication: 541
+Safe groups before pair deduplication: 553
 Unique Boltz constraints emitted: 406
-Ambiguous OR groups quarantined: 12
+Ambiguous OR groups quarantined: 0
 Rejection records: 0
 
 Important:

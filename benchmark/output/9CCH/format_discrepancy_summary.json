@@ -1,13 +1,14 @@
 {
   "row_count": 1936,
-  "digest_sha256": "3b640e3e53440b32c5015790413d5b3ac0a7c10a041969c86a2f363bf1f84cfa",
+  "digest_sha256": "55e8684a359dd5d629044b61b5b4fcac0cf142198553303800f78763a7bbfd56",
   "discrepancy_type_counts": {
     "star_only": 174,
     "different_bound": 1754,
     "nef_only": 8
   },
   "classification_counts": {
-    "expected_format_difference": 1936
+    "expected_format_difference": 1920,
+    "deposition_inconsistency": 16
   },
   "case_counts": {
     "9CCH": 1936

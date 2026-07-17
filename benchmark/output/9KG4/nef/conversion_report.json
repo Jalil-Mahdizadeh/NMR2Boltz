@@ -4666,11 +4666,43 @@
       },
       "max_distance": 3.0,
       "source_groups": [
+        "nef_distance_restraint_list_AMBER_distance_restraints_2:1",
         "nef_distance_restraint_list_AMBER_distance_restraints_2:2"
       ],
       "raw_projected_distance": 3.0,
       "boltz_adjustment": null,
       "provenance": [
+        {
+          "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:1",
+          "projected_upper_bound": 3.17,
+          "source_upper_bound": 2.09,
+          "averaging_policy": "sum-r6",
+          "averaging_factor": 1.0,
+          "explicit_pair_count": 1,
+          "bond_offset": 1.08,
+          "source_observation": {
+            "bound_source": "explicit_upper_bound",
+            "explicit_or_derived_upper_bound": 2.09,
+            "lower_bound": 1.89,
+            "target_value": null,
+            "target_uncertainty": null,
+            "upper_linear_limit": 2.59,
+            "weight": 1.0,
+            "origin": "hbond",
+            "combination_id": null,
+            "member_id": null,
+            "member_logic_code": null
+          },
+          "source_rows": [
+            "1"
+          ],
+          "source_endpoints": [
+            "X:8:DG:H2x -- X:13:DG:N7"
+          ],
+          "warnings": [
+            "heavy atom was not enumerated in the selected topology"
+          ]
+        },
         {
           "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:2",
           "projected_upper_bound": 3.0,
@@ -4717,11 +4749,43 @@
       },
       "max_distance": 3.0,
       "source_groups": [
+        "nef_distance_restraint_list_AMBER_distance_restraints_2:13",
         "nef_distance_restraint_list_AMBER_distance_restraints_2:14"
       ],
       "raw_projected_distance": 3.0,
       "boltz_adjustment": null,
       "provenance": [
+        {
+          "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:13",
+          "projected_upper_bound": 3.17,
+          "source_upper_bound": 2.09,
+          "averaging_policy": "sum-r6",
+          "averaging_factor": 1.0,
+          "explicit_pair_count": 1,
+          "bond_offset": 1.08,
+          "source_observation": {
+            "bound_source": "explicit_upper_bound",
+            "explicit_or_derived_upper_bound": 2.09,
+            "lower_bound": 1.89,
+            "target_value": null,
+            "target_uncertainty": null,
+            "upper_linear_limit": 2.59,
+            "weight": 1.0,
+            "origin": "hbond",
+            "combination_id": null,
+            "member_id": null,
+            "member_logic_code": null
+          },
+          "source_rows": [
+            "13"
+          ],
+          "source_endpoints": [
+            "X:23:DG:H2x -- X:8:DG:N7"
+          ],
+          "warnings": [
+            "heavy atom was not enumerated in the selected topology"
+          ]
+        },
         {
           "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:14",
           "projected_upper_bound": 3.0,
@@ -5917,11 +5981,43 @@
       },
       "max_distance": 3.0,
       "source_groups": [
+        "nef_distance_restraint_list_AMBER_distance_restraints_2:17",
         "nef_distance_restraint_list_AMBER_distance_restraints_2:18"
       ],
       "raw_projected_distance": 3.0,
       "boltz_adjustment": null,
       "provenance": [
+        {
+          "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:17",
+          "projected_upper_bound": 3.17,
+          "source_upper_bound": 2.09,
+          "averaging_policy": "sum-r6",
+          "averaging_factor": 1.0,
+          "explicit_pair_count": 1,
+          "bond_offset": 1.08,
+          "source_observation": {
+            "bound_source": "explicit_upper_bound",
+            "explicit_or_derived_upper_bound": 2.09,
+            "lower_bound": 1.89,
+            "target_value": null,
+            "target_uncertainty": null,
+            "upper_linear_limit": 2.59,
+            "weight": 1.0,
+            "origin": "hbond",
+            "combination_id": null,
+            "member_id": null,
+            "member_logic_code": null
+          },
+          "source_rows": [
+            "17"
+          ],
+          "source_endpoints": [
+            "X:9:DG:H2x -- X:14:DG:N7"
+          ],
+          "warnings": [
+            "heavy atom was not enumerated in the selected topology"
+          ]
+        },
         {
           "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:18",
           "projected_upper_bound": 3.0,
@@ -5968,11 +6064,43 @@
       },
       "max_distance": 3.0,
       "source_groups": [
+        "nef_distance_restraint_list_AMBER_distance_restraints_2:29",
         "nef_distance_restraint_list_AMBER_distance_restraints_2:30"
       ],
       "raw_projected_distance": 3.0,
       "boltz_adjustment": null,
       "provenance": [
+        {
+          "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:29",
+          "projected_upper_bound": 3.17,
+          "source_upper_bound": 2.09,
+          "averaging_policy": "sum-r6",
+          "averaging_factor": 1.0,
+          "explicit_pair_count": 1,
+          "bond_offset": 1.08,
+          "source_observation": {
+            "bound_source": "explicit_upper_bound",
+            "explicit_or_derived_upper_bound": 2.09,
+            "lower_bound": 1.89,
+            "target_value": null,
+            "target_uncertainty": null,
+            "upper_linear_limit": 2.59,
+            "weight": 1.0,
+            "origin": "hbond",
+            "combination_id": null,
+            "member_id": null,
+            "member_logic_code": null
+          },
+          "source_rows": [
+            "29"
+          ],
+          "source_endpoints": [
+            "X:24:DG:H2x -- X:9:DG:N7"
+          ],
+          "warnings": [
+            "heavy atom was not enumerated in the selected topology"
+          ]
+        },
         {
           "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:30",
           "projected_upper_bound": 3.0,
@@ -7541,11 +7669,43 @@
       },
       "max_distance": 3.0,
       "source_groups": [
+        "nef_distance_restraint_list_AMBER_distance_restraints_2:33",
         "nef_distance_restraint_list_AMBER_distance_restraints_2:34"
       ],
       "raw_projected_distance": 3.0,
       "boltz_adjustment": null,
       "provenance": [
+        {
+          "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:33",
+          "projected_upper_bound": 3.17,
+          "source_upper_bound": 2.09,
+          "averaging_policy": "sum-r6",
+          "averaging_factor": 1.0,
+          "explicit_pair_count": 1,
+          "bond_offset": 1.08,
+          "source_observation": {
+            "bound_source": "explicit_upper_bound",
+            "explicit_or_derived_upper_bound": 2.09,
+            "lower_bound": 1.89,
+            "target_value": null,
+            "target_uncertainty": null,
+            "upper_linear_limit": 2.59,
+            "weight": 1.0,
+            "origin": "hbond",
+            "combination_id": null,
+            "member_id": null,
+            "member_logic_code": null
+          },
+          "source_rows": [
+            "33"
+          ],
+          "source_endpoints": [
+            "X:10:DG:H2x -- X:15:DG:N7"
+          ],
+          "warnings": [
+            "heavy atom was not enumerated in the selected topology"
+          ]
+        },
         {
           "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:34",
           "projected_upper_bound": 3.0,
@@ -7592,11 +7752,43 @@
       },
       "max_distance": 3.0,
       "source_groups": [
+        "nef_distance_restraint_list_AMBER_distance_restraints_2:45",
         "nef_distance_restraint_list_AMBER_distance_restraints_2:46"
       ],
       "raw_projected_distance": 3.0,
       "boltz_adjustment": null,
       "provenance": [
+        {
+          "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:45",
+          "projected_upper_bound": 3.17,
+          "source_upper_bound": 2.09,
+          "averaging_policy": "sum-r6",
+          "averaging_factor": 1.0,
+          "explicit_pair_count": 1,
+          "bond_offset": 1.08,
+          "source_observation": {
+            "bound_source": "explicit_upper_bound",
+            "explicit_or_derived_upper_bound": 2.09,
+            "lower_bound": 1.89,
+            "target_value": null,
+            "target_uncertainty": null,
+            "upper_linear_limit": 2.59,
+            "weight": 1.0,
+            "origin": "hbond",
+            "combination_id": null,
+            "member_id": null,
+            "member_logic_code": null
+          },
+          "source_rows": [
+            "45"
+          ],
+          "source_endpoints": [
+            "X:25:DG:H2x -- X:10:DG:N7"
+          ],
+          "warnings": [
+            "heavy atom was not enumerated in the selected topology"
+          ]
+        },
         {
           "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:46",
           "projected_upper_bound": 3.0,
@@ -10643,11 +10835,43 @@
       },
       "max_distance": 3.0,
       "source_groups": [
+        "nef_distance_restraint_list_AMBER_distance_restraints_2:5",
         "nef_distance_restraint_list_AMBER_distance_restraints_2:6"
       ],
       "raw_projected_distance": 3.0,
       "boltz_adjustment": null,
       "provenance": [
+        {
+          "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:5",
+          "projected_upper_bound": 3.17,
+          "source_upper_bound": 2.09,
+          "averaging_policy": "sum-r6",
+          "averaging_factor": 1.0,
+          "explicit_pair_count": 1,
+          "bond_offset": 1.08,
+          "source_observation": {
+            "bound_source": "explicit_upper_bound",
+            "explicit_or_derived_upper_bound": 2.09,
+            "lower_bound": 1.89,
+            "target_value": null,
+            "target_uncertainty": null,
+            "upper_linear_limit": 2.59,
+            "weight": 1.0,
+            "origin": "hbond",
+            "combination_id": null,
+            "member_id": null,
+            "member_logic_code": null
+          },
+          "source_rows": [
+            "5"
+          ],
+          "source_endpoints": [
+            "X:13:DG:H2x -- X:19:DG:N7"
+          ],
+          "warnings": [
+            "heavy atom was not enumerated in the selected topology"
+          ]
+        },
         {
           "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:6",
           "projected_upper_bound": 3.0,
@@ -11888,11 +12112,43 @@
       },
       "max_distance": 3.0,
       "source_groups": [
+        "nef_distance_restraint_list_AMBER_distance_restraints_2:21",
         "nef_distance_restraint_list_AMBER_distance_restraints_2:22"
       ],
       "raw_projected_distance": 3.0,
       "boltz_adjustment": null,
       "provenance": [
+        {
+          "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:21",
+          "projected_upper_bound": 3.17,
+          "source_upper_bound": 2.09,
+          "averaging_policy": "sum-r6",
+          "averaging_factor": 1.0,
+          "explicit_pair_count": 1,
+          "bond_offset": 1.08,
+          "source_observation": {
+            "bound_source": "explicit_upper_bound",
+            "explicit_or_derived_upper_bound": 2.09,
+            "lower_bound": 1.89,
+            "target_value": null,
+            "target_uncertainty": null,
+            "upper_linear_limit": 2.59,
+            "weight": 1.0,
+            "origin": "hbond",
+            "combination_id": null,
+            "member_id": null,
+            "member_logic_code": null
+          },
+          "source_rows": [
+            "21"
+          ],
+          "source_endpoints": [
+            "X:14:DG:H2x -- X:20:DG:N7"
+          ],
+          "warnings": [
+            "heavy atom was not enumerated in the selected topology"
+          ]
+        },
         {
           "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:22",
           "projected_upper_bound": 3.0,
@@ -13084,11 +13340,43 @@
       },
       "max_distance": 3.0,
       "source_groups": [
+        "nef_distance_restraint_list_AMBER_distance_restraints_2:37",
         "nef_distance_restraint_list_AMBER_distance_restraints_2:38"
       ],
       "raw_projected_distance": 3.0,
       "boltz_adjustment": null,
       "provenance": [
+        {
+          "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:37",
+          "projected_upper_bound": 3.17,
+          "source_upper_bound": 2.09,
+          "averaging_policy": "sum-r6",
+          "averaging_factor": 1.0,
+          "explicit_pair_count": 1,
+          "bond_offset": 1.08,
+          "source_observation": {
+            "bound_source": "explicit_upper_bound",
+            "explicit_or_derived_upper_bound": 2.09,
+            "lower_bound": 1.89,
+            "target_value": null,
+            "target_uncertainty": null,
+            "upper_linear_limit": 2.59,
+            "weight": 1.0,
+            "origin": "hbond",
+            "combination_id": null,
+            "member_id": null,
+            "member_logic_code": null
+          },
+          "source_rows": [
+            "37"
+          ],
+          "source_endpoints": [
+            "X:15:DG:H2x -- X:21:DG:N7"
+          ],
+          "warnings": [
+            "heavy atom was not enumerated in the selected topology"
+          ]
+        },
         {
           "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:38",
           "projected_upper_bound": 3.0,
@@ -17221,11 +17509,43 @@
       },
       "max_distance": 3.0,
       "source_groups": [
+        "nef_distance_restraint_list_AMBER_distance_restraints_2:9",
         "nef_distance_restraint_list_AMBER_distance_restraints_2:10"
       ],
       "raw_projected_distance": 3.0,
       "boltz_adjustment": null,
       "provenance": [
+        {
+          "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:9",
+          "projected_upper_bound": 3.17,
+          "source_upper_bound": 2.09,
+          "averaging_policy": "sum-r6",
+          "averaging_factor": 1.0,
+          "explicit_pair_count": 1,
+          "bond_offset": 1.08,
+          "source_observation": {
+            "bound_source": "explicit_upper_bound",
+            "explicit_or_derived_upper_bound": 2.09,
+            "lower_bound": 1.89,
+            "target_value": null,
+            "target_uncertainty": null,
+            "upper_linear_limit": 2.59,
+            "weight": 1.0,
+            "origin": "hbond",
+            "combination_id": null,
+            "member_id": null,
+            "member_logic_code": null
+          },
+          "source_rows": [
+            "9"
+          ],
+          "source_endpoints": [
+            "X:19:DG:H2x -- X:23:DG:N7"
+          ],
+          "warnings": [
+            "heavy atom was not enumerated in the selected topology"
+          ]
+        },
         {
           "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:10",
           "projected_upper_bound": 3.0,
@@ -18240,11 +18560,43 @@
       },
       "max_distance": 3.0,
       "source_groups": [
+        "nef_distance_restraint_list_AMBER_distance_restraints_2:25",
         "nef_distance_restraint_list_AMBER_distance_restraints_2:26"
       ],
       "raw_projected_distance": 3.0,
       "boltz_adjustment": null,
       "provenance": [
+        {
+          "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:25",
+          "projected_upper_bound": 3.17,
+          "source_upper_bound": 2.09,
+          "averaging_policy": "sum-r6",
+          "averaging_factor": 1.0,
+          "explicit_pair_count": 1,
+          "bond_offset": 1.08,
+          "source_observation": {
+            "bound_source": "explicit_upper_bound",
+            "explicit_or_derived_upper_bound": 2.09,
+            "lower_bound": 1.89,
+            "target_value": null,
+            "target_uncertainty": null,
+            "upper_linear_limit": 2.59,
+            "weight": 1.0,
+            "origin": "hbond",
+            "combination_id": null,
+            "member_id": null,
+            "member_logic_code": null
+          },
+          "source_rows": [
+            "25"
+          ],
+          "source_endpoints": [
+            "X:20:DG:H2x -- X:24:DG:N7"
+          ],
+          "warnings": [
+            "heavy atom was not enumerated in the selected topology"
+          ]
+        },
         {
           "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:26",
           "projected_upper_bound": 3.0,
@@ -19082,11 +19434,43 @@
       },
       "max_distance": 3.0,
       "source_groups": [
+        "nef_distance_restraint_list_AMBER_distance_restraints_2:41",
         "nef_distance_restraint_list_AMBER_distance_restraints_2:42"
       ],
       "raw_projected_distance": 3.0,
       "boltz_adjustment": null,
       "provenance": [
+        {
+          "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:41",
+          "projected_upper_bound": 3.17,
+          "source_upper_bound": 2.09,
+          "averaging_policy": "sum-r6",
+          "averaging_factor": 1.0,
+          "explicit_pair_count": 1,
+          "bond_offset": 1.08,
+          "source_observation": {
+            "bound_source": "explicit_upper_bound",
+            "explicit_or_derived_upper_bound": 2.09,
+            "lower_bound": 1.89,
+            "target_value": null,
+            "target_uncertainty": null,
+            "upper_linear_limit": 2.59,
+            "weight": 1.0,
+            "origin": "hbond",
+            "combination_id": null,
+            "member_id": null,
+            "member_logic_code": null
+          },
+          "source_rows": [
+            "41"
+          ],
+          "source_endpoints": [
+            "X:21:DG:H2x -- X:25:DG:N7"
+          ],
+          "warnings": [
+            "heavy atom was not enumerated in the selected topology"
+          ]
+        },
         {
           "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:42",
           "projected_upper_bound": 3.0,
@@ -24420,1132 +24804,15 @@
       ]
     }
   ],
-  "ambiguous_groups": [
-    {
-      "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:1",
-      "restraint_id": "1",
-      "list_name": "nef_distance_restraint_list_AMBER_distance_restraints_2",
-      "alternatives": [
-        {
-          "atom1": {
-            "chain": "X",
-            "residue_index": 4,
-            "atom_name": "C2'"
-          },
-          "atom2": {
-            "chain": "X",
-            "residue_index": 9,
-            "atom_name": "N7"
-          },
-          "max_distance": 3.21,
-          "source_upper_bound": 2.09,
-          "averaging_policy": "sum-r6",
-          "averaging_factor": 1.0,
-          "explicit_pair_count": 1,
-          "bond_offset": 1.12,
-          "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:1",
-          "source_observation": {
-            "bound_source": "explicit_upper_bound",
-            "explicit_or_derived_upper_bound": 2.09,
-            "lower_bound": 1.89,
-            "target_value": null,
-            "target_uncertainty": null,
-            "upper_linear_limit": 2.59,
-            "weight": 1.0,
-            "origin": "hbond",
-            "combination_id": null,
-            "member_id": null,
-            "member_logic_code": null
-          },
-          "source_rows": [
-            "1"
-          ],
-          "source_endpoints": [
-            "X:8:DG:H2x -- X:13:DG:N7"
-          ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
-        },
-        {
-          "atom1": {
-            "chain": "X",
-            "residue_index": 4,
-            "atom_name": "N2"
-          },
-          "atom2": {
-            "chain": "X",
-            "residue_index": 9,
-            "atom_name": "N7"
-          },
-          "max_distance": 3.17,
-          "source_upper_bound": 2.09,
-          "averaging_policy": "sum-r6",
-          "averaging_factor": 1.0,
-          "explicit_pair_count": 1,
-          "bond_offset": 1.08,
-          "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:1",
-          "source_observation": {
-            "bound_source": "explicit_upper_bound",
-            "explicit_or_derived_upper_bound": 2.09,
-            "lower_bound": 1.89,
-            "target_value": null,
-            "target_uncertainty": null,
-            "upper_linear_limit": 2.59,
-            "weight": 1.0,
-            "origin": "hbond",
-            "combination_id": null,
-            "member_id": null,
-            "member_logic_code": null
-          },
-          "source_rows": [
-            "1"
-          ],
-          "source_endpoints": [
-            "X:8:DG:H2x -- X:13:DG:N7"
-          ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
-        }
-      ],
-      "reason": "The original restraint is a disjunction whose alternatives map to multiple distinct heavy-atom pairs. Emitting all pairs would convert OR into AND.",
-      "source_format": "nef",
-      "origin": "hbond",
-      "warnings": []
-    },
-    {
-      "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:5",
-      "restraint_id": "5",
-      "list_name": "nef_distance_restraint_list_AMBER_distance_restraints_2",
-      "alternatives": [
-        {
-          "atom1": {
-            "chain": "X",
-            "residue_index": 9,
-            "atom_name": "C2'"
-          },
-          "atom2": {
-            "chain": "X",
-            "residue_index": 15,
-            "atom_name": "N7"
-          },
-          "max_distance": 3.21,
-          "source_upper_bound": 2.09,
-          "averaging_policy": "sum-r6",
-          "averaging_factor": 1.0,
-          "explicit_pair_count": 1,
-          "bond_offset": 1.12,
-          "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:5",
-          "source_observation": {
-            "bound_source": "explicit_upper_bound",
-            "explicit_or_derived_upper_bound": 2.09,
-            "lower_bound": 1.89,
-            "target_value": null,
-            "target_uncertainty": null,
-            "upper_linear_limit": 2.59,
-            "weight": 1.0,
-            "origin": "hbond",
-            "combination_id": null,
-            "member_id": null,
-            "member_logic_code": null
-          },
-          "source_rows": [
-            "5"
-          ],
-          "source_endpoints": [
-            "X:13:DG:H2x -- X:19:DG:N7"
-          ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
-        },
-        {
-          "atom1": {
-            "chain": "X",
-            "residue_index": 9,
-            "atom_name": "N2"
-          },
-          "atom2": {
-            "chain": "X",
-            "residue_index": 15,
-            "atom_name": "N7"
-          },
-          "max_distance": 3.17,
-          "source_upper_bound": 2.09,
-          "averaging_policy": "sum-r6",
-          "averaging_factor": 1.0,
-          "explicit_pair_count": 1,
-          "bond_offset": 1.08,
-          "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:5",
-          "source_observation": {
-            "bound_source": "explicit_upper_bound",
-            "explicit_or_derived_upper_bound": 2.09,
-            "lower_bound": 1.89,
-            "target_value": null,
-            "target_uncertainty": null,
-            "upper_linear_limit": 2.59,
-            "weight": 1.0,
-            "origin": "hbond",
-            "combination_id": null,
-            "member_id": null,
-            "member_logic_code": null
-          },
-          "source_rows": [
-            "5"
-          ],
-          "source_endpoints": [
-            "X:13:DG:H2x -- X:19:DG:N7"
-          ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
-        }
-      ],
-      "reason": "The original restraint is a disjunction whose alternatives map to multiple distinct heavy-atom pairs. Emitting all pairs would convert OR into AND.",
-      "source_format": "nef",
-      "origin": "hbond",
-      "warnings": []
-    },
-    {
-      "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:9",
-      "restraint_id": "9",
-      "list_name": "nef_distance_restraint_list_AMBER_distance_restraints_2",
-      "alternatives": [
-        {
-          "atom1": {
-            "chain": "X",
-            "residue_index": 15,
-            "atom_name": "C2'"
-          },
-          "atom2": {
-            "chain": "X",
-            "residue_index": 19,
-            "atom_name": "N7"
-          },
-          "max_distance": 3.21,
-          "source_upper_bound": 2.09,
-          "averaging_policy": "sum-r6",
-          "averaging_factor": 1.0,
-          "explicit_pair_count": 1,
-          "bond_offset": 1.12,
-          "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:9",
-          "source_observation": {
-            "bound_source": "explicit_upper_bound",
-            "explicit_or_derived_upper_bound": 2.09,
-            "lower_bound": 1.89,
-            "target_value": null,
-            "target_uncertainty": null,
-            "upper_linear_limit": 2.59,
-            "weight": 1.0,
-            "origin": "hbond",
-            "combination_id": null,
-            "member_id": null,
-            "member_logic_code": null
-          },
-          "source_rows": [
-            "9"
-          ],
-          "source_endpoints": [
-            "X:19:DG:H2x -- X:23:DG:N7"
-          ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
-        },
-        {
-          "atom1": {
-            "chain": "X",
-            "residue_index": 15,
-            "atom_name": "N2"
-          },
-          "atom2": {
-            "chain": "X",
-            "residue_index": 19,
-            "atom_name": "N7"
-          },
-          "max_distance": 3.17,
-          "source_upper_bound": 2.09,
-          "averaging_policy": "sum-r6",
-          "averaging_factor": 1.0,
-          "explicit_pair_count": 1,
-          "bond_offset": 1.08,
-          "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:9",
-          "source_observation": {
-            "bound_source": "explicit_upper_bound",
-            "explicit_or_derived_upper_bound": 2.09,
-            "lower_bound": 1.89,
-            "target_value": null,
-            "target_uncertainty": null,
-            "upper_linear_limit": 2.59,
-            "weight": 1.0,
-            "origin": "hbond",
-            "combination_id": null,
-            "member_id": null,
-            "member_logic_code": null
-          },
-          "source_rows": [
-            "9"
-          ],
-          "source_endpoints": [
-            "X:19:DG:H2x -- X:23:DG:N7"
-          ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
-        }
-      ],
-      "reason": "The original restraint is a disjunction whose alternatives map to multiple distinct heavy-atom pairs. Emitting all pairs would convert OR into AND.",
-      "source_format": "nef",
-      "origin": "hbond",
-      "warnings": []
-    },
-    {
-      "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:13",
-      "restraint_id": "13",
-      "list_name": "nef_distance_restraint_list_AMBER_distance_restraints_2",
-      "alternatives": [
-        {
-          "atom1": {
-            "chain": "X",
-            "residue_index": 4,
-            "atom_name": "N7"
-          },
-          "atom2": {
-            "chain": "X",
-            "residue_index": 19,
-            "atom_name": "C2'"
-          },
-          "max_distance": 3.21,
-          "source_upper_bound": 2.09,
-          "averaging_policy": "sum-r6",
-          "averaging_factor": 1.0,
-          "explicit_pair_count": 1,
-          "bond_offset": 1.12,
-          "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:13",
-          "source_observation": {
-            "bound_source": "explicit_upper_bound",
-            "explicit_or_derived_upper_bound": 2.09,
-            "lower_bound": 1.89,
-            "target_value": null,
-            "target_uncertainty": null,
-            "upper_linear_limit": 2.59,
-            "weight": 1.0,
-            "origin": "hbond",
-            "combination_id": null,
-            "member_id": null,
-            "member_logic_code": null
-          },
-          "source_rows": [
-            "13"
-          ],
-          "source_endpoints": [
-            "X:23:DG:H2x -- X:8:DG:N7"
-          ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
-        },
-        {
-          "atom1": {
-            "chain": "X",
-            "residue_index": 4,
-            "atom_name": "N7"
-          },
-          "atom2": {
-            "chain": "X",
-            "residue_index": 19,
-            "atom_name": "N2"
-          },
-          "max_distance": 3.17,
-          "source_upper_bound": 2.09,
-          "averaging_policy": "sum-r6",
-          "averaging_factor": 1.0,
-          "explicit_pair_count": 1,
-          "bond_offset": 1.08,
-          "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:13",
-          "source_observation": {
-            "bound_source": "explicit_upper_bound",
-            "explicit_or_derived_upper_bound": 2.09,
-            "lower_bound": 1.89,
-            "target_value": null,
-            "target_uncertainty": null,
-            "upper_linear_limit": 2.59,
-            "weight": 1.0,
-            "origin": "hbond",
-            "combination_id": null,
-            "member_id": null,
-            "member_logic_code": null
-          },
-          "source_rows": [
-            "13"
-          ],
-          "source_endpoints": [
-            "X:23:DG:H2x -- X:8:DG:N7"
-          ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
-        }
-      ],
-      "reason": "The original restraint is a disjunction whose alternatives map to multiple distinct heavy-atom pairs. Emitting all pairs would convert OR into AND.",
-      "source_format": "nef",
-      "origin": "hbond",
-      "warnings": []
-    },
-    {
-      "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:17",
-      "restraint_id": "17",
-      "list_name": "nef_distance_restraint_list_AMBER_distance_restraints_2",
-      "alternatives": [
-        {
-          "atom1": {
-            "chain": "X",
-            "residue_index": 5,
-            "atom_name": "C2'"
-          },
-          "atom2": {
-            "chain": "X",
-            "residue_index": 10,
-            "atom_name": "N7"
-          },
-          "max_distance": 3.21,
-          "source_upper_bound": 2.09,
-          "averaging_policy": "sum-r6",
-          "averaging_factor": 1.0,
-          "explicit_pair_count": 1,
-          "bond_offset": 1.12,
-          "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:17",
-          "source_observation": {
-            "bound_source": "explicit_upper_bound",
-            "explicit_or_derived_upper_bound": 2.09,
-            "lower_bound": 1.89,
-            "target_value": null,
-            "target_uncertainty": null,
-            "upper_linear_limit": 2.59,
-            "weight": 1.0,
-            "origin": "hbond",
-            "combination_id": null,
-            "member_id": null,
-            "member_logic_code": null
-          },
-          "source_rows": [
-            "17"
-          ],
-          "source_endpoints": [
-            "X:9:DG:H2x -- X:14:DG:N7"
-          ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
-        },
-        {
-          "atom1": {
-            "chain": "X",
-            "residue_index": 5,
-            "atom_name": "N2"
-          },
-          "atom2": {
-            "chain": "X",
-            "residue_index": 10,
-            "atom_name": "N7"
-          },
-          "max_distance": 3.17,
-          "source_upper_bound": 2.09,
-          "averaging_policy": "sum-r6",
-          "averaging_factor": 1.0,
-          "explicit_pair_count": 1,
-          "bond_offset": 1.08,
-          "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:17",
-          "source_observation": {
-            "bound_source": "explicit_upper_bound",
-            "explicit_or_derived_upper_bound": 2.09,
-            "lower_bound": 1.89,
-            "target_value": null,
-            "target_uncertainty": null,
-            "upper_linear_limit": 2.59,
-            "weight": 1.0,
-            "origin": "hbond",
-            "combination_id": null,
-            "member_id": null,
-            "member_logic_code": null
-          },
-          "source_rows": [
-            "17"
-          ],
-          "source_endpoints": [
-            "X:9:DG:H2x -- X:14:DG:N7"
-          ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
-        }
-      ],
-      "reason": "The original restraint is a disjunction whose alternatives map to multiple distinct heavy-atom pairs. Emitting all pairs would convert OR into AND.",
-      "source_format": "nef",
-      "origin": "hbond",
-      "warnings": []
-    },
-    {
-      "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:21",
-      "restraint_id": "21",
-      "list_name": "nef_distance_restraint_list_AMBER_distance_restraints_2",
-      "alternatives": [
-        {
-          "atom1": {
-            "chain": "X",
-            "residue_index": 10,
-            "atom_name": "C2'"
-          },
-          "atom2": {
-            "chain": "X",
-            "residue_index": 16,
-            "atom_name": "N7"
-          },
-          "max_distance": 3.21,
-          "source_upper_bound": 2.09,
-          "averaging_policy": "sum-r6",
-          "averaging_factor": 1.0,
-          "explicit_pair_count": 1,
-          "bond_offset": 1.12,
-          "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:21",
-          "source_observation": {
-            "bound_source": "explicit_upper_bound",
-            "explicit_or_derived_upper_bound": 2.09,
-            "lower_bound": 1.89,
-            "target_value": null,
-            "target_uncertainty": null,
-            "upper_linear_limit": 2.59,
-            "weight": 1.0,
-            "origin": "hbond",
-            "combination_id": null,
-            "member_id": null,
-            "member_logic_code": null
-          },
-          "source_rows": [
-            "21"
-          ],
-          "source_endpoints": [
-            "X:14:DG:H2x -- X:20:DG:N7"
-          ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
-        },
-        {
-          "atom1": {
-            "chain": "X",
-            "residue_index": 10,
-            "atom_name": "N2"
-          },
-          "atom2": {
-            "chain": "X",
-            "residue_index": 16,
-            "atom_name": "N7"
-          },
-          "max_distance": 3.17,
-          "source_upper_bound": 2.09,
-          "averaging_policy": "sum-r6",
-          "averaging_factor": 1.0,
-          "explicit_pair_count": 1,
-          "bond_offset": 1.08,
-          "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:21",
-          "source_observation": {
-            "bound_source": "explicit_upper_bound",
-            "explicit_or_derived_upper_bound": 2.09,
-            "lower_bound": 1.89,
-            "target_value": null,
-            "target_uncertainty": null,
-            "upper_linear_limit": 2.59,
-            "weight": 1.0,
-            "origin": "hbond",
-            "combination_id": null,
-            "member_id": null,
-            "member_logic_code": null
-          },
-          "source_rows": [
-            "21"
-          ],
-          "source_endpoints": [
-            "X:14:DG:H2x -- X:20:DG:N7"
-          ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
-        }
-      ],
-      "reason": "The original restraint is a disjunction whose alternatives map to multiple distinct heavy-atom pairs. Emitting all pairs would convert OR into AND.",
-      "source_format": "nef",
-      "origin": "hbond",
-      "warnings": []
-    },
-    {
-      "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:25",
-      "restraint_id": "25",
-      "list_name": "nef_distance_restraint_list_AMBER_distance_restraints_2",
-      "alternatives": [
-        {
-          "atom1": {
-            "chain": "X",
-            "residue_index": 16,
-            "atom_name": "C2'"
-          },
-          "atom2": {
-            "chain": "X",
-            "residue_index": 20,
-            "atom_name": "N7"
-          },
-          "max_distance": 3.21,
-          "source_upper_bound": 2.09,
-          "averaging_policy": "sum-r6",
-          "averaging_factor": 1.0,
-          "explicit_pair_count": 1,
-          "bond_offset": 1.12,
-          "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:25",
-          "source_observation": {
-            "bound_source": "explicit_upper_bound",
-            "explicit_or_derived_upper_bound": 2.09,
-            "lower_bound": 1.89,
-            "target_value": null,
-            "target_uncertainty": null,
-            "upper_linear_limit": 2.59,
-            "weight": 1.0,
-            "origin": "hbond",
-            "combination_id": null,
-            "member_id": null,
-            "member_logic_code": null
-          },
-          "source_rows": [
-            "25"
-          ],
-          "source_endpoints": [
-            "X:20:DG:H2x -- X:24:DG:N7"
-          ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
-        },
-        {
-          "atom1": {
-            "chain": "X",
-            "residue_index": 16,
-            "atom_name": "N2"
-          },
-          "atom2": {
-            "chain": "X",
-            "residue_index": 20,
-            "atom_name": "N7"
-          },
-          "max_distance": 3.17,
-          "source_upper_bound": 2.09,
-          "averaging_policy": "sum-r6",
-          "averaging_factor": 1.0,
-          "explicit_pair_count": 1,
-          "bond_offset": 1.08,
-          "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:25",
-          "source_observation": {
-            "bound_source": "explicit_upper_bound",
-            "explicit_or_derived_upper_bound": 2.09,
-            "lower_bound": 1.89,
-            "target_value": null,
-            "target_uncertainty": null,
-            "upper_linear_limit": 2.59,
-            "weight": 1.0,
-            "origin": "hbond",
-            "combination_id": null,
-            "member_id": null,
-            "member_logic_code": null
-          },
-          "source_rows": [
-            "25"
-          ],
-          "source_endpoints": [
-            "X:20:DG:H2x -- X:24:DG:N7"
-          ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
-        }
-      ],
-      "reason": "The original restraint is a disjunction whose alternatives map to multiple distinct heavy-atom pairs. Emitting all pairs would convert OR into AND.",
-      "source_format": "nef",
-      "origin": "hbond",
-      "warnings": []
-    },
-    {
-      "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:29",
-      "restraint_id": "29",
-      "list_name": "nef_distance_restraint_list_AMBER_distance_restraints_2",
-      "alternatives": [
-        {
-          "atom1": {
-            "chain": "X",
-            "residue_index": 5,
-            "atom_name": "N7"
-          },
-          "atom2": {
-            "chain": "X",
-            "residue_index": 20,
-            "atom_name": "C2'"
-          },
-          "max_distance": 3.21,
-          "source_upper_bound": 2.09,
-          "averaging_policy": "sum-r6",
-          "averaging_factor": 1.0,
-          "explicit_pair_count": 1,
-          "bond_offset": 1.12,
-          "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:29",
-          "source_observation": {
-            "bound_source": "explicit_upper_bound",
-            "explicit_or_derived_upper_bound": 2.09,
-            "lower_bound": 1.89,
-            "target_value": null,
-            "target_uncertainty": null,
-            "upper_linear_limit": 2.59,
-            "weight": 1.0,
-            "origin": "hbond",
-            "combination_id": null,
-            "member_id": null,
-            "member_logic_code": null
-          },
-          "source_rows": [
-            "29"
-          ],
-          "source_endpoints": [
-            "X:24:DG:H2x -- X:9:DG:N7"
-          ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
-        },
-        {
-          "atom1": {
-            "chain": "X",
-            "residue_index": 5,
-            "atom_name": "N7"
-          },
-          "atom2": {
-            "chain": "X",
-            "residue_index": 20,
-            "atom_name": "N2"
-          },
-          "max_distance": 3.17,
-          "source_upper_bound": 2.09,
-          "averaging_policy": "sum-r6",
-          "averaging_factor": 1.0,
-          "explicit_pair_count": 1,
-          "bond_offset": 1.08,
-          "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:29",
-          "source_observation": {
-            "bound_source": "explicit_upper_bound",
-            "explicit_or_derived_upper_bound": 2.09,
-            "lower_bound": 1.89,
-            "target_value": null,
-            "target_uncertainty": null,
-            "upper_linear_limit": 2.59,
-            "weight": 1.0,
-            "origin": "hbond",
-            "combination_id": null,
-            "member_id": null,
-            "member_logic_code": null
-          },
-          "source_rows": [
-            "29"
-          ],
-          "source_endpoints": [
-            "X:24:DG:H2x -- X:9:DG:N7"
-          ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
-        }
-      ],
-      "reason": "The original restraint is a disjunction whose alternatives map to multiple distinct heavy-atom pairs. Emitting all pairs would convert OR into AND.",
-      "source_format": "nef",
-      "origin": "hbond",
-      "warnings": []
-    },
-    {
-      "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:33",
-      "restraint_id": "33",
-      "list_name": "nef_distance_restraint_list_AMBER_distance_restraints_2",
-      "alternatives": [
-        {
-          "atom1": {
-            "chain": "X",
-            "residue_index": 6,
-            "atom_name": "C2'"
-          },
-          "atom2": {
-            "chain": "X",
-            "residue_index": 11,
-            "atom_name": "N7"
-          },
-          "max_distance": 3.21,
-          "source_upper_bound": 2.09,
-          "averaging_policy": "sum-r6",
-          "averaging_factor": 1.0,
-          "explicit_pair_count": 1,
-          "bond_offset": 1.12,
-          "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:33",
-          "source_observation": {
-            "bound_source": "explicit_upper_bound",
-            "explicit_or_derived_upper_bound": 2.09,
-            "lower_bound": 1.89,
-            "target_value": null,
-            "target_uncertainty": null,
-            "upper_linear_limit": 2.59,
-            "weight": 1.0,
-            "origin": "hbond",
-            "combination_id": null,
-            "member_id": null,
-            "member_logic_code": null
-          },
-          "source_rows": [
-            "33"
-          ],
-          "source_endpoints": [
-            "X:10:DG:H2x -- X:15:DG:N7"
-          ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
-        },
-        {
-          "atom1": {
-            "chain": "X",
-            "residue_index": 6,
-            "atom_name": "N2"
-          },
-          "atom2": {
-            "chain": "X",
-            "residue_index": 11,
-            "atom_name": "N7"
-          },
-          "max_distance": 3.17,
-          "source_upper_bound": 2.09,
-          "averaging_policy": "sum-r6",
-          "averaging_factor": 1.0,
-          "explicit_pair_count": 1,
-          "bond_offset": 1.08,
-          "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:33",
-          "source_observation": {
-            "bound_source": "explicit_upper_bound",
-            "explicit_or_derived_upper_bound": 2.09,
-            "lower_bound": 1.89,
-            "target_value": null,
-            "target_uncertainty": null,
-            "upper_linear_limit": 2.59,
-            "weight": 1.0,
-            "origin": "hbond",
-            "combination_id": null,
-            "member_id": null,
-            "member_logic_code": null
-          },
-          "source_rows": [
-            "33"
-          ],
-          "source_endpoints": [
-            "X:10:DG:H2x -- X:15:DG:N7"
-          ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
-        }
-      ],
-      "reason": "The original restraint is a disjunction whose alternatives map to multiple distinct heavy-atom pairs. Emitting all pairs would convert OR into AND.",
-      "source_format": "nef",
-      "origin": "hbond",
-      "warnings": []
-    },
-    {
-      "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:37",
-      "restraint_id": "37",
-      "list_name": "nef_distance_restraint_list_AMBER_distance_restraints_2",
-      "alternatives": [
-        {
-          "atom1": {
-            "chain": "X",
-            "residue_index": 11,
-            "atom_name": "C2'"
-          },
-          "atom2": {
-            "chain": "X",
-            "residue_index": 17,
-            "atom_name": "N7"
-          },
-          "max_distance": 3.21,
-          "source_upper_bound": 2.09,
-          "averaging_policy": "sum-r6",
-          "averaging_factor": 1.0,
-          "explicit_pair_count": 1,
-          "bond_offset": 1.12,
-          "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:37",
-          "source_observation": {
-            "bound_source": "explicit_upper_bound",
-            "explicit_or_derived_upper_bound": 2.09,
-            "lower_bound": 1.89,
-            "target_value": null,
-            "target_uncertainty": null,
-            "upper_linear_limit": 2.59,
-            "weight": 1.0,
-            "origin": "hbond",
-            "combination_id": null,
-            "member_id": null,
-            "member_logic_code": null
-          },
-          "source_rows": [
-            "37"
-          ],
-          "source_endpoints": [
-            "X:15:DG:H2x -- X:21:DG:N7"
-          ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
-        },
-        {
-          "atom1": {
-            "chain": "X",
-            "residue_index": 11,
-            "atom_name": "N2"
-          },
-          "atom2": {
-            "chain": "X",
-            "residue_index": 17,
-            "atom_name": "N7"
-          },
-          "max_distance": 3.17,
-          "source_upper_bound": 2.09,
-          "averaging_policy": "sum-r6",
-          "averaging_factor": 1.0,
-          "explicit_pair_count": 1,
-          "bond_offset": 1.08,
-          "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:37",
-          "source_observation": {
-            "bound_source": "explicit_upper_bound",
-            "explicit_or_derived_upper_bound": 2.09,
-            "lower_bound": 1.89,
-            "target_value": null,
-            "target_uncertainty": null,
-            "upper_linear_limit": 2.59,
-            "weight": 1.0,
-            "origin": "hbond",
-            "combination_id": null,
-            "member_id": null,
-            "member_logic_code": null
-          },
-          "source_rows": [
-            "37"
-          ],
-          "source_endpoints": [
-            "X:15:DG:H2x -- X:21:DG:N7"
-          ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
-        }
-      ],
-      "reason": "The original restraint is a disjunction whose alternatives map to multiple distinct heavy-atom pairs. Emitting all pairs would convert OR into AND.",
-      "source_format": "nef",
-      "origin": "hbond",
-      "warnings": []
-    },
-    {
-      "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:41",
-      "restraint_id": "41",
-      "list_name": "nef_distance_restraint_list_AMBER_distance_restraints_2",
-      "alternatives": [
-        {
-          "atom1": {
-            "chain": "X",
-            "residue_index": 17,
-            "atom_name": "C2'"
-          },
-          "atom2": {
-            "chain": "X",
-            "residue_index": 21,
-            "atom_name": "N7"
-          },
-          "max_distance": 3.21,
-          "source_upper_bound": 2.09,
-          "averaging_policy": "sum-r6",
-          "averaging_factor": 1.0,
-          "explicit_pair_count": 1,
-          "bond_offset": 1.12,
-          "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:41",
-          "source_observation": {
-            "bound_source": "explicit_upper_bound",
-            "explicit_or_derived_upper_bound": 2.09,
-            "lower_bound": 1.89,
-            "target_value": null,
-            "target_uncertainty": null,
-            "upper_linear_limit": 2.59,
-            "weight": 1.0,
-            "origin": "hbond",
-            "combination_id": null,
-            "member_id": null,
-            "member_logic_code": null
-          },
-          "source_rows": [
-            "41"
-          ],
-          "source_endpoints": [
-            "X:21:DG:H2x -- X:25:DG:N7"
-          ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
-        },
-        {
-          "atom1": {
-            "chain": "X",
-            "residue_index": 17,
-            "atom_name": "N2"
-          },
-          "atom2": {
-            "chain": "X",
-            "residue_index": 21,
-            "atom_name": "N7"
-          },
-          "max_distance": 3.17,
-          "source_upper_bound": 2.09,
-          "averaging_policy": "sum-r6",
-          "averaging_factor": 1.0,
-          "explicit_pair_count": 1,
-          "bond_offset": 1.08,
-          "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:41",
-          "source_observation": {
-            "bound_source": "explicit_upper_bound",
-            "explicit_or_derived_upper_bound": 2.09,
-            "lower_bound": 1.89,
-            "target_value": null,
-            "target_uncertainty": null,
-            "upper_linear_limit": 2.59,
-            "weight": 1.0,
-            "origin": "hbond",
-            "combination_id": null,
-            "member_id": null,
-            "member_logic_code": null
-          },
-          "source_rows": [
-            "41"
-          ],
-          "source_endpoints": [
-            "X:21:DG:H2x -- X:25:DG:N7"
-          ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
-        }
-      ],
-      "reason": "The original restraint is a disjunction whose alternatives map to multiple distinct heavy-atom pairs. Emitting all pairs would convert OR into AND.",
-      "source_format": "nef",
-      "origin": "hbond",
-      "warnings": []
-    },
-    {
-      "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:45",
-      "restraint_id": "45",
-      "list_name": "nef_distance_restraint_list_AMBER_distance_restraints_2",
-      "alternatives": [
-        {
-          "atom1": {
-            "chain": "X",
-            "residue_index": 6,
-            "atom_name": "N7"
-          },
-          "atom2": {
-            "chain": "X",
-            "residue_index": 21,
-            "atom_name": "C2'"
-          },
-          "max_distance": 3.21,
-          "source_upper_bound": 2.09,
-          "averaging_policy": "sum-r6",
-          "averaging_factor": 1.0,
-          "explicit_pair_count": 1,
-          "bond_offset": 1.12,
-          "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:45",
-          "source_observation": {
-            "bound_source": "explicit_upper_bound",
-            "explicit_or_derived_upper_bound": 2.09,
-            "lower_bound": 1.89,
-            "target_value": null,
-            "target_uncertainty": null,
-            "upper_linear_limit": 2.59,
-            "weight": 1.0,
-            "origin": "hbond",
-            "combination_id": null,
-            "member_id": null,
-            "member_logic_code": null
-          },
-          "source_rows": [
-            "45"
-          ],
-          "source_endpoints": [
-            "X:25:DG:H2x -- X:10:DG:N7"
-          ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
-        },
-        {
-          "atom1": {
-            "chain": "X",
-            "residue_index": 6,
-            "atom_name": "N7"
-          },
-          "atom2": {
-            "chain": "X",
-            "residue_index": 21,
-            "atom_name": "N2"
-          },
-          "max_distance": 3.17,
-          "source_upper_bound": 2.09,
-          "averaging_policy": "sum-r6",
-          "averaging_factor": 1.0,
-          "explicit_pair_count": 1,
-          "bond_offset": 1.08,
-          "group_id": "nef_distance_restraint_list_AMBER_distance_restraints_2:45",
-          "source_observation": {
-            "bound_source": "explicit_upper_bound",
-            "explicit_or_derived_upper_bound": 2.09,
-            "lower_bound": 1.89,
-            "target_value": null,
-            "target_uncertainty": null,
-            "upper_linear_limit": 2.59,
-            "weight": 1.0,
-            "origin": "hbond",
-            "combination_id": null,
-            "member_id": null,
-            "member_logic_code": null
-          },
-          "source_rows": [
-            "45"
-          ],
-          "source_endpoints": [
-            "X:25:DG:H2x -- X:10:DG:N7"
-          ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
-        }
-      ],
-      "reason": "The original restraint is a disjunction whose alternatives map to multiple distinct heavy-atom pairs. Emitting all pairs would convert OR into AND.",
-      "source_format": "nef",
-      "origin": "hbond",
-      "warnings": []
-    }
-  ],
+  "ambiguous_groups": [],
   "rejections": [],
   "warnings": [],
   "statistics": {
     "restraint_groups_read": 553,
     "source_alternatives_read": 554,
-    "safe_groups_before_pair_deduplication": 541,
+    "safe_groups_before_pair_deduplication": 553,
     "emitted_unique_heavy_atom_constraints": 406,
-    "ambiguous_or_groups_not_emitted": 12,
+    "ambiguous_or_groups_not_emitted": 0,
     "rejection_records": 0,
     "sequence_records": 24,
     "embedded_component_topologies": 0

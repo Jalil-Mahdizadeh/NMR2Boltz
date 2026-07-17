@@ -91,7 +91,7 @@ The final image passed all 39 Pytest tests and a containerized deterministic str
 Only one nmr2boltz image remains:
 
 - image: nmr2boltz:0.1.0-validated
-- digest: sha256:bb97a627d721afb4985caf3c5b86a48486b70f0cd1436b0129149ad172a22405
+- digest: sha256:366529d372944a278b74fa99c7e499c6f5aa73836dd8e60ed75513e91c0bb000
 - reported size: 243 MB
 - default user: 65532:65532
 

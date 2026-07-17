@@ -4,9 +4,9 @@ Input: benchmark/input/8R1X/8r1x_nmr-data.nef
 Detected format: nef
 Restraint groups read: 1414
 Source alternatives read: 2282
-Safe groups before pair deduplication: 1202
-Unique Boltz constraints emitted: 1112
-Ambiguous OR groups quarantined: 179
+Safe groups before pair deduplication: 1216
+Unique Boltz constraints emitted: 1118
+Ambiguous OR groups quarantined: 165
 Rejection records: 90
 
 Important:

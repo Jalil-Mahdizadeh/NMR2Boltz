@@ -19,8 +19,7 @@
     "group_count": 553,
     "group_model_state_counts": {
       "satisfied": 8238,
-      "violated": 56,
-      "indeterminate": 1
+      "violated": 57
     },
     "groups_satisfied_in_any_model": 552,
     "groups_satisfied_in_every_model": 540,
@@ -33,6 +32,7 @@
     "violated_model_cases": 16,
     "missing_model_cases": 0,
     "constraints_missing_in_any_model": 0,
+    "missing_coordinate_contacts": [],
     "missing_constraint_examples": [],
     "satisfaction_fraction_of_resolved": 0.9973727422003285,
     "constraints_resolved_in_every_model": 406,

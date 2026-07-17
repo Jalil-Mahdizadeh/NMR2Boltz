@@ -10,7 +10,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "nmr_to_boltz",
-      "community": 0,
+      "community": 7,
       "norm_label": "nmr_to_boltz.py"
     },
     {
@@ -133,7 +133,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "nmr2boltz_main",
-      "community": 0,
+      "community": 7,
       "norm_label": "__main__.py"
     },
     {
@@ -163,7 +163,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "valueerror",
-      "community": 4,
+      "community": 6,
       "norm_label": "valueerror"
     },
     {
@@ -233,7 +233,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "any",
-      "community": 30,
+      "community": 6,
       "norm_label": "any"
     },
     {
@@ -263,7 +263,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "path",
-      "community": 30,
+      "community": 1,
       "norm_label": "path"
     },
     {
@@ -383,7 +383,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "nmr2boltz_cli",
-      "community": 0,
+      "community": 7,
       "norm_label": "cli.py"
     },
     {
@@ -393,7 +393,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "nmr2boltz_cli_build_parser",
-      "community": 0,
+      "community": 7,
       "norm_label": "build_parser()"
     },
     {
@@ -403,7 +403,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "argumentparser",
-      "community": 0,
+      "community": 7,
       "norm_label": "argumentparser"
     },
     {
@@ -413,7 +413,7 @@
       "source_location": "L193",
       "_origin": "ast",
       "id": "nmr2boltz_cli_parse_chain_map",
-      "community": 0,
+      "community": 7,
       "norm_label": "parse_chain_map()"
     },
     {
@@ -423,7 +423,7 @@
       "source_location": "L207",
       "_origin": "ast",
       "id": "nmr2boltz_cli_command_convert",
-      "community": 0,
+      "community": 7,
       "norm_label": "command_convert()"
     },
     {
@@ -433,7 +433,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "namespace",
-      "community": 0,
+      "community": 7,
       "norm_label": "namespace"
     },
     {
@@ -443,7 +443,7 @@
       "source_location": "L279",
       "_origin": "ast",
       "id": "nmr2boltz_cli_command_benchmark",
-      "community": 0,
+      "community": 7,
       "norm_label": "command_benchmark()"
     },
     {
@@ -453,7 +453,7 @@
       "source_location": "L295",
       "_origin": "ast",
       "id": "nmr2boltz_cli_main",
-      "community": 0,
+      "community": 7,
       "norm_label": "main()"
     },
     {
@@ -463,7 +463,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "nmr2boltz_model",
-      "community": 6,
+      "community": 3,
       "norm_label": "model.py"
     },
     {
@@ -553,7 +553,7 @@
       "source_location": "L96",
       "_origin": "ast",
       "id": "nmr2boltz_model_rawalternative_dedup_key",
-      "community": 30,
+      "community": 6,
       "norm_label": ".dedup_key()"
     },
     {
@@ -563,7 +563,7 @@
       "source_location": "L135",
       "_origin": "ast",
       "id": "nmr2boltz_model_restraintgroup",
-      "community": 6,
+      "community": 0,
       "norm_label": "restraintgroup"
     },
     {
@@ -573,7 +573,7 @@
       "source_location": "L145",
       "_origin": "ast",
       "id": "nmr2boltz_model_restraintgroup_group_id",
-      "community": 6,
+      "community": 0,
       "norm_label": ".group_id()"
     },
     {
@@ -603,7 +603,7 @@
       "source_location": "L169",
       "_origin": "ast",
       "id": "nmr2boltz_model_projectedalternative",
-      "community": 3,
+      "community": 0,
       "norm_label": "projectedalternative"
     },
     {
@@ -613,7 +613,7 @@
       "source_location": "L185",
       "_origin": "ast",
       "id": "nmr2boltz_model_projectedalternative_pair_key",
-      "community": 3,
+      "community": 0,
       "norm_label": ".pair_key()"
     },
     {
@@ -1053,7 +1053,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "nmr2boltz_star_parse_entry_file",
-      "community": 30,
+      "community": 6,
       "norm_label": "_parse_entry_file()"
     },
     {
@@ -1153,7 +1153,7 @@
       "source_location": "L198",
       "_origin": "ast",
       "id": "nmr2boltz_star_parsedstardocument",
-      "community": 6,
+      "community": 0,
       "norm_label": "parsedstardocument"
     },
     {
@@ -1273,7 +1273,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "nmr2boltz_target",
-      "community": 4,
+      "community": 7,
       "norm_label": "target.py"
     },
     {
@@ -1283,7 +1283,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "nmr2boltz_target_targetvalidationerror",
-      "community": 4,
+      "community": 7,
       "norm_label": "targetvalidationerror"
     },
     {
@@ -1293,7 +1293,7 @@
       "source_location": "L75",
       "_origin": "ast",
       "id": "nmr2boltz_target_targetentity",
-      "community": 4,
+      "community": 7,
       "norm_label": "targetentity"
     },
     {
@@ -1303,7 +1303,7 @@
       "source_location": "L84",
       "_origin": "ast",
       "id": "nmr2boltz_target_targetentity_length",
-      "community": 4,
+      "community": 7,
       "norm_label": ".length()"
     },
     {
@@ -1313,7 +1313,7 @@
       "source_location": "L89",
       "_origin": "ast",
       "id": "nmr2boltz_target_validationissue",
-      "community": 4,
+      "community": 7,
       "norm_label": "validationissue"
     },
     {
@@ -1333,7 +1333,7 @@
       "source_location": "L108",
       "_origin": "ast",
       "id": "nmr2boltz_target_targetvalidationresult_errors",
-      "community": 4,
+      "community": 7,
       "norm_label": ".errors()"
     },
     {
@@ -1343,7 +1343,7 @@
       "source_location": "L112",
       "_origin": "ast",
       "id": "nmr2boltz_target_targetvalidationresult_warnings",
-      "community": 4,
+      "community": 7,
       "norm_label": ".warnings()"
     },
     {
@@ -1363,7 +1363,7 @@
       "source_location": "L128",
       "_origin": "ast",
       "id": "nmr2boltz_target_targetvalidationresult_require_valid",
-      "community": 4,
+      "community": 7,
       "norm_label": ".require_valid()"
     },
     {
@@ -1373,7 +1373,7 @@
       "source_location": "L138",
       "_origin": "ast",
       "id": "nmr2boltz_target_nonempty_text",
-      "community": 4,
+      "community": 7,
       "norm_label": "_nonempty_text()"
     },
     {
@@ -1383,7 +1383,7 @@
       "source_location": "L145",
       "_origin": "ast",
       "id": "nmr2boltz_target_parse_modifications",
-      "community": 4,
+      "community": 7,
       "norm_label": "_parse_modifications()"
     },
     {
@@ -1393,7 +1393,7 @@
       "source_location": "L175",
       "_origin": "ast",
       "id": "nmr2boltz_target_load_boltz_target",
-      "community": 4,
+      "community": 7,
       "norm_label": "load_boltz_target()"
     },
     {
@@ -1403,7 +1403,7 @@
       "source_location": "L251",
       "_origin": "ast",
       "id": "nmr2boltz_target_residue_symbol",
-      "community": 4,
+      "community": 7,
       "norm_label": "_residue_symbol()"
     },
     {
@@ -1413,7 +1413,7 @@
       "source_location": "L264",
       "_origin": "ast",
       "id": "nmr2boltz_target_validate_position",
-      "community": 4,
+      "community": 7,
       "norm_label": "_validate_position()"
     },
     {
@@ -1423,7 +1423,7 @@
       "source_location": "L371",
       "_origin": "ast",
       "id": "nmr2boltz_target_validate_report_against_target",
-      "community": 4,
+      "community": 7,
       "norm_label": "validate_report_against_target()"
     },
     {
@@ -1433,7 +1433,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "nmr2boltz_target_rationale_14",
-      "community": 4,
+      "community": 7,
       "norm_label": "raised when a boltz target is malformed or incompatible with a conversion."
     },
     {
@@ -1580,7 +1580,7 @@
       "label": "_pseudoatom_to_expression()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L178",
+      "source_location": "L181",
       "_origin": "ast",
       "id": "nmr2boltz_topology_pseudoatom_to_expression",
       "community": 5,
@@ -1590,7 +1590,7 @@
       "label": "TopologyLibrary",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L188",
+      "source_location": "L191",
       "_origin": "ast",
       "id": "nmr2boltz_topology_topologylibrary",
       "community": 0,
@@ -1600,7 +1600,7 @@
       "label": ".__init__()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L189",
+      "source_location": "L192",
       "_origin": "ast",
       "id": "nmr2boltz_topology_topologylibrary_init",
       "community": 5,
@@ -1610,7 +1610,7 @@
       "label": "._load_bond_length_config()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L205",
+      "source_location": "L208",
       "_origin": "ast",
       "id": "nmr2boltz_topology_topologylibrary_load_bond_length_config",
       "community": 5,
@@ -1620,7 +1620,7 @@
       "label": "._apply_bond_overrides()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L238",
+      "source_location": "L241",
       "_origin": "ast",
       "id": "nmr2boltz_topology_topologylibrary_apply_bond_overrides",
       "community": 5,
@@ -1630,7 +1630,7 @@
       "label": ".register()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L250",
+      "source_location": "L253",
       "_origin": "ast",
       "id": "nmr2boltz_topology_topologylibrary_register",
       "community": 5,
@@ -1640,7 +1640,7 @@
       "label": ".get()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L256",
+      "source_location": "L259",
       "_origin": "ast",
       "id": "nmr2boltz_topology_topologylibrary_get",
       "community": 5,
@@ -1650,7 +1650,7 @@
       "label": "._load_external_for_component()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L264",
+      "source_location": "L267",
       "_origin": "ast",
       "id": "nmr2boltz_topology_topologylibrary_load_external_for_component",
       "community": 5,
@@ -1660,7 +1660,7 @@
       "label": "._load_ccd_file()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L283",
+      "source_location": "L286",
       "_origin": "ast",
       "id": "nmr2boltz_topology_topologylibrary_load_ccd_file",
       "community": 5,
@@ -1670,7 +1670,7 @@
       "label": ".resolve_expression()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L334",
+      "source_location": "L337",
       "_origin": "ast",
       "id": "nmr2boltz_topology_topologylibrary_resolve_expression",
       "community": 5,
@@ -1680,7 +1680,7 @@
       "label": "_looks_like_hydrogen()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L545",
+      "source_location": "L548",
       "_origin": "ast",
       "id": "nmr2boltz_topology_looks_like_hydrogen",
       "community": 5,
@@ -1690,7 +1690,7 @@
       "label": "_optional_float()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L550",
+      "source_location": "L553",
       "_origin": "ast",
       "id": "nmr2boltz_topology_optional_float",
       "community": 5,
@@ -1700,7 +1700,7 @@
       "label": "build_builtin_topologies()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L561",
+      "source_location": "L564",
       "_origin": "ast",
       "id": "nmr2boltz_topology_build_builtin_topologies",
       "community": 5,
@@ -1870,7 +1870,7 @@
       "label": "_constraint()",
       "file_type": "code",
       "source_file": "tests/test_corpus_benchmark.py",
-      "source_location": "L14",
+      "source_location": "L24",
       "_origin": "ast",
       "id": "tests_test_corpus_benchmark_constraint",
       "community": 3,
@@ -1880,7 +1880,7 @@
       "label": "test_compare_reports_detects_pair_and_bound_differences()",
       "file_type": "code",
       "source_file": "tests/test_corpus_benchmark.py",
-      "source_location": "L24",
+      "source_location": "L34",
       "_origin": "ast",
       "id": "tests_test_corpus_benchmark_test_compare_reports_detects_pair_and_bound_differences",
       "community": 3,
@@ -1890,7 +1890,7 @@
       "label": "_endpoint()",
       "file_type": "code",
       "source_file": "tests/test_corpus_benchmark.py",
-      "source_location": "L42",
+      "source_location": "L52",
       "_origin": "ast",
       "id": "tests_test_corpus_benchmark_endpoint",
       "community": 30,
@@ -1900,7 +1900,7 @@
       "label": "_alternative()",
       "file_type": "code",
       "source_file": "tests/test_corpus_benchmark.py",
-      "source_location": "L55",
+      "source_location": "L65",
       "_origin": "ast",
       "id": "tests_test_corpus_benchmark_alternative",
       "community": 30,
@@ -1910,7 +1910,7 @@
       "label": "_report()",
       "file_type": "code",
       "source_file": "tests/test_corpus_benchmark.py",
-      "source_location": "L64",
+      "source_location": "L74",
       "_origin": "ast",
       "id": "tests_test_corpus_benchmark_report",
       "community": 30,
@@ -1920,27 +1920,117 @@
       "label": "test_discrepancy_audit_preserves_atomset_vs_explicit_or_evidence()",
       "file_type": "code",
       "source_file": "tests/test_corpus_benchmark.py",
-      "source_location": "L82",
+      "source_location": "L92",
       "_origin": "ast",
       "id": "tests_test_corpus_benchmark_test_discrepancy_audit_preserves_atomset_vs_explicit_or_evidence",
       "community": 30,
       "norm_label": "test_discrepancy_audit_preserves_atomset_vs_explicit_or_evidence()"
     },
     {
-      "label": "test_fail_closed_gate_rejects_missing_coordinate_resolution()",
+      "label": "_semantic()",
       "file_type": "code",
       "source_file": "tests/test_corpus_benchmark.py",
-      "source_location": "L139",
+      "source_location": "L149",
       "_origin": "ast",
-      "id": "tests_test_corpus_benchmark_test_fail_closed_gate_rejects_missing_coordinate_resolution",
+      "id": "tests_test_corpus_benchmark_semantic",
       "community": 30,
-      "norm_label": "test_fail_closed_gate_rejects_missing_coordinate_resolution()"
+      "norm_label": "_semantic()"
+    },
+    {
+      "label": "test_wildcard_vs_explicit_or_predicate_is_structural_and_fail_closed()",
+      "file_type": "code",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L170",
+      "_origin": "ast",
+      "id": "tests_test_corpus_benchmark_test_wildcard_vs_explicit_or_predicate_is_structural_and_fail_closed",
+      "community": 30,
+      "norm_label": "test_wildcard_vs_explicit_or_predicate_is_structural_and_fail_closed()"
+    },
+    {
+      "label": "test_stereo_assignment_vs_physical_set_predicate_requires_compatible_atoms()",
+      "file_type": "code",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L192",
+      "_origin": "ast",
+      "id": "tests_test_corpus_benchmark_test_stereo_assignment_vs_physical_set_predicate_requires_compatible_atoms",
+      "community": 30,
+      "norm_label": "test_stereo_assignment_vs_physical_set_predicate_requires_compatible_atoms()"
+    },
+    {
+      "label": "test_geometric_pseudoatom_predicate_requires_exact_rejection_policy()",
+      "file_type": "code",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L219",
+      "_origin": "ast",
+      "id": "tests_test_corpus_benchmark_test_geometric_pseudoatom_predicate_requires_exact_rejection_policy",
+      "community": 30,
+      "norm_label": "test_geometric_pseudoatom_predicate_requires_exact_rejection_policy()"
+    },
+    {
+      "label": "test_verified_alias_predicate_requires_identical_physical_or_structure()",
+      "file_type": "code",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L238",
+      "_origin": "ast",
+      "id": "tests_test_corpus_benchmark_test_verified_alias_predicate_requires_identical_physical_or_structure",
+      "community": 30,
+      "norm_label": "test_verified_alias_predicate_requires_identical_physical_or_structure()"
+    },
+    {
+      "label": "test_equivalent_source_evidence_with_different_bound_is_parser_bug()",
+      "file_type": "code",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L247",
+      "_origin": "ast",
+      "id": "tests_test_corpus_benchmark_test_equivalent_source_evidence_with_different_bound_is_parser_bug",
+      "community": 30,
+      "norm_label": "test_equivalent_source_evidence_with_different_bound_is_parser_bug()"
+    },
+    {
+      "label": "test_arbitrary_rejection_is_not_an_expected_format_difference()",
+      "file_type": "code",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L269",
+      "_origin": "ast",
+      "id": "tests_test_corpus_benchmark_test_arbitrary_rejection_is_not_an_expected_format_difference",
+      "community": 30,
+      "norm_label": "test_arbitrary_rejection_is_not_an_expected_format_difference()"
+    },
+    {
+      "label": "_gate_run()",
+      "file_type": "code",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L295",
+      "_origin": "ast",
+      "id": "tests_test_corpus_benchmark_gate_run",
+      "community": 1,
+      "norm_label": "_gate_run()"
+    },
+    {
+      "label": "test_fail_closed_gate_accepts_only_exact_reviewed_coordinate_set()",
+      "file_type": "code",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L345",
+      "_origin": "ast",
+      "id": "tests_test_corpus_benchmark_test_fail_closed_gate_accepts_only_exact_reviewed_coordinate_set",
+      "community": 1,
+      "norm_label": "test_fail_closed_gate_accepts_only_exact_reviewed_coordinate_set()"
+    },
+    {
+      "label": "test_gate_remains_fail_closed_for_every_scientific_failure()",
+      "file_type": "code",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L385",
+      "_origin": "ast",
+      "id": "tests_test_corpus_benchmark_test_gate_remains_fail_closed_for_every_scientific_failure",
+      "community": 1,
+      "norm_label": "test_gate_remains_fail_closed_for_every_scientific_failure()"
     },
     {
       "label": "test_benchmark_artifact_paths_are_portable()",
       "file_type": "code",
       "source_file": "tests/test_corpus_benchmark.py",
-      "source_location": "L167",
+      "source_location": "L436",
       "_origin": "ast",
       "id": "tests_test_corpus_benchmark_test_benchmark_artifact_paths_are_portable",
       "community": 30,
@@ -2203,7 +2293,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_target",
-      "community": 4,
+      "community": 7,
       "norm_label": "test_target.py"
     },
     {
@@ -2223,7 +2313,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "tests_test_target_write_target",
-      "community": 4,
+      "community": 7,
       "norm_label": "_write_target()"
     },
     {
@@ -2233,7 +2323,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "tests_test_target_minimal_report",
-      "community": 4,
+      "community": 7,
       "norm_label": "_minimal_report()"
     },
     {
@@ -2243,7 +2333,7 @@
       "source_location": "L63",
       "_origin": "ast",
       "id": "tests_test_target_test_matching_boltz_target_validates_sequence_and_constraints",
-      "community": 4,
+      "community": 7,
       "norm_label": "test_matching_boltz_target_validates_sequence_and_constraints()"
     },
     {
@@ -2253,7 +2343,7 @@
       "source_location": "L76",
       "_origin": "ast",
       "id": "tests_test_target_test_target_residue_mismatch_is_an_error",
-      "community": 4,
+      "community": 7,
       "norm_label": "test_target_residue_mismatch_is_an_error()"
     },
     {
@@ -2263,7 +2353,7 @@
       "source_location": "L88",
       "_origin": "ast",
       "id": "tests_test_target_test_convert_does_not_write_constraints_when_target_validation_fails",
-      "community": 4,
+      "community": 7,
       "norm_label": "test_convert_does_not_write_constraints_when_target_validation_fails()"
     },
     {
@@ -2273,7 +2363,7 @@
       "source_location": "L115",
       "_origin": "ast",
       "id": "tests_test_target_test_nucleic_acid_target_identity_validation",
-      "community": 4,
+      "community": 7,
       "norm_label": "test_nucleic_acid_target_identity_validation()"
     },
     {
@@ -2283,7 +2373,7 @@
       "source_location": "L135",
       "_origin": "ast",
       "id": "tests_test_target_test_declared_polymer_modification_must_match_source_ccd",
-      "community": 4,
+      "community": 7,
       "norm_label": "test_declared_polymer_modification_must_match_source_ccd()"
     },
     {
@@ -2327,10 +2417,20 @@
       "norm_label": "test_xy_branch_stays_assignment_ambiguous()"
     },
     {
-      "label": "test_pseudoatom_rejected_by_default()",
+      "label": "test_nucleotide_xy_does_not_consume_prime_notation()",
       "file_type": "code",
       "source_file": "tests/test_topology.py",
       "source_location": "L26",
+      "_origin": "ast",
+      "id": "tests_test_topology_test_nucleotide_xy_does_not_consume_prime_notation",
+      "community": 0,
+      "norm_label": "test_nucleotide_xy_does_not_consume_prime_notation()"
+    },
+    {
+      "label": "test_pseudoatom_rejected_by_default()",
+      "file_type": "code",
+      "source_file": "tests/test_topology.py",
+      "source_location": "L38",
       "_origin": "ast",
       "id": "tests_test_topology_test_pseudoatom_rejected_by_default",
       "community": 0,
@@ -2343,64 +2443,64 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "validation_benchmark_corpus",
-      "community": 30,
+      "community": 1,
       "norm_label": "benchmark_corpus.py"
     },
     {
       "label": "parse_args()",
       "file_type": "code",
       "source_file": "validation/benchmark_corpus.py",
-      "source_location": "L46",
+      "source_location": "L47",
       "_origin": "ast",
       "id": "validation_benchmark_corpus_parse_args",
-      "community": 30,
+      "community": 1,
       "norm_label": "parse_args()"
     },
     {
       "label": "_single_file()",
       "file_type": "code",
       "source_file": "validation/benchmark_corpus.py",
-      "source_location": "L77",
+      "source_location": "L78",
       "_origin": "ast",
       "id": "validation_benchmark_corpus_single_file",
-      "community": 30,
+      "community": 1,
       "norm_label": "_single_file()"
     },
     {
       "label": "_portable_path()",
       "file_type": "code",
       "source_file": "validation/benchmark_corpus.py",
-      "source_location": "L86",
+      "source_location": "L87",
       "_origin": "ast",
       "id": "validation_benchmark_corpus_portable_path",
-      "community": 30,
+      "community": 1,
       "norm_label": "_portable_path()"
     },
     {
       "label": "_constraint_key()",
       "file_type": "code",
       "source_file": "validation/benchmark_corpus.py",
-      "source_location": "L91",
+      "source_location": "L92",
       "_origin": "ast",
       "id": "validation_benchmark_corpus_constraint_key",
-      "community": 30,
+      "community": 1,
       "norm_label": "_constraint_key()"
     },
     {
       "label": "compare_reports()",
       "file_type": "code",
       "source_file": "validation/benchmark_corpus.py",
-      "source_location": "L99",
+      "source_location": "L100",
       "_origin": "ast",
       "id": "validation_benchmark_corpus_compare_reports",
-      "community": 30,
+      "community": 1,
       "norm_label": "compare_reports()"
     },
     {
       "label": "_coordinate_summary()",
       "file_type": "code",
       "source_file": "validation/benchmark_corpus.py",
-      "source_location": "L119",
+      "source_location": "L120",
       "_origin": "ast",
       "id": "validation_benchmark_corpus_coordinate_summary",
       "community": 1,
@@ -2410,131 +2510,151 @@
       "label": "_conversion_summary()",
       "file_type": "code",
       "source_file": "validation/benchmark_corpus.py",
-      "source_location": "L194",
+      "source_location": "L198",
       "_origin": "ast",
       "id": "validation_benchmark_corpus_conversion_summary",
-      "community": 30,
+      "community": 1,
       "norm_label": "_conversion_summary()"
     },
     {
       "label": "_safe_reset_case()",
       "file_type": "code",
       "source_file": "validation/benchmark_corpus.py",
-      "source_location": "L211",
+      "source_location": "L215",
       "_origin": "ast",
       "id": "validation_benchmark_corpus_safe_reset_case",
-      "community": 30,
+      "community": 1,
       "norm_label": "_safe_reset_case()"
     },
     {
       "label": "_run_case()",
       "file_type": "code",
       "source_file": "validation/benchmark_corpus.py",
-      "source_location": "L224",
+      "source_location": "L228",
       "_origin": "ast",
       "id": "validation_benchmark_corpus_run_case",
-      "community": 30,
+      "community": 1,
       "norm_label": "_run_case()"
     },
     {
       "label": "_aggregate()",
       "file_type": "code",
       "source_file": "validation/benchmark_corpus.py",
-      "source_location": "L274",
+      "source_location": "L278",
       "_origin": "ast",
       "id": "validation_benchmark_corpus_aggregate",
-      "community": 30,
+      "community": 1,
       "norm_label": "_aggregate()"
     },
     {
       "label": "_metric_snapshot()",
       "file_type": "code",
       "source_file": "validation/benchmark_corpus.py",
-      "source_location": "L345",
+      "source_location": "L349",
       "_origin": "ast",
       "id": "validation_benchmark_corpus_metric_snapshot",
-      "community": 30,
+      "community": 1,
       "norm_label": "_metric_snapshot()"
+    },
+    {
+      "label": "_missing_coordinate_review()",
+      "file_type": "code",
+      "source_file": "validation/benchmark_corpus.py",
+      "source_location": "L381",
+      "_origin": "ast",
+      "id": "validation_benchmark_corpus_missing_coordinate_review",
+      "community": 1,
+      "norm_label": "_missing_coordinate_review()"
     },
     {
       "label": "_baseline_payload()",
       "file_type": "code",
       "source_file": "validation/benchmark_corpus.py",
-      "source_location": "L377",
+      "source_location": "L426",
       "_origin": "ast",
       "id": "validation_benchmark_corpus_baseline_payload",
-      "community": 30,
+      "community": 1,
       "norm_label": "_baseline_payload()"
     },
     {
       "label": "_evaluate_gate()",
       "file_type": "code",
       "source_file": "validation/benchmark_corpus.py",
-      "source_location": "L390",
+      "source_location": "L440",
       "_origin": "ast",
       "id": "validation_benchmark_corpus_evaluate_gate",
-      "community": 30,
+      "community": 1,
       "norm_label": "_evaluate_gate()"
     },
     {
       "label": "_percent()",
       "file_type": "code",
       "source_file": "validation/benchmark_corpus.py",
-      "source_location": "L445",
+      "source_location": "L507",
       "_origin": "ast",
       "id": "validation_benchmark_corpus_percent",
-      "community": 30,
+      "community": 1,
       "norm_label": "_percent()"
     },
     {
       "label": "_markdown()",
       "file_type": "code",
       "source_file": "validation/benchmark_corpus.py",
-      "source_location": "L449",
+      "source_location": "L511",
       "_origin": "ast",
       "id": "validation_benchmark_corpus_markdown",
-      "community": 30,
+      "community": 1,
       "norm_label": "_markdown()"
     },
     {
       "label": "run_corpus()",
       "file_type": "code",
       "source_file": "validation/benchmark_corpus.py",
-      "source_location": "L514",
+      "source_location": "L580",
       "_origin": "ast",
       "id": "validation_benchmark_corpus_run_corpus",
-      "community": 30,
+      "community": 1,
       "norm_label": "run_corpus()"
     },
     {
       "label": "main()",
       "file_type": "code",
       "source_file": "validation/benchmark_corpus.py",
-      "source_location": "L583",
+      "source_location": "L649",
       "_origin": "ast",
       "id": "validation_benchmark_corpus_main",
-      "community": 30,
+      "community": 1,
       "norm_label": "main()"
     },
     {
       "label": "Serialize artifact paths deterministically across CI operating systems.",
       "file_type": "rationale",
       "source_file": "validation/benchmark_corpus.py",
-      "source_location": "L87",
+      "source_location": "L88",
       "_origin": "ast",
-      "id": "validation_benchmark_corpus_rationale_87",
-      "community": 30,
+      "id": "validation_benchmark_corpus_rationale_88",
+      "community": 1,
       "norm_label": "serialize artifact paths deterministically across ci operating systems."
     },
     {
       "label": "Select deterministic scientific metrics; any change requires review.",
       "file_type": "rationale",
       "source_file": "validation/benchmark_corpus.py",
-      "source_location": "L346",
+      "source_location": "L350",
       "_origin": "ast",
-      "id": "validation_benchmark_corpus_rationale_346",
-      "community": 30,
+      "id": "validation_benchmark_corpus_rationale_350",
+      "community": 1,
       "norm_label": "select deterministic scientific metrics; any change requires review."
+    },
+    {
+      "label": "Pin every reviewed coordinate gap by scientific identity and digest.",
+      "file_type": "rationale",
+      "source_file": "validation/benchmark_corpus.py",
+      "source_location": "L382",
+      "_origin": "ast",
+      "id": "validation_benchmark_corpus_rationale_382",
+      "community": 1,
+      "norm_label": "pin every reviewed coordinate gap by scientific identity and digest."
     },
     {
       "label": "compare_ensemble.py",
@@ -2840,7 +2960,7 @@
       "label": "_report_dict()",
       "file_type": "code",
       "source_file": "validation/discrepancy_audit.py",
-      "source_location": "L52",
+      "source_location": "L53",
       "_origin": "ast",
       "id": "validation_discrepancy_audit_report_dict",
       "community": 30,
@@ -2850,7 +2970,7 @@
       "label": "_atom_key()",
       "file_type": "code",
       "source_file": "validation/discrepancy_audit.py",
-      "source_location": "L56",
+      "source_location": "L57",
       "_origin": "ast",
       "id": "validation_discrepancy_audit_atom_key",
       "community": 30,
@@ -2860,7 +2980,7 @@
       "label": "_constraint_key()",
       "file_type": "code",
       "source_file": "validation/discrepancy_audit.py",
-      "source_location": "L60",
+      "source_location": "L61",
       "_origin": "ast",
       "id": "validation_discrepancy_audit_constraint_key",
       "community": 30,
@@ -2870,7 +2990,7 @@
       "label": "_pair_label()",
       "file_type": "code",
       "source_file": "validation/discrepancy_audit.py",
-      "source_location": "L64",
+      "source_location": "L65",
       "_origin": "ast",
       "id": "validation_discrepancy_audit_pair_label",
       "community": 30,
@@ -2880,7 +3000,7 @@
       "label": "_normalize_group_id()",
       "file_type": "code",
       "source_file": "validation/discrepancy_audit.py",
-      "source_location": "L68",
+      "source_location": "L69",
       "_origin": "ast",
       "id": "validation_discrepancy_audit_normalize_group_id",
       "community": 30,
@@ -2890,7 +3010,7 @@
       "label": "_group_id()",
       "file_type": "code",
       "source_file": "validation/discrepancy_audit.py",
-      "source_location": "L78",
+      "source_location": "L79",
       "_origin": "ast",
       "id": "validation_discrepancy_audit_group_id",
       "community": 30,
@@ -2900,7 +3020,7 @@
       "label": "_group_indexes()",
       "file_type": "code",
       "source_file": "validation/discrepancy_audit.py",
-      "source_location": "L82",
+      "source_location": "L83",
       "_origin": "ast",
       "id": "validation_discrepancy_audit_group_indexes",
       "community": 30,
@@ -2910,7 +3030,7 @@
       "label": "_ordered_unique()",
       "file_type": "code",
       "source_file": "validation/discrepancy_audit.py",
-      "source_location": "L94",
+      "source_location": "L95",
       "_origin": "ast",
       "id": "validation_discrepancy_audit_ordered_unique",
       "community": 30,
@@ -2920,7 +3040,7 @@
       "label": "_sequence_indexes()",
       "file_type": "code",
       "source_file": "validation/discrepancy_audit.py",
-      "source_location": "L98",
+      "source_location": "L99",
       "_origin": "ast",
       "id": "validation_discrepancy_audit_sequence_indexes",
       "community": 30,
@@ -2930,7 +3050,7 @@
       "label": "_endpoint_destination()",
       "file_type": "code",
       "source_file": "validation/discrepancy_audit.py",
-      "source_location": "L121",
+      "source_location": "L122",
       "_origin": "ast",
       "id": "validation_discrepancy_audit_endpoint_destination",
       "community": 30,
@@ -2940,17 +3060,47 @@
       "label": "_physical_set()",
       "file_type": "code",
       "source_file": "validation/discrepancy_audit.py",
-      "source_location": "L148",
+      "source_location": "L149",
       "_origin": "ast",
       "id": "validation_discrepancy_audit_physical_set",
       "community": 30,
       "norm_label": "_physical_set()"
     },
     {
+      "label": "_physical_atoms()",
+      "file_type": "code",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L189",
+      "_origin": "ast",
+      "id": "validation_discrepancy_audit_physical_atoms",
+      "community": 30,
+      "norm_label": "_physical_atoms()"
+    },
+    {
+      "label": "_semantic_kinds()",
+      "file_type": "code",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L211",
+      "_origin": "ast",
+      "id": "validation_discrepancy_audit_semantic_kinds",
+      "community": 30,
+      "norm_label": "_semantic_kinds()"
+    },
+    {
+      "label": "_physical_pairs()",
+      "file_type": "code",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L223",
+      "_origin": "ast",
+      "id": "validation_discrepancy_audit_physical_pairs",
+      "community": 30,
+      "norm_label": "_physical_pairs()"
+    },
+    {
       "label": "_format_evidence()",
       "file_type": "code",
       "source_file": "validation/discrepancy_audit.py",
-      "source_location": "L188",
+      "source_location": "L230",
       "_origin": "ast",
       "id": "validation_discrepancy_audit_format_evidence",
       "community": 30,
@@ -2960,17 +3110,67 @@
       "label": "_bounds_by_group()",
       "file_type": "code",
       "source_file": "validation/discrepancy_audit.py",
-      "source_location": "L298",
+      "source_location": "L415",
       "_origin": "ast",
       "id": "validation_discrepancy_audit_bounds_by_group",
       "community": 30,
       "norm_label": "_bounds_by_group()"
     },
     {
+      "label": "_wildcard_set_vs_explicit_or()",
+      "file_type": "code",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L433",
+      "_origin": "ast",
+      "id": "validation_discrepancy_audit_wildcard_set_vs_explicit_or",
+      "community": 30,
+      "norm_label": "_wildcard_set_vs_explicit_or()"
+    },
+    {
+      "label": "_stereo_assignment_vs_physical_set()",
+      "file_type": "code",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L484",
+      "_origin": "ast",
+      "id": "validation_discrepancy_audit_stereo_assignment_vs_physical_set",
+      "community": 30,
+      "norm_label": "_stereo_assignment_vs_physical_set()"
+    },
+    {
+      "label": "_rejected_geometric_pseudoatom()",
+      "file_type": "code",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L521",
+      "_origin": "ast",
+      "id": "validation_discrepancy_audit_rejected_geometric_pseudoatom",
+      "community": 30,
+      "norm_label": "_rejected_geometric_pseudoatom()"
+    },
+    {
+      "label": "_verified_canonical_alias()",
+      "file_type": "code",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L538",
+      "_origin": "ast",
+      "id": "validation_discrepancy_audit_verified_canonical_alias",
+      "community": 30,
+      "norm_label": "_verified_canonical_alias()"
+    },
+    {
+      "label": "_strictly_equivalent()",
+      "file_type": "code",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L564",
+      "_origin": "ast",
+      "id": "validation_discrepancy_audit_strictly_equivalent",
+      "community": 30,
+      "norm_label": "_strictly_equivalent()"
+    },
+    {
       "label": "_classify()",
       "file_type": "code",
       "source_file": "validation/discrepancy_audit.py",
-      "source_location": "L316",
+      "source_location": "L571",
       "_origin": "ast",
       "id": "validation_discrepancy_audit_classify",
       "community": 30,
@@ -2980,7 +3180,7 @@
       "label": "audit_reports()",
       "file_type": "code",
       "source_file": "validation/discrepancy_audit.py",
-      "source_location": "L365",
+      "source_location": "L672",
       "_origin": "ast",
       "id": "validation_discrepancy_audit_audit_reports",
       "community": 30,
@@ -2990,30 +3190,30 @@
       "label": "audit_digest()",
       "file_type": "code",
       "source_file": "validation/discrepancy_audit.py",
-      "source_location": "L447",
+      "source_location": "L754",
       "_origin": "ast",
       "id": "validation_discrepancy_audit_audit_digest",
-      "community": 30,
+      "community": 1,
       "norm_label": "audit_digest()"
     },
     {
       "label": "audit_summary()",
       "file_type": "code",
       "source_file": "validation/discrepancy_audit.py",
-      "source_location": "L456",
+      "source_location": "L763",
       "_origin": "ast",
       "id": "validation_discrepancy_audit_audit_summary",
-      "community": 30,
+      "community": 1,
       "norm_label": "audit_summary()"
     },
     {
       "label": "write_audit_tsv()",
       "file_type": "code",
       "source_file": "validation/discrepancy_audit.py",
-      "source_location": "L470",
+      "source_location": "L777",
       "_origin": "ast",
       "id": "validation_discrepancy_audit_write_audit_tsv",
-      "community": 30,
+      "community": 1,
       "norm_label": "write_audit_tsv()"
     },
     {
@@ -3027,12 +3227,62 @@
       "norm_label": "build row-level, fail-closed audits of paired nef/nmr-star contacts."
     },
     {
+      "label": "Return canonical proton/parent identities from a resolved endpoint.",
+      "file_type": "rationale",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L192",
+      "_origin": "ast",
+      "id": "validation_discrepancy_audit_rationale_192",
+      "community": 30,
+      "norm_label": "return canonical proton/parent identities from a resolved endpoint."
+    },
+    {
+      "label": "Prove wildcard atom-set syntax versus explicit OR-member syntax.",
+      "file_type": "rationale",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L436",
+      "_origin": "ast",
+      "id": "validation_discrepancy_audit_rationale_436",
+      "community": 30,
+      "norm_label": "prove wildcard atom-set syntax versus explicit or-member syntax."
+    },
+    {
+      "label": "Prove x/y assignment possibilities versus a resolved physical atom set.",
+      "file_type": "rationale",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L487",
+      "_origin": "ast",
+      "id": "validation_discrepancy_audit_rationale_487",
+      "community": 30,
+      "norm_label": "prove x/y assignment possibilities versus a resolved physical atom set."
+    },
+    {
+      "label": "Prove a conservative Q/M pseudoatom rejection against resolved evidence.",
+      "file_type": "rationale",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L524",
+      "_origin": "ast",
+      "id": "validation_discrepancy_audit_rationale_524",
+      "community": 30,
+      "norm_label": "prove a conservative q/m pseudoatom rejection against resolved evidence."
+    },
+    {
+      "label": "Prove different explicit names resolve to the same atoms and OR structure.",
+      "file_type": "rationale",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L541",
+      "_origin": "ast",
+      "id": "validation_discrepancy_audit_rationale_541",
+      "community": 30,
+      "norm_label": "prove different explicit names resolve to the same atoms and or structure."
+    },
+    {
       "label": "Return one complete evidence row per pair or bound discrepancy.",
       "file_type": "rationale",
       "source_file": "validation/discrepancy_audit.py",
-      "source_location": "L366",
+      "source_location": "L673",
       "_origin": "ast",
-      "id": "validation_discrepancy_audit_rationale_366",
+      "id": "validation_discrepancy_audit_rationale_673",
       "community": 30,
       "norm_label": "return one complete evidence row per pair or bound discrepancy."
     },
@@ -3043,7 +3293,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "validation_stress_validation",
-      "community": 10,
+      "community": 3,
       "norm_label": "stress_validation.py"
     },
     {
@@ -3053,7 +3303,7 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "validation_stress_validation_unit_vector",
-      "community": 10,
+      "community": 3,
       "norm_label": "_unit_vector()"
     },
     {
@@ -3063,7 +3313,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "random",
-      "community": 10,
+      "community": 3,
       "norm_label": "random"
     },
     {
@@ -3073,7 +3323,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "validation_stress_validation_add",
-      "community": 10,
+      "community": 3,
       "norm_label": "_add()"
     },
     {
@@ -3083,7 +3333,7 @@
       "source_location": "L52",
       "_origin": "ast",
       "id": "validation_stress_validation_distance",
-      "community": 10,
+      "community": 3,
       "norm_label": "_distance()"
     },
     {
@@ -3093,7 +3343,7 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "validation_stress_validation_validate_sum_r6",
-      "community": 10,
+      "community": 3,
       "norm_label": "validate_sum_r6()"
     },
     {
@@ -3103,7 +3353,7 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "validation_stress_validation_validate_triangle_projection",
-      "community": 10,
+      "community": 3,
       "norm_label": "validate_triangle_projection()"
     },
     {
@@ -3113,7 +3363,7 @@
       "source_location": "L80",
       "_origin": "ast",
       "id": "validation_stress_validation_validate_outward_rounding",
-      "community": 10,
+      "community": 3,
       "norm_label": "validate_outward_rounding()"
     },
     {
@@ -3123,7 +3373,7 @@
       "source_location": "L88",
       "_origin": "ast",
       "id": "validation_stress_validation_projected",
-      "community": 10,
+      "community": 3,
       "norm_label": "_projected()"
     },
     {
@@ -3133,7 +3383,7 @@
       "source_location": "L102",
       "_origin": "ast",
       "id": "validation_stress_validation_validate_boolean_merge_order",
-      "community": 10,
+      "community": 3,
       "norm_label": "validate_boolean_merge_order()"
     },
     {
@@ -3143,7 +3393,7 @@
       "source_location": "L119",
       "_origin": "ast",
       "id": "validation_stress_validation_validate_builtin_topologies",
-      "community": 10,
+      "community": 3,
       "norm_label": "validate_builtin_topologies()"
     },
     {
@@ -3163,7 +3413,7 @@
       "source_location": "L154",
       "_origin": "ast",
       "id": "validation_stress_validation_validate_end_to_end",
-      "community": 10,
+      "community": 3,
       "norm_label": "validate_end_to_end()"
     },
     {
@@ -3173,7 +3423,7 @@
       "source_location": "L191",
       "_origin": "ast",
       "id": "validation_stress_validation_main",
-      "community": 10,
+      "community": 3,
       "norm_label": "main()"
     },
     {
@@ -3183,7 +3433,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "validation_stress_validation_rationale_1",
-      "community": 10,
+      "community": 3,
       "norm_label": "deterministic mathematical and converter stress validation for nmr2boltz.  this"
     },
     {
@@ -3400,7 +3650,7 @@
       "label": "Reproducible benchmarks",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L88",
+      "source_location": "L90",
       "_origin": "ast",
       "id": "readme_reproducible_benchmarks",
       "community": 11,
@@ -3410,7 +3660,7 @@
       "label": "Output files",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L141",
+      "source_location": "L152",
       "_origin": "ast",
       "id": "readme_output_files",
       "community": 11,
@@ -3420,7 +3670,7 @@
       "label": "BoltzUI integration",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L157",
+      "source_location": "L168",
       "_origin": "ast",
       "id": "readme_boltzui_integration",
       "community": 11,
@@ -3430,7 +3680,7 @@
       "label": "Projection policies",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L176",
+      "source_location": "L187",
       "_origin": "ast",
       "id": "readme_projection_policies",
       "community": 11,
@@ -3440,7 +3690,7 @@
       "label": "Ambiguity rules",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L200",
+      "source_location": "L211",
       "_origin": "ast",
       "id": "readme_ambiguity_rules",
       "community": 11,
@@ -3450,7 +3700,7 @@
       "label": "Safe workflow for structure generation",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L214",
+      "source_location": "L225",
       "_origin": "ast",
       "id": "readme_safe_workflow_for_structure_generation",
       "community": 11,
@@ -3460,7 +3710,7 @@
       "label": "Important limitations",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L224",
+      "source_location": "L235",
       "_origin": "ast",
       "id": "readme_important_limitations",
       "community": 11,
@@ -3470,7 +3720,7 @@
       "label": "Documentation",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L234",
+      "source_location": "L245",
       "_origin": "ast",
       "id": "readme_documentation",
       "community": 11,
@@ -3480,7 +3730,7 @@
       "label": "Primary references and specifications",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L241",
+      "source_location": "L252",
       "_origin": "ast",
       "id": "readme_primary_references_and_specifications",
       "community": 11,
@@ -3520,7 +3770,7 @@
       "label": "Included",
       "file_type": "document",
       "source_file": "RELEASE_NOTES.md",
-      "source_location": "L25",
+      "source_location": "L38",
       "_origin": "ast",
       "id": "release_notes_included",
       "community": 20,
@@ -3530,7 +3780,7 @@
       "label": "Safety defaults",
       "file_type": "document",
       "source_file": "RELEASE_NOTES.md",
-      "source_location": "L38",
+      "source_location": "L51",
       "_origin": "ast",
       "id": "release_notes_safety_defaults",
       "community": 20,
@@ -3540,7 +3790,7 @@
       "label": "Validation",
       "file_type": "document",
       "source_file": "RELEASE_NOTES.md",
-      "source_location": "L42",
+      "source_location": "L55",
       "_origin": "ast",
       "id": "release_notes_validation",
       "community": 20,
@@ -3553,7 +3803,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "validation",
-      "community": 21,
+      "community": 11,
       "norm_label": "validation.md"
     },
     {
@@ -3563,7 +3813,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "validation_validation_status",
-      "community": 21,
+      "community": 11,
       "norm_label": "validation status"
     },
     {
@@ -3573,27 +3823,27 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "validation_regression_and_stress_validation",
-      "community": 21,
+      "community": 11,
       "norm_label": "regression and stress validation"
     },
     {
       "label": "Paired-format deposited-data validation",
       "file_type": "document",
       "source_file": "VALIDATION.md",
-      "source_location": "L22",
+      "source_location": "L27",
       "_origin": "ast",
       "id": "validation_paired_format_deposited_data_validation",
-      "community": 21,
+      "community": 11,
       "norm_label": "paired-format deposited-data validation"
     },
     {
       "label": "Container status",
       "file_type": "document",
       "source_file": "VALIDATION.md",
-      "source_location": "L39",
+      "source_location": "L58",
       "_origin": "ast",
       "id": "validation_container_status",
-      "community": 21,
+      "community": 11,
       "norm_label": "container status"
     },
     {
@@ -3660,7 +3910,7 @@
       "label": "Fail-closed gate",
       "file_type": "document",
       "source_file": "benchmark/output/BENCHMARK_REPORT.md",
-      "source_location": "L36",
+      "source_location": "L38",
       "_origin": "ast",
       "id": "output_benchmark_report_fail_closed_gate",
       "community": 24,
@@ -4720,7 +4970,7 @@
       "label": "11.5 Executed validation record",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L505",
+      "source_location": "L507",
       "_origin": "ast",
       "id": "docs_scientific_method_11_5_executed_validation_record",
       "community": 18,
@@ -4730,7 +4980,7 @@
       "label": "12. Suggested confidence tiers",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L540",
+      "source_location": "L545",
       "_origin": "ast",
       "id": "docs_scientific_method_12_suggested_confidence_tiers",
       "community": 2,
@@ -4740,7 +4990,7 @@
       "label": "13. Potential methodological extensions",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L555",
+      "source_location": "L560",
       "_origin": "ast",
       "id": "docs_scientific_method_13_potential_methodological_extensions",
       "community": 19,
@@ -4750,7 +5000,7 @@
       "label": "13.1 Probabilistic union restraints",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L557",
+      "source_location": "L562",
       "_origin": "ast",
       "id": "docs_scientific_method_13_1_probabilistic_union_restraints",
       "community": 19,
@@ -4760,7 +5010,7 @@
       "label": "13.2 Ensemble-aware objective",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L561",
+      "source_location": "L566",
       "_origin": "ast",
       "id": "docs_scientific_method_13_2_ensemble_aware_objective",
       "community": 19,
@@ -4770,7 +5020,7 @@
       "label": "13.3 Iterative assignment and folding",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L565",
+      "source_location": "L570",
       "_origin": "ast",
       "id": "docs_scientific_method_13_3_iterative_assignment_and_folding",
       "community": 19,
@@ -4780,7 +5030,7 @@
       "label": "13.4 Information-aware restraint selection",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L575",
+      "source_location": "L580",
       "_origin": "ast",
       "id": "docs_scientific_method_13_4_information_aware_restraint_selection",
       "community": 19,
@@ -4790,7 +5040,7 @@
       "label": "13.5 Broader experimental data",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L579",
+      "source_location": "L584",
       "_origin": "ast",
       "id": "docs_scientific_method_13_5_broader_experimental_data",
       "community": 19,
@@ -4800,7 +5050,7 @@
       "label": "14. Reproducibility and auditability",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L593",
+      "source_location": "L598",
       "_origin": "ast",
       "id": "docs_scientific_method_14_reproducibility_and_auditability",
       "community": 2,
@@ -4810,7 +5060,7 @@
       "label": "15. Questions for NMR expert review before production deployment",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L610",
+      "source_location": "L615",
       "_origin": "ast",
       "id": "docs_scientific_method_15_questions_for_nmr_expert_review_before_production_deployment",
       "community": 2,
@@ -4820,7 +5070,7 @@
       "label": "16. Primary specifications and references",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L625",
+      "source_location": "L630",
       "_origin": "ast",
       "id": "docs_scientific_method_16_primary_specifications_and_references",
       "community": 2,
@@ -4830,7 +5080,7 @@
       "label": "17. Concise algorithm",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L639",
+      "source_location": "L644",
       "_origin": "ast",
       "id": "docs_scientific_method_17_concise_algorithm",
       "community": 2,
@@ -6403,6 +6653,17 @@
       "context": "generic_arg",
       "confidence": "EXTRACTED",
       "source_file": "validation/benchmark_corpus.py",
+      "source_location": "L381",
+      "weight": 1.0,
+      "source": "validation_benchmark_corpus_missing_coordinate_review",
+      "target": "any",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/benchmark_corpus.py",
       "source_location": "L193",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -6689,6 +6950,17 @@
       "context": "generic_arg",
       "confidence": "EXTRACTED",
       "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L521",
+      "weight": 1.0,
+      "source": "validation_discrepancy_audit_rejected_geometric_pseudoatom",
+      "target": "any",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
       "source_location": "L52",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -6705,6 +6977,50 @@
       "confidence_score": 1.0,
       "source": "validation_discrepancy_audit_sequence_indexes",
       "target": "any"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L484",
+      "weight": 1.0,
+      "source": "validation_discrepancy_audit_stereo_assignment_vs_physical_set",
+      "target": "any",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L564",
+      "weight": 1.0,
+      "source": "validation_discrepancy_audit_strictly_equivalent",
+      "target": "any",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L538",
+      "weight": 1.0,
+      "source": "validation_discrepancy_audit_verified_canonical_alias",
+      "target": "any",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L433",
+      "weight": 1.0,
+      "source": "validation_discrepancy_audit_wildcard_set_vs_explicit_or",
+      "target": "any",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -7065,9 +7381,9 @@
       "source_file": "validation/benchmark_corpus.py",
       "source_location": "L86",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "validation_benchmark_corpus_portable_path",
-      "target": "path",
-      "confidence_score": 1.0
+      "target": "path"
     },
     {
       "relation": "references",
@@ -13319,6 +13635,17 @@
       "source_file": "tests/test_topology.py",
       "source_location": "L27",
       "weight": 1.0,
+      "source": "tests_test_topology_test_nucleotide_xy_does_not_consume_prime_notation",
+      "target": "nmr2boltz_topology_topologylibrary"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_topology.py",
+      "source_location": "L27",
+      "weight": 1.0,
       "source": "tests_test_topology_test_pseudoatom_rejected_by_default",
       "target": "nmr2boltz_topology_topologylibrary"
     },
@@ -13782,6 +14109,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L295",
+      "weight": 1.0,
+      "source": "tests_test_corpus_benchmark",
+      "target": "tests_test_corpus_benchmark_gate_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
       "source_location": "L62",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -13792,11 +14129,31 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_corpus_benchmark.py",
-      "source_location": "L167",
+      "source_location": "L149",
       "weight": 1.0,
       "source": "tests_test_corpus_benchmark",
-      "target": "tests_test_corpus_benchmark_test_benchmark_artifact_paths_are_portable",
+      "target": "tests_test_corpus_benchmark_semantic",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L269",
+      "weight": 1.0,
+      "source": "tests_test_corpus_benchmark",
+      "target": "tests_test_corpus_benchmark_test_arbitrary_rejection_is_not_an_expected_format_difference",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L167",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_corpus_benchmark",
+      "target": "tests_test_corpus_benchmark_test_benchmark_artifact_paths_are_portable"
     },
     {
       "relation": "contains",
@@ -13822,11 +14179,71 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_corpus_benchmark.py",
-      "source_location": "L137",
+      "source_location": "L247",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "tests_test_corpus_benchmark",
-      "target": "tests_test_corpus_benchmark_test_fail_closed_gate_rejects_missing_coordinate_resolution"
+      "target": "tests_test_corpus_benchmark_test_equivalent_source_evidence_with_different_bound_is_parser_bug",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L345",
+      "weight": 1.0,
+      "source": "tests_test_corpus_benchmark",
+      "target": "tests_test_corpus_benchmark_test_fail_closed_gate_accepts_only_exact_reviewed_coordinate_set",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L385",
+      "weight": 1.0,
+      "source": "tests_test_corpus_benchmark",
+      "target": "tests_test_corpus_benchmark_test_gate_remains_fail_closed_for_every_scientific_failure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L219",
+      "weight": 1.0,
+      "source": "tests_test_corpus_benchmark",
+      "target": "tests_test_corpus_benchmark_test_geometric_pseudoatom_predicate_requires_exact_rejection_policy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L192",
+      "weight": 1.0,
+      "source": "tests_test_corpus_benchmark",
+      "target": "tests_test_corpus_benchmark_test_stereo_assignment_vs_physical_set_predicate_requires_compatible_atoms",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L238",
+      "weight": 1.0,
+      "source": "tests_test_corpus_benchmark",
+      "target": "tests_test_corpus_benchmark_test_verified_alias_predicate_requires_identical_physical_or_structure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L170",
+      "weight": 1.0,
+      "source": "tests_test_corpus_benchmark",
+      "target": "tests_test_corpus_benchmark_test_wildcard_vs_explicit_or_predicate_is_structural_and_fail_closed",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -13877,11 +14294,22 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_corpus_benchmark.py",
-      "source_location": "L5",
+      "source_location": "L7",
       "weight": 1.0,
       "source": "tests_test_corpus_benchmark",
-      "target": "validation_benchmark_corpus_portable_path",
+      "target": "validation_benchmark_corpus_missing_coordinate_review",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_corpus_benchmark",
+      "target": "validation_benchmark_corpus_portable_path"
     },
     {
       "relation": "imports_from",
@@ -13915,6 +14343,50 @@
       "confidence_score": 1.0,
       "source": "tests_test_corpus_benchmark",
       "target": "validation_discrepancy_audit_audit_summary"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "tests_test_corpus_benchmark",
+      "target": "validation_discrepancy_audit_rejected_geometric_pseudoatom",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "tests_test_corpus_benchmark",
+      "target": "validation_discrepancy_audit_stereo_assignment_vs_physical_set",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "tests_test_corpus_benchmark",
+      "target": "validation_discrepancy_audit_verified_canonical_alias",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "tests_test_corpus_benchmark",
+      "target": "validation_discrepancy_audit_wildcard_set_vs_explicit_or",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -13954,11 +14426,44 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L275",
+      "weight": 1.0,
+      "source": "tests_test_corpus_benchmark_test_arbitrary_rejection_is_not_an_expected_format_difference",
+      "target": "tests_test_corpus_benchmark_alternative",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
       "source_location": "L86",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "tests_test_corpus_benchmark_test_discrepancy_audit_preserves_atomset_vs_explicit_or_evidence",
       "target": "tests_test_corpus_benchmark_alternative"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L253",
+      "weight": 1.0,
+      "source": "tests_test_corpus_benchmark_test_equivalent_source_evidence_with_different_bound_is_parser_bug",
+      "target": "tests_test_corpus_benchmark_alternative",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L288",
+      "weight": 1.0,
+      "source": "tests_test_corpus_benchmark_test_arbitrary_rejection_is_not_an_expected_format_difference",
+      "target": "tests_test_corpus_benchmark_report",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -13976,6 +14481,17 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L264",
+      "weight": 1.0,
+      "source": "tests_test_corpus_benchmark_test_equivalent_source_evidence_with_different_bound_is_parser_bug",
+      "target": "tests_test_corpus_benchmark_report",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
       "source_location": "L123",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -13987,33 +14503,209 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_corpus_benchmark.py",
-      "source_location": "L155",
+      "source_location": "L220",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tests_test_corpus_benchmark_test_fail_closed_gate_rejects_missing_coordinate_resolution",
-      "target": "validation_benchmark_corpus_baseline_payload"
+      "source": "tests_test_corpus_benchmark_test_geometric_pseudoatom_predicate_requires_exact_rejection_policy",
+      "target": "tests_test_corpus_benchmark_semantic",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_corpus_benchmark.py",
-      "source_location": "L157",
+      "source_location": "L193",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tests_test_corpus_benchmark_test_fail_closed_gate_rejects_missing_coordinate_resolution",
-      "target": "validation_benchmark_corpus_evaluate_gate"
+      "source": "tests_test_corpus_benchmark_test_stereo_assignment_vs_physical_set_predicate_requires_compatible_atoms",
+      "target": "tests_test_corpus_benchmark_semantic",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_corpus_benchmark.py",
-      "source_location": "L152",
+      "source_location": "L239",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tests_test_corpus_benchmark_test_fail_closed_gate_rejects_missing_coordinate_resolution",
-      "target": "validation_discrepancy_audit_audit_summary"
+      "source": "tests_test_corpus_benchmark_test_verified_alias_predicate_requires_identical_physical_or_structure",
+      "target": "tests_test_corpus_benchmark_semantic",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L171",
+      "weight": 1.0,
+      "source": "tests_test_corpus_benchmark_test_wildcard_vs_explicit_or_predicate_is_structural_and_fail_closed",
+      "target": "tests_test_corpus_benchmark_semantic",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L187",
+      "weight": 1.0,
+      "source": "tests_test_corpus_benchmark_test_wildcard_vs_explicit_or_predicate_is_structural_and_fail_closed",
+      "target": "validation_discrepancy_audit_wildcard_set_vs_explicit_or",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L213",
+      "weight": 1.0,
+      "source": "tests_test_corpus_benchmark_test_stereo_assignment_vs_physical_set_predicate_requires_compatible_atoms",
+      "target": "validation_discrepancy_audit_stereo_assignment_vs_physical_set",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L234",
+      "weight": 1.0,
+      "source": "tests_test_corpus_benchmark_test_geometric_pseudoatom_predicate_requires_exact_rejection_policy",
+      "target": "validation_discrepancy_audit_rejected_geometric_pseudoatom",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L243",
+      "weight": 1.0,
+      "source": "tests_test_corpus_benchmark_test_verified_alias_predicate_requires_identical_physical_or_structure",
+      "target": "validation_discrepancy_audit_verified_canonical_alias",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L264",
+      "weight": 1.0,
+      "source": "tests_test_corpus_benchmark_test_equivalent_source_evidence_with_different_bound_is_parser_bug",
+      "target": "validation_discrepancy_audit_audit_reports",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L286",
+      "weight": 1.0,
+      "source": "tests_test_corpus_benchmark_test_arbitrary_rejection_is_not_an_expected_format_difference",
+      "target": "validation_discrepancy_audit_audit_reports",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L341",
+      "weight": 1.0,
+      "source": "tests_test_corpus_benchmark_gate_run",
+      "target": "validation_discrepancy_audit_audit_summary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L354",
+      "weight": 1.0,
+      "source": "tests_test_corpus_benchmark_test_fail_closed_gate_accepts_only_exact_reviewed_coordinate_set",
+      "target": "tests_test_corpus_benchmark_gate_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L386",
+      "weight": 1.0,
+      "source": "tests_test_corpus_benchmark_test_gate_remains_fail_closed_for_every_scientific_failure",
+      "target": "tests_test_corpus_benchmark_gate_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L356",
+      "weight": 1.0,
+      "source": "tests_test_corpus_benchmark_test_fail_closed_gate_accepts_only_exact_reviewed_coordinate_set",
+      "target": "validation_benchmark_corpus_baseline_payload",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L358",
+      "weight": 1.0,
+      "source": "tests_test_corpus_benchmark_test_fail_closed_gate_accepts_only_exact_reviewed_coordinate_set",
+      "target": "validation_benchmark_corpus_evaluate_gate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L376",
+      "weight": 1.0,
+      "source": "tests_test_corpus_benchmark_test_fail_closed_gate_accepts_only_exact_reviewed_coordinate_set",
+      "target": "validation_benchmark_corpus_missing_coordinate_review",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L388",
+      "weight": 1.0,
+      "source": "tests_test_corpus_benchmark_test_gate_remains_fail_closed_for_every_scientific_failure",
+      "target": "validation_benchmark_corpus_baseline_payload",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L431",
+      "weight": 1.0,
+      "source": "tests_test_corpus_benchmark_test_gate_remains_fail_closed_for_every_scientific_failure",
+      "target": "validation_benchmark_corpus_evaluate_gate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L394",
+      "weight": 1.0,
+      "source": "tests_test_corpus_benchmark_test_gate_remains_fail_closed_for_every_scientific_failure",
+      "target": "validation_discrepancy_audit_audit_summary",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -14022,9 +14714,9 @@
       "source_file": "tests/test_corpus_benchmark.py",
       "source_location": "L168",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_corpus_benchmark_test_benchmark_artifact_paths_are_portable",
-      "target": "validation_benchmark_corpus_portable_path",
-      "confidence_score": 1.0
+      "target": "validation_benchmark_corpus_portable_path"
     },
     {
       "relation": "contains",
@@ -14528,6 +15220,16 @@
       "source_file": "tests/test_topology.py",
       "source_location": "L26",
       "weight": 1.0,
+      "source": "tests_test_topology",
+      "target": "tests_test_topology_test_nucleotide_xy_does_not_consume_prime_notation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_topology.py",
+      "source_location": "L26",
+      "weight": 1.0,
       "confidence_score": 1.0,
       "source": "tests_test_topology",
       "target": "tests_test_topology_test_pseudoatom_rejected_by_default"
@@ -14646,6 +15348,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "validation/benchmark_corpus.py",
+      "source_location": "L381",
+      "weight": 1.0,
+      "source": "validation_benchmark_corpus",
+      "target": "validation_benchmark_corpus_missing_coordinate_review",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/benchmark_corpus.py",
       "source_location": "L45",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -14668,9 +15380,9 @@
       "source_file": "validation/benchmark_corpus.py",
       "source_location": "L86",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "validation_benchmark_corpus",
-      "target": "validation_benchmark_corpus_portable_path",
-      "confidence_score": 1.0
+      "target": "validation_benchmark_corpus_portable_path"
     },
     {
       "relation": "contains",
@@ -14851,17 +15563,17 @@
       "source_file": "validation/benchmark_corpus.py",
       "source_location": "L422",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "validation_benchmark_corpus_evaluate_gate",
-      "target": "validation_benchmark_corpus_portable_path",
-      "confidence_score": 1.0
+      "target": "validation_benchmark_corpus_portable_path"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "validation/benchmark_corpus.py",
-      "source_location": "L87",
+      "source_location": "L88",
       "weight": 1.0,
-      "source": "validation_benchmark_corpus_rationale_87",
+      "source": "validation_benchmark_corpus_rationale_88",
       "target": "validation_benchmark_corpus_portable_path",
       "confidence_score": 1.0
     },
@@ -14872,9 +15584,9 @@
       "source_file": "validation/benchmark_corpus.py",
       "source_location": "L546",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "validation_benchmark_corpus_run_corpus",
-      "target": "validation_benchmark_corpus_portable_path",
-      "confidence_score": 1.0
+      "target": "validation_benchmark_corpus_portable_path"
     },
     {
       "relation": "calls",
@@ -15056,10 +15768,42 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "validation/benchmark_corpus.py",
-      "source_location": "L346",
+      "source_location": "L350",
       "weight": 1.0,
-      "source": "validation_benchmark_corpus_rationale_346",
+      "source": "validation_benchmark_corpus_rationale_350",
       "target": "validation_benchmark_corpus_metric_snapshot",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/benchmark_corpus.py",
+      "source_location": "L435",
+      "weight": 1.0,
+      "source": "validation_benchmark_corpus_baseline_payload",
+      "target": "validation_benchmark_corpus_missing_coordinate_review",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/benchmark_corpus.py",
+      "source_location": "L515",
+      "weight": 1.0,
+      "source": "validation_benchmark_corpus_markdown",
+      "target": "validation_benchmark_corpus_missing_coordinate_review",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/benchmark_corpus.py",
+      "source_location": "L382",
+      "weight": 1.0,
+      "source": "validation_benchmark_corpus_rationale_382",
+      "target": "validation_benchmark_corpus_missing_coordinate_review",
       "confidence_score": 1.0
     },
     {
@@ -15984,11 +16728,41 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L189",
+      "weight": 1.0,
+      "source": "validation_discrepancy_audit",
+      "target": "validation_discrepancy_audit_physical_atoms",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L223",
+      "weight": 1.0,
+      "source": "validation_discrepancy_audit",
+      "target": "validation_discrepancy_audit_physical_pairs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
       "source_location": "L148",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "validation_discrepancy_audit",
       "target": "validation_discrepancy_audit_physical_set"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L521",
+      "weight": 1.0,
+      "source": "validation_discrepancy_audit",
+      "target": "validation_discrepancy_audit_rejected_geometric_pseudoatom",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -16004,11 +16778,61 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L211",
+      "weight": 1.0,
+      "source": "validation_discrepancy_audit",
+      "target": "validation_discrepancy_audit_semantic_kinds",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
       "source_location": "L98",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "validation_discrepancy_audit",
       "target": "validation_discrepancy_audit_sequence_indexes"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L484",
+      "weight": 1.0,
+      "source": "validation_discrepancy_audit",
+      "target": "validation_discrepancy_audit_stereo_assignment_vs_physical_set",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L564",
+      "weight": 1.0,
+      "source": "validation_discrepancy_audit",
+      "target": "validation_discrepancy_audit_strictly_equivalent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L538",
+      "weight": 1.0,
+      "source": "validation_discrepancy_audit",
+      "target": "validation_discrepancy_audit_verified_canonical_alias",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L433",
+      "weight": 1.0,
+      "source": "validation_discrepancy_audit",
+      "target": "validation_discrepancy_audit_wildcard_set_vs_explicit_or",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -16200,6 +17024,49 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L290",
+      "weight": 1.0,
+      "source": "validation_discrepancy_audit_format_evidence",
+      "target": "validation_discrepancy_audit_physical_atoms",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L192",
+      "weight": 1.0,
+      "source": "validation_discrepancy_audit_rationale_192",
+      "target": "validation_discrepancy_audit_physical_atoms",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L292",
+      "weight": 1.0,
+      "source": "validation_discrepancy_audit_format_evidence",
+      "target": "validation_discrepancy_audit_semantic_kinds",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L330",
+      "weight": 1.0,
+      "source": "validation_discrepancy_audit_format_evidence",
+      "target": "validation_discrepancy_audit_physical_pairs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
       "source_location": "L399",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -16218,6 +17085,57 @@
       "target": "validation_discrepancy_audit_bounds_by_group"
     },
     {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L436",
+      "weight": 1.0,
+      "source": "validation_discrepancy_audit_rationale_436",
+      "target": "validation_discrepancy_audit_wildcard_set_vs_explicit_or",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L487",
+      "weight": 1.0,
+      "source": "validation_discrepancy_audit_rationale_487",
+      "target": "validation_discrepancy_audit_stereo_assignment_vs_physical_set",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L524",
+      "weight": 1.0,
+      "source": "validation_discrepancy_audit_rationale_524",
+      "target": "validation_discrepancy_audit_rejected_geometric_pseudoatom",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L541",
+      "weight": 1.0,
+      "source": "validation_discrepancy_audit_rationale_541",
+      "target": "validation_discrepancy_audit_verified_canonical_alias",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L631",
+      "weight": 1.0,
+      "source": "validation_discrepancy_audit_classify",
+      "target": "validation_discrepancy_audit_strictly_equivalent",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -16232,11 +17150,11 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "validation/discrepancy_audit.py",
-      "source_location": "L366",
+      "source_location": "L673",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "validation_discrepancy_audit_rationale_366",
-      "target": "validation_discrepancy_audit_audit_reports"
+      "source": "validation_discrepancy_audit_rationale_673",
+      "target": "validation_discrepancy_audit_audit_reports",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -16736,6 +17654,16 @@
       "confidence_score": 1.0,
       "source": "readme",
       "target": "readme_nmr2boltz"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L88",
+      "weight": 1.0,
+      "source": "readme",
+      "target": "validation",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -18199,5 +19127,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "ca9eccceef9d66b6ca9bf8338c76d06b84b6ca19"
+  "built_at_commit": "cda5466d026cffbb3b5f3d897d2ed7da11f352f5"
 }

@@ -3,13 +3,26 @@
 ## Unreleased
 
 - Added clean polymer-only `sequences.fasta` output for every conversion.
+- Replaced permissive paired-format discrepancy classification with tested,
+  fail-closed predicates for wildcard/OR, x/y assignment, rejected Q/M
+  pseudoatoms, and verified canonical aliases.
+- Fixed nucleotide x/y matching so `H4y` cannot consume the literal prime in
+  `H4'`; this removes a false 8R1X sugar-atom branch and restores six NEF
+  contacts present in the canonical STAR representation.
+- Pinned all reviewed coordinate limitations by exact contact identity, bound,
+  source provenance, and SHA-256 digest. Added, removed, or changed contacts
+  now fail CI while the exact reviewed 8R1X/9CCH set passes.
+- Rebuilt and validated `nmr2boltz:0.1.0-validated` as non-root and offline;
+  image digest is
+  `sha256:366529d372944a278b74fa99c7e499c6f5aa73836dd8e60ed75513e91c0bb000`.
 - Added a paired NEF/NMR-STAR corpus runner with sequence-aware PDB ensemble
   alignment, exact contact/bound parity metrics, and per-case output directories.
 - Sequence/residue conflicts now use the explicit `sequence_residue_mismatch`
   rejection reason before topology resolution.
 - NEF/NMR-STAR files with sequence data but no distance loop now produce an
   auditable empty conversion rather than failing format detection.
-- Expanded the regression suite from 39 to 44 tests.
+- Expanded the regression suite from 39 to 55 tests, including positive and
+  adversarial checks for every discrepancy predicate and fail-closed gate.
 - Added fail-fast `--target-yaml` validation for chain IDs, residue indices,
   canonical residue identities, declared modifications, mapping collisions, and
   emitted-contact positions.

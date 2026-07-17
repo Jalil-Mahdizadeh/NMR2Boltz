@@ -1,3 +1,4 @@
 # Preserve downloaded scientific inputs and generated audit artifacts byte-for-byte.
 workspace/input/** -text
 workspace/benchmark.yaml text eol=lf
+*.tsv whitespace=-blank-at-eol

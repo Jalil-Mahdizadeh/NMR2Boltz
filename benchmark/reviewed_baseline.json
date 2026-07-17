@@ -1,12 +1,1192 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "audit_review": {
-    "digest_sha256": "598db995e37fc2ed3e54261e8eb80e85c8b127877564a9665fb9e81b161baa2a",
-    "row_count": 4201,
+    "digest_sha256": "f6b32f8fd521da9371ce08fdc4828550c078161deda41ae108033b39609aa244",
+    "row_count": 4195,
     "classification_counts": {
-      "expected_format_difference": 4158,
-      "deposition_inconsistency": 43
+      "expected_format_difference": 4136,
+      "deposition_inconsistency": 59
     }
+  },
+  "reviewed_missing_coordinates": {
+    "digest_sha256": "60ed1b785e328fb2d972de6f5d691765012eb622afa489b7a47f41909c8eb141",
+    "contact_count": 106,
+    "case_format_counts": {
+      "8R1X:nef": 45,
+      "8R1X:star": 45,
+      "9CCH:nef": 8,
+      "9CCH:star": 8
+    },
+    "contacts": [
+      {
+        "contact_id": "8R1X|nef|A:14:N3--A:15:N",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:14:N3",
+        "atom2": "A:15:N",
+        "upper_bound_angstrom": 3.08,
+        "source_groups": [
+          "AMBER_distance_restraints_3:90"
+        ]
+      },
+      {
+        "contact_id": "8R1X|nef|A:14:N3--A:15:N1",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:14:N3",
+        "atom2": "A:15:N1",
+        "upper_bound_angstrom": 3.0,
+        "source_groups": [
+          "AMBER_distance_restraints_3:89"
+        ]
+      },
+      {
+        "contact_id": "8R1X|nef|A:14:N4--A:15:O6",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:14:N4",
+        "atom2": "A:15:O6",
+        "upper_bound_angstrom": 3.0,
+        "source_groups": [
+          "AMBER_distance_restraints_3:93"
+        ]
+      },
+      {
+        "contact_id": "8R1X|nef|A:14:O2--A:15:N2",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:14:O2",
+        "atom2": "A:15:N2",
+        "upper_bound_angstrom": 3.0,
+        "source_groups": [
+          "AMBER_distance_restraints_3:91"
+        ]
+      },
+      {
+        "contact_id": "8R1X|nef|A:68:CA--A:72:N",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:68:CA",
+        "atom2": "A:72:N",
+        "upper_bound_angstrom": 7.2,
+        "source_groups": [
+          "AMBER_distance_restraints_1:771"
+        ]
+      },
+      {
+        "contact_id": "8R1X|nef|A:69:CA--A:72:CB",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:69:CA",
+        "atom2": "A:72:CB",
+        "upper_bound_angstrom": 7.2839352117392115,
+        "source_groups": [
+          "AMBER_distance_restraints_1:783"
+        ]
+      },
+      {
+        "contact_id": "8R1X|nef|A:69:CA--A:72:N",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:69:CA",
+        "atom2": "A:72:N",
+        "upper_bound_angstrom": 5.7,
+        "source_groups": [
+          "AMBER_distance_restraints_1:782"
+        ]
+      },
+      {
+        "contact_id": "8R1X|nef|A:69:CA--A:73:ND2",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:69:CA",
+        "atom2": "A:73:ND2",
+        "upper_bound_angstrom": 7.2,
+        "source_groups": [
+          "AMBER_distance_restraints_1:784"
+        ]
+      },
+      {
+        "contact_id": "8R1X|nef|A:69:CB--A:73:ND2",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:69:CB",
+        "atom2": "A:73:ND2",
+        "upper_bound_angstrom": 7.8,
+        "source_groups": [
+          "AMBER_distance_restraints_1:785"
+        ]
+      },
+      {
+        "contact_id": "8R1X|nef|A:69:CG--A:73:ND2",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:69:CG",
+        "atom2": "A:73:ND2",
+        "upper_bound_angstrom": 6.12,
+        "source_groups": [
+          "AMBER_distance_restraints_1:786"
+        ]
+      },
+      {
+        "contact_id": "8R1X|nef|A:70:CA--A:73:CB",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:70:CA",
+        "atom2": "A:73:CB",
+        "upper_bound_angstrom": 6.16,
+        "source_groups": [
+          "AMBER_distance_restraints_1:803"
+        ]
+      },
+      {
+        "contact_id": "8R1X|nef|A:70:CA--A:73:N",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:70:CA",
+        "atom2": "A:73:N",
+        "upper_bound_angstrom": 5.7,
+        "source_groups": [
+          "AMBER_distance_restraints_1:802"
+        ]
+      },
+      {
+        "contact_id": "8R1X|nef|A:70:CB--A:72:N",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:70:CB",
+        "atom2": "A:72:N",
+        "upper_bound_angstrom": 7.8,
+        "source_groups": [
+          "AMBER_distance_restraints_1:801"
+        ]
+      },
+      {
+        "contact_id": "8R1X|nef|A:71:CA--A:72:CB",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:71:CA",
+        "atom2": "A:72:CB",
+        "upper_bound_angstrom": 9.445621731056017,
+        "source_groups": [
+          "AMBER_distance_restraints_2:130"
+        ]
+      },
+      {
+        "contact_id": "8R1X|nef|A:71:CA--A:72:N",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:71:CA",
+        "atom2": "A:72:N",
+        "upper_bound_angstrom": 5.7,
+        "source_groups": [
+          "AMBER_distance_restraints_1:811"
+        ]
+      },
+      {
+        "contact_id": "8R1X|nef|A:71:CA--A:73:N",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:71:CA",
+        "atom2": "A:73:N",
+        "upper_bound_angstrom": 7.2,
+        "source_groups": [
+          "AMBER_distance_restraints_1:816"
+        ]
+      },
+      {
+        "contact_id": "8R1X|nef|A:71:CA--A:74:N",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:71:CA",
+        "atom2": "A:74:N",
+        "upper_bound_angstrom": 5.7,
+        "source_groups": [
+          "AMBER_distance_restraints_1:817"
+        ]
+      },
+      {
+        "contact_id": "8R1X|nef|A:71:CB--A:72:CA",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:71:CB",
+        "atom2": "A:72:CA",
+        "upper_bound_angstrom": 7.84,
+        "source_groups": [
+          "AMBER_distance_restraints_1:813"
+        ]
+      },
+      {
+        "contact_id": "8R1X|nef|A:71:CB--A:72:N",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:71:CB",
+        "atom2": "A:72:N",
+        "upper_bound_angstrom": 5.448,
+        "source_groups": [
+          "AMBER_distance_restraints_1:812"
+        ]
+      },
+      {
+        "contact_id": "8R1X|nef|A:71:CG--A:72:N",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:71:CG",
+        "atom2": "A:72:N",
+        "upper_bound_angstrom": 7.8,
+        "source_groups": [
+          "AMBER_distance_restraints_1:814"
+        ]
+      },
+      {
+        "contact_id": "8R1X|nef|A:71:N--A:72:CB",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:71:N",
+        "atom2": "A:72:CB",
+        "upper_bound_angstrom": 9.405621731056016,
+        "source_groups": [
+          "AMBER_distance_restraints_2:129"
+        ]
+      },
+      {
+        "contact_id": "8R1X|nef|A:71:N--A:72:N",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:71:N",
+        "atom2": "A:72:N",
+        "upper_bound_angstrom": 5.0600000000000005,
+        "source_groups": [
+          "AMBER_distance_restraints_1:810"
+        ]
+      },
+      {
+        "contact_id": "8R1X|nef|A:71:N--A:73:N",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:71:N",
+        "atom2": "A:73:N",
+        "upper_bound_angstrom": 7.16,
+        "source_groups": [
+          "AMBER_distance_restraints_1:815"
+        ]
+      },
+      {
+        "contact_id": "8R1X|nef|A:72:CA--A:72:CB",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:72:CA",
+        "atom2": "A:72:CB",
+        "upper_bound_angstrom": 5.554585996285768,
+        "source_groups": [
+          "AMBER_distance_restraints_1:820"
+        ]
+      },
+      {
+        "contact_id": "8R1X|nef|A:72:CA--A:72:N",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:72:CA",
+        "atom2": "A:72:N",
+        "upper_bound_angstrom": 5.1,
+        "source_groups": [
+          "AMBER_distance_restraints_1:818"
+        ]
+      },
+      {
+        "contact_id": "8R1X|nef|A:72:CA--A:73:N",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:72:CA",
+        "atom2": "A:73:N",
+        "upper_bound_angstrom": 5.7,
+        "source_groups": [
+          "AMBER_distance_restraints_1:823"
+        ]
+      },
+      {
+        "contact_id": "8R1X|nef|A:72:CB--A:72:N",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:72:CB",
+        "atom2": "A:72:N",
+        "upper_bound_angstrom": 6.379260604012489,
+        "source_groups": [
+          "AMBER_distance_restraints_1:819"
+        ]
+      },
+      {
+        "contact_id": "8R1X|nef|A:72:CB--A:73:CA",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:72:CB",
+        "atom2": "A:73:CA",
+        "upper_bound_angstrom": 9.445621731056017,
+        "source_groups": [
+          "AMBER_distance_restraints_2:131"
+        ]
+      },
+      {
+        "contact_id": "8R1X|nef|A:72:CB--A:73:CB",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:72:CB",
+        "atom2": "A:73:CB",
+        "upper_bound_angstrom": 10.310296338782738,
+        "source_groups": [
+          "AMBER_distance_restraints_2:132"
+        ]
+      },
+      {
+        "contact_id": "8R1X|nef|A:72:CB--A:73:N",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:72:CB",
+        "atom2": "A:73:N",
+        "upper_bound_angstrom": 6.379260604012489,
+        "source_groups": [
+          "AMBER_distance_restraints_1:824"
+        ]
+      },
+      {
+        "contact_id": "8R1X|nef|A:72:CB--A:73:ND2",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:72:CB",
+        "atom2": "A:73:ND2",
+        "upper_bound_angstrom": 9.405621731056016,
+        "source_groups": [
+          "AMBER_distance_restraints_2:133"
+        ]
+      },
+      {
+        "contact_id": "8R1X|nef|A:72:CB--A:74:N",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:72:CB",
+        "atom2": "A:74:N",
+        "upper_bound_angstrom": 9.405621731056016,
+        "source_groups": [
+          "AMBER_distance_restraints_2:134"
+        ]
+      },
+      {
+        "contact_id": "8R1X|nef|A:72:N--A:73:N",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:72:N",
+        "atom2": "A:73:N",
+        "upper_bound_angstrom": 5.0600000000000005,
+        "source_groups": [
+          "AMBER_distance_restraints_1:821"
+        ]
+      },
+      {
+        "contact_id": "8R1X|nef|A:72:N--A:73:ND2",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:72:N",
+        "atom2": "A:73:ND2",
+        "upper_bound_angstrom": 7.16,
+        "source_groups": [
+          "AMBER_distance_restraints_1:822"
+        ]
+      },
+      {
+        "contact_id": "8R1X|nef|A:73:CA--A:73:CB",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:73:CA",
+        "atom2": "A:73:CB",
+        "upper_bound_angstrom": 5.488,
+        "source_groups": [
+          "AMBER_distance_restraints_1:828"
+        ]
+      },
+      {
+        "contact_id": "8R1X|nef|A:73:CA--A:73:N",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:73:CA",
+        "atom2": "A:73:N",
+        "upper_bound_angstrom": 5.1,
+        "source_groups": [
+          "AMBER_distance_restraints_1:825"
+        ]
+      },
+      {
+        "contact_id": "8R1X|nef|A:73:CA--A:73:ND2",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:73:CA",
+        "atom2": "A:73:ND2",
+        "upper_bound_angstrom": 7.2,
+        "source_groups": [
+          "AMBER_distance_restraints_1:829"
+        ]
+      },
+      {
+        "contact_id": "8R1X|nef|A:73:CA--A:74:N",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:73:CA",
+        "atom2": "A:74:N",
+        "upper_bound_angstrom": 5.1,
+        "source_groups": [
+          "AMBER_distance_restraints_1:834"
+        ]
+      },
+      {
+        "contact_id": "8R1X|nef|A:73:CB--A:73:N",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:73:CB",
+        "atom2": "A:73:N",
+        "upper_bound_angstrom": 4.776,
+        "source_groups": [
+          "AMBER_distance_restraints_1:826"
+        ]
+      },
+      {
+        "contact_id": "8R1X|nef|A:73:CB--A:73:ND2",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:73:CB",
+        "atom2": "A:73:ND2",
+        "upper_bound_angstrom": 6.12,
+        "source_groups": [
+          "AMBER_distance_restraints_1:830",
+          "AMBER_distance_restraints_1:831"
+        ]
+      },
+      {
+        "contact_id": "8R1X|nef|A:73:CB--A:74:N",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:73:CB",
+        "atom2": "A:74:N",
+        "upper_bound_angstrom": 7.8,
+        "source_groups": [
+          "AMBER_distance_restraints_1:835"
+        ]
+      },
+      {
+        "contact_id": "8R1X|nef|A:73:N--A:73:ND2",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:73:N",
+        "atom2": "A:73:ND2",
+        "upper_bound_angstrom": 7.16,
+        "source_groups": [
+          "AMBER_distance_restraints_1:827"
+        ]
+      },
+      {
+        "contact_id": "8R1X|nef|A:73:N--A:74:CA",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:73:N",
+        "atom2": "A:74:CA",
+        "upper_bound_angstrom": 7.8,
+        "source_groups": [
+          "AMBER_distance_restraints_1:833"
+        ]
+      },
+      {
+        "contact_id": "8R1X|nef|A:73:N--A:74:N",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:73:N",
+        "atom2": "A:74:N",
+        "upper_bound_angstrom": 5.0600000000000005,
+        "source_groups": [
+          "AMBER_distance_restraints_1:832"
+        ]
+      },
+      {
+        "contact_id": "8R1X|nef|A:74:CA--A:74:N",
+        "case_id": "8R1X",
+        "format": "nef",
+        "atom1": "A:74:CA",
+        "atom2": "A:74:N",
+        "upper_bound_angstrom": 5.448,
+        "source_groups": [
+          "AMBER_distance_restraints_1:836"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:14:N3--A:15:N",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:14:N3",
+        "atom2": "A:15:N",
+        "upper_bound_angstrom": 3.08,
+        "source_groups": [
+          "AMBER_distance_restraints_3:90"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:14:N3--A:15:N1",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:14:N3",
+        "atom2": "A:15:N1",
+        "upper_bound_angstrom": 3.0,
+        "source_groups": [
+          "AMBER_distance_restraints_3:89"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:14:N4--A:15:O6",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:14:N4",
+        "atom2": "A:15:O6",
+        "upper_bound_angstrom": 3.0,
+        "source_groups": [
+          "AMBER_distance_restraints_3:93"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:14:O2--A:15:N2",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:14:O2",
+        "atom2": "A:15:N2",
+        "upper_bound_angstrom": 3.0,
+        "source_groups": [
+          "AMBER_distance_restraints_3:91"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:68:CA--A:72:N",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:68:CA",
+        "atom2": "A:72:N",
+        "upper_bound_angstrom": 7.2,
+        "source_groups": [
+          "AMBER_distance_restraints_1:771"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:69:CA--A:72:CB",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:69:CA",
+        "atom2": "A:72:CB",
+        "upper_bound_angstrom": 6.44,
+        "source_groups": [
+          "AMBER_distance_restraints_1:783"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:69:CA--A:72:N",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:69:CA",
+        "atom2": "A:72:N",
+        "upper_bound_angstrom": 5.7,
+        "source_groups": [
+          "AMBER_distance_restraints_1:782"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:69:CA--A:73:ND2",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:69:CA",
+        "atom2": "A:73:ND2",
+        "upper_bound_angstrom": 7.2,
+        "source_groups": [
+          "AMBER_distance_restraints_1:784"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:69:CB--A:73:ND2",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:69:CB",
+        "atom2": "A:73:ND2",
+        "upper_bound_angstrom": 7.8,
+        "source_groups": [
+          "AMBER_distance_restraints_1:785"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:69:CG--A:73:ND2",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:69:CG",
+        "atom2": "A:73:ND2",
+        "upper_bound_angstrom": 6.12,
+        "source_groups": [
+          "AMBER_distance_restraints_1:786"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:70:CA--A:73:CB",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:70:CA",
+        "atom2": "A:73:CB",
+        "upper_bound_angstrom": 6.16,
+        "source_groups": [
+          "AMBER_distance_restraints_1:803"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:70:CA--A:73:N",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:70:CA",
+        "atom2": "A:73:N",
+        "upper_bound_angstrom": 5.7,
+        "source_groups": [
+          "AMBER_distance_restraints_1:802"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:70:CB--A:72:N",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:70:CB",
+        "atom2": "A:72:N",
+        "upper_bound_angstrom": 7.8,
+        "source_groups": [
+          "AMBER_distance_restraints_1:801"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:71:CA--A:72:CB",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:71:CA",
+        "atom2": "A:72:CB",
+        "upper_bound_angstrom": 8.24,
+        "source_groups": [
+          "AMBER_distance_restraints_2:130"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:71:CA--A:72:N",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:71:CA",
+        "atom2": "A:72:N",
+        "upper_bound_angstrom": 5.7,
+        "source_groups": [
+          "AMBER_distance_restraints_1:811"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:71:CA--A:73:N",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:71:CA",
+        "atom2": "A:73:N",
+        "upper_bound_angstrom": 7.2,
+        "source_groups": [
+          "AMBER_distance_restraints_1:816"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:71:CA--A:74:N",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:71:CA",
+        "atom2": "A:74:N",
+        "upper_bound_angstrom": 5.7,
+        "source_groups": [
+          "AMBER_distance_restraints_1:817"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:71:CB--A:72:CA",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:71:CB",
+        "atom2": "A:72:CA",
+        "upper_bound_angstrom": 7.84,
+        "source_groups": [
+          "AMBER_distance_restraints_1:813"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:71:CB--A:72:N",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:71:CB",
+        "atom2": "A:72:N",
+        "upper_bound_angstrom": 5.448,
+        "source_groups": [
+          "AMBER_distance_restraints_1:812"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:71:CG--A:72:N",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:71:CG",
+        "atom2": "A:72:N",
+        "upper_bound_angstrom": 7.8,
+        "source_groups": [
+          "AMBER_distance_restraints_1:814"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:71:N--A:72:CB",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:71:N",
+        "atom2": "A:72:CB",
+        "upper_bound_angstrom": 8.2,
+        "source_groups": [
+          "AMBER_distance_restraints_2:129"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:71:N--A:72:N",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:71:N",
+        "atom2": "A:72:N",
+        "upper_bound_angstrom": 5.0600000000000005,
+        "source_groups": [
+          "AMBER_distance_restraints_1:810"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:71:N--A:73:N",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:71:N",
+        "atom2": "A:73:N",
+        "upper_bound_angstrom": 7.16,
+        "source_groups": [
+          "AMBER_distance_restraints_1:815"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:72:CA--A:72:CB",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:72:CA",
+        "atom2": "A:72:CB",
+        "upper_bound_angstrom": 5.0,
+        "source_groups": [
+          "AMBER_distance_restraints_1:820"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:72:CA--A:72:N",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:72:CA",
+        "atom2": "A:72:N",
+        "upper_bound_angstrom": 5.1,
+        "source_groups": [
+          "AMBER_distance_restraints_1:818"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:72:CA--A:73:N",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:72:CA",
+        "atom2": "A:73:N",
+        "upper_bound_angstrom": 5.7,
+        "source_groups": [
+          "AMBER_distance_restraints_1:823"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:72:CB--A:72:N",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:72:CB",
+        "atom2": "A:72:N",
+        "upper_bound_angstrom": 5.68,
+        "source_groups": [
+          "AMBER_distance_restraints_1:819"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:72:CB--A:73:CA",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:72:CB",
+        "atom2": "A:73:CA",
+        "upper_bound_angstrom": 8.24,
+        "source_groups": [
+          "AMBER_distance_restraints_2:131"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:72:CB--A:73:CB",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:72:CB",
+        "atom2": "A:73:CB",
+        "upper_bound_angstrom": 8.96,
+        "source_groups": [
+          "AMBER_distance_restraints_2:132"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:72:CB--A:73:N",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:72:CB",
+        "atom2": "A:73:N",
+        "upper_bound_angstrom": 5.68,
+        "source_groups": [
+          "AMBER_distance_restraints_1:824"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:72:CB--A:73:ND2",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:72:CB",
+        "atom2": "A:73:ND2",
+        "upper_bound_angstrom": 8.2,
+        "source_groups": [
+          "AMBER_distance_restraints_2:133"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:72:CB--A:74:N",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:72:CB",
+        "atom2": "A:74:N",
+        "upper_bound_angstrom": 8.2,
+        "source_groups": [
+          "AMBER_distance_restraints_2:134"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:72:N--A:73:N",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:72:N",
+        "atom2": "A:73:N",
+        "upper_bound_angstrom": 5.0600000000000005,
+        "source_groups": [
+          "AMBER_distance_restraints_1:821"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:72:N--A:73:ND2",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:72:N",
+        "atom2": "A:73:ND2",
+        "upper_bound_angstrom": 7.16,
+        "source_groups": [
+          "AMBER_distance_restraints_1:822"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:73:CA--A:73:CB",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:73:CA",
+        "atom2": "A:73:CB",
+        "upper_bound_angstrom": 5.488,
+        "source_groups": [
+          "AMBER_distance_restraints_1:828"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:73:CA--A:73:N",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:73:CA",
+        "atom2": "A:73:N",
+        "upper_bound_angstrom": 5.1,
+        "source_groups": [
+          "AMBER_distance_restraints_1:825"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:73:CA--A:73:ND2",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:73:CA",
+        "atom2": "A:73:ND2",
+        "upper_bound_angstrom": 7.2,
+        "source_groups": [
+          "AMBER_distance_restraints_1:829"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:73:CA--A:74:N",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:73:CA",
+        "atom2": "A:74:N",
+        "upper_bound_angstrom": 5.1,
+        "source_groups": [
+          "AMBER_distance_restraints_1:834"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:73:CB--A:73:N",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:73:CB",
+        "atom2": "A:73:N",
+        "upper_bound_angstrom": 4.776,
+        "source_groups": [
+          "AMBER_distance_restraints_1:826"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:73:CB--A:73:ND2",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:73:CB",
+        "atom2": "A:73:ND2",
+        "upper_bound_angstrom": 6.12,
+        "source_groups": [
+          "AMBER_distance_restraints_1:830",
+          "AMBER_distance_restraints_1:831"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:73:CB--A:74:N",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:73:CB",
+        "atom2": "A:74:N",
+        "upper_bound_angstrom": 7.8,
+        "source_groups": [
+          "AMBER_distance_restraints_1:835"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:73:N--A:73:ND2",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:73:N",
+        "atom2": "A:73:ND2",
+        "upper_bound_angstrom": 7.16,
+        "source_groups": [
+          "AMBER_distance_restraints_1:827"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:73:N--A:74:CA",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:73:N",
+        "atom2": "A:74:CA",
+        "upper_bound_angstrom": 7.8,
+        "source_groups": [
+          "AMBER_distance_restraints_1:833"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:73:N--A:74:N",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:73:N",
+        "atom2": "A:74:N",
+        "upper_bound_angstrom": 5.0600000000000005,
+        "source_groups": [
+          "AMBER_distance_restraints_1:832"
+        ]
+      },
+      {
+        "contact_id": "8R1X|star|A:74:CA--A:74:N",
+        "case_id": "8R1X",
+        "format": "star",
+        "atom1": "A:74:CA",
+        "atom2": "A:74:N",
+        "upper_bound_angstrom": 5.448,
+        "source_groups": [
+          "AMBER_distance_restraints_1:836"
+        ]
+      },
+      {
+        "contact_id": "9CCH|nef|B:12:CB--B:48:ZN",
+        "case_id": "9CCH",
+        "format": "nef",
+        "atom1": "B:12:CB",
+        "atom2": "B:48:ZN",
+        "upper_bound_angstrom": 3.4,
+        "source_groups": [
+          "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_3:14"
+        ]
+      },
+      {
+        "contact_id": "9CCH|nef|B:12:SG--B:48:ZN",
+        "case_id": "9CCH",
+        "format": "nef",
+        "atom1": "B:12:SG",
+        "atom2": "B:48:ZN",
+        "upper_bound_angstrom": 2.36,
+        "source_groups": [
+          "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_3:2"
+        ]
+      },
+      {
+        "contact_id": "9CCH|nef|B:15:CB--B:48:ZN",
+        "case_id": "9CCH",
+        "format": "nef",
+        "atom1": "B:15:CB",
+        "atom2": "B:48:ZN",
+        "upper_bound_angstrom": 3.4,
+        "source_groups": [
+          "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_3:17"
+        ]
+      },
+      {
+        "contact_id": "9CCH|nef|B:15:SG--B:48:ZN",
+        "case_id": "9CCH",
+        "format": "nef",
+        "atom1": "B:15:SG",
+        "atom2": "B:48:ZN",
+        "upper_bound_angstrom": 2.36,
+        "source_groups": [
+          "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_3:5"
+        ]
+      },
+      {
+        "contact_id": "9CCH|nef|B:26:CB--B:48:ZN",
+        "case_id": "9CCH",
+        "format": "nef",
+        "atom1": "B:26:CB",
+        "atom2": "B:48:ZN",
+        "upper_bound_angstrom": 3.4,
+        "source_groups": [
+          "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_3:20"
+        ]
+      },
+      {
+        "contact_id": "9CCH|nef|B:26:SG--B:48:ZN",
+        "case_id": "9CCH",
+        "format": "nef",
+        "atom1": "B:26:SG",
+        "atom2": "B:48:ZN",
+        "upper_bound_angstrom": 2.36,
+        "source_groups": [
+          "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_3:8"
+        ]
+      },
+      {
+        "contact_id": "9CCH|nef|B:29:CB--B:48:ZN",
+        "case_id": "9CCH",
+        "format": "nef",
+        "atom1": "B:29:CB",
+        "atom2": "B:48:ZN",
+        "upper_bound_angstrom": 3.4,
+        "source_groups": [
+          "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_3:23"
+        ]
+      },
+      {
+        "contact_id": "9CCH|nef|B:29:SG--B:48:ZN",
+        "case_id": "9CCH",
+        "format": "nef",
+        "atom1": "B:29:SG",
+        "atom2": "B:48:ZN",
+        "upper_bound_angstrom": 2.36,
+        "source_groups": [
+          "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_3:11"
+        ]
+      },
+      {
+        "contact_id": "9CCH|star|B:12:CB--B:48:ZN*",
+        "case_id": "9CCH",
+        "format": "star",
+        "atom1": "B:12:CB",
+        "atom2": "B:48:ZN*",
+        "upper_bound_angstrom": 3.4,
+        "source_groups": [
+          "XPLOR-NIH_distance_restraints_3:14"
+        ]
+      },
+      {
+        "contact_id": "9CCH|star|B:12:SG--B:48:ZN*",
+        "case_id": "9CCH",
+        "format": "star",
+        "atom1": "B:12:SG",
+        "atom2": "B:48:ZN*",
+        "upper_bound_angstrom": 2.36,
+        "source_groups": [
+          "XPLOR-NIH_distance_restraints_3:2"
+        ]
+      },
+      {
+        "contact_id": "9CCH|star|B:15:CB--B:48:ZN*",
+        "case_id": "9CCH",
+        "format": "star",
+        "atom1": "B:15:CB",
+        "atom2": "B:48:ZN*",
+        "upper_bound_angstrom": 3.4,
+        "source_groups": [
+          "XPLOR-NIH_distance_restraints_3:17"
+        ]
+      },
+      {
+        "contact_id": "9CCH|star|B:15:SG--B:48:ZN*",
+        "case_id": "9CCH",
+        "format": "star",
+        "atom1": "B:15:SG",
+        "atom2": "B:48:ZN*",
+        "upper_bound_angstrom": 2.36,
+        "source_groups": [
+          "XPLOR-NIH_distance_restraints_3:5"
+        ]
+      },
+      {
+        "contact_id": "9CCH|star|B:26:CB--B:48:ZN*",
+        "case_id": "9CCH",
+        "format": "star",
+        "atom1": "B:26:CB",
+        "atom2": "B:48:ZN*",
+        "upper_bound_angstrom": 3.4,
+        "source_groups": [
+          "XPLOR-NIH_distance_restraints_3:20"
+        ]
+      },
+      {
+        "contact_id": "9CCH|star|B:26:SG--B:48:ZN*",
+        "case_id": "9CCH",
+        "format": "star",
+        "atom1": "B:26:SG",
+        "atom2": "B:48:ZN*",
+        "upper_bound_angstrom": 2.36,
+        "source_groups": [
+          "XPLOR-NIH_distance_restraints_3:8"
+        ]
+      },
+      {
+        "contact_id": "9CCH|star|B:29:CB--B:48:ZN*",
+        "case_id": "9CCH",
+        "format": "star",
+        "atom1": "B:29:CB",
+        "atom2": "B:48:ZN*",
+        "upper_bound_angstrom": 3.4,
+        "source_groups": [
+          "XPLOR-NIH_distance_restraints_3:23"
+        ]
+      },
+      {
+        "contact_id": "9CCH|star|B:29:SG--B:48:ZN*",
+        "case_id": "9CCH",
+        "format": "star",
+        "atom1": "B:29:SG",
+        "atom2": "B:48:ZN*",
+        "upper_bound_angstrom": 2.36,
+        "source_groups": [
+          "XPLOR-NIH_distance_restraints_3:11"
+        ]
+      }
+    ]
   },
   "metrics": {
     "cases": {
@@ -150,11 +1330,11 @@
       "8R1X": {
         "status": "pass",
         "format_parity": {
-          "nef_constraints": 1112,
+          "nef_constraints": 1118,
           "star_constraints": 1118,
-          "common_atom_pairs": 1112,
+          "common_atom_pairs": 1118,
           "nef_only_atom_pairs": 0,
-          "star_only_atom_pairs": 6,
+          "star_only_atom_pairs": 0,
           "common_pairs_with_different_bounds": 160,
           "maximum_common_bound_delta_angstrom": 3.184196906213339,
           "exact_pair_and_bound_parity": false
@@ -163,19 +1343,19 @@
           "nef": {
             "restraint_groups": 1414,
             "source_alternatives": 2282,
-            "emitted_constraints": 1112,
-            "ambiguous_groups": 179,
+            "emitted_constraints": 1118,
+            "ambiguous_groups": 165,
             "rejection_reasons": {
               "same_heavy_parent_atom": 12,
               "unresolved_atom_topology": 39,
               "projected_bound_exceeds_boltz_maximum": 39
             },
-            "resolved_model_cases": 21340,
-            "satisfied_model_cases": 21284,
+            "resolved_model_cases": 21460,
+            "satisfied_model_cases": 21404,
             "violated_model_cases": 56,
             "missing_model_cases": 900,
             "constraints_missing_in_any_model": 45,
-            "implication_antecedent_cases": 19717,
+            "implication_antecedent_cases": 19837,
             "implication_failures": 0
           },
           "star": {
@@ -361,7 +1541,7 @@
             "restraint_groups": 553,
             "source_alternatives": 554,
             "emitted_constraints": 406,
-            "ambiguous_groups": 12,
+            "ambiguous_groups": 0,
             "rejection_reasons": {},
             "resolved_model_cases": 6090,
             "satisfied_model_cases": 6074,

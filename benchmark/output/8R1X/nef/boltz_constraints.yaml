@@ -4447,6 +4447,11 @@ constraints:
     max_distance: 3.0
     force: true
 - atom_contact:
+    atom1: [B, 2, N1]
+    atom2: [C, 11, N4]
+    max_distance: 7.16
+    force: true
+- atom_contact:
     atom1: [B, 2, N2]
     atom2: [C, 11, O2]
     max_distance: 3.0
@@ -4862,6 +4867,11 @@ constraints:
     max_distance: 3.0
     force: true
 - atom_contact:
+    atom1: [B, 10, N1]
+    atom2: [C, 5, N4]
+    max_distance: 7.16
+    force: true
+- atom_contact:
     atom1: [B, 10, N2]
     atom2: [C, 5, O2]
     max_distance: 3.0
@@ -5048,6 +5058,11 @@ constraints:
     force: true
 - atom_contact:
     atom1: [B, 13, N4]
+    atom2: [C, 2, N1]
+    max_distance: 7.16
+    force: true
+- atom_contact:
+    atom1: [B, 13, N4]
     atom2: [C, 2, O6]
     max_distance: 3.0
     force: true
@@ -5147,6 +5162,11 @@ constraints:
     max_distance: 6.16
     force: true
 - atom_contact:
+    atom1: [C, 3, N4]
+    atom2: [C, 4, N3]
+    max_distance: 7.16
+    force: true
+- atom_contact:
     atom1: [C, 4, C1']
     atom2: [C, 4, C2']
     max_distance: 6.16
@@ -5187,6 +5207,11 @@ constraints:
     max_distance: 6.16
     force: true
 - atom_contact:
+    atom1: [C, 4, C2']
+    atom2: [C, 5, N4]
+    max_distance: 7.2
+    force: true
+- atom_contact:
     atom1: [C, 4, C3']
     atom2: [C, 4, C6]
     max_distance: 5.74
@@ -5200,6 +5225,11 @@ constraints:
     atom1: [C, 4, C6]
     atom2: [C, 5, C5]
     max_distance: 7.24
+    force: true
+- atom_contact:
+    atom1: [C, 4, N3]
+    atom2: [C, 5, N4]
+    max_distance: 7.16
     force: true
 - atom_contact:
     atom1: [C, 5, C1']

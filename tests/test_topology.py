@@ -23,6 +23,18 @@ def test_xy_branch_stays_assignment_ambiguous():
     assert [{atom.parent_atom for atom in choice.atoms} for choice in choices] == [{"CG1"}, {"CG2"}]
 
 
+def test_nucleotide_xy_does_not_consume_prime_notation():
+    library = TopologyLibrary()
+
+    choices = library.resolve_expression("DC", "H4y")
+
+    assert {atom.atom_name for choice in choices for atom in choice.atoms} == {
+        "H41",
+        "H42",
+    }
+    assert {atom.parent_atom for choice in choices for atom in choice.atoms} == {"N4"}
+
+
 def test_pseudoatom_rejected_by_default():
     library = TopologyLibrary()
     try:

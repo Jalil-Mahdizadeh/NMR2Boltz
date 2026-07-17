@@ -888,8 +888,9 @@ B	2	C3'	B	3	C8	7.240000	7.240000	AMBER_distance_restraints_1:898
 B	2	C8	B	3	C8	7.240000	7.240000	AMBER_distance_restraints_1:899	
 B	2	N1	B	3	C2	7.200000	7.200000	AMBER_distance_restraints_1:895	
 B	2	N1	C	11	N3	3.000000	3.000000	AMBER_distance_restraints_3:41;AMBER_distance_restraints_3:42	
-B	2	N2	C	11	O2	3.000000	3.000000	AMBER_distance_restraints_3:43	
-B	2	O6	C	11	N4	3.000000	3.000000	AMBER_distance_restraints_3:45	
+B	2	N1	C	11	N4	7.160000	7.160000	AMBER_distance_restraints_1:900	
+B	2	N2	C	11	O2	3.000000	3.000000	AMBER_distance_restraints_3:43;AMBER_distance_restraints_3:44	
+B	2	O6	C	11	N4	3.000000	3.000000	AMBER_distance_restraints_3:45;AMBER_distance_restraints_3:46	
 B	3	C1'	B	3	C2	7.240000	7.240000	AMBER_distance_restraints_1:904	
 B	3	C1'	B	3	C2'	6.160000	6.160000	AMBER_distance_restraints_1:901;AMBER_distance_restraints_1:910	
 B	3	C1'	B	3	C3'	7.240000	7.240000	AMBER_distance_restraints_1:902	
@@ -971,8 +972,9 @@ B	10	C3'	B	10	C8	7.240000	7.240000	AMBER_distance_restraints_1:973
 B	10	C3'	B	11	C8	7.240000	7.240000	AMBER_distance_restraints_1:975	
 B	10	C8	B	11	C8	8.240000	8.240000	AMBER_distance_restraints_2:147	
 B	10	N1	C	5	N3	3.000000	3.000000	AMBER_distance_restraints_3:67;AMBER_distance_restraints_3:68	
-B	10	N2	C	5	O2	3.000000	3.000000	AMBER_distance_restraints_3:69	
-B	10	O6	C	5	N4	3.000000	3.000000	AMBER_distance_restraints_3:71	
+B	10	N1	C	5	N4	7.160000	7.160000	AMBER_distance_restraints_1:977	
+B	10	N2	C	5	O2	3.000000	3.000000	AMBER_distance_restraints_3:69;AMBER_distance_restraints_3:70	
+B	10	O6	C	5	N4	3.000000	3.000000	AMBER_distance_restraints_3:71;AMBER_distance_restraints_3:72	
 B	11	C1'	B	11	C2'	7.840000	7.840000	AMBER_distance_restraints_1:978	
 B	11	C1'	B	11	C3'	7.240000	7.240000	AMBER_distance_restraints_1:979	
 B	11	C1'	B	11	C4'	7.240000	7.240000	AMBER_distance_restraints_1:980	
@@ -999,8 +1001,8 @@ B	12	C3'	B	12	C8	7.240000	7.240000	AMBER_distance_restraints_1:994
 B	12	C3'	B	13	C6	7.240000	7.240000	AMBER_distance_restraints_1:999	
 B	12	C8	B	13	C5	7.240000	7.240000	AMBER_distance_restraints_1:1000	
 B	12	N1	C	3	N3	3.000000	3.000000	AMBER_distance_restraints_3:77;AMBER_distance_restraints_3:78	
-B	12	N2	C	3	O2	3.000000	3.000000	AMBER_distance_restraints_3:79	
-B	12	O6	C	3	N4	3.000000	3.000000	AMBER_distance_restraints_3:81	
+B	12	N2	C	3	O2	3.000000	3.000000	AMBER_distance_restraints_3:79;AMBER_distance_restraints_3:80	
+B	12	O6	C	3	N4	3.000000	3.000000	AMBER_distance_restraints_3:81;AMBER_distance_restraints_3:82	
 B	13	C1'	B	13	C2'	6.160000	6.160000	AMBER_distance_restraints_1:1002	
 B	13	C1'	B	13	C3'	7.240000	7.240000	AMBER_distance_restraints_1:1003	
 B	13	C1'	B	13	C4'	5.740000	5.740000	AMBER_distance_restraints_1:1004	
@@ -1008,8 +1010,9 @@ B	13	C1'	B	13	C6	7.240000	7.240000	AMBER_distance_restraints_1:1005
 B	13	C2'	B	13	C6	6.160000	6.160000	AMBER_distance_restraints_1:1006	
 B	13	C3'	B	13	C6	7.240000	7.240000	AMBER_distance_restraints_1:1007	
 B	13	N3	C	2	N1	3.000000	3.000000	AMBER_distance_restraints_3:83;AMBER_distance_restraints_3:84	
-B	13	N4	C	2	O6	3.000000	3.000000	AMBER_distance_restraints_3:87	
-B	13	O2	C	2	N2	3.000000	3.000000	AMBER_distance_restraints_3:85	
+B	13	N4	C	2	N1	7.160000	7.160000	AMBER_distance_restraints_1:1013	
+B	13	N4	C	2	O6	3.000000	3.000000	AMBER_distance_restraints_3:87;AMBER_distance_restraints_3:88	
+B	13	O2	C	2	N2	3.000000	3.000000	AMBER_distance_restraints_3:85;AMBER_distance_restraints_3:86	
 C	2	C1'	C	2	C2'	7.840000	7.840000	AMBER_distance_restraints_1:1027	
 C	2	C1'	C	2	C3'	7.240000	7.240000	AMBER_distance_restraints_1:1028	
 C	2	C1'	C	2	C4'	5.740000	5.740000	AMBER_distance_restraints_1:1029	
@@ -1028,6 +1031,7 @@ C	3	C1'	C	3	C6	7.240000	7.240000	AMBER_distance_restraints_1:1041
 C	3	C2'	C	3	C5	7.240000	7.240000	AMBER_distance_restraints_1:1046	
 C	3	C2'	C	3	C6	6.160000	6.160000	AMBER_distance_restraints_1:1042;AMBER_distance_restraints_1:1047	
 C	3	C2'	C	4	C6	6.160000	6.160000	AMBER_distance_restraints_1:1044	
+C	3	N4	C	4	N3	7.160000	7.160000	AMBER_distance_restraints_1:1045	
 C	4	C1'	C	4	C2'	6.160000	6.160000	AMBER_distance_restraints_1:1048;AMBER_distance_restraints_1:1052	
 C	4	C1'	C	4	C3'	7.240000	7.240000	AMBER_distance_restraints_1:1049	
 C	4	C1'	C	4	C4'	5.740000	5.740000	AMBER_distance_restraints_1:1050	
@@ -1036,9 +1040,11 @@ C	4	C1'	C	5	C6	7.240000	7.240000	AMBER_distance_restraints_1:1055
 C	4	C2'	C	4	C6	5.740000	5.740000	AMBER_distance_restraints_1:1054	
 C	4	C2'	C	5	C5	7.240000	7.240000	AMBER_distance_restraints_1:1056;AMBER_distance_restraints_1:1062	
 C	4	C2'	C	5	C6	6.160000	6.160000	AMBER_distance_restraints_1:1057	
+C	4	C2'	C	5	N4	7.200000	7.200000	AMBER_distance_restraints_1:1061	
 C	4	C3'	C	4	C6	5.740000	5.740000	AMBER_distance_restraints_1:1053	
 C	4	C3'	C	5	C6	7.240000	7.240000	AMBER_distance_restraints_1:1058	
 C	4	C6	C	5	C5	7.240000	7.240000	AMBER_distance_restraints_1:1060	
+C	4	N3	C	5	N4	7.160000	7.160000	AMBER_distance_restraints_1:1059	
 C	5	C1'	C	5	C2'	6.160000	6.160000	AMBER_distance_restraints_1:1063	
 C	5	C1'	C	5	C3'	7.240000	7.240000	AMBER_distance_restraints_1:1064	
 C	5	C1'	C	5	C4'	5.740000	5.740000	AMBER_distance_restraints_1:1065	
