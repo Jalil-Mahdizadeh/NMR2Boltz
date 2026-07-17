@@ -7,7 +7,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Iterable
 
-from .model import AtomChoice, AtomSetChoice, clean
+from .model import AtomChoice, AtomSetChoice, BoltzAtom, ConversionReport, SequenceRecord, clean
 
 # Conservative upper envelopes for ordinary covalent X-H bond lengths (angstrom).
 # They are deliberately a little longer than common idealized geometry values.
@@ -25,6 +25,28 @@ HYDROGEN_ELEMENTS = {"H", "D", "T"}
 
 class TopologyResolutionError(ValueError):
     pass
+
+
+class AtomTopologyValidationError(ValueError):
+    """Raised when an executable constraint lacks exact component-topology evidence."""
+
+
+@dataclass(frozen=True)
+class AtomTopologyViolation:
+    atom: BoltzAtom
+    residue_name: str | None
+    topology_source: str | None
+    reason: str
+
+    def to_dict(self) -> dict[str, str | int | None]:
+        return {
+            "chain": self.atom.chain,
+            "residue_number": self.atom.residue_index,
+            "residue_name": self.residue_name,
+            "atom_name": self.atom.atom_name,
+            "topology_source": self.topology_source,
+            "reason": self.reason,
+        }
 
 
 @dataclass
@@ -545,6 +567,103 @@ class TopologyLibrary:
         )
 
 
+def component_topology_snapshot(
+    records: Iterable[SequenceRecord], library: TopologyLibrary
+) -> dict[str, dict[str, object]]:
+    """Freeze exact component atom membership used by one conversion.
+
+    Unknown components are represented explicitly with an empty atom set. This
+    keeps the output validator fail-closed and makes the evidence auditable.
+    """
+    snapshot: dict[str, dict[str, object]] = {}
+    for comp_id in sorted({record.residue_name.strip().upper() for record in records}):
+        topology = library.get(comp_id)
+        snapshot[comp_id] = {
+            "available": topology is not None,
+            "source": topology.source if topology is not None else None,
+            "atoms": sorted(topology.available_atoms()) if topology is not None else [],
+        }
+    return snapshot
+
+
+def mapped_residue_index(
+    records: Iterable[SequenceRecord],
+) -> dict[tuple[str, int], str]:
+    """Return an unambiguous Boltz position-to-component mapping."""
+    mapped: dict[tuple[str, int], str] = {}
+    for record in records:
+        key = (record.boltz_chain, record.boltz_residue_index)
+        comp_id = record.residue_name.strip().upper()
+        prior = mapped.get(key)
+        if prior is not None and prior != comp_id:
+            raise AtomTopologyValidationError(
+                f"Conflicting mapped residue identities at {key[0]}:{key[1]}: "
+                f"{prior} and {comp_id}."
+            )
+        mapped[key] = comp_id
+    return mapped
+
+
+def atom_topology_violations(
+    atoms: Iterable[BoltzAtom],
+    *,
+    mapped_residues: dict[tuple[str, int], str],
+    component_topologies: dict[str, dict[str, object]],
+) -> list[AtomTopologyViolation]:
+    """Check atoms against component dictionaries, never coordinate observations."""
+    violations: list[AtomTopologyViolation] = []
+    for atom in atoms:
+        comp_id = mapped_residues.get((atom.chain, atom.residue_index))
+        if comp_id is None:
+            violations.append(
+                AtomTopologyViolation(atom, None, None, "mapped_residue_not_found")
+            )
+            continue
+        evidence = component_topologies.get(comp_id)
+        source = str(evidence.get("source")) if evidence and evidence.get("source") else None
+        if not evidence or evidence.get("available") is not True:
+            violations.append(
+                AtomTopologyViolation(atom, comp_id, source, "component_topology_unavailable")
+            )
+            continue
+        available = evidence.get("atoms")
+        if not isinstance(available, list) or atom.atom_name not in available:
+            violations.append(
+                AtomTopologyViolation(atom, comp_id, source, "atom_absent_from_component_topology")
+            )
+    return violations
+
+
+def emitted_atom_topology_violations(report: ConversionReport) -> list[AtomTopologyViolation]:
+    mapped = mapped_residue_index(report.sequence_map)
+    return atom_topology_violations(
+        (
+            atom
+            for constraint in report.emitted_constraints
+            for atom in (constraint.atom1, constraint.atom2)
+        ),
+        mapped_residues=mapped,
+        component_topologies=report.target_component_topologies,
+    )
+
+
+def require_valid_emitted_atom_topology(report: ConversionReport) -> None:
+    """Fail before executable YAML can contain an unproven atom."""
+    violations = emitted_atom_topology_violations(report)
+    if not violations:
+        return
+    details = "; ".join(
+        f"{item.atom.display()} mapped to {item.residue_name or '?'} ({item.reason})"
+        for item in violations[:20]
+    )
+    remainder = len(violations) - 20
+    if remainder > 0:
+        details += f"; and {remainder} additional violation(s)"
+    raise AtomTopologyValidationError(
+        "Executable atom-contact topology validation failed: " + details
+    )
+
+
 def _looks_like_hydrogen(atom_name: str) -> bool:
     stripped = atom_name.lstrip("123456789").upper()
     return stripped.startswith(("H", "D", "T"))
@@ -573,12 +692,39 @@ def build_builtin_topologies() -> dict[str, ComponentTopology]:
         for hydrogen in hydrogens:
             topo.add_hydrogen(hydrogen, parent, parent_element)
 
+    def add_heavy(topo: ComponentTopology, *atom_names: str) -> None:
+        for atom_name in atom_names:
+            topo.add_atom(atom_name, infer_element(atom_name))
+
     protein_ids = [
         "ALA", "ARG", "ASN", "ASP", "CYS", "GLN", "GLU", "GLY", "HIS", "ILE",
         "LEU", "LYS", "MET", "PHE", "PRO", "SER", "THR", "TRP", "TYR", "VAL",
     ]
     proteins = {comp_id: component(comp_id) for comp_id in protein_ids}
+    protein_sidechains = {
+        "ALA": ("CB",),
+        "ARG": ("CB", "CG", "CD", "NE", "CZ", "NH1", "NH2"),
+        "ASN": ("CB", "CG", "OD1", "ND2"),
+        "ASP": ("CB", "CG", "OD1", "OD2"),
+        "CYS": ("CB", "SG"),
+        "GLN": ("CB", "CG", "CD", "OE1", "NE2"),
+        "GLU": ("CB", "CG", "CD", "OE1", "OE2"),
+        "GLY": (),
+        "HIS": ("CB", "CG", "ND1", "CD2", "CE1", "NE2"),
+        "ILE": ("CB", "CG1", "CG2", "CD1"),
+        "LEU": ("CB", "CG", "CD1", "CD2"),
+        "LYS": ("CB", "CG", "CD", "CE", "NZ"),
+        "MET": ("CB", "CG", "SD", "CE"),
+        "PHE": ("CB", "CG", "CD1", "CD2", "CE1", "CE2", "CZ"),
+        "PRO": ("CB", "CG", "CD"),
+        "SER": ("CB", "OG"),
+        "THR": ("CB", "OG1", "CG2"),
+        "TRP": ("CB", "CG", "CD1", "CD2", "NE1", "CE2", "CE3", "CZ2", "CZ3", "CH2"),
+        "TYR": ("CB", "CG", "CD1", "CD2", "CE1", "CE2", "CZ", "OH"),
+        "VAL": ("CB", "CG1", "CG2"),
+    }
     for comp_id, topo in proteins.items():
+        add_heavy(topo, "N", "CA", "C", "O", "OXT", *protein_sidechains[comp_id])
         if comp_id != "PRO":
             add(topo, "N", "H")
             topo.add_alias("HN", "H")
@@ -691,6 +837,7 @@ def build_builtin_topologies() -> dict[str, ComponentTopology]:
         atom_aliases=dict(topologies["MET"].atom_aliases),
         source="builtin-MSE",
     )
+    mse.atom_elements.pop("SD", None)
     mse.atom_elements["SE"] = "SE"
     topologies["MSE"] = mse
     sec = ComponentTopology(
@@ -707,11 +854,18 @@ def build_builtin_topologies() -> dict[str, ComponentTopology]:
     sec.hydrogen_bond_upper["HG"] = DEFAULT_XH_UPPER["SE"]
     topologies["SEC"] = sec
 
-    def nucleic(comp_id: str) -> ComponentTopology:
+    def nucleic(comp_id: str, *, deoxy: bool = False) -> ComponentTopology:
         topo = component(comp_id, source="builtin-nucleic-acid")
+        add_heavy(
+            topo,
+            "P", "OP1", "OP2", "OP3", "O5'", "C5'", "C4'", "O4'",
+            "C3'", "O3'", "C2'", "C1'",
+        )
         add(topo, "C1'", "H1'")
         add(topo, "C2'", "H2'", "H2''", "H2'1", "H2'2")
-        add(topo, "O2'", "HO2'", parent_element="O")
+        if not deoxy:
+            add_heavy(topo, "O2'")
+            add(topo, "O2'", "HO2'", parent_element="O")
         add(topo, "C3'", "H3'")
         add(topo, "O3'", "HO3'", parent_element="O")
         add(topo, "C4'", "H4'")
@@ -729,33 +883,39 @@ def build_builtin_topologies() -> dict[str, ComponentTopology]:
     thymines = ["T", "DT", "THY", "TMP"]
     inosines = ["I", "DI", "INO", "IMP"]
     for comp_id in adenines:
-        topo = nucleic(comp_id)
+        topo = nucleic(comp_id, deoxy=comp_id == "DA")
+        add_heavy(topo, "N9", "C8", "N7", "C5", "C6", "N6", "N1", "C2", "N3", "C4")
         add(topo, "C2", "H2")
         add(topo, "C8", "H8")
         add(topo, "N6", "H61", "H62", parent_element="N")
     for comp_id in cytosines:
-        topo = nucleic(comp_id)
+        topo = nucleic(comp_id, deoxy=comp_id == "DC")
+        add_heavy(topo, "N1", "C2", "O2", "N3", "C4", "N4", "C5", "C6")
         add(topo, "C5", "H5")
         add(topo, "C6", "H6")
         add(topo, "N4", "H41", "H42", parent_element="N")
     for comp_id in guanines:
-        topo = nucleic(comp_id)
+        topo = nucleic(comp_id, deoxy=comp_id == "DG")
+        add_heavy(topo, "N9", "C8", "N7", "C5", "C6", "O6", "N1", "C2", "N2", "N3", "C4")
         add(topo, "N1", "H1", parent_element="N")
         add(topo, "C8", "H8")
         add(topo, "N2", "H21", "H22", parent_element="N")
     for comp_id in uracils:
         topo = nucleic(comp_id)
+        add_heavy(topo, "N1", "C2", "O2", "N3", "C4", "O4", "C5", "C6")
         add(topo, "N3", "H3", parent_element="N")
         add(topo, "C5", "H5")
         add(topo, "C6", "H6")
     for comp_id in thymines:
-        topo = nucleic(comp_id)
+        topo = nucleic(comp_id, deoxy=comp_id == "DT")
+        add_heavy(topo, "N1", "C2", "O2", "N3", "C4", "O4", "C5", "C6", "C7", "C5M")
         add(topo, "N3", "H3", parent_element="N")
         add(topo, "C6", "H6")
         add(topo, "C7", "H71", "H72", "H73")
         add(topo, "C5M", "H51", "H52", "H53")
     for comp_id in inosines:
-        topo = nucleic(comp_id)
+        topo = nucleic(comp_id, deoxy=comp_id == "DI")
+        add_heavy(topo, "N9", "C8", "N7", "C5", "C6", "O6", "N1", "C2", "N3", "C4")
         add(topo, "N1", "H1", parent_element="N")
         add(topo, "C2", "H2")
         add(topo, "C8", "H8")

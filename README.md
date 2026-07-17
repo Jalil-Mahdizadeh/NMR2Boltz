@@ -7,7 +7,8 @@ It is deliberately not a blind text converter. The program separates four differ
 1. parsing the STAR data model and preserving restraint-group logic;
 2. mapping source chain/sequence identifiers onto the exact Boltz input sequence;
 3. resolving each proton to its directly bonded heavy atom from chemical topology;
-4. projecting an upper bound with an explicit mathematical policy and quarantining unresolved OR ambiguity.
+4. projecting an upper bound with an explicit mathematical policy and quarantining unresolved OR ambiguity;
+5. proving both projected atoms belong to their mapped component before executable YAML is written.
 
 The default output contains only contacts that can be imposed **simultaneously** without changing the logical meaning of the source restraints.
 
@@ -42,6 +43,10 @@ For modified residues, provide a local wwPDB Chemical Component Dictionary file 
 ```bash
 nmr2boltz convert experiment.nef --ccd ./ccd -o converted
 ```
+
+Standard protein and RNA/DNA atom inventories are built in. Modified residues,
+ligands, and ions are accepted only when embedded or supplied CCD topology
+proves the atom name; unknown component topology is quarantined, never guessed.
 
 When the source numbering does not match the exact Boltz input, provide a tab-separated map:
 
@@ -134,7 +139,7 @@ The reviewed scientific interpretation of the current corpus is documented in
 [`docs/BENCHMARK_DISCREPANCY_FINDINGS.md`](docs/BENCHMARK_DISCREPANCY_FINDINGS.md).
 
 The corpus command is also a fail-closed CI gate. It exits nonzero for any
-projection implication failure, unresolved format discrepancy,
+emitted atom-topology violation, projection implication failure, unresolved format discrepancy,
 parser/projection bug, changed discrepancy digest, changed scientific metric,
 or changed reviewed missing-coordinate set. Known coordinate limitations are
 pinned by every contact identity, bound, source provenance, and a digest; they
@@ -156,12 +161,12 @@ python validation/benchmark_corpus.py benchmark/input \
 | `boltz_constraints.yaml` | Safe, unambiguous constraints that may be inserted together under the Boltz YAML `constraints` key. |
 | `heavy_atom_constraints.tsv` | Tabular `[X-Y: d]` result with Boltz chain, residue index, atom name, and bound. |
 | `heavy_atom_constraints.txt` | Compact human-readable `[A:17:N -- A:42:CB : 6.20]` form. |
-| `conversion_report.json` | Full machine-readable provenance, formula terms, settings, warnings, ambiguity, and rejections. |
+| `conversion_report.json` | Full machine-readable provenance, component-topology snapshot, formula terms, settings, warnings, ambiguity, and rejections. |
 | `sequence_map.tsv` | Source identifier to Boltz residue-index mapping. This should be manually checked. |
 | `sequences.fasta` | Clean polymer-only sequences extracted from the source mapping; caps, ions, and other non-polymers are omitted. |
 | `ambiguous_groups.tsv` | OR alternatives that were not emitted as simultaneous constraints. |
 | `proposed_atom_contact_unions.yaml` | Proposed union-aware schema for a future BoltzUI extension; not accepted by the current parser. |
-| `rejections.tsv` | Every restraint or group that could not be converted safely, with a reason. |
+| `rejections.tsv` | Every restraint or group that could not be converted safely, with a reason and deterministic JSON provenance. |
 | `summary.txt` | Concise run summary. |
 | `hypotheses/*.yaml` | Optional assignment hypotheses generated with `--hypotheses N`. Each selects one alternative per ambiguous group. |
 
@@ -219,6 +224,14 @@ The converter distinguishes:
 - **multiple rows with the same restraint ID**, which are treated as alternatives, not independent simultaneous contacts;
 - **non-null restraint-combination identifiers or non-OR NMR-STAR member logic**, which are preserved but not flattened because they may encode nested logic.
 
+After residue mapping and proton-to-heavy projection, both heavy atoms are
+checked against the mapped component topology before OR/pair deduplication. If
+either endpoint is absent—or the component topology is unavailable—the whole
+contact is quarantined as `atom_not_present_in_mapped_residue`. The writer then
+repeats the invariant against the frozen target-topology snapshot before it
+creates any output file. Coordinate absence is never used as atom-validity
+evidence.
+
 Inside one OR group, two alternatives that map to the same heavy pair are combined using the **larger** bound. Across independent restraint groups, duplicate heavy pairs are combined using the **smaller** bound.
 If any alternative or atom-set branch in an OR group cannot be projected safely, none of the remaining alternatives are emitted because a partial OR would be stronger than the source restraint. Executable upper bounds are rounded upward at six decimal places so serialization never tightens them.
 
@@ -237,7 +250,7 @@ If any alternative or atom-set branch in an OR group cannot be projected safely,
 - An NOE upper bound is an experimental/modeling restraint, not necessarily a literal hard instantaneous distance.
 - Dynamic and conformational-ensemble averaging is not reproduced by a single heavy-atom contact.
 - Exchangeable protons depend on protonation, tautomer, solvent, pH, and temperature.
-- The compact built-in topology covers standard proteins and common RNA/DNA residues. Modified components should use embedded NMR-STAR chemistry or a local CCD file.
+- The built-in topology covers standard protein and common RNA/DNA atom inventories. Modified components, ligands, and ions require embedded NMR-STAR chemistry or a local CCD file; unknown topology fails closed.
 - The current Boltz token-conditioning path cannot encode a disjunction. Marking every OR alternative as a contact would overconstrain the model.
 - A soft Boltz potential encourages a contact but does not guarantee restraint satisfaction. Post-prediction validation remains mandatory.
 - Paired NEF and NMR-STAR exports can encode different atom-set multiplicities; inspect `format_parity.json` before treating them as interchangeable.

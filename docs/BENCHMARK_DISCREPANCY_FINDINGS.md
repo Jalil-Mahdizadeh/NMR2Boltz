@@ -1,6 +1,6 @@
 # Paired-format discrepancy findings
 
-The July 2026 corpus run audited all 4,195 heavy-contact discrepancies rather
+The July 2026 corpus run audited all 4,179 heavy-contact discrepancies rather
 than treating unequal contact counts as parser failures. The complete evidence
 is in `benchmark/output/FORMAT_DISCREPANCY_AUDIT.tsv`; each row includes both
 formats' source restraint and row IDs, atom expressions, canonical expansions,
@@ -23,19 +23,22 @@ differences are not allowlisted.
 | 6M6O | 149 | expected format differences | NEF x/y rows encode assignment alternatives while STAR `#` expressions encode physical atom sets. The resulting 1 NEF-only, 59 STAR-only, and 89 different-bound contacts preserve those distinct logical statements. |
 
 The remaining audited cases contain 160 expected differences in 8R1X, 1,920
-expected differences plus 16 `ZN`/`ZN*` deposition inconsistencies in 9CCH,
-and 3 expected differences in 9VQ1. 21CC, 9D99, and 9KG4 have exact positive-distance
+expected differences in 9CCH, and 3 expected differences in 9VQ1. The prior 16
+9CCH `ZN`/`ZN*` discrepancy rows are no longer executable discrepancies: all
+eight contacts per format are quarantined because GLN B48 has no such atom.
+21CC, 9D99, and 9KG4 have exact positive-distance
 parity; 8S8O has exact empty-output parity. No reproducible parser/projection
 bug remains in the row-level audit, and no discrepancy is unclassified.
 
 The fail-closed gate **passes** because the scientifically reviewed coordinate
 limitations are pinned by exact identity and digest rather than waived by
-count. Resolution is incomplete for 53 contacts in each format: 45 contacts address
-residues/atoms absent from the partial 8R1X coordinate model, and 8 9CCH source
-restraints place `ZN`/`ZN*` on GLN 48 while the PDB zinc is residue 101. These
-are corpus/deposition limitations, not safe targets for an automatic remap.
-The reviewed 106-contact set has SHA-256 digest
-`60ed1b785e328fb2d972de6f5d691765012eb622afa489b7a47f41909c8eb141`;
+count. Resolution is incomplete for 41 contacts in each format, all involving
+atoms absent from the partial 8R1X coordinate model. Four additional malformed
+8R1X contacts per format and eight 9CCH GLN/ZN contacts per format are omitted
+from executable YAML by component topology, not by coordinate presence. They
+remain deterministic provenance-bearing rejections and are never remapped.
+The reviewed 82-contact set has SHA-256 digest
+`ce8bc2710b5068d3d1cec33794f77bb4e806019a2116a9f4127102b25cfb63e2`;
 any identity, bound, provenance, addition, or removal fails CI. Projection
 implication itself has 0 failures in 390,930 tested
 satisfied-antecedent model cases.

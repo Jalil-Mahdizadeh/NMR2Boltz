@@ -2,6 +2,17 @@
 
 ## Unreleased
 
+- Added a generic fail-closed atom-membership boundary after residue mapping and
+  heavy-atom projection. A contact is quarantined in full as
+  `atom_not_present_in_mapped_residue` unless both atoms exist in the mapped
+  standard or declared CCD component; the YAML writer independently rechecks
+  the frozen target topology before creating files.
+- Expanded standard amino-acid and RNA/DNA heavy-atom inventories, retained
+  embedded/external CCD support for modified residues, ligands, and ions, and
+  added deterministic rejection provenance with source rows, mapped identity,
+  restraint group, and original bounds.
+- Quarantined 4 malformed contacts per format in 8R1X and 8 GLN/ZN contacts per
+  format in 9CCH. No other corpus entry had this defect.
 - Added clean polymer-only `sequences.fasta` output for every conversion.
 - Replaced permissive paired-format discrepancy classification with tested,
   fail-closed predicates for wildcard/OR, x/y assignment, rejected Q/M
@@ -14,14 +25,14 @@
   now fail CI while the exact reviewed 8R1X/9CCH set passes.
 - Rebuilt and validated `nmr2boltz:0.1.0-validated` as non-root and offline;
   image digest is
-  `sha256:366529d372944a278b74fa99c7e499c6f5aa73836dd8e60ed75513e91c0bb000`.
+  `sha256:436b22af4f57d4960d2a0523a64b49d1d99b57be3eac95683a17504ab2c6d853`.
 - Added a paired NEF/NMR-STAR corpus runner with sequence-aware PDB ensemble
   alignment, exact contact/bound parity metrics, and per-case output directories.
 - Sequence/residue conflicts now use the explicit `sequence_residue_mismatch`
   rejection reason before topology resolution.
 - NEF/NMR-STAR files with sequence data but no distance loop now produce an
   auditable empty conversion rather than failing format detection.
-- Expanded the regression suite from 39 to 55 tests, including positive and
+- Expanded the regression suite from 39 to 73 tests, including positive and
   adversarial checks for every discrepancy predicate and fail-closed gate.
 - Added fail-fast `--target-yaml` validation for chain IDs, residue indices,
   canonical residue identities, declared modifications, mapping collisions, and

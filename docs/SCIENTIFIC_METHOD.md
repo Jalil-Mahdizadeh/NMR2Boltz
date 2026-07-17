@@ -205,12 +205,29 @@ Topology is resolved in the following hierarchy:
 
 1. chemical-component atom/bond loops embedded in the NMR-STAR file;
 2. user-supplied wwPDB CCD mmCIF data;
-3. a bundled map for the 20 standard amino acids, common protonation variants, MSE/SEC, and common RNA/DNA residue names;
-4. heavy-atom pass-through when no hydrogen mapping is needed.
+3. a bundled atom inventory and proton-parent map for the 20 standard amino
+   acids, common protonation variants, MSE/SEC, and common RNA/DNA residues.
 
 Embedded and external bond tables are data-driven. A hydrogen is accepted only when it has a unique non-hydrogen neighbor.
 
-## 5.3 X-H upper envelopes
+## 5.3 Fail-closed atom membership
+
+After sequence mapping and proton-to-heavy projection, but before OR/pair
+deduplication, both projected atoms must occur in the exact topology of their
+mapped residue/component. A missing atom or unavailable component topology
+quarantines the complete contact as `atom_not_present_in_mapped_residue`; no
+atom or residue is guessed or remapped. The rejection preserves source rows,
+endpoint expressions, mapped chain/residue/component/atom, restraint group, and
+original bounds.
+
+The conversion report freezes the component atom dictionaries used for that
+decision. Immediately before writing, an independent validator checks every
+emitted endpoint against this target-topology snapshot and raises on any
+violation before creating files. This is a chemical-topology invariant:
+coordinate absence is neither necessary nor sufficient evidence that an atom is
+invalid.
+
+## 5.4 X-H upper envelopes
 
 The default conservative envelopes are:
 
@@ -237,7 +254,7 @@ These numbers are software defaults, not universal physical constants. They can 
 
 An additional global non-negative `--projection-margin` may be used. Increasing a bond envelope or margin weakens the heavy-atom constraint and therefore preserves conservativeness.
 
-## 5.4 Isotopes and exchangeable protons
+## 5.5 Isotopes and exchangeable protons
 
 Names beginning with D/T are interpreted as hydrogen isotopes when topology supports them. Exchangeable hydrogens attached to N/O/S/Se are topology-dependent. Their observation and assignment can depend on protonation, tautomer, pH, solvent, temperature, and exchange kinetics. A chemically valid parent mapping does not guarantee that the deposited atom was present in every conformer.
 
@@ -508,15 +525,17 @@ from being mistaken for robustness.
 
 The following checks were executed on 2026-07-17 against the current source tree:
 
-- all 55 Pytest regression, format, topology, logic, target-validation, ensemble-alignment, and robustness tests passed;
+- all 73 Pytest regression, format, topology, logic, target-validation, ensemble-alignment, and robustness tests passed;
 - Python byte compilation passed for source, tests, and the stress harness;
 - 100,000 randomized sum-r6 implication cases and 100,000 constructive triangle-inequality cases passed in the final Docker image;
 - 25,000 outward-rounding cases and 10,000 randomized OR-max/AND-min order-invariance cases passed;
-- all 850 explicit hydrogens in the built-in protein and nucleic-acid topologies resolved to one finite, positive parent-bond envelope;
+- all 845 explicit hydrogens in the built-in protein and nucleic-acid topologies resolved to one finite, positive parent-bond envelope;
 - NEF, NMR-STAR, compressed NEF, embedded custom-component topology, all three averaging policies, and 32 deterministic ambiguity hypotheses were exercised;
 - strict-mode and non-finite-input failure paths returned their documented exit codes, 3 and 2;
 - sequence-only NEF/NMR-STAR files produce empty, auditable distance conversions;
 - source residue identities are checked against the resolved sequence record before topology lookup;
+- every executable atom is proven against its mapped component both before
+  deduplication and again before output serialization;
 - every conversion writes a polymer-only FASTA sequence file;
 - PDB author numbering is aligned to Boltz one-based sequence positions before coordinate evaluation.
 
@@ -524,11 +543,11 @@ External semantics were checked at fixed revisions: BoltzUI `c3e5c7f6ae80d9261c3
 
 A paired-format benchmark was run for 12 deposited NMR structures. All 24 NEF
 and NMR-STAR conversions completed, including two valid empty distance
-conversions for 8S8O. Conservative defaults emitted 13,010 NEF and 11,841
+conversions for 8S8O. Conservative defaults emitted 12,998 NEF and 11,829
 NMR-STAR contacts. Resolved contact/model satisfaction against the deposited
 ensembles was 99.88% and 99.86%, respectively. The projected implication had
-zero failures in 390,930 cases with satisfied source antecedents. The 4,195-row
-format audit contains 4,136 allowlisted expected differences, 59 deposition
+zero failures in 390,930 cases with satisfied source antecedents. The 4,179-row
+format audit contains 4,136 allowlisted expected differences, 43 deposition
 inconsistencies, zero unresolved rows, and zero remaining parser/projection
 bugs. Exact
 pair-and-bound parity was observed for three positive-distance cases; the

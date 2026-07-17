@@ -20,6 +20,7 @@ from .model import (
     EmittedConstraint,
     ProjectedAlternative,
 )
+from .topology import require_valid_emitted_atom_topology
 
 
 class FlowList(list):
@@ -79,6 +80,9 @@ def write_outputs(
     hypothesis_count: int = 0,
     random_seed: int = 0,
 ) -> list[Path]:
+    # Independent final invariant: fail before creating the output directory or
+    # writing audit/YAML files if any executable atom lacks topology evidence.
+    require_valid_emitted_atom_topology(report)
     output = Path(output_dir)
     output.mkdir(parents=True, exist_ok=True)
     written: list[Path] = []
@@ -225,7 +229,7 @@ def write_outputs(
     rejection_path = output / "rejections.tsv"
     _write_tsv(
         rejection_path,
-        ["group_id", "reason", "details", "row_ids", "endpoint"],
+        ["group_id", "reason", "details", "row_ids", "endpoint", "provenance_json"],
         [
             [
                 item.group_id,
@@ -233,6 +237,7 @@ def write_outputs(
                 item.details,
                 ";".join(item.row_ids),
                 item.endpoint or "",
+                json.dumps(item.provenance, sort_keys=True, ensure_ascii=False),
             ]
             for item in report.rejections
         ],

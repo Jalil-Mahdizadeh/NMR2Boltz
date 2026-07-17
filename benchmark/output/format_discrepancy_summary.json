@@ -1,20 +1,20 @@
 {
-  "row_count": 4195,
-  "digest_sha256": "f6b32f8fd521da9371ce08fdc4828550c078161deda41ae108033b39609aa244",
+  "row_count": 4179,
+  "digest_sha256": "3b4e4f3d54377d7f80854a1525db0f5351895fbb5c3b6bf2e63f2e3a649c86c8",
   "discrepancy_type_counts": {
     "different_bound": 2456,
-    "star_only": 285,
-    "nef_only": 1454
+    "star_only": 277,
+    "nef_only": 1446
   },
   "classification_counts": {
     "expected_format_difference": 4136,
-    "deposition_inconsistency": 59
+    "deposition_inconsistency": 43
   },
   "case_counts": {
     "43JX": 355,
     "6M6O": 149,
     "8R1X": 160,
-    "9CCH": 1936,
+    "9CCH": 1920,
     "9PQH": 45,
     "9SGX": 813,
     "9VQ1": 3,

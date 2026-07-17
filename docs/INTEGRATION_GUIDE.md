@@ -32,7 +32,9 @@ must be represented separately when they are part of the Boltz target.
 ## Recommended run protocol
 
 1. Convert with strict defaults and inspect all rejected and ambiguous groups.
-2. Confirm sequence mapping and non-standard component topology.
+2. Confirm sequence mapping and non-standard component topology. Every emitted
+   atom is checked against the mapped component dictionary; do not substitute a
+   coordinate-presence check for this topology invariant.
 3. Ask an NMR expert to confirm the atom-set averaging convention used to calibrate each restraint list.
 4. Run multiple Boltz diffusion samples per safe or hypothesis input.
 5. Add hydrogens to generated structures using an appropriate protonation model.

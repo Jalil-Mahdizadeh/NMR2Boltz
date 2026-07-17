@@ -126,10 +126,6 @@ A	14	CB	A	14	CG	7.840000	7.840000	AMBER_distance_restraints_1:129
 A	14	CB	A	15	N	5.448000	5.448000	AMBER_distance_restraints_1:132	
 A	14	CB	A	52	CE3	7.840000	7.840000	AMBER_distance_restraints_1:136	
 A	14	CB	A	55	CE	8.512000	8.512000	AMBER_distance_restraints_2:32	
-A	14	N3	A	15	N	3.080000	3.080000	AMBER_distance_restraints_3:90	
-A	14	N3	A	15	N1	3.000000	3.000000	AMBER_distance_restraints_3:89	
-A	14	N4	A	15	O6	3.000000	3.000000	AMBER_distance_restraints_3:93	
-A	14	O2	A	15	N2	3.000000	3.000000	AMBER_distance_restraints_3:91	
 A	15	CA	A	15	N	7.200000	7.200000	AMBER_distance_restraints_1:144	
 A	15	CA	A	18	CB	6.160000	6.160000	AMBER_distance_restraints_1:154	
 A	15	CA	A	18	N	5.700000	5.700000	AMBER_distance_restraints_1:153	

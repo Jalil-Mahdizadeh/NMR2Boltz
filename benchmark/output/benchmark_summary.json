@@ -1,5 +1,5 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "input_directory": "benchmark/input",
   "output_directory": "benchmark/output",
   "settings": {
@@ -18,24 +18,24 @@
     "exact_positive_distance_parity_cases": 3,
     "formats": {
       "nef": {
-        "emitted_constraints": 13010,
+        "emitted_constraints": 12998,
         "resolved_model_cases": 222570,
         "satisfied_model_cases": 222292,
         "violated_model_cases": 278,
-        "missing_model_cases": 1060,
-        "constraints_missing_in_any_model": 53,
+        "missing_model_cases": 820,
+        "constraints_missing_in_any_model": 41,
         "satisfaction_fraction_of_resolved": 0.9987509547558071,
         "implication_antecedent_cases": 207023,
         "implication_failures": 0,
         "sequence_residue_mismatch_rejections": 312
       },
       "star": {
-        "emitted_constraints": 11841,
+        "emitted_constraints": 11829,
         "resolved_model_cases": 198200,
         "satisfied_model_cases": 197917,
         "violated_model_cases": 283,
-        "missing_model_cases": 1060,
-        "constraints_missing_in_any_model": 53,
+        "missing_model_cases": 820,
+        "constraints_missing_in_any_model": 41,
         "satisfaction_fraction_of_resolved": 0.9985721493440969,
         "implication_antecedent_cases": 183907,
         "implication_failures": 0,
@@ -44,22 +44,22 @@
     }
   },
   "discrepancy_audit": {
-    "row_count": 4195,
-    "digest_sha256": "f6b32f8fd521da9371ce08fdc4828550c078161deda41ae108033b39609aa244",
+    "row_count": 4179,
+    "digest_sha256": "3b4e4f3d54377d7f80854a1525db0f5351895fbb5c3b6bf2e63f2e3a649c86c8",
     "discrepancy_type_counts": {
       "different_bound": 2456,
-      "star_only": 285,
-      "nef_only": 1454
+      "star_only": 277,
+      "nef_only": 1446
     },
     "classification_counts": {
       "expected_format_difference": 4136,
-      "deposition_inconsistency": 59
+      "deposition_inconsistency": 43
     },
     "case_counts": {
       "43JX": 355,
       "6M6O": 149,
       "8R1X": 160,
-      "9CCH": 1936,
+      "9CCH": 1920,
       "9PQH": 45,
       "9SGX": 813,
       "9VQ1": 3,
@@ -84,6 +84,10 @@
           "rejection_reasons": {},
           "sequence_records": 25,
           "warnings": [],
+          "atom_topology_validation": {
+            "checked_constraints": 176,
+            "violation_count": 0
+          },
           "coordinates": {
             "pdb": "benchmark/input/21CC/21CC.pdb",
             "model_count": 10,
@@ -156,6 +160,10 @@
           "warnings": [
             "NMR-STAR component indices for chain B were not contiguous 1..N; Boltz indices use sequence-loop order"
           ],
+          "atom_topology_validation": {
+            "checked_constraints": 176,
+            "violation_count": 0
+          },
           "coordinates": {
             "pdb": "benchmark/input/21CC/21CC.pdb",
             "model_count": 10,
@@ -254,6 +262,10 @@
           },
           "sequence_records": 122,
           "warnings": [],
+          "atom_topology_validation": {
+            "checked_constraints": 1716,
+            "violation_count": 0
+          },
           "coordinates": {
             "pdb": "benchmark/input/43JX/43JX.pdb",
             "model_count": 20,
@@ -315,6 +327,10 @@
           },
           "sequence_records": 122,
           "warnings": [],
+          "atom_topology_validation": {
+            "checked_constraints": 1716,
+            "violation_count": 0
+          },
           "coordinates": {
             "pdb": "benchmark/input/43JX/43JX.pdb",
             "model_count": 20,
@@ -407,6 +423,10 @@
           },
           "sequence_records": 185,
           "warnings": [],
+          "atom_topology_validation": {
+            "checked_constraints": 2819,
+            "violation_count": 0
+          },
           "coordinates": {
             "pdb": "benchmark/input/6M6O/6M6O.pdb",
             "model_count": 10,
@@ -468,6 +488,10 @@
           },
           "sequence_records": 185,
           "warnings": [],
+          "atom_topology_validation": {
+            "checked_constraints": 2877,
+            "violation_count": 0
+          },
           "coordinates": {
             "pdb": "benchmark/input/6M6O/6M6O.pdb",
             "model_count": 10,
@@ -554,16 +578,21 @@
           "has_distance_restraints": true,
           "restraint_groups": 1414,
           "source_alternatives": 2282,
-          "emitted_constraints": 1118,
+          "emitted_constraints": 1114,
           "ambiguous_groups": 165,
-          "rejection_records": 90,
+          "rejection_records": 94,
           "rejection_reasons": {
             "same_heavy_parent_atom": 12,
             "unresolved_atom_topology": 39,
+            "atom_not_present_in_mapped_residue": 4,
             "projected_bound_exceeds_boltz_maximum": 39
           },
           "sequence_records": 138,
           "warnings": [],
+          "atom_topology_validation": {
+            "checked_constraints": 1114,
+            "violation_count": 0
+          },
           "coordinates": {
             "pdb": "benchmark/input/8R1X/8R1X.pdb",
             "model_count": 20,
@@ -615,47 +644,15 @@
               "groups_indeterminate_in_every_model": 76
             },
             "heavy_atom_constraints": {
-              "constraint_count": 1118,
+              "constraint_count": 1114,
               "resolved_model_cases": 21460,
               "satisfied_model_cases": 21404,
               "violated_model_cases": 56,
-              "missing_model_cases": 900,
-              "constraints_missing_in_any_model": 45,
+              "missing_model_cases": 820,
+              "constraints_missing_in_any_model": 41,
               "missing_coordinate_contacts": [
                 {
-                  "constraint_id": "C00128",
-                  "atom1": "A:14:N3",
-                  "atom2": "A:15:N",
-                  "upper_bound_angstrom": 3.08,
-                  "models_resolved": 0,
-                  "source_groups": "AMBER_distance_restraints_3:90"
-                },
-                {
-                  "constraint_id": "C00129",
-                  "atom1": "A:14:N3",
-                  "atom2": "A:15:N1",
-                  "upper_bound_angstrom": 3.0,
-                  "models_resolved": 0,
-                  "source_groups": "AMBER_distance_restraints_3:89"
-                },
-                {
-                  "constraint_id": "C00130",
-                  "atom1": "A:14:N4",
-                  "atom2": "A:15:O6",
-                  "upper_bound_angstrom": 3.0,
-                  "models_resolved": 0,
-                  "source_groups": "AMBER_distance_restraints_3:93"
-                },
-                {
-                  "constraint_id": "C00131",
-                  "atom1": "A:14:O2",
-                  "atom2": "A:15:N2",
-                  "upper_bound_angstrom": 3.0,
-                  "models_resolved": 0,
-                  "source_groups": "AMBER_distance_restraints_3:91"
-                },
-                {
-                  "constraint_id": "C00809",
+                  "constraint_id": "C00805",
                   "atom1": "A:68:CA",
                   "atom2": "A:72:N",
                   "upper_bound_angstrom": 7.2,
@@ -663,7 +660,7 @@
                   "source_groups": "AMBER_distance_restraints_1:771"
                 },
                 {
-                  "constraint_id": "C00818",
+                  "constraint_id": "C00814",
                   "atom1": "A:69:CA",
                   "atom2": "A:72:CB",
                   "upper_bound_angstrom": 7.2839352117392115,
@@ -671,7 +668,7 @@
                   "source_groups": "AMBER_distance_restraints_1:783"
                 },
                 {
-                  "constraint_id": "C00819",
+                  "constraint_id": "C00815",
                   "atom1": "A:69:CA",
                   "atom2": "A:72:N",
                   "upper_bound_angstrom": 5.7,
@@ -679,7 +676,7 @@
                   "source_groups": "AMBER_distance_restraints_1:782"
                 },
                 {
-                  "constraint_id": "C00820",
+                  "constraint_id": "C00816",
                   "atom1": "A:69:CA",
                   "atom2": "A:73:ND2",
                   "upper_bound_angstrom": 7.2,
@@ -687,7 +684,7 @@
                   "source_groups": "AMBER_distance_restraints_1:784"
                 },
                 {
-                  "constraint_id": "C00824",
+                  "constraint_id": "C00820",
                   "atom1": "A:69:CB",
                   "atom2": "A:73:ND2",
                   "upper_bound_angstrom": 7.8,
@@ -695,7 +692,7 @@
                   "source_groups": "AMBER_distance_restraints_1:785"
                 },
                 {
-                  "constraint_id": "C00826",
+                  "constraint_id": "C00822",
                   "atom1": "A:69:CG",
                   "atom2": "A:73:ND2",
                   "upper_bound_angstrom": 6.12,
@@ -703,7 +700,7 @@
                   "source_groups": "AMBER_distance_restraints_1:786"
                 },
                 {
-                  "constraint_id": "C00832",
+                  "constraint_id": "C00828",
                   "atom1": "A:70:CA",
                   "atom2": "A:73:CB",
                   "upper_bound_angstrom": 6.16,
@@ -711,7 +708,7 @@
                   "source_groups": "AMBER_distance_restraints_1:803"
                 },
                 {
-                  "constraint_id": "C00833",
+                  "constraint_id": "C00829",
                   "atom1": "A:70:CA",
                   "atom2": "A:73:N",
                   "upper_bound_angstrom": 5.7,
@@ -719,7 +716,7 @@
                   "source_groups": "AMBER_distance_restraints_1:802"
                 },
                 {
-                  "constraint_id": "C00838",
+                  "constraint_id": "C00834",
                   "atom1": "A:70:CB",
                   "atom2": "A:72:N",
                   "upper_bound_angstrom": 7.8,
@@ -727,7 +724,7 @@
                   "source_groups": "AMBER_distance_restraints_1:801"
                 },
                 {
-                  "constraint_id": "C00843",
+                  "constraint_id": "C00839",
                   "atom1": "A:71:CA",
                   "atom2": "A:72:CB",
                   "upper_bound_angstrom": 9.445621731056017,
@@ -735,7 +732,7 @@
                   "source_groups": "AMBER_distance_restraints_2:130"
                 },
                 {
-                  "constraint_id": "C00844",
+                  "constraint_id": "C00840",
                   "atom1": "A:71:CA",
                   "atom2": "A:72:N",
                   "upper_bound_angstrom": 5.7,
@@ -743,7 +740,7 @@
                   "source_groups": "AMBER_distance_restraints_1:811"
                 },
                 {
-                  "constraint_id": "C00845",
+                  "constraint_id": "C00841",
                   "atom1": "A:71:CA",
                   "atom2": "A:73:N",
                   "upper_bound_angstrom": 7.2,
@@ -751,7 +748,7 @@
                   "source_groups": "AMBER_distance_restraints_1:816"
                 },
                 {
-                  "constraint_id": "C00846",
+                  "constraint_id": "C00842",
                   "atom1": "A:71:CA",
                   "atom2": "A:74:N",
                   "upper_bound_angstrom": 5.7,
@@ -759,7 +756,7 @@
                   "source_groups": "AMBER_distance_restraints_1:817"
                 },
                 {
-                  "constraint_id": "C00849",
+                  "constraint_id": "C00845",
                   "atom1": "A:71:CB",
                   "atom2": "A:72:CA",
                   "upper_bound_angstrom": 7.84,
@@ -767,7 +764,7 @@
                   "source_groups": "AMBER_distance_restraints_1:813"
                 },
                 {
-                  "constraint_id": "C00850",
+                  "constraint_id": "C00846",
                   "atom1": "A:71:CB",
                   "atom2": "A:72:N",
                   "upper_bound_angstrom": 5.448,
@@ -775,7 +772,7 @@
                   "source_groups": "AMBER_distance_restraints_1:812"
                 },
                 {
-                  "constraint_id": "C00852",
+                  "constraint_id": "C00848",
                   "atom1": "A:71:CG",
                   "atom2": "A:72:N",
                   "upper_bound_angstrom": 7.8,
@@ -783,7 +780,7 @@
                   "source_groups": "AMBER_distance_restraints_1:814"
                 },
                 {
-                  "constraint_id": "C00853",
+                  "constraint_id": "C00849",
                   "atom1": "A:71:N",
                   "atom2": "A:72:CB",
                   "upper_bound_angstrom": 9.405621731056016,
@@ -791,7 +788,7 @@
                   "source_groups": "AMBER_distance_restraints_2:129"
                 },
                 {
-                  "constraint_id": "C00854",
+                  "constraint_id": "C00850",
                   "atom1": "A:71:N",
                   "atom2": "A:72:N",
                   "upper_bound_angstrom": 5.0600000000000005,
@@ -799,7 +796,7 @@
                   "source_groups": "AMBER_distance_restraints_1:810"
                 },
                 {
-                  "constraint_id": "C00855",
+                  "constraint_id": "C00851",
                   "atom1": "A:71:N",
                   "atom2": "A:73:N",
                   "upper_bound_angstrom": 7.16,
@@ -807,7 +804,7 @@
                   "source_groups": "AMBER_distance_restraints_1:815"
                 },
                 {
-                  "constraint_id": "C00856",
+                  "constraint_id": "C00852",
                   "atom1": "A:72:CA",
                   "atom2": "A:72:CB",
                   "upper_bound_angstrom": 5.554585996285768,
@@ -815,7 +812,7 @@
                   "source_groups": "AMBER_distance_restraints_1:820"
                 },
                 {
-                  "constraint_id": "C00857",
+                  "constraint_id": "C00853",
                   "atom1": "A:72:CA",
                   "atom2": "A:72:N",
                   "upper_bound_angstrom": 5.1,
@@ -823,7 +820,7 @@
                   "source_groups": "AMBER_distance_restraints_1:818"
                 },
                 {
-                  "constraint_id": "C00858",
+                  "constraint_id": "C00854",
                   "atom1": "A:72:CA",
                   "atom2": "A:73:N",
                   "upper_bound_angstrom": 5.7,
@@ -831,7 +828,7 @@
                   "source_groups": "AMBER_distance_restraints_1:823"
                 },
                 {
-                  "constraint_id": "C00859",
+                  "constraint_id": "C00855",
                   "atom1": "A:72:CB",
                   "atom2": "A:72:N",
                   "upper_bound_angstrom": 6.379260604012489,
@@ -839,7 +836,7 @@
                   "source_groups": "AMBER_distance_restraints_1:819"
                 },
                 {
-                  "constraint_id": "C00860",
+                  "constraint_id": "C00856",
                   "atom1": "A:72:CB",
                   "atom2": "A:73:CA",
                   "upper_bound_angstrom": 9.445621731056017,
@@ -847,7 +844,7 @@
                   "source_groups": "AMBER_distance_restraints_2:131"
                 },
                 {
-                  "constraint_id": "C00861",
+                  "constraint_id": "C00857",
                   "atom1": "A:72:CB",
                   "atom2": "A:73:CB",
                   "upper_bound_angstrom": 10.310296338782738,
@@ -855,7 +852,7 @@
                   "source_groups": "AMBER_distance_restraints_2:132"
                 },
                 {
-                  "constraint_id": "C00862",
+                  "constraint_id": "C00858",
                   "atom1": "A:72:CB",
                   "atom2": "A:73:N",
                   "upper_bound_angstrom": 6.379260604012489,
@@ -863,7 +860,7 @@
                   "source_groups": "AMBER_distance_restraints_1:824"
                 },
                 {
-                  "constraint_id": "C00863",
+                  "constraint_id": "C00859",
                   "atom1": "A:72:CB",
                   "atom2": "A:73:ND2",
                   "upper_bound_angstrom": 9.405621731056016,
@@ -871,7 +868,7 @@
                   "source_groups": "AMBER_distance_restraints_2:133"
                 },
                 {
-                  "constraint_id": "C00864",
+                  "constraint_id": "C00860",
                   "atom1": "A:72:CB",
                   "atom2": "A:74:N",
                   "upper_bound_angstrom": 9.405621731056016,
@@ -879,7 +876,7 @@
                   "source_groups": "AMBER_distance_restraints_2:134"
                 },
                 {
-                  "constraint_id": "C00865",
+                  "constraint_id": "C00861",
                   "atom1": "A:72:N",
                   "atom2": "A:73:N",
                   "upper_bound_angstrom": 5.0600000000000005,
@@ -887,7 +884,7 @@
                   "source_groups": "AMBER_distance_restraints_1:821"
                 },
                 {
-                  "constraint_id": "C00866",
+                  "constraint_id": "C00862",
                   "atom1": "A:72:N",
                   "atom2": "A:73:ND2",
                   "upper_bound_angstrom": 7.16,
@@ -895,7 +892,7 @@
                   "source_groups": "AMBER_distance_restraints_1:822"
                 },
                 {
-                  "constraint_id": "C00867",
+                  "constraint_id": "C00863",
                   "atom1": "A:73:CA",
                   "atom2": "A:73:CB",
                   "upper_bound_angstrom": 5.488,
@@ -903,7 +900,7 @@
                   "source_groups": "AMBER_distance_restraints_1:828"
                 },
                 {
-                  "constraint_id": "C00868",
+                  "constraint_id": "C00864",
                   "atom1": "A:73:CA",
                   "atom2": "A:73:N",
                   "upper_bound_angstrom": 5.1,
@@ -911,7 +908,7 @@
                   "source_groups": "AMBER_distance_restraints_1:825"
                 },
                 {
-                  "constraint_id": "C00869",
+                  "constraint_id": "C00865",
                   "atom1": "A:73:CA",
                   "atom2": "A:73:ND2",
                   "upper_bound_angstrom": 7.2,
@@ -919,7 +916,7 @@
                   "source_groups": "AMBER_distance_restraints_1:829"
                 },
                 {
-                  "constraint_id": "C00870",
+                  "constraint_id": "C00866",
                   "atom1": "A:73:CA",
                   "atom2": "A:74:N",
                   "upper_bound_angstrom": 5.1,
@@ -927,7 +924,7 @@
                   "source_groups": "AMBER_distance_restraints_1:834"
                 },
                 {
-                  "constraint_id": "C00871",
+                  "constraint_id": "C00867",
                   "atom1": "A:73:CB",
                   "atom2": "A:73:N",
                   "upper_bound_angstrom": 4.776,
@@ -935,7 +932,7 @@
                   "source_groups": "AMBER_distance_restraints_1:826"
                 },
                 {
-                  "constraint_id": "C00872",
+                  "constraint_id": "C00868",
                   "atom1": "A:73:CB",
                   "atom2": "A:73:ND2",
                   "upper_bound_angstrom": 6.12,
@@ -943,7 +940,7 @@
                   "source_groups": "AMBER_distance_restraints_1:830;AMBER_distance_restraints_1:831"
                 },
                 {
-                  "constraint_id": "C00873",
+                  "constraint_id": "C00869",
                   "atom1": "A:73:CB",
                   "atom2": "A:74:N",
                   "upper_bound_angstrom": 7.8,
@@ -951,7 +948,7 @@
                   "source_groups": "AMBER_distance_restraints_1:835"
                 },
                 {
-                  "constraint_id": "C00874",
+                  "constraint_id": "C00870",
                   "atom1": "A:73:N",
                   "atom2": "A:73:ND2",
                   "upper_bound_angstrom": 7.16,
@@ -959,7 +956,7 @@
                   "source_groups": "AMBER_distance_restraints_1:827"
                 },
                 {
-                  "constraint_id": "C00875",
+                  "constraint_id": "C00871",
                   "atom1": "A:73:N",
                   "atom2": "A:74:CA",
                   "upper_bound_angstrom": 7.8,
@@ -967,7 +964,7 @@
                   "source_groups": "AMBER_distance_restraints_1:833"
                 },
                 {
-                  "constraint_id": "C00876",
+                  "constraint_id": "C00872",
                   "atom1": "A:73:N",
                   "atom2": "A:74:N",
                   "upper_bound_angstrom": 5.0600000000000005,
@@ -975,7 +972,7 @@
                   "source_groups": "AMBER_distance_restraints_1:832"
                 },
                 {
-                  "constraint_id": "C00877",
+                  "constraint_id": "C00873",
                   "atom1": "A:74:CA",
                   "atom2": "A:74:N",
                   "upper_bound_angstrom": 5.448,
@@ -985,39 +982,7 @@
               ],
               "missing_constraint_examples": [
                 {
-                  "constraint_id": "C00128",
-                  "atom1": "A:14:N3",
-                  "atom2": "A:15:N",
-                  "upper_bound_angstrom": 3.08,
-                  "models_resolved": 0,
-                  "source_groups": "AMBER_distance_restraints_3:90"
-                },
-                {
-                  "constraint_id": "C00129",
-                  "atom1": "A:14:N3",
-                  "atom2": "A:15:N1",
-                  "upper_bound_angstrom": 3.0,
-                  "models_resolved": 0,
-                  "source_groups": "AMBER_distance_restraints_3:89"
-                },
-                {
-                  "constraint_id": "C00130",
-                  "atom1": "A:14:N4",
-                  "atom2": "A:15:O6",
-                  "upper_bound_angstrom": 3.0,
-                  "models_resolved": 0,
-                  "source_groups": "AMBER_distance_restraints_3:93"
-                },
-                {
-                  "constraint_id": "C00131",
-                  "atom1": "A:14:O2",
-                  "atom2": "A:15:N2",
-                  "upper_bound_angstrom": 3.0,
-                  "models_resolved": 0,
-                  "source_groups": "AMBER_distance_restraints_3:91"
-                },
-                {
-                  "constraint_id": "C00809",
+                  "constraint_id": "C00805",
                   "atom1": "A:68:CA",
                   "atom2": "A:72:N",
                   "upper_bound_angstrom": 7.2,
@@ -1025,7 +990,7 @@
                   "source_groups": "AMBER_distance_restraints_1:771"
                 },
                 {
-                  "constraint_id": "C00818",
+                  "constraint_id": "C00814",
                   "atom1": "A:69:CA",
                   "atom2": "A:72:CB",
                   "upper_bound_angstrom": 7.2839352117392115,
@@ -1033,7 +998,7 @@
                   "source_groups": "AMBER_distance_restraints_1:783"
                 },
                 {
-                  "constraint_id": "C00819",
+                  "constraint_id": "C00815",
                   "atom1": "A:69:CA",
                   "atom2": "A:72:N",
                   "upper_bound_angstrom": 5.7,
@@ -1041,7 +1006,7 @@
                   "source_groups": "AMBER_distance_restraints_1:782"
                 },
                 {
-                  "constraint_id": "C00820",
+                  "constraint_id": "C00816",
                   "atom1": "A:69:CA",
                   "atom2": "A:73:ND2",
                   "upper_bound_angstrom": 7.2,
@@ -1049,7 +1014,7 @@
                   "source_groups": "AMBER_distance_restraints_1:784"
                 },
                 {
-                  "constraint_id": "C00824",
+                  "constraint_id": "C00820",
                   "atom1": "A:69:CB",
                   "atom2": "A:73:ND2",
                   "upper_bound_angstrom": 7.8,
@@ -1057,7 +1022,7 @@
                   "source_groups": "AMBER_distance_restraints_1:785"
                 },
                 {
-                  "constraint_id": "C00826",
+                  "constraint_id": "C00822",
                   "atom1": "A:69:CG",
                   "atom2": "A:73:ND2",
                   "upper_bound_angstrom": 6.12,
@@ -1065,7 +1030,7 @@
                   "source_groups": "AMBER_distance_restraints_1:786"
                 },
                 {
-                  "constraint_id": "C00832",
+                  "constraint_id": "C00828",
                   "atom1": "A:70:CA",
                   "atom2": "A:73:CB",
                   "upper_bound_angstrom": 6.16,
@@ -1073,7 +1038,7 @@
                   "source_groups": "AMBER_distance_restraints_1:803"
                 },
                 {
-                  "constraint_id": "C00833",
+                  "constraint_id": "C00829",
                   "atom1": "A:70:CA",
                   "atom2": "A:73:N",
                   "upper_bound_angstrom": 5.7,
@@ -1081,7 +1046,7 @@
                   "source_groups": "AMBER_distance_restraints_1:802"
                 },
                 {
-                  "constraint_id": "C00838",
+                  "constraint_id": "C00834",
                   "atom1": "A:70:CB",
                   "atom2": "A:72:N",
                   "upper_bound_angstrom": 7.8,
@@ -1089,7 +1054,7 @@
                   "source_groups": "AMBER_distance_restraints_1:801"
                 },
                 {
-                  "constraint_id": "C00843",
+                  "constraint_id": "C00839",
                   "atom1": "A:71:CA",
                   "atom2": "A:72:CB",
                   "upper_bound_angstrom": 9.445621731056017,
@@ -1097,7 +1062,7 @@
                   "source_groups": "AMBER_distance_restraints_2:130"
                 },
                 {
-                  "constraint_id": "C00844",
+                  "constraint_id": "C00840",
                   "atom1": "A:71:CA",
                   "atom2": "A:72:N",
                   "upper_bound_angstrom": 5.7,
@@ -1105,7 +1070,7 @@
                   "source_groups": "AMBER_distance_restraints_1:811"
                 },
                 {
-                  "constraint_id": "C00845",
+                  "constraint_id": "C00841",
                   "atom1": "A:71:CA",
                   "atom2": "A:73:N",
                   "upper_bound_angstrom": 7.2,
@@ -1113,7 +1078,7 @@
                   "source_groups": "AMBER_distance_restraints_1:816"
                 },
                 {
-                  "constraint_id": "C00846",
+                  "constraint_id": "C00842",
                   "atom1": "A:71:CA",
                   "atom2": "A:74:N",
                   "upper_bound_angstrom": 5.7,
@@ -1121,7 +1086,7 @@
                   "source_groups": "AMBER_distance_restraints_1:817"
                 },
                 {
-                  "constraint_id": "C00849",
+                  "constraint_id": "C00845",
                   "atom1": "A:71:CB",
                   "atom2": "A:72:CA",
                   "upper_bound_angstrom": 7.84,
@@ -1129,7 +1094,7 @@
                   "source_groups": "AMBER_distance_restraints_1:813"
                 },
                 {
-                  "constraint_id": "C00850",
+                  "constraint_id": "C00846",
                   "atom1": "A:71:CB",
                   "atom2": "A:72:N",
                   "upper_bound_angstrom": 5.448,
@@ -1137,7 +1102,7 @@
                   "source_groups": "AMBER_distance_restraints_1:812"
                 },
                 {
-                  "constraint_id": "C00852",
+                  "constraint_id": "C00848",
                   "atom1": "A:71:CG",
                   "atom2": "A:72:N",
                   "upper_bound_angstrom": 7.8,
@@ -1145,7 +1110,7 @@
                   "source_groups": "AMBER_distance_restraints_1:814"
                 },
                 {
-                  "constraint_id": "C00853",
+                  "constraint_id": "C00849",
                   "atom1": "A:71:N",
                   "atom2": "A:72:CB",
                   "upper_bound_angstrom": 9.405621731056016,
@@ -1153,7 +1118,7 @@
                   "source_groups": "AMBER_distance_restraints_2:129"
                 },
                 {
-                  "constraint_id": "C00854",
+                  "constraint_id": "C00850",
                   "atom1": "A:71:N",
                   "atom2": "A:72:N",
                   "upper_bound_angstrom": 5.0600000000000005,
@@ -1161,7 +1126,7 @@
                   "source_groups": "AMBER_distance_restraints_1:810"
                 },
                 {
-                  "constraint_id": "C00855",
+                  "constraint_id": "C00851",
                   "atom1": "A:71:N",
                   "atom2": "A:73:N",
                   "upper_bound_angstrom": 7.16,
@@ -1169,7 +1134,7 @@
                   "source_groups": "AMBER_distance_restraints_1:815"
                 },
                 {
-                  "constraint_id": "C00856",
+                  "constraint_id": "C00852",
                   "atom1": "A:72:CA",
                   "atom2": "A:72:CB",
                   "upper_bound_angstrom": 5.554585996285768,
@@ -1177,7 +1142,7 @@
                   "source_groups": "AMBER_distance_restraints_1:820"
                 },
                 {
-                  "constraint_id": "C00857",
+                  "constraint_id": "C00853",
                   "atom1": "A:72:CA",
                   "atom2": "A:72:N",
                   "upper_bound_angstrom": 5.1,
@@ -1185,7 +1150,7 @@
                   "source_groups": "AMBER_distance_restraints_1:818"
                 },
                 {
-                  "constraint_id": "C00858",
+                  "constraint_id": "C00854",
                   "atom1": "A:72:CA",
                   "atom2": "A:73:N",
                   "upper_bound_angstrom": 5.7,
@@ -1193,7 +1158,7 @@
                   "source_groups": "AMBER_distance_restraints_1:823"
                 },
                 {
-                  "constraint_id": "C00859",
+                  "constraint_id": "C00855",
                   "atom1": "A:72:CB",
                   "atom2": "A:72:N",
                   "upper_bound_angstrom": 6.379260604012489,
@@ -1201,7 +1166,7 @@
                   "source_groups": "AMBER_distance_restraints_1:819"
                 },
                 {
-                  "constraint_id": "C00860",
+                  "constraint_id": "C00856",
                   "atom1": "A:72:CB",
                   "atom2": "A:73:CA",
                   "upper_bound_angstrom": 9.445621731056017,
@@ -1209,7 +1174,7 @@
                   "source_groups": "AMBER_distance_restraints_2:131"
                 },
                 {
-                  "constraint_id": "C00861",
+                  "constraint_id": "C00857",
                   "atom1": "A:72:CB",
                   "atom2": "A:73:CB",
                   "upper_bound_angstrom": 10.310296338782738,
@@ -1217,7 +1182,7 @@
                   "source_groups": "AMBER_distance_restraints_2:132"
                 },
                 {
-                  "constraint_id": "C00862",
+                  "constraint_id": "C00858",
                   "atom1": "A:72:CB",
                   "atom2": "A:73:N",
                   "upper_bound_angstrom": 6.379260604012489,
@@ -1225,7 +1190,7 @@
                   "source_groups": "AMBER_distance_restraints_1:824"
                 },
                 {
-                  "constraint_id": "C00863",
+                  "constraint_id": "C00859",
                   "atom1": "A:72:CB",
                   "atom2": "A:73:ND2",
                   "upper_bound_angstrom": 9.405621731056016,
@@ -1233,7 +1198,7 @@
                   "source_groups": "AMBER_distance_restraints_2:133"
                 },
                 {
-                  "constraint_id": "C00864",
+                  "constraint_id": "C00860",
                   "atom1": "A:72:CB",
                   "atom2": "A:74:N",
                   "upper_bound_angstrom": 9.405621731056016,
@@ -1241,7 +1206,7 @@
                   "source_groups": "AMBER_distance_restraints_2:134"
                 },
                 {
-                  "constraint_id": "C00865",
+                  "constraint_id": "C00861",
                   "atom1": "A:72:N",
                   "atom2": "A:73:N",
                   "upper_bound_angstrom": 5.0600000000000005,
@@ -1249,7 +1214,7 @@
                   "source_groups": "AMBER_distance_restraints_1:821"
                 },
                 {
-                  "constraint_id": "C00866",
+                  "constraint_id": "C00862",
                   "atom1": "A:72:N",
                   "atom2": "A:73:ND2",
                   "upper_bound_angstrom": 7.16,
@@ -1257,7 +1222,7 @@
                   "source_groups": "AMBER_distance_restraints_1:822"
                 },
                 {
-                  "constraint_id": "C00867",
+                  "constraint_id": "C00863",
                   "atom1": "A:73:CA",
                   "atom2": "A:73:CB",
                   "upper_bound_angstrom": 5.488,
@@ -1265,7 +1230,7 @@
                   "source_groups": "AMBER_distance_restraints_1:828"
                 },
                 {
-                  "constraint_id": "C00868",
+                  "constraint_id": "C00864",
                   "atom1": "A:73:CA",
                   "atom2": "A:73:N",
                   "upper_bound_angstrom": 5.1,
@@ -1273,7 +1238,7 @@
                   "source_groups": "AMBER_distance_restraints_1:825"
                 },
                 {
-                  "constraint_id": "C00869",
+                  "constraint_id": "C00865",
                   "atom1": "A:73:CA",
                   "atom2": "A:73:ND2",
                   "upper_bound_angstrom": 7.2,
@@ -1281,7 +1246,7 @@
                   "source_groups": "AMBER_distance_restraints_1:829"
                 },
                 {
-                  "constraint_id": "C00870",
+                  "constraint_id": "C00866",
                   "atom1": "A:73:CA",
                   "atom2": "A:74:N",
                   "upper_bound_angstrom": 5.1,
@@ -1289,7 +1254,7 @@
                   "source_groups": "AMBER_distance_restraints_1:834"
                 },
                 {
-                  "constraint_id": "C00871",
+                  "constraint_id": "C00867",
                   "atom1": "A:73:CB",
                   "atom2": "A:73:N",
                   "upper_bound_angstrom": 4.776,
@@ -1297,7 +1262,7 @@
                   "source_groups": "AMBER_distance_restraints_1:826"
                 },
                 {
-                  "constraint_id": "C00872",
+                  "constraint_id": "C00868",
                   "atom1": "A:73:CB",
                   "atom2": "A:73:ND2",
                   "upper_bound_angstrom": 6.12,
@@ -1305,7 +1270,7 @@
                   "source_groups": "AMBER_distance_restraints_1:830;AMBER_distance_restraints_1:831"
                 },
                 {
-                  "constraint_id": "C00873",
+                  "constraint_id": "C00869",
                   "atom1": "A:73:CB",
                   "atom2": "A:74:N",
                   "upper_bound_angstrom": 7.8,
@@ -1313,7 +1278,7 @@
                   "source_groups": "AMBER_distance_restraints_1:835"
                 },
                 {
-                  "constraint_id": "C00874",
+                  "constraint_id": "C00870",
                   "atom1": "A:73:N",
                   "atom2": "A:73:ND2",
                   "upper_bound_angstrom": 7.16,
@@ -1321,7 +1286,7 @@
                   "source_groups": "AMBER_distance_restraints_1:827"
                 },
                 {
-                  "constraint_id": "C00875",
+                  "constraint_id": "C00871",
                   "atom1": "A:73:N",
                   "atom2": "A:74:CA",
                   "upper_bound_angstrom": 7.8,
@@ -1329,7 +1294,7 @@
                   "source_groups": "AMBER_distance_restraints_1:833"
                 },
                 {
-                  "constraint_id": "C00876",
+                  "constraint_id": "C00872",
                   "atom1": "A:73:N",
                   "atom2": "A:74:N",
                   "upper_bound_angstrom": 5.0600000000000005,
@@ -1337,7 +1302,7 @@
                   "source_groups": "AMBER_distance_restraints_1:832"
                 },
                 {
-                  "constraint_id": "C00877",
+                  "constraint_id": "C00873",
                   "atom1": "A:74:CA",
                   "atom2": "A:74:N",
                   "upper_bound_angstrom": 5.448,
@@ -1362,16 +1327,21 @@
           "has_distance_restraints": true,
           "restraint_groups": 1414,
           "source_alternatives": 3382,
-          "emitted_constraints": 1118,
+          "emitted_constraints": 1114,
           "ambiguous_groups": 165,
-          "rejection_records": 81,
+          "rejection_records": 85,
           "rejection_reasons": {
             "same_heavy_parent_atom": 3,
             "unresolved_atom_topology": 39,
+            "atom_not_present_in_mapped_residue": 4,
             "projected_bound_exceeds_boltz_maximum": 39
           },
           "sequence_records": 138,
           "warnings": [],
+          "atom_topology_validation": {
+            "checked_constraints": 1114,
+            "violation_count": 0
+          },
           "coordinates": {
             "pdb": "benchmark/input/8R1X/8R1X.pdb",
             "model_count": 20,
@@ -1423,47 +1393,15 @@
               "groups_indeterminate_in_every_model": 155
             },
             "heavy_atom_constraints": {
-              "constraint_count": 1118,
+              "constraint_count": 1114,
               "resolved_model_cases": 21460,
               "satisfied_model_cases": 21404,
               "violated_model_cases": 56,
-              "missing_model_cases": 900,
-              "constraints_missing_in_any_model": 45,
+              "missing_model_cases": 820,
+              "constraints_missing_in_any_model": 41,
               "missing_coordinate_contacts": [
                 {
-                  "constraint_id": "C00128",
-                  "atom1": "A:14:N3",
-                  "atom2": "A:15:N",
-                  "upper_bound_angstrom": 3.08,
-                  "models_resolved": 0,
-                  "source_groups": "AMBER_distance_restraints_3:90"
-                },
-                {
-                  "constraint_id": "C00129",
-                  "atom1": "A:14:N3",
-                  "atom2": "A:15:N1",
-                  "upper_bound_angstrom": 3.0,
-                  "models_resolved": 0,
-                  "source_groups": "AMBER_distance_restraints_3:89"
-                },
-                {
-                  "constraint_id": "C00130",
-                  "atom1": "A:14:N4",
-                  "atom2": "A:15:O6",
-                  "upper_bound_angstrom": 3.0,
-                  "models_resolved": 0,
-                  "source_groups": "AMBER_distance_restraints_3:93"
-                },
-                {
-                  "constraint_id": "C00131",
-                  "atom1": "A:14:O2",
-                  "atom2": "A:15:N2",
-                  "upper_bound_angstrom": 3.0,
-                  "models_resolved": 0,
-                  "source_groups": "AMBER_distance_restraints_3:91"
-                },
-                {
-                  "constraint_id": "C00809",
+                  "constraint_id": "C00805",
                   "atom1": "A:68:CA",
                   "atom2": "A:72:N",
                   "upper_bound_angstrom": 7.2,
@@ -1471,7 +1409,7 @@
                   "source_groups": "AMBER_distance_restraints_1:771"
                 },
                 {
-                  "constraint_id": "C00818",
+                  "constraint_id": "C00814",
                   "atom1": "A:69:CA",
                   "atom2": "A:72:CB",
                   "upper_bound_angstrom": 6.44,
@@ -1479,7 +1417,7 @@
                   "source_groups": "AMBER_distance_restraints_1:783"
                 },
                 {
-                  "constraint_id": "C00819",
+                  "constraint_id": "C00815",
                   "atom1": "A:69:CA",
                   "atom2": "A:72:N",
                   "upper_bound_angstrom": 5.7,
@@ -1487,7 +1425,7 @@
                   "source_groups": "AMBER_distance_restraints_1:782"
                 },
                 {
-                  "constraint_id": "C00820",
+                  "constraint_id": "C00816",
                   "atom1": "A:69:CA",
                   "atom2": "A:73:ND2",
                   "upper_bound_angstrom": 7.2,
@@ -1495,7 +1433,7 @@
                   "source_groups": "AMBER_distance_restraints_1:784"
                 },
                 {
-                  "constraint_id": "C00824",
+                  "constraint_id": "C00820",
                   "atom1": "A:69:CB",
                   "atom2": "A:73:ND2",
                   "upper_bound_angstrom": 7.8,
@@ -1503,7 +1441,7 @@
                   "source_groups": "AMBER_distance_restraints_1:785"
                 },
                 {
-                  "constraint_id": "C00826",
+                  "constraint_id": "C00822",
                   "atom1": "A:69:CG",
                   "atom2": "A:73:ND2",
                   "upper_bound_angstrom": 6.12,
@@ -1511,7 +1449,7 @@
                   "source_groups": "AMBER_distance_restraints_1:786"
                 },
                 {
-                  "constraint_id": "C00832",
+                  "constraint_id": "C00828",
                   "atom1": "A:70:CA",
                   "atom2": "A:73:CB",
                   "upper_bound_angstrom": 6.16,
@@ -1519,7 +1457,7 @@
                   "source_groups": "AMBER_distance_restraints_1:803"
                 },
                 {
-                  "constraint_id": "C00833",
+                  "constraint_id": "C00829",
                   "atom1": "A:70:CA",
                   "atom2": "A:73:N",
                   "upper_bound_angstrom": 5.7,
@@ -1527,7 +1465,7 @@
                   "source_groups": "AMBER_distance_restraints_1:802"
                 },
                 {
-                  "constraint_id": "C00838",
+                  "constraint_id": "C00834",
                   "atom1": "A:70:CB",
                   "atom2": "A:72:N",
                   "upper_bound_angstrom": 7.8,
@@ -1535,7 +1473,7 @@
                   "source_groups": "AMBER_distance_restraints_1:801"
                 },
                 {
-                  "constraint_id": "C00843",
+                  "constraint_id": "C00839",
                   "atom1": "A:71:CA",
                   "atom2": "A:72:CB",
                   "upper_bound_angstrom": 8.24,
@@ -1543,7 +1481,7 @@
                   "source_groups": "AMBER_distance_restraints_2:130"
                 },
                 {
-                  "constraint_id": "C00844",
+                  "constraint_id": "C00840",
                   "atom1": "A:71:CA",
                   "atom2": "A:72:N",
                   "upper_bound_angstrom": 5.7,
@@ -1551,7 +1489,7 @@
                   "source_groups": "AMBER_distance_restraints_1:811"
                 },
                 {
-                  "constraint_id": "C00845",
+                  "constraint_id": "C00841",
                   "atom1": "A:71:CA",
                   "atom2": "A:73:N",
                   "upper_bound_angstrom": 7.2,
@@ -1559,7 +1497,7 @@
                   "source_groups": "AMBER_distance_restraints_1:816"
                 },
                 {
-                  "constraint_id": "C00846",
+                  "constraint_id": "C00842",
                   "atom1": "A:71:CA",
                   "atom2": "A:74:N",
                   "upper_bound_angstrom": 5.7,
@@ -1567,7 +1505,7 @@
                   "source_groups": "AMBER_distance_restraints_1:817"
                 },
                 {
-                  "constraint_id": "C00849",
+                  "constraint_id": "C00845",
                   "atom1": "A:71:CB",
                   "atom2": "A:72:CA",
                   "upper_bound_angstrom": 7.84,
@@ -1575,7 +1513,7 @@
                   "source_groups": "AMBER_distance_restraints_1:813"
                 },
                 {
-                  "constraint_id": "C00850",
+                  "constraint_id": "C00846",
                   "atom1": "A:71:CB",
                   "atom2": "A:72:N",
                   "upper_bound_angstrom": 5.448,
@@ -1583,7 +1521,7 @@
                   "source_groups": "AMBER_distance_restraints_1:812"
                 },
                 {
-                  "constraint_id": "C00852",
+                  "constraint_id": "C00848",
                   "atom1": "A:71:CG",
                   "atom2": "A:72:N",
                   "upper_bound_angstrom": 7.8,
@@ -1591,7 +1529,7 @@
                   "source_groups": "AMBER_distance_restraints_1:814"
                 },
                 {
-                  "constraint_id": "C00853",
+                  "constraint_id": "C00849",
                   "atom1": "A:71:N",
                   "atom2": "A:72:CB",
                   "upper_bound_angstrom": 8.2,
@@ -1599,7 +1537,7 @@
                   "source_groups": "AMBER_distance_restraints_2:129"
                 },
                 {
-                  "constraint_id": "C00854",
+                  "constraint_id": "C00850",
                   "atom1": "A:71:N",
                   "atom2": "A:72:N",
                   "upper_bound_angstrom": 5.0600000000000005,
@@ -1607,7 +1545,7 @@
                   "source_groups": "AMBER_distance_restraints_1:810"
                 },
                 {
-                  "constraint_id": "C00855",
+                  "constraint_id": "C00851",
                   "atom1": "A:71:N",
                   "atom2": "A:73:N",
                   "upper_bound_angstrom": 7.16,
@@ -1615,7 +1553,7 @@
                   "source_groups": "AMBER_distance_restraints_1:815"
                 },
                 {
-                  "constraint_id": "C00856",
+                  "constraint_id": "C00852",
                   "atom1": "A:72:CA",
                   "atom2": "A:72:CB",
                   "upper_bound_angstrom": 5.0,
@@ -1623,7 +1561,7 @@
                   "source_groups": "AMBER_distance_restraints_1:820"
                 },
                 {
-                  "constraint_id": "C00857",
+                  "constraint_id": "C00853",
                   "atom1": "A:72:CA",
                   "atom2": "A:72:N",
                   "upper_bound_angstrom": 5.1,
@@ -1631,7 +1569,7 @@
                   "source_groups": "AMBER_distance_restraints_1:818"
                 },
                 {
-                  "constraint_id": "C00858",
+                  "constraint_id": "C00854",
                   "atom1": "A:72:CA",
                   "atom2": "A:73:N",
                   "upper_bound_angstrom": 5.7,
@@ -1639,7 +1577,7 @@
                   "source_groups": "AMBER_distance_restraints_1:823"
                 },
                 {
-                  "constraint_id": "C00859",
+                  "constraint_id": "C00855",
                   "atom1": "A:72:CB",
                   "atom2": "A:72:N",
                   "upper_bound_angstrom": 5.68,
@@ -1647,7 +1585,7 @@
                   "source_groups": "AMBER_distance_restraints_1:819"
                 },
                 {
-                  "constraint_id": "C00860",
+                  "constraint_id": "C00856",
                   "atom1": "A:72:CB",
                   "atom2": "A:73:CA",
                   "upper_bound_angstrom": 8.24,
@@ -1655,7 +1593,7 @@
                   "source_groups": "AMBER_distance_restraints_2:131"
                 },
                 {
-                  "constraint_id": "C00861",
+                  "constraint_id": "C00857",
                   "atom1": "A:72:CB",
                   "atom2": "A:73:CB",
                   "upper_bound_angstrom": 8.96,
@@ -1663,7 +1601,7 @@
                   "source_groups": "AMBER_distance_restraints_2:132"
                 },
                 {
-                  "constraint_id": "C00862",
+                  "constraint_id": "C00858",
                   "atom1": "A:72:CB",
                   "atom2": "A:73:N",
                   "upper_bound_angstrom": 5.68,
@@ -1671,7 +1609,7 @@
                   "source_groups": "AMBER_distance_restraints_1:824"
                 },
                 {
-                  "constraint_id": "C00863",
+                  "constraint_id": "C00859",
                   "atom1": "A:72:CB",
                   "atom2": "A:73:ND2",
                   "upper_bound_angstrom": 8.2,
@@ -1679,7 +1617,7 @@
                   "source_groups": "AMBER_distance_restraints_2:133"
                 },
                 {
-                  "constraint_id": "C00864",
+                  "constraint_id": "C00860",
                   "atom1": "A:72:CB",
                   "atom2": "A:74:N",
                   "upper_bound_angstrom": 8.2,
@@ -1687,7 +1625,7 @@
                   "source_groups": "AMBER_distance_restraints_2:134"
                 },
                 {
-                  "constraint_id": "C00865",
+                  "constraint_id": "C00861",
                   "atom1": "A:72:N",
                   "atom2": "A:73:N",
                   "upper_bound_angstrom": 5.0600000000000005,
@@ -1695,7 +1633,7 @@
                   "source_groups": "AMBER_distance_restraints_1:821"
                 },
                 {
-                  "constraint_id": "C00866",
+                  "constraint_id": "C00862",
                   "atom1": "A:72:N",
                   "atom2": "A:73:ND2",
                   "upper_bound_angstrom": 7.16,
@@ -1703,7 +1641,7 @@
                   "source_groups": "AMBER_distance_restraints_1:822"
                 },
                 {
-                  "constraint_id": "C00867",
+                  "constraint_id": "C00863",
                   "atom1": "A:73:CA",
                   "atom2": "A:73:CB",
                   "upper_bound_angstrom": 5.488,
@@ -1711,7 +1649,7 @@
                   "source_groups": "AMBER_distance_restraints_1:828"
                 },
                 {
-                  "constraint_id": "C00868",
+                  "constraint_id": "C00864",
                   "atom1": "A:73:CA",
                   "atom2": "A:73:N",
                   "upper_bound_angstrom": 5.1,
@@ -1719,7 +1657,7 @@
                   "source_groups": "AMBER_distance_restraints_1:825"
                 },
                 {
-                  "constraint_id": "C00869",
+                  "constraint_id": "C00865",
                   "atom1": "A:73:CA",
                   "atom2": "A:73:ND2",
                   "upper_bound_angstrom": 7.2,
@@ -1727,7 +1665,7 @@
                   "source_groups": "AMBER_distance_restraints_1:829"
                 },
                 {
-                  "constraint_id": "C00870",
+                  "constraint_id": "C00866",
                   "atom1": "A:73:CA",
                   "atom2": "A:74:N",
                   "upper_bound_angstrom": 5.1,
@@ -1735,7 +1673,7 @@
                   "source_groups": "AMBER_distance_restraints_1:834"
                 },
                 {
-                  "constraint_id": "C00871",
+                  "constraint_id": "C00867",
                   "atom1": "A:73:CB",
                   "atom2": "A:73:N",
                   "upper_bound_angstrom": 4.776,
@@ -1743,7 +1681,7 @@
                   "source_groups": "AMBER_distance_restraints_1:826"
                 },
                 {
-                  "constraint_id": "C00872",
+                  "constraint_id": "C00868",
                   "atom1": "A:73:CB",
                   "atom2": "A:73:ND2",
                   "upper_bound_angstrom": 6.12,
@@ -1751,7 +1689,7 @@
                   "source_groups": "AMBER_distance_restraints_1:830;AMBER_distance_restraints_1:831"
                 },
                 {
-                  "constraint_id": "C00873",
+                  "constraint_id": "C00869",
                   "atom1": "A:73:CB",
                   "atom2": "A:74:N",
                   "upper_bound_angstrom": 7.8,
@@ -1759,7 +1697,7 @@
                   "source_groups": "AMBER_distance_restraints_1:835"
                 },
                 {
-                  "constraint_id": "C00874",
+                  "constraint_id": "C00870",
                   "atom1": "A:73:N",
                   "atom2": "A:73:ND2",
                   "upper_bound_angstrom": 7.16,
@@ -1767,7 +1705,7 @@
                   "source_groups": "AMBER_distance_restraints_1:827"
                 },
                 {
-                  "constraint_id": "C00875",
+                  "constraint_id": "C00871",
                   "atom1": "A:73:N",
                   "atom2": "A:74:CA",
                   "upper_bound_angstrom": 7.8,
@@ -1775,7 +1713,7 @@
                   "source_groups": "AMBER_distance_restraints_1:833"
                 },
                 {
-                  "constraint_id": "C00876",
+                  "constraint_id": "C00872",
                   "atom1": "A:73:N",
                   "atom2": "A:74:N",
                   "upper_bound_angstrom": 5.0600000000000005,
@@ -1783,7 +1721,7 @@
                   "source_groups": "AMBER_distance_restraints_1:832"
                 },
                 {
-                  "constraint_id": "C00877",
+                  "constraint_id": "C00873",
                   "atom1": "A:74:CA",
                   "atom2": "A:74:N",
                   "upper_bound_angstrom": 5.448,
@@ -1793,39 +1731,7 @@
               ],
               "missing_constraint_examples": [
                 {
-                  "constraint_id": "C00128",
-                  "atom1": "A:14:N3",
-                  "atom2": "A:15:N",
-                  "upper_bound_angstrom": 3.08,
-                  "models_resolved": 0,
-                  "source_groups": "AMBER_distance_restraints_3:90"
-                },
-                {
-                  "constraint_id": "C00129",
-                  "atom1": "A:14:N3",
-                  "atom2": "A:15:N1",
-                  "upper_bound_angstrom": 3.0,
-                  "models_resolved": 0,
-                  "source_groups": "AMBER_distance_restraints_3:89"
-                },
-                {
-                  "constraint_id": "C00130",
-                  "atom1": "A:14:N4",
-                  "atom2": "A:15:O6",
-                  "upper_bound_angstrom": 3.0,
-                  "models_resolved": 0,
-                  "source_groups": "AMBER_distance_restraints_3:93"
-                },
-                {
-                  "constraint_id": "C00131",
-                  "atom1": "A:14:O2",
-                  "atom2": "A:15:N2",
-                  "upper_bound_angstrom": 3.0,
-                  "models_resolved": 0,
-                  "source_groups": "AMBER_distance_restraints_3:91"
-                },
-                {
-                  "constraint_id": "C00809",
+                  "constraint_id": "C00805",
                   "atom1": "A:68:CA",
                   "atom2": "A:72:N",
                   "upper_bound_angstrom": 7.2,
@@ -1833,7 +1739,7 @@
                   "source_groups": "AMBER_distance_restraints_1:771"
                 },
                 {
-                  "constraint_id": "C00818",
+                  "constraint_id": "C00814",
                   "atom1": "A:69:CA",
                   "atom2": "A:72:CB",
                   "upper_bound_angstrom": 6.44,
@@ -1841,7 +1747,7 @@
                   "source_groups": "AMBER_distance_restraints_1:783"
                 },
                 {
-                  "constraint_id": "C00819",
+                  "constraint_id": "C00815",
                   "atom1": "A:69:CA",
                   "atom2": "A:72:N",
                   "upper_bound_angstrom": 5.7,
@@ -1849,7 +1755,7 @@
                   "source_groups": "AMBER_distance_restraints_1:782"
                 },
                 {
-                  "constraint_id": "C00820",
+                  "constraint_id": "C00816",
                   "atom1": "A:69:CA",
                   "atom2": "A:73:ND2",
                   "upper_bound_angstrom": 7.2,
@@ -1857,7 +1763,7 @@
                   "source_groups": "AMBER_distance_restraints_1:784"
                 },
                 {
-                  "constraint_id": "C00824",
+                  "constraint_id": "C00820",
                   "atom1": "A:69:CB",
                   "atom2": "A:73:ND2",
                   "upper_bound_angstrom": 7.8,
@@ -1865,7 +1771,7 @@
                   "source_groups": "AMBER_distance_restraints_1:785"
                 },
                 {
-                  "constraint_id": "C00826",
+                  "constraint_id": "C00822",
                   "atom1": "A:69:CG",
                   "atom2": "A:73:ND2",
                   "upper_bound_angstrom": 6.12,
@@ -1873,7 +1779,7 @@
                   "source_groups": "AMBER_distance_restraints_1:786"
                 },
                 {
-                  "constraint_id": "C00832",
+                  "constraint_id": "C00828",
                   "atom1": "A:70:CA",
                   "atom2": "A:73:CB",
                   "upper_bound_angstrom": 6.16,
@@ -1881,7 +1787,7 @@
                   "source_groups": "AMBER_distance_restraints_1:803"
                 },
                 {
-                  "constraint_id": "C00833",
+                  "constraint_id": "C00829",
                   "atom1": "A:70:CA",
                   "atom2": "A:73:N",
                   "upper_bound_angstrom": 5.7,
@@ -1889,7 +1795,7 @@
                   "source_groups": "AMBER_distance_restraints_1:802"
                 },
                 {
-                  "constraint_id": "C00838",
+                  "constraint_id": "C00834",
                   "atom1": "A:70:CB",
                   "atom2": "A:72:N",
                   "upper_bound_angstrom": 7.8,
@@ -1897,7 +1803,7 @@
                   "source_groups": "AMBER_distance_restraints_1:801"
                 },
                 {
-                  "constraint_id": "C00843",
+                  "constraint_id": "C00839",
                   "atom1": "A:71:CA",
                   "atom2": "A:72:CB",
                   "upper_bound_angstrom": 8.24,
@@ -1905,7 +1811,7 @@
                   "source_groups": "AMBER_distance_restraints_2:130"
                 },
                 {
-                  "constraint_id": "C00844",
+                  "constraint_id": "C00840",
                   "atom1": "A:71:CA",
                   "atom2": "A:72:N",
                   "upper_bound_angstrom": 5.7,
@@ -1913,7 +1819,7 @@
                   "source_groups": "AMBER_distance_restraints_1:811"
                 },
                 {
-                  "constraint_id": "C00845",
+                  "constraint_id": "C00841",
                   "atom1": "A:71:CA",
                   "atom2": "A:73:N",
                   "upper_bound_angstrom": 7.2,
@@ -1921,7 +1827,7 @@
                   "source_groups": "AMBER_distance_restraints_1:816"
                 },
                 {
-                  "constraint_id": "C00846",
+                  "constraint_id": "C00842",
                   "atom1": "A:71:CA",
                   "atom2": "A:74:N",
                   "upper_bound_angstrom": 5.7,
@@ -1929,7 +1835,7 @@
                   "source_groups": "AMBER_distance_restraints_1:817"
                 },
                 {
-                  "constraint_id": "C00849",
+                  "constraint_id": "C00845",
                   "atom1": "A:71:CB",
                   "atom2": "A:72:CA",
                   "upper_bound_angstrom": 7.84,
@@ -1937,7 +1843,7 @@
                   "source_groups": "AMBER_distance_restraints_1:813"
                 },
                 {
-                  "constraint_id": "C00850",
+                  "constraint_id": "C00846",
                   "atom1": "A:71:CB",
                   "atom2": "A:72:N",
                   "upper_bound_angstrom": 5.448,
@@ -1945,7 +1851,7 @@
                   "source_groups": "AMBER_distance_restraints_1:812"
                 },
                 {
-                  "constraint_id": "C00852",
+                  "constraint_id": "C00848",
                   "atom1": "A:71:CG",
                   "atom2": "A:72:N",
                   "upper_bound_angstrom": 7.8,
@@ -1953,7 +1859,7 @@
                   "source_groups": "AMBER_distance_restraints_1:814"
                 },
                 {
-                  "constraint_id": "C00853",
+                  "constraint_id": "C00849",
                   "atom1": "A:71:N",
                   "atom2": "A:72:CB",
                   "upper_bound_angstrom": 8.2,
@@ -1961,7 +1867,7 @@
                   "source_groups": "AMBER_distance_restraints_2:129"
                 },
                 {
-                  "constraint_id": "C00854",
+                  "constraint_id": "C00850",
                   "atom1": "A:71:N",
                   "atom2": "A:72:N",
                   "upper_bound_angstrom": 5.0600000000000005,
@@ -1969,7 +1875,7 @@
                   "source_groups": "AMBER_distance_restraints_1:810"
                 },
                 {
-                  "constraint_id": "C00855",
+                  "constraint_id": "C00851",
                   "atom1": "A:71:N",
                   "atom2": "A:73:N",
                   "upper_bound_angstrom": 7.16,
@@ -1977,7 +1883,7 @@
                   "source_groups": "AMBER_distance_restraints_1:815"
                 },
                 {
-                  "constraint_id": "C00856",
+                  "constraint_id": "C00852",
                   "atom1": "A:72:CA",
                   "atom2": "A:72:CB",
                   "upper_bound_angstrom": 5.0,
@@ -1985,7 +1891,7 @@
                   "source_groups": "AMBER_distance_restraints_1:820"
                 },
                 {
-                  "constraint_id": "C00857",
+                  "constraint_id": "C00853",
                   "atom1": "A:72:CA",
                   "atom2": "A:72:N",
                   "upper_bound_angstrom": 5.1,
@@ -1993,7 +1899,7 @@
                   "source_groups": "AMBER_distance_restraints_1:818"
                 },
                 {
-                  "constraint_id": "C00858",
+                  "constraint_id": "C00854",
                   "atom1": "A:72:CA",
                   "atom2": "A:73:N",
                   "upper_bound_angstrom": 5.7,
@@ -2001,7 +1907,7 @@
                   "source_groups": "AMBER_distance_restraints_1:823"
                 },
                 {
-                  "constraint_id": "C00859",
+                  "constraint_id": "C00855",
                   "atom1": "A:72:CB",
                   "atom2": "A:72:N",
                   "upper_bound_angstrom": 5.68,
@@ -2009,7 +1915,7 @@
                   "source_groups": "AMBER_distance_restraints_1:819"
                 },
                 {
-                  "constraint_id": "C00860",
+                  "constraint_id": "C00856",
                   "atom1": "A:72:CB",
                   "atom2": "A:73:CA",
                   "upper_bound_angstrom": 8.24,
@@ -2017,7 +1923,7 @@
                   "source_groups": "AMBER_distance_restraints_2:131"
                 },
                 {
-                  "constraint_id": "C00861",
+                  "constraint_id": "C00857",
                   "atom1": "A:72:CB",
                   "atom2": "A:73:CB",
                   "upper_bound_angstrom": 8.96,
@@ -2025,7 +1931,7 @@
                   "source_groups": "AMBER_distance_restraints_2:132"
                 },
                 {
-                  "constraint_id": "C00862",
+                  "constraint_id": "C00858",
                   "atom1": "A:72:CB",
                   "atom2": "A:73:N",
                   "upper_bound_angstrom": 5.68,
@@ -2033,7 +1939,7 @@
                   "source_groups": "AMBER_distance_restraints_1:824"
                 },
                 {
-                  "constraint_id": "C00863",
+                  "constraint_id": "C00859",
                   "atom1": "A:72:CB",
                   "atom2": "A:73:ND2",
                   "upper_bound_angstrom": 8.2,
@@ -2041,7 +1947,7 @@
                   "source_groups": "AMBER_distance_restraints_2:133"
                 },
                 {
-                  "constraint_id": "C00864",
+                  "constraint_id": "C00860",
                   "atom1": "A:72:CB",
                   "atom2": "A:74:N",
                   "upper_bound_angstrom": 8.2,
@@ -2049,7 +1955,7 @@
                   "source_groups": "AMBER_distance_restraints_2:134"
                 },
                 {
-                  "constraint_id": "C00865",
+                  "constraint_id": "C00861",
                   "atom1": "A:72:N",
                   "atom2": "A:73:N",
                   "upper_bound_angstrom": 5.0600000000000005,
@@ -2057,7 +1963,7 @@
                   "source_groups": "AMBER_distance_restraints_1:821"
                 },
                 {
-                  "constraint_id": "C00866",
+                  "constraint_id": "C00862",
                   "atom1": "A:72:N",
                   "atom2": "A:73:ND2",
                   "upper_bound_angstrom": 7.16,
@@ -2065,7 +1971,7 @@
                   "source_groups": "AMBER_distance_restraints_1:822"
                 },
                 {
-                  "constraint_id": "C00867",
+                  "constraint_id": "C00863",
                   "atom1": "A:73:CA",
                   "atom2": "A:73:CB",
                   "upper_bound_angstrom": 5.488,
@@ -2073,7 +1979,7 @@
                   "source_groups": "AMBER_distance_restraints_1:828"
                 },
                 {
-                  "constraint_id": "C00868",
+                  "constraint_id": "C00864",
                   "atom1": "A:73:CA",
                   "atom2": "A:73:N",
                   "upper_bound_angstrom": 5.1,
@@ -2081,7 +1987,7 @@
                   "source_groups": "AMBER_distance_restraints_1:825"
                 },
                 {
-                  "constraint_id": "C00869",
+                  "constraint_id": "C00865",
                   "atom1": "A:73:CA",
                   "atom2": "A:73:ND2",
                   "upper_bound_angstrom": 7.2,
@@ -2089,7 +1995,7 @@
                   "source_groups": "AMBER_distance_restraints_1:829"
                 },
                 {
-                  "constraint_id": "C00870",
+                  "constraint_id": "C00866",
                   "atom1": "A:73:CA",
                   "atom2": "A:74:N",
                   "upper_bound_angstrom": 5.1,
@@ -2097,7 +2003,7 @@
                   "source_groups": "AMBER_distance_restraints_1:834"
                 },
                 {
-                  "constraint_id": "C00871",
+                  "constraint_id": "C00867",
                   "atom1": "A:73:CB",
                   "atom2": "A:73:N",
                   "upper_bound_angstrom": 4.776,
@@ -2105,7 +2011,7 @@
                   "source_groups": "AMBER_distance_restraints_1:826"
                 },
                 {
-                  "constraint_id": "C00872",
+                  "constraint_id": "C00868",
                   "atom1": "A:73:CB",
                   "atom2": "A:73:ND2",
                   "upper_bound_angstrom": 6.12,
@@ -2113,7 +2019,7 @@
                   "source_groups": "AMBER_distance_restraints_1:830;AMBER_distance_restraints_1:831"
                 },
                 {
-                  "constraint_id": "C00873",
+                  "constraint_id": "C00869",
                   "atom1": "A:73:CB",
                   "atom2": "A:74:N",
                   "upper_bound_angstrom": 7.8,
@@ -2121,7 +2027,7 @@
                   "source_groups": "AMBER_distance_restraints_1:835"
                 },
                 {
-                  "constraint_id": "C00874",
+                  "constraint_id": "C00870",
                   "atom1": "A:73:N",
                   "atom2": "A:73:ND2",
                   "upper_bound_angstrom": 7.16,
@@ -2129,7 +2035,7 @@
                   "source_groups": "AMBER_distance_restraints_1:827"
                 },
                 {
-                  "constraint_id": "C00875",
+                  "constraint_id": "C00871",
                   "atom1": "A:73:N",
                   "atom2": "A:74:CA",
                   "upper_bound_angstrom": 7.8,
@@ -2137,7 +2043,7 @@
                   "source_groups": "AMBER_distance_restraints_1:833"
                 },
                 {
-                  "constraint_id": "C00876",
+                  "constraint_id": "C00872",
                   "atom1": "A:73:N",
                   "atom2": "A:74:N",
                   "upper_bound_angstrom": 5.0600000000000005,
@@ -2145,7 +2051,7 @@
                   "source_groups": "AMBER_distance_restraints_1:832"
                 },
                 {
-                  "constraint_id": "C00877",
+                  "constraint_id": "C00873",
                   "atom1": "A:74:CA",
                   "atom2": "A:74:N",
                   "upper_bound_angstrom": 5.448,
@@ -2167,9 +2073,9 @@
         }
       },
       "format_parity": {
-        "nef_constraints": 1118,
-        "star_constraints": 1118,
-        "common_atom_pairs": 1118,
+        "nef_constraints": 1114,
+        "star_constraints": 1114,
+        "common_atom_pairs": 1114,
         "nef_only_atom_pairs": 0,
         "star_only_atom_pairs": 0,
         "common_pairs_with_different_bounds": 160,
@@ -2210,6 +2116,10 @@
             "No _nef_distance_restraint loop was found; producing an empty distance-constraint conversion.",
             "No nef_distance_restraint rows matched the selected origin filter."
           ],
+          "atom_topology_validation": {
+            "checked_constraints": 0,
+            "violation_count": 0
+          },
           "coordinates": {
             "pdb": "benchmark/input/8S8O/8S8O.pdb",
             "model_count": 20,
@@ -2291,6 +2201,10 @@
             "No _Gen_dist_constraint loop was found; producing an empty distance-constraint conversion.",
             "No gen_dist_constraint rows matched the selected origin filter."
           ],
+          "atom_topology_validation": {
+            "checked_constraints": 0,
+            "violation_count": 0
+          },
           "coordinates": {
             "pdb": "benchmark/input/8S8O/8S8O.pdb",
             "model_count": 20,
@@ -2388,17 +2302,22 @@
           "has_distance_restraints": true,
           "restraint_groups": 7065,
           "source_alternatives": 18740,
-          "emitted_constraints": 3358,
+          "emitted_constraints": 3350,
           "ambiguous_groups": 292,
-          "rejection_records": 2156,
+          "rejection_records": 2164,
           "rejection_reasons": {
             "unresolved_atom_topology": 317,
             "same_heavy_parent_atom": 250,
             "partially_unprojectable_or_group": 5,
-            "complex_restraint_combination_logic": 1584
+            "complex_restraint_combination_logic": 1584,
+            "atom_not_present_in_mapped_residue": 8
           },
           "sequence_records": 162,
           "warnings": [],
+          "atom_topology_validation": {
+            "checked_constraints": 3350,
+            "violation_count": 0
+          },
           "coordinates": {
             "pdb": "benchmark/input/9CCH/9CCH.pdb",
             "model_count": 20,
@@ -2450,144 +2369,14 @@
               "groups_indeterminate_in_every_model": 163
             },
             "heavy_atom_constraints": {
-              "constraint_count": 3358,
+              "constraint_count": 3350,
               "resolved_model_cases": 67000,
               "satisfied_model_cases": 66987,
               "violated_model_cases": 13,
-              "missing_model_cases": 160,
-              "constraints_missing_in_any_model": 8,
-              "missing_coordinate_contacts": [
-                {
-                  "constraint_id": "C01393",
-                  "atom1": "B:12:CB",
-                  "atom2": "B:48:ZN",
-                  "upper_bound_angstrom": 3.4,
-                  "models_resolved": 0,
-                  "source_groups": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_3:14"
-                },
-                {
-                  "constraint_id": "C01403",
-                  "atom1": "B:12:SG",
-                  "atom2": "B:48:ZN",
-                  "upper_bound_angstrom": 2.36,
-                  "models_resolved": 0,
-                  "source_groups": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_3:2"
-                },
-                {
-                  "constraint_id": "C01474",
-                  "atom1": "B:15:CB",
-                  "atom2": "B:48:ZN",
-                  "upper_bound_angstrom": 3.4,
-                  "models_resolved": 0,
-                  "source_groups": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_3:17"
-                },
-                {
-                  "constraint_id": "C01480",
-                  "atom1": "B:15:SG",
-                  "atom2": "B:48:ZN",
-                  "upper_bound_angstrom": 2.36,
-                  "models_resolved": 0,
-                  "source_groups": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_3:5"
-                },
-                {
-                  "constraint_id": "C01693",
-                  "atom1": "B:26:CB",
-                  "atom2": "B:48:ZN",
-                  "upper_bound_angstrom": 3.4,
-                  "models_resolved": 0,
-                  "source_groups": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_3:20"
-                },
-                {
-                  "constraint_id": "C01697",
-                  "atom1": "B:26:SG",
-                  "atom2": "B:48:ZN",
-                  "upper_bound_angstrom": 2.36,
-                  "models_resolved": 0,
-                  "source_groups": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_3:8"
-                },
-                {
-                  "constraint_id": "C01747",
-                  "atom1": "B:29:CB",
-                  "atom2": "B:48:ZN",
-                  "upper_bound_angstrom": 3.4,
-                  "models_resolved": 0,
-                  "source_groups": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_3:23"
-                },
-                {
-                  "constraint_id": "C01749",
-                  "atom1": "B:29:SG",
-                  "atom2": "B:48:ZN",
-                  "upper_bound_angstrom": 2.36,
-                  "models_resolved": 0,
-                  "source_groups": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_3:11"
-                }
-              ],
-              "missing_constraint_examples": [
-                {
-                  "constraint_id": "C01393",
-                  "atom1": "B:12:CB",
-                  "atom2": "B:48:ZN",
-                  "upper_bound_angstrom": 3.4,
-                  "models_resolved": 0,
-                  "source_groups": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_3:14"
-                },
-                {
-                  "constraint_id": "C01403",
-                  "atom1": "B:12:SG",
-                  "atom2": "B:48:ZN",
-                  "upper_bound_angstrom": 2.36,
-                  "models_resolved": 0,
-                  "source_groups": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_3:2"
-                },
-                {
-                  "constraint_id": "C01474",
-                  "atom1": "B:15:CB",
-                  "atom2": "B:48:ZN",
-                  "upper_bound_angstrom": 3.4,
-                  "models_resolved": 0,
-                  "source_groups": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_3:17"
-                },
-                {
-                  "constraint_id": "C01480",
-                  "atom1": "B:15:SG",
-                  "atom2": "B:48:ZN",
-                  "upper_bound_angstrom": 2.36,
-                  "models_resolved": 0,
-                  "source_groups": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_3:5"
-                },
-                {
-                  "constraint_id": "C01693",
-                  "atom1": "B:26:CB",
-                  "atom2": "B:48:ZN",
-                  "upper_bound_angstrom": 3.4,
-                  "models_resolved": 0,
-                  "source_groups": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_3:20"
-                },
-                {
-                  "constraint_id": "C01697",
-                  "atom1": "B:26:SG",
-                  "atom2": "B:48:ZN",
-                  "upper_bound_angstrom": 2.36,
-                  "models_resolved": 0,
-                  "source_groups": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_3:8"
-                },
-                {
-                  "constraint_id": "C01747",
-                  "atom1": "B:29:CB",
-                  "atom2": "B:48:ZN",
-                  "upper_bound_angstrom": 3.4,
-                  "models_resolved": 0,
-                  "source_groups": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_3:23"
-                },
-                {
-                  "constraint_id": "C01749",
-                  "atom1": "B:29:SG",
-                  "atom2": "B:48:ZN",
-                  "upper_bound_angstrom": 2.36,
-                  "models_resolved": 0,
-                  "source_groups": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_3:11"
-                }
-              ],
+              "missing_model_cases": 0,
+              "constraints_missing_in_any_model": 0,
+              "missing_coordinate_contacts": [],
+              "missing_constraint_examples": [],
               "satisfaction_fraction_of_resolved": 0.9998059701492538,
               "constraints_resolved_in_every_model": 3350,
               "constraints_satisfied_in_any_model": 3350,
@@ -2605,13 +2394,14 @@
           "has_distance_restraints": true,
           "restraint_groups": 7065,
           "source_alternatives": 8981,
-          "emitted_constraints": 3524,
+          "emitted_constraints": 3516,
           "ambiguous_groups": 75,
-          "rejection_records": 1782,
+          "rejection_records": 1790,
           "rejection_reasons": {
             "unresolved_atom_topology": 138,
             "same_heavy_parent_atom": 60,
-            "complex_restraint_combination_logic": 1584
+            "complex_restraint_combination_logic": 1584,
+            "atom_not_present_in_mapped_residue": 8
           },
           "sequence_records": 162,
           "warnings": [
@@ -2619,6 +2409,10 @@
             "NMR-STAR component indices for chain B were not contiguous 1..N; Boltz indices use sequence-loop order",
             "NMR-STAR component indices for chain C were not contiguous 1..N; Boltz indices use sequence-loop order"
           ],
+          "atom_topology_validation": {
+            "checked_constraints": 3516,
+            "violation_count": 0
+          },
           "coordinates": {
             "pdb": "benchmark/input/9CCH/9CCH.pdb",
             "model_count": 20,
@@ -2670,144 +2464,14 @@
               "groups_indeterminate_in_every_model": 162
             },
             "heavy_atom_constraints": {
-              "constraint_count": 3524,
+              "constraint_count": 3516,
               "resolved_model_cases": 70320,
               "satisfied_model_cases": 70320,
               "violated_model_cases": 0,
-              "missing_model_cases": 160,
-              "constraints_missing_in_any_model": 8,
-              "missing_coordinate_contacts": [
-                {
-                  "constraint_id": "C01559",
-                  "atom1": "B:12:CB",
-                  "atom2": "B:48:ZN*",
-                  "upper_bound_angstrom": 3.4,
-                  "models_resolved": 0,
-                  "source_groups": "XPLOR-NIH_distance_restraints_3:14"
-                },
-                {
-                  "constraint_id": "C01569",
-                  "atom1": "B:12:SG",
-                  "atom2": "B:48:ZN*",
-                  "upper_bound_angstrom": 2.36,
-                  "models_resolved": 0,
-                  "source_groups": "XPLOR-NIH_distance_restraints_3:2"
-                },
-                {
-                  "constraint_id": "C01640",
-                  "atom1": "B:15:CB",
-                  "atom2": "B:48:ZN*",
-                  "upper_bound_angstrom": 3.4,
-                  "models_resolved": 0,
-                  "source_groups": "XPLOR-NIH_distance_restraints_3:17"
-                },
-                {
-                  "constraint_id": "C01646",
-                  "atom1": "B:15:SG",
-                  "atom2": "B:48:ZN*",
-                  "upper_bound_angstrom": 2.36,
-                  "models_resolved": 0,
-                  "source_groups": "XPLOR-NIH_distance_restraints_3:5"
-                },
-                {
-                  "constraint_id": "C01859",
-                  "atom1": "B:26:CB",
-                  "atom2": "B:48:ZN*",
-                  "upper_bound_angstrom": 3.4,
-                  "models_resolved": 0,
-                  "source_groups": "XPLOR-NIH_distance_restraints_3:20"
-                },
-                {
-                  "constraint_id": "C01863",
-                  "atom1": "B:26:SG",
-                  "atom2": "B:48:ZN*",
-                  "upper_bound_angstrom": 2.36,
-                  "models_resolved": 0,
-                  "source_groups": "XPLOR-NIH_distance_restraints_3:8"
-                },
-                {
-                  "constraint_id": "C01913",
-                  "atom1": "B:29:CB",
-                  "atom2": "B:48:ZN*",
-                  "upper_bound_angstrom": 3.4,
-                  "models_resolved": 0,
-                  "source_groups": "XPLOR-NIH_distance_restraints_3:23"
-                },
-                {
-                  "constraint_id": "C01915",
-                  "atom1": "B:29:SG",
-                  "atom2": "B:48:ZN*",
-                  "upper_bound_angstrom": 2.36,
-                  "models_resolved": 0,
-                  "source_groups": "XPLOR-NIH_distance_restraints_3:11"
-                }
-              ],
-              "missing_constraint_examples": [
-                {
-                  "constraint_id": "C01559",
-                  "atom1": "B:12:CB",
-                  "atom2": "B:48:ZN*",
-                  "upper_bound_angstrom": 3.4,
-                  "models_resolved": 0,
-                  "source_groups": "XPLOR-NIH_distance_restraints_3:14"
-                },
-                {
-                  "constraint_id": "C01569",
-                  "atom1": "B:12:SG",
-                  "atom2": "B:48:ZN*",
-                  "upper_bound_angstrom": 2.36,
-                  "models_resolved": 0,
-                  "source_groups": "XPLOR-NIH_distance_restraints_3:2"
-                },
-                {
-                  "constraint_id": "C01640",
-                  "atom1": "B:15:CB",
-                  "atom2": "B:48:ZN*",
-                  "upper_bound_angstrom": 3.4,
-                  "models_resolved": 0,
-                  "source_groups": "XPLOR-NIH_distance_restraints_3:17"
-                },
-                {
-                  "constraint_id": "C01646",
-                  "atom1": "B:15:SG",
-                  "atom2": "B:48:ZN*",
-                  "upper_bound_angstrom": 2.36,
-                  "models_resolved": 0,
-                  "source_groups": "XPLOR-NIH_distance_restraints_3:5"
-                },
-                {
-                  "constraint_id": "C01859",
-                  "atom1": "B:26:CB",
-                  "atom2": "B:48:ZN*",
-                  "upper_bound_angstrom": 3.4,
-                  "models_resolved": 0,
-                  "source_groups": "XPLOR-NIH_distance_restraints_3:20"
-                },
-                {
-                  "constraint_id": "C01863",
-                  "atom1": "B:26:SG",
-                  "atom2": "B:48:ZN*",
-                  "upper_bound_angstrom": 2.36,
-                  "models_resolved": 0,
-                  "source_groups": "XPLOR-NIH_distance_restraints_3:8"
-                },
-                {
-                  "constraint_id": "C01913",
-                  "atom1": "B:29:CB",
-                  "atom2": "B:48:ZN*",
-                  "upper_bound_angstrom": 3.4,
-                  "models_resolved": 0,
-                  "source_groups": "XPLOR-NIH_distance_restraints_3:23"
-                },
-                {
-                  "constraint_id": "C01915",
-                  "atom1": "B:29:SG",
-                  "atom2": "B:48:ZN*",
-                  "upper_bound_angstrom": 2.36,
-                  "models_resolved": 0,
-                  "source_groups": "XPLOR-NIH_distance_restraints_3:11"
-                }
-              ],
+              "missing_model_cases": 0,
+              "constraints_missing_in_any_model": 0,
+              "missing_coordinate_contacts": [],
+              "missing_constraint_examples": [],
               "satisfaction_fraction_of_resolved": 1.0,
               "constraints_resolved_in_every_model": 3516,
               "constraints_satisfied_in_any_model": 3516,
@@ -2822,29 +2486,27 @@
         }
       },
       "format_parity": {
-        "nef_constraints": 3358,
-        "star_constraints": 3524,
+        "nef_constraints": 3350,
+        "star_constraints": 3516,
         "common_atom_pairs": 3350,
-        "nef_only_atom_pairs": 8,
-        "star_only_atom_pairs": 174,
+        "nef_only_atom_pairs": 0,
+        "star_only_atom_pairs": 166,
         "common_pairs_with_different_bounds": 1754,
         "maximum_common_bound_delta_angstrom": 2.786172292936673,
         "exact_pair_and_bound_parity": false
       },
       "discrepancy_audit": {
-        "row_count": 1936,
-        "digest_sha256": "55e8684a359dd5d629044b61b5b4fcac0cf142198553303800f78763a7bbfd56",
+        "row_count": 1920,
+        "digest_sha256": "6c3cd01472a8fca4afaebfd35a53a348c9e2b1e2e07f94a350ad376b3499c21c",
         "discrepancy_type_counts": {
-          "star_only": 174,
-          "different_bound": 1754,
-          "nef_only": 8
+          "star_only": 166,
+          "different_bound": 1754
         },
         "classification_counts": {
-          "expected_format_difference": 1920,
-          "deposition_inconsistency": 16
+          "expected_format_difference": 1920
         },
         "case_counts": {
-          "9CCH": 1936
+          "9CCH": 1920
         },
         "unresolved_count": 0,
         "parser_projection_bug_count": 0
@@ -2869,6 +2531,10 @@
           },
           "sequence_records": 74,
           "warnings": [],
+          "atom_topology_validation": {
+            "checked_constraints": 456,
+            "violation_count": 0
+          },
           "coordinates": {
             "pdb": "benchmark/input/9D99/9D99.pdb",
             "model_count": 10,
@@ -2944,6 +2610,10 @@
           },
           "sequence_records": 74,
           "warnings": [],
+          "atom_topology_validation": {
+            "checked_constraints": 456,
+            "violation_count": 0
+          },
           "coordinates": {
             "pdb": "benchmark/input/9D99/9D99.pdb",
             "model_count": 10,
@@ -3040,6 +2710,10 @@
           "rejection_reasons": {},
           "sequence_records": 24,
           "warnings": [],
+          "atom_topology_validation": {
+            "checked_constraints": 406,
+            "violation_count": 0
+          },
           "coordinates": {
             "pdb": "benchmark/input/9KG4/9KG4.pdb",
             "model_count": 15,
@@ -3099,6 +2773,10 @@
           "rejection_reasons": {},
           "sequence_records": 24,
           "warnings": [],
+          "atom_topology_validation": {
+            "checked_constraints": 406,
+            "violation_count": 0
+          },
           "coordinates": {
             "pdb": "benchmark/input/9KG4/9KG4.pdb",
             "model_count": 15,
@@ -3185,6 +2863,10 @@
           },
           "sequence_records": 170,
           "warnings": [],
+          "atom_topology_validation": {
+            "checked_constraints": 3,
+            "violation_count": 0
+          },
           "coordinates": {
             "pdb": "benchmark/input/9PQH/9PQH.pdb",
             "model_count": 10,
@@ -3258,6 +2940,10 @@
           "warnings": [
             "NMR-STAR component indices for chain A were not contiguous 1..N; Boltz indices use sequence-loop order"
           ],
+          "atom_topology_validation": {
+            "checked_constraints": 44,
+            "violation_count": 0
+          },
           "coordinates": {
             "pdb": "benchmark/input/9PQH/9PQH.pdb",
             "model_count": 10,
@@ -3362,6 +3048,10 @@
           "rejection_reasons": {},
           "sequence_records": 124,
           "warnings": [],
+          "atom_topology_validation": {
+            "checked_constraints": 1578,
+            "violation_count": 0
+          },
           "coordinates": {
             "pdb": "benchmark/input/9SGX/9SGX.pdb",
             "model_count": 20,
@@ -3435,6 +3125,10 @@
           },
           "sequence_records": 124,
           "warnings": [],
+          "atom_topology_validation": {
+            "checked_constraints": 765,
+            "violation_count": 0
+          },
           "coordinates": {
             "pdb": "benchmark/input/9SGX/9SGX.pdb",
             "model_count": 20,
@@ -3537,6 +3231,10 @@
           "rejection_reasons": {},
           "sequence_records": 98,
           "warnings": [],
+          "atom_topology_validation": {
+            "checked_constraints": 53,
+            "violation_count": 0
+          },
           "coordinates": {
             "pdb": "benchmark/input/9VQ1/9VQ1.pdb",
             "model_count": 20,
@@ -3607,6 +3305,10 @@
           "rejection_reasons": {},
           "sequence_records": 98,
           "warnings": [],
+          "atom_topology_validation": {
+            "checked_constraints": 56,
+            "violation_count": 0
+          },
           "coordinates": {
             "pdb": "benchmark/input/9VQ1/9VQ1.pdb",
             "model_count": 20,
@@ -3679,7 +3381,7 @@
       },
       "discrepancy_audit": {
         "row_count": 3,
-        "digest_sha256": "dda44bb9dae772c6ac84bbe7661829a16d24da4b6974390ee32e78803f866332",
+        "digest_sha256": "1df12ec932dd3637f5bedbf679fe01e6026f52ece77eab6157c0545177df81b7",
         "discrepancy_type_counts": {
           "star_only": 3
         },
@@ -3710,6 +3412,10 @@
           },
           "sequence_records": 133,
           "warnings": [],
+          "atom_topology_validation": {
+            "checked_constraints": 1327,
+            "violation_count": 0
+          },
           "coordinates": {
             "pdb": "benchmark/input/9VUY/9VUY.pdb",
             "model_count": 20,
@@ -3784,6 +3490,10 @@
           },
           "sequence_records": 133,
           "warnings": [],
+          "atom_topology_validation": {
+            "checked_constraints": 703,
+            "violation_count": 0
+          },
           "coordinates": {
             "pdb": "benchmark/input/9VUY/9VUY.pdb",
             "model_count": 20,

@@ -6962,11 +6962,6 @@ constraints:
     max_distance: 6.94
     force: true
 - atom_contact:
-    atom1: [B, 12, CB]
-    atom2: [B, 48, ZN]
-    max_distance: 3.4
-    force: true
-- atom_contact:
     atom1: [B, 12, N]
     atom2: [B, 14, N]
     max_distance: 8.46
@@ -7010,11 +7005,6 @@ constraints:
     atom1: [B, 12, N]
     atom2: [B, 35, N]
     max_distance: 6.86
-    force: true
-- atom_contact:
-    atom1: [B, 12, SG]
-    atom2: [B, 48, ZN]
-    max_distance: 2.36
     force: true
 - atom_contact:
     atom1: [B, 13, CA]
@@ -7367,11 +7357,6 @@ constraints:
     max_distance: 8.5
     force: true
 - atom_contact:
-    atom1: [B, 15, CB]
-    atom2: [B, 48, ZN]
-    max_distance: 3.4
-    force: true
-- atom_contact:
     atom1: [B, 15, N]
     atom2: [B, 16, CG]
     max_distance: 8.5
@@ -7395,11 +7380,6 @@ constraints:
     atom1: [B, 15, N]
     atom2: [B, 21, CD1]
     max_distance: 6.9
-    force: true
-- atom_contact:
-    atom1: [B, 15, SG]
-    atom2: [B, 48, ZN]
-    max_distance: 2.36
     force: true
 - atom_contact:
     atom1: [B, 16, CA]
@@ -8462,11 +8442,6 @@ constraints:
     max_distance: 8.54
     force: true
 - atom_contact:
-    atom1: [B, 26, CB]
-    atom2: [B, 48, ZN]
-    max_distance: 3.4
-    force: true
-- atom_contact:
     atom1: [B, 26, N]
     atom2: [B, 27, CD]
     max_distance: 6.9
@@ -8480,11 +8455,6 @@ constraints:
     atom1: [B, 26, N]
     atom2: [B, 31, N]
     max_distance: 8.46
-    force: true
-- atom_contact:
-    atom1: [B, 26, SG]
-    atom2: [B, 48, ZN]
-    max_distance: 2.36
     force: true
 - atom_contact:
     atom1: [B, 27, CA]
@@ -8732,19 +8702,9 @@ constraints:
     max_distance: 8.5
     force: true
 - atom_contact:
-    atom1: [B, 29, CB]
-    atom2: [B, 48, ZN]
-    max_distance: 3.4
-    force: true
-- atom_contact:
     atom1: [B, 29, N]
     atom2: [B, 35, CG2]
     max_distance: 6.9
-    force: true
-- atom_contact:
-    atom1: [B, 29, SG]
-    atom2: [B, 48, ZN]
-    max_distance: 2.36
     force: true
 - atom_contact:
     atom1: [B, 30, CA]

@@ -300,6 +300,10 @@ def _gate_run(missing_contacts: list[dict]) -> dict:
             "emitted_constraints": 1,
             "ambiguous_groups": 0,
             "rejection_reasons": {},
+            "atom_topology_validation": {
+                "checked_constraints": 1,
+                "violation_count": 0,
+            },
             "coordinates": {
                 "heavy_atom_constraints": {
                     "resolved_model_cases": 0,
@@ -420,12 +424,18 @@ def test_gate_remains_fail_closed_for_every_scientific_failure(tmp_path):
     changed_metric = copy.deepcopy(run)
     changed_metric["cases"][0]["formats"]["nef"]["emitted_constraints"] = 2
 
+    topology_violation = copy.deepcopy(run)
+    topology_violation["cases"][0]["formats"]["nef"]["atom_topology_validation"][
+        "violation_count"
+    ] = 1
+
     expected = (
         (implication, "projection_implication_failure"),
         (unresolved, "unresolved_format_discrepancy"),
         (parser_bug, "parser_projection_bug"),
         (changed_audit, "unreviewed_discrepancy_change"),
         (changed_metric, "unreviewed_metric_change"),
+        (topology_violation, "emitted_atom_topology_violation"),
     )
     for changed_run, reason in expected:
         gate = _evaluate_gate(changed_run, baseline)

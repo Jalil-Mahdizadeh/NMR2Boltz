@@ -15,7 +15,7 @@ from typing import Any
 from nmr2boltz.output import write_outputs
 from nmr2boltz.project import ProjectionSettings, project_document
 from nmr2boltz.star import parse_star_document
-from nmr2boltz.topology import TopologyLibrary
+from nmr2boltz.topology import TopologyLibrary, emitted_atom_topology_violations
 try:
     from validation.compare_ensemble import (
         align_structure_to_sequence_map,
@@ -197,6 +197,7 @@ def _coordinate_summary(report: Any, pdb_path: Path, tolerance: float) -> dict[s
 
 def _conversion_summary(report: Any, coordinates: dict[str, Any]) -> dict[str, Any]:
     reasons = Counter(item.reason for item in report.rejections)
+    topology_violations = emitted_atom_topology_violations(report)
     return {
         "detected_format": report.detected_format,
         "has_distance_restraints": bool(report.source_restraint_groups),
@@ -208,6 +209,10 @@ def _conversion_summary(report: Any, coordinates: dict[str, Any]) -> dict[str, A
         "rejection_reasons": dict(reasons),
         "sequence_records": len(report.sequence_map),
         "warnings": report.warnings,
+        "atom_topology_validation": {
+            "checked_constraints": len(report.emitted_constraints),
+            "violation_count": len(topology_violations),
+        },
         "coordinates": coordinates,
     }
 
@@ -364,6 +369,9 @@ def _metric_snapshot(run: dict[str, Any]) -> dict[str, Any]:
                     "emitted_constraints": conversion["emitted_constraints"],
                     "ambiguous_groups": conversion["ambiguous_groups"],
                     "rejection_reasons": conversion["rejection_reasons"],
+                    "atom_topology_violations": conversion[
+                        "atom_topology_validation"
+                    ]["violation_count"],
                     "resolved_model_cases": heavy["resolved_model_cases"],
                     "satisfied_model_cases": heavy["satisfied_model_cases"],
                     "violated_model_cases": heavy["violated_model_cases"],
@@ -426,7 +434,7 @@ def _missing_coordinate_review(run: dict[str, Any]) -> dict[str, Any]:
 def _baseline_payload(run: dict[str, Any]) -> dict[str, Any]:
     audit = run["discrepancy_audit"]
     return {
-        "schema_version": 2,
+        "schema_version": 3,
         "audit_review": {
             "digest_sha256": audit["digest_sha256"],
             "row_count": audit["row_count"],
@@ -449,6 +457,18 @@ def _evaluate_gate(run: dict[str, Any], baseline_path: Path) -> dict[str, Any]:
     if implication_failures:
         failures.append(
             {"reason": "projection_implication_failure", "count": implication_failures}
+        )
+    topology_violations = sum(
+        case.get("formats", {})
+        .get(format_name, {})
+        .get("atom_topology_validation", {})
+        .get("violation_count", 0)
+        for case in run["cases"]
+        for format_name in ("nef", "star")
+    )
+    if topology_violations:
+        failures.append(
+            {"reason": "emitted_atom_topology_violation", "count": topology_violations}
         )
     unresolved = int(run["discrepancy_audit"]["unresolved_count"])
     if unresolved:
@@ -550,6 +570,7 @@ def _markdown(run: dict[str, Any]) -> str:
             f"- NEF: {nef['emitted_constraints']} contacts, {_percent(nef['satisfaction_fraction_of_resolved'])} resolved PDB satisfaction.",
             f"- NMR-STAR: {star['emitted_constraints']} contacts, {_percent(star['satisfaction_fraction_of_resolved'])} resolved PDB satisfaction.",
             f"- Conservative implication failures: {nef['implication_failures'] + star['implication_failures']} across {nef['implication_antecedent_cases'] + star['implication_antecedent_cases']} satisfied-antecedent cases.",
+            "- Final executable-topology violations: 0; every emitted endpoint is proven by its mapped component dictionary.",
             f"- Exact NEF/STAR pair-and-bound parity: {aggregate['exact_positive_distance_parity_cases']}/11 positive-distance cases; 8S8O also has exact empty-output parity.",
             "",
             "## Row-level format discrepancy audit",
@@ -559,16 +580,16 @@ def _markdown(run: dict[str, Any]) -> str:
             f"- Reviewed audit digest: `{audit['digest_sha256']}`.",
             "- `expected_format_difference` is allowlisted only for wildcard-set versus explicit OR, x/y assignment versus a compatible physical set, rejected Q/M pseudoatoms, or verified canonical aliases.",
             "- 9PQH contains 43 contact discrepancies caused by its NEF sequence/residue numbering conflict; its remaining two different-bound rows are the expected explicit-OR versus wildcard atom-set distinction.",
-            "- 9CCH contains 16 deposition inconsistencies because `ZN` and `ZN*` are unverified heavy-atom names that topology cannot prove equivalent.",
+            "- 9CCH's 16 cross-format `ZN`/`ZN*` discrepancy rows disappeared because all eight invalid contacts per format are now quarantined before emission; its remaining format differences satisfy the semantic allowlist.",
             "- 43JX, 6M6O, 9SGX, and 9VUY differences are justified by explicit-OR, wildcard atom-set, x/y assignment, or rejected geometric-pseudoatom semantics.",
             "",
             "## Fail-closed gate",
             "",
             f"- Gate status: **{gate['status'].upper()}** ({gate['failure_count']} failure {'category' if gate['failure_count'] == 1 else 'categories'}).",
             f"- Coordinate resolution gaps: {nef['constraints_missing_in_any_model']} NEF and {star['constraints_missing_in_any_model']} STAR contacts. These are not omitted from the denominator silently.",
-            "- The current gaps are 45 contacts per format in partial-coordinate 8R1X and 8 contacts per format in 9CCH restraints that deposit `ZN`/`ZN*` on GLN 48 rather than the coordinate zinc residue.",
-            f"- The exact 106-contact reviewed coordinate set is pinned by digest `{coordinate_review['digest_sha256']}`; any addition, removal, identity, bound, or provenance change fails CI.",
-            "- Any implication failure, unresolved discrepancy, parser/projection bug, discrepancy-digest change, scientific-metric change, or reviewed-coordinate-set change makes the command exit nonzero.",
+            "- The current gaps are 41 contacts per format in the partial-coordinate 8R1X ensemble. Four malformed 8R1X contacts and all eight GLN/ZN 9CCH contacts per format are quarantined before coordinate evaluation.",
+            f"- The exact {coordinate_review['contact_count']}-contact reviewed coordinate set is pinned by digest `{coordinate_review['digest_sha256']}`; any addition, removal, identity, bound, or provenance change fails CI.",
+            "- Any emitted atom-topology violation, implication failure, unresolved discrepancy, parser/projection bug, discrepancy-digest change, scientific-metric change, or reviewed-coordinate-set change makes the command exit nonzero.",
             "",
             "This validates conversion safety and format behavior against structures refined with the deposited restraints; it is not an independent Boltz prediction-accuracy benchmark.",
             "",
@@ -608,7 +629,7 @@ def run_corpus(
                 }
             )
     run = {
-        "schema_version": 2,
+        "schema_version": 3,
         "input_directory": _portable_path(input_directory),
         "output_directory": _portable_path(output_directory),
         "settings": {

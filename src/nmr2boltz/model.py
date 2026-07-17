@@ -220,6 +220,7 @@ class Rejection:
     details: str
     row_ids: list[str] = field(default_factory=list)
     endpoint: str | None = None
+    provenance: dict[str, Any] = field(default_factory=dict)
 
 
 @dataclass
@@ -234,6 +235,7 @@ class ConversionReport:
     warnings: list[str]
     statistics: dict[str, Any]
     source_restraint_groups: list[RestraintGroup] = field(default_factory=list)
+    target_component_topologies: dict[str, dict[str, Any]] = field(default_factory=dict)
     target_validation: dict[str, Any] | None = None
 
     def to_dict(self) -> dict[str, Any]:

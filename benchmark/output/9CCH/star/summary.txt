@@ -4,10 +4,10 @@ Input: benchmark/input/9CCH/9cch_nmr-data.str
 Detected format: nmr-star
 Restraint groups read: 7065
 Source alternatives read: 8981
-Safe groups before pair deduplication: 5208
-Unique Boltz constraints emitted: 3524
+Safe groups before pair deduplication: 5200
+Unique Boltz constraints emitted: 3516
 Ambiguous OR groups quarantined: 75
-Rejection records: 1782
+Rejection records: 1790
 
 Important:
 - boltz_constraints.yaml contains only constraints that may be imposed simultaneously.

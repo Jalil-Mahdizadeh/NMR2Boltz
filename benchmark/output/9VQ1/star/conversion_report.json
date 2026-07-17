@@ -2272,8 +2272,7 @@
             "A:6:LYS:HN -- A:2:GLU:O"
           ],
           "warnings": [
-            "atom name 'HN' resolved through naming alias 'H'",
-            "heavy atom was not enumerated in the selected topology"
+            "atom name 'HN' resolved through naming alias 'H'"
           ]
         },
         {
@@ -2303,9 +2302,7 @@
           "source_endpoints": [
             "A:6:LYS:N -- A:2:GLU:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -2356,8 +2353,7 @@
             "A:7:CYS:HN -- A:3:GLU:O"
           ],
           "warnings": [
-            "atom name 'HN' resolved through naming alias 'H'",
-            "heavy atom was not enumerated in the selected topology"
+            "atom name 'HN' resolved through naming alias 'H'"
           ]
         },
         {
@@ -2387,9 +2383,7 @@
           "source_endpoints": [
             "A:7:CYS:N -- A:3:GLU:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -2438,9 +2432,7 @@
           "source_endpoints": [
             "A:65:ARG:NH2 -- A:9:PRO:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -2491,8 +2483,7 @@
             "A:15:LYS:HN -- A:11:SER:O"
           ],
           "warnings": [
-            "atom name 'HN' resolved through naming alias 'H'",
-            "heavy atom was not enumerated in the selected topology"
+            "atom name 'HN' resolved through naming alias 'H'"
           ]
         },
         {
@@ -2522,9 +2513,7 @@
           "source_endpoints": [
             "A:15:LYS:N -- A:11:SER:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -2575,8 +2564,7 @@
             "A:16:ARG:HN -- A:12:TYR:O"
           ],
           "warnings": [
-            "atom name 'HN' resolved through naming alias 'H'",
-            "heavy atom was not enumerated in the selected topology"
+            "atom name 'HN' resolved through naming alias 'H'"
           ]
         },
         {
@@ -2606,9 +2594,7 @@
           "source_endpoints": [
             "A:16:ARG:N -- A:12:TYR:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -2659,8 +2645,7 @@
             "A:17:GLN:HN -- A:13:GLU:O"
           ],
           "warnings": [
-            "atom name 'HN' resolved through naming alias 'H'",
-            "heavy atom was not enumerated in the selected topology"
+            "atom name 'HN' resolved through naming alias 'H'"
           ]
         },
         {
@@ -2690,9 +2675,7 @@
           "source_endpoints": [
             "A:17:GLN:N -- A:13:GLU:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -2743,8 +2726,7 @@
             "A:18:LEU:HN -- A:14:GLU:O"
           ],
           "warnings": [
-            "atom name 'HN' resolved through naming alias 'H'",
-            "heavy atom was not enumerated in the selected topology"
+            "atom name 'HN' resolved through naming alias 'H'"
           ]
         },
         {
@@ -2774,9 +2756,7 @@
           "source_endpoints": [
             "A:18:LEU:N -- A:14:GLU:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -2874,9 +2854,7 @@
           "source_endpoints": [
             "A:15:LYS:NZ -- A:56:PHE:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -2976,8 +2954,7 @@
             "A:19:SER:HN -- A:15:LYS:O"
           ],
           "warnings": [
-            "atom name 'HN' resolved through naming alias 'H'",
-            "heavy atom was not enumerated in the selected topology"
+            "atom name 'HN' resolved through naming alias 'H'"
           ]
         },
         {
@@ -3007,9 +2984,7 @@
           "source_endpoints": [
             "A:19:SER:N -- A:15:LYS:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -3060,8 +3035,7 @@
             "A:20:LEU:HN -- A:16:ARG:O"
           ],
           "warnings": [
-            "atom name 'HN' resolved through naming alias 'H'",
-            "heavy atom was not enumerated in the selected topology"
+            "atom name 'HN' resolved through naming alias 'H'"
           ]
         },
         {
@@ -3091,9 +3065,7 @@
           "source_endpoints": [
             "A:20:LEU:N -- A:16:ARG:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -3144,8 +3116,7 @@
             "A:21:ASP:HN -- A:17:GLN:O"
           ],
           "warnings": [
-            "atom name 'HN' resolved through naming alias 'H'",
-            "heavy atom was not enumerated in the selected topology"
+            "atom name 'HN' resolved through naming alias 'H'"
           ]
         },
         {
@@ -3175,9 +3146,7 @@
           "source_endpoints": [
             "A:21:ASP:N -- A:17:GLN:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -3228,8 +3197,7 @@
             "A:22:ILE:HN -- A:18:LEU:O"
           ],
           "warnings": [
-            "atom name 'HN' resolved through naming alias 'H'",
-            "heavy atom was not enumerated in the selected topology"
+            "atom name 'HN' resolved through naming alias 'H'"
           ]
         },
         {
@@ -3259,9 +3227,7 @@
           "source_endpoints": [
             "A:22:ILE:N -- A:18:LEU:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -3312,8 +3278,7 @@
             "A:23:ASN:HN -- A:19:SER:O"
           ],
           "warnings": [
-            "atom name 'HN' resolved through naming alias 'H'",
-            "heavy atom was not enumerated in the selected topology"
+            "atom name 'HN' resolved through naming alias 'H'"
           ]
         },
         {
@@ -3343,9 +3308,7 @@
           "source_endpoints": [
             "A:23:ASN:N -- A:19:SER:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -3396,8 +3359,7 @@
             "A:24:LYS:HN -- A:20:LEU:O"
           ],
           "warnings": [
-            "atom name 'HN' resolved through naming alias 'H'",
-            "heavy atom was not enumerated in the selected topology"
+            "atom name 'HN' resolved through naming alias 'H'"
           ]
         },
         {
@@ -3427,9 +3389,7 @@
           "source_endpoints": [
             "A:24:LYS:N -- A:20:LEU:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -3480,8 +3440,7 @@
             "A:25:LEU:HN -- A:21:ASP:O"
           ],
           "warnings": [
-            "atom name 'HN' resolved through naming alias 'H'",
-            "heavy atom was not enumerated in the selected topology"
+            "atom name 'HN' resolved through naming alias 'H'"
           ]
         },
         {
@@ -3511,9 +3470,7 @@
           "source_endpoints": [
             "A:25:LEU:N -- A:21:ASP:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -3562,9 +3519,7 @@
           "source_endpoints": [
             "A:23:ASN:ND2 -- B:207:ARG:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -3615,8 +3570,7 @@
             "A:30:LEU:HN -- A:26:PRO:O"
           ],
           "warnings": [
-            "atom name 'HN' resolved through naming alias 'H'",
-            "heavy atom was not enumerated in the selected topology"
+            "atom name 'HN' resolved through naming alias 'H'"
           ]
         },
         {
@@ -3646,9 +3600,7 @@
           "source_endpoints": [
             "A:30:LEU:N -- A:26:PRO:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -3699,8 +3651,7 @@
             "A:31:GLY:HN -- A:27:GLY:O"
           ],
           "warnings": [
-            "atom name 'HN' resolved through naming alias 'H'",
-            "heavy atom was not enumerated in the selected topology"
+            "atom name 'HN' resolved through naming alias 'H'"
           ]
         },
         {
@@ -3730,9 +3681,7 @@
           "source_endpoints": [
             "A:31:GLY:N -- A:27:GLY:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -3783,8 +3732,7 @@
             "A:32:ARG:HN -- A:28:GLU:O"
           ],
           "warnings": [
-            "atom name 'HN' resolved through naming alias 'H'",
-            "heavy atom was not enumerated in the selected topology"
+            "atom name 'HN' resolved through naming alias 'H'"
           ]
         },
         {
@@ -3814,9 +3762,7 @@
           "source_endpoints": [
             "A:32:ARG:N -- A:28:GLU:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -3867,8 +3813,7 @@
             "A:33:VAL:HN -- A:29:LYS:O"
           ],
           "warnings": [
-            "atom name 'HN' resolved through naming alias 'H'",
-            "heavy atom was not enumerated in the selected topology"
+            "atom name 'HN' resolved through naming alias 'H'"
           ]
         },
         {
@@ -3898,9 +3843,7 @@
           "source_endpoints": [
             "A:33:VAL:N -- A:29:LYS:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -3949,9 +3892,7 @@
           "source_endpoints": [
             "A:70:TYR:OH -- A:29:LYS:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -4002,8 +3943,7 @@
             "A:34:VAL:HN -- A:30:LEU:O"
           ],
           "warnings": [
-            "atom name 'HN' resolved through naming alias 'H'",
-            "heavy atom was not enumerated in the selected topology"
+            "atom name 'HN' resolved through naming alias 'H'"
           ]
         },
         {
@@ -4033,9 +3973,7 @@
           "source_endpoints": [
             "A:34:VAL:N -- A:30:LEU:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -4086,8 +4024,7 @@
             "A:35:HIS:HN -- A:31:GLY:O"
           ],
           "warnings": [
-            "atom name 'HN' resolved through naming alias 'H'",
-            "heavy atom was not enumerated in the selected topology"
+            "atom name 'HN' resolved through naming alias 'H'"
           ]
         },
         {
@@ -4117,9 +4054,7 @@
           "source_endpoints": [
             "A:35:HIS:N -- A:31:GLY:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -4170,8 +4105,7 @@
             "A:36:ILE:HN -- A:32:ARG:O"
           ],
           "warnings": [
-            "atom name 'HN' resolved through naming alias 'H'",
-            "heavy atom was not enumerated in the selected topology"
+            "atom name 'HN' resolved through naming alias 'H'"
           ]
         },
         {
@@ -4201,9 +4135,7 @@
           "source_endpoints": [
             "A:36:ILE:N -- A:32:ARG:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -4254,8 +4186,7 @@
             "A:37:ILE:HN -- A:33:VAL:O"
           ],
           "warnings": [
-            "atom name 'HN' resolved through naming alias 'H'",
-            "heavy atom was not enumerated in the selected topology"
+            "atom name 'HN' resolved through naming alias 'H'"
           ]
         },
         {
@@ -4285,9 +4216,7 @@
           "source_endpoints": [
             "A:37:ILE:N -- A:33:VAL:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -4338,8 +4267,7 @@
             "A:38:GLN:HN -- A:34:VAL:O"
           ],
           "warnings": [
-            "atom name 'HN' resolved through naming alias 'H'",
-            "heavy atom was not enumerated in the selected topology"
+            "atom name 'HN' resolved through naming alias 'H'"
           ]
         },
         {
@@ -4369,9 +4297,7 @@
           "source_endpoints": [
             "A:38:GLN:N -- A:34:VAL:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -4422,8 +4348,7 @@
             "A:39:SER:HN -- A:35:HIS:O"
           ],
           "warnings": [
-            "atom name 'HN' resolved through naming alias 'H'",
-            "heavy atom was not enumerated in the selected topology"
+            "atom name 'HN' resolved through naming alias 'H'"
           ]
         },
         {
@@ -4453,9 +4378,7 @@
           "source_endpoints": [
             "A:39:SER:N -- A:35:HIS:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -4506,8 +4429,7 @@
             "A:40:ARG:HN -- A:36:ILE:O"
           ],
           "warnings": [
-            "atom name 'HN' resolved through naming alias 'H'",
-            "heavy atom was not enumerated in the selected topology"
+            "atom name 'HN' resolved through naming alias 'H'"
           ]
         },
         {
@@ -4537,9 +4459,7 @@
           "source_endpoints": [
             "A:40:ARG:N -- A:36:ILE:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -4590,8 +4510,7 @@
             "A:41:GLU:HN -- A:37:ILE:O"
           ],
           "warnings": [
-            "atom name 'HN' resolved through naming alias 'H'",
-            "heavy atom was not enumerated in the selected topology"
+            "atom name 'HN' resolved through naming alias 'H'"
           ]
         },
         {
@@ -4621,9 +4540,7 @@
           "source_endpoints": [
             "A:41:GLU:N -- A:37:ILE:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -4721,9 +4638,7 @@
           "source_endpoints": [
             "A:60:LYS:NZ -- A:40:ARG:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -4872,8 +4787,7 @@
             "B:210:LEU:HN -- A:50:ASP:O"
           ],
           "warnings": [
-            "atom name 'HN' resolved through naming alias 'H'",
-            "heavy atom was not enumerated in the selected topology"
+            "atom name 'HN' resolved through naming alias 'H'"
           ]
         },
         {
@@ -4903,9 +4817,7 @@
           "source_endpoints": [
             "B:210:LEU:N -- A:50:ASP:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -5005,8 +4917,7 @@
             "A:52:ILE:HN -- B:208:ILE:O"
           ],
           "warnings": [
-            "atom name 'HN' resolved through naming alias 'H'",
-            "heavy atom was not enumerated in the selected topology"
+            "atom name 'HN' resolved through naming alias 'H'"
           ]
         },
         {
@@ -5036,9 +4947,7 @@
           "source_endpoints": [
             "A:52:ILE:N -- B:208:ILE:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -5089,8 +4998,7 @@
             "B:208:ILE:HN -- A:52:ILE:O"
           ],
           "warnings": [
-            "atom name 'HN' resolved through naming alias 'H'",
-            "heavy atom was not enumerated in the selected topology"
+            "atom name 'HN' resolved through naming alias 'H'"
           ]
         },
         {
@@ -5120,9 +5028,7 @@
           "source_endpoints": [
             "B:208:ILE:N -- A:52:ILE:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -5222,8 +5128,7 @@
             "A:54:ILE:HN -- B:206:ILE:O"
           ],
           "warnings": [
-            "atom name 'HN' resolved through naming alias 'H'",
-            "heavy atom was not enumerated in the selected topology"
+            "atom name 'HN' resolved through naming alias 'H'"
           ]
         },
         {
@@ -5253,9 +5158,7 @@
           "source_endpoints": [
             "A:54:ILE:N -- B:206:ILE:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -5306,8 +5209,7 @@
             "B:206:ILE:HN -- A:54:ILE:O"
           ],
           "warnings": [
-            "atom name 'HN' resolved through naming alias 'H'",
-            "heavy atom was not enumerated in the selected topology"
+            "atom name 'HN' resolved through naming alias 'H'"
           ]
         },
         {
@@ -5337,9 +5239,7 @@
           "source_endpoints": [
             "B:206:ILE:N -- A:54:ILE:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -5390,8 +5290,7 @@
             "A:59:LEU:HN -- A:55:ASP:O"
           ],
           "warnings": [
-            "atom name 'HN' resolved through naming alias 'H'",
-            "heavy atom was not enumerated in the selected topology"
+            "atom name 'HN' resolved through naming alias 'H'"
           ]
         },
         {
@@ -5421,9 +5320,7 @@
           "source_endpoints": [
             "A:59:LEU:N -- A:55:ASP:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -5474,8 +5371,7 @@
             "A:64:LEU:HN -- A:60:LYS:O"
           ],
           "warnings": [
-            "atom name 'HN' resolved through naming alias 'H'",
-            "heavy atom was not enumerated in the selected topology"
+            "atom name 'HN' resolved through naming alias 'H'"
           ]
         },
         {
@@ -5505,9 +5401,7 @@
           "source_endpoints": [
             "A:64:LEU:N -- A:60:LYS:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -5558,8 +5452,7 @@
             "A:65:ARG:HN -- A:61:PRO:O"
           ],
           "warnings": [
-            "atom name 'HN' resolved through naming alias 'H'",
-            "heavy atom was not enumerated in the selected topology"
+            "atom name 'HN' resolved through naming alias 'H'"
           ]
         },
         {
@@ -5589,9 +5482,7 @@
           "source_endpoints": [
             "A:65:ARG:N -- A:61:PRO:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -5642,8 +5533,7 @@
             "A:66:GLU:HN -- A:62:SER:O"
           ],
           "warnings": [
-            "atom name 'HN' resolved through naming alias 'H'",
-            "heavy atom was not enumerated in the selected topology"
+            "atom name 'HN' resolved through naming alias 'H'"
           ]
         },
         {
@@ -5673,9 +5563,7 @@
           "source_endpoints": [
             "A:66:GLU:N -- A:62:SER:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -5726,8 +5614,7 @@
             "A:67:LEU:HN -- A:63:THR:O"
           ],
           "warnings": [
-            "atom name 'HN' resolved through naming alias 'H'",
-            "heavy atom was not enumerated in the selected topology"
+            "atom name 'HN' resolved through naming alias 'H'"
           ]
         },
         {
@@ -5757,9 +5644,7 @@
           "source_endpoints": [
             "A:67:LEU:N -- A:63:THR:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -5810,8 +5695,7 @@
             "A:68:GLU:HN -- A:64:LEU:O"
           ],
           "warnings": [
-            "atom name 'HN' resolved through naming alias 'H'",
-            "heavy atom was not enumerated in the selected topology"
+            "atom name 'HN' resolved through naming alias 'H'"
           ]
         },
         {
@@ -5841,9 +5725,7 @@
           "source_endpoints": [
             "A:68:GLU:N -- A:64:LEU:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -5894,8 +5776,7 @@
             "A:69:ARG:HN -- A:65:ARG:O"
           ],
           "warnings": [
-            "atom name 'HN' resolved through naming alias 'H'",
-            "heavy atom was not enumerated in the selected topology"
+            "atom name 'HN' resolved through naming alias 'H'"
           ]
         },
         {
@@ -5925,9 +5806,7 @@
           "source_endpoints": [
             "A:69:ARG:N -- A:65:ARG:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -5978,8 +5857,7 @@
             "A:70:TYR:HN -- A:66:GLU:O"
           ],
           "warnings": [
-            "atom name 'HN' resolved through naming alias 'H'",
-            "heavy atom was not enumerated in the selected topology"
+            "atom name 'HN' resolved through naming alias 'H'"
           ]
         },
         {
@@ -6009,9 +5887,7 @@
           "source_endpoints": [
             "A:70:TYR:N -- A:66:GLU:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -6062,8 +5938,7 @@
             "A:71:VAL:HN -- A:67:LEU:O"
           ],
           "warnings": [
-            "atom name 'HN' resolved through naming alias 'H'",
-            "heavy atom was not enumerated in the selected topology"
+            "atom name 'HN' resolved through naming alias 'H'"
           ]
         },
         {
@@ -6093,9 +5968,7 @@
           "source_endpoints": [
             "A:71:VAL:N -- A:67:LEU:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -6146,8 +6019,7 @@
             "A:72:THR:HN -- A:68:GLU:O"
           ],
           "warnings": [
-            "atom name 'HN' resolved through naming alias 'H'",
-            "heavy atom was not enumerated in the selected topology"
+            "atom name 'HN' resolved through naming alias 'H'"
           ]
         },
         {
@@ -6177,9 +6049,7 @@
           "source_endpoints": [
             "A:72:THR:N -- A:68:GLU:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -6230,8 +6100,7 @@
             "A:73:SER:HN -- A:69:ARG:O"
           ],
           "warnings": [
-            "atom name 'HN' resolved through naming alias 'H'",
-            "heavy atom was not enumerated in the selected topology"
+            "atom name 'HN' resolved through naming alias 'H'"
           ]
         },
         {
@@ -6261,9 +6130,7 @@
           "source_endpoints": [
             "A:73:SER:N -- A:69:ARG:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -6314,8 +6181,7 @@
             "A:74:CYS:HN -- A:70:TYR:O"
           ],
           "warnings": [
-            "atom name 'HN' resolved through naming alias 'H'",
-            "heavy atom was not enumerated in the selected topology"
+            "atom name 'HN' resolved through naming alias 'H'"
           ]
         },
         {
@@ -6345,9 +6211,7 @@
           "source_endpoints": [
             "A:74:CYS:N -- A:70:TYR:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -6398,8 +6262,7 @@
             "A:75:LEU:HN -- A:71:VAL:O"
           ],
           "warnings": [
-            "atom name 'HN' resolved through naming alias 'H'",
-            "heavy atom was not enumerated in the selected topology"
+            "atom name 'HN' resolved through naming alias 'H'"
           ]
         },
         {
@@ -6429,9 +6292,7 @@
           "source_endpoints": [
             "A:75:LEU:N -- A:71:VAL:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -6482,8 +6343,7 @@
             "A:76:ARG:HN -- A:72:THR:O"
           ],
           "warnings": [
-            "atom name 'HN' resolved through naming alias 'H'",
-            "heavy atom was not enumerated in the selected topology"
+            "atom name 'HN' resolved through naming alias 'H'"
           ]
         },
         {
@@ -6513,9 +6373,7 @@
           "source_endpoints": [
             "A:76:ARG:N -- A:72:THR:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     }
@@ -6531,7 +6389,9 @@
     "ambiguous_or_groups_not_emitted": 0,
     "rejection_records": 0,
     "sequence_records": 98,
-    "embedded_component_topologies": 0
+    "embedded_component_topologies": 0,
+    "atom_topology_quarantines": 0,
+    "emitted_atom_topology_violations": 0
   },
   "source_restraint_groups": [
     {
@@ -11535,5 +11395,527 @@
       "warnings": []
     }
   ],
+  "target_component_topologies": {
+    "ACE": {
+      "available": false,
+      "source": null,
+      "atoms": []
+    },
+    "ALA": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB1",
+        "HB2",
+        "HB3",
+        "HXT",
+        "N",
+        "O",
+        "OXT"
+      ]
+    },
+    "ARG": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CD",
+        "CG",
+        "CZ",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HD2",
+        "HD3",
+        "HE",
+        "HG2",
+        "HG3",
+        "HH11",
+        "HH12",
+        "HH21",
+        "HH22",
+        "HXT",
+        "N",
+        "NE",
+        "NH1",
+        "NH2",
+        "O",
+        "OXT"
+      ]
+    },
+    "ASN": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CG",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HD21",
+        "HD22",
+        "HXT",
+        "N",
+        "ND2",
+        "O",
+        "OD1",
+        "OXT"
+      ]
+    },
+    "ASP": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CG",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HD1",
+        "HD2",
+        "HXT",
+        "N",
+        "O",
+        "OD1",
+        "OD2",
+        "OXT"
+      ]
+    },
+    "CYS": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HG",
+        "HXT",
+        "N",
+        "O",
+        "OXT",
+        "SG"
+      ]
+    },
+    "GLN": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CD",
+        "CG",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HE21",
+        "HE22",
+        "HG2",
+        "HG3",
+        "HXT",
+        "N",
+        "NE2",
+        "O",
+        "OE1",
+        "OXT"
+      ]
+    },
+    "GLU": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CD",
+        "CG",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HE1",
+        "HE2",
+        "HG2",
+        "HG3",
+        "HXT",
+        "N",
+        "O",
+        "OE1",
+        "OE2",
+        "OXT"
+      ]
+    },
+    "GLY": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA2",
+        "HA3",
+        "HXT",
+        "N",
+        "O",
+        "OXT"
+      ]
+    },
+    "HIS": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CD2",
+        "CE1",
+        "CG",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HD1",
+        "HD2",
+        "HE1",
+        "HE2",
+        "HXT",
+        "N",
+        "ND1",
+        "NE2",
+        "O",
+        "OXT"
+      ]
+    },
+    "ILE": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CD1",
+        "CG1",
+        "CG2",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB",
+        "HD11",
+        "HD12",
+        "HD13",
+        "HG12",
+        "HG13",
+        "HG21",
+        "HG22",
+        "HG23",
+        "HXT",
+        "N",
+        "O",
+        "OXT"
+      ]
+    },
+    "LEU": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CD1",
+        "CD2",
+        "CG",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HD11",
+        "HD12",
+        "HD13",
+        "HD21",
+        "HD22",
+        "HD23",
+        "HG",
+        "HXT",
+        "N",
+        "O",
+        "OXT"
+      ]
+    },
+    "LYS": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CD",
+        "CE",
+        "CG",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HD2",
+        "HD3",
+        "HE2",
+        "HE3",
+        "HG2",
+        "HG3",
+        "HXT",
+        "HZ1",
+        "HZ2",
+        "HZ3",
+        "N",
+        "NZ",
+        "O",
+        "OXT"
+      ]
+    },
+    "MET": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CE",
+        "CG",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HE1",
+        "HE2",
+        "HE3",
+        "HG2",
+        "HG3",
+        "HXT",
+        "N",
+        "O",
+        "OXT",
+        "SD"
+      ]
+    },
+    "PHE": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CD1",
+        "CD2",
+        "CE1",
+        "CE2",
+        "CG",
+        "CZ",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HD1",
+        "HD2",
+        "HE1",
+        "HE2",
+        "HXT",
+        "HZ",
+        "N",
+        "O",
+        "OXT"
+      ]
+    },
+    "PRO": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CD",
+        "CG",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HD2",
+        "HD3",
+        "HG2",
+        "HG3",
+        "HXT",
+        "N",
+        "O",
+        "OXT"
+      ]
+    },
+    "SER": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HG",
+        "HXT",
+        "N",
+        "O",
+        "OG",
+        "OXT"
+      ]
+    },
+    "THR": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CG2",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB",
+        "HG1",
+        "HG21",
+        "HG22",
+        "HG23",
+        "HXT",
+        "N",
+        "O",
+        "OG1",
+        "OXT"
+      ]
+    },
+    "TYR": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CD1",
+        "CD2",
+        "CE1",
+        "CE2",
+        "CG",
+        "CZ",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HD1",
+        "HD2",
+        "HE1",
+        "HE2",
+        "HH",
+        "HXT",
+        "N",
+        "O",
+        "OH",
+        "OXT"
+      ]
+    },
+    "VAL": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CG1",
+        "CG2",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB",
+        "HG11",
+        "HG12",
+        "HG13",
+        "HG21",
+        "HG22",
+        "HG23",
+        "HXT",
+        "N",
+        "O",
+        "OXT"
+      ]
+    }
+  },
   "target_validation": null
 }

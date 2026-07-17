@@ -27,6 +27,8 @@ Use this checklist before treating converted contacts as production restraints.
 - [ ] Review every Q/M pseudoatom; do not use `--pseudoatom-policy atomset` without a program-specific correction rationale.
 - [ ] Review exchangeable N/O/S/Se protons under the experimental pH, solvent, temperature, and tautomer/protonation state.
 - [ ] Spot-check direct proton-parent mappings for each residue class present.
+- [ ] Review every `atom_not_present_in_mapped_residue` quarantine against the
+  source row and mapped component; never repair it by guessing an atom or residue.
 
 ## Projection
 

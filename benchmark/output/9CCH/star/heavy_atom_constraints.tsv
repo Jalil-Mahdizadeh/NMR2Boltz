@@ -1557,7 +1557,6 @@ B	12	CB	B	16	CG	6.842095	6.842094	XPLOR-NIH_distance_restraints_1:2221
 B	12	CB	B	21	CD1	7.884404	7.884404	XPLOR-NIH_distance_restraints_1:2222;XPLOR-NIH_distance_restraints_1:2471	
 B	12	CB	B	28	CB	10.732439	10.732439	XPLOR-NIH_distance_restraints_1:2660	
 B	12	CB	B	35	CG2	7.884404	7.884404	XPLOR-NIH_distance_restraints_1:2922	
-B	12	CB	B	48	ZN*	3.400000	3.400000	XPLOR-NIH_distance_restraints_3:14	
 B	12	N	B	14	N	8.460000	8.460000	XPLOR-NIH_distance_restraints_1:2226	
 B	12	N	B	16	CG	7.475572	7.475572	XPLOR-NIH_distance_restraints_1:2227	
 B	12	N	B	29	CB	8.500000	8.500000	XPLOR-NIH_distance_restraints_1:2228	
@@ -1567,7 +1566,6 @@ B	12	N	B	34	CB	6.900000	6.900000	XPLOR-NIH_distance_restraints_1:2231;XPLOR-NIH_
 B	12	N	B	34	CG1	9.765903	9.765903	XPLOR-NIH_distance_restraints_1:2857	
 B	12	N	B	34	N	8.460000	8.460000	XPLOR-NIH_distance_restraints_1:2232;XPLOR-NIH_distance_restraints_1:2873	
 B	12	N	B	35	N	6.860000	6.860000	XPLOR-NIH_distance_restraints_1:2233;XPLOR-NIH_distance_restraints_1:2935	
-B	12	SG	B	48	ZN*	2.360000	2.360000	XPLOR-NIH_distance_restraints_3:2	
 B	13	CA	B	13	CB	9.311511	9.311511	XPLOR-NIH_distance_restraints_1:2235	
 B	13	CA	B	14	N	8.500000	8.500000	XPLOR-NIH_distance_restraints_1:2234	
 B	13	CA	B	15	N	8.500000	8.500000	XPLOR-NIH_distance_restraints_1:2293	
@@ -1638,13 +1636,11 @@ B	15	CB	B	21	N	8.500000	8.500000	XPLOR-NIH_distance_restraints_1:2504
 B	15	CB	B	26	CA	8.540000	8.540000	XPLOR-NIH_distance_restraints_1:2615	
 B	15	CB	B	26	CB	7.515572	7.515572	XPLOR-NIH_distance_restraints_1:2292;XPLOR-NIH_distance_restraints_1:2625	
 B	15	CB	B	26	N	8.500000	8.500000	XPLOR-NIH_distance_restraints_1:2634	
-B	15	CB	B	48	ZN*	3.400000	3.400000	XPLOR-NIH_distance_restraints_3:17	
 B	15	N	B	16	CG	9.271511	9.271511	XPLOR-NIH_distance_restraints_1:2316	
 B	15	N	B	16	N	6.260000	6.260000	XPLOR-NIH_distance_restraints_1:2299;XPLOR-NIH_distance_restraints_1:2323	
 B	15	N	B	19	N	8.460000	8.460000	XPLOR-NIH_distance_restraints_1:2300	
 B	15	N	B	20	N	8.460000	8.460000	XPLOR-NIH_distance_restraints_1:2301	
 B	15	N	B	21	CD1	7.844404	7.844404	XPLOR-NIH_distance_restraints_1:2302;XPLOR-NIH_distance_restraints_1:2477	
-B	15	SG	B	48	ZN*	2.360000	2.360000	XPLOR-NIH_distance_restraints_3:5	
 B	16	CA	B	16	CB	6.340000	6.340000	XPLOR-NIH_distance_restraints_1:2310;XPLOR-NIH_distance_restraints_1:2312	
 B	16	CA	B	16	CG	6.842095	6.842094	XPLOR-NIH_distance_restraints_1:2305;XPLOR-NIH_distance_restraints_1:2317	
 B	16	CA	B	16	N	6.300000	6.300000	XPLOR-NIH_distance_restraints_1:2306;XPLOR-NIH_distance_restraints_1:2324	
@@ -1857,11 +1853,9 @@ B	26	CB	B	29	N	7.475572	7.475572	XPLOR-NIH_distance_restraints_1:2706
 B	26	CB	B	30	CA	9.311511	9.311511	XPLOR-NIH_distance_restraints_1:2715	
 B	26	CB	B	30	N	9.271511	9.271511	XPLOR-NIH_distance_restraints_1:2724	
 B	26	CB	B	31	CA	10.177503	10.177503	XPLOR-NIH_distance_restraints_1:2733	
-B	26	CB	B	48	ZN*	3.400000	3.400000	XPLOR-NIH_distance_restraints_3:20	
 B	26	N	B	27	CD	7.475572	7.475572	XPLOR-NIH_distance_restraints_1:2642;XPLOR-NIH_distance_restraints_1:2651	
 B	26	N	B	31	CA	9.271511	9.271511	XPLOR-NIH_distance_restraints_1:2734	
 B	26	N	B	31	N	8.460000	8.460000	XPLOR-NIH_distance_restraints_1:2643	
-B	26	SG	B	48	ZN*	2.360000	2.360000	XPLOR-NIH_distance_restraints_3:8	
 B	27	CA	B	27	CB	6.842095	6.842094	XPLOR-NIH_distance_restraints_1:2644;XPLOR-NIH_distance_restraints_1:2646	
 B	27	CB	B	27	CD	8.161629	8.161629	XPLOR-NIH_distance_restraints_1:2652	
 B	27	CB	B	27	CG	7.405677	7.405676	XPLOR-NIH_distance_restraints_1:2654	
@@ -1911,9 +1905,7 @@ B	29	CB	B	35	CA	8.540000	8.540000	XPLOR-NIH_distance_restraints_1:2887;XPLOR-NIH
 B	29	CB	B	35	CG1	9.311511	9.311511	XPLOR-NIH_distance_restraints_1:2697;XPLOR-NIH_distance_restraints_1:2705;XPLOR-NIH_distance_restraints_1:2914;XPLOR-NIH_distance_restraints_1:2915	
 B	29	CB	B	35	CG2	7.884404	7.884404	XPLOR-NIH_distance_restraints_1:2924;XPLOR-NIH_distance_restraints_1:2925	
 B	29	CB	B	35	N	8.500000	8.500000	XPLOR-NIH_distance_restraints_1:2936	
-B	29	CB	B	48	ZN*	3.400000	3.400000	XPLOR-NIH_distance_restraints_3:23	
 B	29	N	B	35	CG2	7.844404	7.844404	XPLOR-NIH_distance_restraints_1:2713;XPLOR-NIH_distance_restraints_1:2926	
-B	29	SG	B	48	ZN*	2.360000	2.360000	XPLOR-NIH_distance_restraints_3:11	
 B	30	CA	B	30	CB	6.842095	6.842094	XPLOR-NIH_distance_restraints_1:2716;XPLOR-NIH_distance_restraints_1:2720	
 B	30	CA	B	30	N	6.300000	6.300000	XPLOR-NIH_distance_restraints_1:2717;XPLOR-NIH_distance_restraints_1:2728	
 B	30	CA	B	31	N	6.900000	6.900000	XPLOR-NIH_distance_restraints_1:2718	

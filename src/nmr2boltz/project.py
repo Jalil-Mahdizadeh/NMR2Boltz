@@ -16,7 +16,14 @@ from .model import (
     SequenceRecord,
 )
 from .star import ParsedStarDocument, StarDataError
-from .topology import TopologyLibrary, TopologyResolutionError
+from .topology import (
+    TopologyLibrary,
+    TopologyResolutionError,
+    atom_topology_violations,
+    component_topology_snapshot,
+    mapped_residue_index,
+    require_valid_emitted_atom_topology,
+)
 
 
 @dataclass
@@ -103,6 +110,11 @@ def project_document(
     for topology in parsed.embedded_topologies:
         topology_library.register(topology, replace=True)
 
+    mapped_residues = mapped_residue_index(parsed.sequence_resolver.records)
+    component_topologies = component_topology_snapshot(
+        parsed.sequence_resolver.records, topology_library
+    )
+
     safe_by_group: list[ProjectedAlternative] = []
     ambiguous: list[AmbiguousGroup] = []
     rejections: list[Rejection] = []
@@ -128,6 +140,12 @@ def project_document(
             topology_library=topology_library,
             settings=settings,
         )
+        projected, topology_rejections = _quarantine_invalid_projected_atoms(
+            projected,
+            mapped_residues=mapped_residues,
+            component_topologies=component_topologies,
+        )
+        group_rejections.extend(topology_rejections)
         rejections.extend(group_rejections)
         if projected and group_rejections:
             rejections.append(
@@ -218,10 +236,14 @@ def project_document(
         "rejection_records": len(rejections),
         "sequence_records": len(parsed.sequence_resolver.records),
         "embedded_component_topologies": len(parsed.embedded_topologies),
+        "atom_topology_quarantines": sum(
+            item.reason == "atom_not_present_in_mapped_residue" for item in rejections
+        ),
+        "emitted_atom_topology_violations": 0,
     }
     combined_settings = dict(parser_settings or {})
     combined_settings.update(settings.as_dict())
-    return ConversionReport(
+    report = ConversionReport(
         input_file=input_file,
         detected_format=parsed.detected_format,
         settings=combined_settings,
@@ -232,7 +254,100 @@ def project_document(
         warnings=warnings,
         statistics=statistics,
         source_restraint_groups=parsed.restraint_groups,
+        target_component_topologies=component_topologies,
     )
+    require_valid_emitted_atom_topology(report)
+    return report
+
+
+def _quarantine_invalid_projected_atoms(
+    projected: list[ProjectedAlternative],
+    *,
+    mapped_residues: dict[tuple[str, int], str],
+    component_topologies: dict[str, dict[str, object]],
+) -> tuple[list[ProjectedAlternative], list[Rejection]]:
+    """Remove complete projected contacts unless both atoms have topology evidence."""
+    valid: list[ProjectedAlternative] = []
+    rejections: list[Rejection] = []
+    seen: set[tuple[Any, ...]] = set()
+    for alternative in projected:
+        violations = atom_topology_violations(
+            (alternative.atom1, alternative.atom2),
+            mapped_residues=mapped_residues,
+            component_topologies=component_topologies,
+        )
+        if not violations:
+            valid.append(alternative)
+            continue
+        invalid = [item.to_dict() for item in violations]
+        rejection_key = (
+            alternative.group_id,
+            alternative.pair_key,
+            tuple(alternative.source_rows),
+            alternative.source_upper_bound,
+            tuple(
+                (
+                    item["chain"],
+                    item["residue_number"],
+                    item["residue_name"],
+                    item["atom_name"],
+                    item["reason"],
+                )
+                for item in invalid
+            ),
+        )
+        if rejection_key in seen:
+            continue
+        seen.add(rejection_key)
+        invalid_labels = ", ".join(
+            f"{item['chain']}:{item['residue_number']}:{item['residue_name'] or '?'}:"
+            f"{item['atom_name']} ({item['reason']})"
+            for item in invalid
+        )
+        original_bounds = {
+            "lower_bound": alternative.source_observation.get("lower_bound"),
+            "upper_bound": alternative.source_upper_bound,
+            "target_value": alternative.source_observation.get("target_value"),
+            "target_uncertainty": alternative.source_observation.get(
+                "target_uncertainty"
+            ),
+            "upper_linear_limit": alternative.source_observation.get(
+                "upper_linear_limit"
+            ),
+            "bound_source": alternative.source_observation.get("bound_source"),
+        }
+        rejections.append(
+            Rejection(
+                group_id=alternative.group_id,
+                reason="atom_not_present_in_mapped_residue",
+                details=(
+                    "The complete projected contact was quarantined because exact component "
+                    f"topology does not prove: {invalid_labels}."
+                ),
+                row_ids=list(alternative.source_rows),
+                endpoint=" | ".join(alternative.source_endpoints) or None,
+                provenance={
+                    "restraint_group": alternative.group_id,
+                    "source_row_ids": list(alternative.source_rows),
+                    "source_endpoints": list(alternative.source_endpoints),
+                    "mapped_contact": [
+                        {
+                            "chain": atom.chain,
+                            "residue_number": atom.residue_index,
+                            "residue_name": mapped_residues.get(
+                                (atom.chain, atom.residue_index)
+                            ),
+                            "atom_name": atom.atom_name,
+                        }
+                        for atom in (alternative.atom1, alternative.atom2)
+                    ],
+                    "invalid_endpoints": invalid,
+                    "original_bounds": original_bounds,
+                    "projected_upper_bound": alternative.max_distance,
+                },
+            )
+        )
+    return valid, rejections
 
 
 def _project_group(

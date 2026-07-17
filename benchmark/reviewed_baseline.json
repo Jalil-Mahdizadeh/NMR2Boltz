@@ -1,67 +1,21 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "audit_review": {
-    "digest_sha256": "f6b32f8fd521da9371ce08fdc4828550c078161deda41ae108033b39609aa244",
-    "row_count": 4195,
+    "digest_sha256": "3b4e4f3d54377d7f80854a1525db0f5351895fbb5c3b6bf2e63f2e3a649c86c8",
+    "row_count": 4179,
     "classification_counts": {
       "expected_format_difference": 4136,
-      "deposition_inconsistency": 59
+      "deposition_inconsistency": 43
     }
   },
   "reviewed_missing_coordinates": {
-    "digest_sha256": "60ed1b785e328fb2d972de6f5d691765012eb622afa489b7a47f41909c8eb141",
-    "contact_count": 106,
+    "digest_sha256": "ce8bc2710b5068d3d1cec33794f77bb4e806019a2116a9f4127102b25cfb63e2",
+    "contact_count": 82,
     "case_format_counts": {
-      "8R1X:nef": 45,
-      "8R1X:star": 45,
-      "9CCH:nef": 8,
-      "9CCH:star": 8
+      "8R1X:nef": 41,
+      "8R1X:star": 41
     },
     "contacts": [
-      {
-        "contact_id": "8R1X|nef|A:14:N3--A:15:N",
-        "case_id": "8R1X",
-        "format": "nef",
-        "atom1": "A:14:N3",
-        "atom2": "A:15:N",
-        "upper_bound_angstrom": 3.08,
-        "source_groups": [
-          "AMBER_distance_restraints_3:90"
-        ]
-      },
-      {
-        "contact_id": "8R1X|nef|A:14:N3--A:15:N1",
-        "case_id": "8R1X",
-        "format": "nef",
-        "atom1": "A:14:N3",
-        "atom2": "A:15:N1",
-        "upper_bound_angstrom": 3.0,
-        "source_groups": [
-          "AMBER_distance_restraints_3:89"
-        ]
-      },
-      {
-        "contact_id": "8R1X|nef|A:14:N4--A:15:O6",
-        "case_id": "8R1X",
-        "format": "nef",
-        "atom1": "A:14:N4",
-        "atom2": "A:15:O6",
-        "upper_bound_angstrom": 3.0,
-        "source_groups": [
-          "AMBER_distance_restraints_3:93"
-        ]
-      },
-      {
-        "contact_id": "8R1X|nef|A:14:O2--A:15:N2",
-        "case_id": "8R1X",
-        "format": "nef",
-        "atom1": "A:14:O2",
-        "atom2": "A:15:N2",
-        "upper_bound_angstrom": 3.0,
-        "source_groups": [
-          "AMBER_distance_restraints_3:91"
-        ]
-      },
       {
         "contact_id": "8R1X|nef|A:68:CA--A:72:N",
         "case_id": "8R1X",
@@ -515,50 +469,6 @@
         ]
       },
       {
-        "contact_id": "8R1X|star|A:14:N3--A:15:N",
-        "case_id": "8R1X",
-        "format": "star",
-        "atom1": "A:14:N3",
-        "atom2": "A:15:N",
-        "upper_bound_angstrom": 3.08,
-        "source_groups": [
-          "AMBER_distance_restraints_3:90"
-        ]
-      },
-      {
-        "contact_id": "8R1X|star|A:14:N3--A:15:N1",
-        "case_id": "8R1X",
-        "format": "star",
-        "atom1": "A:14:N3",
-        "atom2": "A:15:N1",
-        "upper_bound_angstrom": 3.0,
-        "source_groups": [
-          "AMBER_distance_restraints_3:89"
-        ]
-      },
-      {
-        "contact_id": "8R1X|star|A:14:N4--A:15:O6",
-        "case_id": "8R1X",
-        "format": "star",
-        "atom1": "A:14:N4",
-        "atom2": "A:15:O6",
-        "upper_bound_angstrom": 3.0,
-        "source_groups": [
-          "AMBER_distance_restraints_3:93"
-        ]
-      },
-      {
-        "contact_id": "8R1X|star|A:14:O2--A:15:N2",
-        "case_id": "8R1X",
-        "format": "star",
-        "atom1": "A:14:O2",
-        "atom2": "A:15:N2",
-        "upper_bound_angstrom": 3.0,
-        "source_groups": [
-          "AMBER_distance_restraints_3:91"
-        ]
-      },
-      {
         "contact_id": "8R1X|star|A:68:CA--A:72:N",
         "case_id": "8R1X",
         "format": "star",
@@ -1009,182 +919,6 @@
         "source_groups": [
           "AMBER_distance_restraints_1:836"
         ]
-      },
-      {
-        "contact_id": "9CCH|nef|B:12:CB--B:48:ZN",
-        "case_id": "9CCH",
-        "format": "nef",
-        "atom1": "B:12:CB",
-        "atom2": "B:48:ZN",
-        "upper_bound_angstrom": 3.4,
-        "source_groups": [
-          "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_3:14"
-        ]
-      },
-      {
-        "contact_id": "9CCH|nef|B:12:SG--B:48:ZN",
-        "case_id": "9CCH",
-        "format": "nef",
-        "atom1": "B:12:SG",
-        "atom2": "B:48:ZN",
-        "upper_bound_angstrom": 2.36,
-        "source_groups": [
-          "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_3:2"
-        ]
-      },
-      {
-        "contact_id": "9CCH|nef|B:15:CB--B:48:ZN",
-        "case_id": "9CCH",
-        "format": "nef",
-        "atom1": "B:15:CB",
-        "atom2": "B:48:ZN",
-        "upper_bound_angstrom": 3.4,
-        "source_groups": [
-          "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_3:17"
-        ]
-      },
-      {
-        "contact_id": "9CCH|nef|B:15:SG--B:48:ZN",
-        "case_id": "9CCH",
-        "format": "nef",
-        "atom1": "B:15:SG",
-        "atom2": "B:48:ZN",
-        "upper_bound_angstrom": 2.36,
-        "source_groups": [
-          "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_3:5"
-        ]
-      },
-      {
-        "contact_id": "9CCH|nef|B:26:CB--B:48:ZN",
-        "case_id": "9CCH",
-        "format": "nef",
-        "atom1": "B:26:CB",
-        "atom2": "B:48:ZN",
-        "upper_bound_angstrom": 3.4,
-        "source_groups": [
-          "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_3:20"
-        ]
-      },
-      {
-        "contact_id": "9CCH|nef|B:26:SG--B:48:ZN",
-        "case_id": "9CCH",
-        "format": "nef",
-        "atom1": "B:26:SG",
-        "atom2": "B:48:ZN",
-        "upper_bound_angstrom": 2.36,
-        "source_groups": [
-          "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_3:8"
-        ]
-      },
-      {
-        "contact_id": "9CCH|nef|B:29:CB--B:48:ZN",
-        "case_id": "9CCH",
-        "format": "nef",
-        "atom1": "B:29:CB",
-        "atom2": "B:48:ZN",
-        "upper_bound_angstrom": 3.4,
-        "source_groups": [
-          "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_3:23"
-        ]
-      },
-      {
-        "contact_id": "9CCH|nef|B:29:SG--B:48:ZN",
-        "case_id": "9CCH",
-        "format": "nef",
-        "atom1": "B:29:SG",
-        "atom2": "B:48:ZN",
-        "upper_bound_angstrom": 2.36,
-        "source_groups": [
-          "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_3:11"
-        ]
-      },
-      {
-        "contact_id": "9CCH|star|B:12:CB--B:48:ZN*",
-        "case_id": "9CCH",
-        "format": "star",
-        "atom1": "B:12:CB",
-        "atom2": "B:48:ZN*",
-        "upper_bound_angstrom": 3.4,
-        "source_groups": [
-          "XPLOR-NIH_distance_restraints_3:14"
-        ]
-      },
-      {
-        "contact_id": "9CCH|star|B:12:SG--B:48:ZN*",
-        "case_id": "9CCH",
-        "format": "star",
-        "atom1": "B:12:SG",
-        "atom2": "B:48:ZN*",
-        "upper_bound_angstrom": 2.36,
-        "source_groups": [
-          "XPLOR-NIH_distance_restraints_3:2"
-        ]
-      },
-      {
-        "contact_id": "9CCH|star|B:15:CB--B:48:ZN*",
-        "case_id": "9CCH",
-        "format": "star",
-        "atom1": "B:15:CB",
-        "atom2": "B:48:ZN*",
-        "upper_bound_angstrom": 3.4,
-        "source_groups": [
-          "XPLOR-NIH_distance_restraints_3:17"
-        ]
-      },
-      {
-        "contact_id": "9CCH|star|B:15:SG--B:48:ZN*",
-        "case_id": "9CCH",
-        "format": "star",
-        "atom1": "B:15:SG",
-        "atom2": "B:48:ZN*",
-        "upper_bound_angstrom": 2.36,
-        "source_groups": [
-          "XPLOR-NIH_distance_restraints_3:5"
-        ]
-      },
-      {
-        "contact_id": "9CCH|star|B:26:CB--B:48:ZN*",
-        "case_id": "9CCH",
-        "format": "star",
-        "atom1": "B:26:CB",
-        "atom2": "B:48:ZN*",
-        "upper_bound_angstrom": 3.4,
-        "source_groups": [
-          "XPLOR-NIH_distance_restraints_3:20"
-        ]
-      },
-      {
-        "contact_id": "9CCH|star|B:26:SG--B:48:ZN*",
-        "case_id": "9CCH",
-        "format": "star",
-        "atom1": "B:26:SG",
-        "atom2": "B:48:ZN*",
-        "upper_bound_angstrom": 2.36,
-        "source_groups": [
-          "XPLOR-NIH_distance_restraints_3:8"
-        ]
-      },
-      {
-        "contact_id": "9CCH|star|B:29:CB--B:48:ZN*",
-        "case_id": "9CCH",
-        "format": "star",
-        "atom1": "B:29:CB",
-        "atom2": "B:48:ZN*",
-        "upper_bound_angstrom": 3.4,
-        "source_groups": [
-          "XPLOR-NIH_distance_restraints_3:23"
-        ]
-      },
-      {
-        "contact_id": "9CCH|star|B:29:SG--B:48:ZN*",
-        "case_id": "9CCH",
-        "format": "star",
-        "atom1": "B:29:SG",
-        "atom2": "B:48:ZN*",
-        "upper_bound_angstrom": 2.36,
-        "source_groups": [
-          "XPLOR-NIH_distance_restraints_3:11"
-        ]
       }
     ]
   },
@@ -1209,6 +943,7 @@
             "emitted_constraints": 176,
             "ambiguous_groups": 16,
             "rejection_reasons": {},
+            "atom_topology_violations": 0,
             "resolved_model_cases": 1760,
             "satisfied_model_cases": 1755,
             "violated_model_cases": 5,
@@ -1223,6 +958,7 @@
             "emitted_constraints": 176,
             "ambiguous_groups": 16,
             "rejection_reasons": {},
+            "atom_topology_violations": 0,
             "resolved_model_cases": 1760,
             "satisfied_model_cases": 1755,
             "violated_model_cases": 5,
@@ -1254,6 +990,7 @@
             "rejection_reasons": {
               "same_heavy_parent_atom": 41
             },
+            "atom_topology_violations": 0,
             "resolved_model_cases": 34320,
             "satisfied_model_cases": 34305,
             "violated_model_cases": 15,
@@ -1270,6 +1007,7 @@
             "rejection_reasons": {
               "same_heavy_parent_atom": 38
             },
+            "atom_topology_violations": 0,
             "resolved_model_cases": 34320,
             "satisfied_model_cases": 34293,
             "violated_model_cases": 27,
@@ -1301,6 +1039,7 @@
             "rejection_reasons": {
               "same_heavy_parent_atom": 148
             },
+            "atom_topology_violations": 0,
             "resolved_model_cases": 28190,
             "satisfied_model_cases": 28110,
             "violated_model_cases": 80,
@@ -1317,6 +1056,7 @@
             "rejection_reasons": {
               "same_heavy_parent_atom": 37
             },
+            "atom_topology_violations": 0,
             "resolved_model_cases": 28770,
             "satisfied_model_cases": 28656,
             "violated_model_cases": 114,
@@ -1330,9 +1070,9 @@
       "8R1X": {
         "status": "pass",
         "format_parity": {
-          "nef_constraints": 1118,
-          "star_constraints": 1118,
-          "common_atom_pairs": 1118,
+          "nef_constraints": 1114,
+          "star_constraints": 1114,
+          "common_atom_pairs": 1114,
           "nef_only_atom_pairs": 0,
           "star_only_atom_pairs": 0,
           "common_pairs_with_different_bounds": 160,
@@ -1343,36 +1083,40 @@
           "nef": {
             "restraint_groups": 1414,
             "source_alternatives": 2282,
-            "emitted_constraints": 1118,
+            "emitted_constraints": 1114,
             "ambiguous_groups": 165,
             "rejection_reasons": {
               "same_heavy_parent_atom": 12,
               "unresolved_atom_topology": 39,
+              "atom_not_present_in_mapped_residue": 4,
               "projected_bound_exceeds_boltz_maximum": 39
             },
+            "atom_topology_violations": 0,
             "resolved_model_cases": 21460,
             "satisfied_model_cases": 21404,
             "violated_model_cases": 56,
-            "missing_model_cases": 900,
-            "constraints_missing_in_any_model": 45,
+            "missing_model_cases": 820,
+            "constraints_missing_in_any_model": 41,
             "implication_antecedent_cases": 19837,
             "implication_failures": 0
           },
           "star": {
             "restraint_groups": 1414,
             "source_alternatives": 3382,
-            "emitted_constraints": 1118,
+            "emitted_constraints": 1114,
             "ambiguous_groups": 165,
             "rejection_reasons": {
               "same_heavy_parent_atom": 3,
               "unresolved_atom_topology": 39,
+              "atom_not_present_in_mapped_residue": 4,
               "projected_bound_exceeds_boltz_maximum": 39
             },
+            "atom_topology_violations": 0,
             "resolved_model_cases": 21460,
             "satisfied_model_cases": 21404,
             "violated_model_cases": 56,
-            "missing_model_cases": 900,
-            "constraints_missing_in_any_model": 45,
+            "missing_model_cases": 820,
+            "constraints_missing_in_any_model": 41,
             "implication_antecedent_cases": 18635,
             "implication_failures": 0
           }
@@ -1397,6 +1141,7 @@
             "emitted_constraints": 0,
             "ambiguous_groups": 0,
             "rejection_reasons": {},
+            "atom_topology_violations": 0,
             "resolved_model_cases": 0,
             "satisfied_model_cases": 0,
             "violated_model_cases": 0,
@@ -1411,6 +1156,7 @@
             "emitted_constraints": 0,
             "ambiguous_groups": 0,
             "rejection_reasons": {},
+            "atom_topology_violations": 0,
             "resolved_model_cases": 0,
             "satisfied_model_cases": 0,
             "violated_model_cases": 0,
@@ -1424,11 +1170,11 @@
       "9CCH": {
         "status": "pass",
         "format_parity": {
-          "nef_constraints": 3358,
-          "star_constraints": 3524,
+          "nef_constraints": 3350,
+          "star_constraints": 3516,
           "common_atom_pairs": 3350,
-          "nef_only_atom_pairs": 8,
-          "star_only_atom_pairs": 174,
+          "nef_only_atom_pairs": 0,
+          "star_only_atom_pairs": 166,
           "common_pairs_with_different_bounds": 1754,
           "maximum_common_bound_delta_angstrom": 2.786172292936673,
           "exact_pair_and_bound_parity": false
@@ -1437,37 +1183,41 @@
           "nef": {
             "restraint_groups": 7065,
             "source_alternatives": 18740,
-            "emitted_constraints": 3358,
+            "emitted_constraints": 3350,
             "ambiguous_groups": 292,
             "rejection_reasons": {
               "unresolved_atom_topology": 317,
               "same_heavy_parent_atom": 250,
               "partially_unprojectable_or_group": 5,
-              "complex_restraint_combination_logic": 1584
+              "complex_restraint_combination_logic": 1584,
+              "atom_not_present_in_mapped_residue": 8
             },
+            "atom_topology_violations": 0,
             "resolved_model_cases": 67000,
             "satisfied_model_cases": 66987,
             "violated_model_cases": 13,
-            "missing_model_cases": 160,
-            "constraints_missing_in_any_model": 8,
+            "missing_model_cases": 0,
+            "constraints_missing_in_any_model": 0,
             "implication_antecedent_cases": 63359,
             "implication_failures": 0
           },
           "star": {
             "restraint_groups": 7065,
             "source_alternatives": 8981,
-            "emitted_constraints": 3524,
+            "emitted_constraints": 3516,
             "ambiguous_groups": 75,
             "rejection_reasons": {
               "unresolved_atom_topology": 138,
               "same_heavy_parent_atom": 60,
-              "complex_restraint_combination_logic": 1584
+              "complex_restraint_combination_logic": 1584,
+              "atom_not_present_in_mapped_residue": 8
             },
+            "atom_topology_violations": 0,
             "resolved_model_cases": 70320,
             "satisfied_model_cases": 70320,
             "violated_model_cases": 0,
-            "missing_model_cases": 160,
-            "constraints_missing_in_any_model": 8,
+            "missing_model_cases": 0,
+            "constraints_missing_in_any_model": 0,
             "implication_antecedent_cases": 67967,
             "implication_failures": 0
           }
@@ -1496,6 +1246,7 @@
               "same_heavy_parent_atom": 192,
               "unresolved_atom_topology": 12
             },
+            "atom_topology_violations": 0,
             "resolved_model_cases": 4560,
             "satisfied_model_cases": 4560,
             "violated_model_cases": 0,
@@ -1514,6 +1265,7 @@
               "same_heavy_parent_atom": 48,
               "unresolved_atom_topology": 12
             },
+            "atom_topology_violations": 0,
             "resolved_model_cases": 4560,
             "satisfied_model_cases": 4560,
             "violated_model_cases": 0,
@@ -1543,6 +1295,7 @@
             "emitted_constraints": 406,
             "ambiguous_groups": 0,
             "rejection_reasons": {},
+            "atom_topology_violations": 0,
             "resolved_model_cases": 6090,
             "satisfied_model_cases": 6074,
             "violated_model_cases": 16,
@@ -1557,6 +1310,7 @@
             "emitted_constraints": 406,
             "ambiguous_groups": 0,
             "rejection_reasons": {},
+            "atom_topology_violations": 0,
             "resolved_model_cases": 6090,
             "satisfied_model_cases": 6074,
             "violated_model_cases": 16,
@@ -1588,6 +1342,7 @@
             "rejection_reasons": {
               "sequence_residue_mismatch": 312
             },
+            "atom_topology_violations": 0,
             "resolved_model_cases": 30,
             "satisfied_model_cases": 1,
             "violated_model_cases": 29,
@@ -1602,6 +1357,7 @@
             "emitted_constraints": 44,
             "ambiguous_groups": 15,
             "rejection_reasons": {},
+            "atom_topology_violations": 0,
             "resolved_model_cases": 440,
             "satisfied_model_cases": 440,
             "violated_model_cases": 0,
@@ -1631,6 +1387,7 @@
             "emitted_constraints": 1578,
             "ambiguous_groups": 766,
             "rejection_reasons": {},
+            "atom_topology_violations": 0,
             "resolved_model_cases": 31560,
             "satisfied_model_cases": 31559,
             "violated_model_cases": 1,
@@ -1648,6 +1405,7 @@
               "unresolved_atom_topology": 7507,
               "partially_unprojectable_or_group": 2
             },
+            "atom_topology_violations": 0,
             "resolved_model_cases": 15300,
             "satisfied_model_cases": 15300,
             "violated_model_cases": 0,
@@ -1677,6 +1435,7 @@
             "emitted_constraints": 53,
             "ambiguous_groups": 3,
             "rejection_reasons": {},
+            "atom_topology_violations": 0,
             "resolved_model_cases": 1060,
             "satisfied_model_cases": 1007,
             "violated_model_cases": 53,
@@ -1691,6 +1450,7 @@
             "emitted_constraints": 56,
             "ambiguous_groups": 0,
             "rejection_reasons": {},
+            "atom_topology_violations": 0,
             "resolved_model_cases": 1120,
             "satisfied_model_cases": 1055,
             "violated_model_cases": 65,
@@ -1722,6 +1482,7 @@
             "rejection_reasons": {
               "missing_upper_bound": 168
             },
+            "atom_topology_violations": 0,
             "resolved_model_cases": 26540,
             "satisfied_model_cases": 26530,
             "violated_model_cases": 10,
@@ -1739,6 +1500,7 @@
               "unresolved_atom_topology": 6569,
               "missing_upper_bound": 168
             },
+            "atom_topology_violations": 0,
             "resolved_model_cases": 14060,
             "satisfied_model_cases": 14060,
             "violated_model_cases": 0,

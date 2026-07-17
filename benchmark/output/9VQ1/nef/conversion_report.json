@@ -1631,9 +1631,7 @@
           "source_endpoints": [
             "A:6:LYS:H -- A:2:GLU:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "group_id": "nef_distance_restraint_list_CNS_distance_restraints_1:2",
@@ -1662,9 +1660,7 @@
           "source_endpoints": [
             "A:6:LYS:N -- A:2:GLU:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -1714,9 +1710,7 @@
           "source_endpoints": [
             "A:7:CYS:H -- A:3:GLU:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "group_id": "nef_distance_restraint_list_CNS_distance_restraints_1:4",
@@ -1745,9 +1739,7 @@
           "source_endpoints": [
             "A:7:CYS:N -- A:3:GLU:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -1797,9 +1789,7 @@
           "source_endpoints": [
             "A:15:LYS:H -- A:11:SER:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "group_id": "nef_distance_restraint_list_CNS_distance_restraints_1:6",
@@ -1828,9 +1818,7 @@
           "source_endpoints": [
             "A:15:LYS:N -- A:11:SER:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -1880,9 +1868,7 @@
           "source_endpoints": [
             "A:16:ARG:H -- A:12:TYR:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "group_id": "nef_distance_restraint_list_CNS_distance_restraints_1:8",
@@ -1911,9 +1897,7 @@
           "source_endpoints": [
             "A:16:ARG:N -- A:12:TYR:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -1963,9 +1947,7 @@
           "source_endpoints": [
             "A:17:GLN:H -- A:13:GLU:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "group_id": "nef_distance_restraint_list_CNS_distance_restraints_1:10",
@@ -1994,9 +1976,7 @@
           "source_endpoints": [
             "A:17:GLN:N -- A:13:GLU:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -2046,9 +2026,7 @@
           "source_endpoints": [
             "A:18:LEU:H -- A:14:GLU:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "group_id": "nef_distance_restraint_list_CNS_distance_restraints_1:12",
@@ -2077,9 +2055,7 @@
           "source_endpoints": [
             "A:18:LEU:N -- A:14:GLU:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -2128,9 +2104,7 @@
           "source_endpoints": [
             "A:15:LYS:NZ -- A:56:PHE:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -2229,9 +2203,7 @@
           "source_endpoints": [
             "A:19:SER:H -- A:15:LYS:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "group_id": "nef_distance_restraint_list_CNS_distance_restraints_1:14",
@@ -2260,9 +2232,7 @@
           "source_endpoints": [
             "A:19:SER:N -- A:15:LYS:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -2312,9 +2282,7 @@
           "source_endpoints": [
             "A:20:LEU:H -- A:16:ARG:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "group_id": "nef_distance_restraint_list_CNS_distance_restraints_1:16",
@@ -2343,9 +2311,7 @@
           "source_endpoints": [
             "A:20:LEU:N -- A:16:ARG:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -2395,9 +2361,7 @@
           "source_endpoints": [
             "A:21:ASP:H -- A:17:GLN:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "group_id": "nef_distance_restraint_list_CNS_distance_restraints_1:18",
@@ -2426,9 +2390,7 @@
           "source_endpoints": [
             "A:21:ASP:N -- A:17:GLN:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -2478,9 +2440,7 @@
           "source_endpoints": [
             "A:22:ILE:H -- A:18:LEU:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "group_id": "nef_distance_restraint_list_CNS_distance_restraints_1:20",
@@ -2509,9 +2469,7 @@
           "source_endpoints": [
             "A:22:ILE:N -- A:18:LEU:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -2561,9 +2519,7 @@
           "source_endpoints": [
             "A:23:ASN:H -- A:19:SER:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "group_id": "nef_distance_restraint_list_CNS_distance_restraints_1:22",
@@ -2592,9 +2548,7 @@
           "source_endpoints": [
             "A:23:ASN:N -- A:19:SER:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -2644,9 +2598,7 @@
           "source_endpoints": [
             "A:24:LYS:H -- A:20:LEU:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "group_id": "nef_distance_restraint_list_CNS_distance_restraints_1:24",
@@ -2675,9 +2627,7 @@
           "source_endpoints": [
             "A:24:LYS:N -- A:20:LEU:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -2727,9 +2677,7 @@
           "source_endpoints": [
             "A:25:LEU:H -- A:21:ASP:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "group_id": "nef_distance_restraint_list_CNS_distance_restraints_1:26",
@@ -2758,9 +2706,7 @@
           "source_endpoints": [
             "A:25:LEU:N -- A:21:ASP:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -2809,9 +2755,7 @@
           "source_endpoints": [
             "A:23:ASN:ND2 -- B:207:ARG:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -2861,9 +2805,7 @@
           "source_endpoints": [
             "A:30:LEU:H -- A:26:PRO:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "group_id": "nef_distance_restraint_list_CNS_distance_restraints_1:28",
@@ -2892,9 +2834,7 @@
           "source_endpoints": [
             "A:30:LEU:N -- A:26:PRO:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -2944,9 +2884,7 @@
           "source_endpoints": [
             "A:31:GLY:H -- A:27:GLY:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "group_id": "nef_distance_restraint_list_CNS_distance_restraints_1:30",
@@ -2975,9 +2913,7 @@
           "source_endpoints": [
             "A:31:GLY:N -- A:27:GLY:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -3027,9 +2963,7 @@
           "source_endpoints": [
             "A:32:ARG:H -- A:28:GLU:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "group_id": "nef_distance_restraint_list_CNS_distance_restraints_2:1",
@@ -3058,9 +2992,7 @@
           "source_endpoints": [
             "A:32:ARG:N -- A:28:GLU:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -3110,9 +3042,7 @@
           "source_endpoints": [
             "A:33:VAL:H -- A:29:LYS:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "group_id": "nef_distance_restraint_list_CNS_distance_restraints_1:33",
@@ -3141,9 +3071,7 @@
           "source_endpoints": [
             "A:33:VAL:N -- A:29:LYS:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -3192,9 +3120,7 @@
           "source_endpoints": [
             "A:70:TYR:OH -- A:29:LYS:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -3244,9 +3170,7 @@
           "source_endpoints": [
             "A:34:VAL:H -- A:30:LEU:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "group_id": "nef_distance_restraint_list_CNS_distance_restraints_1:35",
@@ -3275,9 +3199,7 @@
           "source_endpoints": [
             "A:34:VAL:N -- A:30:LEU:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -3327,9 +3249,7 @@
           "source_endpoints": [
             "A:35:HIS:H -- A:31:GLY:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "group_id": "nef_distance_restraint_list_CNS_distance_restraints_1:37",
@@ -3358,9 +3278,7 @@
           "source_endpoints": [
             "A:35:HIS:N -- A:31:GLY:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -3410,9 +3328,7 @@
           "source_endpoints": [
             "A:36:ILE:H -- A:32:ARG:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "group_id": "nef_distance_restraint_list_CNS_distance_restraints_1:39",
@@ -3441,9 +3357,7 @@
           "source_endpoints": [
             "A:36:ILE:N -- A:32:ARG:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -3493,9 +3407,7 @@
           "source_endpoints": [
             "A:37:ILE:H -- A:33:VAL:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "group_id": "nef_distance_restraint_list_CNS_distance_restraints_1:41",
@@ -3524,9 +3436,7 @@
           "source_endpoints": [
             "A:37:ILE:N -- A:33:VAL:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -3576,9 +3486,7 @@
           "source_endpoints": [
             "A:38:GLN:H -- A:34:VAL:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "group_id": "nef_distance_restraint_list_CNS_distance_restraints_1:43",
@@ -3607,9 +3515,7 @@
           "source_endpoints": [
             "A:38:GLN:N -- A:34:VAL:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -3659,9 +3565,7 @@
           "source_endpoints": [
             "A:39:SER:H -- A:35:HIS:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "group_id": "nef_distance_restraint_list_CNS_distance_restraints_1:45",
@@ -3690,9 +3594,7 @@
           "source_endpoints": [
             "A:39:SER:N -- A:35:HIS:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -3742,9 +3644,7 @@
           "source_endpoints": [
             "A:40:ARG:H -- A:36:ILE:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "group_id": "nef_distance_restraint_list_CNS_distance_restraints_1:47",
@@ -3773,9 +3673,7 @@
           "source_endpoints": [
             "A:40:ARG:N -- A:36:ILE:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -3825,9 +3723,7 @@
           "source_endpoints": [
             "A:41:GLU:H -- A:37:ILE:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "group_id": "nef_distance_restraint_list_CNS_distance_restraints_1:49",
@@ -3856,9 +3752,7 @@
           "source_endpoints": [
             "A:41:GLU:N -- A:37:ILE:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -3907,9 +3801,7 @@
           "source_endpoints": [
             "A:60:LYS:NZ -- A:40:ARG:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -4057,9 +3949,7 @@
           "source_endpoints": [
             "B:210:LEU:H -- A:50:ASP:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "group_id": "nef_distance_restraint_list_CNS_distance_restraints_1:96",
@@ -4088,9 +3978,7 @@
           "source_endpoints": [
             "B:210:LEU:N -- A:50:ASP:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -4189,9 +4077,7 @@
           "source_endpoints": [
             "A:52:ILE:H -- B:208:ILE:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "group_id": "nef_distance_restraint_list_CNS_distance_restraints_1:94",
@@ -4220,9 +4106,7 @@
           "source_endpoints": [
             "A:52:ILE:N -- B:208:ILE:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -4272,9 +4156,7 @@
           "source_endpoints": [
             "B:208:ILE:H -- A:52:ILE:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "group_id": "nef_distance_restraint_list_CNS_distance_restraints_1:92",
@@ -4303,9 +4185,7 @@
           "source_endpoints": [
             "B:208:ILE:N -- A:52:ILE:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -4404,9 +4284,7 @@
           "source_endpoints": [
             "A:54:ILE:H -- B:206:ILE:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "group_id": "nef_distance_restraint_list_CNS_distance_restraints_1:90",
@@ -4435,9 +4313,7 @@
           "source_endpoints": [
             "A:54:ILE:N -- B:206:ILE:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -4487,9 +4363,7 @@
           "source_endpoints": [
             "B:206:ILE:H -- A:54:ILE:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "group_id": "nef_distance_restraint_list_CNS_distance_restraints_1:88",
@@ -4518,9 +4392,7 @@
           "source_endpoints": [
             "B:206:ILE:N -- A:54:ILE:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -4570,9 +4442,7 @@
           "source_endpoints": [
             "A:59:LEU:H -- A:55:ASP:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "group_id": "nef_distance_restraint_list_CNS_distance_restraints_1:51",
@@ -4601,9 +4471,7 @@
           "source_endpoints": [
             "A:59:LEU:N -- A:55:ASP:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -4653,9 +4521,7 @@
           "source_endpoints": [
             "A:64:LEU:H -- A:60:LYS:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "group_id": "nef_distance_restraint_list_CNS_distance_restraints_1:53",
@@ -4684,9 +4550,7 @@
           "source_endpoints": [
             "A:64:LEU:N -- A:60:LYS:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -4736,9 +4600,7 @@
           "source_endpoints": [
             "A:65:ARG:H -- A:61:PRO:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "group_id": "nef_distance_restraint_list_CNS_distance_restraints_1:55",
@@ -4767,9 +4629,7 @@
           "source_endpoints": [
             "A:65:ARG:N -- A:61:PRO:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -4819,9 +4679,7 @@
           "source_endpoints": [
             "A:66:GLU:H -- A:62:SER:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "group_id": "nef_distance_restraint_list_CNS_distance_restraints_1:57",
@@ -4850,9 +4708,7 @@
           "source_endpoints": [
             "A:66:GLU:N -- A:62:SER:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -4902,9 +4758,7 @@
           "source_endpoints": [
             "A:67:LEU:H -- A:63:THR:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "group_id": "nef_distance_restraint_list_CNS_distance_restraints_1:59",
@@ -4933,9 +4787,7 @@
           "source_endpoints": [
             "A:67:LEU:N -- A:63:THR:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -4985,9 +4837,7 @@
           "source_endpoints": [
             "A:68:GLU:H -- A:64:LEU:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "group_id": "nef_distance_restraint_list_CNS_distance_restraints_1:61",
@@ -5016,9 +4866,7 @@
           "source_endpoints": [
             "A:68:GLU:N -- A:64:LEU:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -5068,9 +4916,7 @@
           "source_endpoints": [
             "A:69:ARG:H -- A:65:ARG:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "group_id": "nef_distance_restraint_list_CNS_distance_restraints_1:63",
@@ -5099,9 +4945,7 @@
           "source_endpoints": [
             "A:69:ARG:N -- A:65:ARG:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -5151,9 +4995,7 @@
           "source_endpoints": [
             "A:70:TYR:H -- A:66:GLU:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "group_id": "nef_distance_restraint_list_CNS_distance_restraints_1:65",
@@ -5182,9 +5024,7 @@
           "source_endpoints": [
             "A:70:TYR:N -- A:66:GLU:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -5234,9 +5074,7 @@
           "source_endpoints": [
             "A:71:VAL:H -- A:67:LEU:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "group_id": "nef_distance_restraint_list_CNS_distance_restraints_1:67",
@@ -5265,9 +5103,7 @@
           "source_endpoints": [
             "A:71:VAL:N -- A:67:LEU:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -5317,9 +5153,7 @@
           "source_endpoints": [
             "A:72:THR:H -- A:68:GLU:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "group_id": "nef_distance_restraint_list_CNS_distance_restraints_1:69",
@@ -5348,9 +5182,7 @@
           "source_endpoints": [
             "A:72:THR:N -- A:68:GLU:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -5400,9 +5232,7 @@
           "source_endpoints": [
             "A:73:SER:H -- A:69:ARG:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "group_id": "nef_distance_restraint_list_CNS_distance_restraints_1:71",
@@ -5431,9 +5261,7 @@
           "source_endpoints": [
             "A:73:SER:N -- A:69:ARG:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -5483,9 +5311,7 @@
           "source_endpoints": [
             "A:74:CYS:H -- A:70:TYR:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "group_id": "nef_distance_restraint_list_CNS_distance_restraints_1:73",
@@ -5514,9 +5340,7 @@
           "source_endpoints": [
             "A:74:CYS:N -- A:70:TYR:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -5566,9 +5390,7 @@
           "source_endpoints": [
             "A:75:LEU:H -- A:71:VAL:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "group_id": "nef_distance_restraint_list_CNS_distance_restraints_1:75",
@@ -5597,9 +5419,7 @@
           "source_endpoints": [
             "A:75:LEU:N -- A:71:VAL:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     },
@@ -5649,9 +5469,7 @@
           "source_endpoints": [
             "A:76:ARG:H -- A:72:THR:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "group_id": "nef_distance_restraint_list_CNS_distance_restraints_1:77",
@@ -5680,9 +5498,7 @@
           "source_endpoints": [
             "A:76:ARG:N -- A:72:THR:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ]
     }
@@ -5730,9 +5546,7 @@
           "source_endpoints": [
             "A:65:ARG:NHy -- A:9:PRO:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         },
         {
           "atom1": {
@@ -5771,9 +5585,7 @@
           "source_endpoints": [
             "A:65:ARG:NHy -- A:9:PRO:O"
           ],
-          "warnings": [
-            "heavy atom was not enumerated in the selected topology"
-          ]
+          "warnings": []
         }
       ],
       "reason": "The original restraint is a disjunction whose alternatives map to multiple distinct heavy-atom pairs. Emitting all pairs would convert OR into AND.",
@@ -5970,7 +5782,9 @@
     "ambiguous_or_groups_not_emitted": 3,
     "rejection_records": 0,
     "sequence_records": 98,
-    "embedded_component_topologies": 0
+    "embedded_component_topologies": 0,
+    "atom_topology_quarantines": 0,
+    "emitted_atom_topology_violations": 0
   },
   "source_restraint_groups": [
     {
@@ -10974,5 +10788,527 @@
       "warnings": []
     }
   ],
+  "target_component_topologies": {
+    "ACE": {
+      "available": false,
+      "source": null,
+      "atoms": []
+    },
+    "ALA": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB1",
+        "HB2",
+        "HB3",
+        "HXT",
+        "N",
+        "O",
+        "OXT"
+      ]
+    },
+    "ARG": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CD",
+        "CG",
+        "CZ",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HD2",
+        "HD3",
+        "HE",
+        "HG2",
+        "HG3",
+        "HH11",
+        "HH12",
+        "HH21",
+        "HH22",
+        "HXT",
+        "N",
+        "NE",
+        "NH1",
+        "NH2",
+        "O",
+        "OXT"
+      ]
+    },
+    "ASN": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CG",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HD21",
+        "HD22",
+        "HXT",
+        "N",
+        "ND2",
+        "O",
+        "OD1",
+        "OXT"
+      ]
+    },
+    "ASP": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CG",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HD1",
+        "HD2",
+        "HXT",
+        "N",
+        "O",
+        "OD1",
+        "OD2",
+        "OXT"
+      ]
+    },
+    "CYS": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HG",
+        "HXT",
+        "N",
+        "O",
+        "OXT",
+        "SG"
+      ]
+    },
+    "GLN": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CD",
+        "CG",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HE21",
+        "HE22",
+        "HG2",
+        "HG3",
+        "HXT",
+        "N",
+        "NE2",
+        "O",
+        "OE1",
+        "OXT"
+      ]
+    },
+    "GLU": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CD",
+        "CG",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HE1",
+        "HE2",
+        "HG2",
+        "HG3",
+        "HXT",
+        "N",
+        "O",
+        "OE1",
+        "OE2",
+        "OXT"
+      ]
+    },
+    "GLY": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA2",
+        "HA3",
+        "HXT",
+        "N",
+        "O",
+        "OXT"
+      ]
+    },
+    "HIS": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CD2",
+        "CE1",
+        "CG",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HD1",
+        "HD2",
+        "HE1",
+        "HE2",
+        "HXT",
+        "N",
+        "ND1",
+        "NE2",
+        "O",
+        "OXT"
+      ]
+    },
+    "ILE": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CD1",
+        "CG1",
+        "CG2",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB",
+        "HD11",
+        "HD12",
+        "HD13",
+        "HG12",
+        "HG13",
+        "HG21",
+        "HG22",
+        "HG23",
+        "HXT",
+        "N",
+        "O",
+        "OXT"
+      ]
+    },
+    "LEU": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CD1",
+        "CD2",
+        "CG",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HD11",
+        "HD12",
+        "HD13",
+        "HD21",
+        "HD22",
+        "HD23",
+        "HG",
+        "HXT",
+        "N",
+        "O",
+        "OXT"
+      ]
+    },
+    "LYS": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CD",
+        "CE",
+        "CG",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HD2",
+        "HD3",
+        "HE2",
+        "HE3",
+        "HG2",
+        "HG3",
+        "HXT",
+        "HZ1",
+        "HZ2",
+        "HZ3",
+        "N",
+        "NZ",
+        "O",
+        "OXT"
+      ]
+    },
+    "MET": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CE",
+        "CG",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HE1",
+        "HE2",
+        "HE3",
+        "HG2",
+        "HG3",
+        "HXT",
+        "N",
+        "O",
+        "OXT",
+        "SD"
+      ]
+    },
+    "PHE": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CD1",
+        "CD2",
+        "CE1",
+        "CE2",
+        "CG",
+        "CZ",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HD1",
+        "HD2",
+        "HE1",
+        "HE2",
+        "HXT",
+        "HZ",
+        "N",
+        "O",
+        "OXT"
+      ]
+    },
+    "PRO": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CD",
+        "CG",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HD2",
+        "HD3",
+        "HG2",
+        "HG3",
+        "HXT",
+        "N",
+        "O",
+        "OXT"
+      ]
+    },
+    "SER": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HG",
+        "HXT",
+        "N",
+        "O",
+        "OG",
+        "OXT"
+      ]
+    },
+    "THR": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CG2",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB",
+        "HG1",
+        "HG21",
+        "HG22",
+        "HG23",
+        "HXT",
+        "N",
+        "O",
+        "OG1",
+        "OXT"
+      ]
+    },
+    "TYR": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CD1",
+        "CD2",
+        "CE1",
+        "CE2",
+        "CG",
+        "CZ",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HD1",
+        "HD2",
+        "HE1",
+        "HE2",
+        "HH",
+        "HXT",
+        "N",
+        "O",
+        "OH",
+        "OXT"
+      ]
+    },
+    "VAL": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CG1",
+        "CG2",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB",
+        "HG11",
+        "HG12",
+        "HG13",
+        "HG21",
+        "HG22",
+        "HG23",
+        "HXT",
+        "N",
+        "O",
+        "OXT"
+      ]
+    }
+  },
   "target_validation": null
 }

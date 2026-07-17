@@ -2936,7 +2936,8 @@
       "row_ids": [
         "1"
       ],
-      "endpoint": "A:19:ALA:HB1 -- B:855:VAL:HG11"
+      "endpoint": "A:19:ALA:HB1 -- B:855:VAL:HG11",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:1",
@@ -2945,7 +2946,8 @@
       "row_ids": [
         "2"
       ],
-      "endpoint": "A:19:ALA:HB1 -- B:855:VAL:HG12"
+      "endpoint": "A:19:ALA:HB1 -- B:855:VAL:HG12",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:1",
@@ -2954,7 +2956,8 @@
       "row_ids": [
         "3"
       ],
-      "endpoint": "A:19:ALA:HB1 -- B:855:VAL:HG13"
+      "endpoint": "A:19:ALA:HB1 -- B:855:VAL:HG13",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:1",
@@ -2963,7 +2966,8 @@
       "row_ids": [
         "4"
       ],
-      "endpoint": "A:19:ALA:HBy -- B:855:VAL:HG11"
+      "endpoint": "A:19:ALA:HBy -- B:855:VAL:HG11",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:1",
@@ -2972,7 +2976,8 @@
       "row_ids": [
         "5"
       ],
-      "endpoint": "A:19:ALA:HBy -- B:855:VAL:HG12"
+      "endpoint": "A:19:ALA:HBy -- B:855:VAL:HG12",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:1",
@@ -2981,7 +2986,8 @@
       "row_ids": [
         "6"
       ],
-      "endpoint": "A:19:ALA:HBy -- B:855:VAL:HG13"
+      "endpoint": "A:19:ALA:HBy -- B:855:VAL:HG13",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:1",
@@ -2990,7 +2996,8 @@
       "row_ids": [
         "7"
       ],
-      "endpoint": "A:19:ALA:HBx -- B:855:VAL:HG11"
+      "endpoint": "A:19:ALA:HBx -- B:855:VAL:HG11",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:1",
@@ -2999,7 +3006,8 @@
       "row_ids": [
         "8"
       ],
-      "endpoint": "A:19:ALA:HBx -- B:855:VAL:HG12"
+      "endpoint": "A:19:ALA:HBx -- B:855:VAL:HG12",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:1",
@@ -3008,7 +3016,8 @@
       "row_ids": [
         "9"
       ],
-      "endpoint": "A:19:ALA:HBx -- B:855:VAL:HG13"
+      "endpoint": "A:19:ALA:HBx -- B:855:VAL:HG13",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:2",
@@ -3017,7 +3026,8 @@
       "row_ids": [
         "10"
       ],
-      "endpoint": "A:19:ALA:HB1 -- B:858:TRP:HE3"
+      "endpoint": "A:19:ALA:HB1 -- B:858:TRP:HE3",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:2",
@@ -3026,7 +3036,8 @@
       "row_ids": [
         "11"
       ],
-      "endpoint": "A:19:ALA:HBy -- B:858:TRP:HE3"
+      "endpoint": "A:19:ALA:HBy -- B:858:TRP:HE3",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:2",
@@ -3035,7 +3046,8 @@
       "row_ids": [
         "12"
       ],
-      "endpoint": "A:19:ALA:HBx -- B:858:TRP:HE3"
+      "endpoint": "A:19:ALA:HBx -- B:858:TRP:HE3",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:3",
@@ -3044,7 +3056,8 @@
       "row_ids": [
         "13"
       ],
-      "endpoint": "A:22:LEU:HD11 -- B:851:ALA:HB1"
+      "endpoint": "A:22:LEU:HD11 -- B:851:ALA:HB1",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:3",
@@ -3053,7 +3066,8 @@
       "row_ids": [
         "14"
       ],
-      "endpoint": "A:22:LEU:HD11 -- B:851:ALA:HB2"
+      "endpoint": "A:22:LEU:HD11 -- B:851:ALA:HB2",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:3",
@@ -3062,7 +3076,8 @@
       "row_ids": [
         "15"
       ],
-      "endpoint": "A:22:LEU:HD11 -- B:851:ALA:HB3"
+      "endpoint": "A:22:LEU:HD11 -- B:851:ALA:HB3",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:3",
@@ -3071,7 +3086,8 @@
       "row_ids": [
         "16"
       ],
-      "endpoint": "A:22:LEU:HD12 -- B:851:ALA:HB1"
+      "endpoint": "A:22:LEU:HD12 -- B:851:ALA:HB1",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:3",
@@ -3080,7 +3096,8 @@
       "row_ids": [
         "17"
       ],
-      "endpoint": "A:22:LEU:HD12 -- B:851:ALA:HB2"
+      "endpoint": "A:22:LEU:HD12 -- B:851:ALA:HB2",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:3",
@@ -3089,7 +3106,8 @@
       "row_ids": [
         "18"
       ],
-      "endpoint": "A:22:LEU:HD12 -- B:851:ALA:HB3"
+      "endpoint": "A:22:LEU:HD12 -- B:851:ALA:HB3",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:3",
@@ -3098,7 +3116,8 @@
       "row_ids": [
         "19"
       ],
-      "endpoint": "A:22:LEU:HD13 -- B:851:ALA:HB1"
+      "endpoint": "A:22:LEU:HD13 -- B:851:ALA:HB1",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:3",
@@ -3107,7 +3126,8 @@
       "row_ids": [
         "20"
       ],
-      "endpoint": "A:22:LEU:HD13 -- B:851:ALA:HB2"
+      "endpoint": "A:22:LEU:HD13 -- B:851:ALA:HB2",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:3",
@@ -3116,7 +3136,8 @@
       "row_ids": [
         "21"
       ],
-      "endpoint": "A:22:LEU:HD13 -- B:851:ALA:HB3"
+      "endpoint": "A:22:LEU:HD13 -- B:851:ALA:HB3",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:4",
@@ -3125,7 +3146,8 @@
       "row_ids": [
         "22"
       ],
-      "endpoint": "A:22:LEU:HD11 -- B:855:VAL:HG11"
+      "endpoint": "A:22:LEU:HD11 -- B:855:VAL:HG11",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:4",
@@ -3134,7 +3156,8 @@
       "row_ids": [
         "23"
       ],
-      "endpoint": "A:22:LEU:HD11 -- B:855:VAL:HG12"
+      "endpoint": "A:22:LEU:HD11 -- B:855:VAL:HG12",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:4",
@@ -3143,7 +3166,8 @@
       "row_ids": [
         "24"
       ],
-      "endpoint": "A:22:LEU:HD11 -- B:855:VAL:HG13"
+      "endpoint": "A:22:LEU:HD11 -- B:855:VAL:HG13",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:4",
@@ -3152,7 +3176,8 @@
       "row_ids": [
         "25"
       ],
-      "endpoint": "A:22:LEU:HD12 -- B:855:VAL:HG11"
+      "endpoint": "A:22:LEU:HD12 -- B:855:VAL:HG11",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:4",
@@ -3161,7 +3186,8 @@
       "row_ids": [
         "26"
       ],
-      "endpoint": "A:22:LEU:HD12 -- B:855:VAL:HG12"
+      "endpoint": "A:22:LEU:HD12 -- B:855:VAL:HG12",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:4",
@@ -3170,7 +3196,8 @@
       "row_ids": [
         "27"
       ],
-      "endpoint": "A:22:LEU:HD12 -- B:855:VAL:HG13"
+      "endpoint": "A:22:LEU:HD12 -- B:855:VAL:HG13",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:4",
@@ -3179,7 +3206,8 @@
       "row_ids": [
         "28"
       ],
-      "endpoint": "A:22:LEU:HD13 -- B:855:VAL:HG11"
+      "endpoint": "A:22:LEU:HD13 -- B:855:VAL:HG11",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:4",
@@ -3188,7 +3216,8 @@
       "row_ids": [
         "29"
       ],
-      "endpoint": "A:22:LEU:HD13 -- B:855:VAL:HG12"
+      "endpoint": "A:22:LEU:HD13 -- B:855:VAL:HG12",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:4",
@@ -3197,7 +3226,8 @@
       "row_ids": [
         "30"
       ],
-      "endpoint": "A:22:LEU:HD13 -- B:855:VAL:HG13"
+      "endpoint": "A:22:LEU:HD13 -- B:855:VAL:HG13",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:5",
@@ -3206,7 +3236,8 @@
       "row_ids": [
         "31"
       ],
-      "endpoint": "A:22:LEU:HD11 -- B:855:VAL:HG21"
+      "endpoint": "A:22:LEU:HD11 -- B:855:VAL:HG21",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:5",
@@ -3215,7 +3246,8 @@
       "row_ids": [
         "32"
       ],
-      "endpoint": "A:22:LEU:HD11 -- B:855:VAL:HG22"
+      "endpoint": "A:22:LEU:HD11 -- B:855:VAL:HG22",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:5",
@@ -3224,7 +3256,8 @@
       "row_ids": [
         "33"
       ],
-      "endpoint": "A:22:LEU:HD11 -- B:855:VAL:HG23"
+      "endpoint": "A:22:LEU:HD11 -- B:855:VAL:HG23",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:5",
@@ -3233,7 +3266,8 @@
       "row_ids": [
         "34"
       ],
-      "endpoint": "A:22:LEU:HD12 -- B:855:VAL:HG21"
+      "endpoint": "A:22:LEU:HD12 -- B:855:VAL:HG21",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:5",
@@ -3242,7 +3276,8 @@
       "row_ids": [
         "35"
       ],
-      "endpoint": "A:22:LEU:HD12 -- B:855:VAL:HG22"
+      "endpoint": "A:22:LEU:HD12 -- B:855:VAL:HG22",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:5",
@@ -3251,7 +3286,8 @@
       "row_ids": [
         "36"
       ],
-      "endpoint": "A:22:LEU:HD12 -- B:855:VAL:HG23"
+      "endpoint": "A:22:LEU:HD12 -- B:855:VAL:HG23",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:5",
@@ -3260,7 +3296,8 @@
       "row_ids": [
         "37"
       ],
-      "endpoint": "A:22:LEU:HD13 -- B:855:VAL:HG21"
+      "endpoint": "A:22:LEU:HD13 -- B:855:VAL:HG21",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:5",
@@ -3269,7 +3306,8 @@
       "row_ids": [
         "38"
       ],
-      "endpoint": "A:22:LEU:HD13 -- B:855:VAL:HG22"
+      "endpoint": "A:22:LEU:HD13 -- B:855:VAL:HG22",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:5",
@@ -3278,7 +3316,8 @@
       "row_ids": [
         "39"
       ],
-      "endpoint": "A:22:LEU:HD13 -- B:855:VAL:HG23"
+      "endpoint": "A:22:LEU:HD13 -- B:855:VAL:HG23",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:6",
@@ -3287,7 +3326,8 @@
       "row_ids": [
         "40"
       ],
-      "endpoint": "A:22:LEU:HD21 -- B:851:ALA:HB1"
+      "endpoint": "A:22:LEU:HD21 -- B:851:ALA:HB1",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:6",
@@ -3296,7 +3336,8 @@
       "row_ids": [
         "41"
       ],
-      "endpoint": "A:22:LEU:HD21 -- B:851:ALA:HB2"
+      "endpoint": "A:22:LEU:HD21 -- B:851:ALA:HB2",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:6",
@@ -3305,7 +3346,8 @@
       "row_ids": [
         "42"
       ],
-      "endpoint": "A:22:LEU:HD21 -- B:851:ALA:HB3"
+      "endpoint": "A:22:LEU:HD21 -- B:851:ALA:HB3",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:6",
@@ -3314,7 +3356,8 @@
       "row_ids": [
         "43"
       ],
-      "endpoint": "A:22:LEU:HD22 -- B:851:ALA:HB1"
+      "endpoint": "A:22:LEU:HD22 -- B:851:ALA:HB1",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:6",
@@ -3323,7 +3366,8 @@
       "row_ids": [
         "44"
       ],
-      "endpoint": "A:22:LEU:HD22 -- B:851:ALA:HB2"
+      "endpoint": "A:22:LEU:HD22 -- B:851:ALA:HB2",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:6",
@@ -3332,7 +3376,8 @@
       "row_ids": [
         "45"
       ],
-      "endpoint": "A:22:LEU:HD22 -- B:851:ALA:HB3"
+      "endpoint": "A:22:LEU:HD22 -- B:851:ALA:HB3",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:6",
@@ -3341,7 +3386,8 @@
       "row_ids": [
         "46"
       ],
-      "endpoint": "A:22:LEU:HD23 -- B:851:ALA:HB1"
+      "endpoint": "A:22:LEU:HD23 -- B:851:ALA:HB1",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:6",
@@ -3350,7 +3396,8 @@
       "row_ids": [
         "47"
       ],
-      "endpoint": "A:22:LEU:HD23 -- B:851:ALA:HB2"
+      "endpoint": "A:22:LEU:HD23 -- B:851:ALA:HB2",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:6",
@@ -3359,7 +3406,8 @@
       "row_ids": [
         "48"
       ],
-      "endpoint": "A:22:LEU:HD23 -- B:851:ALA:HB3"
+      "endpoint": "A:22:LEU:HD23 -- B:851:ALA:HB3",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:7",
@@ -3368,7 +3416,8 @@
       "row_ids": [
         "49"
       ],
-      "endpoint": "A:31:ILE:HD11 -- B:858:TRP:HH2"
+      "endpoint": "A:31:ILE:HD11 -- B:858:TRP:HH2",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:7",
@@ -3377,7 +3426,8 @@
       "row_ids": [
         "50"
       ],
-      "endpoint": "A:31:ILE:HD12 -- B:858:TRP:HH2"
+      "endpoint": "A:31:ILE:HD12 -- B:858:TRP:HH2",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:7",
@@ -3386,7 +3436,8 @@
       "row_ids": [
         "51"
       ],
-      "endpoint": "A:31:ILE:HD13 -- B:858:TRP:HH2"
+      "endpoint": "A:31:ILE:HD13 -- B:858:TRP:HH2",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:8",
@@ -3395,7 +3446,8 @@
       "row_ids": [
         "52"
       ],
-      "endpoint": "A:31:ILE:HD11 -- B:858:TRP:HZ3"
+      "endpoint": "A:31:ILE:HD11 -- B:858:TRP:HZ3",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:8",
@@ -3404,7 +3456,8 @@
       "row_ids": [
         "53"
       ],
-      "endpoint": "A:31:ILE:HD12 -- B:858:TRP:HZ3"
+      "endpoint": "A:31:ILE:HD12 -- B:858:TRP:HZ3",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:8",
@@ -3413,7 +3466,8 @@
       "row_ids": [
         "54"
       ],
-      "endpoint": "A:31:ILE:HD13 -- B:858:TRP:HZ3"
+      "endpoint": "A:31:ILE:HD13 -- B:858:TRP:HZ3",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:9",
@@ -3422,7 +3476,8 @@
       "row_ids": [
         "55"
       ],
-      "endpoint": "A:36:LEU:HD11 -- B:858:TRP:HE3"
+      "endpoint": "A:36:LEU:HD11 -- B:858:TRP:HE3",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:9",
@@ -3431,7 +3486,8 @@
       "row_ids": [
         "56"
       ],
-      "endpoint": "A:36:LEU:HD12 -- B:858:TRP:HE3"
+      "endpoint": "A:36:LEU:HD12 -- B:858:TRP:HE3",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:9",
@@ -3440,7 +3496,8 @@
       "row_ids": [
         "57"
       ],
-      "endpoint": "A:36:LEU:HD13 -- B:858:TRP:HE3"
+      "endpoint": "A:36:LEU:HD13 -- B:858:TRP:HE3",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:10",
@@ -3449,7 +3506,8 @@
       "row_ids": [
         "58"
       ],
-      "endpoint": "A:36:LEU:HD11 -- B:858:TRP:HZ3"
+      "endpoint": "A:36:LEU:HD11 -- B:858:TRP:HZ3",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:10",
@@ -3458,7 +3516,8 @@
       "row_ids": [
         "59"
       ],
-      "endpoint": "A:36:LEU:HD12 -- B:858:TRP:HZ3"
+      "endpoint": "A:36:LEU:HD12 -- B:858:TRP:HZ3",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:10",
@@ -3467,7 +3526,8 @@
       "row_ids": [
         "60"
       ],
-      "endpoint": "A:36:LEU:HD13 -- B:858:TRP:HZ3"
+      "endpoint": "A:36:LEU:HD13 -- B:858:TRP:HZ3",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:11",
@@ -3476,7 +3536,8 @@
       "row_ids": [
         "61"
       ],
-      "endpoint": "A:36:LEU:HD21 -- B:858:TRP:HE3"
+      "endpoint": "A:36:LEU:HD21 -- B:858:TRP:HE3",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:11",
@@ -3485,7 +3546,8 @@
       "row_ids": [
         "62"
       ],
-      "endpoint": "A:36:LEU:HD22 -- B:858:TRP:HE3"
+      "endpoint": "A:36:LEU:HD22 -- B:858:TRP:HE3",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:11",
@@ -3494,7 +3556,8 @@
       "row_ids": [
         "63"
       ],
-      "endpoint": "A:36:LEU:HD23 -- B:858:TRP:HE3"
+      "endpoint": "A:36:LEU:HD23 -- B:858:TRP:HE3",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:12",
@@ -3503,7 +3566,8 @@
       "row_ids": [
         "64"
       ],
-      "endpoint": "A:36:LEU:HD21 -- B:858:TRP:HZ3"
+      "endpoint": "A:36:LEU:HD21 -- B:858:TRP:HZ3",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:12",
@@ -3512,7 +3576,8 @@
       "row_ids": [
         "65"
       ],
-      "endpoint": "A:36:LEU:HD22 -- B:858:TRP:HZ3"
+      "endpoint": "A:36:LEU:HD22 -- B:858:TRP:HZ3",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:12",
@@ -3521,7 +3586,8 @@
       "row_ids": [
         "66"
       ],
-      "endpoint": "A:36:LEU:HD23 -- B:858:TRP:HZ3"
+      "endpoint": "A:36:LEU:HD23 -- B:858:TRP:HZ3",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:13",
@@ -3530,7 +3596,8 @@
       "row_ids": [
         "67"
       ],
-      "endpoint": "A:40:MET:HE1 -- B:858:TRP:HE3"
+      "endpoint": "A:40:MET:HE1 -- B:858:TRP:HE3",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:13",
@@ -3539,7 +3606,8 @@
       "row_ids": [
         "68"
       ],
-      "endpoint": "A:40:MET:HE2 -- B:858:TRP:HE3"
+      "endpoint": "A:40:MET:HE2 -- B:858:TRP:HE3",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:13",
@@ -3548,7 +3616,8 @@
       "row_ids": [
         "69"
       ],
-      "endpoint": "A:40:MET:HE3 -- B:858:TRP:HE3"
+      "endpoint": "A:40:MET:HE3 -- B:858:TRP:HE3",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:14",
@@ -3557,7 +3626,8 @@
       "row_ids": [
         "70"
       ],
-      "endpoint": "A:40:MET:HE1 -- B:858:TRP:HZ3"
+      "endpoint": "A:40:MET:HE1 -- B:858:TRP:HZ3",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:14",
@@ -3566,7 +3636,8 @@
       "row_ids": [
         "71"
       ],
-      "endpoint": "A:40:MET:HE2 -- B:858:TRP:HZ3"
+      "endpoint": "A:40:MET:HE2 -- B:858:TRP:HZ3",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:14",
@@ -3575,7 +3646,8 @@
       "row_ids": [
         "72"
       ],
-      "endpoint": "A:40:MET:HE3 -- B:858:TRP:HZ3"
+      "endpoint": "A:40:MET:HE3 -- B:858:TRP:HZ3",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:15",
@@ -3584,7 +3656,8 @@
       "row_ids": [
         "73"
       ],
-      "endpoint": "A:43:LEU:HD11 -- B:855:VAL:HG21"
+      "endpoint": "A:43:LEU:HD11 -- B:855:VAL:HG21",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:15",
@@ -3593,7 +3666,8 @@
       "row_ids": [
         "74"
       ],
-      "endpoint": "A:43:LEU:HD11 -- B:855:VAL:HG22"
+      "endpoint": "A:43:LEU:HD11 -- B:855:VAL:HG22",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:15",
@@ -3602,7 +3676,8 @@
       "row_ids": [
         "75"
       ],
-      "endpoint": "A:43:LEU:HD11 -- B:855:VAL:HG23"
+      "endpoint": "A:43:LEU:HD11 -- B:855:VAL:HG23",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:15",
@@ -3611,7 +3686,8 @@
       "row_ids": [
         "76"
       ],
-      "endpoint": "A:43:LEU:HD12 -- B:855:VAL:HG21"
+      "endpoint": "A:43:LEU:HD12 -- B:855:VAL:HG21",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:15",
@@ -3620,7 +3696,8 @@
       "row_ids": [
         "77"
       ],
-      "endpoint": "A:43:LEU:HD12 -- B:855:VAL:HG22"
+      "endpoint": "A:43:LEU:HD12 -- B:855:VAL:HG22",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:15",
@@ -3629,7 +3706,8 @@
       "row_ids": [
         "78"
       ],
-      "endpoint": "A:43:LEU:HD12 -- B:855:VAL:HG23"
+      "endpoint": "A:43:LEU:HD12 -- B:855:VAL:HG23",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:15",
@@ -3638,7 +3716,8 @@
       "row_ids": [
         "79"
       ],
-      "endpoint": "A:43:LEU:HD13 -- B:855:VAL:HG21"
+      "endpoint": "A:43:LEU:HD13 -- B:855:VAL:HG21",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:15",
@@ -3647,7 +3726,8 @@
       "row_ids": [
         "80"
       ],
-      "endpoint": "A:43:LEU:HD13 -- B:855:VAL:HG22"
+      "endpoint": "A:43:LEU:HD13 -- B:855:VAL:HG22",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:15",
@@ -3656,7 +3736,8 @@
       "row_ids": [
         "81"
       ],
-      "endpoint": "A:43:LEU:HD13 -- B:855:VAL:HG23"
+      "endpoint": "A:43:LEU:HD13 -- B:855:VAL:HG23",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:16",
@@ -3665,7 +3746,8 @@
       "row_ids": [
         "82"
       ],
-      "endpoint": "A:43:LEU:HD21 -- B:855:VAL:HG21"
+      "endpoint": "A:43:LEU:HD21 -- B:855:VAL:HG21",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:16",
@@ -3674,7 +3756,8 @@
       "row_ids": [
         "83"
       ],
-      "endpoint": "A:43:LEU:HD21 -- B:855:VAL:HG22"
+      "endpoint": "A:43:LEU:HD21 -- B:855:VAL:HG22",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:16",
@@ -3683,7 +3766,8 @@
       "row_ids": [
         "84"
       ],
-      "endpoint": "A:43:LEU:HD21 -- B:855:VAL:HG23"
+      "endpoint": "A:43:LEU:HD21 -- B:855:VAL:HG23",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:16",
@@ -3692,7 +3776,8 @@
       "row_ids": [
         "85"
       ],
-      "endpoint": "A:43:LEU:HD22 -- B:855:VAL:HG21"
+      "endpoint": "A:43:LEU:HD22 -- B:855:VAL:HG21",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:16",
@@ -3701,7 +3786,8 @@
       "row_ids": [
         "86"
       ],
-      "endpoint": "A:43:LEU:HD22 -- B:855:VAL:HG22"
+      "endpoint": "A:43:LEU:HD22 -- B:855:VAL:HG22",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:16",
@@ -3710,7 +3796,8 @@
       "row_ids": [
         "87"
       ],
-      "endpoint": "A:43:LEU:HD22 -- B:855:VAL:HG23"
+      "endpoint": "A:43:LEU:HD22 -- B:855:VAL:HG23",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:16",
@@ -3719,7 +3806,8 @@
       "row_ids": [
         "88"
       ],
-      "endpoint": "A:43:LEU:HD23 -- B:855:VAL:HG21"
+      "endpoint": "A:43:LEU:HD23 -- B:855:VAL:HG21",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:16",
@@ -3728,7 +3816,8 @@
       "row_ids": [
         "89"
       ],
-      "endpoint": "A:43:LEU:HD23 -- B:855:VAL:HG22"
+      "endpoint": "A:43:LEU:HD23 -- B:855:VAL:HG22",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:16",
@@ -3737,7 +3826,8 @@
       "row_ids": [
         "90"
       ],
-      "endpoint": "A:43:LEU:HD23 -- B:855:VAL:HG23"
+      "endpoint": "A:43:LEU:HD23 -- B:855:VAL:HG23",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:17",
@@ -3746,7 +3836,8 @@
       "row_ids": [
         "91"
       ],
-      "endpoint": "A:43:LEU:HD11 -- B:852:PHE:HDx"
+      "endpoint": "A:43:LEU:HD11 -- B:852:PHE:HDx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:17",
@@ -3755,7 +3846,8 @@
       "row_ids": [
         "92"
       ],
-      "endpoint": "A:43:LEU:HD11 -- B:852:PHE:HDy"
+      "endpoint": "A:43:LEU:HD11 -- B:852:PHE:HDy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:17",
@@ -3764,7 +3856,8 @@
       "row_ids": [
         "93"
       ],
-      "endpoint": "A:43:LEU:HD12 -- B:852:PHE:HDx"
+      "endpoint": "A:43:LEU:HD12 -- B:852:PHE:HDx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:17",
@@ -3773,7 +3866,8 @@
       "row_ids": [
         "94"
       ],
-      "endpoint": "A:43:LEU:HD12 -- B:852:PHE:HDy"
+      "endpoint": "A:43:LEU:HD12 -- B:852:PHE:HDy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:17",
@@ -3782,7 +3876,8 @@
       "row_ids": [
         "95"
       ],
-      "endpoint": "A:43:LEU:HD13 -- B:852:PHE:HDx"
+      "endpoint": "A:43:LEU:HD13 -- B:852:PHE:HDx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:17",
@@ -3791,7 +3886,8 @@
       "row_ids": [
         "96"
       ],
-      "endpoint": "A:43:LEU:HD13 -- B:852:PHE:HDy"
+      "endpoint": "A:43:LEU:HD13 -- B:852:PHE:HDy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:18",
@@ -3800,7 +3896,8 @@
       "row_ids": [
         "97"
       ],
-      "endpoint": "A:43:LEU:HD11 -- B:852:PHE:HEx"
+      "endpoint": "A:43:LEU:HD11 -- B:852:PHE:HEx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:18",
@@ -3809,7 +3906,8 @@
       "row_ids": [
         "98"
       ],
-      "endpoint": "A:43:LEU:HD11 -- B:852:PHE:HEy"
+      "endpoint": "A:43:LEU:HD11 -- B:852:PHE:HEy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:18",
@@ -3818,7 +3916,8 @@
       "row_ids": [
         "99"
       ],
-      "endpoint": "A:43:LEU:HD12 -- B:852:PHE:HEx"
+      "endpoint": "A:43:LEU:HD12 -- B:852:PHE:HEx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:18",
@@ -3827,7 +3926,8 @@
       "row_ids": [
         "100"
       ],
-      "endpoint": "A:43:LEU:HD12 -- B:852:PHE:HEy"
+      "endpoint": "A:43:LEU:HD12 -- B:852:PHE:HEy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:18",
@@ -3836,7 +3936,8 @@
       "row_ids": [
         "101"
       ],
-      "endpoint": "A:43:LEU:HD13 -- B:852:PHE:HEx"
+      "endpoint": "A:43:LEU:HD13 -- B:852:PHE:HEx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:18",
@@ -3845,7 +3946,8 @@
       "row_ids": [
         "102"
       ],
-      "endpoint": "A:43:LEU:HD13 -- B:852:PHE:HEy"
+      "endpoint": "A:43:LEU:HD13 -- B:852:PHE:HEy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:19",
@@ -3854,7 +3956,8 @@
       "row_ids": [
         "103"
       ],
-      "endpoint": "A:43:LEU:HD21 -- B:852:PHE:HDx"
+      "endpoint": "A:43:LEU:HD21 -- B:852:PHE:HDx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:19",
@@ -3863,7 +3966,8 @@
       "row_ids": [
         "104"
       ],
-      "endpoint": "A:43:LEU:HD21 -- B:852:PHE:HDy"
+      "endpoint": "A:43:LEU:HD21 -- B:852:PHE:HDy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:19",
@@ -3872,7 +3976,8 @@
       "row_ids": [
         "105"
       ],
-      "endpoint": "A:43:LEU:HD22 -- B:852:PHE:HDx"
+      "endpoint": "A:43:LEU:HD22 -- B:852:PHE:HDx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:19",
@@ -3881,7 +3986,8 @@
       "row_ids": [
         "106"
       ],
-      "endpoint": "A:43:LEU:HD22 -- B:852:PHE:HDy"
+      "endpoint": "A:43:LEU:HD22 -- B:852:PHE:HDy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:19",
@@ -3890,7 +3996,8 @@
       "row_ids": [
         "107"
       ],
-      "endpoint": "A:43:LEU:HD23 -- B:852:PHE:HDx"
+      "endpoint": "A:43:LEU:HD23 -- B:852:PHE:HDx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:19",
@@ -3899,7 +4006,8 @@
       "row_ids": [
         "108"
       ],
-      "endpoint": "A:43:LEU:HD23 -- B:852:PHE:HDy"
+      "endpoint": "A:43:LEU:HD23 -- B:852:PHE:HDy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:20",
@@ -3908,7 +4016,8 @@
       "row_ids": [
         "109"
       ],
-      "endpoint": "A:43:LEU:HD21 -- B:852:PHE:HEx"
+      "endpoint": "A:43:LEU:HD21 -- B:852:PHE:HEx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:20",
@@ -3917,7 +4026,8 @@
       "row_ids": [
         "110"
       ],
-      "endpoint": "A:43:LEU:HD21 -- B:852:PHE:HEy"
+      "endpoint": "A:43:LEU:HD21 -- B:852:PHE:HEy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:20",
@@ -3926,7 +4036,8 @@
       "row_ids": [
         "111"
       ],
-      "endpoint": "A:43:LEU:HD22 -- B:852:PHE:HEx"
+      "endpoint": "A:43:LEU:HD22 -- B:852:PHE:HEx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:20",
@@ -3935,7 +4046,8 @@
       "row_ids": [
         "112"
       ],
-      "endpoint": "A:43:LEU:HD22 -- B:852:PHE:HEy"
+      "endpoint": "A:43:LEU:HD22 -- B:852:PHE:HEy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:20",
@@ -3944,7 +4056,8 @@
       "row_ids": [
         "113"
       ],
-      "endpoint": "A:43:LEU:HD23 -- B:852:PHE:HEx"
+      "endpoint": "A:43:LEU:HD23 -- B:852:PHE:HEx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:20",
@@ -3953,7 +4066,8 @@
       "row_ids": [
         "114"
       ],
-      "endpoint": "A:43:LEU:HD23 -- B:852:PHE:HEy"
+      "endpoint": "A:43:LEU:HD23 -- B:852:PHE:HEy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:21",
@@ -3962,7 +4076,8 @@
       "row_ids": [
         "115"
       ],
-      "endpoint": "A:55:MET:HE1 -- B:858:TRP:HZ3"
+      "endpoint": "A:55:MET:HE1 -- B:858:TRP:HZ3",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:21",
@@ -3971,7 +4086,8 @@
       "row_ids": [
         "116"
       ],
-      "endpoint": "A:55:MET:HE2 -- B:858:TRP:HZ3"
+      "endpoint": "A:55:MET:HE2 -- B:858:TRP:HZ3",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:21",
@@ -3980,7 +4096,8 @@
       "row_ids": [
         "117"
       ],
-      "endpoint": "A:55:MET:HE3 -- B:858:TRP:HZ3"
+      "endpoint": "A:55:MET:HE3 -- B:858:TRP:HZ3",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:22",
@@ -3989,7 +4106,8 @@
       "row_ids": [
         "118"
       ],
-      "endpoint": "A:67:ILE:HG21 -- B:858:TRP:HH2"
+      "endpoint": "A:67:ILE:HG21 -- B:858:TRP:HH2",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:22",
@@ -3998,7 +4116,8 @@
       "row_ids": [
         "119"
       ],
-      "endpoint": "A:67:ILE:HG22 -- B:858:TRP:HH2"
+      "endpoint": "A:67:ILE:HG22 -- B:858:TRP:HH2",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:22",
@@ -4007,7 +4126,8 @@
       "row_ids": [
         "120"
       ],
-      "endpoint": "A:67:ILE:HG23 -- B:858:TRP:HH2"
+      "endpoint": "A:67:ILE:HG23 -- B:858:TRP:HH2",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:23",
@@ -4016,7 +4136,8 @@
       "row_ids": [
         "121"
       ],
-      "endpoint": "A:67:ILE:HG21 -- B:858:TRP:HZ2"
+      "endpoint": "A:67:ILE:HG21 -- B:858:TRP:HZ2",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:23",
@@ -4025,7 +4146,8 @@
       "row_ids": [
         "122"
       ],
-      "endpoint": "A:67:ILE:HG22 -- B:858:TRP:HZ2"
+      "endpoint": "A:67:ILE:HG22 -- B:858:TRP:HZ2",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:23",
@@ -4034,7 +4156,8 @@
       "row_ids": [
         "123"
       ],
-      "endpoint": "A:67:ILE:HG23 -- B:858:TRP:HZ2"
+      "endpoint": "A:67:ILE:HG23 -- B:858:TRP:HZ2",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:24",
@@ -4043,7 +4166,8 @@
       "row_ids": [
         "124"
       ],
-      "endpoint": "A:67:ILE:HD11 -- B:858:TRP:HH2"
+      "endpoint": "A:67:ILE:HD11 -- B:858:TRP:HH2",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:24",
@@ -4052,7 +4176,8 @@
       "row_ids": [
         "125"
       ],
-      "endpoint": "A:67:ILE:HD12 -- B:858:TRP:HH2"
+      "endpoint": "A:67:ILE:HD12 -- B:858:TRP:HH2",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:24",
@@ -4061,7 +4186,8 @@
       "row_ids": [
         "126"
       ],
-      "endpoint": "A:67:ILE:HD13 -- B:858:TRP:HH2"
+      "endpoint": "A:67:ILE:HD13 -- B:858:TRP:HH2",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:25",
@@ -4070,7 +4196,8 @@
       "row_ids": [
         "127"
       ],
-      "endpoint": "A:67:ILE:HD11 -- B:858:TRP:HZ2"
+      "endpoint": "A:67:ILE:HD11 -- B:858:TRP:HZ2",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:25",
@@ -4079,7 +4206,8 @@
       "row_ids": [
         "128"
       ],
-      "endpoint": "A:67:ILE:HD12 -- B:858:TRP:HZ2"
+      "endpoint": "A:67:ILE:HD12 -- B:858:TRP:HZ2",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:25",
@@ -4088,7 +4216,8 @@
       "row_ids": [
         "129"
       ],
-      "endpoint": "A:67:ILE:HD13 -- B:858:TRP:HZ2"
+      "endpoint": "A:67:ILE:HD13 -- B:858:TRP:HZ2",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:26",
@@ -4097,7 +4226,8 @@
       "row_ids": [
         "130"
       ],
-      "endpoint": "A:75:MET:HE1 -- B:858:TRP:HD1"
+      "endpoint": "A:75:MET:HE1 -- B:858:TRP:HD1",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:26",
@@ -4106,7 +4236,8 @@
       "row_ids": [
         "131"
       ],
-      "endpoint": "A:75:MET:HE2 -- B:858:TRP:HD1"
+      "endpoint": "A:75:MET:HE2 -- B:858:TRP:HD1",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:26",
@@ -4115,7 +4246,8 @@
       "row_ids": [
         "132"
       ],
-      "endpoint": "A:75:MET:HE3 -- B:858:TRP:HD1"
+      "endpoint": "A:75:MET:HE3 -- B:858:TRP:HD1",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:27",
@@ -4124,7 +4256,8 @@
       "row_ids": [
         "133"
       ],
-      "endpoint": "A:75:MET:HE1 -- B:858:TRP:HZ2"
+      "endpoint": "A:75:MET:HE1 -- B:858:TRP:HZ2",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:27",
@@ -4133,7 +4266,8 @@
       "row_ids": [
         "134"
       ],
-      "endpoint": "A:75:MET:HE2 -- B:858:TRP:HZ2"
+      "endpoint": "A:75:MET:HE2 -- B:858:TRP:HZ2",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:27",
@@ -4142,7 +4276,8 @@
       "row_ids": [
         "135"
       ],
-      "endpoint": "A:75:MET:HE3 -- B:858:TRP:HZ2"
+      "endpoint": "A:75:MET:HE3 -- B:858:TRP:HZ2",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:28",
@@ -4151,7 +4286,8 @@
       "row_ids": [
         "136"
       ],
-      "endpoint": "A:76:MET:HE1 -- B:857:VAL:HG21"
+      "endpoint": "A:76:MET:HE1 -- B:857:VAL:HG21",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:28",
@@ -4160,7 +4296,8 @@
       "row_ids": [
         "137"
       ],
-      "endpoint": "A:76:MET:HE1 -- B:857:VAL:HG22"
+      "endpoint": "A:76:MET:HE1 -- B:857:VAL:HG22",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:28",
@@ -4169,7 +4306,8 @@
       "row_ids": [
         "138"
       ],
-      "endpoint": "A:76:MET:HE1 -- B:857:VAL:HG23"
+      "endpoint": "A:76:MET:HE1 -- B:857:VAL:HG23",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:28",
@@ -4178,7 +4316,8 @@
       "row_ids": [
         "139"
       ],
-      "endpoint": "A:76:MET:HE2 -- B:857:VAL:HG21"
+      "endpoint": "A:76:MET:HE2 -- B:857:VAL:HG21",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:28",
@@ -4187,7 +4326,8 @@
       "row_ids": [
         "140"
       ],
-      "endpoint": "A:76:MET:HE2 -- B:857:VAL:HG22"
+      "endpoint": "A:76:MET:HE2 -- B:857:VAL:HG22",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:28",
@@ -4196,7 +4336,8 @@
       "row_ids": [
         "141"
       ],
-      "endpoint": "A:76:MET:HE2 -- B:857:VAL:HG23"
+      "endpoint": "A:76:MET:HE2 -- B:857:VAL:HG23",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:28",
@@ -4205,7 +4346,8 @@
       "row_ids": [
         "142"
       ],
-      "endpoint": "A:76:MET:HE3 -- B:857:VAL:HG21"
+      "endpoint": "A:76:MET:HE3 -- B:857:VAL:HG21",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:28",
@@ -4214,7 +4356,8 @@
       "row_ids": [
         "143"
       ],
-      "endpoint": "A:76:MET:HE3 -- B:857:VAL:HG22"
+      "endpoint": "A:76:MET:HE3 -- B:857:VAL:HG22",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:28",
@@ -4223,7 +4366,8 @@
       "row_ids": [
         "144"
       ],
-      "endpoint": "A:76:MET:HE3 -- B:857:VAL:HG23"
+      "endpoint": "A:76:MET:HE3 -- B:857:VAL:HG23",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:29",
@@ -4232,7 +4376,8 @@
       "row_ids": [
         "145"
       ],
-      "endpoint": "A:76:MET:HE1 -- B:858:TRP:HD1"
+      "endpoint": "A:76:MET:HE1 -- B:858:TRP:HD1",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:29",
@@ -4241,7 +4386,8 @@
       "row_ids": [
         "146"
       ],
-      "endpoint": "A:76:MET:HE2 -- B:858:TRP:HD1"
+      "endpoint": "A:76:MET:HE2 -- B:858:TRP:HD1",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:29",
@@ -4250,7 +4396,8 @@
       "row_ids": [
         "147"
       ],
-      "endpoint": "A:76:MET:HE3 -- B:858:TRP:HD1"
+      "endpoint": "A:76:MET:HE3 -- B:858:TRP:HD1",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:30",
@@ -4259,7 +4406,8 @@
       "row_ids": [
         "148"
       ],
-      "endpoint": "A:80:MET:HE1 -- B:857:VAL:HG11"
+      "endpoint": "A:80:MET:HE1 -- B:857:VAL:HG11",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:30",
@@ -4268,7 +4416,8 @@
       "row_ids": [
         "149"
       ],
-      "endpoint": "A:80:MET:HE1 -- B:857:VAL:HG12"
+      "endpoint": "A:80:MET:HE1 -- B:857:VAL:HG12",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:30",
@@ -4277,7 +4426,8 @@
       "row_ids": [
         "150"
       ],
-      "endpoint": "A:80:MET:HE1 -- B:857:VAL:HG13"
+      "endpoint": "A:80:MET:HE1 -- B:857:VAL:HG13",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:30",
@@ -4286,7 +4436,8 @@
       "row_ids": [
         "151"
       ],
-      "endpoint": "A:80:MET:HE2 -- B:857:VAL:HG11"
+      "endpoint": "A:80:MET:HE2 -- B:857:VAL:HG11",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:30",
@@ -4295,7 +4446,8 @@
       "row_ids": [
         "152"
       ],
-      "endpoint": "A:80:MET:HE2 -- B:857:VAL:HG12"
+      "endpoint": "A:80:MET:HE2 -- B:857:VAL:HG12",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:30",
@@ -4304,7 +4456,8 @@
       "row_ids": [
         "153"
       ],
-      "endpoint": "A:80:MET:HE2 -- B:857:VAL:HG13"
+      "endpoint": "A:80:MET:HE2 -- B:857:VAL:HG13",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:30",
@@ -4313,7 +4466,8 @@
       "row_ids": [
         "154"
       ],
-      "endpoint": "A:80:MET:HE3 -- B:857:VAL:HG11"
+      "endpoint": "A:80:MET:HE3 -- B:857:VAL:HG11",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:30",
@@ -4322,7 +4476,8 @@
       "row_ids": [
         "155"
       ],
-      "endpoint": "A:80:MET:HE3 -- B:857:VAL:HG12"
+      "endpoint": "A:80:MET:HE3 -- B:857:VAL:HG12",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:30",
@@ -4331,7 +4486,8 @@
       "row_ids": [
         "156"
       ],
-      "endpoint": "A:80:MET:HE3 -- B:857:VAL:HG13"
+      "endpoint": "A:80:MET:HE3 -- B:857:VAL:HG13",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:31",
@@ -4340,7 +4496,8 @@
       "row_ids": [
         "157"
       ],
-      "endpoint": "A:80:MET:HE1 -- B:857:VAL:HG11"
+      "endpoint": "A:80:MET:HE1 -- B:857:VAL:HG11",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:31",
@@ -4349,7 +4506,8 @@
       "row_ids": [
         "158"
       ],
-      "endpoint": "A:80:MET:HE1 -- B:857:VAL:HG12"
+      "endpoint": "A:80:MET:HE1 -- B:857:VAL:HG12",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:31",
@@ -4358,7 +4516,8 @@
       "row_ids": [
         "159"
       ],
-      "endpoint": "A:80:MET:HE1 -- B:857:VAL:HG13"
+      "endpoint": "A:80:MET:HE1 -- B:857:VAL:HG13",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:31",
@@ -4367,7 +4526,8 @@
       "row_ids": [
         "160"
       ],
-      "endpoint": "A:80:MET:HE2 -- B:857:VAL:HG11"
+      "endpoint": "A:80:MET:HE2 -- B:857:VAL:HG11",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:31",
@@ -4376,7 +4536,8 @@
       "row_ids": [
         "161"
       ],
-      "endpoint": "A:80:MET:HE2 -- B:857:VAL:HG12"
+      "endpoint": "A:80:MET:HE2 -- B:857:VAL:HG12",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:31",
@@ -4385,7 +4546,8 @@
       "row_ids": [
         "162"
       ],
-      "endpoint": "A:80:MET:HE2 -- B:857:VAL:HG13"
+      "endpoint": "A:80:MET:HE2 -- B:857:VAL:HG13",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:31",
@@ -4394,7 +4556,8 @@
       "row_ids": [
         "163"
       ],
-      "endpoint": "A:80:MET:HE3 -- B:857:VAL:HG11"
+      "endpoint": "A:80:MET:HE3 -- B:857:VAL:HG11",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:31",
@@ -4403,7 +4566,8 @@
       "row_ids": [
         "164"
       ],
-      "endpoint": "A:80:MET:HE3 -- B:857:VAL:HG12"
+      "endpoint": "A:80:MET:HE3 -- B:857:VAL:HG12",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:31",
@@ -4412,7 +4576,8 @@
       "row_ids": [
         "165"
       ],
-      "endpoint": "A:80:MET:HE3 -- B:857:VAL:HG13"
+      "endpoint": "A:80:MET:HE3 -- B:857:VAL:HG13",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:33",
@@ -4421,7 +4586,8 @@
       "row_ids": [
         "172"
       ],
-      "endpoint": "A:89:ILE:HD11 -- B:857:VAL:HG11"
+      "endpoint": "A:89:ILE:HD11 -- B:857:VAL:HG11",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:33",
@@ -4430,7 +4596,8 @@
       "row_ids": [
         "173"
       ],
-      "endpoint": "A:89:ILE:HD11 -- B:857:VAL:HG12"
+      "endpoint": "A:89:ILE:HD11 -- B:857:VAL:HG12",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:33",
@@ -4439,7 +4606,8 @@
       "row_ids": [
         "174"
       ],
-      "endpoint": "A:89:ILE:HD11 -- B:857:VAL:HG13"
+      "endpoint": "A:89:ILE:HD11 -- B:857:VAL:HG13",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:33",
@@ -4448,7 +4616,8 @@
       "row_ids": [
         "175"
       ],
-      "endpoint": "A:89:ILE:HD12 -- B:857:VAL:HG11"
+      "endpoint": "A:89:ILE:HD12 -- B:857:VAL:HG11",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:33",
@@ -4457,7 +4626,8 @@
       "row_ids": [
         "176"
       ],
-      "endpoint": "A:89:ILE:HD12 -- B:857:VAL:HG12"
+      "endpoint": "A:89:ILE:HD12 -- B:857:VAL:HG12",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:33",
@@ -4466,7 +4636,8 @@
       "row_ids": [
         "177"
       ],
-      "endpoint": "A:89:ILE:HD12 -- B:857:VAL:HG13"
+      "endpoint": "A:89:ILE:HD12 -- B:857:VAL:HG13",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:33",
@@ -4475,7 +4646,8 @@
       "row_ids": [
         "178"
       ],
-      "endpoint": "A:89:ILE:HD13 -- B:857:VAL:HG11"
+      "endpoint": "A:89:ILE:HD13 -- B:857:VAL:HG11",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:33",
@@ -4484,7 +4656,8 @@
       "row_ids": [
         "179"
       ],
-      "endpoint": "A:89:ILE:HD13 -- B:857:VAL:HG12"
+      "endpoint": "A:89:ILE:HD13 -- B:857:VAL:HG12",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:33",
@@ -4493,7 +4666,8 @@
       "row_ids": [
         "180"
       ],
-      "endpoint": "A:89:ILE:HD13 -- B:857:VAL:HG13"
+      "endpoint": "A:89:ILE:HD13 -- B:857:VAL:HG13",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:34",
@@ -4502,7 +4676,8 @@
       "row_ids": [
         "181"
       ],
-      "endpoint": "A:92:ALA:HB1 -- B:852:PHE:HDx"
+      "endpoint": "A:92:ALA:HB1 -- B:852:PHE:HDx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:34",
@@ -4511,7 +4686,8 @@
       "row_ids": [
         "182"
       ],
-      "endpoint": "A:92:ALA:HB1 -- B:852:PHE:HDy"
+      "endpoint": "A:92:ALA:HB1 -- B:852:PHE:HDy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:34",
@@ -4520,7 +4696,8 @@
       "row_ids": [
         "183"
       ],
-      "endpoint": "A:92:ALA:HB2 -- B:852:PHE:HDx"
+      "endpoint": "A:92:ALA:HB2 -- B:852:PHE:HDx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:34",
@@ -4529,7 +4706,8 @@
       "row_ids": [
         "184"
       ],
-      "endpoint": "A:92:ALA:HB2 -- B:852:PHE:HDy"
+      "endpoint": "A:92:ALA:HB2 -- B:852:PHE:HDy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:34",
@@ -4538,7 +4716,8 @@
       "row_ids": [
         "185"
       ],
-      "endpoint": "A:92:ALA:HB3 -- B:852:PHE:HDx"
+      "endpoint": "A:92:ALA:HB3 -- B:852:PHE:HDx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:34",
@@ -4547,7 +4726,8 @@
       "row_ids": [
         "186"
       ],
-      "endpoint": "A:92:ALA:HB3 -- B:852:PHE:HDy"
+      "endpoint": "A:92:ALA:HB3 -- B:852:PHE:HDy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:35",
@@ -4556,7 +4736,8 @@
       "row_ids": [
         "187"
       ],
-      "endpoint": "A:92:ALA:HB1 -- B:852:PHE:HEx"
+      "endpoint": "A:92:ALA:HB1 -- B:852:PHE:HEx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:35",
@@ -4565,7 +4746,8 @@
       "row_ids": [
         "188"
       ],
-      "endpoint": "A:92:ALA:HB1 -- B:852:PHE:HEy"
+      "endpoint": "A:92:ALA:HB1 -- B:852:PHE:HEy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:35",
@@ -4574,7 +4756,8 @@
       "row_ids": [
         "189"
       ],
-      "endpoint": "A:92:ALA:HB2 -- B:852:PHE:HEx"
+      "endpoint": "A:92:ALA:HB2 -- B:852:PHE:HEx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:35",
@@ -4583,7 +4766,8 @@
       "row_ids": [
         "190"
       ],
-      "endpoint": "A:92:ALA:HB2 -- B:852:PHE:HEy"
+      "endpoint": "A:92:ALA:HB2 -- B:852:PHE:HEy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:35",
@@ -4592,7 +4776,8 @@
       "row_ids": [
         "191"
       ],
-      "endpoint": "A:92:ALA:HB3 -- B:852:PHE:HEx"
+      "endpoint": "A:92:ALA:HB3 -- B:852:PHE:HEx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:35",
@@ -4601,7 +4786,8 @@
       "row_ids": [
         "192"
       ],
-      "endpoint": "A:92:ALA:HB3 -- B:852:PHE:HEy"
+      "endpoint": "A:92:ALA:HB3 -- B:852:PHE:HEy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:36",
@@ -4610,7 +4796,8 @@
       "row_ids": [
         "193"
       ],
-      "endpoint": "A:92:ALA:HB1 -- B:852:PHE:HZ"
+      "endpoint": "A:92:ALA:HB1 -- B:852:PHE:HZ",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:36",
@@ -4619,7 +4806,8 @@
       "row_ids": [
         "194"
       ],
-      "endpoint": "A:92:ALA:HB2 -- B:852:PHE:HZ"
+      "endpoint": "A:92:ALA:HB2 -- B:852:PHE:HZ",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:36",
@@ -4628,7 +4816,8 @@
       "row_ids": [
         "195"
       ],
-      "endpoint": "A:92:ALA:HB3 -- B:852:PHE:HZ"
+      "endpoint": "A:92:ALA:HB3 -- B:852:PHE:HZ",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:37",
@@ -4637,7 +4826,8 @@
       "row_ids": [
         "196"
       ],
-      "endpoint": "A:95:VAL:HG11 -- B:852:PHE:HEx"
+      "endpoint": "A:95:VAL:HG11 -- B:852:PHE:HEx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:37",
@@ -4646,7 +4836,8 @@
       "row_ids": [
         "197"
       ],
-      "endpoint": "A:95:VAL:HG11 -- B:852:PHE:HEy"
+      "endpoint": "A:95:VAL:HG11 -- B:852:PHE:HEy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:37",
@@ -4655,7 +4846,8 @@
       "row_ids": [
         "198"
       ],
-      "endpoint": "A:95:VAL:HG12 -- B:852:PHE:HEx"
+      "endpoint": "A:95:VAL:HG12 -- B:852:PHE:HEx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:37",
@@ -4664,7 +4856,8 @@
       "row_ids": [
         "199"
       ],
-      "endpoint": "A:95:VAL:HG12 -- B:852:PHE:HEy"
+      "endpoint": "A:95:VAL:HG12 -- B:852:PHE:HEy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:37",
@@ -4673,7 +4866,8 @@
       "row_ids": [
         "200"
       ],
-      "endpoint": "A:95:VAL:HG13 -- B:852:PHE:HEx"
+      "endpoint": "A:95:VAL:HG13 -- B:852:PHE:HEx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:37",
@@ -4682,7 +4876,8 @@
       "row_ids": [
         "201"
       ],
-      "endpoint": "A:95:VAL:HG13 -- B:852:PHE:HEy"
+      "endpoint": "A:95:VAL:HG13 -- B:852:PHE:HEy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:38",
@@ -4691,7 +4886,8 @@
       "row_ids": [
         "202"
       ],
-      "endpoint": "A:95:VAL:HG11 -- B:852:PHE:HZ"
+      "endpoint": "A:95:VAL:HG11 -- B:852:PHE:HZ",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:38",
@@ -4700,7 +4896,8 @@
       "row_ids": [
         "203"
       ],
-      "endpoint": "A:95:VAL:HG12 -- B:852:PHE:HZ"
+      "endpoint": "A:95:VAL:HG12 -- B:852:PHE:HZ",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:38",
@@ -4709,7 +4906,8 @@
       "row_ids": [
         "204"
       ],
-      "endpoint": "A:95:VAL:HG13 -- B:852:PHE:HZ"
+      "endpoint": "A:95:VAL:HG13 -- B:852:PHE:HZ",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:39",
@@ -4718,7 +4916,8 @@
       "row_ids": [
         "205"
       ],
-      "endpoint": "A:95:VAL:HG21 -- B:852:PHE:HEx"
+      "endpoint": "A:95:VAL:HG21 -- B:852:PHE:HEx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:39",
@@ -4727,7 +4926,8 @@
       "row_ids": [
         "206"
       ],
-      "endpoint": "A:95:VAL:HG21 -- B:852:PHE:HEy"
+      "endpoint": "A:95:VAL:HG21 -- B:852:PHE:HEy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:39",
@@ -4736,7 +4936,8 @@
       "row_ids": [
         "207"
       ],
-      "endpoint": "A:95:VAL:HG22 -- B:852:PHE:HEx"
+      "endpoint": "A:95:VAL:HG22 -- B:852:PHE:HEx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:39",
@@ -4745,7 +4946,8 @@
       "row_ids": [
         "208"
       ],
-      "endpoint": "A:95:VAL:HG22 -- B:852:PHE:HEy"
+      "endpoint": "A:95:VAL:HG22 -- B:852:PHE:HEy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:39",
@@ -4754,7 +4956,8 @@
       "row_ids": [
         "209"
       ],
-      "endpoint": "A:95:VAL:HG23 -- B:852:PHE:HEx"
+      "endpoint": "A:95:VAL:HG23 -- B:852:PHE:HEx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:39",
@@ -4763,7 +4966,8 @@
       "row_ids": [
         "210"
       ],
-      "endpoint": "A:95:VAL:HG23 -- B:852:PHE:HEy"
+      "endpoint": "A:95:VAL:HG23 -- B:852:PHE:HEy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:40",
@@ -4772,7 +4976,8 @@
       "row_ids": [
         "211"
       ],
-      "endpoint": "A:95:VAL:HG21 -- B:852:PHE:HZ"
+      "endpoint": "A:95:VAL:HG21 -- B:852:PHE:HZ",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:40",
@@ -4781,7 +4986,8 @@
       "row_ids": [
         "212"
       ],
-      "endpoint": "A:95:VAL:HG22 -- B:852:PHE:HZ"
+      "endpoint": "A:95:VAL:HG22 -- B:852:PHE:HZ",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:40",
@@ -4790,7 +4996,8 @@
       "row_ids": [
         "213"
       ],
-      "endpoint": "A:95:VAL:HG23 -- B:852:PHE:HZ"
+      "endpoint": "A:95:VAL:HG23 -- B:852:PHE:HZ",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:41",
@@ -4799,7 +5006,8 @@
       "row_ids": [
         "214"
       ],
-      "endpoint": "A:104:ILE:HD11 -- B:852:PHE:HZ"
+      "endpoint": "A:104:ILE:HD11 -- B:852:PHE:HZ",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:41",
@@ -4808,7 +5016,8 @@
       "row_ids": [
         "215"
       ],
-      "endpoint": "A:104:ILE:HD12 -- B:852:PHE:HZ"
+      "endpoint": "A:104:ILE:HD12 -- B:852:PHE:HZ",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:41",
@@ -4817,7 +5026,8 @@
       "row_ids": [
         "216"
       ],
-      "endpoint": "A:104:ILE:HD13 -- B:852:PHE:HZ"
+      "endpoint": "A:104:ILE:HD13 -- B:852:PHE:HZ",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:42",
@@ -4826,7 +5036,8 @@
       "row_ids": [
         "217"
       ],
-      "endpoint": "A:109:LEU:HD11 -- B:852:PHE:HEx"
+      "endpoint": "A:109:LEU:HD11 -- B:852:PHE:HEx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:42",
@@ -4835,7 +5046,8 @@
       "row_ids": [
         "218"
       ],
-      "endpoint": "A:109:LEU:HD11 -- B:852:PHE:HEy"
+      "endpoint": "A:109:LEU:HD11 -- B:852:PHE:HEy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:42",
@@ -4844,7 +5056,8 @@
       "row_ids": [
         "219"
       ],
-      "endpoint": "A:109:LEU:HD12 -- B:852:PHE:HEx"
+      "endpoint": "A:109:LEU:HD12 -- B:852:PHE:HEx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:42",
@@ -4853,7 +5066,8 @@
       "row_ids": [
         "220"
       ],
-      "endpoint": "A:109:LEU:HD12 -- B:852:PHE:HEy"
+      "endpoint": "A:109:LEU:HD12 -- B:852:PHE:HEy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:42",
@@ -4862,7 +5076,8 @@
       "row_ids": [
         "221"
       ],
-      "endpoint": "A:109:LEU:HD13 -- B:852:PHE:HEx"
+      "endpoint": "A:109:LEU:HD13 -- B:852:PHE:HEx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:42",
@@ -4871,7 +5086,8 @@
       "row_ids": [
         "222"
       ],
-      "endpoint": "A:109:LEU:HD13 -- B:852:PHE:HEy"
+      "endpoint": "A:109:LEU:HD13 -- B:852:PHE:HEy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:43",
@@ -4880,7 +5096,8 @@
       "row_ids": [
         "223"
       ],
-      "endpoint": "A:112:VAL:HG11 -- B:852:PHE:HEx"
+      "endpoint": "A:112:VAL:HG11 -- B:852:PHE:HEx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:43",
@@ -4889,7 +5106,8 @@
       "row_ids": [
         "224"
       ],
-      "endpoint": "A:112:VAL:HG11 -- B:852:PHE:HEy"
+      "endpoint": "A:112:VAL:HG11 -- B:852:PHE:HEy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:43",
@@ -4898,7 +5116,8 @@
       "row_ids": [
         "225"
       ],
-      "endpoint": "A:112:VAL:HG12 -- B:852:PHE:HEx"
+      "endpoint": "A:112:VAL:HG12 -- B:852:PHE:HEx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:43",
@@ -4907,7 +5126,8 @@
       "row_ids": [
         "226"
       ],
-      "endpoint": "A:112:VAL:HG12 -- B:852:PHE:HEy"
+      "endpoint": "A:112:VAL:HG12 -- B:852:PHE:HEy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:43",
@@ -4916,7 +5136,8 @@
       "row_ids": [
         "227"
       ],
-      "endpoint": "A:112:VAL:HG13 -- B:852:PHE:HEx"
+      "endpoint": "A:112:VAL:HG13 -- B:852:PHE:HEx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:43",
@@ -4925,7 +5146,8 @@
       "row_ids": [
         "228"
       ],
-      "endpoint": "A:112:VAL:HG13 -- B:852:PHE:HEy"
+      "endpoint": "A:112:VAL:HG13 -- B:852:PHE:HEy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:44",
@@ -4934,7 +5156,8 @@
       "row_ids": [
         "229"
       ],
-      "endpoint": "A:112:VAL:HG11 -- B:852:PHE:HZ"
+      "endpoint": "A:112:VAL:HG11 -- B:852:PHE:HZ",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:44",
@@ -4943,7 +5166,8 @@
       "row_ids": [
         "230"
       ],
-      "endpoint": "A:112:VAL:HG12 -- B:852:PHE:HZ"
+      "endpoint": "A:112:VAL:HG12 -- B:852:PHE:HZ",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:44",
@@ -4952,7 +5176,8 @@
       "row_ids": [
         "231"
       ],
-      "endpoint": "A:112:VAL:HG13 -- B:852:PHE:HZ"
+      "endpoint": "A:112:VAL:HG13 -- B:852:PHE:HZ",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:45",
@@ -4961,7 +5186,8 @@
       "row_ids": [
         "232"
       ],
-      "endpoint": "A:112:VAL:HG21 -- B:852:PHE:HEx"
+      "endpoint": "A:112:VAL:HG21 -- B:852:PHE:HEx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:45",
@@ -4970,7 +5196,8 @@
       "row_ids": [
         "233"
       ],
-      "endpoint": "A:112:VAL:HG21 -- B:852:PHE:HEy"
+      "endpoint": "A:112:VAL:HG21 -- B:852:PHE:HEy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:45",
@@ -4979,7 +5206,8 @@
       "row_ids": [
         "234"
       ],
-      "endpoint": "A:112:VAL:HG22 -- B:852:PHE:HEx"
+      "endpoint": "A:112:VAL:HG22 -- B:852:PHE:HEx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:45",
@@ -4988,7 +5216,8 @@
       "row_ids": [
         "235"
       ],
-      "endpoint": "A:112:VAL:HG22 -- B:852:PHE:HEy"
+      "endpoint": "A:112:VAL:HG22 -- B:852:PHE:HEy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:45",
@@ -4997,7 +5226,8 @@
       "row_ids": [
         "236"
       ],
-      "endpoint": "A:112:VAL:HG23 -- B:852:PHE:HEx"
+      "endpoint": "A:112:VAL:HG23 -- B:852:PHE:HEx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:45",
@@ -5006,7 +5236,8 @@
       "row_ids": [
         "237"
       ],
-      "endpoint": "A:112:VAL:HG23 -- B:852:PHE:HEy"
+      "endpoint": "A:112:VAL:HG23 -- B:852:PHE:HEy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:46",
@@ -5015,7 +5246,8 @@
       "row_ids": [
         "238"
       ],
-      "endpoint": "A:112:VAL:HG21 -- B:852:PHE:HZ"
+      "endpoint": "A:112:VAL:HG21 -- B:852:PHE:HZ",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:46",
@@ -5024,7 +5256,8 @@
       "row_ids": [
         "239"
       ],
-      "endpoint": "A:112:VAL:HG22 -- B:852:PHE:HZ"
+      "endpoint": "A:112:VAL:HG22 -- B:852:PHE:HZ",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:46",
@@ -5033,7 +5266,8 @@
       "row_ids": [
         "240"
       ],
-      "endpoint": "A:112:VAL:HG23 -- B:852:PHE:HZ"
+      "endpoint": "A:112:VAL:HG23 -- B:852:PHE:HZ",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:47",
@@ -5042,7 +5276,8 @@
       "row_ids": [
         "241"
       ],
-      "endpoint": "A:113:MET:HE1 -- B:851:ALA:HB1"
+      "endpoint": "A:113:MET:HE1 -- B:851:ALA:HB1",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:47",
@@ -5051,7 +5286,8 @@
       "row_ids": [
         "242"
       ],
-      "endpoint": "A:113:MET:HE1 -- B:851:ALA:HB2"
+      "endpoint": "A:113:MET:HE1 -- B:851:ALA:HB2",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:47",
@@ -5060,7 +5296,8 @@
       "row_ids": [
         "243"
       ],
-      "endpoint": "A:113:MET:HE1 -- B:851:ALA:HB3"
+      "endpoint": "A:113:MET:HE1 -- B:851:ALA:HB3",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:47",
@@ -5069,7 +5306,8 @@
       "row_ids": [
         "244"
       ],
-      "endpoint": "A:113:MET:HE2 -- B:851:ALA:HB1"
+      "endpoint": "A:113:MET:HE2 -- B:851:ALA:HB1",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:47",
@@ -5078,7 +5316,8 @@
       "row_ids": [
         "245"
       ],
-      "endpoint": "A:113:MET:HE2 -- B:851:ALA:HB2"
+      "endpoint": "A:113:MET:HE2 -- B:851:ALA:HB2",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:47",
@@ -5087,7 +5326,8 @@
       "row_ids": [
         "246"
       ],
-      "endpoint": "A:113:MET:HE2 -- B:851:ALA:HB3"
+      "endpoint": "A:113:MET:HE2 -- B:851:ALA:HB3",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:47",
@@ -5096,7 +5336,8 @@
       "row_ids": [
         "247"
       ],
-      "endpoint": "A:113:MET:HE3 -- B:851:ALA:HB1"
+      "endpoint": "A:113:MET:HE3 -- B:851:ALA:HB1",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:47",
@@ -5105,7 +5346,8 @@
       "row_ids": [
         "248"
       ],
-      "endpoint": "A:113:MET:HE3 -- B:851:ALA:HB2"
+      "endpoint": "A:113:MET:HE3 -- B:851:ALA:HB2",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:47",
@@ -5114,7 +5356,8 @@
       "row_ids": [
         "249"
       ],
-      "endpoint": "A:113:MET:HE3 -- B:851:ALA:HB3"
+      "endpoint": "A:113:MET:HE3 -- B:851:ALA:HB3",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:48",
@@ -5123,7 +5366,8 @@
       "row_ids": [
         "250"
       ],
-      "endpoint": "A:113:MET:HE1 -- B:852:PHE:HBx"
+      "endpoint": "A:113:MET:HE1 -- B:852:PHE:HBx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:48",
@@ -5132,7 +5376,8 @@
       "row_ids": [
         "251"
       ],
-      "endpoint": "A:113:MET:HE1 -- B:852:PHE:HBy"
+      "endpoint": "A:113:MET:HE1 -- B:852:PHE:HBy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:48",
@@ -5141,7 +5386,8 @@
       "row_ids": [
         "252"
       ],
-      "endpoint": "A:113:MET:HE2 -- B:852:PHE:HBx"
+      "endpoint": "A:113:MET:HE2 -- B:852:PHE:HBx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:48",
@@ -5150,7 +5396,8 @@
       "row_ids": [
         "253"
       ],
-      "endpoint": "A:113:MET:HE2 -- B:852:PHE:HBy"
+      "endpoint": "A:113:MET:HE2 -- B:852:PHE:HBy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:48",
@@ -5159,7 +5406,8 @@
       "row_ids": [
         "254"
       ],
-      "endpoint": "A:113:MET:HE3 -- B:852:PHE:HBx"
+      "endpoint": "A:113:MET:HE3 -- B:852:PHE:HBx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:48",
@@ -5168,7 +5416,8 @@
       "row_ids": [
         "255"
       ],
-      "endpoint": "A:113:MET:HE3 -- B:852:PHE:HBy"
+      "endpoint": "A:113:MET:HE3 -- B:852:PHE:HBy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:49",
@@ -5177,7 +5426,8 @@
       "row_ids": [
         "256"
       ],
-      "endpoint": "A:113:MET:HE1 -- B:852:PHE:HDx"
+      "endpoint": "A:113:MET:HE1 -- B:852:PHE:HDx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:49",
@@ -5186,7 +5436,8 @@
       "row_ids": [
         "257"
       ],
-      "endpoint": "A:113:MET:HE1 -- B:852:PHE:HDy"
+      "endpoint": "A:113:MET:HE1 -- B:852:PHE:HDy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:49",
@@ -5195,7 +5446,8 @@
       "row_ids": [
         "258"
       ],
-      "endpoint": "A:113:MET:HE2 -- B:852:PHE:HDx"
+      "endpoint": "A:113:MET:HE2 -- B:852:PHE:HDx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:49",
@@ -5204,7 +5456,8 @@
       "row_ids": [
         "259"
       ],
-      "endpoint": "A:113:MET:HE2 -- B:852:PHE:HDy"
+      "endpoint": "A:113:MET:HE2 -- B:852:PHE:HDy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:49",
@@ -5213,7 +5466,8 @@
       "row_ids": [
         "260"
       ],
-      "endpoint": "A:113:MET:HE3 -- B:852:PHE:HDx"
+      "endpoint": "A:113:MET:HE3 -- B:852:PHE:HDx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:49",
@@ -5222,7 +5476,8 @@
       "row_ids": [
         "261"
       ],
-      "endpoint": "A:113:MET:HE3 -- B:852:PHE:HDy"
+      "endpoint": "A:113:MET:HE3 -- B:852:PHE:HDy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:50",
@@ -5231,7 +5486,8 @@
       "row_ids": [
         "262"
       ],
-      "endpoint": "A:116:LEU:HD11 -- B:852:PHE:HA"
+      "endpoint": "A:116:LEU:HD11 -- B:852:PHE:HA",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:50",
@@ -5240,7 +5496,8 @@
       "row_ids": [
         "263"
       ],
-      "endpoint": "A:116:LEU:HD12 -- B:852:PHE:HA"
+      "endpoint": "A:116:LEU:HD12 -- B:852:PHE:HA",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:50",
@@ -5249,7 +5506,8 @@
       "row_ids": [
         "264"
       ],
-      "endpoint": "A:116:LEU:HD13 -- B:852:PHE:HA"
+      "endpoint": "A:116:LEU:HD13 -- B:852:PHE:HA",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:51",
@@ -5258,7 +5516,8 @@
       "row_ids": [
         "265"
       ],
-      "endpoint": "A:116:LEU:HD11 -- B:852:PHE:HEx"
+      "endpoint": "A:116:LEU:HD11 -- B:852:PHE:HEx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:51",
@@ -5267,7 +5526,8 @@
       "row_ids": [
         "266"
       ],
-      "endpoint": "A:116:LEU:HD11 -- B:852:PHE:HEy"
+      "endpoint": "A:116:LEU:HD11 -- B:852:PHE:HEy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:51",
@@ -5276,7 +5536,8 @@
       "row_ids": [
         "267"
       ],
-      "endpoint": "A:116:LEU:HD12 -- B:852:PHE:HEx"
+      "endpoint": "A:116:LEU:HD12 -- B:852:PHE:HEx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:51",
@@ -5285,7 +5546,8 @@
       "row_ids": [
         "268"
       ],
-      "endpoint": "A:116:LEU:HD12 -- B:852:PHE:HEy"
+      "endpoint": "A:116:LEU:HD12 -- B:852:PHE:HEy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:51",
@@ -5294,7 +5556,8 @@
       "row_ids": [
         "269"
       ],
-      "endpoint": "A:116:LEU:HD13 -- B:852:PHE:HEx"
+      "endpoint": "A:116:LEU:HD13 -- B:852:PHE:HEx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:51",
@@ -5303,7 +5566,8 @@
       "row_ids": [
         "270"
       ],
-      "endpoint": "A:116:LEU:HD13 -- B:852:PHE:HEy"
+      "endpoint": "A:116:LEU:HD13 -- B:852:PHE:HEy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:52",
@@ -5312,7 +5576,8 @@
       "row_ids": [
         "271"
       ],
-      "endpoint": "A:116:LEU:HD21 -- B:855:VAL:HG21"
+      "endpoint": "A:116:LEU:HD21 -- B:855:VAL:HG21",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:52",
@@ -5321,7 +5586,8 @@
       "row_ids": [
         "272"
       ],
-      "endpoint": "A:116:LEU:HD21 -- B:855:VAL:HG22"
+      "endpoint": "A:116:LEU:HD21 -- B:855:VAL:HG22",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:52",
@@ -5330,7 +5596,8 @@
       "row_ids": [
         "273"
       ],
-      "endpoint": "A:116:LEU:HD21 -- B:855:VAL:HG23"
+      "endpoint": "A:116:LEU:HD21 -- B:855:VAL:HG23",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:52",
@@ -5339,7 +5606,8 @@
       "row_ids": [
         "274"
       ],
-      "endpoint": "A:116:LEU:HD22 -- B:855:VAL:HG21"
+      "endpoint": "A:116:LEU:HD22 -- B:855:VAL:HG21",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:52",
@@ -5348,7 +5616,8 @@
       "row_ids": [
         "275"
       ],
-      "endpoint": "A:116:LEU:HD22 -- B:855:VAL:HG22"
+      "endpoint": "A:116:LEU:HD22 -- B:855:VAL:HG22",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:52",
@@ -5357,7 +5626,8 @@
       "row_ids": [
         "276"
       ],
-      "endpoint": "A:116:LEU:HD22 -- B:855:VAL:HG23"
+      "endpoint": "A:116:LEU:HD22 -- B:855:VAL:HG23",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:52",
@@ -5366,7 +5636,8 @@
       "row_ids": [
         "277"
       ],
-      "endpoint": "A:116:LEU:HD23 -- B:855:VAL:HG21"
+      "endpoint": "A:116:LEU:HD23 -- B:855:VAL:HG21",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:52",
@@ -5375,7 +5646,8 @@
       "row_ids": [
         "278"
       ],
-      "endpoint": "A:116:LEU:HD23 -- B:855:VAL:HG22"
+      "endpoint": "A:116:LEU:HD23 -- B:855:VAL:HG22",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:52",
@@ -5384,7 +5656,8 @@
       "row_ids": [
         "279"
       ],
-      "endpoint": "A:116:LEU:HD23 -- B:855:VAL:HG23"
+      "endpoint": "A:116:LEU:HD23 -- B:855:VAL:HG23",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:53",
@@ -5393,7 +5666,8 @@
       "row_ids": [
         "280"
       ],
-      "endpoint": "A:120:LEU:HD11 -- B:848:MET:HE1"
+      "endpoint": "A:120:LEU:HD11 -- B:848:MET:HE1",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:53",
@@ -5402,7 +5676,8 @@
       "row_ids": [
         "281"
       ],
-      "endpoint": "A:120:LEU:HD11 -- B:848:MET:HE2"
+      "endpoint": "A:120:LEU:HD11 -- B:848:MET:HE2",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:53",
@@ -5411,7 +5686,8 @@
       "row_ids": [
         "282"
       ],
-      "endpoint": "A:120:LEU:HD11 -- B:848:MET:HE3"
+      "endpoint": "A:120:LEU:HD11 -- B:848:MET:HE3",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:53",
@@ -5420,7 +5696,8 @@
       "row_ids": [
         "283"
       ],
-      "endpoint": "A:120:LEU:HD12 -- B:848:MET:HE1"
+      "endpoint": "A:120:LEU:HD12 -- B:848:MET:HE1",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:53",
@@ -5429,7 +5706,8 @@
       "row_ids": [
         "284"
       ],
-      "endpoint": "A:120:LEU:HD12 -- B:848:MET:HE2"
+      "endpoint": "A:120:LEU:HD12 -- B:848:MET:HE2",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:53",
@@ -5438,7 +5716,8 @@
       "row_ids": [
         "285"
       ],
-      "endpoint": "A:120:LEU:HD12 -- B:848:MET:HE3"
+      "endpoint": "A:120:LEU:HD12 -- B:848:MET:HE3",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:53",
@@ -5447,7 +5726,8 @@
       "row_ids": [
         "286"
       ],
-      "endpoint": "A:120:LEU:HD13 -- B:848:MET:HE1"
+      "endpoint": "A:120:LEU:HD13 -- B:848:MET:HE1",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:53",
@@ -5456,7 +5736,8 @@
       "row_ids": [
         "287"
       ],
-      "endpoint": "A:120:LEU:HD13 -- B:848:MET:HE2"
+      "endpoint": "A:120:LEU:HD13 -- B:848:MET:HE2",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:53",
@@ -5465,7 +5746,8 @@
       "row_ids": [
         "288"
       ],
-      "endpoint": "A:120:LEU:HD13 -- B:848:MET:HE3"
+      "endpoint": "A:120:LEU:HD13 -- B:848:MET:HE3",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:54",
@@ -5474,7 +5756,8 @@
       "row_ids": [
         "289"
       ],
-      "endpoint": "A:120:LEU:HD21 -- B:848:MET:HE1"
+      "endpoint": "A:120:LEU:HD21 -- B:848:MET:HE1",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:54",
@@ -5483,7 +5766,8 @@
       "row_ids": [
         "290"
       ],
-      "endpoint": "A:120:LEU:HD21 -- B:848:MET:HE2"
+      "endpoint": "A:120:LEU:HD21 -- B:848:MET:HE2",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:54",
@@ -5492,7 +5776,8 @@
       "row_ids": [
         "291"
       ],
-      "endpoint": "A:120:LEU:HD21 -- B:848:MET:HE3"
+      "endpoint": "A:120:LEU:HD21 -- B:848:MET:HE3",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:54",
@@ -5501,7 +5786,8 @@
       "row_ids": [
         "292"
       ],
-      "endpoint": "A:120:LEU:HD22 -- B:848:MET:HE1"
+      "endpoint": "A:120:LEU:HD22 -- B:848:MET:HE1",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:54",
@@ -5510,7 +5796,8 @@
       "row_ids": [
         "293"
       ],
-      "endpoint": "A:120:LEU:HD22 -- B:848:MET:HE2"
+      "endpoint": "A:120:LEU:HD22 -- B:848:MET:HE2",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:54",
@@ -5519,7 +5806,8 @@
       "row_ids": [
         "294"
       ],
-      "endpoint": "A:120:LEU:HD22 -- B:848:MET:HE3"
+      "endpoint": "A:120:LEU:HD22 -- B:848:MET:HE3",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:54",
@@ -5528,7 +5816,8 @@
       "row_ids": [
         "295"
       ],
-      "endpoint": "A:120:LEU:HD23 -- B:848:MET:HE1"
+      "endpoint": "A:120:LEU:HD23 -- B:848:MET:HE1",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:54",
@@ -5537,7 +5826,8 @@
       "row_ids": [
         "296"
       ],
-      "endpoint": "A:120:LEU:HD23 -- B:848:MET:HE2"
+      "endpoint": "A:120:LEU:HD23 -- B:848:MET:HE2",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:54",
@@ -5546,7 +5836,8 @@
       "row_ids": [
         "297"
       ],
-      "endpoint": "A:120:LEU:HD23 -- B:848:MET:HE3"
+      "endpoint": "A:120:LEU:HD23 -- B:848:MET:HE3",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:55",
@@ -5555,7 +5846,8 @@
       "row_ids": [
         "298"
       ],
-      "endpoint": "A:128:MET:HE1 -- B:848:MET:HBx"
+      "endpoint": "A:128:MET:HE1 -- B:848:MET:HBx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:55",
@@ -5564,7 +5856,8 @@
       "row_ids": [
         "299"
       ],
-      "endpoint": "A:128:MET:HE1 -- B:848:MET:HBy"
+      "endpoint": "A:128:MET:HE1 -- B:848:MET:HBy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:55",
@@ -5573,7 +5866,8 @@
       "row_ids": [
         "300"
       ],
-      "endpoint": "A:128:MET:HE2 -- B:848:MET:HBx"
+      "endpoint": "A:128:MET:HE2 -- B:848:MET:HBx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:55",
@@ -5582,7 +5876,8 @@
       "row_ids": [
         "301"
       ],
-      "endpoint": "A:128:MET:HE2 -- B:848:MET:HBy"
+      "endpoint": "A:128:MET:HE2 -- B:848:MET:HBy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:55",
@@ -5591,7 +5886,8 @@
       "row_ids": [
         "302"
       ],
-      "endpoint": "A:128:MET:HE3 -- B:848:MET:HBx"
+      "endpoint": "A:128:MET:HE3 -- B:848:MET:HBx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:55",
@@ -5600,7 +5896,8 @@
       "row_ids": [
         "303"
       ],
-      "endpoint": "A:128:MET:HE3 -- B:848:MET:HBy"
+      "endpoint": "A:128:MET:HE3 -- B:848:MET:HBy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:56",
@@ -5609,7 +5906,8 @@
       "row_ids": [
         "304"
       ],
-      "endpoint": "A:149:MET:HE1 -- B:852:PHE:HDx"
+      "endpoint": "A:149:MET:HE1 -- B:852:PHE:HDx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:56",
@@ -5618,7 +5916,8 @@
       "row_ids": [
         "305"
       ],
-      "endpoint": "A:149:MET:HE1 -- B:852:PHE:HDy"
+      "endpoint": "A:149:MET:HE1 -- B:852:PHE:HDy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:56",
@@ -5627,7 +5926,8 @@
       "row_ids": [
         "306"
       ],
-      "endpoint": "A:149:MET:HE2 -- B:852:PHE:HDx"
+      "endpoint": "A:149:MET:HE2 -- B:852:PHE:HDx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:56",
@@ -5636,7 +5936,8 @@
       "row_ids": [
         "307"
       ],
-      "endpoint": "A:149:MET:HE2 -- B:852:PHE:HDy"
+      "endpoint": "A:149:MET:HE2 -- B:852:PHE:HDy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:56",
@@ -5645,7 +5946,8 @@
       "row_ids": [
         "308"
       ],
-      "endpoint": "A:149:MET:HE3 -- B:852:PHE:HDx"
+      "endpoint": "A:149:MET:HE3 -- B:852:PHE:HDx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:56",
@@ -5654,7 +5956,8 @@
       "row_ids": [
         "309"
       ],
-      "endpoint": "A:149:MET:HE3 -- B:852:PHE:HDy"
+      "endpoint": "A:149:MET:HE3 -- B:852:PHE:HDy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:57",
@@ -5663,7 +5966,8 @@
       "row_ids": [
         "310"
       ],
-      "endpoint": "A:149:MET:HE1 -- B:852:PHE:HEx"
+      "endpoint": "A:149:MET:HE1 -- B:852:PHE:HEx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:57",
@@ -5672,7 +5976,8 @@
       "row_ids": [
         "311"
       ],
-      "endpoint": "A:149:MET:HE1 -- B:852:PHE:HEy"
+      "endpoint": "A:149:MET:HE1 -- B:852:PHE:HEy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:57",
@@ -5681,7 +5986,8 @@
       "row_ids": [
         "312"
       ],
-      "endpoint": "A:149:MET:HE2 -- B:852:PHE:HEx"
+      "endpoint": "A:149:MET:HE2 -- B:852:PHE:HEx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:57",
@@ -5690,7 +5996,8 @@
       "row_ids": [
         "313"
       ],
-      "endpoint": "A:149:MET:HE2 -- B:852:PHE:HEy"
+      "endpoint": "A:149:MET:HE2 -- B:852:PHE:HEy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:57",
@@ -5699,7 +6006,8 @@
       "row_ids": [
         "314"
       ],
-      "endpoint": "A:149:MET:HE3 -- B:852:PHE:HEx"
+      "endpoint": "A:149:MET:HE3 -- B:852:PHE:HEx",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:57",
@@ -5708,7 +6016,8 @@
       "row_ids": [
         "315"
       ],
-      "endpoint": "A:149:MET:HE3 -- B:852:PHE:HEy"
+      "endpoint": "A:149:MET:HE3 -- B:852:PHE:HEy",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:58",
@@ -5717,7 +6026,8 @@
       "row_ids": [
         "316"
       ],
-      "endpoint": "A:149:MET:HE1 -- B:853:ALA:HA"
+      "endpoint": "A:149:MET:HE1 -- B:853:ALA:HA",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:58",
@@ -5726,7 +6036,8 @@
       "row_ids": [
         "317"
       ],
-      "endpoint": "A:149:MET:HE2 -- B:853:ALA:HA"
+      "endpoint": "A:149:MET:HE2 -- B:853:ALA:HA",
+      "provenance": {}
     },
     {
       "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:58",
@@ -5735,7 +6046,8 @@
       "row_ids": [
         "318"
       ],
-      "endpoint": "A:149:MET:HE3 -- B:853:ALA:HA"
+      "endpoint": "A:149:MET:HE3 -- B:853:ALA:HA",
+      "provenance": {}
     }
   ],
   "warnings": [],
@@ -5747,7 +6059,9 @@
     "ambiguous_or_groups_not_emitted": 0,
     "rejection_records": 312,
     "sequence_records": 170,
-    "embedded_component_topologies": 0
+    "embedded_component_topologies": 0,
+    "atom_topology_quarantines": 0,
+    "emitted_atom_topology_violations": 0
   },
   "source_restraint_groups": [
     {
@@ -19791,5 +20105,540 @@
       "warnings": []
     }
   ],
+  "target_component_topologies": {
+    "ALA": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB1",
+        "HB2",
+        "HB3",
+        "HXT",
+        "N",
+        "O",
+        "OXT"
+      ]
+    },
+    "ARG": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CD",
+        "CG",
+        "CZ",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HD2",
+        "HD3",
+        "HE",
+        "HG2",
+        "HG3",
+        "HH11",
+        "HH12",
+        "HH21",
+        "HH22",
+        "HXT",
+        "N",
+        "NE",
+        "NH1",
+        "NH2",
+        "O",
+        "OXT"
+      ]
+    },
+    "ASN": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CG",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HD21",
+        "HD22",
+        "HXT",
+        "N",
+        "ND2",
+        "O",
+        "OD1",
+        "OXT"
+      ]
+    },
+    "ASP": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CG",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HD1",
+        "HD2",
+        "HXT",
+        "N",
+        "O",
+        "OD1",
+        "OD2",
+        "OXT"
+      ]
+    },
+    "CAL": {
+      "available": false,
+      "source": null,
+      "atoms": []
+    },
+    "GLN": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CD",
+        "CG",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HE21",
+        "HE22",
+        "HG2",
+        "HG3",
+        "HXT",
+        "N",
+        "NE2",
+        "O",
+        "OE1",
+        "OXT"
+      ]
+    },
+    "GLU": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CD",
+        "CG",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HE1",
+        "HE2",
+        "HG2",
+        "HG3",
+        "HXT",
+        "N",
+        "O",
+        "OE1",
+        "OE2",
+        "OXT"
+      ]
+    },
+    "GLY": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA2",
+        "HA3",
+        "HXT",
+        "N",
+        "O",
+        "OXT"
+      ]
+    },
+    "HIS": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CD2",
+        "CE1",
+        "CG",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HD1",
+        "HD2",
+        "HE1",
+        "HE2",
+        "HXT",
+        "N",
+        "ND1",
+        "NE2",
+        "O",
+        "OXT"
+      ]
+    },
+    "ILE": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CD1",
+        "CG1",
+        "CG2",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB",
+        "HD11",
+        "HD12",
+        "HD13",
+        "HG12",
+        "HG13",
+        "HG21",
+        "HG22",
+        "HG23",
+        "HXT",
+        "N",
+        "O",
+        "OXT"
+      ]
+    },
+    "LEU": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CD1",
+        "CD2",
+        "CG",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HD11",
+        "HD12",
+        "HD13",
+        "HD21",
+        "HD22",
+        "HD23",
+        "HG",
+        "HXT",
+        "N",
+        "O",
+        "OXT"
+      ]
+    },
+    "LYS": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CD",
+        "CE",
+        "CG",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HD2",
+        "HD3",
+        "HE2",
+        "HE3",
+        "HG2",
+        "HG3",
+        "HXT",
+        "HZ1",
+        "HZ2",
+        "HZ3",
+        "N",
+        "NZ",
+        "O",
+        "OXT"
+      ]
+    },
+    "MET": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CE",
+        "CG",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HE1",
+        "HE2",
+        "HE3",
+        "HG2",
+        "HG3",
+        "HXT",
+        "N",
+        "O",
+        "OXT",
+        "SD"
+      ]
+    },
+    "PHE": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CD1",
+        "CD2",
+        "CE1",
+        "CE2",
+        "CG",
+        "CZ",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HD1",
+        "HD2",
+        "HE1",
+        "HE2",
+        "HXT",
+        "HZ",
+        "N",
+        "O",
+        "OXT"
+      ]
+    },
+    "PRO": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CD",
+        "CG",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HD2",
+        "HD3",
+        "HG2",
+        "HG3",
+        "HXT",
+        "N",
+        "O",
+        "OXT"
+      ]
+    },
+    "SER": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HG",
+        "HXT",
+        "N",
+        "O",
+        "OG",
+        "OXT"
+      ]
+    },
+    "THR": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CG2",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB",
+        "HG1",
+        "HG21",
+        "HG22",
+        "HG23",
+        "HXT",
+        "N",
+        "O",
+        "OG1",
+        "OXT"
+      ]
+    },
+    "TRP": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CD1",
+        "CD2",
+        "CE2",
+        "CE3",
+        "CG",
+        "CH2",
+        "CZ2",
+        "CZ3",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HD1",
+        "HE1",
+        "HE3",
+        "HH2",
+        "HXT",
+        "HZ2",
+        "HZ3",
+        "N",
+        "NE1",
+        "O",
+        "OXT"
+      ]
+    },
+    "TYR": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CD1",
+        "CD2",
+        "CE1",
+        "CE2",
+        "CG",
+        "CZ",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HD1",
+        "HD2",
+        "HE1",
+        "HE2",
+        "HH",
+        "HXT",
+        "N",
+        "O",
+        "OH",
+        "OXT"
+      ]
+    },
+    "VAL": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CG1",
+        "CG2",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB",
+        "HG11",
+        "HG12",
+        "HG13",
+        "HG21",
+        "HG22",
+        "HG23",
+        "HXT",
+        "N",
+        "O",
+        "OXT"
+      ]
+    }
+  },
   "target_validation": null
 }

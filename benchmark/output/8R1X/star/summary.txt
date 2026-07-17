@@ -4,10 +4,10 @@ Input: benchmark/input/8R1X/8r1x_nmr-data.str
 Detected format: nmr-star
 Restraint groups read: 1414
 Source alternatives read: 3382
-Safe groups before pair deduplication: 1216
-Unique Boltz constraints emitted: 1118
+Safe groups before pair deduplication: 1212
+Unique Boltz constraints emitted: 1114
 Ambiguous OR groups quarantined: 165
-Rejection records: 81
+Rejection records: 85
 
 Important:
 - boltz_constraints.yaml contains only constraints that may be imposed simultaneously.

@@ -637,26 +637,6 @@ constraints:
     max_distance: 8.512
     force: true
 - atom_contact:
-    atom1: [A, 14, N3]
-    atom2: [A, 15, N]
-    max_distance: 3.08
-    force: true
-- atom_contact:
-    atom1: [A, 14, N3]
-    atom2: [A, 15, N1]
-    max_distance: 3.0
-    force: true
-- atom_contact:
-    atom1: [A, 14, N4]
-    atom2: [A, 15, O6]
-    max_distance: 3.0
-    force: true
-- atom_contact:
-    atom1: [A, 14, O2]
-    atom2: [A, 15, N2]
-    max_distance: 3.0
-    force: true
-- atom_contact:
     atom1: [A, 15, CA]
     atom2: [A, 15, N]
     max_distance: 7.2
