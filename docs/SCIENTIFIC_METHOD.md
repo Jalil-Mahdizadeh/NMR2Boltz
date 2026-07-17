@@ -473,6 +473,35 @@ A production validation should include at least four levels.
 - cross-validate by withholding a subset of restraints;
 - where available, validate against RDCs, PREs, J couplings, SAXS, cryo-EM density, or independent biochemical data.
 
+### 11.5 Paired-format discrepancy audit and CI gate
+
+The corpus validator treats format parity as row-level scientific evidence, not
+as a count comparison. Every NEF-only, NMR-STAR-only, or common heavy pair with
+a different final bound records the source restraint/group IDs and row IDs,
+author atom expressions, canonical atom expansions, resolved physical proton
+sets, pseudoatom policy outcome, explicit proton-pair count `N`, averaging
+policy, deposited upper bound, projected heavy pair, projected terms, and final
+bound. Corresponding source groups are joined by normalized list name plus
+restraint ID, including groups rejected on one side.
+
+Each row is classified as:
+
+- `expected_format_difference` when the corresponding deposits encode different
+  wildcard atom sets, explicit OR rows, x/y assignments, canonical expansions,
+  or geometric pseudoatoms;
+- `deposition_inconsistency` when a corresponding restraint is absent, its bound
+  differs, or its sequence/residue identifiers resolve inconsistently;
+- `parser_projection_bug` only after a reproducible implementation defect is
+  verified; or
+- `unresolved` whenever the available evidence is insufficient.
+
+The normal corpus command fails closed if any implication fails, any coordinate
+needed by an emitted contact is unresolved in a deposited model, any audit row
+is unresolved or marks a parser/projection bug, or the reviewed audit digest or
+metric snapshot changes. A run still writes its evidence before returning a
+nonzero exit. This prevents denominator omission and baseline drift from being
+mistaken for robustness.
+
 ### 11.5 Executed validation record
 
 The following checks were executed on 2026-07-17 against the current source tree:

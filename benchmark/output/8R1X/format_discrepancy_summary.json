@@ -1,0 +1,16 @@
+{
+  "row_count": 166,
+  "digest_sha256": "906db96cb5ee3a4c78bc7cbeabc162d80939d21ea328c11895e8114d910b29d3",
+  "discrepancy_type_counts": {
+    "different_bound": 160,
+    "star_only": 6
+  },
+  "classification_counts": {
+    "expected_format_difference": 166
+  },
+  "case_counts": {
+    "8R1X": 166
+  },
+  "unresolved_count": 0,
+  "parser_projection_bug_count": 0
+}

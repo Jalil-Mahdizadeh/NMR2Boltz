@@ -1,0 +1,15 @@
+{
+  "row_count": 355,
+  "digest_sha256": "d0e04c0ee38d9fbad82d87858767b70aad27380dd08d82b04ef720c848c210e7",
+  "discrepancy_type_counts": {
+    "different_bound": 355
+  },
+  "classification_counts": {
+    "expected_format_difference": 355
+  },
+  "case_counts": {
+    "43JX": 355
+  },
+  "unresolved_count": 0,
+  "parser_projection_bug_count": 0
+}

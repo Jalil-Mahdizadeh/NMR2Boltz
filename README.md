@@ -108,14 +108,35 @@ coordinate alignment:
 
 ```bash
 python validation/benchmark_corpus.py benchmark/input \
-  --output-directory benchmark/output
+  --output-directory benchmark/output \
+  --reviewed-baseline benchmark/reviewed_baseline.json
 ```
 
 Each PDB ID is written under `benchmark/output/<PDB-ID>/{nef,star}`. The root
 `BENCHMARK_REPORT.md` and `benchmark_summary.json` record coordinate
 satisfaction, conservative implication checks, and exact atom-pair/bound parity.
+`FORMAT_DISCREPANCY_AUDIT.tsv` contains one traceable row for every NEF-only,
+STAR-only, or different-bound contact, including source rows, expressions,
+canonical expansions, resolved proton sets, pseudoatom handling, pair count,
+averaging policy, source/projected bounds, and classification.
 Files with valid sequence data but no distance-restraint loop produce an empty,
 auditable conversion instead of failing format detection.
+
+The reviewed scientific interpretation of the current corpus is documented in
+[`docs/BENCHMARK_DISCREPANCY_FINDINGS.md`](docs/BENCHMARK_DISCREPANCY_FINDINGS.md).
+
+The corpus command is also a fail-closed CI gate. It exits nonzero for any
+projection implication failure, unresolved format discrepancy, missing
+coordinate resolution, or change from the reviewed audit/metric baseline.
+Replacing the baseline is deliberately explicit and must follow scientific
+review:
+
+```bash
+python validation/benchmark_corpus.py benchmark/input \
+  --output-directory benchmark/output \
+  --reviewed-baseline benchmark/reviewed_baseline.json \
+  --write-reviewed-baseline
+```
 
 ## Output files
 

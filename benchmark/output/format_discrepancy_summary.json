@@ -1,0 +1,25 @@
+{
+  "row_count": 4201,
+  "digest_sha256": "598db995e37fc2ed3e54261e8eb80e85c8b127877564a9665fb9e81b161baa2a",
+  "discrepancy_type_counts": {
+    "different_bound": 2456,
+    "star_only": 291,
+    "nef_only": 1454
+  },
+  "classification_counts": {
+    "expected_format_difference": 4158,
+    "deposition_inconsistency": 43
+  },
+  "case_counts": {
+    "43JX": 355,
+    "6M6O": 149,
+    "8R1X": 166,
+    "9CCH": 1936,
+    "9PQH": 45,
+    "9SGX": 813,
+    "9VQ1": 3,
+    "9VUY": 734
+  },
+  "unresolved_count": 0,
+  "parser_projection_bug_count": 0
+}

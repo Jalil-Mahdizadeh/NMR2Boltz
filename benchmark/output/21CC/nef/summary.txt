@@ -1,6 +1,6 @@
 NMR-to-Boltz heavy-atom projection summary
 ==============================================
-Input: benchmark\input\21CC\21cc_nmr-data.nef
+Input: benchmark/input/21CC/21cc_nmr-data.nef
 Detected format: nef
 Restraint groups read: 202
 Source alternatives read: 218

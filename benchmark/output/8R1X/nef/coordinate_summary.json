@@ -1,5 +1,5 @@
 {
-  "pdb": "benchmark\\input\\8R1X\\8R1X.pdb",
+  "pdb": "benchmark/input/8R1X/8R1X.pdb",
   "model_count": 20,
   "tolerance_angstrom": 0.01,
   "sequence_alignment": [
@@ -54,6 +54,324 @@
     "satisfied_model_cases": 21284,
     "violated_model_cases": 56,
     "missing_model_cases": 900,
+    "constraints_missing_in_any_model": 45,
+    "missing_constraint_examples": [
+      {
+        "constraint_id": "C00128",
+        "atom1": "A:14:N3",
+        "atom2": "A:15:N",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_3:90"
+      },
+      {
+        "constraint_id": "C00129",
+        "atom1": "A:14:N3",
+        "atom2": "A:15:N1",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_3:89"
+      },
+      {
+        "constraint_id": "C00130",
+        "atom1": "A:14:N4",
+        "atom2": "A:15:O6",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_3:93"
+      },
+      {
+        "constraint_id": "C00131",
+        "atom1": "A:14:O2",
+        "atom2": "A:15:N2",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_3:91"
+      },
+      {
+        "constraint_id": "C00809",
+        "atom1": "A:68:CA",
+        "atom2": "A:72:N",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_1:771"
+      },
+      {
+        "constraint_id": "C00818",
+        "atom1": "A:69:CA",
+        "atom2": "A:72:CB",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_1:783"
+      },
+      {
+        "constraint_id": "C00819",
+        "atom1": "A:69:CA",
+        "atom2": "A:72:N",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_1:782"
+      },
+      {
+        "constraint_id": "C00820",
+        "atom1": "A:69:CA",
+        "atom2": "A:73:ND2",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_1:784"
+      },
+      {
+        "constraint_id": "C00824",
+        "atom1": "A:69:CB",
+        "atom2": "A:73:ND2",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_1:785"
+      },
+      {
+        "constraint_id": "C00826",
+        "atom1": "A:69:CG",
+        "atom2": "A:73:ND2",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_1:786"
+      },
+      {
+        "constraint_id": "C00832",
+        "atom1": "A:70:CA",
+        "atom2": "A:73:CB",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_1:803"
+      },
+      {
+        "constraint_id": "C00833",
+        "atom1": "A:70:CA",
+        "atom2": "A:73:N",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_1:802"
+      },
+      {
+        "constraint_id": "C00838",
+        "atom1": "A:70:CB",
+        "atom2": "A:72:N",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_1:801"
+      },
+      {
+        "constraint_id": "C00843",
+        "atom1": "A:71:CA",
+        "atom2": "A:72:CB",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_2:130"
+      },
+      {
+        "constraint_id": "C00844",
+        "atom1": "A:71:CA",
+        "atom2": "A:72:N",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_1:811"
+      },
+      {
+        "constraint_id": "C00845",
+        "atom1": "A:71:CA",
+        "atom2": "A:73:N",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_1:816"
+      },
+      {
+        "constraint_id": "C00846",
+        "atom1": "A:71:CA",
+        "atom2": "A:74:N",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_1:817"
+      },
+      {
+        "constraint_id": "C00849",
+        "atom1": "A:71:CB",
+        "atom2": "A:72:CA",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_1:813"
+      },
+      {
+        "constraint_id": "C00850",
+        "atom1": "A:71:CB",
+        "atom2": "A:72:N",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_1:812"
+      },
+      {
+        "constraint_id": "C00852",
+        "atom1": "A:71:CG",
+        "atom2": "A:72:N",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_1:814"
+      },
+      {
+        "constraint_id": "C00853",
+        "atom1": "A:71:N",
+        "atom2": "A:72:CB",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_2:129"
+      },
+      {
+        "constraint_id": "C00854",
+        "atom1": "A:71:N",
+        "atom2": "A:72:N",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_1:810"
+      },
+      {
+        "constraint_id": "C00855",
+        "atom1": "A:71:N",
+        "atom2": "A:73:N",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_1:815"
+      },
+      {
+        "constraint_id": "C00856",
+        "atom1": "A:72:CA",
+        "atom2": "A:72:CB",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_1:820"
+      },
+      {
+        "constraint_id": "C00857",
+        "atom1": "A:72:CA",
+        "atom2": "A:72:N",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_1:818"
+      },
+      {
+        "constraint_id": "C00858",
+        "atom1": "A:72:CA",
+        "atom2": "A:73:N",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_1:823"
+      },
+      {
+        "constraint_id": "C00859",
+        "atom1": "A:72:CB",
+        "atom2": "A:72:N",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_1:819"
+      },
+      {
+        "constraint_id": "C00860",
+        "atom1": "A:72:CB",
+        "atom2": "A:73:CA",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_2:131"
+      },
+      {
+        "constraint_id": "C00861",
+        "atom1": "A:72:CB",
+        "atom2": "A:73:CB",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_2:132"
+      },
+      {
+        "constraint_id": "C00862",
+        "atom1": "A:72:CB",
+        "atom2": "A:73:N",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_1:824"
+      },
+      {
+        "constraint_id": "C00863",
+        "atom1": "A:72:CB",
+        "atom2": "A:73:ND2",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_2:133"
+      },
+      {
+        "constraint_id": "C00864",
+        "atom1": "A:72:CB",
+        "atom2": "A:74:N",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_2:134"
+      },
+      {
+        "constraint_id": "C00865",
+        "atom1": "A:72:N",
+        "atom2": "A:73:N",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_1:821"
+      },
+      {
+        "constraint_id": "C00866",
+        "atom1": "A:72:N",
+        "atom2": "A:73:ND2",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_1:822"
+      },
+      {
+        "constraint_id": "C00867",
+        "atom1": "A:73:CA",
+        "atom2": "A:73:CB",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_1:828"
+      },
+      {
+        "constraint_id": "C00868",
+        "atom1": "A:73:CA",
+        "atom2": "A:73:N",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_1:825"
+      },
+      {
+        "constraint_id": "C00869",
+        "atom1": "A:73:CA",
+        "atom2": "A:73:ND2",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_1:829"
+      },
+      {
+        "constraint_id": "C00870",
+        "atom1": "A:73:CA",
+        "atom2": "A:74:N",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_1:834"
+      },
+      {
+        "constraint_id": "C00871",
+        "atom1": "A:73:CB",
+        "atom2": "A:73:N",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_1:826"
+      },
+      {
+        "constraint_id": "C00872",
+        "atom1": "A:73:CB",
+        "atom2": "A:73:ND2",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_1:830;AMBER_distance_restraints_1:831"
+      },
+      {
+        "constraint_id": "C00873",
+        "atom1": "A:73:CB",
+        "atom2": "A:74:N",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_1:835"
+      },
+      {
+        "constraint_id": "C00874",
+        "atom1": "A:73:N",
+        "atom2": "A:73:ND2",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_1:827"
+      },
+      {
+        "constraint_id": "C00875",
+        "atom1": "A:73:N",
+        "atom2": "A:74:CA",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_1:833"
+      },
+      {
+        "constraint_id": "C00876",
+        "atom1": "A:73:N",
+        "atom2": "A:74:N",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_1:832"
+      },
+      {
+        "constraint_id": "C00877",
+        "atom1": "A:74:CA",
+        "atom2": "A:74:N",
+        "models_resolved": 0,
+        "source_groups": "AMBER_distance_restraints_1:836"
+      }
+    ],
     "satisfaction_fraction_of_resolved": 0.9973758200562324,
     "constraints_resolved_in_every_model": 1067,
     "constraints_satisfied_in_any_model": 1065,

@@ -23,6 +23,11 @@ try:
         implication_audit,
         load_structure,
     )
+    from validation.discrepancy_audit import (
+        audit_reports,
+        audit_summary,
+        write_audit_tsv,
+    )
 except ModuleNotFoundError:  # Direct execution: python validation/benchmark_corpus.py
     from compare_ensemble import (  # type: ignore[no-redef]
         align_structure_to_sequence_map,
@@ -31,15 +36,11 @@ except ModuleNotFoundError:  # Direct execution: python validation/benchmark_cor
         implication_audit,
         load_structure,
     )
-
-
-INITIAL_AUDIT = {
-    "successful_conversions": 22,
-    "no_distance_failures": 2,
-    "nef_emitted_constraints": 13004,
-    "star_emitted_constraints": 11841,
-    "fasta_files": 0,
-}
+    from discrepancy_audit import (  # type: ignore[no-redef]
+        audit_reports,
+        audit_summary,
+        write_audit_tsv,
+    )
 
 
 def parse_args() -> argparse.Namespace:
@@ -59,6 +60,17 @@ def parse_args() -> argparse.Namespace:
         help="Destination for per-case conversion and audit outputs.",
     )
     parser.add_argument("--tolerance", type=float, default=0.01)
+    parser.add_argument(
+        "--reviewed-baseline",
+        type=Path,
+        default=Path("benchmark/reviewed_baseline.json"),
+        help="Reviewed audit digest and metric snapshot used by the fail-closed gate.",
+    )
+    parser.add_argument(
+        "--write-reviewed-baseline",
+        action="store_true",
+        help="Explicitly replace the reviewed baseline with this run after manual review.",
+    )
     return parser.parse_args()
 
 
@@ -69,6 +81,11 @@ def _single_file(case_directory: Path, suffix: str) -> Path:
             f"Expected one {suffix} file in {case_directory}, found {len(matches)}."
         )
     return matches[0]
+
+
+def _portable_path(path: Path) -> str:
+    """Serialize artifact paths deterministically across CI operating systems."""
+    return path.as_posix()
 
 
 def _constraint_key(constraint: Any) -> tuple[tuple[str, int, str], tuple[str, int, str]]:
@@ -121,8 +138,11 @@ def _coordinate_summary(report: Any, pdb_path: Path, tolerance: float) -> dict[s
     violated = sum(row["satisfied"] is False for row in heavy_rows)
     missing = sum(row["satisfied"] is None for row in heavy_rows)
     resolved = satisfied + violated
+    missing_constraints = [
+        row for row in heavy_summary if row["models_resolved"] != len(model_ids)
+    ]
     return {
-        "pdb": str(pdb_path),
+        "pdb": pdb_path.as_posix(),
         "model_count": len(model_ids),
         "tolerance_angstrom": tolerance,
         "sequence_alignment": alignment,
@@ -145,6 +165,17 @@ def _coordinate_summary(report: Any, pdb_path: Path, tolerance: float) -> dict[s
             "satisfied_model_cases": satisfied,
             "violated_model_cases": violated,
             "missing_model_cases": missing,
+            "constraints_missing_in_any_model": len(missing_constraints),
+            "missing_constraint_examples": [
+                {
+                    "constraint_id": row["constraint_id"],
+                    "atom1": row["atom1"],
+                    "atom2": row["atom2"],
+                    "models_resolved": row["models_resolved"],
+                    "source_groups": row["source_groups"],
+                }
+                for row in missing_constraints[:50]
+            ],
             "satisfaction_fraction_of_resolved": satisfied / resolved if resolved else None,
             "constraints_resolved_in_every_model": sum(
                 row["models_resolved"] == len(model_ids) for row in heavy_summary
@@ -190,7 +221,9 @@ def _safe_reset_case(case_output: Path, output_root: Path) -> None:
         shutil.rmtree(case_output)
 
 
-def _run_case(case_directory: Path, output_root: Path, tolerance: float) -> dict[str, Any]:
+def _run_case(
+    case_directory: Path, output_root: Path, tolerance: float
+) -> tuple[dict[str, Any], list[dict[str, Any]]]:
     case_id = case_directory.name.upper()
     case_output = output_root / case_id
     _safe_reset_case(case_output, output_root)
@@ -203,7 +236,7 @@ def _run_case(case_directory: Path, output_root: Path, tolerance: float) -> dict
         parsed = parse_star_document(input_path)
         report = project_document(
             parsed,
-            input_file=str(input_path),
+            input_file=input_path.as_posix(),
             topology_library=TopologyLibrary(),
             settings=ProjectionSettings(),
             parser_settings={
@@ -227,7 +260,15 @@ def _run_case(case_directory: Path, output_root: Path, tolerance: float) -> dict
     (case_output / "format_parity.json").write_text(
         json.dumps(parity, indent=2, sort_keys=False) + "\n", encoding="utf-8"
     )
-    return result
+    audit_rows = audit_reports(case_id, reports["nef"], reports["star"])
+    case_audit_summary = audit_summary(audit_rows)
+    result["discrepancy_audit"] = case_audit_summary
+    write_audit_tsv(case_output / "format_discrepancy_audit.tsv", audit_rows)
+    (case_output / "format_discrepancy_summary.json").write_text(
+        json.dumps(case_audit_summary, indent=2, sort_keys=False) + "\n",
+        encoding="utf-8",
+    )
+    return result, audit_rows
 
 
 def _aggregate(cases: list[dict[str, Any]]) -> dict[str, Any]:
@@ -272,6 +313,16 @@ def _aggregate(cases: list[dict[str, Any]]) -> dict[str, Any]:
             "resolved_model_cases": satisfied + violated,
             "satisfied_model_cases": satisfied,
             "violated_model_cases": violated,
+            "missing_model_cases": sum(
+                item["coordinates"]["heavy_atom_constraints"]["missing_model_cases"]
+                for item in conversions
+            ),
+            "constraints_missing_in_any_model": sum(
+                item["coordinates"]["heavy_atom_constraints"][
+                    "constraints_missing_in_any_model"
+                ]
+                for item in conversions
+            ),
             "satisfaction_fraction_of_resolved": (
                 satisfied / (satisfied + violated) if satisfied + violated else None
             ),
@@ -291,12 +342,114 @@ def _aggregate(cases: list[dict[str, Any]]) -> dict[str, Any]:
     return aggregate
 
 
+def _metric_snapshot(run: dict[str, Any]) -> dict[str, Any]:
+    """Select deterministic scientific metrics; any change requires review."""
+    cases: dict[str, Any] = {}
+    for case in run["cases"]:
+        case_metrics: dict[str, Any] = {"status": case["status"]}
+        if case["status"] == "pass":
+            case_metrics["format_parity"] = case["format_parity"]
+            case_metrics["formats"] = {}
+            for format_name in ("nef", "star"):
+                conversion = case["formats"][format_name]
+                heavy = conversion["coordinates"]["heavy_atom_constraints"]
+                implication = conversion["coordinates"]["projection_implication_audit"]
+                case_metrics["formats"][format_name] = {
+                    "restraint_groups": conversion["restraint_groups"],
+                    "source_alternatives": conversion["source_alternatives"],
+                    "emitted_constraints": conversion["emitted_constraints"],
+                    "ambiguous_groups": conversion["ambiguous_groups"],
+                    "rejection_reasons": conversion["rejection_reasons"],
+                    "resolved_model_cases": heavy["resolved_model_cases"],
+                    "satisfied_model_cases": heavy["satisfied_model_cases"],
+                    "violated_model_cases": heavy["violated_model_cases"],
+                    "missing_model_cases": heavy["missing_model_cases"],
+                    "constraints_missing_in_any_model": heavy[
+                        "constraints_missing_in_any_model"
+                    ],
+                    "implication_antecedent_cases": implication["antecedent_cases"],
+                    "implication_failures": implication["failure_count"],
+                }
+        cases[case["case_id"]] = case_metrics
+    return {"cases": cases}
+
+
+def _baseline_payload(run: dict[str, Any]) -> dict[str, Any]:
+    audit = run["discrepancy_audit"]
+    return {
+        "schema_version": 1,
+        "audit_review": {
+            "digest_sha256": audit["digest_sha256"],
+            "row_count": audit["row_count"],
+            "classification_counts": audit["classification_counts"],
+        },
+        "metrics": _metric_snapshot(run),
+    }
+
+
+def _evaluate_gate(run: dict[str, Any], baseline_path: Path) -> dict[str, Any]:
+    failures: list[dict[str, Any]] = []
+    failed_cases = [case["case_id"] for case in run["cases"] if case["status"] != "pass"]
+    if failed_cases:
+        failures.append({"reason": "case_execution_failure", "cases": failed_cases})
+    implication_failures = sum(
+        run["aggregate"]["formats"].get(name, {}).get("implication_failures", 0)
+        for name in ("nef", "star")
+    )
+    if implication_failures:
+        failures.append(
+            {"reason": "projection_implication_failure", "count": implication_failures}
+        )
+    missing_constraints = sum(
+        run["aggregate"]["formats"].get(name, {}).get(
+            "constraints_missing_in_any_model", 0
+        )
+        for name in ("nef", "star")
+    )
+    if missing_constraints:
+        failures.append(
+            {"reason": "missing_coordinate_resolution", "count": missing_constraints}
+        )
+    unresolved = int(run["discrepancy_audit"]["unresolved_count"])
+    if unresolved:
+        failures.append({"reason": "unresolved_format_discrepancy", "count": unresolved})
+    parser_bugs = int(run["discrepancy_audit"]["parser_projection_bug_count"])
+    if parser_bugs:
+        failures.append({"reason": "parser_projection_bug", "count": parser_bugs})
+
+    if not baseline_path.is_file():
+        failures.append(
+            {"reason": "missing_reviewed_baseline", "path": _portable_path(baseline_path)}
+        )
+    else:
+        baseline = json.loads(baseline_path.read_text(encoding="utf-8"))
+        current = _baseline_payload(run)
+        if baseline.get("audit_review") != current["audit_review"]:
+            failures.append(
+                {
+                    "reason": "unreviewed_discrepancy_change",
+                    "expected": baseline.get("audit_review"),
+                    "observed": current["audit_review"],
+                }
+            )
+        if baseline.get("metrics") != current["metrics"]:
+            failures.append({"reason": "unreviewed_metric_change"})
+    return {
+        "status": "pass" if not failures else "fail",
+        "failure_count": len(failures),
+        "failures": failures,
+        "reviewed_baseline": _portable_path(baseline_path),
+    }
+
+
 def _percent(value: float | None) -> str:
     return "N/A" if value is None or not math.isfinite(value) else f"{100 * value:.2f}%"
 
 
 def _markdown(run: dict[str, Any]) -> str:
     aggregate = run["aggregate"]
+    audit = run["discrepancy_audit"]
+    gate = run["gate"]
     lines = [
         "# nmr2boltz paired-format benchmark",
         "",
@@ -336,14 +489,20 @@ def _markdown(run: dict[str, Any]) -> str:
             f"- Conservative implication failures: {nef['implication_failures'] + star['implication_failures']} across {nef['implication_antecedent_cases'] + star['implication_antecedent_cases']} satisfied-antecedent cases.",
             f"- Exact NEF/STAR pair-and-bound parity: {aggregate['exact_positive_distance_parity_cases']}/11 positive-distance cases; 8S8O also has exact empty-output parity.",
             "",
-            "## Comparison with the initial audit",
+            "## Row-level format discrepancy audit",
             "",
-            f"- Successful conversions: {INITIAL_AUDIT['successful_conversions']} -> {aggregate['successful_conversions']}.",
-            f"- No-distance failures: {INITIAL_AUDIT['no_distance_failures']} -> 0.",
-            f"- FASTA outputs: {INITIAL_AUDIT['fasta_files']} -> {aggregate['fasta_files']}.",
-            f"- Emitted contacts: {INITIAL_AUDIT['nef_emitted_constraints']} -> {nef['emitted_constraints']} NEF and {INITIAL_AUDIT['star_emitted_constraints']} -> {star['emitted_constraints']} STAR under unchanged conservative projection policies.",
-            f"- Sequence/residue conflicts are now explicit: {nef['sequence_residue_mismatch_rejections'] + star['sequence_residue_mismatch_rejections']} rejection records use `sequence_residue_mismatch`.",
-            "- Large pseudoatom and atom-set parity differences remain intentionally visible rather than being silently approximated.",
+            f"- {audit['row_count']} NEF-only, STAR-only, or different-bound contacts were audited to source rows and physical proton sets.",
+            f"- Classifications: {audit['classification_counts'].get('expected_format_difference', 0)} scientifically expected format differences; {audit['classification_counts'].get('deposition_inconsistency', 0)} deposition inconsistencies; {audit['unresolved_count']} unresolved; {audit['parser_projection_bug_count']} parser/projection bugs.",
+            f"- Reviewed audit digest: `{audit['digest_sha256']}`.",
+            "- 9PQH contains 43 contact discrepancies caused by its NEF sequence/residue numbering conflict; its remaining two different-bound rows are the expected explicit-OR versus wildcard atom-set distinction.",
+            "- 43JX, 6M6O, 9SGX, and 9VUY differences are justified by explicit-OR, wildcard atom-set, x/y assignment, or rejected geometric-pseudoatom semantics.",
+            "",
+            "## Fail-closed gate",
+            "",
+            f"- Gate status: **{gate['status'].upper()}** ({gate['failure_count']} failure {'category' if gate['failure_count'] == 1 else 'categories'}).",
+            f"- Coordinate resolution gaps: {nef['constraints_missing_in_any_model']} NEF and {star['constraints_missing_in_any_model']} STAR contacts. These are not omitted from the denominator silently.",
+            "- The current gaps are 45 contacts per format in partial-coordinate 8R1X and 8 contacts per format in 9CCH restraints that deposit `ZN`/`ZN*` on GLN 48 rather than the coordinate zinc residue.",
+            "- Any implication failure, missing coordinate, unresolved discrepancy, audit-digest change, or metric snapshot change makes the command exit nonzero.",
             "",
             "This validates conversion safety and format behavior against structures refined with the deposited restraints; it is not an independent Boltz prediction-accuracy benchmark.",
             "",
@@ -352,7 +511,14 @@ def _markdown(run: dict[str, Any]) -> str:
     return "\n".join(lines)
 
 
-def run_corpus(input_directory: Path, output_directory: Path, tolerance: float) -> dict[str, Any]:
+def run_corpus(
+    input_directory: Path,
+    output_directory: Path,
+    tolerance: float,
+    reviewed_baseline: Path = Path("benchmark/reviewed_baseline.json"),
+    *,
+    write_reviewed_baseline: bool = False,
+) -> dict[str, Any]:
     if tolerance < 0 or not math.isfinite(tolerance):
         raise ValueError("tolerance must be finite and non-negative")
     case_directories = sorted(path for path in input_directory.iterdir() if path.is_dir())
@@ -360,9 +526,12 @@ def run_corpus(input_directory: Path, output_directory: Path, tolerance: float) 
         raise ValueError(f"No case directories were found in {input_directory}.")
     output_directory.mkdir(parents=True, exist_ok=True)
     cases: list[dict[str, Any]] = []
+    all_audit_rows: list[dict[str, Any]] = []
     for case_directory in case_directories:
         try:
-            cases.append(_run_case(case_directory, output_directory, tolerance))
+            case, audit_rows = _run_case(case_directory, output_directory, tolerance)
+            cases.append(case)
+            all_audit_rows.extend(audit_rows)
         except Exception as exc:
             cases.append(
                 {
@@ -373,9 +542,9 @@ def run_corpus(input_directory: Path, output_directory: Path, tolerance: float) 
                 }
             )
     run = {
-        "schema_version": 1,
-        "input_directory": str(input_directory),
-        "output_directory": str(output_directory),
+        "schema_version": 2,
+        "input_directory": _portable_path(input_directory),
+        "output_directory": _portable_path(output_directory),
         "settings": {
             "averaging_policy": "sum-r6",
             "pseudoatom_policy": "reject",
@@ -383,8 +552,21 @@ def run_corpus(input_directory: Path, output_directory: Path, tolerance: float) 
             "coordinate_tolerance_angstrom": tolerance,
         },
         "aggregate": _aggregate(cases),
+        "discrepancy_audit": audit_summary(all_audit_rows),
         "cases": cases,
     }
+    write_audit_tsv(output_directory / "FORMAT_DISCREPANCY_AUDIT.tsv", all_audit_rows)
+    (output_directory / "format_discrepancy_summary.json").write_text(
+        json.dumps(run["discrepancy_audit"], indent=2, sort_keys=False) + "\n",
+        encoding="utf-8",
+    )
+    if write_reviewed_baseline:
+        reviewed_baseline.parent.mkdir(parents=True, exist_ok=True)
+        reviewed_baseline.write_text(
+            json.dumps(_baseline_payload(run), indent=2, sort_keys=False) + "\n",
+            encoding="utf-8",
+        )
+    run["gate"] = _evaluate_gate(run, reviewed_baseline)
     (output_directory / "benchmark_summary.json").write_text(
         json.dumps(run, indent=2, sort_keys=False) + "\n", encoding="utf-8"
     )
@@ -392,7 +574,7 @@ def run_corpus(input_directory: Path, output_directory: Path, tolerance: float) 
         _markdown(run), encoding="utf-8"
     )
     (output_directory / "RUN_COMMAND.txt").write_text(
-        "python validation/benchmark_corpus.py benchmark/input --output-directory benchmark/output\n",
+        "python validation/benchmark_corpus.py benchmark/input --output-directory benchmark/output --reviewed-baseline benchmark/reviewed_baseline.json\n",
         encoding="utf-8",
     )
     return run
@@ -400,9 +582,16 @@ def run_corpus(input_directory: Path, output_directory: Path, tolerance: float) 
 
 def main() -> int:
     args = parse_args()
-    run = run_corpus(args.input_directory, args.output_directory, args.tolerance)
+    run = run_corpus(
+        args.input_directory,
+        args.output_directory,
+        args.tolerance,
+        args.reviewed_baseline,
+        write_reviewed_baseline=args.write_reviewed_baseline,
+    )
     print(json.dumps(run["aggregate"], indent=2, sort_keys=False))
-    return 0 if run["aggregate"]["successful_cases"] == run["aggregate"]["case_count"] else 2
+    print(json.dumps({"gate": run["gate"]}, indent=2, sort_keys=False))
+    return 0 if run["gate"]["status"] == "pass" else 2
 
 
 if __name__ == "__main__":

@@ -89,6 +89,7 @@ class RawAlternative:
     member_id: str | None = None
     member_logic_code: str | None = None
     row_ids: list[str] = field(default_factory=list)
+    canonical_expansions: list[dict[str, str | None]] = field(default_factory=list)
     bound_source: str = "explicit_upper_bound"
     warnings: list[str] = field(default_factory=list)
 
@@ -236,4 +237,11 @@ class ConversionReport:
     target_validation: dict[str, Any] | None = None
 
     def to_dict(self) -> dict[str, Any]:
-        return asdict(self)
+        payload = asdict(self)
+        # Canonical expansion provenance is optional and is populated only
+        # when multiple canonical rows collapse to one author-level set.
+        for group in payload["source_restraint_groups"]:
+            for alternative in group["alternatives"]:
+                if not alternative["canonical_expansions"]:
+                    del alternative["canonical_expansions"]
+        return payload

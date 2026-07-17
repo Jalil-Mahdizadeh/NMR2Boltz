@@ -1,5 +1,5 @@
 {
-  "input_file": "benchmark\\input\\9VQ1\\9vq1_nmr-data.str",
+  "input_file": "benchmark/input/9VQ1/9vq1_nmr-data.str",
   "detected_format": "nmr-star",
   "settings": {
     "benchmark_case": "9VQ1",

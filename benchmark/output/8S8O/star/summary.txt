@@ -1,6 +1,6 @@
 NMR-to-Boltz heavy-atom projection summary
 ==============================================
-Input: benchmark\input\8S8O\8s8o_nmr-data.str
+Input: benchmark/input/8S8O/8s8o_nmr-data.str
 Detected format: nmr-star
 Restraint groups read: 0
 Source alternatives read: 0

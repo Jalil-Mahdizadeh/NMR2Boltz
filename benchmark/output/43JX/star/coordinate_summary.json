@@ -1,5 +1,5 @@
 {
-  "pdb": "benchmark\\input\\43JX\\43JX.pdb",
+  "pdb": "benchmark/input/43JX/43JX.pdb",
   "model_count": 20,
   "tolerance_angstrom": 0.01,
   "sequence_alignment": [
@@ -31,6 +31,8 @@
     "satisfied_model_cases": 34293,
     "violated_model_cases": 27,
     "missing_model_cases": 0,
+    "constraints_missing_in_any_model": 0,
+    "missing_constraint_examples": [],
     "satisfaction_fraction_of_resolved": 0.9992132867132867,
     "constraints_resolved_in_every_model": 1716,
     "constraints_satisfied_in_any_model": 1716,

@@ -1,5 +1,5 @@
 {
-  "input_file": "benchmark\\input\\9PQH\\9pqh_nmr-data.str",
+  "input_file": "benchmark/input/9PQH/9pqh_nmr-data.str",
   "detected_format": "nmr-star",
   "settings": {
     "benchmark_case": "9PQH",
@@ -9492,6 +9492,53 @@
             "8",
             "9"
           ],
+          "canonical_expansions": [
+            {
+              "row_id": "1",
+              "atom1": "HB1",
+              "atom2": "HG11"
+            },
+            {
+              "row_id": "2",
+              "atom1": "HB1",
+              "atom2": "HG12"
+            },
+            {
+              "row_id": "3",
+              "atom1": "HB1",
+              "atom2": "HG13"
+            },
+            {
+              "row_id": "4",
+              "atom1": "HB2",
+              "atom2": "HG11"
+            },
+            {
+              "row_id": "5",
+              "atom1": "HB2",
+              "atom2": "HG12"
+            },
+            {
+              "row_id": "6",
+              "atom1": "HB2",
+              "atom2": "HG13"
+            },
+            {
+              "row_id": "7",
+              "atom1": "HB3",
+              "atom2": "HG11"
+            },
+            {
+              "row_id": "8",
+              "atom1": "HB3",
+              "atom2": "HG12"
+            },
+            {
+              "row_id": "9",
+              "atom1": "HB3",
+              "atom2": "HG13"
+            }
+          ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
             "duplicate canonical expansion row collapsed to its author-level atom expression",
@@ -9553,6 +9600,23 @@
             "11",
             "12"
           ],
+          "canonical_expansions": [
+            {
+              "row_id": "10",
+              "atom1": "HB1",
+              "atom2": "HE3"
+            },
+            {
+              "row_id": "11",
+              "atom1": "HB2",
+              "atom2": "HE3"
+            },
+            {
+              "row_id": "12",
+              "atom1": "HB3",
+              "atom2": "HE3"
+            }
+          ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
             "duplicate canonical expansion row collapsed to its author-level atom expression",
@@ -9613,6 +9677,53 @@
             "19",
             "20",
             "21"
+          ],
+          "canonical_expansions": [
+            {
+              "row_id": "13",
+              "atom1": "HD11",
+              "atom2": "HB1"
+            },
+            {
+              "row_id": "14",
+              "atom1": "HD11",
+              "atom2": "HB2"
+            },
+            {
+              "row_id": "15",
+              "atom1": "HD11",
+              "atom2": "HB3"
+            },
+            {
+              "row_id": "16",
+              "atom1": "HD12",
+              "atom2": "HB1"
+            },
+            {
+              "row_id": "17",
+              "atom1": "HD12",
+              "atom2": "HB2"
+            },
+            {
+              "row_id": "18",
+              "atom1": "HD12",
+              "atom2": "HB3"
+            },
+            {
+              "row_id": "19",
+              "atom1": "HD13",
+              "atom2": "HB1"
+            },
+            {
+              "row_id": "20",
+              "atom1": "HD13",
+              "atom2": "HB2"
+            },
+            {
+              "row_id": "21",
+              "atom1": "HD13",
+              "atom2": "HB3"
+            }
           ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
@@ -9681,6 +9792,53 @@
             "29",
             "30"
           ],
+          "canonical_expansions": [
+            {
+              "row_id": "22",
+              "atom1": "HD11",
+              "atom2": "HG11"
+            },
+            {
+              "row_id": "23",
+              "atom1": "HD11",
+              "atom2": "HG12"
+            },
+            {
+              "row_id": "24",
+              "atom1": "HD11",
+              "atom2": "HG13"
+            },
+            {
+              "row_id": "25",
+              "atom1": "HD12",
+              "atom2": "HG11"
+            },
+            {
+              "row_id": "26",
+              "atom1": "HD12",
+              "atom2": "HG12"
+            },
+            {
+              "row_id": "27",
+              "atom1": "HD12",
+              "atom2": "HG13"
+            },
+            {
+              "row_id": "28",
+              "atom1": "HD13",
+              "atom2": "HG11"
+            },
+            {
+              "row_id": "29",
+              "atom1": "HD13",
+              "atom2": "HG12"
+            },
+            {
+              "row_id": "30",
+              "atom1": "HD13",
+              "atom2": "HG13"
+            }
+          ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
             "duplicate canonical expansion row collapsed to its author-level atom expression",
@@ -9747,6 +9905,53 @@
             "37",
             "38",
             "39"
+          ],
+          "canonical_expansions": [
+            {
+              "row_id": "31",
+              "atom1": "HD11",
+              "atom2": "HG21"
+            },
+            {
+              "row_id": "32",
+              "atom1": "HD11",
+              "atom2": "HG22"
+            },
+            {
+              "row_id": "33",
+              "atom1": "HD11",
+              "atom2": "HG23"
+            },
+            {
+              "row_id": "34",
+              "atom1": "HD12",
+              "atom2": "HG21"
+            },
+            {
+              "row_id": "35",
+              "atom1": "HD12",
+              "atom2": "HG22"
+            },
+            {
+              "row_id": "36",
+              "atom1": "HD12",
+              "atom2": "HG23"
+            },
+            {
+              "row_id": "37",
+              "atom1": "HD13",
+              "atom2": "HG21"
+            },
+            {
+              "row_id": "38",
+              "atom1": "HD13",
+              "atom2": "HG22"
+            },
+            {
+              "row_id": "39",
+              "atom1": "HD13",
+              "atom2": "HG23"
+            }
           ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
@@ -9815,6 +10020,53 @@
             "47",
             "48"
           ],
+          "canonical_expansions": [
+            {
+              "row_id": "40",
+              "atom1": "HD21",
+              "atom2": "HB1"
+            },
+            {
+              "row_id": "41",
+              "atom1": "HD21",
+              "atom2": "HB2"
+            },
+            {
+              "row_id": "42",
+              "atom1": "HD21",
+              "atom2": "HB3"
+            },
+            {
+              "row_id": "43",
+              "atom1": "HD22",
+              "atom2": "HB1"
+            },
+            {
+              "row_id": "44",
+              "atom1": "HD22",
+              "atom2": "HB2"
+            },
+            {
+              "row_id": "45",
+              "atom1": "HD22",
+              "atom2": "HB3"
+            },
+            {
+              "row_id": "46",
+              "atom1": "HD23",
+              "atom2": "HB1"
+            },
+            {
+              "row_id": "47",
+              "atom1": "HD23",
+              "atom2": "HB2"
+            },
+            {
+              "row_id": "48",
+              "atom1": "HD23",
+              "atom2": "HB3"
+            }
+          ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
             "duplicate canonical expansion row collapsed to its author-level atom expression",
@@ -9876,6 +10128,23 @@
             "50",
             "51"
           ],
+          "canonical_expansions": [
+            {
+              "row_id": "49",
+              "atom1": "HD11",
+              "atom2": "HH2"
+            },
+            {
+              "row_id": "50",
+              "atom1": "HD12",
+              "atom2": "HH2"
+            },
+            {
+              "row_id": "51",
+              "atom1": "HD13",
+              "atom2": "HH2"
+            }
+          ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
             "duplicate canonical expansion row collapsed to its author-level atom expression",
@@ -9930,6 +10199,23 @@
             "52",
             "53",
             "54"
+          ],
+          "canonical_expansions": [
+            {
+              "row_id": "52",
+              "atom1": "HD11",
+              "atom2": "HZ3"
+            },
+            {
+              "row_id": "53",
+              "atom1": "HD12",
+              "atom2": "HZ3"
+            },
+            {
+              "row_id": "54",
+              "atom1": "HD13",
+              "atom2": "HZ3"
+            }
           ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
@@ -9986,6 +10272,23 @@
             "56",
             "57"
           ],
+          "canonical_expansions": [
+            {
+              "row_id": "55",
+              "atom1": "HD11",
+              "atom2": "HE3"
+            },
+            {
+              "row_id": "56",
+              "atom1": "HD12",
+              "atom2": "HE3"
+            },
+            {
+              "row_id": "57",
+              "atom1": "HD13",
+              "atom2": "HE3"
+            }
+          ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
             "duplicate canonical expansion row collapsed to its author-level atom expression",
@@ -10040,6 +10343,23 @@
             "58",
             "59",
             "60"
+          ],
+          "canonical_expansions": [
+            {
+              "row_id": "58",
+              "atom1": "HD11",
+              "atom2": "HZ3"
+            },
+            {
+              "row_id": "59",
+              "atom1": "HD12",
+              "atom2": "HZ3"
+            },
+            {
+              "row_id": "60",
+              "atom1": "HD13",
+              "atom2": "HZ3"
+            }
           ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
@@ -10096,6 +10416,23 @@
             "62",
             "63"
           ],
+          "canonical_expansions": [
+            {
+              "row_id": "61",
+              "atom1": "HD21",
+              "atom2": "HE3"
+            },
+            {
+              "row_id": "62",
+              "atom1": "HD22",
+              "atom2": "HE3"
+            },
+            {
+              "row_id": "63",
+              "atom1": "HD23",
+              "atom2": "HE3"
+            }
+          ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
             "duplicate canonical expansion row collapsed to its author-level atom expression",
@@ -10150,6 +10487,23 @@
             "64",
             "65",
             "66"
+          ],
+          "canonical_expansions": [
+            {
+              "row_id": "64",
+              "atom1": "HD21",
+              "atom2": "HZ3"
+            },
+            {
+              "row_id": "65",
+              "atom1": "HD22",
+              "atom2": "HZ3"
+            },
+            {
+              "row_id": "66",
+              "atom1": "HD23",
+              "atom2": "HZ3"
+            }
           ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
@@ -10206,6 +10560,23 @@
             "68",
             "69"
           ],
+          "canonical_expansions": [
+            {
+              "row_id": "67",
+              "atom1": "HE1",
+              "atom2": "HE3"
+            },
+            {
+              "row_id": "68",
+              "atom1": "HE2",
+              "atom2": "HE3"
+            },
+            {
+              "row_id": "69",
+              "atom1": "HE3",
+              "atom2": "HE3"
+            }
+          ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
             "duplicate canonical expansion row collapsed to its author-level atom expression",
@@ -10260,6 +10631,23 @@
             "70",
             "71",
             "72"
+          ],
+          "canonical_expansions": [
+            {
+              "row_id": "70",
+              "atom1": "HE1",
+              "atom2": "HZ3"
+            },
+            {
+              "row_id": "71",
+              "atom1": "HE2",
+              "atom2": "HZ3"
+            },
+            {
+              "row_id": "72",
+              "atom1": "HE3",
+              "atom2": "HZ3"
+            }
           ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
@@ -10321,6 +10709,53 @@
             "79",
             "80",
             "81"
+          ],
+          "canonical_expansions": [
+            {
+              "row_id": "73",
+              "atom1": "HD11",
+              "atom2": "HG21"
+            },
+            {
+              "row_id": "74",
+              "atom1": "HD11",
+              "atom2": "HG22"
+            },
+            {
+              "row_id": "75",
+              "atom1": "HD11",
+              "atom2": "HG23"
+            },
+            {
+              "row_id": "76",
+              "atom1": "HD12",
+              "atom2": "HG21"
+            },
+            {
+              "row_id": "77",
+              "atom1": "HD12",
+              "atom2": "HG22"
+            },
+            {
+              "row_id": "78",
+              "atom1": "HD12",
+              "atom2": "HG23"
+            },
+            {
+              "row_id": "79",
+              "atom1": "HD13",
+              "atom2": "HG21"
+            },
+            {
+              "row_id": "80",
+              "atom1": "HD13",
+              "atom2": "HG22"
+            },
+            {
+              "row_id": "81",
+              "atom1": "HD13",
+              "atom2": "HG23"
+            }
           ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
@@ -10389,6 +10824,53 @@
             "89",
             "90"
           ],
+          "canonical_expansions": [
+            {
+              "row_id": "82",
+              "atom1": "HD21",
+              "atom2": "HG21"
+            },
+            {
+              "row_id": "83",
+              "atom1": "HD21",
+              "atom2": "HG22"
+            },
+            {
+              "row_id": "84",
+              "atom1": "HD21",
+              "atom2": "HG23"
+            },
+            {
+              "row_id": "85",
+              "atom1": "HD22",
+              "atom2": "HG21"
+            },
+            {
+              "row_id": "86",
+              "atom1": "HD22",
+              "atom2": "HG22"
+            },
+            {
+              "row_id": "87",
+              "atom1": "HD22",
+              "atom2": "HG23"
+            },
+            {
+              "row_id": "88",
+              "atom1": "HD23",
+              "atom2": "HG21"
+            },
+            {
+              "row_id": "89",
+              "atom1": "HD23",
+              "atom2": "HG22"
+            },
+            {
+              "row_id": "90",
+              "atom1": "HD23",
+              "atom2": "HG23"
+            }
+          ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
             "duplicate canonical expansion row collapsed to its author-level atom expression",
@@ -10453,6 +10935,38 @@
             "95",
             "96"
           ],
+          "canonical_expansions": [
+            {
+              "row_id": "91",
+              "atom1": "HD11",
+              "atom2": "HD1"
+            },
+            {
+              "row_id": "92",
+              "atom1": "HD11",
+              "atom2": "HD2"
+            },
+            {
+              "row_id": "93",
+              "atom1": "HD12",
+              "atom2": "HD1"
+            },
+            {
+              "row_id": "94",
+              "atom1": "HD12",
+              "atom2": "HD2"
+            },
+            {
+              "row_id": "95",
+              "atom1": "HD13",
+              "atom2": "HD1"
+            },
+            {
+              "row_id": "96",
+              "atom1": "HD13",
+              "atom2": "HD2"
+            }
+          ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
             "duplicate canonical expansion row collapsed to its author-level atom expression",
@@ -10513,6 +11027,38 @@
             "100",
             "101",
             "102"
+          ],
+          "canonical_expansions": [
+            {
+              "row_id": "97",
+              "atom1": "HD11",
+              "atom2": "HE1"
+            },
+            {
+              "row_id": "98",
+              "atom1": "HD11",
+              "atom2": "HE2"
+            },
+            {
+              "row_id": "99",
+              "atom1": "HD12",
+              "atom2": "HE1"
+            },
+            {
+              "row_id": "100",
+              "atom1": "HD12",
+              "atom2": "HE2"
+            },
+            {
+              "row_id": "101",
+              "atom1": "HD13",
+              "atom2": "HE1"
+            },
+            {
+              "row_id": "102",
+              "atom1": "HD13",
+              "atom2": "HE2"
+            }
           ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
@@ -10575,6 +11121,38 @@
             "107",
             "108"
           ],
+          "canonical_expansions": [
+            {
+              "row_id": "103",
+              "atom1": "HD21",
+              "atom2": "HD1"
+            },
+            {
+              "row_id": "104",
+              "atom1": "HD21",
+              "atom2": "HD2"
+            },
+            {
+              "row_id": "105",
+              "atom1": "HD22",
+              "atom2": "HD1"
+            },
+            {
+              "row_id": "106",
+              "atom1": "HD22",
+              "atom2": "HD2"
+            },
+            {
+              "row_id": "107",
+              "atom1": "HD23",
+              "atom2": "HD1"
+            },
+            {
+              "row_id": "108",
+              "atom1": "HD23",
+              "atom2": "HD2"
+            }
+          ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
             "duplicate canonical expansion row collapsed to its author-level atom expression",
@@ -10636,6 +11214,38 @@
             "113",
             "114"
           ],
+          "canonical_expansions": [
+            {
+              "row_id": "109",
+              "atom1": "HD21",
+              "atom2": "HE1"
+            },
+            {
+              "row_id": "110",
+              "atom1": "HD21",
+              "atom2": "HE2"
+            },
+            {
+              "row_id": "111",
+              "atom1": "HD22",
+              "atom2": "HE1"
+            },
+            {
+              "row_id": "112",
+              "atom1": "HD22",
+              "atom2": "HE2"
+            },
+            {
+              "row_id": "113",
+              "atom1": "HD23",
+              "atom2": "HE1"
+            },
+            {
+              "row_id": "114",
+              "atom1": "HD23",
+              "atom2": "HE2"
+            }
+          ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
             "duplicate canonical expansion row collapsed to its author-level atom expression",
@@ -10694,6 +11304,23 @@
             "116",
             "117"
           ],
+          "canonical_expansions": [
+            {
+              "row_id": "115",
+              "atom1": "HE1",
+              "atom2": "HZ3"
+            },
+            {
+              "row_id": "116",
+              "atom1": "HE2",
+              "atom2": "HZ3"
+            },
+            {
+              "row_id": "117",
+              "atom1": "HE3",
+              "atom2": "HZ3"
+            }
+          ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
             "duplicate canonical expansion row collapsed to its author-level atom expression",
@@ -10748,6 +11375,23 @@
             "118",
             "119",
             "120"
+          ],
+          "canonical_expansions": [
+            {
+              "row_id": "118",
+              "atom1": "HG21",
+              "atom2": "HH2"
+            },
+            {
+              "row_id": "119",
+              "atom1": "HG22",
+              "atom2": "HH2"
+            },
+            {
+              "row_id": "120",
+              "atom1": "HG23",
+              "atom2": "HH2"
+            }
           ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
@@ -10804,6 +11448,23 @@
             "122",
             "123"
           ],
+          "canonical_expansions": [
+            {
+              "row_id": "121",
+              "atom1": "HG21",
+              "atom2": "HZ2"
+            },
+            {
+              "row_id": "122",
+              "atom1": "HG22",
+              "atom2": "HZ2"
+            },
+            {
+              "row_id": "123",
+              "atom1": "HG23",
+              "atom2": "HZ2"
+            }
+          ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
             "duplicate canonical expansion row collapsed to its author-level atom expression",
@@ -10858,6 +11519,23 @@
             "124",
             "125",
             "126"
+          ],
+          "canonical_expansions": [
+            {
+              "row_id": "124",
+              "atom1": "HD11",
+              "atom2": "HH2"
+            },
+            {
+              "row_id": "125",
+              "atom1": "HD12",
+              "atom2": "HH2"
+            },
+            {
+              "row_id": "126",
+              "atom1": "HD13",
+              "atom2": "HH2"
+            }
           ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
@@ -10914,6 +11592,23 @@
             "128",
             "129"
           ],
+          "canonical_expansions": [
+            {
+              "row_id": "127",
+              "atom1": "HD11",
+              "atom2": "HZ2"
+            },
+            {
+              "row_id": "128",
+              "atom1": "HD12",
+              "atom2": "HZ2"
+            },
+            {
+              "row_id": "129",
+              "atom1": "HD13",
+              "atom2": "HZ2"
+            }
+          ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
             "duplicate canonical expansion row collapsed to its author-level atom expression",
@@ -10969,6 +11664,23 @@
             "131",
             "132"
           ],
+          "canonical_expansions": [
+            {
+              "row_id": "130",
+              "atom1": "HE1",
+              "atom2": "HD1"
+            },
+            {
+              "row_id": "131",
+              "atom1": "HE2",
+              "atom2": "HD1"
+            },
+            {
+              "row_id": "132",
+              "atom1": "HE3",
+              "atom2": "HD1"
+            }
+          ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
             "duplicate canonical expansion row collapsed to its author-level atom expression",
@@ -11023,6 +11735,23 @@
             "133",
             "134",
             "135"
+          ],
+          "canonical_expansions": [
+            {
+              "row_id": "133",
+              "atom1": "HE1",
+              "atom2": "HZ2"
+            },
+            {
+              "row_id": "134",
+              "atom1": "HE2",
+              "atom2": "HZ2"
+            },
+            {
+              "row_id": "135",
+              "atom1": "HE3",
+              "atom2": "HZ2"
+            }
           ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
@@ -11085,6 +11814,53 @@
             "143",
             "144"
           ],
+          "canonical_expansions": [
+            {
+              "row_id": "136",
+              "atom1": "HE1",
+              "atom2": "HG21"
+            },
+            {
+              "row_id": "137",
+              "atom1": "HE1",
+              "atom2": "HG22"
+            },
+            {
+              "row_id": "138",
+              "atom1": "HE1",
+              "atom2": "HG23"
+            },
+            {
+              "row_id": "139",
+              "atom1": "HE2",
+              "atom2": "HG21"
+            },
+            {
+              "row_id": "140",
+              "atom1": "HE2",
+              "atom2": "HG22"
+            },
+            {
+              "row_id": "141",
+              "atom1": "HE2",
+              "atom2": "HG23"
+            },
+            {
+              "row_id": "142",
+              "atom1": "HE3",
+              "atom2": "HG21"
+            },
+            {
+              "row_id": "143",
+              "atom1": "HE3",
+              "atom2": "HG22"
+            },
+            {
+              "row_id": "144",
+              "atom1": "HE3",
+              "atom2": "HG23"
+            }
+          ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
             "duplicate canonical expansion row collapsed to its author-level atom expression",
@@ -11146,6 +11922,23 @@
             "146",
             "147"
           ],
+          "canonical_expansions": [
+            {
+              "row_id": "145",
+              "atom1": "HE1",
+              "atom2": "HD1"
+            },
+            {
+              "row_id": "146",
+              "atom1": "HE2",
+              "atom2": "HD1"
+            },
+            {
+              "row_id": "147",
+              "atom1": "HE3",
+              "atom2": "HD1"
+            }
+          ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
             "duplicate canonical expansion row collapsed to its author-level atom expression",
@@ -11206,6 +11999,53 @@
             "154",
             "155",
             "156"
+          ],
+          "canonical_expansions": [
+            {
+              "row_id": "148",
+              "atom1": "HE1",
+              "atom2": "HG11"
+            },
+            {
+              "row_id": "149",
+              "atom1": "HE1",
+              "atom2": "HG12"
+            },
+            {
+              "row_id": "150",
+              "atom1": "HE1",
+              "atom2": "HG13"
+            },
+            {
+              "row_id": "151",
+              "atom1": "HE2",
+              "atom2": "HG11"
+            },
+            {
+              "row_id": "152",
+              "atom1": "HE2",
+              "atom2": "HG12"
+            },
+            {
+              "row_id": "153",
+              "atom1": "HE2",
+              "atom2": "HG13"
+            },
+            {
+              "row_id": "154",
+              "atom1": "HE3",
+              "atom2": "HG11"
+            },
+            {
+              "row_id": "155",
+              "atom1": "HE3",
+              "atom2": "HG12"
+            },
+            {
+              "row_id": "156",
+              "atom1": "HE3",
+              "atom2": "HG13"
+            }
           ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
@@ -11274,6 +12114,53 @@
             "164",
             "165"
           ],
+          "canonical_expansions": [
+            {
+              "row_id": "157",
+              "atom1": "HE1",
+              "atom2": "HG11"
+            },
+            {
+              "row_id": "158",
+              "atom1": "HE1",
+              "atom2": "HG12"
+            },
+            {
+              "row_id": "159",
+              "atom1": "HE1",
+              "atom2": "HG13"
+            },
+            {
+              "row_id": "160",
+              "atom1": "HE2",
+              "atom2": "HG11"
+            },
+            {
+              "row_id": "161",
+              "atom1": "HE2",
+              "atom2": "HG12"
+            },
+            {
+              "row_id": "162",
+              "atom1": "HE2",
+              "atom2": "HG13"
+            },
+            {
+              "row_id": "163",
+              "atom1": "HE3",
+              "atom2": "HG11"
+            },
+            {
+              "row_id": "164",
+              "atom1": "HE3",
+              "atom2": "HG12"
+            },
+            {
+              "row_id": "165",
+              "atom1": "HE3",
+              "atom2": "HG13"
+            }
+          ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
             "duplicate canonical expansion row collapsed to its author-level atom expression",
@@ -11337,6 +12224,38 @@
             "169",
             "170",
             "171"
+          ],
+          "canonical_expansions": [
+            {
+              "row_id": "166",
+              "atom1": "HB2",
+              "atom2": "HG11"
+            },
+            {
+              "row_id": "167",
+              "atom1": "HB2",
+              "atom2": "HG12"
+            },
+            {
+              "row_id": "168",
+              "atom1": "HB2",
+              "atom2": "HG13"
+            },
+            {
+              "row_id": "169",
+              "atom1": "HB3",
+              "atom2": "HG11"
+            },
+            {
+              "row_id": "170",
+              "atom1": "HB3",
+              "atom2": "HG12"
+            },
+            {
+              "row_id": "171",
+              "atom1": "HB3",
+              "atom2": "HG13"
+            }
           ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
@@ -11402,6 +12321,53 @@
             "179",
             "180"
           ],
+          "canonical_expansions": [
+            {
+              "row_id": "172",
+              "atom1": "HD11",
+              "atom2": "HG11"
+            },
+            {
+              "row_id": "173",
+              "atom1": "HD11",
+              "atom2": "HG12"
+            },
+            {
+              "row_id": "174",
+              "atom1": "HD11",
+              "atom2": "HG13"
+            },
+            {
+              "row_id": "175",
+              "atom1": "HD12",
+              "atom2": "HG11"
+            },
+            {
+              "row_id": "176",
+              "atom1": "HD12",
+              "atom2": "HG12"
+            },
+            {
+              "row_id": "177",
+              "atom1": "HD12",
+              "atom2": "HG13"
+            },
+            {
+              "row_id": "178",
+              "atom1": "HD13",
+              "atom2": "HG11"
+            },
+            {
+              "row_id": "179",
+              "atom1": "HD13",
+              "atom2": "HG12"
+            },
+            {
+              "row_id": "180",
+              "atom1": "HD13",
+              "atom2": "HG13"
+            }
+          ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
             "duplicate canonical expansion row collapsed to its author-level atom expression",
@@ -11466,6 +12432,38 @@
             "185",
             "186"
           ],
+          "canonical_expansions": [
+            {
+              "row_id": "181",
+              "atom1": "HB1",
+              "atom2": "HD1"
+            },
+            {
+              "row_id": "182",
+              "atom1": "HB1",
+              "atom2": "HD2"
+            },
+            {
+              "row_id": "183",
+              "atom1": "HB2",
+              "atom2": "HD1"
+            },
+            {
+              "row_id": "184",
+              "atom1": "HB2",
+              "atom2": "HD2"
+            },
+            {
+              "row_id": "185",
+              "atom1": "HB3",
+              "atom2": "HD1"
+            },
+            {
+              "row_id": "186",
+              "atom1": "HB3",
+              "atom2": "HD2"
+            }
+          ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
             "duplicate canonical expansion row collapsed to its author-level atom expression",
@@ -11527,6 +12525,38 @@
             "191",
             "192"
           ],
+          "canonical_expansions": [
+            {
+              "row_id": "187",
+              "atom1": "HB1",
+              "atom2": "HE1"
+            },
+            {
+              "row_id": "188",
+              "atom1": "HB1",
+              "atom2": "HE2"
+            },
+            {
+              "row_id": "189",
+              "atom1": "HB2",
+              "atom2": "HE1"
+            },
+            {
+              "row_id": "190",
+              "atom1": "HB2",
+              "atom2": "HE2"
+            },
+            {
+              "row_id": "191",
+              "atom1": "HB3",
+              "atom2": "HE1"
+            },
+            {
+              "row_id": "192",
+              "atom1": "HB3",
+              "atom2": "HE2"
+            }
+          ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
             "duplicate canonical expansion row collapsed to its author-level atom expression",
@@ -11584,6 +12614,23 @@
             "193",
             "194",
             "195"
+          ],
+          "canonical_expansions": [
+            {
+              "row_id": "193",
+              "atom1": "HB1",
+              "atom2": "HZ"
+            },
+            {
+              "row_id": "194",
+              "atom1": "HB2",
+              "atom2": "HZ"
+            },
+            {
+              "row_id": "195",
+              "atom1": "HB3",
+              "atom2": "HZ"
+            }
           ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
@@ -11643,6 +12690,38 @@
             "200",
             "201"
           ],
+          "canonical_expansions": [
+            {
+              "row_id": "196",
+              "atom1": "HG11",
+              "atom2": "HE1"
+            },
+            {
+              "row_id": "197",
+              "atom1": "HG11",
+              "atom2": "HE2"
+            },
+            {
+              "row_id": "198",
+              "atom1": "HG12",
+              "atom2": "HE1"
+            },
+            {
+              "row_id": "199",
+              "atom1": "HG12",
+              "atom2": "HE2"
+            },
+            {
+              "row_id": "200",
+              "atom1": "HG13",
+              "atom2": "HE1"
+            },
+            {
+              "row_id": "201",
+              "atom1": "HG13",
+              "atom2": "HE2"
+            }
+          ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
             "duplicate canonical expansion row collapsed to its author-level atom expression",
@@ -11700,6 +12779,23 @@
             "202",
             "203",
             "204"
+          ],
+          "canonical_expansions": [
+            {
+              "row_id": "202",
+              "atom1": "HG11",
+              "atom2": "HZ"
+            },
+            {
+              "row_id": "203",
+              "atom1": "HG12",
+              "atom2": "HZ"
+            },
+            {
+              "row_id": "204",
+              "atom1": "HG13",
+              "atom2": "HZ"
+            }
           ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
@@ -11759,6 +12855,38 @@
             "209",
             "210"
           ],
+          "canonical_expansions": [
+            {
+              "row_id": "205",
+              "atom1": "HG21",
+              "atom2": "HE1"
+            },
+            {
+              "row_id": "206",
+              "atom1": "HG21",
+              "atom2": "HE2"
+            },
+            {
+              "row_id": "207",
+              "atom1": "HG22",
+              "atom2": "HE1"
+            },
+            {
+              "row_id": "208",
+              "atom1": "HG22",
+              "atom2": "HE2"
+            },
+            {
+              "row_id": "209",
+              "atom1": "HG23",
+              "atom2": "HE1"
+            },
+            {
+              "row_id": "210",
+              "atom1": "HG23",
+              "atom2": "HE2"
+            }
+          ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
             "duplicate canonical expansion row collapsed to its author-level atom expression",
@@ -11817,6 +12945,23 @@
             "212",
             "213"
           ],
+          "canonical_expansions": [
+            {
+              "row_id": "211",
+              "atom1": "HG21",
+              "atom2": "HZ"
+            },
+            {
+              "row_id": "212",
+              "atom1": "HG22",
+              "atom2": "HZ"
+            },
+            {
+              "row_id": "213",
+              "atom1": "HG23",
+              "atom2": "HZ"
+            }
+          ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
             "duplicate canonical expansion row collapsed to its author-level atom expression",
@@ -11871,6 +13016,23 @@
             "214",
             "215",
             "216"
+          ],
+          "canonical_expansions": [
+            {
+              "row_id": "214",
+              "atom1": "HD11",
+              "atom2": "HZ"
+            },
+            {
+              "row_id": "215",
+              "atom1": "HD12",
+              "atom2": "HZ"
+            },
+            {
+              "row_id": "216",
+              "atom1": "HD13",
+              "atom2": "HZ"
+            }
           ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
@@ -11929,6 +13091,38 @@
             "220",
             "221",
             "222"
+          ],
+          "canonical_expansions": [
+            {
+              "row_id": "217",
+              "atom1": "HD11",
+              "atom2": "HE1"
+            },
+            {
+              "row_id": "218",
+              "atom1": "HD11",
+              "atom2": "HE2"
+            },
+            {
+              "row_id": "219",
+              "atom1": "HD12",
+              "atom2": "HE1"
+            },
+            {
+              "row_id": "220",
+              "atom1": "HD12",
+              "atom2": "HE2"
+            },
+            {
+              "row_id": "221",
+              "atom1": "HD13",
+              "atom2": "HE1"
+            },
+            {
+              "row_id": "222",
+              "atom1": "HD13",
+              "atom2": "HE2"
+            }
           ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
@@ -11991,6 +13185,38 @@
             "227",
             "228"
           ],
+          "canonical_expansions": [
+            {
+              "row_id": "223",
+              "atom1": "HG11",
+              "atom2": "HE1"
+            },
+            {
+              "row_id": "224",
+              "atom1": "HG11",
+              "atom2": "HE2"
+            },
+            {
+              "row_id": "225",
+              "atom1": "HG12",
+              "atom2": "HE1"
+            },
+            {
+              "row_id": "226",
+              "atom1": "HG12",
+              "atom2": "HE2"
+            },
+            {
+              "row_id": "227",
+              "atom1": "HG13",
+              "atom2": "HE1"
+            },
+            {
+              "row_id": "228",
+              "atom1": "HG13",
+              "atom2": "HE2"
+            }
+          ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
             "duplicate canonical expansion row collapsed to its author-level atom expression",
@@ -12048,6 +13274,23 @@
             "229",
             "230",
             "231"
+          ],
+          "canonical_expansions": [
+            {
+              "row_id": "229",
+              "atom1": "HG11",
+              "atom2": "HZ"
+            },
+            {
+              "row_id": "230",
+              "atom1": "HG12",
+              "atom2": "HZ"
+            },
+            {
+              "row_id": "231",
+              "atom1": "HG13",
+              "atom2": "HZ"
+            }
           ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
@@ -12107,6 +13350,38 @@
             "236",
             "237"
           ],
+          "canonical_expansions": [
+            {
+              "row_id": "232",
+              "atom1": "HG21",
+              "atom2": "HE1"
+            },
+            {
+              "row_id": "233",
+              "atom1": "HG21",
+              "atom2": "HE2"
+            },
+            {
+              "row_id": "234",
+              "atom1": "HG22",
+              "atom2": "HE1"
+            },
+            {
+              "row_id": "235",
+              "atom1": "HG22",
+              "atom2": "HE2"
+            },
+            {
+              "row_id": "236",
+              "atom1": "HG23",
+              "atom2": "HE1"
+            },
+            {
+              "row_id": "237",
+              "atom1": "HG23",
+              "atom2": "HE2"
+            }
+          ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
             "duplicate canonical expansion row collapsed to its author-level atom expression",
@@ -12164,6 +13439,23 @@
             "238",
             "239",
             "240"
+          ],
+          "canonical_expansions": [
+            {
+              "row_id": "238",
+              "atom1": "HG21",
+              "atom2": "HZ"
+            },
+            {
+              "row_id": "239",
+              "atom1": "HG22",
+              "atom2": "HZ"
+            },
+            {
+              "row_id": "240",
+              "atom1": "HG23",
+              "atom2": "HZ"
+            }
           ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
@@ -12225,6 +13517,53 @@
             "247",
             "248",
             "249"
+          ],
+          "canonical_expansions": [
+            {
+              "row_id": "241",
+              "atom1": "HE1",
+              "atom2": "HB1"
+            },
+            {
+              "row_id": "242",
+              "atom1": "HE1",
+              "atom2": "HB2"
+            },
+            {
+              "row_id": "243",
+              "atom1": "HE1",
+              "atom2": "HB3"
+            },
+            {
+              "row_id": "244",
+              "atom1": "HE2",
+              "atom2": "HB1"
+            },
+            {
+              "row_id": "245",
+              "atom1": "HE2",
+              "atom2": "HB2"
+            },
+            {
+              "row_id": "246",
+              "atom1": "HE2",
+              "atom2": "HB3"
+            },
+            {
+              "row_id": "247",
+              "atom1": "HE3",
+              "atom2": "HB1"
+            },
+            {
+              "row_id": "248",
+              "atom1": "HE3",
+              "atom2": "HB2"
+            },
+            {
+              "row_id": "249",
+              "atom1": "HE3",
+              "atom2": "HB3"
+            }
           ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
@@ -12290,6 +13629,38 @@
             "254",
             "255"
           ],
+          "canonical_expansions": [
+            {
+              "row_id": "250",
+              "atom1": "HE1",
+              "atom2": "HB2"
+            },
+            {
+              "row_id": "251",
+              "atom1": "HE1",
+              "atom2": "HB3"
+            },
+            {
+              "row_id": "252",
+              "atom1": "HE2",
+              "atom2": "HB2"
+            },
+            {
+              "row_id": "253",
+              "atom1": "HE2",
+              "atom2": "HB3"
+            },
+            {
+              "row_id": "254",
+              "atom1": "HE3",
+              "atom2": "HB2"
+            },
+            {
+              "row_id": "255",
+              "atom1": "HE3",
+              "atom2": "HB3"
+            }
+          ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
             "duplicate canonical expansion row collapsed to its author-level atom expression",
@@ -12351,6 +13722,38 @@
             "260",
             "261"
           ],
+          "canonical_expansions": [
+            {
+              "row_id": "256",
+              "atom1": "HE1",
+              "atom2": "HD1"
+            },
+            {
+              "row_id": "257",
+              "atom1": "HE1",
+              "atom2": "HD2"
+            },
+            {
+              "row_id": "258",
+              "atom1": "HE2",
+              "atom2": "HD1"
+            },
+            {
+              "row_id": "259",
+              "atom1": "HE2",
+              "atom2": "HD2"
+            },
+            {
+              "row_id": "260",
+              "atom1": "HE3",
+              "atom2": "HD1"
+            },
+            {
+              "row_id": "261",
+              "atom1": "HE3",
+              "atom2": "HD2"
+            }
+          ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
             "duplicate canonical expansion row collapsed to its author-level atom expression",
@@ -12409,6 +13812,23 @@
             "263",
             "264"
           ],
+          "canonical_expansions": [
+            {
+              "row_id": "262",
+              "atom1": "HD11",
+              "atom2": "HA"
+            },
+            {
+              "row_id": "263",
+              "atom1": "HD12",
+              "atom2": "HA"
+            },
+            {
+              "row_id": "264",
+              "atom1": "HD13",
+              "atom2": "HA"
+            }
+          ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
             "duplicate canonical expansion row collapsed to its author-level atom expression",
@@ -12466,6 +13886,38 @@
             "268",
             "269",
             "270"
+          ],
+          "canonical_expansions": [
+            {
+              "row_id": "265",
+              "atom1": "HD11",
+              "atom2": "HE1"
+            },
+            {
+              "row_id": "266",
+              "atom1": "HD11",
+              "atom2": "HE2"
+            },
+            {
+              "row_id": "267",
+              "atom1": "HD12",
+              "atom2": "HE1"
+            },
+            {
+              "row_id": "268",
+              "atom1": "HD12",
+              "atom2": "HE2"
+            },
+            {
+              "row_id": "269",
+              "atom1": "HD13",
+              "atom2": "HE1"
+            },
+            {
+              "row_id": "270",
+              "atom1": "HD13",
+              "atom2": "HE2"
+            }
           ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
@@ -12530,6 +13982,53 @@
             "277",
             "278",
             "279"
+          ],
+          "canonical_expansions": [
+            {
+              "row_id": "271",
+              "atom1": "HD21",
+              "atom2": "HG21"
+            },
+            {
+              "row_id": "272",
+              "atom1": "HD21",
+              "atom2": "HG22"
+            },
+            {
+              "row_id": "273",
+              "atom1": "HD21",
+              "atom2": "HG23"
+            },
+            {
+              "row_id": "274",
+              "atom1": "HD22",
+              "atom2": "HG21"
+            },
+            {
+              "row_id": "275",
+              "atom1": "HD22",
+              "atom2": "HG22"
+            },
+            {
+              "row_id": "276",
+              "atom1": "HD22",
+              "atom2": "HG23"
+            },
+            {
+              "row_id": "277",
+              "atom1": "HD23",
+              "atom2": "HG21"
+            },
+            {
+              "row_id": "278",
+              "atom1": "HD23",
+              "atom2": "HG22"
+            },
+            {
+              "row_id": "279",
+              "atom1": "HD23",
+              "atom2": "HG23"
+            }
           ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
@@ -12598,6 +14097,53 @@
             "287",
             "288"
           ],
+          "canonical_expansions": [
+            {
+              "row_id": "280",
+              "atom1": "HD11",
+              "atom2": "HE1"
+            },
+            {
+              "row_id": "281",
+              "atom1": "HD11",
+              "atom2": "HE2"
+            },
+            {
+              "row_id": "282",
+              "atom1": "HD11",
+              "atom2": "HE3"
+            },
+            {
+              "row_id": "283",
+              "atom1": "HD12",
+              "atom2": "HE1"
+            },
+            {
+              "row_id": "284",
+              "atom1": "HD12",
+              "atom2": "HE2"
+            },
+            {
+              "row_id": "285",
+              "atom1": "HD12",
+              "atom2": "HE3"
+            },
+            {
+              "row_id": "286",
+              "atom1": "HD13",
+              "atom2": "HE1"
+            },
+            {
+              "row_id": "287",
+              "atom1": "HD13",
+              "atom2": "HE2"
+            },
+            {
+              "row_id": "288",
+              "atom1": "HD13",
+              "atom2": "HE3"
+            }
+          ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
             "duplicate canonical expansion row collapsed to its author-level atom expression",
@@ -12665,6 +14211,53 @@
             "296",
             "297"
           ],
+          "canonical_expansions": [
+            {
+              "row_id": "289",
+              "atom1": "HD21",
+              "atom2": "HE1"
+            },
+            {
+              "row_id": "290",
+              "atom1": "HD21",
+              "atom2": "HE2"
+            },
+            {
+              "row_id": "291",
+              "atom1": "HD21",
+              "atom2": "HE3"
+            },
+            {
+              "row_id": "292",
+              "atom1": "HD22",
+              "atom2": "HE1"
+            },
+            {
+              "row_id": "293",
+              "atom1": "HD22",
+              "atom2": "HE2"
+            },
+            {
+              "row_id": "294",
+              "atom1": "HD22",
+              "atom2": "HE3"
+            },
+            {
+              "row_id": "295",
+              "atom1": "HD23",
+              "atom2": "HE1"
+            },
+            {
+              "row_id": "296",
+              "atom1": "HD23",
+              "atom2": "HE2"
+            },
+            {
+              "row_id": "297",
+              "atom1": "HD23",
+              "atom2": "HE3"
+            }
+          ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
             "duplicate canonical expansion row collapsed to its author-level atom expression",
@@ -12729,6 +14322,38 @@
             "302",
             "303"
           ],
+          "canonical_expansions": [
+            {
+              "row_id": "298",
+              "atom1": "HE1",
+              "atom2": "HB2"
+            },
+            {
+              "row_id": "299",
+              "atom1": "HE1",
+              "atom2": "HB3"
+            },
+            {
+              "row_id": "300",
+              "atom1": "HE2",
+              "atom2": "HB2"
+            },
+            {
+              "row_id": "301",
+              "atom1": "HE2",
+              "atom2": "HB3"
+            },
+            {
+              "row_id": "302",
+              "atom1": "HE3",
+              "atom2": "HB2"
+            },
+            {
+              "row_id": "303",
+              "atom1": "HE3",
+              "atom2": "HB3"
+            }
+          ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
             "duplicate canonical expansion row collapsed to its author-level atom expression",
@@ -12789,6 +14414,38 @@
             "307",
             "308",
             "309"
+          ],
+          "canonical_expansions": [
+            {
+              "row_id": "304",
+              "atom1": "HE1",
+              "atom2": "HD1"
+            },
+            {
+              "row_id": "305",
+              "atom1": "HE1",
+              "atom2": "HD2"
+            },
+            {
+              "row_id": "306",
+              "atom1": "HE2",
+              "atom2": "HD1"
+            },
+            {
+              "row_id": "307",
+              "atom1": "HE2",
+              "atom2": "HD2"
+            },
+            {
+              "row_id": "308",
+              "atom1": "HE3",
+              "atom2": "HD1"
+            },
+            {
+              "row_id": "309",
+              "atom1": "HE3",
+              "atom2": "HD2"
+            }
           ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
@@ -12851,6 +14508,38 @@
             "314",
             "315"
           ],
+          "canonical_expansions": [
+            {
+              "row_id": "310",
+              "atom1": "HE1",
+              "atom2": "HE1"
+            },
+            {
+              "row_id": "311",
+              "atom1": "HE1",
+              "atom2": "HE2"
+            },
+            {
+              "row_id": "312",
+              "atom1": "HE2",
+              "atom2": "HE1"
+            },
+            {
+              "row_id": "313",
+              "atom1": "HE2",
+              "atom2": "HE2"
+            },
+            {
+              "row_id": "314",
+              "atom1": "HE3",
+              "atom2": "HE1"
+            },
+            {
+              "row_id": "315",
+              "atom1": "HE3",
+              "atom2": "HE2"
+            }
+          ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
             "duplicate canonical expansion row collapsed to its author-level atom expression",
@@ -12908,6 +14597,23 @@
             "316",
             "317",
             "318"
+          ],
+          "canonical_expansions": [
+            {
+              "row_id": "316",
+              "atom1": "HE1",
+              "atom2": "HA"
+            },
+            {
+              "row_id": "317",
+              "atom1": "HE2",
+              "atom2": "HA"
+            },
+            {
+              "row_id": "318",
+              "atom1": "HE3",
+              "atom2": "HA"
+            }
           ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
@@ -12969,6 +14675,53 @@
             "325",
             "326",
             "327"
+          ],
+          "canonical_expansions": [
+            {
+              "row_id": "319",
+              "atom1": "HG21",
+              "atom2": "HB1"
+            },
+            {
+              "row_id": "320",
+              "atom1": "HG21",
+              "atom2": "HB2"
+            },
+            {
+              "row_id": "321",
+              "atom1": "HG21",
+              "atom2": "HB3"
+            },
+            {
+              "row_id": "322",
+              "atom1": "HG22",
+              "atom2": "HB1"
+            },
+            {
+              "row_id": "323",
+              "atom1": "HG22",
+              "atom2": "HB2"
+            },
+            {
+              "row_id": "324",
+              "atom1": "HG22",
+              "atom2": "HB3"
+            },
+            {
+              "row_id": "325",
+              "atom1": "HG23",
+              "atom2": "HB1"
+            },
+            {
+              "row_id": "326",
+              "atom1": "HG23",
+              "atom2": "HB2"
+            },
+            {
+              "row_id": "327",
+              "atom1": "HG23",
+              "atom2": "HB3"
+            }
           ],
           "bound_source": "explicit_upper_bound",
           "warnings": [
@@ -13036,6 +14789,53 @@
             "334",
             "335",
             "336"
+          ],
+          "canonical_expansions": [
+            {
+              "row_id": "328",
+              "atom1": "HG21",
+              "atom2": "HG11"
+            },
+            {
+              "row_id": "329",
+              "atom1": "HG21",
+              "atom2": "HG12"
+            },
+            {
+              "row_id": "330",
+              "atom1": "HG21",
+              "atom2": "HG13"
+            },
+            {
+              "row_id": "331",
+              "atom1": "HG22",
+              "atom2": "HG11"
+            },
+            {
+              "row_id": "332",
+              "atom1": "HG22",
+              "atom2": "HG12"
+            },
+            {
+              "row_id": "333",
+              "atom1": "HG22",
+              "atom2": "HG13"
+            },
+            {
+              "row_id": "334",
+              "atom1": "HG23",
+              "atom2": "HG11"
+            },
+            {
+              "row_id": "335",
+              "atom1": "HG23",
+              "atom2": "HG12"
+            },
+            {
+              "row_id": "336",
+              "atom1": "HG23",
+              "atom2": "HG13"
+            }
           ],
           "bound_source": "explicit_upper_bound",
           "warnings": [

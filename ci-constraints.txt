@@ -1,0 +1,5 @@
+# Versions used to generate benchmark/reviewed_baseline.json.
+gemmi==0.7.5
+pynmrstar==3.5.1
+PyYAML==6.0.3
+pytest==8.4.2

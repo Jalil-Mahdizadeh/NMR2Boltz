@@ -1,6 +1,6 @@
 NMR-to-Boltz heavy-atom projection summary
 ==============================================
-Input: benchmark\input\9D99\9d99_nmr-data.str
+Input: benchmark/input/9D99/9d99_nmr-data.str
 Detected format: nmr-star
 Restraint groups read: 1548
 Source alternatives read: 4292

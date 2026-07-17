@@ -6,7 +6,8 @@ the repository root:
 
 ```bash
 python validation/benchmark_corpus.py benchmark/input \
-  --output-directory benchmark/output
+  --output-directory benchmark/output \
+  --reviewed-baseline benchmark/reviewed_baseline.json
 ```
 
 Results are written to:
@@ -25,6 +26,10 @@ benchmark/output/
       sequences.fasta
       ...
     format_parity.json
+    format_discrepancy_audit.tsv
+    format_discrepancy_summary.json
+  FORMAT_DISCREPANCY_AUDIT.tsv
+  format_discrepancy_summary.json
   benchmark_summary.json
   BENCHMARK_REPORT.md
   RUN_COMMAND.txt
@@ -39,3 +44,10 @@ mis-index the audit.
 Exact format parity means both inputs emitted the same heavy-atom pairs with the
 same bounds within 1e-6 Å. High PDB satisfaction does not replace parity review
 and is not an independent Boltz prediction-accuracy result.
+
+The command is fail-closed: execution errors, implication failures, unresolved
+discrepancies, missing heavy-atom coordinate resolution, and changes from
+`reviewed_baseline.json` all produce a nonzero exit. The audit files are still
+written on a scientific gate failure so the cause remains inspectable. Baseline
+replacement requires the explicit `--write-reviewed-baseline` flag and should
+only follow review of every changed row and metric.

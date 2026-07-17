@@ -1,5 +1,5 @@
 {
-  "pdb": "benchmark\\input\\9KG4\\9KG4.pdb",
+  "pdb": "benchmark/input/9KG4/9KG4.pdb",
   "model_count": 15,
   "tolerance_angstrom": 0.01,
   "sequence_alignment": [
@@ -32,6 +32,8 @@
     "satisfied_model_cases": 6074,
     "violated_model_cases": 16,
     "missing_model_cases": 0,
+    "constraints_missing_in_any_model": 0,
+    "missing_constraint_examples": [],
     "satisfaction_fraction_of_resolved": 0.9973727422003285,
     "constraints_resolved_in_every_model": 406,
     "constraints_satisfied_in_any_model": 406,

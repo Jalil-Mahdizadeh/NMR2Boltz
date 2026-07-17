@@ -71,6 +71,11 @@ def test_nmrstar_author_wildcard_rows_are_deduplicated():
     assert len(group1.alternatives) == 1
     assert group1.alternatives[0].endpoint1.atom_expression == "HG1%"
     assert set(group1.alternatives[0].row_ids) == {"1", "2", "3"}
+    assert group1.alternatives[0].canonical_expansions == [
+        {"row_id": "1", "atom1": "HG11", "atom2": "HB1"},
+        {"row_id": "2", "atom1": "HG12", "atom2": "HB2"},
+        {"row_id": "3", "atom1": "HG13", "atom2": "HB3"},
+    ]
     report = project_document(
         parsed,
         input_file=str(path),

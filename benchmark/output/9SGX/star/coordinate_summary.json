@@ -1,5 +1,5 @@
 {
-  "pdb": "benchmark\\input\\9SGX\\9SGX.pdb",
+  "pdb": "benchmark/input/9SGX/9SGX.pdb",
   "model_count": 20,
   "tolerance_angstrom": 0.01,
   "sequence_alignment": [
@@ -43,6 +43,8 @@
     "satisfied_model_cases": 15300,
     "violated_model_cases": 0,
     "missing_model_cases": 0,
+    "constraints_missing_in_any_model": 0,
+    "missing_constraint_examples": [],
     "satisfaction_fraction_of_resolved": 1.0,
     "constraints_resolved_in_every_model": 765,
     "constraints_satisfied_in_any_model": 765,

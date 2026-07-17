@@ -1,5 +1,5 @@
 {
-  "pdb": "benchmark\\input\\9PQH\\9PQH.pdb",
+  "pdb": "benchmark/input/9PQH/9PQH.pdb",
   "model_count": 10,
   "tolerance_angstrom": 0.01,
   "sequence_alignment": [
@@ -43,6 +43,8 @@
     "satisfied_model_cases": 1,
     "violated_model_cases": 29,
     "missing_model_cases": 0,
+    "constraints_missing_in_any_model": 0,
+    "missing_constraint_examples": [],
     "satisfaction_fraction_of_resolved": 0.03333333333333333,
     "constraints_resolved_in_every_model": 3,
     "constraints_satisfied_in_any_model": 1,

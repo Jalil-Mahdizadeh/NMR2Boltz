@@ -1,0 +1,17 @@
+{
+  "row_count": 734,
+  "digest_sha256": "5ea7cafa04d99df7d2ed59ef02bde790a9c8a5e62d783f5ade6d276799e15b04",
+  "discrepancy_type_counts": {
+    "nef_only": 631,
+    "different_bound": 96,
+    "star_only": 7
+  },
+  "classification_counts": {
+    "expected_format_difference": 734
+  },
+  "case_counts": {
+    "9VUY": 734
+  },
+  "unresolved_count": 0,
+  "parser_projection_bug_count": 0
+}

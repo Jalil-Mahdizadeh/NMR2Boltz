@@ -10,7 +10,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "nmr_to_boltz",
-      "community": 4,
+      "community": 0,
       "norm_label": "nmr_to_boltz.py"
     },
     {
@@ -133,7 +133,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "nmr2boltz_main",
-      "community": 4,
+      "community": 0,
       "norm_label": "__main__.py"
     },
     {
@@ -233,7 +233,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "any",
-      "community": 6,
+      "community": 30,
       "norm_label": "any"
     },
     {
@@ -263,7 +263,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "path",
-      "community": 1,
+      "community": 30,
       "norm_label": "path"
     },
     {
@@ -383,7 +383,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "nmr2boltz_cli",
-      "community": 4,
+      "community": 0,
       "norm_label": "cli.py"
     },
     {
@@ -393,7 +393,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "nmr2boltz_cli_build_parser",
-      "community": 4,
+      "community": 0,
       "norm_label": "build_parser()"
     },
     {
@@ -403,7 +403,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "argumentparser",
-      "community": 4,
+      "community": 0,
       "norm_label": "argumentparser"
     },
     {
@@ -413,7 +413,7 @@
       "source_location": "L193",
       "_origin": "ast",
       "id": "nmr2boltz_cli_parse_chain_map",
-      "community": 4,
+      "community": 0,
       "norm_label": "parse_chain_map()"
     },
     {
@@ -423,7 +423,7 @@
       "source_location": "L207",
       "_origin": "ast",
       "id": "nmr2boltz_cli_command_convert",
-      "community": 4,
+      "community": 0,
       "norm_label": "command_convert()"
     },
     {
@@ -433,7 +433,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "namespace",
-      "community": 4,
+      "community": 0,
       "norm_label": "namespace"
     },
     {
@@ -443,7 +443,7 @@
       "source_location": "L279",
       "_origin": "ast",
       "id": "nmr2boltz_cli_command_benchmark",
-      "community": 4,
+      "community": 0,
       "norm_label": "command_benchmark()"
     },
     {
@@ -453,7 +453,7 @@
       "source_location": "L295",
       "_origin": "ast",
       "id": "nmr2boltz_cli_main",
-      "community": 4,
+      "community": 0,
       "norm_label": "main()"
     },
     {
@@ -463,7 +463,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "nmr2boltz_model",
-      "community": 3,
+      "community": 6,
       "norm_label": "model.py"
     },
     {
@@ -550,37 +550,37 @@
       "label": ".dedup_key()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/model.py",
-      "source_location": "L95",
+      "source_location": "L96",
       "_origin": "ast",
       "id": "nmr2boltz_model_rawalternative_dedup_key",
-      "community": 6,
+      "community": 30,
       "norm_label": ".dedup_key()"
     },
     {
       "label": "RestraintGroup",
       "file_type": "code",
       "source_file": "src/nmr2boltz/model.py",
-      "source_location": "L134",
+      "source_location": "L135",
       "_origin": "ast",
       "id": "nmr2boltz_model_restraintgroup",
-      "community": 0,
+      "community": 6,
       "norm_label": "restraintgroup"
     },
     {
       "label": ".group_id()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/model.py",
-      "source_location": "L144",
+      "source_location": "L145",
       "_origin": "ast",
       "id": "nmr2boltz_model_restraintgroup_group_id",
-      "community": 0,
+      "community": 6,
       "norm_label": ".group_id()"
     },
     {
       "label": "AtomChoice",
       "file_type": "code",
       "source_file": "src/nmr2boltz/model.py",
-      "source_location": "L149",
+      "source_location": "L150",
       "_origin": "ast",
       "id": "nmr2boltz_model_atomchoice",
       "community": 5,
@@ -590,7 +590,7 @@
       "label": "AtomSetChoice",
       "file_type": "code",
       "source_file": "src/nmr2boltz/model.py",
-      "source_location": "L159",
+      "source_location": "L160",
       "_origin": "ast",
       "id": "nmr2boltz_model_atomsetchoice",
       "community": 5,
@@ -600,7 +600,7 @@
       "label": "ProjectedAlternative",
       "file_type": "code",
       "source_file": "src/nmr2boltz/model.py",
-      "source_location": "L168",
+      "source_location": "L169",
       "_origin": "ast",
       "id": "nmr2boltz_model_projectedalternative",
       "community": 3,
@@ -610,7 +610,7 @@
       "label": ".pair_key()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/model.py",
-      "source_location": "L184",
+      "source_location": "L185",
       "_origin": "ast",
       "id": "nmr2boltz_model_projectedalternative_pair_key",
       "community": 3,
@@ -620,7 +620,7 @@
       "label": "EmittedConstraint",
       "file_type": "code",
       "source_file": "src/nmr2boltz/model.py",
-      "source_location": "L189",
+      "source_location": "L190",
       "_origin": "ast",
       "id": "nmr2boltz_model_emittedconstraint",
       "community": 3,
@@ -630,7 +630,7 @@
       "label": ".pair_key()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/model.py",
-      "source_location": "L199",
+      "source_location": "L200",
       "_origin": "ast",
       "id": "nmr2boltz_model_emittedconstraint_pair_key",
       "community": 3,
@@ -640,7 +640,7 @@
       "label": "AmbiguousGroup",
       "file_type": "code",
       "source_file": "src/nmr2boltz/model.py",
-      "source_location": "L204",
+      "source_location": "L205",
       "_origin": "ast",
       "id": "nmr2boltz_model_ambiguousgroup",
       "community": 3,
@@ -650,7 +650,7 @@
       "label": "Rejection",
       "file_type": "code",
       "source_file": "src/nmr2boltz/model.py",
-      "source_location": "L216",
+      "source_location": "L217",
       "_origin": "ast",
       "id": "nmr2boltz_model_rejection",
       "community": 0,
@@ -660,7 +660,7 @@
       "label": "ConversionReport",
       "file_type": "code",
       "source_file": "src/nmr2boltz/model.py",
-      "source_location": "L225",
+      "source_location": "L226",
       "_origin": "ast",
       "id": "nmr2boltz_model_conversionreport",
       "community": 3,
@@ -670,7 +670,7 @@
       "label": ".to_dict()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/model.py",
-      "source_location": "L238",
+      "source_location": "L239",
       "_origin": "ast",
       "id": "nmr2boltz_model_conversionreport_to_dict",
       "community": 3,
@@ -1053,7 +1053,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "nmr2boltz_star_parse_entry_file",
-      "community": 6,
+      "community": 30,
       "norm_label": "_parse_entry_file()"
     },
     {
@@ -1153,7 +1153,7 @@
       "source_location": "L198",
       "_origin": "ast",
       "id": "nmr2boltz_star_parsedstardocument",
-      "community": 0,
+      "community": 6,
       "norm_label": "parsedstardocument"
     },
     {
@@ -1180,7 +1180,7 @@
       "label": "_parse_nef_row()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/star.py",
-      "source_location": "L385",
+      "source_location": "L390",
       "_origin": "ast",
       "id": "nmr2boltz_star_parse_nef_row",
       "community": 6,
@@ -1190,7 +1190,7 @@
       "label": "_parse_nmrstar_row()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/star.py",
-      "source_location": "L433",
+      "source_location": "L438",
       "_origin": "ast",
       "id": "nmr2boltz_star_parse_nmrstar_row",
       "community": 6,
@@ -1200,7 +1200,7 @@
       "label": "_select_upper_bound()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/star.py",
-      "source_location": "L495",
+      "source_location": "L520",
       "_origin": "ast",
       "id": "nmr2boltz_star_select_upper_bound",
       "community": 6,
@@ -1210,7 +1210,7 @@
       "label": "extract_sequence_map()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/star.py",
-      "source_location": "L529",
+      "source_location": "L554",
       "_origin": "ast",
       "id": "nmr2boltz_star_extract_sequence_map",
       "community": 6,
@@ -1220,7 +1220,7 @@
       "label": "_extract_nef_sequence()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/star.py",
-      "source_location": "L540",
+      "source_location": "L565",
       "_origin": "ast",
       "id": "nmr2boltz_star_extract_nef_sequence",
       "community": 6,
@@ -1230,7 +1230,7 @@
       "label": "_extract_nmrstar_sequence()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/star.py",
-      "source_location": "L581",
+      "source_location": "L606",
       "_origin": "ast",
       "id": "nmr2boltz_star_extract_nmrstar_sequence",
       "community": 6,
@@ -1240,7 +1240,7 @@
       "label": "infer_sequence_map()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/star.py",
-      "source_location": "L703",
+      "source_location": "L728",
       "_origin": "ast",
       "id": "nmr2boltz_star_infer_sequence_map",
       "community": 6,
@@ -1250,7 +1250,7 @@
       "label": "overlay_residue_map()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/star.py",
-      "source_location": "L739",
+      "source_location": "L764",
       "_origin": "ast",
       "id": "nmr2boltz_star_overlay_residue_map",
       "community": 6,
@@ -1260,7 +1260,7 @@
       "label": "extract_embedded_topologies()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/star.py",
-      "source_location": "L804",
+      "source_location": "L829",
       "_origin": "ast",
       "id": "nmr2boltz_star_extract_embedded_topologies",
       "community": 6,
@@ -1593,7 +1593,7 @@
       "source_location": "L188",
       "_origin": "ast",
       "id": "nmr2boltz_topology_topologylibrary",
-      "community": 5,
+      "community": 0,
       "norm_label": "topologylibrary"
     },
     {
@@ -1810,7 +1810,7 @@
       "label": "test_nmrstar_legacy_xplor_wildcard_rows_are_deduplicated()",
       "file_type": "code",
       "source_file": "tests/test_conversion.py",
-      "source_location": "L84",
+      "source_location": "L89",
       "_origin": "ast",
       "id": "tests_test_conversion_test_nmrstar_legacy_xplor_wildcard_rows_are_deduplicated",
       "community": 0,
@@ -1820,7 +1820,7 @@
       "label": "test_embedded_custom_component_topology()",
       "file_type": "code",
       "source_file": "tests/test_conversion.py",
-      "source_location": "L97",
+      "source_location": "L102",
       "_origin": "ast",
       "id": "tests_test_conversion_test_embedded_custom_component_topology",
       "community": 0,
@@ -1830,7 +1830,7 @@
       "label": "test_output_bundle()",
       "file_type": "code",
       "source_file": "tests/test_conversion.py",
-      "source_location": "L112",
+      "source_location": "L117",
       "_origin": "ast",
       "id": "tests_test_conversion_test_output_bundle",
       "community": 0,
@@ -1840,7 +1840,7 @@
       "label": "test_sequence_only_nef_produces_empty_conversion()",
       "file_type": "code",
       "source_file": "tests/test_conversion.py",
-      "source_location": "L123",
+      "source_location": "L128",
       "_origin": "ast",
       "id": "tests_test_conversion_test_sequence_only_nef_produces_empty_conversion",
       "community": 0,
@@ -1850,7 +1850,7 @@
       "label": "test_residue_name_mismatch_is_rejected_before_topology()",
       "file_type": "code",
       "source_file": "tests/test_conversion.py",
-      "source_location": "L142",
+      "source_location": "L147",
       "_origin": "ast",
       "id": "tests_test_conversion_test_residue_name_mismatch_is_rejected_before_topology",
       "community": 0,
@@ -1863,14 +1863,14 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_corpus_benchmark",
-      "community": 3,
+      "community": 30,
       "norm_label": "test_corpus_benchmark.py"
     },
     {
       "label": "_constraint()",
       "file_type": "code",
       "source_file": "tests/test_corpus_benchmark.py",
-      "source_location": "L7",
+      "source_location": "L14",
       "_origin": "ast",
       "id": "tests_test_corpus_benchmark_constraint",
       "community": 3,
@@ -1880,11 +1880,71 @@
       "label": "test_compare_reports_detects_pair_and_bound_differences()",
       "file_type": "code",
       "source_file": "tests/test_corpus_benchmark.py",
-      "source_location": "L17",
+      "source_location": "L24",
       "_origin": "ast",
       "id": "tests_test_corpus_benchmark_test_compare_reports_detects_pair_and_bound_differences",
       "community": 3,
       "norm_label": "test_compare_reports_detects_pair_and_bound_differences()"
+    },
+    {
+      "label": "_endpoint()",
+      "file_type": "code",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L42",
+      "_origin": "ast",
+      "id": "tests_test_corpus_benchmark_endpoint",
+      "community": 30,
+      "norm_label": "_endpoint()"
+    },
+    {
+      "label": "_alternative()",
+      "file_type": "code",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L55",
+      "_origin": "ast",
+      "id": "tests_test_corpus_benchmark_alternative",
+      "community": 30,
+      "norm_label": "_alternative()"
+    },
+    {
+      "label": "_report()",
+      "file_type": "code",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L64",
+      "_origin": "ast",
+      "id": "tests_test_corpus_benchmark_report",
+      "community": 30,
+      "norm_label": "_report()"
+    },
+    {
+      "label": "test_discrepancy_audit_preserves_atomset_vs_explicit_or_evidence()",
+      "file_type": "code",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L82",
+      "_origin": "ast",
+      "id": "tests_test_corpus_benchmark_test_discrepancy_audit_preserves_atomset_vs_explicit_or_evidence",
+      "community": 30,
+      "norm_label": "test_discrepancy_audit_preserves_atomset_vs_explicit_or_evidence()"
+    },
+    {
+      "label": "test_fail_closed_gate_rejects_missing_coordinate_resolution()",
+      "file_type": "code",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L139",
+      "_origin": "ast",
+      "id": "tests_test_corpus_benchmark_test_fail_closed_gate_rejects_missing_coordinate_resolution",
+      "community": 30,
+      "norm_label": "test_fail_closed_gate_rejects_missing_coordinate_resolution()"
+    },
+    {
+      "label": "test_benchmark_artifact_paths_are_portable()",
+      "file_type": "code",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L167",
+      "_origin": "ast",
+      "id": "tests_test_corpus_benchmark_test_benchmark_artifact_paths_are_portable",
+      "community": 30,
+      "norm_label": "test_benchmark_artifact_paths_are_portable()"
     },
     {
       "label": "test_ensemble.py",
@@ -2153,7 +2213,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "tests_test_target_report",
-      "community": 4,
+      "community": 0,
       "norm_label": "_report()"
     },
     {
@@ -2233,7 +2293,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_topology",
-      "community": 5,
+      "community": 0,
       "norm_label": "test_topology.py"
     },
     {
@@ -2243,7 +2303,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "tests_test_topology_test_methyl_wildcard_collapses_to_one_parent",
-      "community": 5,
+      "community": 0,
       "norm_label": "test_methyl_wildcard_collapses_to_one_parent()"
     },
     {
@@ -2253,7 +2313,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "tests_test_topology_test_aromatic_wildcard_has_two_parents",
-      "community": 5,
+      "community": 0,
       "norm_label": "test_aromatic_wildcard_has_two_parents()"
     },
     {
@@ -2263,7 +2323,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "tests_test_topology_test_xy_branch_stays_assignment_ambiguous",
-      "community": 5,
+      "community": 0,
       "norm_label": "test_xy_branch_stays_assignment_ambiguous()"
     },
     {
@@ -2273,7 +2333,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "tests_test_topology_test_pseudoatom_rejected_by_default",
-      "community": 5,
+      "community": 0,
       "norm_label": "test_pseudoatom_rejected_by_default()"
     },
     {
@@ -2283,54 +2343,64 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "validation_benchmark_corpus",
-      "community": 1,
+      "community": 30,
       "norm_label": "benchmark_corpus.py"
     },
     {
       "label": "parse_args()",
       "file_type": "code",
       "source_file": "validation/benchmark_corpus.py",
-      "source_location": "L45",
+      "source_location": "L46",
       "_origin": "ast",
       "id": "validation_benchmark_corpus_parse_args",
-      "community": 1,
+      "community": 30,
       "norm_label": "parse_args()"
     },
     {
       "label": "_single_file()",
       "file_type": "code",
       "source_file": "validation/benchmark_corpus.py",
-      "source_location": "L65",
+      "source_location": "L77",
       "_origin": "ast",
       "id": "validation_benchmark_corpus_single_file",
-      "community": 1,
+      "community": 30,
       "norm_label": "_single_file()"
+    },
+    {
+      "label": "_portable_path()",
+      "file_type": "code",
+      "source_file": "validation/benchmark_corpus.py",
+      "source_location": "L86",
+      "_origin": "ast",
+      "id": "validation_benchmark_corpus_portable_path",
+      "community": 30,
+      "norm_label": "_portable_path()"
     },
     {
       "label": "_constraint_key()",
       "file_type": "code",
       "source_file": "validation/benchmark_corpus.py",
-      "source_location": "L74",
+      "source_location": "L91",
       "_origin": "ast",
       "id": "validation_benchmark_corpus_constraint_key",
-      "community": 3,
+      "community": 30,
       "norm_label": "_constraint_key()"
     },
     {
       "label": "compare_reports()",
       "file_type": "code",
       "source_file": "validation/benchmark_corpus.py",
-      "source_location": "L82",
+      "source_location": "L99",
       "_origin": "ast",
       "id": "validation_benchmark_corpus_compare_reports",
-      "community": 3,
+      "community": 30,
       "norm_label": "compare_reports()"
     },
     {
       "label": "_coordinate_summary()",
       "file_type": "code",
       "source_file": "validation/benchmark_corpus.py",
-      "source_location": "L102",
+      "source_location": "L119",
       "_origin": "ast",
       "id": "validation_benchmark_corpus_coordinate_summary",
       "community": 1,
@@ -2340,81 +2410,131 @@
       "label": "_conversion_summary()",
       "file_type": "code",
       "source_file": "validation/benchmark_corpus.py",
-      "source_location": "L163",
+      "source_location": "L194",
       "_origin": "ast",
       "id": "validation_benchmark_corpus_conversion_summary",
-      "community": 1,
+      "community": 30,
       "norm_label": "_conversion_summary()"
     },
     {
       "label": "_safe_reset_case()",
       "file_type": "code",
       "source_file": "validation/benchmark_corpus.py",
-      "source_location": "L180",
+      "source_location": "L211",
       "_origin": "ast",
       "id": "validation_benchmark_corpus_safe_reset_case",
-      "community": 1,
+      "community": 30,
       "norm_label": "_safe_reset_case()"
     },
     {
       "label": "_run_case()",
       "file_type": "code",
       "source_file": "validation/benchmark_corpus.py",
-      "source_location": "L193",
+      "source_location": "L224",
       "_origin": "ast",
       "id": "validation_benchmark_corpus_run_case",
-      "community": 1,
+      "community": 30,
       "norm_label": "_run_case()"
     },
     {
       "label": "_aggregate()",
       "file_type": "code",
       "source_file": "validation/benchmark_corpus.py",
-      "source_location": "L233",
+      "source_location": "L274",
       "_origin": "ast",
       "id": "validation_benchmark_corpus_aggregate",
-      "community": 1,
+      "community": 30,
       "norm_label": "_aggregate()"
+    },
+    {
+      "label": "_metric_snapshot()",
+      "file_type": "code",
+      "source_file": "validation/benchmark_corpus.py",
+      "source_location": "L345",
+      "_origin": "ast",
+      "id": "validation_benchmark_corpus_metric_snapshot",
+      "community": 30,
+      "norm_label": "_metric_snapshot()"
+    },
+    {
+      "label": "_baseline_payload()",
+      "file_type": "code",
+      "source_file": "validation/benchmark_corpus.py",
+      "source_location": "L377",
+      "_origin": "ast",
+      "id": "validation_benchmark_corpus_baseline_payload",
+      "community": 30,
+      "norm_label": "_baseline_payload()"
+    },
+    {
+      "label": "_evaluate_gate()",
+      "file_type": "code",
+      "source_file": "validation/benchmark_corpus.py",
+      "source_location": "L390",
+      "_origin": "ast",
+      "id": "validation_benchmark_corpus_evaluate_gate",
+      "community": 30,
+      "norm_label": "_evaluate_gate()"
     },
     {
       "label": "_percent()",
       "file_type": "code",
       "source_file": "validation/benchmark_corpus.py",
-      "source_location": "L294",
+      "source_location": "L445",
       "_origin": "ast",
       "id": "validation_benchmark_corpus_percent",
-      "community": 1,
+      "community": 30,
       "norm_label": "_percent()"
     },
     {
       "label": "_markdown()",
       "file_type": "code",
       "source_file": "validation/benchmark_corpus.py",
-      "source_location": "L298",
+      "source_location": "L449",
       "_origin": "ast",
       "id": "validation_benchmark_corpus_markdown",
-      "community": 1,
+      "community": 30,
       "norm_label": "_markdown()"
     },
     {
       "label": "run_corpus()",
       "file_type": "code",
       "source_file": "validation/benchmark_corpus.py",
-      "source_location": "L355",
+      "source_location": "L514",
       "_origin": "ast",
       "id": "validation_benchmark_corpus_run_corpus",
-      "community": 1,
+      "community": 30,
       "norm_label": "run_corpus()"
     },
     {
       "label": "main()",
       "file_type": "code",
       "source_file": "validation/benchmark_corpus.py",
-      "source_location": "L401",
+      "source_location": "L583",
       "_origin": "ast",
       "id": "validation_benchmark_corpus_main",
-      "community": 1,
+      "community": 30,
       "norm_label": "main()"
+    },
+    {
+      "label": "Serialize artifact paths deterministically across CI operating systems.",
+      "file_type": "rationale",
+      "source_file": "validation/benchmark_corpus.py",
+      "source_location": "L87",
+      "_origin": "ast",
+      "id": "validation_benchmark_corpus_rationale_87",
+      "community": 30,
+      "norm_label": "serialize artifact paths deterministically across ci operating systems."
+    },
+    {
+      "label": "Select deterministic scientific metrics; any change requires review.",
+      "file_type": "rationale",
+      "source_file": "validation/benchmark_corpus.py",
+      "source_location": "L346",
+      "_origin": "ast",
+      "id": "validation_benchmark_corpus_rationale_346",
+      "community": 30,
+      "norm_label": "select deterministic scientific metrics; any change requires review."
     },
     {
       "label": "compare_ensemble.py",
@@ -2707,6 +2827,216 @@
       "norm_label": "re-key author-numbered coordinates onto boltz one-based sequence indices."
     },
     {
+      "label": "discrepancy_audit.py",
+      "file_type": "code",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "validation_discrepancy_audit",
+      "community": 30,
+      "norm_label": "discrepancy_audit.py"
+    },
+    {
+      "label": "_report_dict()",
+      "file_type": "code",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L52",
+      "_origin": "ast",
+      "id": "validation_discrepancy_audit_report_dict",
+      "community": 30,
+      "norm_label": "_report_dict()"
+    },
+    {
+      "label": "_atom_key()",
+      "file_type": "code",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L56",
+      "_origin": "ast",
+      "id": "validation_discrepancy_audit_atom_key",
+      "community": 30,
+      "norm_label": "_atom_key()"
+    },
+    {
+      "label": "_constraint_key()",
+      "file_type": "code",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L60",
+      "_origin": "ast",
+      "id": "validation_discrepancy_audit_constraint_key",
+      "community": 30,
+      "norm_label": "_constraint_key()"
+    },
+    {
+      "label": "_pair_label()",
+      "file_type": "code",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L64",
+      "_origin": "ast",
+      "id": "validation_discrepancy_audit_pair_label",
+      "community": 30,
+      "norm_label": "_pair_label()"
+    },
+    {
+      "label": "_normalize_group_id()",
+      "file_type": "code",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L68",
+      "_origin": "ast",
+      "id": "validation_discrepancy_audit_normalize_group_id",
+      "community": 30,
+      "norm_label": "_normalize_group_id()"
+    },
+    {
+      "label": "_group_id()",
+      "file_type": "code",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L78",
+      "_origin": "ast",
+      "id": "validation_discrepancy_audit_group_id",
+      "community": 30,
+      "norm_label": "_group_id()"
+    },
+    {
+      "label": "_group_indexes()",
+      "file_type": "code",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L82",
+      "_origin": "ast",
+      "id": "validation_discrepancy_audit_group_indexes",
+      "community": 30,
+      "norm_label": "_group_indexes()"
+    },
+    {
+      "label": "_ordered_unique()",
+      "file_type": "code",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L94",
+      "_origin": "ast",
+      "id": "validation_discrepancy_audit_ordered_unique",
+      "community": 30,
+      "norm_label": "_ordered_unique()"
+    },
+    {
+      "label": "_sequence_indexes()",
+      "file_type": "code",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L98",
+      "_origin": "ast",
+      "id": "validation_discrepancy_audit_sequence_indexes",
+      "community": 30,
+      "norm_label": "_sequence_indexes()"
+    },
+    {
+      "label": "_endpoint_destination()",
+      "file_type": "code",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L121",
+      "_origin": "ast",
+      "id": "validation_discrepancy_audit_endpoint_destination",
+      "community": 30,
+      "norm_label": "_endpoint_destination()"
+    },
+    {
+      "label": "_physical_set()",
+      "file_type": "code",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L148",
+      "_origin": "ast",
+      "id": "validation_discrepancy_audit_physical_set",
+      "community": 30,
+      "norm_label": "_physical_set()"
+    },
+    {
+      "label": "_format_evidence()",
+      "file_type": "code",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L188",
+      "_origin": "ast",
+      "id": "validation_discrepancy_audit_format_evidence",
+      "community": 30,
+      "norm_label": "_format_evidence()"
+    },
+    {
+      "label": "_bounds_by_group()",
+      "file_type": "code",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L298",
+      "_origin": "ast",
+      "id": "validation_discrepancy_audit_bounds_by_group",
+      "community": 30,
+      "norm_label": "_bounds_by_group()"
+    },
+    {
+      "label": "_classify()",
+      "file_type": "code",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L316",
+      "_origin": "ast",
+      "id": "validation_discrepancy_audit_classify",
+      "community": 30,
+      "norm_label": "_classify()"
+    },
+    {
+      "label": "audit_reports()",
+      "file_type": "code",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L365",
+      "_origin": "ast",
+      "id": "validation_discrepancy_audit_audit_reports",
+      "community": 30,
+      "norm_label": "audit_reports()"
+    },
+    {
+      "label": "audit_digest()",
+      "file_type": "code",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L447",
+      "_origin": "ast",
+      "id": "validation_discrepancy_audit_audit_digest",
+      "community": 30,
+      "norm_label": "audit_digest()"
+    },
+    {
+      "label": "audit_summary()",
+      "file_type": "code",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L456",
+      "_origin": "ast",
+      "id": "validation_discrepancy_audit_audit_summary",
+      "community": 30,
+      "norm_label": "audit_summary()"
+    },
+    {
+      "label": "write_audit_tsv()",
+      "file_type": "code",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L470",
+      "_origin": "ast",
+      "id": "validation_discrepancy_audit_write_audit_tsv",
+      "community": 30,
+      "norm_label": "write_audit_tsv()"
+    },
+    {
+      "label": "Build row-level, fail-closed audits of paired NEF/NMR-STAR contacts.",
+      "file_type": "rationale",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "validation_discrepancy_audit_rationale_1",
+      "community": 30,
+      "norm_label": "build row-level, fail-closed audits of paired nef/nmr-star contacts."
+    },
+    {
+      "label": "Return one complete evidence row per pair or bound discrepancy.",
+      "file_type": "rationale",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L366",
+      "_origin": "ast",
+      "id": "validation_discrepancy_audit_rationale_366",
+      "community": 30,
+      "norm_label": "return one complete evidence row per pair or bound discrepancy."
+    },
+    {
       "label": "stress_validation.py",
       "file_type": "code",
       "source_file": "validation/stress_validation.py",
@@ -2823,7 +3153,7 @@
       "source_location": "L135",
       "_origin": "ast",
       "id": "validation_stress_validation_convert",
-      "community": 10,
+      "community": 0,
       "norm_label": "_convert()"
     },
     {
@@ -3080,7 +3410,7 @@
       "label": "Output files",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L120",
+      "source_location": "L141",
       "_origin": "ast",
       "id": "readme_output_files",
       "community": 11,
@@ -3090,7 +3420,7 @@
       "label": "BoltzUI integration",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L136",
+      "source_location": "L157",
       "_origin": "ast",
       "id": "readme_boltzui_integration",
       "community": 11,
@@ -3100,7 +3430,7 @@
       "label": "Projection policies",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L155",
+      "source_location": "L176",
       "_origin": "ast",
       "id": "readme_projection_policies",
       "community": 11,
@@ -3110,7 +3440,7 @@
       "label": "Ambiguity rules",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L179",
+      "source_location": "L200",
       "_origin": "ast",
       "id": "readme_ambiguity_rules",
       "community": 11,
@@ -3120,7 +3450,7 @@
       "label": "Safe workflow for structure generation",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L193",
+      "source_location": "L214",
       "_origin": "ast",
       "id": "readme_safe_workflow_for_structure_generation",
       "community": 11,
@@ -3130,7 +3460,7 @@
       "label": "Important limitations",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L203",
+      "source_location": "L224",
       "_origin": "ast",
       "id": "readme_important_limitations",
       "community": 11,
@@ -3140,7 +3470,7 @@
       "label": "Documentation",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L213",
+      "source_location": "L234",
       "_origin": "ast",
       "id": "readme_documentation",
       "community": 11,
@@ -3150,7 +3480,7 @@
       "label": "Primary references and specifications",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L220",
+      "source_location": "L241",
       "_origin": "ast",
       "id": "readme_primary_references_and_specifications",
       "community": 11,
@@ -3317,14 +3647,44 @@
       "norm_label": "current result"
     },
     {
-      "label": "Comparison with the initial audit",
+      "label": "Row-level format discrepancy audit",
       "file_type": "document",
       "source_file": "benchmark/output/BENCHMARK_REPORT.md",
       "source_location": "L28",
       "_origin": "ast",
-      "id": "output_benchmark_report_comparison_with_the_initial_audit",
+      "id": "output_benchmark_report_row_level_format_discrepancy_audit",
       "community": 24,
-      "norm_label": "comparison with the initial audit"
+      "norm_label": "row-level format discrepancy audit"
+    },
+    {
+      "label": "Fail-closed gate",
+      "file_type": "document",
+      "source_file": "benchmark/output/BENCHMARK_REPORT.md",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "output_benchmark_report_fail_closed_gate",
+      "community": 24,
+      "norm_label": "fail-closed gate"
+    },
+    {
+      "label": "BENCHMARK_DISCREPANCY_FINDINGS.md",
+      "file_type": "document",
+      "source_file": "docs/BENCHMARK_DISCREPANCY_FINDINGS.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_benchmark_discrepancy_findings",
+      "community": 11,
+      "norm_label": "benchmark_discrepancy_findings.md"
+    },
+    {
+      "label": "Paired-format discrepancy findings",
+      "file_type": "document",
+      "source_file": "docs/BENCHMARK_DISCREPANCY_FINDINGS.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_benchmark_discrepancy_findings_paired_format_discrepancy_findings",
+      "community": 11,
+      "norm_label": "paired-format discrepancy findings"
     },
     {
       "label": "BOLTZUI_UNION_EXTENSION.md",
@@ -4347,10 +4707,20 @@
       "norm_label": "11.4 structural and statistical controls"
     },
     {
-      "label": "11.5 Executed validation record",
+      "label": "11.5 Paired-format discrepancy audit and CI gate",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
       "source_location": "L476",
+      "_origin": "ast",
+      "id": "docs_scientific_method_11_5_paired_format_discrepancy_audit_and_ci_gate",
+      "community": 18,
+      "norm_label": "11.5 paired-format discrepancy audit and ci gate"
+    },
+    {
+      "label": "11.5 Executed validation record",
+      "file_type": "document",
+      "source_file": "docs/SCIENTIFIC_METHOD.md",
+      "source_location": "L505",
       "_origin": "ast",
       "id": "docs_scientific_method_11_5_executed_validation_record",
       "community": 18,
@@ -4360,7 +4730,7 @@
       "label": "12. Suggested confidence tiers",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L511",
+      "source_location": "L540",
       "_origin": "ast",
       "id": "docs_scientific_method_12_suggested_confidence_tiers",
       "community": 2,
@@ -4370,7 +4740,7 @@
       "label": "13. Potential methodological extensions",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L526",
+      "source_location": "L555",
       "_origin": "ast",
       "id": "docs_scientific_method_13_potential_methodological_extensions",
       "community": 19,
@@ -4380,7 +4750,7 @@
       "label": "13.1 Probabilistic union restraints",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L528",
+      "source_location": "L557",
       "_origin": "ast",
       "id": "docs_scientific_method_13_1_probabilistic_union_restraints",
       "community": 19,
@@ -4390,7 +4760,7 @@
       "label": "13.2 Ensemble-aware objective",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L532",
+      "source_location": "L561",
       "_origin": "ast",
       "id": "docs_scientific_method_13_2_ensemble_aware_objective",
       "community": 19,
@@ -4400,7 +4770,7 @@
       "label": "13.3 Iterative assignment and folding",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L536",
+      "source_location": "L565",
       "_origin": "ast",
       "id": "docs_scientific_method_13_3_iterative_assignment_and_folding",
       "community": 19,
@@ -4410,7 +4780,7 @@
       "label": "13.4 Information-aware restraint selection",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L546",
+      "source_location": "L575",
       "_origin": "ast",
       "id": "docs_scientific_method_13_4_information_aware_restraint_selection",
       "community": 19,
@@ -4420,7 +4790,7 @@
       "label": "13.5 Broader experimental data",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L550",
+      "source_location": "L579",
       "_origin": "ast",
       "id": "docs_scientific_method_13_5_broader_experimental_data",
       "community": 19,
@@ -4430,7 +4800,7 @@
       "label": "14. Reproducibility and auditability",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L564",
+      "source_location": "L593",
       "_origin": "ast",
       "id": "docs_scientific_method_14_reproducibility_and_auditability",
       "community": 2,
@@ -4440,7 +4810,7 @@
       "label": "15. Questions for NMR expert review before production deployment",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L581",
+      "source_location": "L610",
       "_origin": "ast",
       "id": "docs_scientific_method_15_questions_for_nmr_expert_review_before_production_deployment",
       "community": 2,
@@ -4450,7 +4820,7 @@
       "label": "16. Primary specifications and references",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L596",
+      "source_location": "L625",
       "_origin": "ast",
       "id": "docs_scientific_method_16_primary_specifications_and_references",
       "community": 2,
@@ -4460,7 +4830,7 @@
       "label": "17. Concise algorithm",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L610",
+      "source_location": "L639",
       "_origin": "ast",
       "id": "docs_scientific_method_17_concise_algorithm",
       "community": 2,
@@ -5945,6 +6315,17 @@
       "context": "generic_arg",
       "confidence": "EXTRACTED",
       "source_file": "validation/benchmark_corpus.py",
+      "source_location": "L372",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_benchmark_corpus_baseline_payload",
+      "target": "any"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/benchmark_corpus.py",
       "source_location": "L82",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -5989,10 +6370,32 @@
       "context": "generic_arg",
       "confidence": "EXTRACTED",
       "source_file": "validation/benchmark_corpus.py",
+      "source_location": "L385",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_benchmark_corpus_evaluate_gate",
+      "target": "any"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/benchmark_corpus.py",
       "source_location": "L293",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "validation_benchmark_corpus_markdown",
+      "target": "any"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/benchmark_corpus.py",
+      "source_location": "L340",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_benchmark_corpus_metric_snapshot",
       "target": "any"
     },
     {
@@ -6136,6 +6539,182 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "validation_compare_ensemble_write_csv",
+      "target": "any"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L56",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit_atom_key",
+      "target": "any"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L447",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit_audit_digest",
+      "target": "any"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L365",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit_audit_reports",
+      "target": "any"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L456",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit_audit_summary",
+      "target": "any"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L298",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit_bounds_by_group",
+      "target": "any"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L316",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit_classify",
+      "target": "any"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L60",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit_constraint_key",
+      "target": "any"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L121",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit_endpoint_destination",
+      "target": "any"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L188",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit_format_evidence",
+      "target": "any"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L78",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit_group_id",
+      "target": "any"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L82",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit_group_indexes",
+      "target": "any"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L94",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit_ordered_unique",
+      "target": "any"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L148",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit_physical_set",
+      "target": "any"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit_report_dict",
+      "target": "any"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L98",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit_sequence_indexes",
+      "target": "any"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L470",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit_write_audit_tsv",
       "target": "any"
     },
     {
@@ -6458,6 +7037,17 @@
       "target": "path"
     },
     {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/benchmark_corpus.py",
+      "source_location": "L385",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_benchmark_corpus_evaluate_gate",
+      "target": "path"
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -6467,6 +7057,17 @@
       "confidence_score": 1.0,
       "source": "validation_benchmark_corpus_parse_args",
       "target": "path"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/benchmark_corpus.py",
+      "source_location": "L86",
+      "weight": 1.0,
+      "source": "validation_benchmark_corpus_portable_path",
+      "target": "path",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -6532,6 +7133,17 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "validation_compare_ensemble_write_csv",
+      "target": "path"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L470",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit_write_audit_tsv",
       "target": "path"
     },
     {
@@ -12018,6 +12630,17 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit",
+      "target": "nmr2boltz_topology"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "validation/stress_validation.py",
       "source_location": "L29",
       "weight": 1.0,
@@ -12757,6 +13380,28 @@
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L195",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit_format_evidence",
+      "target": "nmr2boltz_topology_topologylibrary"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L148",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit_physical_set",
+      "target": "nmr2boltz_topology_topologylibrary"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "validation/stress_validation.py",
       "source_location": "L140",
@@ -13107,6 +13752,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L53",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_corpus_benchmark",
+      "target": "tests_test_corpus_benchmark_alternative"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
       "source_location": "L7",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -13117,11 +13772,61 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_corpus_benchmark",
+      "target": "tests_test_corpus_benchmark_endpoint"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L62",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_corpus_benchmark",
+      "target": "tests_test_corpus_benchmark_report"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L167",
+      "weight": 1.0,
+      "source": "tests_test_corpus_benchmark",
+      "target": "tests_test_corpus_benchmark_test_benchmark_artifact_paths_are_portable",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
       "source_location": "L17",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "tests_test_corpus_benchmark",
       "target": "tests_test_corpus_benchmark_test_compare_reports_detects_pair_and_bound_differences"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L80",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_corpus_benchmark",
+      "target": "tests_test_corpus_benchmark_test_discrepancy_audit_preserves_atomset_vs_explicit_or_evidence"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L137",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_corpus_benchmark",
+      "target": "tests_test_corpus_benchmark_test_fail_closed_gate_rejects_missing_coordinate_resolution"
     },
     {
       "relation": "imports_from",
@@ -13143,7 +13848,73 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "tests_test_corpus_benchmark",
+      "target": "validation_benchmark_corpus_baseline_payload"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_corpus_benchmark",
       "target": "validation_benchmark_corpus_compare_reports"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_corpus_benchmark",
+      "target": "validation_benchmark_corpus_evaluate_gate"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "tests_test_corpus_benchmark",
+      "target": "validation_benchmark_corpus_portable_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_corpus_benchmark",
+      "target": "validation_discrepancy_audit"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_corpus_benchmark",
+      "target": "validation_discrepancy_audit_audit_reports"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_corpus_benchmark",
+      "target": "validation_discrepancy_audit_audit_summary"
     },
     {
       "relation": "calls",
@@ -13166,6 +13937,94 @@
       "confidence_score": 1.0,
       "source": "tests_test_corpus_benchmark_test_compare_reports_detects_pair_and_bound_differences",
       "target": "validation_benchmark_corpus_compare_reports"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L55",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_corpus_benchmark_alternative",
+      "target": "tests_test_corpus_benchmark_endpoint"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L86",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_corpus_benchmark_test_discrepancy_audit_preserves_atomset_vs_explicit_or_evidence",
+      "target": "tests_test_corpus_benchmark_alternative"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L125",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_corpus_benchmark_test_discrepancy_audit_preserves_atomset_vs_explicit_or_evidence",
+      "target": "tests_test_corpus_benchmark_report"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L123",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_corpus_benchmark_test_discrepancy_audit_preserves_atomset_vs_explicit_or_evidence",
+      "target": "validation_discrepancy_audit_audit_reports"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L155",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_corpus_benchmark_test_fail_closed_gate_rejects_missing_coordinate_resolution",
+      "target": "validation_benchmark_corpus_baseline_payload"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L157",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_corpus_benchmark_test_fail_closed_gate_rejects_missing_coordinate_resolution",
+      "target": "validation_benchmark_corpus_evaluate_gate"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L152",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_corpus_benchmark_test_fail_closed_gate_rejects_missing_coordinate_resolution",
+      "target": "validation_discrepancy_audit_audit_summary"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_corpus_benchmark.py",
+      "source_location": "L168",
+      "weight": 1.0,
+      "source": "tests_test_corpus_benchmark_test_benchmark_artifact_paths_are_portable",
+      "target": "validation_benchmark_corpus_portable_path",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -13697,6 +14556,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "validation/benchmark_corpus.py",
+      "source_location": "L372",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_benchmark_corpus",
+      "target": "validation_benchmark_corpus_baseline_payload"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/benchmark_corpus.py",
       "source_location": "L82",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -13737,6 +14606,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "validation/benchmark_corpus.py",
+      "source_location": "L385",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_benchmark_corpus",
+      "target": "validation_benchmark_corpus_evaluate_gate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/benchmark_corpus.py",
       "source_location": "L396",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -13757,6 +14636,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "validation/benchmark_corpus.py",
+      "source_location": "L340",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_benchmark_corpus",
+      "target": "validation_benchmark_corpus_metric_snapshot"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/benchmark_corpus.py",
       "source_location": "L45",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -13772,6 +14661,16 @@
       "confidence_score": 1.0,
       "source": "validation_benchmark_corpus",
       "target": "validation_benchmark_corpus_percent"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/benchmark_corpus.py",
+      "source_location": "L86",
+      "weight": 1.0,
+      "source": "validation_benchmark_corpus",
+      "target": "validation_benchmark_corpus_portable_path",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -13880,6 +14779,50 @@
       "target": "validation_compare_ensemble_load_structure"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/benchmark_corpus.py",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_benchmark_corpus",
+      "target": "validation_discrepancy_audit"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/benchmark_corpus.py",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_benchmark_corpus",
+      "target": "validation_discrepancy_audit_audit_reports"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/benchmark_corpus.py",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_benchmark_corpus",
+      "target": "validation_discrepancy_audit_audit_summary"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/benchmark_corpus.py",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_benchmark_corpus",
+      "target": "validation_discrepancy_audit_write_audit_tsv"
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -13900,6 +14843,38 @@
       "confidence_score": 1.0,
       "source": "validation_benchmark_corpus_run_case",
       "target": "validation_benchmark_corpus_single_file"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/benchmark_corpus.py",
+      "source_location": "L422",
+      "weight": 1.0,
+      "source": "validation_benchmark_corpus_evaluate_gate",
+      "target": "validation_benchmark_corpus_portable_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/benchmark_corpus.py",
+      "source_location": "L87",
+      "weight": 1.0,
+      "source": "validation_benchmark_corpus_rationale_87",
+      "target": "validation_benchmark_corpus_portable_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/benchmark_corpus.py",
+      "source_location": "L546",
+      "weight": 1.0,
+      "source": "validation_benchmark_corpus_run_corpus",
+      "target": "validation_benchmark_corpus_portable_path",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -14016,6 +14991,39 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "validation/benchmark_corpus.py",
+      "source_location": "L258",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_benchmark_corpus_run_case",
+      "target": "validation_discrepancy_audit_audit_reports"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/benchmark_corpus.py",
+      "source_location": "L259",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_benchmark_corpus_run_case",
+      "target": "validation_discrepancy_audit_audit_summary"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/benchmark_corpus.py",
+      "source_location": "L261",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_benchmark_corpus_run_case",
+      "target": "validation_discrepancy_audit_write_audit_tsv"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/benchmark_corpus.py",
       "source_location": "L360",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -14032,6 +15040,60 @@
       "confidence_score": 1.0,
       "source": "validation_benchmark_corpus_run_corpus",
       "target": "validation_benchmark_corpus_aggregate"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/benchmark_corpus.py",
+      "source_location": "L381",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_benchmark_corpus_baseline_payload",
+      "target": "validation_benchmark_corpus_metric_snapshot"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/benchmark_corpus.py",
+      "source_location": "L346",
+      "weight": 1.0,
+      "source": "validation_benchmark_corpus_rationale_346",
+      "target": "validation_benchmark_corpus_metric_snapshot",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/benchmark_corpus.py",
+      "source_location": "L421",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_benchmark_corpus_evaluate_gate",
+      "target": "validation_benchmark_corpus_baseline_payload"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/benchmark_corpus.py",
+      "source_location": "L561",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_benchmark_corpus_run_corpus",
+      "target": "validation_benchmark_corpus_baseline_payload"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/benchmark_corpus.py",
+      "source_location": "L564",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_benchmark_corpus_run_corpus",
+      "target": "validation_benchmark_corpus_evaluate_gate"
     },
     {
       "relation": "calls",
@@ -14065,6 +15127,28 @@
       "confidence_score": 1.0,
       "source": "validation_benchmark_corpus_main",
       "target": "validation_benchmark_corpus_run_corpus"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/benchmark_corpus.py",
+      "source_location": "L550",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_benchmark_corpus_run_corpus",
+      "target": "validation_discrepancy_audit_audit_summary"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/benchmark_corpus.py",
+      "source_location": "L553",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_benchmark_corpus_run_corpus",
+      "target": "validation_discrepancy_audit_write_audit_tsv"
     },
     {
       "relation": "contains",
@@ -14757,6 +15841,415 @@
       "target": "validation_compare_ensemble_implication_audit"
     },
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L56",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit",
+      "target": "validation_discrepancy_audit_atom_key"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L447",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit",
+      "target": "validation_discrepancy_audit_audit_digest"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L365",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit",
+      "target": "validation_discrepancy_audit_audit_reports"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L456",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit",
+      "target": "validation_discrepancy_audit_audit_summary"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L298",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit",
+      "target": "validation_discrepancy_audit_bounds_by_group"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L316",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit",
+      "target": "validation_discrepancy_audit_classify"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L60",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit",
+      "target": "validation_discrepancy_audit_constraint_key"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L121",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit",
+      "target": "validation_discrepancy_audit_endpoint_destination"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L188",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit",
+      "target": "validation_discrepancy_audit_format_evidence"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L78",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit",
+      "target": "validation_discrepancy_audit_group_id"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L82",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit",
+      "target": "validation_discrepancy_audit_group_indexes"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L68",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit",
+      "target": "validation_discrepancy_audit_normalize_group_id"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L94",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit",
+      "target": "validation_discrepancy_audit_ordered_unique"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L64",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit",
+      "target": "validation_discrepancy_audit_pair_label"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L148",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit",
+      "target": "validation_discrepancy_audit_physical_set"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit",
+      "target": "validation_discrepancy_audit_report_dict"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L98",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit",
+      "target": "validation_discrepancy_audit_sequence_indexes"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L470",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit",
+      "target": "validation_discrepancy_audit_write_audit_tsv"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit_rationale_1",
+      "target": "validation_discrepancy_audit"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L367",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit_audit_reports",
+      "target": "validation_discrepancy_audit_report_dict"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L61",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit_constraint_key",
+      "target": "validation_discrepancy_audit_atom_key"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L370",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit_audit_reports",
+      "target": "validation_discrepancy_audit_constraint_key"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L408",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit_audit_reports",
+      "target": "validation_discrepancy_audit_pair_label"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L398",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit_audit_reports",
+      "target": "validation_discrepancy_audit_normalize_group_id"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L269",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit_format_evidence",
+      "target": "validation_discrepancy_audit_normalize_group_id"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L84",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit_group_indexes",
+      "target": "validation_discrepancy_audit_normalize_group_id"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L208",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit_format_evidence",
+      "target": "validation_discrepancy_audit_group_id"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L84",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit_group_indexes",
+      "target": "validation_discrepancy_audit_group_id"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L375",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit_audit_reports",
+      "target": "validation_discrepancy_audit_group_indexes"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L279",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit_format_evidence",
+      "target": "validation_discrepancy_audit_ordered_unique"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L175",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit_physical_set",
+      "target": "validation_discrepancy_audit_ordered_unique"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L196",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit_format_evidence",
+      "target": "validation_discrepancy_audit_sequence_indexes"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L254",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit_format_evidence",
+      "target": "validation_discrepancy_audit_endpoint_destination"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L237",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit_format_evidence",
+      "target": "validation_discrepancy_audit_physical_set"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L399",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit_audit_reports",
+      "target": "validation_discrepancy_audit_format_evidence"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L338",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit_classify",
+      "target": "validation_discrepancy_audit_bounds_by_group"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L405",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit_audit_reports",
+      "target": "validation_discrepancy_audit_classify"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L366",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit_rationale_366",
+      "target": "validation_discrepancy_audit_audit_reports"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/discrepancy_audit.py",
+      "source_location": "L459",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validation_discrepancy_audit_audit_summary",
+      "target": "validation_discrepancy_audit_audit_digest"
+    },
+    {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -15225,6 +16718,16 @@
       "target": "workspace_output_nmr2boltz_noe_hypotheses_manifest_json_hypotheses_manifest_warning"
     },
     {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L126",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme",
+      "target": "docs_benchmark_discrepancy_findings"
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
@@ -15458,21 +16961,41 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "benchmark/output/BENCHMARK_REPORT.md",
-      "source_location": "L28",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "output_benchmark_report_nmr2boltz_paired_format_benchmark",
-      "target": "output_benchmark_report_comparison_with_the_initial_audit"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "benchmark/output/BENCHMARK_REPORT.md",
       "source_location": "L20",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "output_benchmark_report_nmr2boltz_paired_format_benchmark",
       "target": "output_benchmark_report_current_result"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "benchmark/output/BENCHMARK_REPORT.md",
+      "source_location": "L36",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "output_benchmark_report_nmr2boltz_paired_format_benchmark",
+      "target": "output_benchmark_report_fail_closed_gate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "benchmark/output/BENCHMARK_REPORT.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "output_benchmark_report_nmr2boltz_paired_format_benchmark",
+      "target": "output_benchmark_report_row_level_format_discrepancy_audit"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/BENCHMARK_DISCREPANCY_FINDINGS.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_benchmark_discrepancy_findings",
+      "target": "docs_benchmark_discrepancy_findings_paired_format_discrepancy_findings"
     },
     {
       "relation": "contains",
@@ -16508,6 +18031,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
+      "source_location": "L476",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_scientific_method_11_validation_protocol",
+      "target": "docs_scientific_method_11_5_paired_format_discrepancy_audit_and_ci_gate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/SCIENTIFIC_METHOD.md",
       "source_location": "L528",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -16666,5 +18199,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "a1661618cea94c11f3e8ab0e083a349af9c174e6"
+  "built_at_commit": "ca9eccceef9d66b6ca9bf8338c76d06b84b6ca19"
 }

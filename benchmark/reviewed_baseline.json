@@ -1,0 +1,574 @@
+{
+  "schema_version": 1,
+  "audit_review": {
+    "digest_sha256": "598db995e37fc2ed3e54261e8eb80e85c8b127877564a9665fb9e81b161baa2a",
+    "row_count": 4201,
+    "classification_counts": {
+      "expected_format_difference": 4158,
+      "deposition_inconsistency": 43
+    }
+  },
+  "metrics": {
+    "cases": {
+      "21CC": {
+        "status": "pass",
+        "format_parity": {
+          "nef_constraints": 176,
+          "star_constraints": 176,
+          "common_atom_pairs": 176,
+          "nef_only_atom_pairs": 0,
+          "star_only_atom_pairs": 0,
+          "common_pairs_with_different_bounds": 0,
+          "maximum_common_bound_delta_angstrom": 0.0,
+          "exact_pair_and_bound_parity": true
+        },
+        "formats": {
+          "nef": {
+            "restraint_groups": 202,
+            "source_alternatives": 218,
+            "emitted_constraints": 176,
+            "ambiguous_groups": 16,
+            "rejection_reasons": {},
+            "resolved_model_cases": 1760,
+            "satisfied_model_cases": 1755,
+            "violated_model_cases": 5,
+            "missing_model_cases": 0,
+            "constraints_missing_in_any_model": 0,
+            "implication_antecedent_cases": 1404,
+            "implication_failures": 0
+          },
+          "star": {
+            "restraint_groups": 202,
+            "source_alternatives": 218,
+            "emitted_constraints": 176,
+            "ambiguous_groups": 16,
+            "rejection_reasons": {},
+            "resolved_model_cases": 1760,
+            "satisfied_model_cases": 1755,
+            "violated_model_cases": 5,
+            "missing_model_cases": 0,
+            "constraints_missing_in_any_model": 0,
+            "implication_antecedent_cases": 1070,
+            "implication_failures": 0
+          }
+        }
+      },
+      "43JX": {
+        "status": "pass",
+        "format_parity": {
+          "nef_constraints": 1716,
+          "star_constraints": 1716,
+          "common_atom_pairs": 1716,
+          "nef_only_atom_pairs": 0,
+          "star_only_atom_pairs": 0,
+          "common_pairs_with_different_bounds": 355,
+          "maximum_common_bound_delta_angstrom": 2.861354719888931,
+          "exact_pair_and_bound_parity": false
+        },
+        "formats": {
+          "nef": {
+            "restraint_groups": 2387,
+            "source_alternatives": 2821,
+            "emitted_constraints": 1716,
+            "ambiguous_groups": 16,
+            "rejection_reasons": {
+              "same_heavy_parent_atom": 41
+            },
+            "resolved_model_cases": 34320,
+            "satisfied_model_cases": 34305,
+            "violated_model_cases": 15,
+            "missing_model_cases": 0,
+            "constraints_missing_in_any_model": 0,
+            "implication_antecedent_cases": 33060,
+            "implication_failures": 0
+          },
+          "star": {
+            "restraint_groups": 2387,
+            "source_alternatives": 3694,
+            "emitted_constraints": 1716,
+            "ambiguous_groups": 16,
+            "rejection_reasons": {
+              "same_heavy_parent_atom": 38
+            },
+            "resolved_model_cases": 34320,
+            "satisfied_model_cases": 34293,
+            "violated_model_cases": 27,
+            "missing_model_cases": 0,
+            "constraints_missing_in_any_model": 0,
+            "implication_antecedent_cases": 32583,
+            "implication_failures": 0
+          }
+        }
+      },
+      "6M6O": {
+        "status": "pass",
+        "format_parity": {
+          "nef_constraints": 2819,
+          "star_constraints": 2877,
+          "common_atom_pairs": 2818,
+          "nef_only_atom_pairs": 1,
+          "star_only_atom_pairs": 59,
+          "common_pairs_with_different_bounds": 89,
+          "maximum_common_bound_delta_angstrom": 1.5595262993692387,
+          "exact_pair_and_bound_parity": false
+        },
+        "formats": {
+          "nef": {
+            "restraint_groups": 3271,
+            "source_alternatives": 3416,
+            "emitted_constraints": 2819,
+            "ambiguous_groups": 71,
+            "rejection_reasons": {
+              "same_heavy_parent_atom": 148
+            },
+            "resolved_model_cases": 28190,
+            "satisfied_model_cases": 28110,
+            "violated_model_cases": 80,
+            "missing_model_cases": 0,
+            "constraints_missing_in_any_model": 0,
+            "implication_antecedent_cases": 26883,
+            "implication_failures": 0
+          },
+          "star": {
+            "restraint_groups": 3271,
+            "source_alternatives": 3271,
+            "emitted_constraints": 2877,
+            "ambiguous_groups": 7,
+            "rejection_reasons": {
+              "same_heavy_parent_atom": 37
+            },
+            "resolved_model_cases": 28770,
+            "satisfied_model_cases": 28656,
+            "violated_model_cases": 114,
+            "missing_model_cases": 0,
+            "constraints_missing_in_any_model": 0,
+            "implication_antecedent_cases": 26944,
+            "implication_failures": 0
+          }
+        }
+      },
+      "8R1X": {
+        "status": "pass",
+        "format_parity": {
+          "nef_constraints": 1112,
+          "star_constraints": 1118,
+          "common_atom_pairs": 1112,
+          "nef_only_atom_pairs": 0,
+          "star_only_atom_pairs": 6,
+          "common_pairs_with_different_bounds": 160,
+          "maximum_common_bound_delta_angstrom": 3.184196906213339,
+          "exact_pair_and_bound_parity": false
+        },
+        "formats": {
+          "nef": {
+            "restraint_groups": 1414,
+            "source_alternatives": 2282,
+            "emitted_constraints": 1112,
+            "ambiguous_groups": 179,
+            "rejection_reasons": {
+              "same_heavy_parent_atom": 12,
+              "unresolved_atom_topology": 39,
+              "projected_bound_exceeds_boltz_maximum": 39
+            },
+            "resolved_model_cases": 21340,
+            "satisfied_model_cases": 21284,
+            "violated_model_cases": 56,
+            "missing_model_cases": 900,
+            "constraints_missing_in_any_model": 45,
+            "implication_antecedent_cases": 19717,
+            "implication_failures": 0
+          },
+          "star": {
+            "restraint_groups": 1414,
+            "source_alternatives": 3382,
+            "emitted_constraints": 1118,
+            "ambiguous_groups": 165,
+            "rejection_reasons": {
+              "same_heavy_parent_atom": 3,
+              "unresolved_atom_topology": 39,
+              "projected_bound_exceeds_boltz_maximum": 39
+            },
+            "resolved_model_cases": 21460,
+            "satisfied_model_cases": 21404,
+            "violated_model_cases": 56,
+            "missing_model_cases": 900,
+            "constraints_missing_in_any_model": 45,
+            "implication_antecedent_cases": 18635,
+            "implication_failures": 0
+          }
+        }
+      },
+      "8S8O": {
+        "status": "pass",
+        "format_parity": {
+          "nef_constraints": 0,
+          "star_constraints": 0,
+          "common_atom_pairs": 0,
+          "nef_only_atom_pairs": 0,
+          "star_only_atom_pairs": 0,
+          "common_pairs_with_different_bounds": 0,
+          "maximum_common_bound_delta_angstrom": null,
+          "exact_pair_and_bound_parity": true
+        },
+        "formats": {
+          "nef": {
+            "restraint_groups": 0,
+            "source_alternatives": 0,
+            "emitted_constraints": 0,
+            "ambiguous_groups": 0,
+            "rejection_reasons": {},
+            "resolved_model_cases": 0,
+            "satisfied_model_cases": 0,
+            "violated_model_cases": 0,
+            "missing_model_cases": 0,
+            "constraints_missing_in_any_model": 0,
+            "implication_antecedent_cases": 0,
+            "implication_failures": 0
+          },
+          "star": {
+            "restraint_groups": 0,
+            "source_alternatives": 0,
+            "emitted_constraints": 0,
+            "ambiguous_groups": 0,
+            "rejection_reasons": {},
+            "resolved_model_cases": 0,
+            "satisfied_model_cases": 0,
+            "violated_model_cases": 0,
+            "missing_model_cases": 0,
+            "constraints_missing_in_any_model": 0,
+            "implication_antecedent_cases": 0,
+            "implication_failures": 0
+          }
+        }
+      },
+      "9CCH": {
+        "status": "pass",
+        "format_parity": {
+          "nef_constraints": 3358,
+          "star_constraints": 3524,
+          "common_atom_pairs": 3350,
+          "nef_only_atom_pairs": 8,
+          "star_only_atom_pairs": 174,
+          "common_pairs_with_different_bounds": 1754,
+          "maximum_common_bound_delta_angstrom": 2.786172292936673,
+          "exact_pair_and_bound_parity": false
+        },
+        "formats": {
+          "nef": {
+            "restraint_groups": 7065,
+            "source_alternatives": 18740,
+            "emitted_constraints": 3358,
+            "ambiguous_groups": 292,
+            "rejection_reasons": {
+              "unresolved_atom_topology": 317,
+              "same_heavy_parent_atom": 250,
+              "partially_unprojectable_or_group": 5,
+              "complex_restraint_combination_logic": 1584
+            },
+            "resolved_model_cases": 67000,
+            "satisfied_model_cases": 66987,
+            "violated_model_cases": 13,
+            "missing_model_cases": 160,
+            "constraints_missing_in_any_model": 8,
+            "implication_antecedent_cases": 63359,
+            "implication_failures": 0
+          },
+          "star": {
+            "restraint_groups": 7065,
+            "source_alternatives": 8981,
+            "emitted_constraints": 3524,
+            "ambiguous_groups": 75,
+            "rejection_reasons": {
+              "unresolved_atom_topology": 138,
+              "same_heavy_parent_atom": 60,
+              "complex_restraint_combination_logic": 1584
+            },
+            "resolved_model_cases": 70320,
+            "satisfied_model_cases": 70320,
+            "violated_model_cases": 0,
+            "missing_model_cases": 160,
+            "constraints_missing_in_any_model": 8,
+            "implication_antecedent_cases": 67967,
+            "implication_failures": 0
+          }
+        }
+      },
+      "9D99": {
+        "status": "pass",
+        "format_parity": {
+          "nef_constraints": 456,
+          "star_constraints": 456,
+          "common_atom_pairs": 456,
+          "nef_only_atom_pairs": 0,
+          "star_only_atom_pairs": 0,
+          "common_pairs_with_different_bounds": 0,
+          "maximum_common_bound_delta_angstrom": 0.0,
+          "exact_pair_and_bound_parity": true
+        },
+        "formats": {
+          "nef": {
+            "restraint_groups": 1548,
+            "source_alternatives": 3386,
+            "emitted_constraints": 456,
+            "ambiguous_groups": 0,
+            "rejection_reasons": {
+              "complex_restraint_combination_logic": 894,
+              "same_heavy_parent_atom": 192,
+              "unresolved_atom_topology": 12
+            },
+            "resolved_model_cases": 4560,
+            "satisfied_model_cases": 4560,
+            "violated_model_cases": 0,
+            "missing_model_cases": 0,
+            "constraints_missing_in_any_model": 0,
+            "implication_antecedent_cases": 4454,
+            "implication_failures": 0
+          },
+          "star": {
+            "restraint_groups": 1548,
+            "source_alternatives": 4292,
+            "emitted_constraints": 456,
+            "ambiguous_groups": 0,
+            "rejection_reasons": {
+              "complex_restraint_combination_logic": 894,
+              "same_heavy_parent_atom": 48,
+              "unresolved_atom_topology": 12
+            },
+            "resolved_model_cases": 4560,
+            "satisfied_model_cases": 4560,
+            "violated_model_cases": 0,
+            "missing_model_cases": 0,
+            "constraints_missing_in_any_model": 0,
+            "implication_antecedent_cases": 4357,
+            "implication_failures": 0
+          }
+        }
+      },
+      "9KG4": {
+        "status": "pass",
+        "format_parity": {
+          "nef_constraints": 406,
+          "star_constraints": 406,
+          "common_atom_pairs": 406,
+          "nef_only_atom_pairs": 0,
+          "star_only_atom_pairs": 0,
+          "common_pairs_with_different_bounds": 0,
+          "maximum_common_bound_delta_angstrom": 0.0,
+          "exact_pair_and_bound_parity": true
+        },
+        "formats": {
+          "nef": {
+            "restraint_groups": 553,
+            "source_alternatives": 554,
+            "emitted_constraints": 406,
+            "ambiguous_groups": 12,
+            "rejection_reasons": {},
+            "resolved_model_cases": 6090,
+            "satisfied_model_cases": 6074,
+            "violated_model_cases": 16,
+            "missing_model_cases": 0,
+            "constraints_missing_in_any_model": 0,
+            "implication_antecedent_cases": 6034,
+            "implication_failures": 0
+          },
+          "star": {
+            "restraint_groups": 553,
+            "source_alternatives": 554,
+            "emitted_constraints": 406,
+            "ambiguous_groups": 0,
+            "rejection_reasons": {},
+            "resolved_model_cases": 6090,
+            "satisfied_model_cases": 6074,
+            "violated_model_cases": 16,
+            "missing_model_cases": 0,
+            "constraints_missing_in_any_model": 0,
+            "implication_antecedent_cases": 5018,
+            "implication_failures": 0
+          }
+        }
+      },
+      "9PQH": {
+        "status": "pass",
+        "format_parity": {
+          "nef_constraints": 3,
+          "star_constraints": 44,
+          "common_atom_pairs": 2,
+          "nef_only_atom_pairs": 1,
+          "star_only_atom_pairs": 42,
+          "common_pairs_with_different_bounds": 2,
+          "maximum_common_bound_delta_angstrom": 2.653497421844449,
+          "exact_pair_and_bound_parity": false
+        },
+        "formats": {
+          "nef": {
+            "restraint_groups": 60,
+            "source_alternatives": 336,
+            "emitted_constraints": 3,
+            "ambiguous_groups": 0,
+            "rejection_reasons": {
+              "sequence_residue_mismatch": 312
+            },
+            "resolved_model_cases": 30,
+            "satisfied_model_cases": 1,
+            "violated_model_cases": 29,
+            "missing_model_cases": 0,
+            "constraints_missing_in_any_model": 0,
+            "implication_antecedent_cases": 0,
+            "implication_failures": 0
+          },
+          "star": {
+            "restraint_groups": 60,
+            "source_alternatives": 60,
+            "emitted_constraints": 44,
+            "ambiguous_groups": 15,
+            "rejection_reasons": {},
+            "resolved_model_cases": 440,
+            "satisfied_model_cases": 440,
+            "violated_model_cases": 0,
+            "missing_model_cases": 0,
+            "constraints_missing_in_any_model": 0,
+            "implication_antecedent_cases": 368,
+            "implication_failures": 0
+          }
+        }
+      },
+      "9SGX": {
+        "status": "pass",
+        "format_parity": {
+          "nef_constraints": 1578,
+          "star_constraints": 765,
+          "common_atom_pairs": 765,
+          "nef_only_atom_pairs": 813,
+          "star_only_atom_pairs": 0,
+          "common_pairs_with_different_bounds": 0,
+          "maximum_common_bound_delta_angstrom": 0.0,
+          "exact_pair_and_bound_parity": false
+        },
+        "formats": {
+          "nef": {
+            "restraint_groups": 2720,
+            "source_alternatives": 4926,
+            "emitted_constraints": 1578,
+            "ambiguous_groups": 766,
+            "rejection_reasons": {},
+            "resolved_model_cases": 31560,
+            "satisfied_model_cases": 31559,
+            "violated_model_cases": 1,
+            "missing_model_cases": 0,
+            "constraints_missing_in_any_model": 0,
+            "implication_antecedent_cases": 27571,
+            "implication_failures": 0
+          },
+          "star": {
+            "restraint_groups": 2720,
+            "source_alternatives": 8430,
+            "emitted_constraints": 765,
+            "ambiguous_groups": 0,
+            "rejection_reasons": {
+              "unresolved_atom_topology": 7507,
+              "partially_unprojectable_or_group": 2
+            },
+            "resolved_model_cases": 15300,
+            "satisfied_model_cases": 15300,
+            "violated_model_cases": 0,
+            "missing_model_cases": 0,
+            "constraints_missing_in_any_model": 0,
+            "implication_antecedent_cases": 12569,
+            "implication_failures": 0
+          }
+        }
+      },
+      "9VQ1": {
+        "status": "pass",
+        "format_parity": {
+          "nef_constraints": 53,
+          "star_constraints": 56,
+          "common_atom_pairs": 53,
+          "nef_only_atom_pairs": 0,
+          "star_only_atom_pairs": 3,
+          "common_pairs_with_different_bounds": 0,
+          "maximum_common_bound_delta_angstrom": 0.0,
+          "exact_pair_and_bound_parity": false
+        },
+        "formats": {
+          "nef": {
+            "restraint_groups": 100,
+            "source_alternatives": 100,
+            "emitted_constraints": 53,
+            "ambiguous_groups": 3,
+            "rejection_reasons": {},
+            "resolved_model_cases": 1060,
+            "satisfied_model_cases": 1007,
+            "violated_model_cases": 53,
+            "missing_model_cases": 0,
+            "constraints_missing_in_any_model": 0,
+            "implication_antecedent_cases": 905,
+            "implication_failures": 0
+          },
+          "star": {
+            "restraint_groups": 100,
+            "source_alternatives": 100,
+            "emitted_constraints": 56,
+            "ambiguous_groups": 0,
+            "rejection_reasons": {},
+            "resolved_model_cases": 1120,
+            "satisfied_model_cases": 1055,
+            "violated_model_cases": 65,
+            "missing_model_cases": 0,
+            "constraints_missing_in_any_model": 0,
+            "implication_antecedent_cases": 953,
+            "implication_failures": 0
+          }
+        }
+      },
+      "9VUY": {
+        "status": "pass",
+        "format_parity": {
+          "nef_constraints": 1327,
+          "star_constraints": 703,
+          "common_atom_pairs": 696,
+          "nef_only_atom_pairs": 631,
+          "star_only_atom_pairs": 7,
+          "common_pairs_with_different_bounds": 96,
+          "maximum_common_bound_delta_angstrom": 1.660000000000001,
+          "exact_pair_and_bound_parity": false
+        },
+        "formats": {
+          "nef": {
+            "restraint_groups": 2590,
+            "source_alternatives": 5020,
+            "emitted_constraints": 1327,
+            "ambiguous_groups": 727,
+            "rejection_reasons": {
+              "missing_upper_bound": 168
+            },
+            "resolved_model_cases": 26540,
+            "satisfied_model_cases": 26530,
+            "violated_model_cases": 10,
+            "missing_model_cases": 0,
+            "constraints_missing_in_any_model": 0,
+            "implication_antecedent_cases": 23516,
+            "implication_failures": 0
+          },
+          "star": {
+            "restraint_groups": 2590,
+            "source_alternatives": 7718,
+            "emitted_constraints": 703,
+            "ambiguous_groups": 0,
+            "rejection_reasons": {
+              "unresolved_atom_topology": 6569,
+              "missing_upper_bound": 168
+            },
+            "resolved_model_cases": 14060,
+            "satisfied_model_cases": 14060,
+            "violated_model_cases": 0,
+            "missing_model_cases": 0,
+            "constraints_missing_in_any_model": 0,
+            "implication_antecedent_cases": 13443,
+            "implication_failures": 0
+          }
+        }
+      }
+    }
+  }
+}

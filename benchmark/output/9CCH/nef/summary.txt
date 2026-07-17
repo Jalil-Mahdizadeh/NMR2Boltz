@@ -1,6 +1,6 @@
 NMR-to-Boltz heavy-atom projection summary
 ==============================================
-Input: benchmark\input\9CCH\9cch_nmr-data.nef
+Input: benchmark/input/9CCH/9cch_nmr-data.nef
 Detected format: nef
 Restraint groups read: 7065
 Source alternatives read: 18740

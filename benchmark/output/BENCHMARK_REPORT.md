@@ -25,13 +25,19 @@ All 12 deposited ensembles were converted from both NEF and NMR-STAR with conser
 - Conservative implication failures: 0 across 390810 satisfied-antecedent cases.
 - Exact NEF/STAR pair-and-bound parity: 3/11 positive-distance cases; 8S8O also has exact empty-output parity.
 
-## Comparison with the initial audit
+## Row-level format discrepancy audit
 
-- Successful conversions: 22 -> 24.
-- No-distance failures: 2 -> 0.
-- FASTA outputs: 0 -> 24.
-- Emitted contacts: 13004 -> 13004 NEF and 11841 -> 11841 STAR under unchanged conservative projection policies.
-- Sequence/residue conflicts are now explicit: 312 rejection records use `sequence_residue_mismatch`.
-- Large pseudoatom and atom-set parity differences remain intentionally visible rather than being silently approximated.
+- 4201 NEF-only, STAR-only, or different-bound contacts were audited to source rows and physical proton sets.
+- Classifications: 4158 scientifically expected format differences; 43 deposition inconsistencies; 0 unresolved; 0 parser/projection bugs.
+- Reviewed audit digest: `598db995e37fc2ed3e54261e8eb80e85c8b127877564a9665fb9e81b161baa2a`.
+- 9PQH contains 43 contact discrepancies caused by its NEF sequence/residue numbering conflict; its remaining two different-bound rows are the expected explicit-OR versus wildcard atom-set distinction.
+- 43JX, 6M6O, 9SGX, and 9VUY differences are justified by explicit-OR, wildcard atom-set, x/y assignment, or rejected geometric-pseudoatom semantics.
+
+## Fail-closed gate
+
+- Gate status: **FAIL** (1 failure category).
+- Coordinate resolution gaps: 53 NEF and 53 STAR contacts. These are not omitted from the denominator silently.
+- The current gaps are 45 contacts per format in partial-coordinate 8R1X and 8 contacts per format in 9CCH restraints that deposit `ZN`/`ZN*` on GLN 48 rather than the coordinate zinc residue.
+- Any implication failure, missing coordinate, unresolved discrepancy, audit-digest change, or metric snapshot change makes the command exit nonzero.
 
 This validates conversion safety and format behavior against structures refined with the deposited restraints; it is not an independent Boltz prediction-accuracy benchmark.

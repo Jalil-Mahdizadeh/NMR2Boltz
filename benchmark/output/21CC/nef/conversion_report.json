@@ -1,5 +1,5 @@
 {
-  "input_file": "benchmark\\input\\21CC\\21cc_nmr-data.nef",
+  "input_file": "benchmark/input/21CC/21cc_nmr-data.nef",
   "detected_format": "nef",
   "settings": {
     "benchmark_case": "21CC",

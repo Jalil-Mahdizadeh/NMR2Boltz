@@ -1,0 +1,15 @@
+{
+  "row_count": 3,
+  "digest_sha256": "1b00a32a3da0dcdc490664f34df02d3ffaa5b12685c8538c693ac80662d20a21",
+  "discrepancy_type_counts": {
+    "star_only": 3
+  },
+  "classification_counts": {
+    "expected_format_difference": 3
+  },
+  "case_counts": {
+    "9VQ1": 3
+  },
+  "unresolved_count": 0,
+  "parser_projection_bug_count": 0
+}

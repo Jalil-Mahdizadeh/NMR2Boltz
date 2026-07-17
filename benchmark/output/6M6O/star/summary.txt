@@ -1,6 +1,6 @@
 NMR-to-Boltz heavy-atom projection summary
 ==============================================
-Input: benchmark\input\6M6O\6m6o_nmr-data.str
+Input: benchmark/input/6M6O/6m6o_nmr-data.str
 Detected format: nmr-star
 Restraint groups read: 3271
 Source alternatives read: 3271

@@ -1,16 +1,16 @@
 # Graph Report - nmr2boltz_toolkit  (2026-07-17)
 
 ## Corpus Check
-- 46 files · ~4,015,778 words
+- 124 files · ~16,955,584 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 459 nodes · 1141 edges · 30 communities (26 shown, 4 thin omitted)
-- Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 77 edges (avg confidence: 0.52)
+- 496 nodes · 1250 edges · 31 communities (27 shown, 4 thin omitted)
+- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 77 edges (avg confidence: 0.52)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a1661618`
+- Built from commit: `ca9eccce`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -44,9 +44,10 @@
 - [[_COMMUNITY_Community 26|Community 26]]
 - [[_COMMUNITY_Community 27|Community 27]]
 - [[_COMMUNITY_Community 29|Community 29]]
+- [[_COMMUNITY_Community 30|Community 30]]
 
 ## God Nodes (most connected - your core abstractions)
-1. `TopologyLibrary` - 48 edges
+1. `TopologyLibrary` - 50 edges
 2. `ProjectionSettings` - 46 edges
 3. `Scientific and computational method for projecting proton NMR distance restraints onto Boltz heavy-atom contacts` - 39 edges
 4. `parse_star_document()` - 33 edges
@@ -72,35 +73,35 @@
 ## Import Cycles
 - None detected.
 
-## Communities (30 total, 4 thin omitted)
+## Communities (31 total, 4 thin omitted)
 
 ### Community 0 - "Community 0"
-Cohesion: 0.09
-Nodes (44): list, Rejection, RestraintGroup, _averaging_factor(), _canonical_pair(), _merge_independent_constraints(), _merge_or_alternatives(), project_document() (+36 more)
+Cohesion: 0.08
+Nodes (56): ArgumentParser, list, Namespace, build_parser(), command_benchmark(), command_convert(), main(), parse_chain_map() (+48 more)
 
 ### Community 1 - "Community 1"
-Cohesion: 0.11
-Nodes (40): Atom, AtomKey, Path, Point, test_structure_alignment_accepts_equivalent_nucleic_acid_names(), test_structure_alignment_rekeys_author_numbers_to_boltz_indices(), _aggregate(), _conversion_summary() (+32 more)
+Cohesion: 0.14
+Nodes (29): Atom, AtomKey, Point, test_structure_alignment_accepts_equivalent_nucleic_acid_names(), test_structure_alignment_rekeys_author_numbers_to_boltz_indices(), _coordinate_summary(), _align_components(), align_structure_to_sequence_map() (+21 more)
 
 ### Community 2 - "Community 2"
 Cohesion: 0.06
 Nodes (35): 10.1 Safe default, 10.2 Union-aware potential, 10.3 Assignment hypotheses, 10. Ambiguous groups and recommended execution strategies, 12. Suggested confidence tiers, 14. Reproducibility and auditability, 15. Questions for NMR expert review before production deployment, 16. Primary specifications and references (+27 more)
 
 ### Community 3 - "Community 3"
-Cohesion: 0.14
-Nodes (28): Conservative NMR distance-restraint projection for Boltz atom contacts., AmbiguousGroup, BoltzAtom, ConversionReport, EmittedConstraint, ProjectedAlternative, asdict_atom(), _atom_list() (+20 more)
+Cohesion: 0.15
+Nodes (26): Conservative NMR distance-restraint projection for Boltz atom contacts., AmbiguousGroup, BoltzAtom, ConversionReport, EmittedConstraint, ProjectedAlternative, asdict_atom(), _atom_list() (+18 more)
 
 ### Community 4 - "Community 4"
-Cohesion: 0.12
-Nodes (26): ArgumentParser, Namespace, build_parser(), command_benchmark(), command_convert(), main(), parse_chain_map(), load_boltz_target() (+18 more)
+Cohesion: 0.16
+Nodes (18): load_boltz_target(), _nonempty_text(), _parse_modifications(), Raised when a Boltz target is malformed or incompatible with a conversion., _residue_symbol(), TargetEntity, TargetValidationError, _validate_position() (+10 more)
 
 ### Community 5 - "Community 5"
-Cohesion: 0.15
-Nodes (18): AtomChoice, AtomSetChoice, build_builtin_topologies(), _compile_atom_pattern(), ComponentTopology, infer_element(), _leading_digit_alias(), _looks_like_hydrogen() (+10 more)
+Cohesion: 0.17
+Nodes (13): AtomChoice, AtomSetChoice, build_builtin_topologies(), _compile_atom_pattern(), ComponentTopology, infer_element(), _leading_digit_alias(), _looks_like_hydrogen() (+5 more)
 
 ### Community 6 - "Community 6"
-Cohesion: 0.23
-Nodes (26): Any, as_float(), clean(), Endpoint, Return a stripped STAR value or ``None`` for STAR null tokens., RawAlternative, SequenceRecord, _category() (+18 more)
+Cohesion: 0.21
+Nodes (26): as_float(), clean(), Endpoint, Return a stripped STAR value or ``None`` for STAR null tokens., RawAlternative, RestraintGroup, SequenceRecord, _category() (+18 more)
 
 ### Community 7 - "Community 7"
 Cohesion: 0.19
@@ -115,12 +116,12 @@ Cohesion: 0.11
 Nodes (17): Batch hypothesis fallback, Critical token-conditioning rule, Design proposal: ambiguity-aware `atom_contact_union` constraints in BoltzUI/Boltz-2, End-to-end tests, Energy tests, Feature tests, Multiple thresholds and duplicate parents, Optional weights (+9 more)
 
 ### Community 10 - "Community 10"
-Cohesion: 0.30
-Nodes (14): Random, _add(), _convert(), _distance(), main(), _projected(), Deterministic mathematical and converter stress validation for nmr2boltz.  This, _unit_vector() (+6 more)
+Cohesion: 0.32
+Nodes (13): Random, _add(), _distance(), main(), _projected(), Deterministic mathematical and converter stress validation for nmr2boltz.  This, _unit_vector(), validate_boolean_merge_order() (+5 more)
 
 ### Community 11 - "Community 11"
-Cohesion: 0.15
-Nodes (12): Ambiguity rules, BoltzUI integration, Docker, Documentation, Important limitations, Installation, nmr2boltz, Output files (+4 more)
+Cohesion: 0.13
+Nodes (13): Paired-format discrepancy findings, Ambiguity rules, BoltzUI integration, Docker, Documentation, Important limitations, Installation, nmr2boltz (+5 more)
 
 ### Community 12 - "Community 12"
 Cohesion: 0.18
@@ -147,8 +148,8 @@ Cohesion: 0.33
 Nodes (5): Ambiguous restraints, BoltzUI integration guide, Current patched schema, Recommended run protocol, Residue numbering
 
 ### Community 18 - "Community 18"
-Cohesion: 0.33
-Nodes (6): 11.1 Parsing validation, 11.2 Identifier validation, 11.3 Geometric validation of candidate structures, 11.4 Structural and statistical controls, 11.5 Executed validation record, 11. Validation protocol
+Cohesion: 0.29
+Nodes (7): 11.1 Parsing validation, 11.2 Identifier validation, 11.3 Geometric validation of candidate structures, 11.4 Structural and statistical controls, 11.5 Executed validation record, 11.5 Paired-format discrepancy audit and CI gate, 11. Validation protocol
 
 ### Community 19 - "Community 19"
 Cohesion: 0.33
@@ -171,28 +172,32 @@ Cohesion: 0.50
 Nodes (4): 9.1 Lower than 2 A, 9.2 Greater than 20 A, 9.3 Precision, 9. Boltz compatibility and bound handling
 
 ### Community 24 - "Community 24"
-Cohesion: 0.50
-Nodes (3): Comparison with the initial audit, Current result, nmr2boltz paired-format benchmark
+Cohesion: 0.40
+Nodes (4): Current result, Fail-closed gate, nmr2boltz paired-format benchmark, Row-level format discrepancy audit
+
+### Community 30 - "Community 30"
+Cohesion: 0.11
+Nodes (47): Any, _parse_entry_file(), Path, _alternative(), _endpoint(), _report(), test_benchmark_artifact_paths_are_portable(), test_discrepancy_audit_preserves_atomset_vs_explicit_or_evidence() (+39 more)
 
 ## Knowledge Gaps
-- **143 isolated node(s):** `nmr2boltz`, `warning`, `seed`, `requested`, `generated` (+138 more)
+- **146 isolated node(s):** `nmr2boltz`, `warning`, `seed`, `requested`, `generated` (+141 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `TopologyLibrary` connect `Community 5` to `Community 0`, `Community 1`, `Community 4`, `Community 7`, `Community 10`?**
-  _High betweenness centrality (0.045) - this node is a cross-community bridge._
-- **Why does `ProjectionSettings` connect `Community 0` to `Community 1`, `Community 3`, `Community 4`, `Community 5`, `Community 6`, `Community 7`, `Community 10`?**
-  _High betweenness centrality (0.029) - this node is a cross-community bridge._
-- **Why does `parse_star_document()` connect `Community 0` to `Community 1`, `Community 4`, `Community 6`, `Community 7`, `Community 10`?**
-  _High betweenness centrality (0.016) - this node is a cross-community bridge._
+- **Why does `TopologyLibrary` connect `Community 0` to `Community 1`, `Community 5`, `Community 7`, `Community 10`, `Community 30`?**
+  _High betweenness centrality (0.046) - this node is a cross-community bridge._
+- **Why does `ProjectionSettings` connect `Community 0` to `Community 3`, `Community 5`, `Community 6`, `Community 7`, `Community 10`, `Community 30`?**
+  _High betweenness centrality (0.027) - this node is a cross-community bridge._
+- **Why does `project_document()` connect `Community 0` to `Community 3`, `Community 6`, `Community 30`, `Community 7`?**
+  _High betweenness centrality (0.017) - this node is a cross-community bridge._
 - **Are the 10 inferred relationships involving `TopologyLibrary` (e.g. with `BenchmarkCaseResult` and `BenchmarkManifestError`) actually correct?**
   _`TopologyLibrary` has 10 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 18 inferred relationships involving `ProjectionSettings` (e.g. with `BenchmarkCaseResult` and `BenchmarkManifestError`) actually correct?**
   _`ProjectionSettings` has 18 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `nmr2boltz`, `Conservative NMR distance-restraint projection for Boltz atom contacts.`, `Raised when a benchmark manifest does not satisfy the versioned schema.` to the rest of the system?**
-  _151 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _158 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
-  _Cohesion score 0.09351432880844646 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.0773405698778833 - nodes in this community are weakly interconnected._

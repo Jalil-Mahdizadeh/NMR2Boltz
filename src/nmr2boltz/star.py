@@ -343,6 +343,11 @@ def extract_restraint_groups(
             if key in deduplicated:
                 existing = deduplicated[key]
                 existing.row_ids.extend(row for row in alternative.row_ids if row not in existing.row_ids)
+                existing.canonical_expansions.extend(
+                    expansion
+                    for expansion in alternative.canonical_expansions
+                    if expansion not in existing.canonical_expansions
+                )
                 existing.warnings.append(
                     "duplicate canonical expansion row collapsed to its author-level atom expression"
                 )
@@ -470,12 +475,21 @@ def _parse_nmrstar_row(
         uncertainty=as_float(row.get("target_val_uncertainty")),
         policy=missing_upper_policy,
     )
+    endpoint1 = endpoint(1)
+    endpoint2 = endpoint(2)
+    author_expressions = (
+        str(endpoint1.atom_expression or "") + str(endpoint2.atom_expression or "")
+    )
+    has_author_atom_set = any(
+        symbol in author_expressions
+        for symbol in ("%", "*", "#", "x", "y")
+    )
     return RawAlternative(
         source_format="nmr-star",
         list_name=list_name,
         restraint_id=str(restraint_id),
-        endpoint1=endpoint(1),
-        endpoint2=endpoint(2),
+        endpoint1=endpoint1,
+        endpoint2=endpoint2,
         upper_bound=upper,
         lower_bound=as_float(row.get("distance_lower_bound_val")),
         target_value=as_float(row.get("target_val")),
@@ -487,6 +501,17 @@ def _parse_nmrstar_row(
         member_id=pick(row, "member_id"),
         member_logic_code=pick(row, "member_logic_code"),
         row_ids=[str(row_id)],
+        canonical_expansions=(
+            [
+                {
+                    "row_id": str(row_id),
+                    "atom1": endpoint1.canonical_atom_hint,
+                    "atom2": endpoint2.canonical_atom_hint,
+                }
+            ]
+            if has_author_atom_set
+            else []
+        ),
         bound_source=bound_source,
         warnings=bound_warnings,
     )

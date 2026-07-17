@@ -1,5 +1,5 @@
 {
-  "pdb": "benchmark\\input\\8S8O\\8S8O.pdb",
+  "pdb": "benchmark/input/8S8O/8S8O.pdb",
   "model_count": 20,
   "tolerance_angstrom": 0.01,
   "sequence_alignment": [
@@ -50,6 +50,8 @@
     "satisfied_model_cases": 0,
     "violated_model_cases": 0,
     "missing_model_cases": 0,
+    "constraints_missing_in_any_model": 0,
+    "missing_constraint_examples": [],
     "satisfaction_fraction_of_resolved": null,
     "constraints_resolved_in_every_model": 0,
     "constraints_satisfied_in_any_model": 0,

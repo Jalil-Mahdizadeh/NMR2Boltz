@@ -1,0 +1,15 @@
+{
+  "row_count": 813,
+  "digest_sha256": "7356de7b41d18ec154429e984dcac65b85a17f163f3ec664c794ad616485ca4b",
+  "discrepancy_type_counts": {
+    "nef_only": 813
+  },
+  "classification_counts": {
+    "expected_format_difference": 813
+  },
+  "case_counts": {
+    "9SGX": 813
+  },
+  "unresolved_count": 0,
+  "parser_projection_bug_count": 0
+}

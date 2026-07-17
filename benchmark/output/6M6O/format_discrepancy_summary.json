@@ -1,0 +1,17 @@
+{
+  "row_count": 149,
+  "digest_sha256": "ad991182a301422f4048bb2093449b377a748bf65739220cbd7190148c83e3c4",
+  "discrepancy_type_counts": {
+    "different_bound": 89,
+    "star_only": 59,
+    "nef_only": 1
+  },
+  "classification_counts": {
+    "expected_format_difference": 149
+  },
+  "case_counts": {
+    "6M6O": 149
+  },
+  "unresolved_count": 0,
+  "parser_projection_bug_count": 0
+}
