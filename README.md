@@ -85,7 +85,7 @@ docker run --rm --network none --read-only --tmpfs /tmp:size=64m \
 The image runs as numeric UID/GID 65532 by default. On Linux, add
 `-u "$(id -u):$(id -g)"` if host-owned output files are preferred.
 
-## Reproducible benchmark manifests
+## Reproducible benchmarks
 
 `nmr2boltz benchmark` runs one or more conversions from a versioned YAML
 manifest, verifies optional SHA-256 checksums, validates the sequence mapping
@@ -100,9 +100,22 @@ nmr2boltz benchmark workspace/benchmark.yaml \
 Each case records its complete conversion bundle and a suite-level
 `benchmark_summary.json`. A target mismatch, checksum mismatch, conversion
 exception, or changed expected metric fails that case without preventing the
-remaining corpus from running. `workspace/benchmark.yaml` contains the first
-real-data case, 6M6O, and is the template for adding chemically and
-format-diverse entries.
+remaining corpus from running.
+
+The paired-format deposited-structure corpus is run separately so that each
+NEF/NMR-STAR pair is compared against every PDB conformer with sequence-aware
+coordinate alignment:
+
+```bash
+python validation/benchmark_corpus.py benchmark/input \
+  --output-directory benchmark/output
+```
+
+Each PDB ID is written under `benchmark/output/<PDB-ID>/{nef,star}`. The root
+`BENCHMARK_REPORT.md` and `benchmark_summary.json` record coordinate
+satisfaction, conservative implication checks, and exact atom-pair/bound parity.
+Files with valid sequence data but no distance-restraint loop produce an empty,
+auditable conversion instead of failing format detection.
 
 ## Output files
 
@@ -113,6 +126,7 @@ format-diverse entries.
 | `heavy_atom_constraints.txt` | Compact human-readable `[A:17:N -- A:42:CB : 6.20]` form. |
 | `conversion_report.json` | Full machine-readable provenance, formula terms, settings, warnings, ambiguity, and rejections. |
 | `sequence_map.tsv` | Source identifier to Boltz residue-index mapping. This should be manually checked. |
+| `sequences.fasta` | Clean polymer-only sequences extracted from the source mapping; caps, ions, and other non-polymers are omitted. |
 | `ambiguous_groups.tsv` | OR alternatives that were not emitted as simultaneous constraints. |
 | `proposed_atom_contact_unions.yaml` | Proposed union-aware schema for a future BoltzUI extension; not accepted by the current parser. |
 | `rejections.tsv` | Every restraint or group that could not be converted safely, with a reason. |
@@ -194,11 +208,12 @@ If any alternative or atom-set branch in an OR group cannot be projected safely,
 - The compact built-in topology covers standard proteins and common RNA/DNA residues. Modified components should use embedded NMR-STAR chemistry or a local CCD file.
 - The current Boltz token-conditioning path cannot encode a disjunction. Marking every OR alternative as a contact would overconstrain the model.
 - A soft Boltz potential encourages a contact but does not guarantee restraint satisfaction. Post-prediction validation remains mandatory.
+- Paired NEF and NMR-STAR exports can encode different atom-set multiplicities; inspect `format_parity.json` before treating them as interchangeable.
 
 ## Documentation
 
 - `docs/SCIENTIFIC_METHOD.md`: derivation, format interpretation, assumptions, and validation plan for NMR experts.
-- `workspace/output/REAL_TEST_6M6O.md`: real deposited-data benchmark, exact distance results, limitations, and reproduction paths.
+- `benchmark/output/BENCHMARK_REPORT.md`: current 12-structure paired-format benchmark and coordinate audit.
 - `docs/BOLTZUI_UNION_EXTENSION.md`: proposed representation and implementation path for ambiguity-aware atom contacts.
 - `docs/EXPERT_REVIEW_CHECKLIST.md`: decisions that should be reviewed before production use.
 
@@ -213,4 +228,4 @@ If any alternative or atom-set branch in an OR group cannot be projected safely,
 - Boltz: https://github.com/jwohlwend/boltz
 - BoltzUI atom-contact implementation used for the target schema: https://github.com/Jalil-Mahdizadeh/BoltzUI
 
-To enumerate current-schema calculations for unresolved OR groups, add `--emit-hypotheses`. Each generated YAML is a separate alternative calculation; never concatenate them into one constraint set.
+To enumerate current-schema calculations for unresolved OR groups, add `--hypotheses N`. Each generated YAML is a separate alternative calculation; never concatenate them into one constraint set.

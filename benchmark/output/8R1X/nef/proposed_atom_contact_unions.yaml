@@ -1,0 +1,3428 @@
+# PROPOSED schema for preserving assignment ambiguity; not accepted by the current BoltzUI parser.
+x_nmr2boltz_schema: proposed-atom-contact-union-v1
+compatible_with_current_boltzui_atom_contact_parser: false
+note: Each item is one OR group. Implement as a shared union index in the Boltz distance potential; do not mark every alternative
+  as a simultaneous token contact.
+constraints:
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:19
+    restraint_id: '19'
+    alternatives:
+    - atom1: [A, 4, N]
+      atom2: [A, 70, CD1]
+      max_distance: 7.8
+      source_rows:
+      - '46'
+      - '47'
+    - atom1: [A, 4, N]
+      atom2: [A, 70, CD2]
+      max_distance: 7.8
+      source_rows:
+      - '46'
+      - '47'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:20
+    restraint_id: '20'
+    alternatives:
+    - atom1: [A, 4, CA]
+      atom2: [A, 70, CD1]
+      max_distance: 7.84
+      source_rows:
+      - '48'
+      - '49'
+    - atom1: [A, 4, CA]
+      atom2: [A, 70, CD2]
+      max_distance: 7.84
+      source_rows:
+      - '48'
+      - '49'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:21
+    restraint_id: '21'
+    alternatives:
+    - atom1: [A, 4, CA]
+      atom2: [A, 70, CE1]
+      max_distance: 7.84
+      source_rows:
+      - '50'
+      - '51'
+    - atom1: [A, 4, CA]
+      atom2: [A, 70, CE2]
+      max_distance: 7.84
+      source_rows:
+      - '50'
+      - '51'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:36
+    restraint_id: '36'
+    alternatives:
+    - atom1: [A, 5, CG]
+      atom2: [A, 63, CE1]
+      max_distance: 6.6304
+      source_rows:
+      - '84'
+      - '85'
+      - '86'
+      - '87'
+    - atom1: [A, 5, CG]
+      atom2: [A, 63, CE2]
+      max_distance: 6.6304
+      source_rows:
+      - '84'
+      - '85'
+      - '86'
+      - '87'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:37
+    restraint_id: '37'
+    alternatives:
+    - atom1: [A, 5, CD]
+      atom2: [A, 63, CE1]
+      max_distance: 6.6304
+      source_rows:
+      - '88'
+      - '89'
+      - '90'
+      - '91'
+    - atom1: [A, 5, CD]
+      atom2: [A, 63, CE2]
+      max_distance: 6.6304
+      source_rows:
+      - '88'
+      - '89'
+      - '90'
+      - '91'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:39
+    restraint_id: '39'
+    alternatives:
+    - atom1: [A, 5, CB]
+      atom2: [A, 67, CG1]
+      max_distance: 8.595359
+      source_rows:
+      - '94'
+      - '95'
+      - '96'
+      - '97'
+    - atom1: [A, 5, CB]
+      atom2: [A, 67, CG2]
+      max_distance: 8.595359
+      source_rows:
+      - '94'
+      - '95'
+      - '96'
+      - '97'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:44
+    restraint_id: '44'
+    alternatives:
+    - atom1: [A, 5, CD]
+      atom2: [A, 67, CG1]
+      max_distance: 8.595359
+      source_rows:
+      - '106'
+      - '107'
+      - '108'
+      - '109'
+    - atom1: [A, 5, CD]
+      atom2: [A, 67, CG2]
+      max_distance: 8.595359
+      source_rows:
+      - '106'
+      - '107'
+      - '108'
+      - '109'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:45
+    restraint_id: '45'
+    alternatives:
+    - atom1: [A, 5, CD]
+      atom2: [A, 70, CD1]
+      max_distance: 6.6304
+      source_rows:
+      - '110'
+      - '111'
+      - '112'
+      - '113'
+    - atom1: [A, 5, CD]
+      atom2: [A, 70, CD2]
+      max_distance: 6.6304
+      source_rows:
+      - '110'
+      - '111'
+      - '112'
+      - '113'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:46
+    restraint_id: '46'
+    alternatives:
+    - atom1: [A, 5, CD]
+      atom2: [A, 70, CE1]
+      max_distance: 6.6304
+      source_rows:
+      - '114'
+      - '115'
+      - '116'
+      - '117'
+    - atom1: [A, 5, CD]
+      atom2: [A, 70, CE2]
+      max_distance: 6.6304
+      source_rows:
+      - '114'
+      - '115'
+      - '116'
+      - '117'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:50
+    restraint_id: '50'
+    alternatives:
+    - atom1: [A, 7, N]
+      atom2: [A, 63, CE1]
+      max_distance: 7.8
+      source_rows:
+      - '122'
+      - '123'
+    - atom1: [A, 7, N]
+      atom2: [A, 63, CE2]
+      max_distance: 7.8
+      source_rows:
+      - '122'
+      - '123'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:53
+    restraint_id: '53'
+    alternatives:
+    - atom1: [A, 7, CA]
+      atom2: [A, 63, CD1]
+      max_distance: 6.16
+      source_rows:
+      - '127'
+      - '128'
+    - atom1: [A, 7, CA]
+      atom2: [A, 63, CD2]
+      max_distance: 6.16
+      source_rows:
+      - '127'
+      - '128'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:54
+    restraint_id: '54'
+    alternatives:
+    - atom1: [A, 7, CA]
+      atom2: [A, 63, CE1]
+      max_distance: 6.16
+      source_rows:
+      - '129'
+      - '130'
+    - atom1: [A, 7, CA]
+      atom2: [A, 63, CE2]
+      max_distance: 6.16
+      source_rows:
+      - '129'
+      - '130'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:55
+    restraint_id: '55'
+    alternatives:
+    - atom1: [A, 7, CD]
+      atom2: [A, 63, CE1]
+      max_distance: 6.6304
+      source_rows:
+      - '131'
+      - '132'
+      - '133'
+      - '134'
+    - atom1: [A, 7, CD]
+      atom2: [A, 63, CE2]
+      max_distance: 6.6304
+      source_rows:
+      - '131'
+      - '132'
+      - '133'
+      - '134'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:63
+    restraint_id: '63'
+    alternatives:
+    - atom1: [A, 9, CD1]
+      atom2: [A, 9, N]
+      max_distance: 10.306325
+      source_rows:
+      - '146'
+      - '147'
+    - atom1: [A, 9, CD2]
+      atom2: [A, 9, N]
+      max_distance: 10.306325
+      source_rows:
+      - '146'
+      - '147'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:65
+    restraint_id: '65'
+    alternatives:
+    - atom1: [A, 9, CA]
+      atom2: [A, 9, CD1]
+      max_distance: 7.914428
+      source_rows:
+      - '149'
+      - '150'
+    - atom1: [A, 9, CA]
+      atom2: [A, 9, CD2]
+      max_distance: 7.914428
+      source_rows:
+      - '149'
+      - '150'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:67
+    restraint_id: '67'
+    alternatives:
+    - atom1: [A, 9, CB]
+      atom2: [A, 9, CD1]
+      max_distance: 11.319084
+      source_rows:
+      - '153'
+      - '154'
+      - '155'
+      - '156'
+    - atom1: [A, 9, CB]
+      atom2: [A, 9, CD2]
+      max_distance: 11.319084
+      source_rows:
+      - '153'
+      - '154'
+      - '155'
+      - '156'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:68
+    restraint_id: '68'
+    alternatives:
+    - atom1: [A, 9, CD1]
+      atom2: [A, 9, CG]
+      max_distance: 6.941669
+      source_rows:
+      - '157'
+      - '158'
+    - atom1: [A, 9, CD2]
+      atom2: [A, 9, CG]
+      max_distance: 6.941669
+      source_rows:
+      - '157'
+      - '158'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:73
+    restraint_id: '73'
+    alternatives:
+    - atom1: [A, 9, CB]
+      atom2: [A, 14, CD1]
+      max_distance: 8.595359
+      source_rows:
+      - '165'
+      - '166'
+      - '167'
+      - '168'
+    - atom1: [A, 9, CB]
+      atom2: [A, 14, CD2]
+      max_distance: 8.595359
+      source_rows:
+      - '165'
+      - '166'
+      - '167'
+      - '168'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:88
+    restraint_id: '88'
+    alternatives:
+    - atom1: [A, 11, CA]
+      atom2: [A, 14, CD1]
+      max_distance: 7.914428
+      source_rows:
+      - '184'
+      - '185'
+    - atom1: [A, 11, CA]
+      atom2: [A, 14, CD2]
+      max_distance: 7.914428
+      source_rows:
+      - '184'
+      - '185'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:100
+    restraint_id: '100'
+    alternatives:
+    - atom1: [A, 12, CD1]
+      atom2: [A, 12, N]
+      max_distance: 7.8
+      source_rows:
+      - '202'
+      - '203'
+    - atom1: [A, 12, CD2]
+      atom2: [A, 12, N]
+      max_distance: 7.8
+      source_rows:
+      - '202'
+      - '203'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:101
+    restraint_id: '101'
+    alternatives:
+    - atom1: [A, 12, CA]
+      atom2: [A, 12, CE1]
+      max_distance: 7.84
+      source_rows:
+      - '204'
+      - '205'
+    - atom1: [A, 12, CA]
+      atom2: [A, 12, CE2]
+      max_distance: 7.84
+      source_rows:
+      - '204'
+      - '205'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:102
+    restraint_id: '102'
+    alternatives:
+    - atom1: [A, 12, CB]
+      atom2: [A, 12, CD1]
+      max_distance: 6.6304
+      source_rows:
+      - '206'
+      - '207'
+      - '208'
+      - '209'
+    - atom1: [A, 12, CB]
+      atom2: [A, 12, CD2]
+      max_distance: 6.6304
+      source_rows:
+      - '206'
+      - '207'
+      - '208'
+      - '209'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:103
+    restraint_id: '103'
+    alternatives:
+    - atom1: [A, 12, CD1]
+      atom2: [A, 12, CE1]
+      max_distance: 6.6304
+      source_rows:
+      - '210'
+      - '211'
+      - '212'
+      - '213'
+    - atom1: [A, 12, CD1]
+      atom2: [A, 12, CE2]
+      max_distance: 6.6304
+      source_rows:
+      - '210'
+      - '211'
+      - '212'
+      - '213'
+    - atom1: [A, 12, CD2]
+      atom2: [A, 12, CE1]
+      max_distance: 6.6304
+      source_rows:
+      - '210'
+      - '211'
+      - '212'
+      - '213'
+    - atom1: [A, 12, CD2]
+      atom2: [A, 12, CE2]
+      max_distance: 6.6304
+      source_rows:
+      - '210'
+      - '211'
+      - '212'
+      - '213'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:104
+    restraint_id: '104'
+    alternatives:
+    - atom1: [A, 12, CD1]
+      atom2: [A, 12, CZ]
+      max_distance: 7.84
+      source_rows:
+      - '214'
+      - '215'
+    - atom1: [A, 12, CD2]
+      atom2: [A, 12, CZ]
+      max_distance: 7.84
+      source_rows:
+      - '214'
+      - '215'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:105
+    restraint_id: '105'
+    alternatives:
+    - atom1: [A, 12, CE1]
+      atom2: [A, 12, CZ]
+      max_distance: 6.16
+      source_rows:
+      - '216'
+      - '217'
+    - atom1: [A, 12, CE2]
+      atom2: [A, 12, CZ]
+      max_distance: 6.16
+      source_rows:
+      - '216'
+      - '217'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:107
+    restraint_id: '107'
+    alternatives:
+    - atom1: [A, 12, CD1]
+      atom2: [A, 13, N]
+      max_distance: 7.8
+      source_rows:
+      - '219'
+      - '220'
+    - atom1: [A, 12, CD2]
+      atom2: [A, 13, N]
+      max_distance: 7.8
+      source_rows:
+      - '219'
+      - '220'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:108
+    restraint_id: '108'
+    alternatives:
+    - atom1: [A, 12, CD1]
+      atom2: [A, 13, CA]
+      max_distance: 6.16
+      source_rows:
+      - '221'
+      - '222'
+    - atom1: [A, 12, CD2]
+      atom2: [A, 13, CA]
+      max_distance: 6.16
+      source_rows:
+      - '221'
+      - '222'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:110
+    restraint_id: '110'
+    alternatives:
+    - atom1: [A, 12, CE1]
+      atom2: [A, 15, CH2]
+      max_distance: 7.84
+      source_rows:
+      - '224'
+      - '225'
+    - atom1: [A, 12, CE2]
+      atom2: [A, 15, CH2]
+      max_distance: 7.84
+      source_rows:
+      - '224'
+      - '225'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:113
+    restraint_id: '113'
+    alternatives:
+    - atom1: [A, 12, CD1]
+      atom2: [A, 16, N]
+      max_distance: 7.8
+      source_rows:
+      - '228'
+      - '229'
+    - atom1: [A, 12, CD2]
+      atom2: [A, 16, N]
+      max_distance: 7.8
+      source_rows:
+      - '228'
+      - '229'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:114
+    restraint_id: '114'
+    alternatives:
+    - atom1: [A, 12, CE1]
+      atom2: [A, 16, CD1]
+      max_distance: 8.595359
+      source_rows:
+      - '230'
+      - '231'
+      - '232'
+      - '233'
+    - atom1: [A, 12, CE1]
+      atom2: [A, 16, CD2]
+      max_distance: 8.595359
+      source_rows:
+      - '230'
+      - '231'
+      - '232'
+      - '233'
+    - atom1: [A, 12, CE2]
+      atom2: [A, 16, CD1]
+      max_distance: 8.595359
+      source_rows:
+      - '230'
+      - '231'
+      - '232'
+      - '233'
+    - atom1: [A, 12, CE2]
+      atom2: [A, 16, CD2]
+      max_distance: 8.595359
+      source_rows:
+      - '230'
+      - '231'
+      - '232'
+      - '233'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:115
+    restraint_id: '115'
+    alternatives:
+    - atom1: [A, 12, CE1]
+      atom2: [A, 40, N]
+      max_distance: 7.8
+      source_rows:
+      - '234'
+      - '235'
+    - atom1: [A, 12, CE2]
+      atom2: [A, 40, N]
+      max_distance: 7.8
+      source_rows:
+      - '234'
+      - '235'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:116
+    restraint_id: '116'
+    alternatives:
+    - atom1: [A, 12, CE1]
+      atom2: [A, 43, N]
+      max_distance: 7.8
+      source_rows:
+      - '236'
+      - '237'
+    - atom1: [A, 12, CE2]
+      atom2: [A, 43, N]
+      max_distance: 7.8
+      source_rows:
+      - '236'
+      - '237'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:126
+    restraint_id: '126'
+    alternatives:
+    - atom1: [A, 14, CD1]
+      atom2: [A, 14, N]
+      max_distance: 10.306325
+      source_rows:
+      - '248'
+      - '249'
+    - atom1: [A, 14, CD2]
+      atom2: [A, 14, N]
+      max_distance: 10.306325
+      source_rows:
+      - '248'
+      - '249'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:128
+    restraint_id: '128'
+    alternatives:
+    - atom1: [A, 14, CA]
+      atom2: [A, 14, CD1]
+      max_distance: 7.914428
+      source_rows:
+      - '252'
+      - '253'
+    - atom1: [A, 14, CA]
+      atom2: [A, 14, CD2]
+      max_distance: 7.914428
+      source_rows:
+      - '252'
+      - '253'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:130
+    restraint_id: '130'
+    alternatives:
+    - atom1: [A, 14, CB]
+      atom2: [A, 14, CD1]
+      max_distance: 11.319084
+      source_rows:
+      - '256'
+      - '257'
+      - '258'
+      - '259'
+    - atom1: [A, 14, CB]
+      atom2: [A, 14, CD2]
+      max_distance: 11.319084
+      source_rows:
+      - '256'
+      - '257'
+      - '258'
+      - '259'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:131
+    restraint_id: '131'
+    alternatives:
+    - atom1: [A, 14, CD1]
+      atom2: [A, 14, CG]
+      max_distance: 10.346325
+      source_rows:
+      - '260'
+      - '261'
+    - atom1: [A, 14, CD2]
+      atom2: [A, 14, CG]
+      max_distance: 10.346325
+      source_rows:
+      - '260'
+      - '261'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:137
+    restraint_id: '137'
+    alternatives:
+    - atom1: [A, 14, CD1]
+      atom2: [A, 52, CE3]
+      max_distance: 6.941669
+      source_rows:
+      - '270'
+      - '271'
+    - atom1: [A, 14, CD2]
+      atom2: [A, 52, CE3]
+      max_distance: 6.941669
+      source_rows:
+      - '270'
+      - '271'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:138
+    restraint_id: '138'
+    alternatives:
+    - atom1: [A, 14, CD1]
+      atom2: [A, 52, CZ3]
+      max_distance: 6.941669
+      source_rows:
+      - '272'
+      - '273'
+    - atom1: [A, 14, CD2]
+      atom2: [A, 52, CZ3]
+      max_distance: 6.941669
+      source_rows:
+      - '272'
+      - '273'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:139
+    restraint_id: '139'
+    alternatives:
+    - atom1: [A, 14, CD1]
+      atom2: [A, 55, CB]
+      max_distance: 7.505869
+      source_rows:
+      - '274'
+      - '275'
+      - '276'
+      - '277'
+    - atom1: [A, 14, CD2]
+      atom2: [A, 55, CB]
+      max_distance: 7.505869
+      source_rows:
+      - '274'
+      - '275'
+      - '276'
+      - '277'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:140
+    restraint_id: '140'
+    alternatives:
+    - atom1: [A, 14, CD1]
+      atom2: [A, 55, CG]
+      max_distance: 8.595359
+      source_rows:
+      - '278'
+      - '279'
+      - '280'
+      - '281'
+    - atom1: [A, 14, CD2]
+      atom2: [A, 55, CG]
+      max_distance: 8.595359
+      source_rows:
+      - '278'
+      - '279'
+      - '280'
+      - '281'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:141
+    restraint_id: '141'
+    alternatives:
+    - atom1: [A, 14, CD1]
+      atom2: [A, 55, CD]
+      max_distance: 8.595359
+      source_rows:
+      - '282'
+      - '283'
+      - '284'
+      - '285'
+    - atom1: [A, 14, CD2]
+      atom2: [A, 55, CD]
+      max_distance: 8.595359
+      source_rows:
+      - '282'
+      - '283'
+      - '284'
+      - '285'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:142
+    restraint_id: '142'
+    alternatives:
+    - atom1: [A, 14, CD1]
+      atom2: [A, 56, CA]
+      max_distance: 6.941669
+      source_rows:
+      - '286'
+      - '287'
+    - atom1: [A, 14, CD2]
+      atom2: [A, 56, CA]
+      max_distance: 6.941669
+      source_rows:
+      - '286'
+      - '287'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:143
+    restraint_id: '143'
+    alternatives:
+    - atom1: [A, 14, CD1]
+      atom2: [A, 56, CB]
+      max_distance: 7.613822
+      source_rows:
+      - '288'
+      - '289'
+    - atom1: [A, 14, CD2]
+      atom2: [A, 56, CB]
+      max_distance: 7.613822
+      source_rows:
+      - '288'
+      - '289'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:159
+    restraint_id: '159'
+    alternatives:
+    - atom1: [A, 15, CZ2]
+      atom2: [A, 42, CD1]
+      max_distance: 5.96891
+      source_rows:
+      - '309'
+      - '310'
+    - atom1: [A, 15, CZ2]
+      atom2: [A, 42, CD2]
+      max_distance: 5.96891
+      source_rows:
+      - '309'
+      - '310'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:162
+    restraint_id: '162'
+    alternatives:
+    - atom1: [A, 15, CH2]
+      atom2: [A, 42, CD1]
+      max_distance: 6.941669
+      source_rows:
+      - '314'
+      - '315'
+    - atom1: [A, 15, CH2]
+      atom2: [A, 42, CD2]
+      max_distance: 6.941669
+      source_rows:
+      - '314'
+      - '315'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:171
+    restraint_id: '171'
+    alternatives:
+    - atom1: [A, 16, CD1]
+      atom2: [A, 16, N]
+      max_distance: 10.306325
+      source_rows:
+      - '328'
+      - '329'
+    - atom1: [A, 16, CD2]
+      atom2: [A, 16, N]
+      max_distance: 10.306325
+      source_rows:
+      - '328'
+      - '329'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:173
+    restraint_id: '173'
+    alternatives:
+    - atom1: [A, 16, CA]
+      atom2: [A, 16, CD1]
+      max_distance: 10.346325
+      source_rows:
+      - '332'
+      - '333'
+    - atom1: [A, 16, CA]
+      atom2: [A, 16, CD2]
+      max_distance: 10.346325
+      source_rows:
+      - '332'
+      - '333'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:174
+    restraint_id: '174'
+    alternatives:
+    - atom1: [A, 16, CB]
+      atom2: [A, 16, CD1]
+      max_distance: 11.319084
+      source_rows:
+      - '334'
+      - '335'
+      - '336'
+      - '337'
+    - atom1: [A, 16, CB]
+      atom2: [A, 16, CD2]
+      max_distance: 11.319084
+      source_rows:
+      - '334'
+      - '335'
+      - '336'
+      - '337'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:226
+    restraint_id: '226'
+    alternatives:
+    - atom1: [A, 20, CA]
+      atom2: [A, 35, CG1]
+      max_distance: 6.941669
+      source_rows:
+      - '412'
+      - '413'
+    - atom1: [A, 20, CA]
+      atom2: [A, 35, CG2]
+      max_distance: 6.941669
+      source_rows:
+      - '412'
+      - '413'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:227
+    restraint_id: '227'
+    alternatives:
+    - atom1: [A, 20, CB]
+      atom2: [A, 35, CG1]
+      max_distance: 8.595359
+      source_rows:
+      - '414'
+      - '415'
+      - '416'
+      - '417'
+    - atom1: [A, 20, CB]
+      atom2: [A, 35, CG2]
+      max_distance: 8.595359
+      source_rows:
+      - '414'
+      - '415'
+      - '416'
+      - '417'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:228
+    restraint_id: '228'
+    alternatives:
+    - atom1: [A, 20, CG]
+      atom2: [A, 35, CG1]
+      max_distance: 7.505869
+      source_rows:
+      - '418'
+      - '419'
+      - '420'
+      - '421'
+    - atom1: [A, 20, CG]
+      atom2: [A, 35, CG2]
+      max_distance: 7.505869
+      source_rows:
+      - '418'
+      - '419'
+      - '420'
+      - '421'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:272
+    restraint_id: '272'
+    alternatives:
+    - atom1: [A, 23, CG2]
+      atom2: [A, 35, CG1]
+      max_distance: 9.015689
+      source_rows:
+      - '489'
+      - '490'
+    - atom1: [A, 23, CG2]
+      atom2: [A, 35, CG2]
+      max_distance: 9.015689
+      source_rows:
+      - '489'
+      - '490'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:273
+    restraint_id: '273'
+    alternatives:
+    - atom1: [A, 23, CD1]
+      atom2: [A, 35, CG1]
+      max_distance: 9.015689
+      source_rows:
+      - '491'
+      - '492'
+    - atom1: [A, 23, CD1]
+      atom2: [A, 35, CG2]
+      max_distance: 9.015689
+      source_rows:
+      - '491'
+      - '492'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:372
+    restraint_id: '372'
+    alternatives:
+    - atom1: [A, 32, CG1]
+      atom2: [A, 32, N]
+      max_distance: 10.306325
+      source_rows:
+      - '663'
+      - '664'
+    - atom1: [A, 32, CG2]
+      atom2: [A, 32, N]
+      max_distance: 10.306325
+      source_rows:
+      - '663'
+      - '664'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:374
+    restraint_id: '374'
+    alternatives:
+    - atom1: [A, 32, CA]
+      atom2: [A, 32, CG1]
+      max_distance: 10.346325
+      source_rows:
+      - '666'
+      - '667'
+    - atom1: [A, 32, CA]
+      atom2: [A, 32, CG2]
+      max_distance: 10.346325
+      source_rows:
+      - '666'
+      - '667'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:375
+    restraint_id: '375'
+    alternatives:
+    - atom1: [A, 32, CB]
+      atom2: [A, 32, CG1]
+      max_distance: 10.346325
+      source_rows:
+      - '668'
+      - '669'
+    - atom1: [A, 32, CB]
+      atom2: [A, 32, CG2]
+      max_distance: 10.346325
+      source_rows:
+      - '668'
+      - '669'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:399
+    restraint_id: '399'
+    alternatives:
+    - atom1: [A, 35, CG1]
+      atom2: [A, 35, N]
+      max_distance: 10.306325
+      source_rows:
+      - '701'
+      - '702'
+    - atom1: [A, 35, CG2]
+      atom2: [A, 35, N]
+      max_distance: 10.306325
+      source_rows:
+      - '701'
+      - '702'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:401
+    restraint_id: '401'
+    alternatives:
+    - atom1: [A, 35, CA]
+      atom2: [A, 35, CG1]
+      max_distance: 10.346325
+      source_rows:
+      - '704'
+      - '705'
+    - atom1: [A, 35, CA]
+      atom2: [A, 35, CG2]
+      max_distance: 10.346325
+      source_rows:
+      - '704'
+      - '705'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:402
+    restraint_id: '402'
+    alternatives:
+    - atom1: [A, 35, CB]
+      atom2: [A, 35, CG1]
+      max_distance: 10.346325
+      source_rows:
+      - '706'
+      - '707'
+    - atom1: [A, 35, CB]
+      atom2: [A, 35, CG2]
+      max_distance: 10.346325
+      source_rows:
+      - '706'
+      - '707'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:463
+    restraint_id: '463'
+    alternatives:
+    - atom1: [A, 42, CD1]
+      atom2: [A, 42, N]
+      max_distance: 10.306325
+      source_rows:
+      - '811'
+      - '812'
+    - atom1: [A, 42, CD2]
+      atom2: [A, 42, N]
+      max_distance: 10.306325
+      source_rows:
+      - '811'
+      - '812'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:466
+    restraint_id: '466'
+    alternatives:
+    - atom1: [A, 42, CA]
+      atom2: [A, 42, CD1]
+      max_distance: 7.914428
+      source_rows:
+      - '816'
+      - '817'
+    - atom1: [A, 42, CA]
+      atom2: [A, 42, CD2]
+      max_distance: 7.914428
+      source_rows:
+      - '816'
+      - '817'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:468
+    restraint_id: '468'
+    alternatives:
+    - atom1: [A, 42, CB]
+      atom2: [A, 42, CD1]
+      max_distance: 11.319084
+      source_rows:
+      - '820'
+      - '821'
+      - '822'
+      - '823'
+    - atom1: [A, 42, CB]
+      atom2: [A, 42, CD2]
+      max_distance: 11.319084
+      source_rows:
+      - '820'
+      - '821'
+      - '822'
+      - '823'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:469
+    restraint_id: '469'
+    alternatives:
+    - atom1: [A, 42, CD1]
+      atom2: [A, 42, CG]
+      max_distance: 10.346325
+      source_rows:
+      - '824'
+      - '825'
+    - atom1: [A, 42, CD2]
+      atom2: [A, 42, CG]
+      max_distance: 10.346325
+      source_rows:
+      - '824'
+      - '825'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:696
+    restraint_id: '696'
+    alternatives:
+    - atom1: [A, 63, CD1]
+      atom2: [A, 63, N]
+      max_distance: 7.8
+      source_rows:
+      - '1169'
+      - '1170'
+    - atom1: [A, 63, CD2]
+      atom2: [A, 63, N]
+      max_distance: 7.8
+      source_rows:
+      - '1169'
+      - '1170'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:698
+    restraint_id: '698'
+    alternatives:
+    - atom1: [A, 63, CA]
+      atom2: [A, 63, CD1]
+      max_distance: 7.84
+      source_rows:
+      - '1173'
+      - '1174'
+    - atom1: [A, 63, CA]
+      atom2: [A, 63, CD2]
+      max_distance: 7.84
+      source_rows:
+      - '1173'
+      - '1174'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:699
+    restraint_id: '699'
+    alternatives:
+    - atom1: [A, 63, CB]
+      atom2: [A, 63, CD1]
+      max_distance: 5.87776
+      source_rows:
+      - '1175'
+      - '1176'
+      - '1177'
+      - '1178'
+    - atom1: [A, 63, CB]
+      atom2: [A, 63, CD2]
+      max_distance: 5.87776
+      source_rows:
+      - '1175'
+      - '1176'
+      - '1177'
+      - '1178'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:700
+    restraint_id: '700'
+    alternatives:
+    - atom1: [A, 63, CB]
+      atom2: [A, 63, CE1]
+      max_distance: 8.512
+      source_rows:
+      - '1179'
+      - '1180'
+      - '1181'
+      - '1182'
+    - atom1: [A, 63, CB]
+      atom2: [A, 63, CE2]
+      max_distance: 8.512
+      source_rows:
+      - '1179'
+      - '1180'
+      - '1181'
+      - '1182'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:701
+    restraint_id: '701'
+    alternatives:
+    - atom1: [A, 63, CD1]
+      atom2: [A, 63, CE1]
+      max_distance: 5.125121
+      source_rows:
+      - '1183'
+      - '1184'
+      - '1185'
+      - '1186'
+    - atom1: [A, 63, CD1]
+      atom2: [A, 63, CE2]
+      max_distance: 5.125121
+      source_rows:
+      - '1183'
+      - '1184'
+      - '1185'
+      - '1186'
+    - atom1: [A, 63, CD2]
+      atom2: [A, 63, CE1]
+      max_distance: 5.125121
+      source_rows:
+      - '1183'
+      - '1184'
+      - '1185'
+      - '1186'
+    - atom1: [A, 63, CD2]
+      atom2: [A, 63, CE2]
+      max_distance: 5.125121
+      source_rows:
+      - '1183'
+      - '1184'
+      - '1185'
+      - '1186'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:705
+    restraint_id: '705'
+    alternatives:
+    - atom1: [A, 63, CD1]
+      atom2: [A, 64, N]
+      max_distance: 7.8
+      source_rows:
+      - '1191'
+      - '1192'
+    - atom1: [A, 63, CD2]
+      atom2: [A, 64, N]
+      max_distance: 7.8
+      source_rows:
+      - '1191'
+      - '1192'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:706
+    restraint_id: '706'
+    alternatives:
+    - atom1: [A, 63, CE1]
+      atom2: [A, 64, N]
+      max_distance: 7.8
+      source_rows:
+      - '1193'
+      - '1194'
+    - atom1: [A, 63, CE2]
+      atom2: [A, 64, N]
+      max_distance: 7.8
+      source_rows:
+      - '1193'
+      - '1194'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:710
+    restraint_id: '710'
+    alternatives:
+    - atom1: [A, 63, CD1]
+      atom2: [A, 66, CB]
+      max_distance: 7.889208
+      source_rows:
+      - '1198'
+      - '1199'
+    - atom1: [A, 63, CD2]
+      atom2: [A, 66, CB]
+      max_distance: 7.889208
+      source_rows:
+      - '1198'
+      - '1199'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:722
+    restraint_id: '722'
+    alternatives:
+    - atom1: [A, 64, CA]
+      atom2: [A, 67, CG1]
+      max_distance: 7.914428
+      source_rows:
+      - '1215'
+      - '1216'
+    - atom1: [A, 64, CA]
+      atom2: [A, 67, CG2]
+      max_distance: 7.914428
+      source_rows:
+      - '1215'
+      - '1216'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:747
+    restraint_id: '747'
+    alternatives:
+    - atom1: [A, 67, CG1]
+      atom2: [A, 67, N]
+      max_distance: 7.874428
+      source_rows:
+      - '1249'
+      - '1250'
+    - atom1: [A, 67, CG2]
+      atom2: [A, 67, N]
+      max_distance: 7.874428
+      source_rows:
+      - '1249'
+      - '1250'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:749
+    restraint_id: '749'
+    alternatives:
+    - atom1: [A, 67, CA]
+      atom2: [A, 67, CG1]
+      max_distance: 10.346325
+      source_rows:
+      - '1252'
+      - '1253'
+    - atom1: [A, 67, CA]
+      atom2: [A, 67, CG2]
+      max_distance: 10.346325
+      source_rows:
+      - '1252'
+      - '1253'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:750
+    restraint_id: '750'
+    alternatives:
+    - atom1: [A, 67, CB]
+      atom2: [A, 67, CG1]
+      max_distance: 7.914428
+      source_rows:
+      - '1254'
+      - '1255'
+    - atom1: [A, 67, CB]
+      atom2: [A, 67, CG2]
+      max_distance: 7.914428
+      source_rows:
+      - '1254'
+      - '1255'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:758
+    restraint_id: '758'
+    alternatives:
+    - atom1: [A, 67, CA]
+      atom2: [A, 70, CD1]
+      max_distance: 7.84
+      source_rows:
+      - '1264'
+      - '1265'
+    - atom1: [A, 67, CA]
+      atom2: [A, 70, CD2]
+      max_distance: 7.84
+      source_rows:
+      - '1264'
+      - '1265'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:760
+    restraint_id: '760'
+    alternatives:
+    - atom1: [A, 67, CG1]
+      atom2: [A, 70, CD1]
+      max_distance: 8.595359
+      source_rows:
+      - '1268'
+      - '1269'
+      - '1270'
+      - '1271'
+    - atom1: [A, 67, CG1]
+      atom2: [A, 70, CD2]
+      max_distance: 8.595359
+      source_rows:
+      - '1268'
+      - '1269'
+      - '1270'
+      - '1271'
+    - atom1: [A, 67, CG2]
+      atom2: [A, 70, CD1]
+      max_distance: 8.595359
+      source_rows:
+      - '1268'
+      - '1269'
+      - '1270'
+      - '1271'
+    - atom1: [A, 67, CG2]
+      atom2: [A, 70, CD2]
+      max_distance: 8.595359
+      source_rows:
+      - '1268'
+      - '1269'
+      - '1270'
+      - '1271'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:789
+    restraint_id: '789'
+    alternatives:
+    - atom1: [A, 70, CD1]
+      atom2: [A, 70, N]
+      max_distance: 7.8
+      source_rows:
+      - '1313'
+      - '1314'
+    - atom1: [A, 70, CD2]
+      atom2: [A, 70, N]
+      max_distance: 7.8
+      source_rows:
+      - '1313'
+      - '1314'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:791
+    restraint_id: '791'
+    alternatives:
+    - atom1: [A, 70, CA]
+      atom2: [A, 70, CD1]
+      max_distance: 7.84
+      source_rows:
+      - '1317'
+      - '1318'
+    - atom1: [A, 70, CA]
+      atom2: [A, 70, CD2]
+      max_distance: 7.84
+      source_rows:
+      - '1317'
+      - '1318'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:792
+    restraint_id: '792'
+    alternatives:
+    - atom1: [A, 70, CA]
+      atom2: [A, 70, CE1]
+      max_distance: 7.84
+      source_rows:
+      - '1319'
+      - '1320'
+    - atom1: [A, 70, CA]
+      atom2: [A, 70, CE2]
+      max_distance: 7.84
+      source_rows:
+      - '1319'
+      - '1320'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:793
+    restraint_id: '793'
+    alternatives:
+    - atom1: [A, 70, CB]
+      atom2: [A, 70, CD1]
+      max_distance: 8.512
+      source_rows:
+      - '1321'
+      - '1322'
+      - '1323'
+      - '1324'
+    - atom1: [A, 70, CB]
+      atom2: [A, 70, CD2]
+      max_distance: 8.512
+      source_rows:
+      - '1321'
+      - '1322'
+      - '1323'
+      - '1324'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:794
+    restraint_id: '794'
+    alternatives:
+    - atom1: [A, 70, CB]
+      atom2: [A, 70, CE1]
+      max_distance: 8.512
+      source_rows:
+      - '1325'
+      - '1326'
+      - '1327'
+      - '1328'
+    - atom1: [A, 70, CB]
+      atom2: [A, 70, CE2]
+      max_distance: 8.512
+      source_rows:
+      - '1325'
+      - '1326'
+      - '1327'
+      - '1328'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:799
+    restraint_id: '799'
+    alternatives:
+    - atom1: [A, 70, CD1]
+      atom2: [A, 71, N]
+      max_distance: 7.8
+      source_rows:
+      - '1335'
+      - '1336'
+    - atom1: [A, 70, CD2]
+      atom2: [A, 71, N]
+      max_distance: 7.8
+      source_rows:
+      - '1335'
+      - '1336'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:800
+    restraint_id: '800'
+    alternatives:
+    - atom1: [A, 70, CD1]
+      atom2: [A, 71, CA]
+      max_distance: 7.84
+      source_rows:
+      - '1337'
+      - '1338'
+    - atom1: [A, 70, CD2]
+      atom2: [A, 71, CA]
+      max_distance: 7.84
+      source_rows:
+      - '1337'
+      - '1338'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:838
+    restraint_id: '838'
+    alternatives:
+    - atom1: [A, 6, CD]
+      atom2: [C, 6, C3']
+      max_distance: 6.16
+      source_rows:
+      - '1398'
+      - '1399'
+    - atom1: [A, 6, CE]
+      atom2: [C, 6, C3']
+      max_distance: 6.16
+      source_rows:
+      - '1400'
+      - '1401'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:848
+    restraint_id: '848'
+    alternatives:
+    - atom1: [A, 9, CD1]
+      atom2: [C, 6, C1']
+      max_distance: 6.941669
+      source_rows:
+      - '1420'
+      - '1421'
+    - atom1: [A, 9, CD2]
+      atom2: [C, 6, C1']
+      max_distance: 6.941669
+      source_rows:
+      - '1420'
+      - '1421'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:849
+    restraint_id: '849'
+    alternatives:
+    - atom1: [A, 9, CD1]
+      atom2: [C, 6, C3']
+      max_distance: 7.914428
+      source_rows:
+      - '1422'
+      - '1423'
+    - atom1: [A, 9, CD1]
+      atom2: [C, 6, C4']
+      max_distance: 7.914428
+      source_rows:
+      - '1424'
+      - '1425'
+    - atom1: [A, 9, CD2]
+      atom2: [C, 6, C3']
+      max_distance: 7.914428
+      source_rows:
+      - '1422'
+      - '1423'
+    - atom1: [A, 9, CD2]
+      atom2: [C, 6, C4']
+      max_distance: 7.914428
+      source_rows:
+      - '1424'
+      - '1425'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:851
+    restraint_id: '851'
+    alternatives:
+    - atom1: [A, 12, CE1]
+      atom2: [B, 7, C1']
+      max_distance: 7.84
+      source_rows:
+      - '1427'
+      - '1428'
+    - atom1: [A, 12, CE2]
+      atom2: [B, 7, C1']
+      max_distance: 7.84
+      source_rows:
+      - '1427'
+      - '1428'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:852
+    restraint_id: '852'
+    alternatives:
+    - atom1: [A, 12, CE1]
+      atom2: [B, 8, C1']
+      max_distance: 7.84
+      source_rows:
+      - '1429'
+      - '1430'
+    - atom1: [A, 12, CE2]
+      atom2: [B, 8, C1']
+      max_distance: 7.84
+      source_rows:
+      - '1429'
+      - '1430'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:853
+    restraint_id: '853'
+    alternatives:
+    - atom1: [A, 12, CE1]
+      atom2: [B, 8, C4']
+      max_distance: 5.488
+      source_rows:
+      - '1431'
+      - '1432'
+    - atom1: [A, 12, CE2]
+      atom2: [B, 8, C4']
+      max_distance: 5.488
+      source_rows:
+      - '1431'
+      - '1432'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:854
+    restraint_id: '854'
+    alternatives:
+    - atom1: [A, 12, CE1]
+      atom2: [B, 8, C3']
+      max_distance: 7.84
+      source_rows:
+      - '1433'
+      - '1434'
+    - atom1: [A, 12, CE2]
+      atom2: [B, 8, C3']
+      max_distance: 7.84
+      source_rows:
+      - '1433'
+      - '1434'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:855
+    restraint_id: '855'
+    alternatives:
+    - atom1: [A, 13, CE]
+      atom2: [C, 6, C1']
+      max_distance: 7.283936
+      source_rows:
+      - '1436'
+    - atom1: [A, 13, CE]
+      atom2: [C, 6, C2]
+      max_distance: 7.283936
+      source_rows:
+      - '1435'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:857
+    restraint_id: '857'
+    alternatives:
+    - atom1: [A, 13, CE]
+      atom2: [C, 7, C2]
+      max_distance: 7.283936
+      source_rows:
+      - '1438'
+    - atom1: [A, 13, CE]
+      atom2: [C, 7, C4']
+      max_distance: 7.283936
+      source_rows:
+      - '1439'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:858
+    restraint_id: '858'
+    alternatives:
+    - atom1: [A, 32, CG1]
+      atom2: [C, 7, C1']
+      max_distance: 7.914428
+      source_rows:
+      - '1440'
+      - '1441'
+    - atom1: [A, 32, CG1]
+      atom2: [C, 7, C2]
+      max_distance: 7.914428
+      source_rows:
+      - '1442'
+      - '1443'
+    - atom1: [A, 32, CG2]
+      atom2: [C, 7, C1']
+      max_distance: 7.914428
+      source_rows:
+      - '1440'
+      - '1441'
+    - atom1: [A, 32, CG2]
+      atom2: [C, 7, C2]
+      max_distance: 7.914428
+      source_rows:
+      - '1442'
+      - '1443'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:859
+    restraint_id: '859'
+    alternatives:
+    - atom1: [A, 32, CG1]
+      atom2: [C, 8, C1']
+      max_distance: 7.914428
+      source_rows:
+      - '1444'
+      - '1445'
+    - atom1: [A, 32, CG2]
+      atom2: [C, 8, C1']
+      max_distance: 7.914428
+      source_rows:
+      - '1444'
+      - '1445'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:868
+    restraint_id: '868'
+    alternatives:
+    - atom1: [A, 36, CA]
+      atom2: [B, 6, C1']
+      max_distance: 7.24
+      source_rows:
+      - '1454'
+    - atom1: [A, 36, CA]
+      atom2: [B, 7, C1']
+      max_distance: 7.24
+      source_rows:
+      - '1455'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:873
+    restraint_id: '873'
+    alternatives:
+    - atom1: [A, 60, CE]
+      atom2: [B, 10, C1']
+      max_distance: 7.84
+      source_rows:
+      - '1461'
+      - '1462'
+    - atom1: [A, 60, CE]
+      atom2: [B, 10, C3']
+      max_distance: 7.84
+      source_rows:
+      - '1463'
+      - '1464'
+    - atom1: [A, 60, CE]
+      atom2: [B, 10, C4']
+      max_distance: 7.84
+      source_rows:
+      - '1465'
+      - '1466'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:874
+    restraint_id: '874'
+    alternatives:
+    - atom1: [A, 60, CE]
+      atom2: [B, 11, C1']
+      max_distance: 7.84
+      source_rows:
+      - '1469'
+      - '1470'
+    - atom1: [A, 60, CE]
+      atom2: [B, 11, C3']
+      max_distance: 7.84
+      source_rows:
+      - '1467'
+      - '1468'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:877
+    restraint_id: '877'
+    alternatives:
+    - atom1: [A, 63, CE1]
+      atom2: [B, 11, C4']
+      max_distance: 6.16
+      source_rows:
+      - '1475'
+      - '1476'
+    - atom1: [A, 63, CE2]
+      atom2: [B, 11, C4']
+      max_distance: 6.16
+      source_rows:
+      - '1475'
+      - '1476'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:878
+    restraint_id: '878'
+    alternatives:
+    - atom1: [A, 63, CE1]
+      atom2: [B, 12, C4']
+      max_distance: 6.16
+      source_rows:
+      - '1477'
+      - '1478'
+    - atom1: [A, 63, CE2]
+      atom2: [B, 12, C4']
+      max_distance: 6.16
+      source_rows:
+      - '1477'
+      - '1478'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:900
+    restraint_id: '900'
+    alternatives:
+    - atom1: [B, 2, N1]
+      atom2: [C, 11, C4']
+      max_distance: 7.2
+      source_rows:
+      - '1495'
+      - '1496'
+    - atom1: [B, 2, N1]
+      atom2: [C, 11, N4]
+      max_distance: 7.16
+      source_rows:
+      - '1495'
+      - '1496'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:977
+    restraint_id: '977'
+    alternatives:
+    - atom1: [B, 10, N1]
+      atom2: [C, 5, C4']
+      max_distance: 7.2
+      source_rows:
+      - '1596'
+      - '1597'
+    - atom1: [B, 10, N1]
+      atom2: [C, 5, N4]
+      max_distance: 7.16
+      source_rows:
+      - '1596'
+      - '1597'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:1001
+    restraint_id: '1001'
+    alternatives:
+    - atom1: [B, 12, N1]
+      atom2: [C, 3, C4']
+      max_distance: 7.2
+      source_rows:
+      - '1628'
+      - '1629'
+    - atom1: [B, 12, N1]
+      atom2: [C, 3, C5]
+      max_distance: 7.2
+      source_rows:
+      - '1630'
+    - atom1: [B, 12, N1]
+      atom2: [C, 3, N4]
+      max_distance: 7.16
+      source_rows:
+      - '1628'
+      - '1629'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:1013
+    restraint_id: '1013'
+    alternatives:
+    - atom1: [B, 13, C4']
+      atom2: [C, 2, N1]
+      max_distance: 7.2
+      source_rows:
+      - '1645'
+      - '1646'
+    - atom1: [B, 13, N4]
+      atom2: [C, 2, N1]
+      max_distance: 7.16
+      source_rows:
+      - '1645'
+      - '1646'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:1045
+    restraint_id: '1045'
+    alternatives:
+    - atom1: [C, 3, C4']
+      atom2: [C, 4, N3]
+      max_distance: 7.2
+      source_rows:
+      - '1688'
+    - atom1: [C, 3, N4]
+      atom2: [C, 4, N3]
+      max_distance: 7.16
+      source_rows:
+      - '1688'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:1059
+    restraint_id: '1059'
+    alternatives:
+    - atom1: [C, 4, N3]
+      atom2: [C, 5, C4']
+      max_distance: 7.2
+      source_rows:
+      - '1709'
+    - atom1: [C, 4, N3]
+      atom2: [C, 5, N4]
+      max_distance: 7.16
+      source_rows:
+      - '1709'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_1:1061
+    restraint_id: '1061'
+    alternatives:
+    - atom1: [C, 4, C2']
+      atom2: [C, 5, C4']
+      max_distance: 7.24
+      source_rows:
+      - '1711'
+      - '1712'
+    - atom1: [C, 4, C2']
+      atom2: [C, 5, N4]
+      max_distance: 7.2
+      source_rows:
+      - '1711'
+      - '1712'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:3
+    restraint_id: '3'
+    alternatives:
+    - atom1: [A, 5, CB]
+      atom2: [A, 63, CD1]
+      max_distance: 8.512
+      source_rows:
+      - '9'
+      - '10'
+      - '11'
+      - '12'
+    - atom1: [A, 5, CB]
+      atom2: [A, 63, CD2]
+      max_distance: 8.512
+      source_rows:
+      - '9'
+      - '10'
+      - '11'
+      - '12'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:4
+    restraint_id: '4'
+    alternatives:
+    - atom1: [A, 5, CB]
+      atom2: [A, 63, CE1]
+      max_distance: 8.512
+      source_rows:
+      - '13'
+      - '14'
+      - '15'
+      - '16'
+    - atom1: [A, 5, CB]
+      atom2: [A, 63, CE2]
+      max_distance: 8.512
+      source_rows:
+      - '13'
+      - '14'
+      - '15'
+      - '16'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:5
+    restraint_id: '5'
+    alternatives:
+    - atom1: [A, 5, CG]
+      atom2: [A, 63, CD1]
+      max_distance: 8.512
+      source_rows:
+      - '17'
+      - '18'
+      - '19'
+      - '20'
+    - atom1: [A, 5, CG]
+      atom2: [A, 63, CD2]
+      max_distance: 8.512
+      source_rows:
+      - '17'
+      - '18'
+      - '19'
+      - '20'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:6
+    restraint_id: '6'
+    alternatives:
+    - atom1: [A, 5, CG]
+      atom2: [A, 67, CG1]
+      max_distance: 11.319084
+      source_rows:
+      - '21'
+      - '22'
+      - '23'
+      - '24'
+    - atom1: [A, 5, CG]
+      atom2: [A, 67, CG2]
+      max_distance: 11.319084
+      source_rows:
+      - '21'
+      - '22'
+      - '23'
+      - '24'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:7
+    restraint_id: '7'
+    alternatives:
+    - atom1: [A, 7, CD]
+      atom2: [A, 63, CD1]
+      max_distance: 8.512
+      source_rows:
+      - '25'
+      - '26'
+      - '27'
+      - '28'
+    - atom1: [A, 7, CD]
+      atom2: [A, 63, CD2]
+      max_distance: 8.512
+      source_rows:
+      - '25'
+      - '26'
+      - '27'
+      - '28'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:8
+    restraint_id: '8'
+    alternatives:
+    - atom1: [A, 8, CA]
+      atom2: [A, 9, CD1]
+      max_distance: 10.346325
+      source_rows:
+      - '29'
+      - '30'
+    - atom1: [A, 8, CA]
+      atom2: [A, 9, CD2]
+      max_distance: 10.346325
+      source_rows:
+      - '29'
+      - '30'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:9
+    restraint_id: '9'
+    alternatives:
+    - atom1: [A, 8, CB]
+      atom2: [A, 63, CD1]
+      max_distance: 8.512
+      source_rows:
+      - '31'
+      - '32'
+      - '33'
+      - '34'
+    - atom1: [A, 8, CB]
+      atom2: [A, 63, CD2]
+      max_distance: 8.512
+      source_rows:
+      - '31'
+      - '32'
+      - '33'
+      - '34'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:10
+    restraint_id: '10'
+    alternatives:
+    - atom1: [A, 8, CB]
+      atom2: [A, 63, CE1]
+      max_distance: 8.512
+      source_rows:
+      - '35'
+      - '36'
+      - '37'
+      - '38'
+    - atom1: [A, 8, CB]
+      atom2: [A, 63, CE2]
+      max_distance: 8.512
+      source_rows:
+      - '35'
+      - '36'
+      - '37'
+      - '38'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:12
+    restraint_id: '12'
+    alternatives:
+    - atom1: [A, 8, CD]
+      atom2: [A, 63, CD1]
+      max_distance: 8.512
+      source_rows:
+      - '43'
+      - '44'
+      - '45'
+      - '46'
+    - atom1: [A, 8, CD]
+      atom2: [A, 63, CD2]
+      max_distance: 8.512
+      source_rows:
+      - '43'
+      - '44'
+      - '45'
+      - '46'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:13
+    restraint_id: '13'
+    alternatives:
+    - atom1: [A, 8, CD]
+      atom2: [A, 63, CE1]
+      max_distance: 8.512
+      source_rows:
+      - '47'
+      - '48'
+      - '49'
+      - '50'
+    - atom1: [A, 8, CD]
+      atom2: [A, 63, CE2]
+      max_distance: 8.512
+      source_rows:
+      - '47'
+      - '48'
+      - '49'
+      - '50'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:14
+    restraint_id: '14'
+    alternatives:
+    - atom1: [A, 9, CD1]
+      atom2: [A, 10, N]
+      max_distance: 10.306325
+      source_rows:
+      - '51'
+      - '52'
+    - atom1: [A, 9, CD2]
+      atom2: [A, 10, N]
+      max_distance: 10.306325
+      source_rows:
+      - '51'
+      - '52'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:15
+    restraint_id: '15'
+    alternatives:
+    - atom1: [A, 9, CD1]
+      atom2: [A, 13, CA]
+      max_distance: 10.346325
+      source_rows:
+      - '53'
+      - '54'
+    - atom1: [A, 9, CD2]
+      atom2: [A, 13, CA]
+      max_distance: 10.346325
+      source_rows:
+      - '53'
+      - '54'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:16
+    restraint_id: '16'
+    alternatives:
+    - atom1: [A, 9, CD1]
+      atom2: [A, 13, CE]
+      max_distance: 13.922222
+      source_rows:
+      - '55'
+      - '56'
+    - atom1: [A, 9, CD2]
+      atom2: [A, 13, CE]
+      max_distance: 13.922222
+      source_rows:
+      - '55'
+      - '56'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:17
+    restraint_id: '17'
+    alternatives:
+    - atom1: [A, 9, CA]
+      atom2: [A, 14, CD1]
+      max_distance: 10.346325
+      source_rows:
+      - '57'
+      - '58'
+    - atom1: [A, 9, CA]
+      atom2: [A, 14, CD2]
+      max_distance: 10.346325
+      source_rows:
+      - '57'
+      - '58'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:19
+    restraint_id: '19'
+    alternatives:
+    - atom1: [A, 9, CG]
+      atom2: [A, 14, CD1]
+      max_distance: 10.346325
+      source_rows:
+      - '63'
+      - '64'
+    - atom1: [A, 9, CG]
+      atom2: [A, 14, CD2]
+      max_distance: 10.346325
+      source_rows:
+      - '63'
+      - '64'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:20
+    restraint_id: '20'
+    alternatives:
+    - atom1: [A, 9, CD1]
+      atom2: [A, 14, N]
+      max_distance: 10.306325
+      source_rows:
+      - '65'
+      - '66'
+    - atom1: [A, 9, CD2]
+      atom2: [A, 14, N]
+      max_distance: 10.306325
+      source_rows:
+      - '65'
+      - '66'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:21
+    restraint_id: '21'
+    alternatives:
+    - atom1: [A, 10, N]
+      atom2: [A, 14, CD1]
+      max_distance: 10.306325
+      source_rows:
+      - '67'
+      - '68'
+    - atom1: [A, 10, N]
+      atom2: [A, 14, CD2]
+      max_distance: 10.306325
+      source_rows:
+      - '67'
+      - '68'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:24
+    restraint_id: '24'
+    alternatives:
+    - atom1: [A, 11, CB]
+      atom2: [A, 14, CD1]
+      max_distance: 13.922222
+      source_rows:
+      - '71'
+      - '72'
+    - atom1: [A, 11, CB]
+      atom2: [A, 14, CD2]
+      max_distance: 13.922222
+      source_rows:
+      - '71'
+      - '72'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:28
+    restraint_id: '28'
+    alternatives:
+    - atom1: [A, 12, CD1]
+      atom2: [A, 13, CE]
+      max_distance: 10.310297
+      source_rows:
+      - '76'
+      - '77'
+    - atom1: [A, 12, CD2]
+      atom2: [A, 13, CE]
+      max_distance: 10.310297
+      source_rows:
+      - '76'
+      - '77'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:29
+    restraint_id: '29'
+    alternatives:
+    - atom1: [A, 12, CD1]
+      atom2: [A, 16, CD1]
+      max_distance: 11.319084
+      source_rows:
+      - '78'
+      - '79'
+      - '80'
+      - '81'
+    - atom1: [A, 12, CD1]
+      atom2: [A, 16, CD2]
+      max_distance: 11.319084
+      source_rows:
+      - '78'
+      - '79'
+      - '80'
+      - '81'
+    - atom1: [A, 12, CD2]
+      atom2: [A, 16, CD1]
+      max_distance: 11.319084
+      source_rows:
+      - '78'
+      - '79'
+      - '80'
+      - '81'
+    - atom1: [A, 12, CD2]
+      atom2: [A, 16, CD2]
+      max_distance: 11.319084
+      source_rows:
+      - '78'
+      - '79'
+      - '80'
+      - '81'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:30
+    restraint_id: '30'
+    alternatives:
+    - atom1: [A, 12, CZ]
+      atom2: [A, 16, CD1]
+      max_distance: 10.346325
+      source_rows:
+      - '82'
+      - '83'
+    - atom1: [A, 12, CZ]
+      atom2: [A, 16, CD2]
+      max_distance: 10.346325
+      source_rows:
+      - '82'
+      - '83'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:31
+    restraint_id: '31'
+    alternatives:
+    - atom1: [A, 13, CA]
+      atom2: [A, 16, CD1]
+      max_distance: 10.346325
+      source_rows:
+      - '84'
+      - '85'
+    - atom1: [A, 13, CA]
+      atom2: [A, 16, CD2]
+      max_distance: 10.346325
+      source_rows:
+      - '84'
+      - '85'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:33
+    restraint_id: '33'
+    alternatives:
+    - atom1: [A, 14, CD1]
+      atom2: [A, 55, N]
+      max_distance: 10.306325
+      source_rows:
+      - '90'
+      - '91'
+    - atom1: [A, 14, CD2]
+      atom2: [A, 55, N]
+      max_distance: 10.306325
+      source_rows:
+      - '90'
+      - '91'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:34
+    restraint_id: '34'
+    alternatives:
+    - atom1: [A, 14, CD1]
+      atom2: [A, 55, CA]
+      max_distance: 10.346325
+      source_rows:
+      - '92'
+      - '93'
+    - atom1: [A, 14, CD2]
+      atom2: [A, 55, CA]
+      max_distance: 10.346325
+      source_rows:
+      - '92'
+      - '93'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:35
+    restraint_id: '35'
+    alternatives:
+    - atom1: [A, 14, CD1]
+      atom2: [A, 55, CE]
+      max_distance: 11.319084
+      source_rows:
+      - '94'
+      - '95'
+      - '96'
+      - '97'
+    - atom1: [A, 14, CD2]
+      atom2: [A, 55, CE]
+      max_distance: 11.319084
+      source_rows:
+      - '94'
+      - '95'
+      - '96'
+      - '97'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:36
+    restraint_id: '36'
+    alternatives:
+    - atom1: [A, 14, CD1]
+      atom2: [A, 56, N]
+      max_distance: 10.306325
+      source_rows:
+      - '98'
+      - '99'
+    - atom1: [A, 14, CD2]
+      atom2: [A, 56, N]
+      max_distance: 10.306325
+      source_rows:
+      - '98'
+      - '99'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:37
+    restraint_id: '37'
+    alternatives:
+    - atom1: [A, 15, CE3]
+      atom2: [A, 16, CD1]
+      max_distance: 10.346325
+      source_rows:
+      - '100'
+      - '101'
+    - atom1: [A, 15, CE3]
+      atom2: [A, 16, CD2]
+      max_distance: 10.346325
+      source_rows:
+      - '100'
+      - '101'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:38
+    restraint_id: '38'
+    alternatives:
+    - atom1: [A, 15, CZ3]
+      atom2: [A, 16, CD1]
+      max_distance: 10.346325
+      source_rows:
+      - '102'
+      - '103'
+    - atom1: [A, 15, CZ3]
+      atom2: [A, 16, CD2]
+      max_distance: 10.346325
+      source_rows:
+      - '102'
+      - '103'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:39
+    restraint_id: '39'
+    alternatives:
+    - atom1: [A, 15, CH2]
+      atom2: [A, 16, CD1]
+      max_distance: 10.346325
+      source_rows:
+      - '104'
+      - '105'
+    - atom1: [A, 15, CH2]
+      atom2: [A, 16, CD2]
+      max_distance: 10.346325
+      source_rows:
+      - '104'
+      - '105'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:43
+    restraint_id: '43'
+    alternatives:
+    - atom1: [A, 15, NE1]
+      atom2: [A, 42, CD1]
+      max_distance: 10.306325
+      source_rows:
+      - '109'
+      - '110'
+    - atom1: [A, 15, NE1]
+      atom2: [A, 42, CD2]
+      max_distance: 10.306325
+      source_rows:
+      - '109'
+      - '110'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:46
+    restraint_id: '46'
+    alternatives:
+    - atom1: [A, 16, CD1]
+      atom2: [A, 17, N]
+      max_distance: 10.306325
+      source_rows:
+      - '113'
+      - '114'
+    - atom1: [A, 16, CD2]
+      atom2: [A, 17, N]
+      max_distance: 10.306325
+      source_rows:
+      - '113'
+      - '114'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:47
+    restraint_id: '47'
+    alternatives:
+    - atom1: [A, 16, CD1]
+      atom2: [A, 20, CA]
+      max_distance: 10.346325
+      source_rows:
+      - '115'
+      - '116'
+    - atom1: [A, 16, CD2]
+      atom2: [A, 20, CA]
+      max_distance: 10.346325
+      source_rows:
+      - '115'
+      - '116'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:48
+    restraint_id: '48'
+    alternatives:
+    - atom1: [A, 16, CD1]
+      atom2: [A, 23, CD1]
+      max_distance: 13.922222
+      source_rows:
+      - '117'
+      - '118'
+    - atom1: [A, 16, CD2]
+      atom2: [A, 23, CD1]
+      max_distance: 13.922222
+      source_rows:
+      - '117'
+      - '118'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:49
+    restraint_id: '49'
+    alternatives:
+    - atom1: [A, 16, CD1]
+      atom2: [A, 35, CG1]
+      max_distance: 15.3825
+      source_rows:
+      - '119'
+      - '120'
+      - '121'
+      - '122'
+    - atom1: [A, 16, CD1]
+      atom2: [A, 35, CG2]
+      max_distance: 15.3825
+      source_rows:
+      - '119'
+      - '120'
+      - '121'
+      - '122'
+    - atom1: [A, 16, CD2]
+      atom2: [A, 35, CG1]
+      max_distance: 15.3825
+      source_rows:
+      - '119'
+      - '120'
+      - '121'
+      - '122'
+    - atom1: [A, 16, CD2]
+      atom2: [A, 35, CG2]
+      max_distance: 15.3825
+      source_rows:
+      - '119'
+      - '120'
+      - '121'
+      - '122'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:50
+    restraint_id: '50'
+    alternatives:
+    - atom1: [A, 16, CD1]
+      atom2: [A, 36, CA]
+      max_distance: 10.346325
+      source_rows:
+      - '123'
+      - '124'
+    - atom1: [A, 16, CD2]
+      atom2: [A, 36, CA]
+      max_distance: 10.346325
+      source_rows:
+      - '123'
+      - '124'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:51
+    restraint_id: '51'
+    alternatives:
+    - atom1: [A, 16, CD1]
+      atom2: [A, 39, CA]
+      max_distance: 11.319084
+      source_rows:
+      - '125'
+      - '126'
+      - '127'
+      - '128'
+    - atom1: [A, 16, CD2]
+      atom2: [A, 39, CA]
+      max_distance: 11.319084
+      source_rows:
+      - '125'
+      - '126'
+      - '127'
+      - '128'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:64
+    restraint_id: '64'
+    alternatives:
+    - atom1: [A, 23, CA]
+      atom2: [A, 35, CG1]
+      max_distance: 10.346325
+      source_rows:
+      - '143'
+      - '144'
+    - atom1: [A, 23, CA]
+      atom2: [A, 35, CG2]
+      max_distance: 10.346325
+      source_rows:
+      - '143'
+      - '144'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:68
+    restraint_id: '68'
+    alternatives:
+    - atom1: [A, 23, CA]
+      atom2: [A, 42, CD1]
+      max_distance: 10.346325
+      source_rows:
+      - '150'
+      - '151'
+    - atom1: [A, 23, CA]
+      atom2: [A, 42, CD2]
+      max_distance: 10.346325
+      source_rows:
+      - '150'
+      - '151'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:69
+    restraint_id: '69'
+    alternatives:
+    - atom1: [A, 23, CD1]
+      atom2: [A, 42, CD1]
+      max_distance: 13.922222
+      source_rows:
+      - '152'
+      - '153'
+    - atom1: [A, 23, CD1]
+      atom2: [A, 42, CD2]
+      max_distance: 13.922222
+      source_rows:
+      - '152'
+      - '153'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:88
+    restraint_id: '88'
+    alternatives:
+    - atom1: [A, 30, CB]
+      atom2: [A, 35, CG1]
+      max_distance: 10.346325
+      source_rows:
+      - '186'
+      - '187'
+    - atom1: [A, 30, CB]
+      atom2: [A, 35, CG2]
+      max_distance: 10.346325
+      source_rows:
+      - '186'
+      - '187'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:90
+    restraint_id: '90'
+    alternatives:
+    - atom1: [A, 30, CG1]
+      atom2: [A, 35, CG1]
+      max_distance: 11.319084
+      source_rows:
+      - '189'
+      - '190'
+      - '191'
+      - '192'
+    - atom1: [A, 30, CG1]
+      atom2: [A, 35, CG2]
+      max_distance: 11.319084
+      source_rows:
+      - '189'
+      - '190'
+      - '191'
+      - '192'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:92
+    restraint_id: '92'
+    alternatives:
+    - atom1: [A, 30, CD1]
+      atom2: [A, 35, CG1]
+      max_distance: 13.922222
+      source_rows:
+      - '194'
+      - '195'
+    - atom1: [A, 30, CD1]
+      atom2: [A, 35, CG2]
+      max_distance: 13.922222
+      source_rows:
+      - '194'
+      - '195'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:93
+    restraint_id: '93'
+    alternatives:
+    - atom1: [A, 31, CA]
+      atom2: [A, 35, CG1]
+      max_distance: 10.346325
+      source_rows:
+      - '196'
+      - '197'
+    - atom1: [A, 31, CA]
+      atom2: [A, 35, CG2]
+      max_distance: 10.346325
+      source_rows:
+      - '196'
+      - '197'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:94
+    restraint_id: '94'
+    alternatives:
+    - atom1: [A, 32, CG1]
+      atom2: [A, 33, N]
+      max_distance: 10.306325
+      source_rows:
+      - '198'
+      - '199'
+    - atom1: [A, 32, CG2]
+      atom2: [A, 33, N]
+      max_distance: 10.306325
+      source_rows:
+      - '198'
+      - '199'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:95
+    restraint_id: '95'
+    alternatives:
+    - atom1: [A, 32, CG1]
+      atom2: [A, 33, CG2]
+      max_distance: 13.922222
+      source_rows:
+      - '200'
+      - '201'
+    - atom1: [A, 32, CG2]
+      atom2: [A, 33, CG2]
+      max_distance: 13.922222
+      source_rows:
+      - '200'
+      - '201'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:96
+    restraint_id: '96'
+    alternatives:
+    - atom1: [A, 32, CA]
+      atom2: [A, 35, CG1]
+      max_distance: 10.346325
+      source_rows:
+      - '202'
+      - '203'
+    - atom1: [A, 32, CA]
+      atom2: [A, 35, CG2]
+      max_distance: 10.346325
+      source_rows:
+      - '202'
+      - '203'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:97
+    restraint_id: '97'
+    alternatives:
+    - atom1: [A, 35, CG1]
+      atom2: [A, 36, N]
+      max_distance: 10.306325
+      source_rows:
+      - '204'
+      - '205'
+    - atom1: [A, 35, CG2]
+      atom2: [A, 36, N]
+      max_distance: 10.306325
+      source_rows:
+      - '204'
+      - '205'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:98
+    restraint_id: '98'
+    alternatives:
+    - atom1: [A, 35, CG1]
+      atom2: [A, 39, CA]
+      max_distance: 11.319084
+      source_rows:
+      - '206'
+      - '207'
+      - '208'
+      - '209'
+    - atom1: [A, 35, CG2]
+      atom2: [A, 39, CA]
+      max_distance: 11.319084
+      source_rows:
+      - '206'
+      - '207'
+      - '208'
+      - '209'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:100
+    restraint_id: '100'
+    alternatives:
+    - atom1: [A, 39, CA]
+      atom2: [A, 42, CD1]
+      max_distance: 11.319084
+      source_rows:
+      - '214'
+      - '215'
+      - '216'
+      - '217'
+    - atom1: [A, 39, CA]
+      atom2: [A, 42, CD2]
+      max_distance: 11.319084
+      source_rows:
+      - '214'
+      - '215'
+      - '216'
+      - '217'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:116
+    restraint_id: '116'
+    alternatives:
+    - atom1: [A, 63, CE1]
+      atom2: [A, 66, CB]
+      max_distance: 10.310297
+      source_rows:
+      - '251'
+      - '252'
+    - atom1: [A, 63, CE2]
+      atom2: [A, 66, CB]
+      max_distance: 10.310297
+      source_rows:
+      - '251'
+      - '252'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:117
+    restraint_id: '117'
+    alternatives:
+    - atom1: [A, 63, CD1]
+      atom2: [A, 67, CG1]
+      max_distance: 11.319084
+      source_rows:
+      - '253'
+      - '254'
+      - '255'
+      - '256'
+    - atom1: [A, 63, CD1]
+      atom2: [A, 67, CG2]
+      max_distance: 11.319084
+      source_rows:
+      - '253'
+      - '254'
+      - '255'
+      - '256'
+    - atom1: [A, 63, CD2]
+      atom2: [A, 67, CG1]
+      max_distance: 11.319084
+      source_rows:
+      - '253'
+      - '254'
+      - '255'
+      - '256'
+    - atom1: [A, 63, CD2]
+      atom2: [A, 67, CG2]
+      max_distance: 11.319084
+      source_rows:
+      - '253'
+      - '254'
+      - '255'
+      - '256'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:118
+    restraint_id: '118'
+    alternatives:
+    - atom1: [A, 63, CE1]
+      atom2: [A, 67, CG1]
+      max_distance: 11.319084
+      source_rows:
+      - '257'
+      - '258'
+      - '259'
+      - '260'
+    - atom1: [A, 63, CE1]
+      atom2: [A, 67, CG2]
+      max_distance: 11.319084
+      source_rows:
+      - '257'
+      - '258'
+      - '259'
+      - '260'
+    - atom1: [A, 63, CE2]
+      atom2: [A, 67, CG1]
+      max_distance: 11.319084
+      source_rows:
+      - '257'
+      - '258'
+      - '259'
+      - '260'
+    - atom1: [A, 63, CE2]
+      atom2: [A, 67, CG2]
+      max_distance: 11.319084
+      source_rows:
+      - '257'
+      - '258'
+      - '259'
+      - '260'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:122
+    restraint_id: '122'
+    alternatives:
+    - atom1: [A, 66, N]
+      atom2: [A, 67, CG1]
+      max_distance: 10.306325
+      source_rows:
+      - '266'
+      - '267'
+    - atom1: [A, 66, N]
+      atom2: [A, 67, CG2]
+      max_distance: 10.306325
+      source_rows:
+      - '266'
+      - '267'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:124
+    restraint_id: '124'
+    alternatives:
+    - atom1: [A, 67, CG1]
+      atom2: [A, 68, N]
+      max_distance: 10.306325
+      source_rows:
+      - '269'
+      - '270'
+    - atom1: [A, 67, CG2]
+      atom2: [A, 68, N]
+      max_distance: 10.306325
+      source_rows:
+      - '269'
+      - '270'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:125
+    restraint_id: '125'
+    alternatives:
+    - atom1: [A, 67, CG1]
+      atom2: [A, 68, CA]
+      max_distance: 10.346325
+      source_rows:
+      - '271'
+      - '272'
+    - atom1: [A, 67, CG2]
+      atom2: [A, 68, CA]
+      max_distance: 10.346325
+      source_rows:
+      - '271'
+      - '272'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:126
+    restraint_id: '126'
+    alternatives:
+    - atom1: [A, 67, CG1]
+      atom2: [A, 70, CB]
+      max_distance: 11.319084
+      source_rows:
+      - '273'
+      - '274'
+      - '275'
+      - '276'
+    - atom1: [A, 67, CG2]
+      atom2: [A, 70, CB]
+      max_distance: 11.319084
+      source_rows:
+      - '273'
+      - '274'
+      - '275'
+      - '276'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:128
+    restraint_id: '128'
+    alternatives:
+    - atom1: [A, 70, CD1]
+      atom2: [A, 71, CG]
+      max_distance: 8.512
+      source_rows:
+      - '281'
+      - '282'
+      - '283'
+      - '284'
+    - atom1: [A, 70, CD2]
+      atom2: [A, 71, CG]
+      max_distance: 8.512
+      source_rows:
+      - '281'
+      - '282'
+      - '283'
+      - '284'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:135
+    restraint_id: '135'
+    alternatives:
+    - atom1: [A, 9, CD1]
+      atom2: [B, 8, C2]
+      max_distance: 10.346325
+      source_rows:
+      - '292'
+      - '294'
+    - atom1: [A, 9, CD1]
+      atom2: [B, 9, C2]
+      max_distance: 10.346325
+      source_rows:
+      - '293'
+      - '295'
+    - atom1: [A, 9, CD2]
+      atom2: [B, 8, C2]
+      max_distance: 10.346325
+      source_rows:
+      - '292'
+      - '294'
+    - atom1: [A, 9, CD2]
+      atom2: [B, 9, C2]
+      max_distance: 10.346325
+      source_rows:
+      - '293'
+      - '295'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:136
+    restraint_id: '136'
+    alternatives:
+    - atom1: [A, 9, CD1]
+      atom2: [C, 5, C1']
+      max_distance: 10.346325
+      source_rows:
+      - '296'
+      - '297'
+    - atom1: [A, 9, CD1]
+      atom2: [C, 5, C3']
+      max_distance: 10.346325
+      source_rows:
+      - '298'
+      - '299'
+    - atom1: [A, 9, CD1]
+      atom2: [C, 5, C4']
+      max_distance: 10.346325
+      source_rows:
+      - '300'
+      - '301'
+    - atom1: [A, 9, CD2]
+      atom2: [C, 5, C1']
+      max_distance: 10.346325
+      source_rows:
+      - '296'
+      - '297'
+    - atom1: [A, 9, CD2]
+      atom2: [C, 5, C3']
+      max_distance: 10.346325
+      source_rows:
+      - '298'
+      - '299'
+    - atom1: [A, 9, CD2]
+      atom2: [C, 5, C4']
+      max_distance: 10.346325
+      source_rows:
+      - '300'
+      - '301'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:137
+    restraint_id: '137'
+    alternatives:
+    - atom1: [A, 9, CD1]
+      atom2: [C, 7, C3']
+      max_distance: 10.346325
+      source_rows:
+      - '302'
+      - '303'
+    - atom1: [A, 9, CD2]
+      atom2: [C, 7, C3']
+      max_distance: 10.346325
+      source_rows:
+      - '302'
+      - '303'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:138
+    restraint_id: '138'
+    alternatives:
+    - atom1: [A, 10, CA]
+      atom2: [B, 8, C2]
+      max_distance: 8.24
+      source_rows:
+      - '304'
+    - atom1: [A, 10, CA]
+      atom2: [B, 9, C2]
+      max_distance: 8.24
+      source_rows:
+      - '305'
+    - atom1: [A, 10, CB]
+      atom2: [B, 8, C2]
+      max_distance: 8.24
+      source_rows:
+      - '306'
+      - '308'
+    - atom1: [A, 10, CB]
+      atom2: [B, 9, C2]
+      max_distance: 8.24
+      source_rows:
+      - '307'
+      - '309'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:140
+    restraint_id: '140'
+    alternatives:
+    - atom1: [A, 16, CD1]
+      atom2: [B, 6, C1']
+      max_distance: 10.346325
+      source_rows:
+      - '311'
+      - '312'
+    - atom1: [A, 16, CD1]
+      atom2: [B, 7, C1']
+      max_distance: 10.346325
+      source_rows:
+      - '313'
+      - '314'
+    - atom1: [A, 16, CD2]
+      atom2: [B, 6, C1']
+      max_distance: 10.346325
+      source_rows:
+      - '311'
+      - '312'
+    - atom1: [A, 16, CD2]
+      atom2: [B, 7, C1']
+      max_distance: 10.346325
+      source_rows:
+      - '313'
+      - '314'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:141
+    restraint_id: '141'
+    alternatives:
+    - atom1: [A, 16, CD1]
+      atom2: [C, 7, C2]
+      max_distance: 10.346325
+      source_rows:
+      - '315'
+      - '316'
+    - atom1: [A, 16, CD2]
+      atom2: [C, 7, C2]
+      max_distance: 10.346325
+      source_rows:
+      - '315'
+      - '316'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_2:142
+    restraint_id: '142'
+    alternatives:
+    - atom1: [A, 32, CG1]
+      atom2: [C, 7, C4']
+      max_distance: 10.346325
+      source_rows:
+      - '317'
+      - '318'
+    - atom1: [A, 32, CG2]
+      atom2: [C, 7, C4']
+      max_distance: 10.346325
+      source_rows:
+      - '317'
+      - '318'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_3:44
+    restraint_id: '44'
+    alternatives:
+    - atom1: [B, 2, C2']
+      atom2: [C, 11, O2]
+      max_distance: 3.12
+      source_rows:
+      - '38'
+    - atom1: [B, 2, N2]
+      atom2: [C, 11, O2]
+      max_distance: 3.08
+      source_rows:
+      - '38'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_3:46
+    restraint_id: '46'
+    alternatives:
+    - atom1: [B, 2, O6]
+      atom2: [C, 11, C4']
+      max_distance: 3.12
+      source_rows:
+      - '40'
+    - atom1: [B, 2, O6]
+      atom2: [C, 11, N4]
+      max_distance: 3.08
+      source_rows:
+      - '40'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_3:70
+    restraint_id: '70'
+    alternatives:
+    - atom1: [B, 10, C2']
+      atom2: [C, 5, O2]
+      max_distance: 3.12
+      source_rows:
+      - '64'
+    - atom1: [B, 10, N2]
+      atom2: [C, 5, O2]
+      max_distance: 3.08
+      source_rows:
+      - '64'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_3:72
+    restraint_id: '72'
+    alternatives:
+    - atom1: [B, 10, O6]
+      atom2: [C, 5, C4']
+      max_distance: 3.12
+      source_rows:
+      - '66'
+    - atom1: [B, 10, O6]
+      atom2: [C, 5, N4]
+      max_distance: 3.08
+      source_rows:
+      - '66'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_3:80
+    restraint_id: '80'
+    alternatives:
+    - atom1: [B, 12, C2']
+      atom2: [C, 3, O2]
+      max_distance: 3.12
+      source_rows:
+      - '74'
+    - atom1: [B, 12, N2]
+      atom2: [C, 3, O2]
+      max_distance: 3.08
+      source_rows:
+      - '74'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_3:82
+    restraint_id: '82'
+    alternatives:
+    - atom1: [B, 12, O6]
+      atom2: [C, 3, C4']
+      max_distance: 3.12
+      source_rows:
+      - '76'
+    - atom1: [B, 12, O6]
+      atom2: [C, 3, N4]
+      max_distance: 3.08
+      source_rows:
+      - '76'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_3:86
+    restraint_id: '86'
+    alternatives:
+    - atom1: [B, 13, O2]
+      atom2: [C, 2, C2']
+      max_distance: 3.12
+      source_rows:
+      - '80'
+    - atom1: [B, 13, O2]
+      atom2: [C, 2, N2]
+      max_distance: 3.08
+      source_rows:
+      - '80'
+    force: true
+- atom_contact_union:
+    group_id: AMBER_distance_restraints_3:88
+    restraint_id: '88'
+    alternatives:
+    - atom1: [B, 13, C4']
+      atom2: [C, 2, O6]
+      max_distance: 3.12
+      source_rows:
+      - '82'
+    - atom1: [B, 13, N4]
+      atom2: [C, 2, O6]
+      max_distance: 3.08
+      source_rows:
+      - '82'
+    force: true

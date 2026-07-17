@@ -1,0 +1,3 @@
+# Conservative heavy-atom constraints safe to use as simultaneous (AND) Boltz contacts.
+# Merge the `constraints` list into the Boltz input YAML and run Boltz-2 with potentials enabled.
+constraints: []

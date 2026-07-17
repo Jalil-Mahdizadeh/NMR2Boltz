@@ -2,15 +2,21 @@
 
 ## Unreleased
 
+- Added clean polymer-only `sequences.fasta` output for every conversion.
+- Added a paired NEF/NMR-STAR corpus runner with sequence-aware PDB ensemble
+  alignment, exact contact/bound parity metrics, and per-case output directories.
+- Sequence/residue conflicts now use the explicit `sequence_residue_mismatch`
+  rejection reason before topology resolution.
+- NEF/NMR-STAR files with sequence data but no distance loop now produce an
+  auditable empty conversion rather than failing format detection.
+- Expanded the regression suite from 39 to 44 tests.
 - Added fail-fast `--target-yaml` validation for chain IDs, residue indices,
   canonical residue identities, declared modifications, mapping collisions, and
   emitted-contact positions.
-- Added the versioned, checksum-aware `nmr2boltz benchmark` command and seeded
-  it with the real 6M6O conversion expectations.
+- Added the versioned, checksum-aware `nmr2boltz benchmark` command.
 - Made NMR-STAR sequence-alias provenance ordering deterministic across Python
   hash seeds and container runs.
-- Expanded the regression suite from 31 to 39 tests, including protein,
-  DNA, RNA, and modified-polymer target validation.
+- Added protein, DNA, RNA, and modified-polymer target validation.
 
 Release date: 2026-07-14
 
@@ -35,6 +41,6 @@ The default mode does not turn unresolved OR alternatives into simultaneous rest
 
 ## Validation
 
-See `VALIDATION.md` and `workspace/output/REAL_TEST_6M6O.md`. The current
-validation covers regression tests, deterministic randomized stress tests,
-container isolation, and a 10-model deposited-data benchmark for PDB 6M6O.
+See `VALIDATION.md` and `benchmark/output/BENCHMARK_REPORT.md`. The current
+validation covers regression tests, deterministic randomized stress tests, and
+paired NEF/NMR-STAR coordinate audits for 12 deposited NMR ensembles.

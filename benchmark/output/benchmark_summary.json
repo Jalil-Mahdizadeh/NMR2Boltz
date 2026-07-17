@@ -1,0 +1,1907 @@
+{
+  "schema_version": 1,
+  "input_directory": "benchmark\\input",
+  "output_directory": "benchmark\\output",
+  "settings": {
+    "averaging_policy": "sum-r6",
+    "pseudoatom_policy": "reject",
+    "missing_upper_policy": "reject",
+    "coordinate_tolerance_angstrom": 0.01
+  },
+  "aggregate": {
+    "case_count": 12,
+    "successful_cases": 12,
+    "successful_conversions": 24,
+    "no_distance_conversions": 2,
+    "fasta_files": 24,
+    "exact_format_parity_cases": 4,
+    "exact_positive_distance_parity_cases": 3,
+    "formats": {
+      "nef": {
+        "emitted_constraints": 13004,
+        "resolved_model_cases": 222450,
+        "satisfied_model_cases": 222172,
+        "violated_model_cases": 278,
+        "satisfaction_fraction_of_resolved": 0.9987502809620139,
+        "implication_antecedent_cases": 206903,
+        "implication_failures": 0,
+        "sequence_residue_mismatch_rejections": 312
+      },
+      "star": {
+        "emitted_constraints": 11841,
+        "resolved_model_cases": 198200,
+        "satisfied_model_cases": 197917,
+        "violated_model_cases": 283,
+        "satisfaction_fraction_of_resolved": 0.9985721493440969,
+        "implication_antecedent_cases": 183907,
+        "implication_failures": 0,
+        "sequence_residue_mismatch_rejections": 0
+      }
+    }
+  },
+  "cases": [
+    {
+      "case_id": "21CC",
+      "status": "pass",
+      "formats": {
+        "nef": {
+          "detected_format": "nef",
+          "has_distance_restraints": true,
+          "restraint_groups": 202,
+          "source_alternatives": 218,
+          "emitted_constraints": 176,
+          "ambiguous_groups": 16,
+          "rejection_records": 0,
+          "rejection_reasons": {},
+          "sequence_records": 25,
+          "warnings": [],
+          "coordinates": {
+            "pdb": "benchmark\\input\\21CC\\21CC.pdb",
+            "model_count": 10,
+            "tolerance_angstrom": 0.01,
+            "sequence_alignment": [
+              {
+                "boltz_chain": "A",
+                "coordinate_chain": "A",
+                "target_residues": 12,
+                "coordinate_residues": 12,
+                "aligned_residues": 12,
+                "exact_component_matches": 12,
+                "compatible_component_matches": 12,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              },
+              {
+                "boltz_chain": "B",
+                "coordinate_chain": "B",
+                "target_residues": 13,
+                "coordinate_residues": 13,
+                "aligned_residues": 13,
+                "exact_component_matches": 13,
+                "compatible_component_matches": 13,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              }
+            ],
+            "source_restraints": {
+              "group_count": 202,
+              "group_model_state_counts": {
+                "satisfied": 1631,
+                "violated": 389
+              },
+              "groups_satisfied_in_any_model": 181,
+              "groups_satisfied_in_every_model": 140,
+              "groups_indeterminate_in_every_model": 0
+            },
+            "heavy_atom_constraints": {
+              "constraint_count": 176,
+              "resolved_model_cases": 1760,
+              "satisfied_model_cases": 1755,
+              "violated_model_cases": 5,
+              "missing_model_cases": 0,
+              "satisfaction_fraction_of_resolved": 0.9971590909090909,
+              "constraints_resolved_in_every_model": 176,
+              "constraints_satisfied_in_any_model": 176,
+              "constraints_satisfied_in_every_model": 172
+            },
+            "projection_implication_audit": {
+              "antecedent_cases": 1404,
+              "failure_count": 0,
+              "failures": []
+            }
+          }
+        },
+        "star": {
+          "detected_format": "nmr-star",
+          "has_distance_restraints": true,
+          "restraint_groups": 202,
+          "source_alternatives": 218,
+          "emitted_constraints": 176,
+          "ambiguous_groups": 16,
+          "rejection_records": 0,
+          "rejection_reasons": {},
+          "sequence_records": 25,
+          "warnings": [
+            "NMR-STAR component indices for chain B were not contiguous 1..N; Boltz indices use sequence-loop order"
+          ],
+          "coordinates": {
+            "pdb": "benchmark\\input\\21CC\\21CC.pdb",
+            "model_count": 10,
+            "tolerance_angstrom": 0.01,
+            "sequence_alignment": [
+              {
+                "boltz_chain": "A",
+                "coordinate_chain": "A",
+                "target_residues": 12,
+                "coordinate_residues": 12,
+                "aligned_residues": 12,
+                "exact_component_matches": 12,
+                "compatible_component_matches": 12,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              },
+              {
+                "boltz_chain": "B",
+                "coordinate_chain": "B",
+                "target_residues": 13,
+                "coordinate_residues": 13,
+                "aligned_residues": 13,
+                "exact_component_matches": 13,
+                "compatible_component_matches": 13,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              }
+            ],
+            "source_restraints": {
+              "group_count": 202,
+              "group_model_state_counts": {
+                "indeterminate": 560,
+                "satisfied": 1257,
+                "violated": 203
+              },
+              "groups_satisfied_in_any_model": 138,
+              "groups_satisfied_in_every_model": 113,
+              "groups_indeterminate_in_every_model": 56
+            },
+            "heavy_atom_constraints": {
+              "constraint_count": 176,
+              "resolved_model_cases": 1760,
+              "satisfied_model_cases": 1755,
+              "violated_model_cases": 5,
+              "missing_model_cases": 0,
+              "satisfaction_fraction_of_resolved": 0.9971590909090909,
+              "constraints_resolved_in_every_model": 176,
+              "constraints_satisfied_in_any_model": 176,
+              "constraints_satisfied_in_every_model": 172
+            },
+            "projection_implication_audit": {
+              "antecedent_cases": 1070,
+              "failure_count": 0,
+              "failures": []
+            }
+          }
+        }
+      },
+      "format_parity": {
+        "nef_constraints": 176,
+        "star_constraints": 176,
+        "common_atom_pairs": 176,
+        "nef_only_atom_pairs": 0,
+        "star_only_atom_pairs": 0,
+        "common_pairs_with_different_bounds": 0,
+        "maximum_common_bound_delta_angstrom": 0.0,
+        "exact_pair_and_bound_parity": true
+      }
+    },
+    {
+      "case_id": "43JX",
+      "status": "pass",
+      "formats": {
+        "nef": {
+          "detected_format": "nef",
+          "has_distance_restraints": true,
+          "restraint_groups": 2387,
+          "source_alternatives": 2821,
+          "emitted_constraints": 1716,
+          "ambiguous_groups": 16,
+          "rejection_records": 41,
+          "rejection_reasons": {
+            "same_heavy_parent_atom": 41
+          },
+          "sequence_records": 122,
+          "warnings": [],
+          "coordinates": {
+            "pdb": "benchmark\\input\\43JX\\43JX.pdb",
+            "model_count": 20,
+            "tolerance_angstrom": 0.01,
+            "sequence_alignment": [
+              {
+                "boltz_chain": "A",
+                "coordinate_chain": "A",
+                "target_residues": 122,
+                "coordinate_residues": 122,
+                "aligned_residues": 122,
+                "exact_component_matches": 122,
+                "compatible_component_matches": 122,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              }
+            ],
+            "source_restraints": {
+              "group_count": 2387,
+              "group_model_state_counts": {
+                "satisfied": 46453,
+                "violated": 1287
+              },
+              "groups_satisfied_in_any_model": 2387,
+              "groups_satisfied_in_every_model": 2124,
+              "groups_indeterminate_in_every_model": 0
+            },
+            "heavy_atom_constraints": {
+              "constraint_count": 1716,
+              "resolved_model_cases": 34320,
+              "satisfied_model_cases": 34305,
+              "violated_model_cases": 15,
+              "missing_model_cases": 0,
+              "satisfaction_fraction_of_resolved": 0.9995629370629371,
+              "constraints_resolved_in_every_model": 1716,
+              "constraints_satisfied_in_any_model": 1716,
+              "constraints_satisfied_in_every_model": 1711
+            },
+            "projection_implication_audit": {
+              "antecedent_cases": 33060,
+              "failure_count": 0,
+              "failures": []
+            }
+          }
+        },
+        "star": {
+          "detected_format": "nmr-star",
+          "has_distance_restraints": true,
+          "restraint_groups": 2387,
+          "source_alternatives": 3694,
+          "emitted_constraints": 1716,
+          "ambiguous_groups": 16,
+          "rejection_records": 38,
+          "rejection_reasons": {
+            "same_heavy_parent_atom": 38
+          },
+          "sequence_records": 122,
+          "warnings": [],
+          "coordinates": {
+            "pdb": "benchmark\\input\\43JX\\43JX.pdb",
+            "model_count": 20,
+            "tolerance_angstrom": 0.01,
+            "sequence_alignment": [
+              {
+                "boltz_chain": "A",
+                "coordinate_chain": "A",
+                "target_residues": 122,
+                "coordinate_residues": 122,
+                "aligned_residues": 122,
+                "exact_component_matches": 122,
+                "compatible_component_matches": 122,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              }
+            ],
+            "source_restraints": {
+              "group_count": 2387,
+              "group_model_state_counts": {
+                "violated": 1782,
+                "satisfied": 45958
+              },
+              "groups_satisfied_in_any_model": 2387,
+              "groups_satisfied_in_every_model": 2039,
+              "groups_indeterminate_in_every_model": 0
+            },
+            "heavy_atom_constraints": {
+              "constraint_count": 1716,
+              "resolved_model_cases": 34320,
+              "satisfied_model_cases": 34293,
+              "violated_model_cases": 27,
+              "missing_model_cases": 0,
+              "satisfaction_fraction_of_resolved": 0.9992132867132867,
+              "constraints_resolved_in_every_model": 1716,
+              "constraints_satisfied_in_any_model": 1716,
+              "constraints_satisfied_in_every_model": 1704
+            },
+            "projection_implication_audit": {
+              "antecedent_cases": 32583,
+              "failure_count": 0,
+              "failures": []
+            }
+          }
+        }
+      },
+      "format_parity": {
+        "nef_constraints": 1716,
+        "star_constraints": 1716,
+        "common_atom_pairs": 1716,
+        "nef_only_atom_pairs": 0,
+        "star_only_atom_pairs": 0,
+        "common_pairs_with_different_bounds": 355,
+        "maximum_common_bound_delta_angstrom": 2.861354719888931,
+        "exact_pair_and_bound_parity": false
+      }
+    },
+    {
+      "case_id": "6M6O",
+      "status": "pass",
+      "formats": {
+        "nef": {
+          "detected_format": "nef",
+          "has_distance_restraints": true,
+          "restraint_groups": 3271,
+          "source_alternatives": 3416,
+          "emitted_constraints": 2819,
+          "ambiguous_groups": 71,
+          "rejection_records": 148,
+          "rejection_reasons": {
+            "same_heavy_parent_atom": 148
+          },
+          "sequence_records": 185,
+          "warnings": [],
+          "coordinates": {
+            "pdb": "benchmark\\input\\6M6O\\6M6O.pdb",
+            "model_count": 10,
+            "tolerance_angstrom": 0.01,
+            "sequence_alignment": [
+              {
+                "boltz_chain": "A",
+                "coordinate_chain": "A",
+                "target_residues": 185,
+                "coordinate_residues": 185,
+                "aligned_residues": 185,
+                "exact_component_matches": 185,
+                "compatible_component_matches": 185,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              }
+            ],
+            "source_restraints": {
+              "group_count": 3271,
+              "group_model_state_counts": {
+                "violated": 1413,
+                "satisfied": 31297
+              },
+              "groups_satisfied_in_any_model": 3220,
+              "groups_satisfied_in_every_model": 2962,
+              "groups_indeterminate_in_every_model": 0
+            },
+            "heavy_atom_constraints": {
+              "constraint_count": 2819,
+              "resolved_model_cases": 28190,
+              "satisfied_model_cases": 28110,
+              "violated_model_cases": 80,
+              "missing_model_cases": 0,
+              "satisfaction_fraction_of_resolved": 0.9971621142249024,
+              "constraints_resolved_in_every_model": 2819,
+              "constraints_satisfied_in_any_model": 2816,
+              "constraints_satisfied_in_every_model": 2805
+            },
+            "projection_implication_audit": {
+              "antecedent_cases": 26883,
+              "failure_count": 0,
+              "failures": []
+            }
+          }
+        },
+        "star": {
+          "detected_format": "nmr-star",
+          "has_distance_restraints": true,
+          "restraint_groups": 3271,
+          "source_alternatives": 3271,
+          "emitted_constraints": 2877,
+          "ambiguous_groups": 7,
+          "rejection_records": 37,
+          "rejection_reasons": {
+            "same_heavy_parent_atom": 37
+          },
+          "sequence_records": 185,
+          "warnings": [],
+          "coordinates": {
+            "pdb": "benchmark\\input\\6M6O\\6M6O.pdb",
+            "model_count": 10,
+            "tolerance_angstrom": 0.01,
+            "sequence_alignment": [
+              {
+                "boltz_chain": "A",
+                "coordinate_chain": "A",
+                "target_residues": 185,
+                "coordinate_residues": 185,
+                "aligned_residues": 185,
+                "exact_component_matches": 185,
+                "compatible_component_matches": 185,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              }
+            ],
+            "source_restraints": {
+              "group_count": 3271,
+              "group_model_state_counts": {
+                "violated": 1879,
+                "satisfied": 30831
+              },
+              "groups_satisfied_in_any_model": 3210,
+              "groups_satisfied_in_every_model": 2837,
+              "groups_indeterminate_in_every_model": 0
+            },
+            "heavy_atom_constraints": {
+              "constraint_count": 2877,
+              "resolved_model_cases": 28770,
+              "satisfied_model_cases": 28656,
+              "violated_model_cases": 114,
+              "missing_model_cases": 0,
+              "satisfaction_fraction_of_resolved": 0.9960375391032326,
+              "constraints_resolved_in_every_model": 2877,
+              "constraints_satisfied_in_any_model": 2872,
+              "constraints_satisfied_in_every_model": 2856
+            },
+            "projection_implication_audit": {
+              "antecedent_cases": 26944,
+              "failure_count": 0,
+              "failures": []
+            }
+          }
+        }
+      },
+      "format_parity": {
+        "nef_constraints": 2819,
+        "star_constraints": 2877,
+        "common_atom_pairs": 2818,
+        "nef_only_atom_pairs": 1,
+        "star_only_atom_pairs": 59,
+        "common_pairs_with_different_bounds": 89,
+        "maximum_common_bound_delta_angstrom": 1.5595262993692387,
+        "exact_pair_and_bound_parity": false
+      }
+    },
+    {
+      "case_id": "8R1X",
+      "status": "pass",
+      "formats": {
+        "nef": {
+          "detected_format": "nef",
+          "has_distance_restraints": true,
+          "restraint_groups": 1414,
+          "source_alternatives": 2282,
+          "emitted_constraints": 1112,
+          "ambiguous_groups": 179,
+          "rejection_records": 90,
+          "rejection_reasons": {
+            "same_heavy_parent_atom": 12,
+            "unresolved_atom_topology": 39,
+            "projected_bound_exceeds_boltz_maximum": 39
+          },
+          "sequence_records": 138,
+          "warnings": [],
+          "coordinates": {
+            "pdb": "benchmark\\input\\8R1X\\8R1X.pdb",
+            "model_count": 20,
+            "tolerance_angstrom": 0.01,
+            "sequence_alignment": [
+              {
+                "boltz_chain": "A",
+                "coordinate_chain": "A",
+                "target_residues": 112,
+                "coordinate_residues": 73,
+                "aligned_residues": 73,
+                "exact_component_matches": 73,
+                "compatible_component_matches": 73,
+                "unmapped_target_residues": 39,
+                "unmapped_coordinate_residues": 0
+              },
+              {
+                "boltz_chain": "B",
+                "coordinate_chain": "B",
+                "target_residues": 14,
+                "coordinate_residues": 14,
+                "aligned_residues": 14,
+                "exact_component_matches": 12,
+                "compatible_component_matches": 12,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              },
+              {
+                "boltz_chain": "C",
+                "coordinate_chain": "C",
+                "target_residues": 12,
+                "coordinate_residues": 12,
+                "aligned_residues": 12,
+                "exact_component_matches": 10,
+                "compatible_component_matches": 10,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              }
+            ],
+            "source_restraints": {
+              "group_count": 1414,
+              "group_model_state_counts": {
+                "satisfied": 25110,
+                "violated": 1650,
+                "indeterminate": 1520
+              },
+              "groups_satisfied_in_any_model": 1293,
+              "groups_satisfied_in_every_model": 1200,
+              "groups_indeterminate_in_every_model": 76
+            },
+            "heavy_atom_constraints": {
+              "constraint_count": 1112,
+              "resolved_model_cases": 21340,
+              "satisfied_model_cases": 21284,
+              "violated_model_cases": 56,
+              "missing_model_cases": 900,
+              "satisfaction_fraction_of_resolved": 0.9973758200562324,
+              "constraints_resolved_in_every_model": 1067,
+              "constraints_satisfied_in_any_model": 1065,
+              "constraints_satisfied_in_every_model": 1061
+            },
+            "projection_implication_audit": {
+              "antecedent_cases": 19717,
+              "failure_count": 0,
+              "failures": []
+            }
+          }
+        },
+        "star": {
+          "detected_format": "nmr-star",
+          "has_distance_restraints": true,
+          "restraint_groups": 1414,
+          "source_alternatives": 3382,
+          "emitted_constraints": 1118,
+          "ambiguous_groups": 165,
+          "rejection_records": 81,
+          "rejection_reasons": {
+            "same_heavy_parent_atom": 3,
+            "unresolved_atom_topology": 39,
+            "projected_bound_exceeds_boltz_maximum": 39
+          },
+          "sequence_records": 138,
+          "warnings": [],
+          "coordinates": {
+            "pdb": "benchmark\\input\\8R1X\\8R1X.pdb",
+            "model_count": 20,
+            "tolerance_angstrom": 0.01,
+            "sequence_alignment": [
+              {
+                "boltz_chain": "A",
+                "coordinate_chain": "A",
+                "target_residues": 112,
+                "coordinate_residues": 73,
+                "aligned_residues": 73,
+                "exact_component_matches": 73,
+                "compatible_component_matches": 73,
+                "unmapped_target_residues": 39,
+                "unmapped_coordinate_residues": 0
+              },
+              {
+                "boltz_chain": "B",
+                "coordinate_chain": "B",
+                "target_residues": 14,
+                "coordinate_residues": 14,
+                "aligned_residues": 14,
+                "exact_component_matches": 12,
+                "compatible_component_matches": 12,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              },
+              {
+                "boltz_chain": "C",
+                "coordinate_chain": "C",
+                "target_residues": 12,
+                "coordinate_residues": 12,
+                "aligned_residues": 12,
+                "exact_component_matches": 10,
+                "compatible_component_matches": 10,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              }
+            ],
+            "source_restraints": {
+              "group_count": 1414,
+              "group_model_state_counts": {
+                "satisfied": 23568,
+                "violated": 1612,
+                "indeterminate": 3100
+              },
+              "groups_satisfied_in_any_model": 1216,
+              "groups_satisfied_in_every_model": 1122,
+              "groups_indeterminate_in_every_model": 155
+            },
+            "heavy_atom_constraints": {
+              "constraint_count": 1118,
+              "resolved_model_cases": 21460,
+              "satisfied_model_cases": 21404,
+              "violated_model_cases": 56,
+              "missing_model_cases": 900,
+              "satisfaction_fraction_of_resolved": 0.9973904939422181,
+              "constraints_resolved_in_every_model": 1073,
+              "constraints_satisfied_in_any_model": 1071,
+              "constraints_satisfied_in_every_model": 1067
+            },
+            "projection_implication_audit": {
+              "antecedent_cases": 18635,
+              "failure_count": 0,
+              "failures": []
+            }
+          }
+        }
+      },
+      "format_parity": {
+        "nef_constraints": 1112,
+        "star_constraints": 1118,
+        "common_atom_pairs": 1112,
+        "nef_only_atom_pairs": 0,
+        "star_only_atom_pairs": 6,
+        "common_pairs_with_different_bounds": 160,
+        "maximum_common_bound_delta_angstrom": 3.184196906213339,
+        "exact_pair_and_bound_parity": false
+      }
+    },
+    {
+      "case_id": "8S8O",
+      "status": "pass",
+      "formats": {
+        "nef": {
+          "detected_format": "nef",
+          "has_distance_restraints": false,
+          "restraint_groups": 0,
+          "source_alternatives": 0,
+          "emitted_constraints": 0,
+          "ambiguous_groups": 0,
+          "rejection_records": 0,
+          "rejection_reasons": {},
+          "sequence_records": 132,
+          "warnings": [
+            "No _nef_distance_restraint loop was found; producing an empty distance-constraint conversion.",
+            "No nef_distance_restraint rows matched the selected origin filter."
+          ],
+          "coordinates": {
+            "pdb": "benchmark\\input\\8S8O\\8S8O.pdb",
+            "model_count": 20,
+            "tolerance_angstrom": 0.01,
+            "sequence_alignment": [
+              {
+                "boltz_chain": "A",
+                "coordinate_chain": "A",
+                "target_residues": 52,
+                "coordinate_residues": 52,
+                "aligned_residues": 52,
+                "exact_component_matches": 52,
+                "compatible_component_matches": 52,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              },
+              {
+                "boltz_chain": "B",
+                "coordinate_chain": "B",
+                "target_residues": 52,
+                "coordinate_residues": 52,
+                "aligned_residues": 52,
+                "exact_component_matches": 52,
+                "compatible_component_matches": 52,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              },
+              {
+                "boltz_chain": "C",
+                "coordinate_chain": "C",
+                "target_residues": 28,
+                "coordinate_residues": 28,
+                "aligned_residues": 28,
+                "exact_component_matches": 28,
+                "compatible_component_matches": 28,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              }
+            ],
+            "source_restraints": {
+              "group_count": 0,
+              "group_model_state_counts": {},
+              "groups_satisfied_in_any_model": 0,
+              "groups_satisfied_in_every_model": 0,
+              "groups_indeterminate_in_every_model": 0
+            },
+            "heavy_atom_constraints": {
+              "constraint_count": 0,
+              "resolved_model_cases": 0,
+              "satisfied_model_cases": 0,
+              "violated_model_cases": 0,
+              "missing_model_cases": 0,
+              "satisfaction_fraction_of_resolved": null,
+              "constraints_resolved_in_every_model": 0,
+              "constraints_satisfied_in_any_model": 0,
+              "constraints_satisfied_in_every_model": 0
+            },
+            "projection_implication_audit": {
+              "antecedent_cases": 0,
+              "failure_count": 0,
+              "failures": []
+            }
+          }
+        },
+        "star": {
+          "detected_format": "nmr-star",
+          "has_distance_restraints": false,
+          "restraint_groups": 0,
+          "source_alternatives": 0,
+          "emitted_constraints": 0,
+          "ambiguous_groups": 0,
+          "rejection_records": 0,
+          "rejection_reasons": {},
+          "sequence_records": 132,
+          "warnings": [
+            "No _Gen_dist_constraint loop was found; producing an empty distance-constraint conversion.",
+            "No gen_dist_constraint rows matched the selected origin filter."
+          ],
+          "coordinates": {
+            "pdb": "benchmark\\input\\8S8O\\8S8O.pdb",
+            "model_count": 20,
+            "tolerance_angstrom": 0.01,
+            "sequence_alignment": [
+              {
+                "boltz_chain": "A",
+                "coordinate_chain": "A",
+                "target_residues": 52,
+                "coordinate_residues": 52,
+                "aligned_residues": 52,
+                "exact_component_matches": 52,
+                "compatible_component_matches": 52,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              },
+              {
+                "boltz_chain": "B",
+                "coordinate_chain": "B",
+                "target_residues": 52,
+                "coordinate_residues": 52,
+                "aligned_residues": 52,
+                "exact_component_matches": 52,
+                "compatible_component_matches": 52,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              },
+              {
+                "boltz_chain": "C",
+                "coordinate_chain": "C",
+                "target_residues": 28,
+                "coordinate_residues": 28,
+                "aligned_residues": 28,
+                "exact_component_matches": 28,
+                "compatible_component_matches": 28,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              }
+            ],
+            "source_restraints": {
+              "group_count": 0,
+              "group_model_state_counts": {},
+              "groups_satisfied_in_any_model": 0,
+              "groups_satisfied_in_every_model": 0,
+              "groups_indeterminate_in_every_model": 0
+            },
+            "heavy_atom_constraints": {
+              "constraint_count": 0,
+              "resolved_model_cases": 0,
+              "satisfied_model_cases": 0,
+              "violated_model_cases": 0,
+              "missing_model_cases": 0,
+              "satisfaction_fraction_of_resolved": null,
+              "constraints_resolved_in_every_model": 0,
+              "constraints_satisfied_in_any_model": 0,
+              "constraints_satisfied_in_every_model": 0
+            },
+            "projection_implication_audit": {
+              "antecedent_cases": 0,
+              "failure_count": 0,
+              "failures": []
+            }
+          }
+        }
+      },
+      "format_parity": {
+        "nef_constraints": 0,
+        "star_constraints": 0,
+        "common_atom_pairs": 0,
+        "nef_only_atom_pairs": 0,
+        "star_only_atom_pairs": 0,
+        "common_pairs_with_different_bounds": 0,
+        "maximum_common_bound_delta_angstrom": null,
+        "exact_pair_and_bound_parity": true
+      }
+    },
+    {
+      "case_id": "9CCH",
+      "status": "pass",
+      "formats": {
+        "nef": {
+          "detected_format": "nef",
+          "has_distance_restraints": true,
+          "restraint_groups": 7065,
+          "source_alternatives": 18740,
+          "emitted_constraints": 3358,
+          "ambiguous_groups": 292,
+          "rejection_records": 2156,
+          "rejection_reasons": {
+            "unresolved_atom_topology": 317,
+            "same_heavy_parent_atom": 250,
+            "partially_unprojectable_or_group": 5,
+            "complex_restraint_combination_logic": 1584
+          },
+          "sequence_records": 162,
+          "warnings": [],
+          "coordinates": {
+            "pdb": "benchmark\\input\\9CCH\\9CCH.pdb",
+            "model_count": 20,
+            "tolerance_angstrom": 0.01,
+            "sequence_alignment": [
+              {
+                "boltz_chain": "A",
+                "coordinate_chain": "A",
+                "target_residues": 54,
+                "coordinate_residues": 54,
+                "aligned_residues": 54,
+                "exact_component_matches": 54,
+                "compatible_component_matches": 54,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              },
+              {
+                "boltz_chain": "B",
+                "coordinate_chain": "B",
+                "target_residues": 54,
+                "coordinate_residues": 54,
+                "aligned_residues": 54,
+                "exact_component_matches": 54,
+                "compatible_component_matches": 54,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              },
+              {
+                "boltz_chain": "C",
+                "coordinate_chain": "C",
+                "target_residues": 54,
+                "coordinate_residues": 54,
+                "aligned_residues": 54,
+                "exact_component_matches": 54,
+                "compatible_component_matches": 54,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              }
+            ],
+            "source_restraints": {
+              "group_count": 7065,
+              "group_model_state_counts": {
+                "indeterminate": 3374,
+                "satisfied": 132510,
+                "violated": 5416
+              },
+              "groups_satisfied_in_any_model": 6803,
+              "groups_satisfied_in_every_model": 6240,
+              "groups_indeterminate_in_every_model": 163
+            },
+            "heavy_atom_constraints": {
+              "constraint_count": 3358,
+              "resolved_model_cases": 67000,
+              "satisfied_model_cases": 66987,
+              "violated_model_cases": 13,
+              "missing_model_cases": 160,
+              "satisfaction_fraction_of_resolved": 0.9998059701492538,
+              "constraints_resolved_in_every_model": 3350,
+              "constraints_satisfied_in_any_model": 3350,
+              "constraints_satisfied_in_every_model": 3342
+            },
+            "projection_implication_audit": {
+              "antecedent_cases": 63359,
+              "failure_count": 0,
+              "failures": []
+            }
+          }
+        },
+        "star": {
+          "detected_format": "nmr-star",
+          "has_distance_restraints": true,
+          "restraint_groups": 7065,
+          "source_alternatives": 8981,
+          "emitted_constraints": 3524,
+          "ambiguous_groups": 75,
+          "rejection_records": 1782,
+          "rejection_reasons": {
+            "unresolved_atom_topology": 138,
+            "same_heavy_parent_atom": 60,
+            "complex_restraint_combination_logic": 1584
+          },
+          "sequence_records": 162,
+          "warnings": [
+            "NMR-STAR component indices for chain A were not contiguous 1..N; Boltz indices use sequence-loop order",
+            "NMR-STAR component indices for chain B were not contiguous 1..N; Boltz indices use sequence-loop order",
+            "NMR-STAR component indices for chain C were not contiguous 1..N; Boltz indices use sequence-loop order"
+          ],
+          "coordinates": {
+            "pdb": "benchmark\\input\\9CCH\\9CCH.pdb",
+            "model_count": 20,
+            "tolerance_angstrom": 0.01,
+            "sequence_alignment": [
+              {
+                "boltz_chain": "A",
+                "coordinate_chain": "A",
+                "target_residues": 54,
+                "coordinate_residues": 54,
+                "aligned_residues": 54,
+                "exact_component_matches": 54,
+                "compatible_component_matches": 54,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              },
+              {
+                "boltz_chain": "B",
+                "coordinate_chain": "B",
+                "target_residues": 54,
+                "coordinate_residues": 54,
+                "aligned_residues": 54,
+                "exact_component_matches": 54,
+                "compatible_component_matches": 54,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              },
+              {
+                "boltz_chain": "C",
+                "coordinate_chain": "C",
+                "target_residues": 54,
+                "coordinate_residues": 54,
+                "aligned_residues": 54,
+                "exact_component_matches": 54,
+                "compatible_component_matches": 54,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              }
+            ],
+            "source_restraints": {
+              "group_count": 7065,
+              "group_model_state_counts": {
+                "indeterminate": 3313,
+                "satisfied": 134381,
+                "violated": 3606
+              },
+              "groups_satisfied_in_any_model": 6841,
+              "groups_satisfied_in_every_model": 6458,
+              "groups_indeterminate_in_every_model": 162
+            },
+            "heavy_atom_constraints": {
+              "constraint_count": 3524,
+              "resolved_model_cases": 70320,
+              "satisfied_model_cases": 70320,
+              "violated_model_cases": 0,
+              "missing_model_cases": 160,
+              "satisfaction_fraction_of_resolved": 1.0,
+              "constraints_resolved_in_every_model": 3516,
+              "constraints_satisfied_in_any_model": 3516,
+              "constraints_satisfied_in_every_model": 3516
+            },
+            "projection_implication_audit": {
+              "antecedent_cases": 67967,
+              "failure_count": 0,
+              "failures": []
+            }
+          }
+        }
+      },
+      "format_parity": {
+        "nef_constraints": 3358,
+        "star_constraints": 3524,
+        "common_atom_pairs": 3350,
+        "nef_only_atom_pairs": 8,
+        "star_only_atom_pairs": 174,
+        "common_pairs_with_different_bounds": 1754,
+        "maximum_common_bound_delta_angstrom": 2.786172292936673,
+        "exact_pair_and_bound_parity": false
+      }
+    },
+    {
+      "case_id": "9D99",
+      "status": "pass",
+      "formats": {
+        "nef": {
+          "detected_format": "nef",
+          "has_distance_restraints": true,
+          "restraint_groups": 1548,
+          "source_alternatives": 3386,
+          "emitted_constraints": 456,
+          "ambiguous_groups": 0,
+          "rejection_records": 1098,
+          "rejection_reasons": {
+            "complex_restraint_combination_logic": 894,
+            "same_heavy_parent_atom": 192,
+            "unresolved_atom_topology": 12
+          },
+          "sequence_records": 74,
+          "warnings": [],
+          "coordinates": {
+            "pdb": "benchmark\\input\\9D99\\9D99.pdb",
+            "model_count": 10,
+            "tolerance_angstrom": 0.01,
+            "sequence_alignment": [
+              {
+                "boltz_chain": "A",
+                "coordinate_chain": "A",
+                "target_residues": 37,
+                "coordinate_residues": 37,
+                "aligned_residues": 37,
+                "exact_component_matches": 37,
+                "compatible_component_matches": 37,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              },
+              {
+                "boltz_chain": "B",
+                "coordinate_chain": "B",
+                "target_residues": 37,
+                "coordinate_residues": 37,
+                "aligned_residues": 37,
+                "exact_component_matches": 37,
+                "compatible_component_matches": 37,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              }
+            ],
+            "source_restraints": {
+              "group_count": 1548,
+              "group_model_state_counts": {
+                "satisfied": 14515,
+                "violated": 845,
+                "indeterminate": 120
+              },
+              "groups_satisfied_in_any_model": 1473,
+              "groups_satisfied_in_every_model": 1411,
+              "groups_indeterminate_in_every_model": 12
+            },
+            "heavy_atom_constraints": {
+              "constraint_count": 456,
+              "resolved_model_cases": 4560,
+              "satisfied_model_cases": 4560,
+              "violated_model_cases": 0,
+              "missing_model_cases": 0,
+              "satisfaction_fraction_of_resolved": 1.0,
+              "constraints_resolved_in_every_model": 456,
+              "constraints_satisfied_in_any_model": 456,
+              "constraints_satisfied_in_every_model": 456
+            },
+            "projection_implication_audit": {
+              "antecedent_cases": 4454,
+              "failure_count": 0,
+              "failures": []
+            }
+          }
+        },
+        "star": {
+          "detected_format": "nmr-star",
+          "has_distance_restraints": true,
+          "restraint_groups": 1548,
+          "source_alternatives": 4292,
+          "emitted_constraints": 456,
+          "ambiguous_groups": 0,
+          "rejection_records": 954,
+          "rejection_reasons": {
+            "complex_restraint_combination_logic": 894,
+            "same_heavy_parent_atom": 48,
+            "unresolved_atom_topology": 12
+          },
+          "sequence_records": 74,
+          "warnings": [],
+          "coordinates": {
+            "pdb": "benchmark\\input\\9D99\\9D99.pdb",
+            "model_count": 10,
+            "tolerance_angstrom": 0.01,
+            "sequence_alignment": [
+              {
+                "boltz_chain": "A",
+                "coordinate_chain": "A",
+                "target_residues": 37,
+                "coordinate_residues": 37,
+                "aligned_residues": 37,
+                "exact_component_matches": 37,
+                "compatible_component_matches": 37,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              },
+              {
+                "boltz_chain": "B",
+                "coordinate_chain": "B",
+                "target_residues": 37,
+                "coordinate_residues": 37,
+                "aligned_residues": 37,
+                "exact_component_matches": 37,
+                "compatible_component_matches": 37,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              }
+            ],
+            "source_restraints": {
+              "group_count": 1548,
+              "group_model_state_counts": {
+                "satisfied": 13831,
+                "violated": 1529,
+                "indeterminate": 120
+              },
+              "groups_satisfied_in_any_model": 1423,
+              "groups_satisfied_in_every_model": 1320,
+              "groups_indeterminate_in_every_model": 12
+            },
+            "heavy_atom_constraints": {
+              "constraint_count": 456,
+              "resolved_model_cases": 4560,
+              "satisfied_model_cases": 4560,
+              "violated_model_cases": 0,
+              "missing_model_cases": 0,
+              "satisfaction_fraction_of_resolved": 1.0,
+              "constraints_resolved_in_every_model": 456,
+              "constraints_satisfied_in_any_model": 456,
+              "constraints_satisfied_in_every_model": 456
+            },
+            "projection_implication_audit": {
+              "antecedent_cases": 4357,
+              "failure_count": 0,
+              "failures": []
+            }
+          }
+        }
+      },
+      "format_parity": {
+        "nef_constraints": 456,
+        "star_constraints": 456,
+        "common_atom_pairs": 456,
+        "nef_only_atom_pairs": 0,
+        "star_only_atom_pairs": 0,
+        "common_pairs_with_different_bounds": 0,
+        "maximum_common_bound_delta_angstrom": 0.0,
+        "exact_pair_and_bound_parity": true
+      }
+    },
+    {
+      "case_id": "9KG4",
+      "status": "pass",
+      "formats": {
+        "nef": {
+          "detected_format": "nef",
+          "has_distance_restraints": true,
+          "restraint_groups": 553,
+          "source_alternatives": 554,
+          "emitted_constraints": 406,
+          "ambiguous_groups": 12,
+          "rejection_records": 0,
+          "rejection_reasons": {},
+          "sequence_records": 24,
+          "warnings": [],
+          "coordinates": {
+            "pdb": "benchmark\\input\\9KG4\\9KG4.pdb",
+            "model_count": 15,
+            "tolerance_angstrom": 0.01,
+            "sequence_alignment": [
+              {
+                "boltz_chain": "X",
+                "coordinate_chain": "X",
+                "target_residues": 24,
+                "coordinate_residues": 24,
+                "aligned_residues": 24,
+                "exact_component_matches": 24,
+                "compatible_component_matches": 24,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              }
+            ],
+            "source_restraints": {
+              "group_count": 553,
+              "group_model_state_counts": {
+                "satisfied": 8238,
+                "violated": 56,
+                "indeterminate": 1
+              },
+              "groups_satisfied_in_any_model": 552,
+              "groups_satisfied_in_every_model": 540,
+              "groups_indeterminate_in_every_model": 0
+            },
+            "heavy_atom_constraints": {
+              "constraint_count": 406,
+              "resolved_model_cases": 6090,
+              "satisfied_model_cases": 6074,
+              "violated_model_cases": 16,
+              "missing_model_cases": 0,
+              "satisfaction_fraction_of_resolved": 0.9973727422003285,
+              "constraints_resolved_in_every_model": 406,
+              "constraints_satisfied_in_any_model": 406,
+              "constraints_satisfied_in_every_model": 402
+            },
+            "projection_implication_audit": {
+              "antecedent_cases": 6034,
+              "failure_count": 0,
+              "failures": []
+            }
+          }
+        },
+        "star": {
+          "detected_format": "nmr-star",
+          "has_distance_restraints": true,
+          "restraint_groups": 553,
+          "source_alternatives": 554,
+          "emitted_constraints": 406,
+          "ambiguous_groups": 0,
+          "rejection_records": 0,
+          "rejection_reasons": {},
+          "sequence_records": 24,
+          "warnings": [],
+          "coordinates": {
+            "pdb": "benchmark\\input\\9KG4\\9KG4.pdb",
+            "model_count": 15,
+            "tolerance_angstrom": 0.01,
+            "sequence_alignment": [
+              {
+                "boltz_chain": "X",
+                "coordinate_chain": "X",
+                "target_residues": 24,
+                "coordinate_residues": 24,
+                "aligned_residues": 24,
+                "exact_component_matches": 24,
+                "compatible_component_matches": 24,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              }
+            ],
+            "source_restraints": {
+              "group_count": 553,
+              "group_model_state_counts": {
+                "satisfied": 6878,
+                "violated": 1417
+              },
+              "groups_satisfied_in_any_model": 461,
+              "groups_satisfied_in_every_model": 452,
+              "groups_indeterminate_in_every_model": 0
+            },
+            "heavy_atom_constraints": {
+              "constraint_count": 406,
+              "resolved_model_cases": 6090,
+              "satisfied_model_cases": 6074,
+              "violated_model_cases": 16,
+              "missing_model_cases": 0,
+              "satisfaction_fraction_of_resolved": 0.9973727422003285,
+              "constraints_resolved_in_every_model": 406,
+              "constraints_satisfied_in_any_model": 406,
+              "constraints_satisfied_in_every_model": 402
+            },
+            "projection_implication_audit": {
+              "antecedent_cases": 5018,
+              "failure_count": 0,
+              "failures": []
+            }
+          }
+        }
+      },
+      "format_parity": {
+        "nef_constraints": 406,
+        "star_constraints": 406,
+        "common_atom_pairs": 406,
+        "nef_only_atom_pairs": 0,
+        "star_only_atom_pairs": 0,
+        "common_pairs_with_different_bounds": 0,
+        "maximum_common_bound_delta_angstrom": 0.0,
+        "exact_pair_and_bound_parity": true
+      }
+    },
+    {
+      "case_id": "9PQH",
+      "status": "pass",
+      "formats": {
+        "nef": {
+          "detected_format": "nef",
+          "has_distance_restraints": true,
+          "restraint_groups": 60,
+          "source_alternatives": 336,
+          "emitted_constraints": 3,
+          "ambiguous_groups": 0,
+          "rejection_records": 312,
+          "rejection_reasons": {
+            "sequence_residue_mismatch": 312
+          },
+          "sequence_records": 170,
+          "warnings": [],
+          "coordinates": {
+            "pdb": "benchmark\\input\\9PQH\\9PQH.pdb",
+            "model_count": 10,
+            "tolerance_angstrom": 0.01,
+            "sequence_alignment": [
+              {
+                "boltz_chain": "A",
+                "coordinate_chain": "A",
+                "target_residues": 150,
+                "coordinate_residues": 150,
+                "aligned_residues": 150,
+                "exact_component_matches": 146,
+                "compatible_component_matches": 146,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              },
+              {
+                "boltz_chain": "B",
+                "coordinate_chain": "B",
+                "target_residues": 20,
+                "coordinate_residues": 20,
+                "aligned_residues": 20,
+                "exact_component_matches": 20,
+                "compatible_component_matches": 20,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              }
+            ],
+            "source_restraints": {
+              "group_count": 60,
+              "group_model_state_counts": {
+                "satisfied": 10,
+                "indeterminate": 560,
+                "violated": 30
+              },
+              "groups_satisfied_in_any_model": 1,
+              "groups_satisfied_in_every_model": 1,
+              "groups_indeterminate_in_every_model": 56
+            },
+            "heavy_atom_constraints": {
+              "constraint_count": 3,
+              "resolved_model_cases": 30,
+              "satisfied_model_cases": 1,
+              "violated_model_cases": 29,
+              "missing_model_cases": 0,
+              "satisfaction_fraction_of_resolved": 0.03333333333333333,
+              "constraints_resolved_in_every_model": 3,
+              "constraints_satisfied_in_any_model": 1,
+              "constraints_satisfied_in_every_model": 0
+            },
+            "projection_implication_audit": {
+              "antecedent_cases": 0,
+              "failure_count": 0,
+              "failures": []
+            }
+          }
+        },
+        "star": {
+          "detected_format": "nmr-star",
+          "has_distance_restraints": true,
+          "restraint_groups": 60,
+          "source_alternatives": 60,
+          "emitted_constraints": 44,
+          "ambiguous_groups": 15,
+          "rejection_records": 0,
+          "rejection_reasons": {},
+          "sequence_records": 170,
+          "warnings": [
+            "NMR-STAR component indices for chain A were not contiguous 1..N; Boltz indices use sequence-loop order"
+          ],
+          "coordinates": {
+            "pdb": "benchmark\\input\\9PQH\\9PQH.pdb",
+            "model_count": 10,
+            "tolerance_angstrom": 0.01,
+            "sequence_alignment": [
+              {
+                "boltz_chain": "A",
+                "coordinate_chain": "A",
+                "target_residues": 150,
+                "coordinate_residues": 150,
+                "aligned_residues": 150,
+                "exact_component_matches": 146,
+                "compatible_component_matches": 146,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              },
+              {
+                "boltz_chain": "B",
+                "coordinate_chain": "B",
+                "target_residues": 20,
+                "coordinate_residues": 20,
+                "aligned_residues": 20,
+                "exact_component_matches": 20,
+                "compatible_component_matches": 20,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              }
+            ],
+            "source_restraints": {
+              "group_count": 60,
+              "group_model_state_counts": {
+                "satisfied": 517,
+                "violated": 83
+              },
+              "groups_satisfied_in_any_model": 56,
+              "groups_satisfied_in_every_model": 37,
+              "groups_indeterminate_in_every_model": 0
+            },
+            "heavy_atom_constraints": {
+              "constraint_count": 44,
+              "resolved_model_cases": 440,
+              "satisfied_model_cases": 440,
+              "violated_model_cases": 0,
+              "missing_model_cases": 0,
+              "satisfaction_fraction_of_resolved": 1.0,
+              "constraints_resolved_in_every_model": 44,
+              "constraints_satisfied_in_any_model": 44,
+              "constraints_satisfied_in_every_model": 44
+            },
+            "projection_implication_audit": {
+              "antecedent_cases": 368,
+              "failure_count": 0,
+              "failures": []
+            }
+          }
+        }
+      },
+      "format_parity": {
+        "nef_constraints": 3,
+        "star_constraints": 44,
+        "common_atom_pairs": 2,
+        "nef_only_atom_pairs": 1,
+        "star_only_atom_pairs": 42,
+        "common_pairs_with_different_bounds": 2,
+        "maximum_common_bound_delta_angstrom": 2.653497421844449,
+        "exact_pair_and_bound_parity": false
+      }
+    },
+    {
+      "case_id": "9SGX",
+      "status": "pass",
+      "formats": {
+        "nef": {
+          "detected_format": "nef",
+          "has_distance_restraints": true,
+          "restraint_groups": 2720,
+          "source_alternatives": 4926,
+          "emitted_constraints": 1578,
+          "ambiguous_groups": 766,
+          "rejection_records": 0,
+          "rejection_reasons": {},
+          "sequence_records": 124,
+          "warnings": [],
+          "coordinates": {
+            "pdb": "benchmark\\input\\9SGX\\9SGX.pdb",
+            "model_count": 20,
+            "tolerance_angstrom": 0.01,
+            "sequence_alignment": [
+              {
+                "boltz_chain": "B",
+                "coordinate_chain": "B",
+                "target_residues": 54,
+                "coordinate_residues": 54,
+                "aligned_residues": 54,
+                "exact_component_matches": 54,
+                "compatible_component_matches": 54,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              },
+              {
+                "boltz_chain": "A",
+                "coordinate_chain": "A",
+                "target_residues": 70,
+                "coordinate_residues": 70,
+                "aligned_residues": 70,
+                "exact_component_matches": 70,
+                "compatible_component_matches": 70,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              }
+            ],
+            "source_restraints": {
+              "group_count": 2720,
+              "group_model_state_counts": {
+                "satisfied": 47811,
+                "violated": 6589
+              },
+              "groups_satisfied_in_any_model": 2613,
+              "groups_satisfied_in_every_model": 2018,
+              "groups_indeterminate_in_every_model": 0
+            },
+            "heavy_atom_constraints": {
+              "constraint_count": 1578,
+              "resolved_model_cases": 31560,
+              "satisfied_model_cases": 31559,
+              "violated_model_cases": 1,
+              "missing_model_cases": 0,
+              "satisfaction_fraction_of_resolved": 0.9999683143219265,
+              "constraints_resolved_in_every_model": 1578,
+              "constraints_satisfied_in_any_model": 1578,
+              "constraints_satisfied_in_every_model": 1577
+            },
+            "projection_implication_audit": {
+              "antecedent_cases": 27571,
+              "failure_count": 0,
+              "failures": []
+            }
+          }
+        },
+        "star": {
+          "detected_format": "nmr-star",
+          "has_distance_restraints": true,
+          "restraint_groups": 2720,
+          "source_alternatives": 8430,
+          "emitted_constraints": 765,
+          "ambiguous_groups": 0,
+          "rejection_records": 7509,
+          "rejection_reasons": {
+            "unresolved_atom_topology": 7507,
+            "partially_unprojectable_or_group": 2
+          },
+          "sequence_records": 124,
+          "warnings": [],
+          "coordinates": {
+            "pdb": "benchmark\\input\\9SGX\\9SGX.pdb",
+            "model_count": 20,
+            "tolerance_angstrom": 0.01,
+            "sequence_alignment": [
+              {
+                "boltz_chain": "B",
+                "coordinate_chain": "B",
+                "target_residues": 54,
+                "coordinate_residues": 54,
+                "aligned_residues": 54,
+                "exact_component_matches": 54,
+                "compatible_component_matches": 54,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              },
+              {
+                "boltz_chain": "A",
+                "coordinate_chain": "A",
+                "target_residues": 70,
+                "coordinate_residues": 70,
+                "aligned_residues": 70,
+                "exact_component_matches": 70,
+                "compatible_component_matches": 70,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              }
+            ],
+            "source_restraints": {
+              "group_count": 2720,
+              "group_model_state_counts": {
+                "indeterminate": 36100,
+                "satisfied": 15473,
+                "violated": 2827
+              },
+              "groups_satisfied_in_any_model": 829,
+              "groups_satisfied_in_every_model": 671,
+              "groups_indeterminate_in_every_model": 1805
+            },
+            "heavy_atom_constraints": {
+              "constraint_count": 765,
+              "resolved_model_cases": 15300,
+              "satisfied_model_cases": 15300,
+              "violated_model_cases": 0,
+              "missing_model_cases": 0,
+              "satisfaction_fraction_of_resolved": 1.0,
+              "constraints_resolved_in_every_model": 765,
+              "constraints_satisfied_in_any_model": 765,
+              "constraints_satisfied_in_every_model": 765
+            },
+            "projection_implication_audit": {
+              "antecedent_cases": 12569,
+              "failure_count": 0,
+              "failures": []
+            }
+          }
+        }
+      },
+      "format_parity": {
+        "nef_constraints": 1578,
+        "star_constraints": 765,
+        "common_atom_pairs": 765,
+        "nef_only_atom_pairs": 813,
+        "star_only_atom_pairs": 0,
+        "common_pairs_with_different_bounds": 0,
+        "maximum_common_bound_delta_angstrom": 0.0,
+        "exact_pair_and_bound_parity": false
+      }
+    },
+    {
+      "case_id": "9VQ1",
+      "status": "pass",
+      "formats": {
+        "nef": {
+          "detected_format": "nef",
+          "has_distance_restraints": true,
+          "restraint_groups": 100,
+          "source_alternatives": 100,
+          "emitted_constraints": 53,
+          "ambiguous_groups": 3,
+          "rejection_records": 0,
+          "rejection_reasons": {},
+          "sequence_records": 98,
+          "warnings": [],
+          "coordinates": {
+            "pdb": "benchmark\\input\\9VQ1\\9VQ1.pdb",
+            "model_count": 20,
+            "tolerance_angstrom": 0.01,
+            "sequence_alignment": [
+              {
+                "boltz_chain": "A",
+                "coordinate_chain": "A",
+                "target_residues": 83,
+                "coordinate_residues": 83,
+                "aligned_residues": 83,
+                "exact_component_matches": 83,
+                "compatible_component_matches": 83,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              },
+              {
+                "boltz_chain": "B",
+                "coordinate_chain": "B",
+                "target_residues": 15,
+                "coordinate_residues": 15,
+                "aligned_residues": 15,
+                "exact_component_matches": 15,
+                "compatible_component_matches": 15,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              }
+            ],
+            "source_restraints": {
+              "group_count": 100,
+              "group_model_state_counts": {
+                "violated": 187,
+                "satisfied": 1813
+              },
+              "groups_satisfied_in_any_model": 96,
+              "groups_satisfied_in_every_model": 73,
+              "groups_indeterminate_in_every_model": 0
+            },
+            "heavy_atom_constraints": {
+              "constraint_count": 53,
+              "resolved_model_cases": 1060,
+              "satisfied_model_cases": 1007,
+              "violated_model_cases": 53,
+              "missing_model_cases": 0,
+              "satisfaction_fraction_of_resolved": 0.95,
+              "constraints_resolved_in_every_model": 53,
+              "constraints_satisfied_in_any_model": 52,
+              "constraints_satisfied_in_every_model": 42
+            },
+            "projection_implication_audit": {
+              "antecedent_cases": 905,
+              "failure_count": 0,
+              "failures": []
+            }
+          }
+        },
+        "star": {
+          "detected_format": "nmr-star",
+          "has_distance_restraints": true,
+          "restraint_groups": 100,
+          "source_alternatives": 100,
+          "emitted_constraints": 56,
+          "ambiguous_groups": 0,
+          "rejection_records": 0,
+          "rejection_reasons": {},
+          "sequence_records": 98,
+          "warnings": [],
+          "coordinates": {
+            "pdb": "benchmark\\input\\9VQ1\\9VQ1.pdb",
+            "model_count": 20,
+            "tolerance_angstrom": 0.01,
+            "sequence_alignment": [
+              {
+                "boltz_chain": "A",
+                "coordinate_chain": "A",
+                "target_residues": 83,
+                "coordinate_residues": 83,
+                "aligned_residues": 83,
+                "exact_component_matches": 83,
+                "compatible_component_matches": 83,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              },
+              {
+                "boltz_chain": "B",
+                "coordinate_chain": "B",
+                "target_residues": 15,
+                "coordinate_residues": 15,
+                "aligned_residues": 15,
+                "exact_component_matches": 15,
+                "compatible_component_matches": 15,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              }
+            ],
+            "source_restraints": {
+              "group_count": 100,
+              "group_model_state_counts": {
+                "violated": 190,
+                "satisfied": 1810
+              },
+              "groups_satisfied_in_any_model": 96,
+              "groups_satisfied_in_every_model": 73,
+              "groups_indeterminate_in_every_model": 0
+            },
+            "heavy_atom_constraints": {
+              "constraint_count": 56,
+              "resolved_model_cases": 1120,
+              "satisfied_model_cases": 1055,
+              "violated_model_cases": 65,
+              "missing_model_cases": 0,
+              "satisfaction_fraction_of_resolved": 0.9419642857142857,
+              "constraints_resolved_in_every_model": 56,
+              "constraints_satisfied_in_any_model": 55,
+              "constraints_satisfied_in_every_model": 42
+            },
+            "projection_implication_audit": {
+              "antecedent_cases": 953,
+              "failure_count": 0,
+              "failures": []
+            }
+          }
+        }
+      },
+      "format_parity": {
+        "nef_constraints": 53,
+        "star_constraints": 56,
+        "common_atom_pairs": 53,
+        "nef_only_atom_pairs": 0,
+        "star_only_atom_pairs": 3,
+        "common_pairs_with_different_bounds": 0,
+        "maximum_common_bound_delta_angstrom": 0.0,
+        "exact_pair_and_bound_parity": false
+      }
+    },
+    {
+      "case_id": "9VUY",
+      "status": "pass",
+      "formats": {
+        "nef": {
+          "detected_format": "nef",
+          "has_distance_restraints": true,
+          "restraint_groups": 2590,
+          "source_alternatives": 5020,
+          "emitted_constraints": 1327,
+          "ambiguous_groups": 727,
+          "rejection_records": 168,
+          "rejection_reasons": {
+            "missing_upper_bound": 168
+          },
+          "sequence_records": 133,
+          "warnings": [],
+          "coordinates": {
+            "pdb": "benchmark\\input\\9VUY\\9VUY.pdb",
+            "model_count": 20,
+            "tolerance_angstrom": 0.01,
+            "sequence_alignment": [
+              {
+                "boltz_chain": "A",
+                "coordinate_chain": "A",
+                "target_residues": 119,
+                "coordinate_residues": 119,
+                "aligned_residues": 119,
+                "exact_component_matches": 119,
+                "compatible_component_matches": 119,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              },
+              {
+                "boltz_chain": "B",
+                "coordinate_chain": "B",
+                "target_residues": 14,
+                "coordinate_residues": 14,
+                "aligned_residues": 14,
+                "exact_component_matches": 14,
+                "compatible_component_matches": 14,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              }
+            ],
+            "source_restraints": {
+              "group_count": 2590,
+              "group_model_state_counts": {
+                "satisfied": 43911,
+                "violated": 4529,
+                "indeterminate": 3360
+              },
+              "groups_satisfied_in_any_model": 2329,
+              "groups_satisfied_in_every_model": 1965,
+              "groups_indeterminate_in_every_model": 168
+            },
+            "heavy_atom_constraints": {
+              "constraint_count": 1327,
+              "resolved_model_cases": 26540,
+              "satisfied_model_cases": 26530,
+              "violated_model_cases": 10,
+              "missing_model_cases": 0,
+              "satisfaction_fraction_of_resolved": 0.9996232102486813,
+              "constraints_resolved_in_every_model": 1327,
+              "constraints_satisfied_in_any_model": 1327,
+              "constraints_satisfied_in_every_model": 1323
+            },
+            "projection_implication_audit": {
+              "antecedent_cases": 23516,
+              "failure_count": 0,
+              "failures": []
+            }
+          }
+        },
+        "star": {
+          "detected_format": "nmr-star",
+          "has_distance_restraints": true,
+          "restraint_groups": 2590,
+          "source_alternatives": 7718,
+          "emitted_constraints": 703,
+          "ambiguous_groups": 0,
+          "rejection_records": 6737,
+          "rejection_reasons": {
+            "unresolved_atom_topology": 6569,
+            "missing_upper_bound": 168
+          },
+          "sequence_records": 133,
+          "warnings": [],
+          "coordinates": {
+            "pdb": "benchmark\\input\\9VUY\\9VUY.pdb",
+            "model_count": 20,
+            "tolerance_angstrom": 0.01,
+            "sequence_alignment": [
+              {
+                "boltz_chain": "A",
+                "coordinate_chain": "A",
+                "target_residues": 119,
+                "coordinate_residues": 119,
+                "aligned_residues": 119,
+                "exact_component_matches": 119,
+                "compatible_component_matches": 119,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              },
+              {
+                "boltz_chain": "B",
+                "coordinate_chain": "B",
+                "target_residues": 14,
+                "coordinate_residues": 14,
+                "aligned_residues": 14,
+                "exact_component_matches": 14,
+                "compatible_component_matches": 14,
+                "unmapped_target_residues": 0,
+                "unmapped_coordinate_residues": 0
+              }
+            ],
+            "source_restraints": {
+              "group_count": 2590,
+              "group_model_state_counts": {
+                "satisfied": 17843,
+                "indeterminate": 33340,
+                "violated": 617
+              },
+              "groups_satisfied_in_any_model": 910,
+              "groups_satisfied_in_every_model": 858,
+              "groups_indeterminate_in_every_model": 1667
+            },
+            "heavy_atom_constraints": {
+              "constraint_count": 703,
+              "resolved_model_cases": 14060,
+              "satisfied_model_cases": 14060,
+              "violated_model_cases": 0,
+              "missing_model_cases": 0,
+              "satisfaction_fraction_of_resolved": 1.0,
+              "constraints_resolved_in_every_model": 703,
+              "constraints_satisfied_in_any_model": 703,
+              "constraints_satisfied_in_every_model": 703
+            },
+            "projection_implication_audit": {
+              "antecedent_cases": 13443,
+              "failure_count": 0,
+              "failures": []
+            }
+          }
+        }
+      },
+      "format_parity": {
+        "nef_constraints": 1327,
+        "star_constraints": 703,
+        "common_atom_pairs": 696,
+        "nef_only_atom_pairs": 631,
+        "star_only_atom_pairs": 7,
+        "common_pairs_with_different_bounds": 96,
+        "maximum_common_bound_delta_angstrom": 1.660000000000001,
+        "exact_pair_and_bound_parity": false
+      }
+    }
+  ]
+}

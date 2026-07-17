@@ -1,0 +1,10 @@
+{
+  "nef_constraints": 1716,
+  "star_constraints": 1716,
+  "common_atom_pairs": 1716,
+  "nef_only_atom_pairs": 0,
+  "star_only_atom_pairs": 0,
+  "common_pairs_with_different_bounds": 355,
+  "maximum_common_bound_delta_angstrom": 2.861354719888931,
+  "exact_pair_and_bound_parity": false
+}

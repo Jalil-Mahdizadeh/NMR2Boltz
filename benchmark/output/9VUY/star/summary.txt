@@ -1,0 +1,17 @@
+NMR-to-Boltz heavy-atom projection summary
+==============================================
+Input: benchmark\input\9VUY\9vuy_nmr-data.str
+Detected format: nmr-star
+Restraint groups read: 2590
+Source alternatives read: 7718
+Safe groups before pair deduplication: 923
+Unique Boltz constraints emitted: 703
+Ambiguous OR groups quarantined: 0
+Rejection records: 6737
+
+Important:
+- boltz_constraints.yaml contains only constraints that may be imposed simultaneously.
+- ambiguous_groups.tsv preserves true OR alternatives; adding all of them would overconstrain the model.
+- proposed_atom_contact_unions.yaml is a proposed schema, not accepted by the current BoltzUI parser.
+- conversion_report.json is the lossless audit/provenance record.
+- sequences.fasta contains polymer-only sequences extracted from the source sequence map.

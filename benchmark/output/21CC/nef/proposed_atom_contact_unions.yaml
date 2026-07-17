@@ -1,0 +1,246 @@
+# PROPOSED schema for preserving assignment ambiguity; not accepted by the current BoltzUI parser.
+x_nmr2boltz_schema: proposed-atom-contact-union-v1
+compatible_with_current_boltzui_atom_contact_parser: false
+note: Each item is one OR group. Implement as a shared union index in the Boltz distance potential; do not mark every alternative
+  as a simultaneous token contact.
+constraints:
+- atom_contact_union:
+    group_id: nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:183
+    restraint_id: '183'
+    alternatives:
+    - atom1: [A, 6, C1']
+      atom2: [A, 8, C2]
+      max_distance: 11.24
+      source_rows:
+      - '183'
+    - atom1: [A, 7, C1']
+      atom2: [A, 8, C2]
+      max_distance: 11.24
+      source_rows:
+      - '184'
+    force: true
+- atom_contact_union:
+    group_id: nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:184
+    restraint_id: '184'
+    alternatives:
+    - atom1: [B, 6, C1']
+      atom2: [B, 8, C2]
+      max_distance: 11.24
+      source_rows:
+      - '185'
+    - atom1: [B, 7, C1']
+      atom2: [B, 8, C2]
+      max_distance: 11.24
+      source_rows:
+      - '186'
+    force: true
+- atom_contact_union:
+    group_id: nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:185
+    restraint_id: '185'
+    alternatives:
+    - atom1: [A, 6, C6]
+      atom2: [A, 8, C8]
+      max_distance: 11.24
+      source_rows:
+      - '187'
+    - atom1: [A, 7, C6]
+      atom2: [A, 8, C8]
+      max_distance: 11.24
+      source_rows:
+      - '188'
+    force: true
+- atom_contact_union:
+    group_id: nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:186
+    restraint_id: '186'
+    alternatives:
+    - atom1: [B, 6, C6]
+      atom2: [B, 8, C8]
+      max_distance: 11.24
+      source_rows:
+      - '189'
+    - atom1: [B, 7, C6]
+      atom2: [B, 8, C8]
+      max_distance: 11.24
+      source_rows:
+      - '190'
+    force: true
+- atom_contact_union:
+    group_id: nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:191
+    restraint_id: '191'
+    alternatives:
+    - atom1: [A, 6, C1']
+      atom2: [A, 8, C8]
+      max_distance: 11.24
+      source_rows:
+      - '195'
+    - atom1: [A, 7, C1']
+      atom2: [A, 8, C8]
+      max_distance: 11.24
+      source_rows:
+      - '196'
+    force: true
+- atom_contact_union:
+    group_id: nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:192
+    restraint_id: '192'
+    alternatives:
+    - atom1: [B, 6, C1']
+      atom2: [B, 8, C8]
+      max_distance: 11.24
+      source_rows:
+      - '197'
+    - atom1: [B, 7, C1']
+      atom2: [B, 8, C8]
+      max_distance: 11.24
+      source_rows:
+      - '198'
+    force: true
+- atom_contact_union:
+    group_id: nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:193
+    restraint_id: '193'
+    alternatives:
+    - atom1: [A, 6, C3']
+      atom2: [A, 8, C8]
+      max_distance: 7.29
+      source_rows:
+      - '199'
+    - atom1: [A, 7, C3']
+      atom2: [A, 8, C8]
+      max_distance: 7.29
+      source_rows:
+      - '200'
+    force: true
+- atom_contact_union:
+    group_id: nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:194
+    restraint_id: '194'
+    alternatives:
+    - atom1: [B, 6, C3']
+      atom2: [B, 8, C8]
+      max_distance: 7.29
+      source_rows:
+      - '201'
+    - atom1: [B, 7, C3']
+      atom2: [B, 8, C8]
+      max_distance: 7.29
+      source_rows:
+      - '202'
+    force: true
+- atom_contact_union:
+    group_id: nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:195
+    restraint_id: '195'
+    alternatives:
+    - atom1: [A, 6, C1']
+      atom2: [A, 8, C3']
+      max_distance: 11.24
+      source_rows:
+      - '203'
+    - atom1: [A, 7, C1']
+      atom2: [A, 8, C3']
+      max_distance: 11.24
+      source_rows:
+      - '204'
+    force: true
+- atom_contact_union:
+    group_id: nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:196
+    restraint_id: '196'
+    alternatives:
+    - atom1: [B, 6, C1']
+      atom2: [B, 8, C3']
+      max_distance: 11.24
+      source_rows:
+      - '205'
+    - atom1: [B, 7, C1']
+      atom2: [B, 8, C3']
+      max_distance: 11.24
+      source_rows:
+      - '206'
+    force: true
+- atom_contact_union:
+    group_id: nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:197
+    restraint_id: '197'
+    alternatives:
+    - atom1: [A, 6, C1']
+      atom2: [A, 8, C2']
+      max_distance: 11.24
+      source_rows:
+      - '207'
+    - atom1: [A, 7, C1']
+      atom2: [A, 8, C2']
+      max_distance: 11.24
+      source_rows:
+      - '208'
+    force: true
+- atom_contact_union:
+    group_id: nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:198
+    restraint_id: '198'
+    alternatives:
+    - atom1: [B, 6, C1']
+      atom2: [B, 8, C2']
+      max_distance: 11.24
+      source_rows:
+      - '209'
+    - atom1: [B, 7, C1']
+      atom2: [B, 8, C2']
+      max_distance: 11.24
+      source_rows:
+      - '210'
+    force: true
+- atom_contact_union:
+    group_id: nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:199
+    restraint_id: '199'
+    alternatives:
+    - atom1: [A, 6, C6]
+      atom2: [A, 8, C3']
+      max_distance: 11.24
+      source_rows:
+      - '211'
+    - atom1: [A, 7, C6]
+      atom2: [A, 8, C3']
+      max_distance: 11.24
+      source_rows:
+      - '212'
+    force: true
+- atom_contact_union:
+    group_id: nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:200
+    restraint_id: '200'
+    alternatives:
+    - atom1: [B, 6, C6]
+      atom2: [B, 8, C3']
+      max_distance: 11.24
+      source_rows:
+      - '213'
+    - atom1: [B, 7, C6]
+      atom2: [B, 8, C3']
+      max_distance: 11.24
+      source_rows:
+      - '214'
+    force: true
+- atom_contact_union:
+    group_id: nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:201
+    restraint_id: '201'
+    alternatives:
+    - atom1: [A, 6, C6]
+      atom2: [A, 8, C2']
+      max_distance: 11.24
+      source_rows:
+      - '215'
+    - atom1: [A, 7, C6]
+      atom2: [A, 8, C2']
+      max_distance: 11.24
+      source_rows:
+      - '216'
+    force: true
+- atom_contact_union:
+    group_id: nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:202
+    restraint_id: '202'
+    alternatives:
+    - atom1: [B, 6, C6]
+      atom2: [B, 8, C2']
+      max_distance: 11.24
+      source_rows:
+      - '217'
+    - atom1: [B, 7, C6]
+      atom2: [B, 8, C2']
+      max_distance: 11.24
+      source_rows:
+      - '218'
+    force: true

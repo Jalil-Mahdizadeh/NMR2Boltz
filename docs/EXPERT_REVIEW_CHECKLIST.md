@@ -13,6 +13,8 @@ Use this checklist before treating converted contacts as production restraints.
 ## Identifier mapping
 
 - [ ] Compare every chain in `sequence_map.tsv` with the exact Boltz YAML.
+- [ ] Compare `sequences.fasta` with the intended polymer sequence; confirm that omitted caps, ions, and ligands are represented separately in the Boltz target.
+- [ ] Resolve every `sequence_residue_mismatch`; do not repair it implicitly through atom topology.
 - [ ] Verify insertion codes, residue-number gaps, negative numbering, and chain aliases.
 - [ ] Verify all modified residues and ligands against the selected CCD chemistry.
 - [ ] Ensure the Boltz residue index is the one-based position in the input sequence, not the author residue number.
@@ -33,6 +35,7 @@ Use this checklist before treating converted contacts as production restraints.
 - [ ] Inspect every projected bound near or above the 20 Å Boltz limit.
 - [ ] Confirm that no over-20 Å value was clipped.
 - [ ] Confirm that multiple alternatives in one restraint ID were not emitted as simultaneous contacts.
+- [ ] When paired NEF/NMR-STAR files exist, inspect exact atom-pair and bound parity rather than only total counts.
 
 ## Boltz usage
 

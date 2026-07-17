@@ -1,0 +1,260 @@
+# PROPOSED schema for preserving assignment ambiguity; not accepted by the current BoltzUI parser.
+x_nmr2boltz_schema: proposed-atom-contact-union-v1
+compatible_with_current_boltzui_atom_contact_parser: false
+note: Each item is one OR group. Implement as a shared union index in the Boltz distance potential; do not mark every alternative
+  as a simultaneous token contact.
+constraints:
+- atom_contact_union:
+    group_id: nef_distance_restraint_list_CYANA_distance_restraints_1:56
+    restraint_id: '56'
+    alternatives:
+    - atom1: [A, 64, CD1]
+      atom2: [A, 73, CB]
+      max_distance: 10.214222
+      source_rows:
+      - '82'
+    - atom1: [A, 64, CD2]
+      atom2: [A, 73, CB]
+      max_distance: 10.214222
+      source_rows:
+      - '83'
+    force: true
+- atom_contact_union:
+    group_id: nef_distance_restraint_list_CYANA_distance_restraints_1:65
+    restraint_id: '65'
+    alternatives:
+    - atom1: [A, 64, CD1]
+      atom2: [A, 92, CB]
+      max_distance: 9.769875
+      source_rows:
+      - '93'
+    - atom1: [A, 64, CD2]
+      atom2: [A, 92, CB]
+      max_distance: 9.769875
+      source_rows:
+      - '94'
+    force: true
+- atom_contact_union:
+    group_id: nef_distance_restraint_list_CYANA_distance_restraints_1:77
+    restraint_id: '77'
+    alternatives:
+    - atom1: [A, 118, CG2]
+      atom2: [A, 121, CD1]
+      max_distance: 10.951188
+      source_rows:
+      - '114'
+    - atom1: [A, 118, CG2]
+      atom2: [A, 121, CD2]
+      max_distance: 10.951188
+      source_rows:
+      - '115'
+    force: true
+- atom_contact_union:
+    group_id: nef_distance_restraint_list_CYANA_distance_restraints_1:98
+    restraint_id: '98'
+    alternatives:
+    - atom1: [A, 64, CD1]
+      atom2: [A, 92, CB]
+      max_distance: 9.769875
+      source_rows:
+      - '151'
+    - atom1: [A, 64, CD2]
+      atom2: [A, 92, CB]
+      max_distance: 9.769875
+      source_rows:
+      - '152'
+    force: true
+- atom_contact_union:
+    group_id: nef_distance_restraint_list_CYANA_distance_restraints_1:104
+    restraint_id: '104'
+    alternatives:
+    - atom1: [A, 44, CD1]
+      atom2: [A, 55, N]
+      max_distance: 9.693847
+      source_rows:
+      - '159'
+    - atom1: [A, 44, CD2]
+      atom2: [A, 55, N]
+      max_distance: 9.693847
+      source_rows:
+      - '160'
+    force: true
+- atom_contact_union:
+    group_id: nef_distance_restraint_list_CYANA_distance_restraints_1:151
+    restraint_id: '151'
+    alternatives:
+    - atom1: [A, 46, CD1]
+      atom2: [A, 49, CB]
+      max_distance: 10.691999
+      source_rows:
+      - '216'
+    - atom1: [A, 46, CD2]
+      atom2: [A, 49, CB]
+      max_distance: 10.691999
+      source_rows:
+      - '217'
+    force: true
+- atom_contact_union:
+    group_id: nef_distance_restraint_list_CYANA_distance_restraints_1:478
+    restraint_id: '478'
+    alternatives:
+    - atom1: [A, 61, CA]
+      atom2: [A, 64, CD1]
+      max_distance: 9.529688
+      source_rows:
+      - '578'
+    - atom1: [A, 61, CA]
+      atom2: [A, 64, CD2]
+      max_distance: 9.529688
+      source_rows:
+      - '579'
+    force: true
+- atom_contact_union:
+    group_id: nef_distance_restraint_list_CYANA_distance_restraints_2:25
+    restraint_id: '25'
+    alternatives:
+    - atom1: [A, 46, CD1]
+      atom2: [A, 113, CB]
+      max_distance: 9.253472
+      source_rows:
+      - '36'
+    - atom1: [A, 46, CD2]
+      atom2: [A, 113, CB]
+      max_distance: 9.253472
+      source_rows:
+      - '37'
+    force: true
+- atom_contact_union:
+    group_id: nef_distance_restraint_list_CYANA_distance_restraints_2:113
+    restraint_id: '113'
+    alternatives:
+    - atom1: [A, 64, CD1]
+      atom2: [A, 73, N]
+      max_distance: 8.793144
+      source_rows:
+      - '145'
+    - atom1: [A, 64, CD2]
+      atom2: [A, 73, N]
+      max_distance: 8.793144
+      source_rows:
+      - '146'
+    force: true
+- atom_contact_union:
+    group_id: nef_distance_restraint_list_CYANA_distance_restraints_2:618
+    restraint_id: '618'
+    alternatives:
+    - atom1: [A, 44, CD1]
+      atom2: [A, 44, N]
+      max_distance: 9.009313
+      source_rows:
+      - '731'
+    - atom1: [A, 44, CD2]
+      atom2: [A, 44, N]
+      max_distance: 9.009313
+      source_rows:
+      - '732'
+    force: true
+- atom_contact_union:
+    group_id: nef_distance_restraint_list_CYANA_distance_restraints_2:622
+    restraint_id: '622'
+    alternatives:
+    - atom1: [A, 44, CB]
+      atom2: [A, 44, CD1]
+      max_distance: 9.277491
+      source_rows:
+      - '737'
+      - '739'
+    - atom1: [A, 44, CB]
+      atom2: [A, 44, CD2]
+      max_distance: 9.277491
+      source_rows:
+      - '738'
+      - '740'
+    force: true
+- atom_contact_union:
+    group_id: nef_distance_restraint_list_CYANA_distance_restraints_2:730
+    restraint_id: '730'
+    alternatives:
+    - atom1: [A, 8, CB]
+      atom2: [A, 8, CD1]
+      max_distance: 9.097351
+      source_rows:
+      - '858'
+      - '859'
+      - '860'
+      - '861'
+    - atom1: [A, 8, CB]
+      atom2: [A, 8, CD2]
+      max_distance: 9.097351
+      source_rows:
+      - '858'
+      - '859'
+      - '860'
+      - '861'
+    force: true
+- atom_contact_union:
+    group_id: nef_distance_restraint_list_CYANA_distance_restraints_2:836
+    restraint_id: '836'
+    alternatives:
+    - atom1: [A, 8, CA]
+      atom2: [A, 8, CD1]
+      max_distance: 8.376788
+      source_rows:
+      - '982'
+      - '983'
+    - atom1: [A, 8, CA]
+      atom2: [A, 8, CD2]
+      max_distance: 8.376788
+      source_rows:
+      - '982'
+      - '983'
+    force: true
+- atom_contact_union:
+    group_id: nef_distance_restraint_list_CYANA_distance_restraints_2:837
+    restraint_id: '837'
+    alternatives:
+    - atom1: [A, 8, CD1]
+      atom2: [A, 8, N]
+      max_distance: 9.369594
+      source_rows:
+      - '984'
+      - '985'
+    - atom1: [A, 8, CD2]
+      atom2: [A, 8, N]
+      max_distance: 9.369594
+      source_rows:
+      - '984'
+      - '985'
+    force: true
+- atom_contact_union:
+    group_id: nef_distance_restraint_list_CYANA_distance_restraints_2:841
+    restraint_id: '841'
+    alternatives:
+    - atom1: [A, 64, CD1]
+      atom2: [A, 72, CA]
+      max_distance: 8.869172
+      source_rows:
+      - '990'
+    - atom1: [A, 64, CD2]
+      atom2: [A, 72, CA]
+      max_distance: 8.869172
+      source_rows:
+      - '991'
+    force: true
+- atom_contact_union:
+    group_id: nef_distance_restraint_list_CYANA_distance_restraints_2:1441
+    restraint_id: '1441'
+    alternatives:
+    - atom1: [A, 121, CB]
+      atom2: [A, 121, CD1]
+      max_distance: 9.253472
+      source_rows:
+      - '1736'
+      - '1738'
+    - atom1: [A, 121, CB]
+      atom2: [A, 121, CD2]
+      max_distance: 9.253472
+      source_rows:
+      - '1737'
+      - '1739'
+    force: true

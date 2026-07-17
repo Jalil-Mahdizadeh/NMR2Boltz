@@ -2,7 +2,7 @@
 
 ## Current patched schema
 
-The converter's `safe_constraints.yaml` contains only independent, unambiguous heavy-atom contacts that the present BoltzUI patch can represent:
+The converter's `boltz_constraints.yaml` contains only independent, unambiguous heavy-atom contacts that the present BoltzUI patch can represent:
 
 ```yaml
 constraints:
@@ -17,13 +17,17 @@ Run Boltz 2 with inference potentials enabled. Keep the converter's JSON audit b
 
 ## Ambiguous restraints
 
-`proposed_unions.yaml` preserves alternatives under a shared OR group. It is not accepted by the current patch; it is the recommended input to the extension described in `BOLTZUI_UNION_EXTENSION.md`.
+`proposed_atom_contact_unions.yaml` preserves alternatives under a shared OR group. It is not accepted by the current patch; it is the recommended input to the extension described in `BOLTZUI_UNION_EXTENSION.md`.
 
 `hypotheses/`, when requested, provides one or more ordinary current-schema YAML files. Each file chooses one branch per ambiguous group. These are alternative calculations, not restraints to combine in one run. Rank or filter the resulting structures against the original proton-level restraints after adding hydrogens.
 
 ## Residue numbering
 
 Boltz atom selectors use one-based positions in the sequence supplied to Boltz. NEF `sequence_code` is a string and may contain insertion-like suffixes. Supply an explicit mapping table whenever the NMR numbering is not a simple one-to-one sequence order. The converter records every mapping decision in the audit output.
+
+`sequences.fasta` is a clean polymer-only view of the resolved sequence map.
+Caps, ions, and non-polymer ligands are intentionally omitted from FASTA and
+must be represented separately when they are part of the Boltz target.
 
 ## Recommended run protocol
 

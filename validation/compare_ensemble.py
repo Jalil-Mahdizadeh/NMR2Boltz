@@ -70,6 +70,164 @@ def load_structure(
     return model_ids, models, residues
 
 
+def _sequence_value(record: Any, key: str) -> Any:
+    return record[key] if isinstance(record, dict) else getattr(record, key)
+
+
+def _component_score(target: str, observed: str) -> int:
+    if target.upper() == observed.upper():
+        return 3
+    target_info = gemmi.find_tabulated_residue(target)
+    observed_info = gemmi.find_tabulated_residue(observed)
+    target_symbol = str(target_info.one_letter_code).strip().upper()
+    observed_symbol = str(observed_info.one_letter_code).strip().upper()
+    if (
+        target_symbol
+        and observed_symbol
+        and target_symbol == observed_symbol
+        and target_info.is_amino_acid() == observed_info.is_amino_acid()
+        and target_info.is_nucleic_acid() == observed_info.is_nucleic_acid()
+    ):
+        return 2
+    return -2
+
+
+def _align_components(target: list[str], observed: list[str]) -> list[tuple[int, int]]:
+    gap = -2
+    scores = [[0] * (len(observed) + 1) for _ in range(len(target) + 1)]
+    trace: list[list[str | None]] = [
+        [None] * (len(observed) + 1) for _ in range(len(target) + 1)
+    ]
+    for index in range(1, len(target) + 1):
+        scores[index][0] = index * gap
+        trace[index][0] = "up"
+    for index in range(1, len(observed) + 1):
+        scores[0][index] = index * gap
+        trace[0][index] = "left"
+    for row in range(1, len(target) + 1):
+        for column in range(1, len(observed) + 1):
+            choices = [
+                (
+                    scores[row - 1][column - 1]
+                    + _component_score(target[row - 1], observed[column - 1]),
+                    "diagonal",
+                ),
+                (scores[row - 1][column] + gap, "up"),
+                (scores[row][column - 1] + gap, "left"),
+            ]
+            scores[row][column], trace[row][column] = max(
+                choices, key=lambda item: (item[0], item[1] == "diagonal")
+            )
+
+    aligned: list[tuple[int, int]] = []
+    row = len(target)
+    column = len(observed)
+    while row or column:
+        move = trace[row][column]
+        if move == "diagonal":
+            aligned.append((row - 1, column - 1))
+            row -= 1
+            column -= 1
+        elif move == "up":
+            row -= 1
+        else:
+            column -= 1
+    aligned.reverse()
+    return aligned
+
+
+def align_structure_to_sequence_map(
+    sequence_map: list[Any],
+    models: list[dict[AtomKey, Point]],
+    residue_models: list[dict[tuple[str, int], str]],
+) -> tuple[list[dict[AtomKey, Point]], list[dict[str, Any]]]:
+    """Re-key author-numbered coordinates onto Boltz one-based sequence indices."""
+    if not residue_models:
+        return models, []
+    target_by_chain: dict[str, list[Any]] = defaultdict(list)
+    for record in sequence_map:
+        target_by_chain[str(_sequence_value(record, "boltz_chain"))].append(record)
+    for records in target_by_chain.values():
+        records.sort(key=lambda item: int(_sequence_value(item, "boltz_residue_index")))
+
+    observed_by_chain: dict[str, list[tuple[int, str]]] = defaultdict(list)
+    for (chain, sequence_number), residue_name in residue_models[0].items():
+        if residue_name.upper() not in {"HOH", "WAT", "DOD"}:
+            observed_by_chain[chain].append((sequence_number, residue_name))
+
+    residue_mapping: dict[tuple[str, int], tuple[str, int]] = {}
+    alignment: list[dict[str, Any]] = []
+    used_observed_chains: set[str] = set()
+    for target_chain, records in target_by_chain.items():
+        candidates = [chain for chain in observed_by_chain if chain not in used_observed_chains]
+        if not candidates:
+            raise ValueError(f"No unused coordinate chain is available for Boltz chain {target_chain}.")
+        target_names = [str(_sequence_value(record, "residue_name")) for record in records]
+        ranked: list[tuple[tuple[int, int, int, int], str, list[tuple[int, int]]]] = []
+        for observed_chain in candidates:
+            observed_names = [name for _number, name in observed_by_chain[observed_chain]]
+            pairs = _align_components(target_names, observed_names)
+            exact = sum(
+                target_names[left].upper() == observed_names[right].upper()
+                for left, right in pairs
+            )
+            compatible = sum(
+                _component_score(target_names[left], observed_names[right]) > 0
+                for left, right in pairs
+            )
+            ranked.append(
+                (
+                    (
+                        compatible,
+                        exact,
+                        int(observed_chain == target_chain),
+                        -abs(len(target_names) - len(observed_names)),
+                    ),
+                    observed_chain,
+                    pairs,
+                )
+            )
+        _score, observed_chain, pairs = max(ranked, key=lambda item: item[0])
+        used_observed_chains.add(observed_chain)
+        observed = observed_by_chain[observed_chain]
+        exact = 0
+        compatible = 0
+        for target_index, observed_index in pairs:
+            record = records[target_index]
+            observed_number, observed_name = observed[observed_index]
+            residue_mapping[(observed_chain, observed_number)] = (
+                target_chain,
+                int(_sequence_value(record, "boltz_residue_index")),
+            )
+            target_name = str(_sequence_value(record, "residue_name"))
+            exact += target_name.upper() == observed_name.upper()
+            compatible += _component_score(target_name, observed_name) > 0
+        alignment.append(
+            {
+                "boltz_chain": target_chain,
+                "coordinate_chain": observed_chain,
+                "target_residues": len(records),
+                "coordinate_residues": len(observed),
+                "aligned_residues": len(pairs),
+                "exact_component_matches": exact,
+                "compatible_component_matches": compatible,
+                "unmapped_target_residues": len(records) - len(pairs),
+                "unmapped_coordinate_residues": len(observed) - len(pairs),
+            }
+        )
+
+    aligned_models: list[dict[AtomKey, Point]] = []
+    for atoms in models:
+        aligned_models.append(
+            {
+                (*residue_mapping[(chain, sequence_number)], atom_name): point
+                for (chain, sequence_number, atom_name), point in atoms.items()
+                if (chain, sequence_number) in residue_mapping
+            }
+        )
+    return aligned_models, alignment
+
+
 def distance(point1: Point, point2: Point) -> float:
     return math.sqrt(sum((a - b) ** 2 for a, b in zip(point1, point2)))
 
@@ -541,6 +699,12 @@ def main() -> int:
     if any(names != cif_residues[0] for names in cif_residues[1:]):
         raise ValueError("mmCIF models do not have identical residue identities")
 
+    pdb_models, pdb_alignment = align_structure_to_sequence_map(
+        report["sequence_map"], pdb_models, pdb_residues
+    )
+    cif_models, cif_alignment = align_structure_to_sequence_map(
+        report["sequence_map"], cif_models, cif_residues
+    )
     crosscheck = coordinate_crosscheck(pdb_ids, pdb_models, cif_ids, cif_models)
     source_rows, source_summary, source_states = evaluate_source_groups(
         report, pdb_ids, pdb_models, args.tolerance
@@ -610,6 +774,10 @@ def main() -> int:
             "pdb": str(args.pdb),
             "cif": str(args.cif),
             "tolerance_angstrom": args.tolerance,
+        },
+        "sequence_alignment": {
+            "pdb": pdb_alignment,
+            "cif": cif_alignment,
         },
         "coordinate_crosscheck": crosscheck,
         "source_restraints": {

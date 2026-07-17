@@ -1,4 +1,4 @@
-.PHONY: install test example docker
+.PHONY: install test example benchmark-corpus docker
 
 install:
 	python -m pip install -e '.[test]'
@@ -8,6 +8,9 @@ test:
 
 example:
 	nmr2boltz convert examples/example.nef -o artifacts/example --hypotheses 4
+
+benchmark-corpus:
+	python validation/benchmark_corpus.py benchmark/input --output-directory benchmark/output
 
 docker:
 	docker build -t nmr2boltz:0.1.0 .

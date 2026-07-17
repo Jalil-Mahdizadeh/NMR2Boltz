@@ -115,5 +115,45 @@ def test_output_bundle(tmp_path):
     assert (tmp_path / "boltz_constraints.yaml").is_file()
     assert (tmp_path / "conversion_report.json").is_file()
     assert (tmp_path / "proposed_atom_contact_unions.yaml").is_file()
+    assert (tmp_path / "sequences.fasta").read_text(encoding="utf-8") == ">A\nVAYLG\n"
     assert (tmp_path / "hypotheses" / "manifest.json").is_file()
     assert len(paths) >= 10
+
+
+def test_sequence_only_nef_produces_empty_conversion(tmp_path):
+    source = (FIXTURES / "example.nef").read_text(encoding="utf-8")
+    path = tmp_path / "sequence-only.nef"
+    path.write_text(source.split("save_distance_restraints", 1)[0], encoding="utf-8")
+
+    parsed = parse_star_document(path)
+    report = project_document(
+        parsed,
+        input_file=str(path),
+        topology_library=TopologyLibrary(),
+        settings=ProjectionSettings(),
+    )
+
+    assert report.detected_format == "nef"
+    assert report.emitted_constraints == []
+    assert len(report.sequence_map) == 5
+    assert any("empty distance-constraint conversion" in warning for warning in report.warnings)
+
+
+def test_residue_name_mismatch_is_rejected_before_topology(tmp_path):
+    source = (FIXTURES / "example.nef").read_text(encoding="utf-8")
+    path = tmp_path / "mismatched.nef"
+    path.write_text(
+        source.replace("A 10 VAL HG1% A 10A", "A 10 ALA HG1% A 10A", 1),
+        encoding="utf-8",
+    )
+
+    report = project_document(
+        parse_star_document(path),
+        input_file=str(path),
+        topology_library=TopologyLibrary(),
+        settings=ProjectionSettings(),
+    )
+
+    mismatch = next(item for item in report.rejections if item.reason == "sequence_residue_mismatch")
+    assert "restraint endpoint A:10:ALA:HG1%" in mismatch.details
+    assert "A:1 (VAL)" in mismatch.details

@@ -11,6 +11,7 @@ from pathlib import Path
 from typing import Any, Iterable
 
 import yaml
+import gemmi
 
 from .model import (
     AmbiguousGroup,
@@ -170,6 +171,10 @@ def write_outputs(
         ],
     )
     written.append(sequence_path)
+
+    fasta_path = output / "sequences.fasta"
+    fasta_path.write_text(_fasta_text(report), encoding="utf-8")
+    written.append(fasta_path)
 
     ambiguity_path = output / "ambiguous_groups.tsv"
     ambiguity_rows: list[list[Any]] = []
@@ -452,6 +457,29 @@ def _write_tsv(path: Path, header: list[str], rows: Iterable[Iterable[Any]]) -> 
         writer.writerows(rows)
 
 
+def _fasta_text(report: ConversionReport) -> str:
+    by_chain: dict[str, list[Any]] = {}
+    for record in report.sequence_map:
+        by_chain.setdefault(record.boltz_chain, []).append(record)
+
+    lines: list[str] = []
+    for chain, records in by_chain.items():
+        sequence: list[str] = []
+        for record in sorted(records, key=lambda item: item.boltz_residue_index):
+            info = gemmi.find_tabulated_residue(record.residue_name)
+            if not (info.is_amino_acid() or info.is_nucleic_acid()):
+                continue
+            symbol = str(info.one_letter_code).strip().upper()
+            if symbol:
+                sequence.append(symbol)
+        if not sequence:
+            continue
+        lines.append(f">{chain}")
+        text = "".join(sequence)
+        lines.extend(text[index : index + 80] for index in range(0, len(text), 80))
+    return "\n".join(lines) + ("\n" if lines else "")
+
+
 def _summary_text(report: ConversionReport) -> str:
     stats = report.statistics
     lines = [
@@ -471,6 +499,7 @@ def _summary_text(report: ConversionReport) -> str:
         "- ambiguous_groups.tsv preserves true OR alternatives; adding all of them would overconstrain the model.",
         "- proposed_atom_contact_unions.yaml is a proposed schema, not accepted by the current BoltzUI parser.",
         "- conversion_report.json is the lossless audit/provenance record.",
+        "- sequences.fasta contains polymer-only sequences extracted from the source sequence map.",
         "",
     ]
     if report.warnings:

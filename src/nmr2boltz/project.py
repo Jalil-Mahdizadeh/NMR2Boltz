@@ -13,6 +13,7 @@ from .model import (
     ProjectedAlternative,
     Rejection,
     RestraintGroup,
+    SequenceRecord,
 )
 from .star import ParsedStarDocument, StarDataError
 from .topology import TopologyLibrary, TopologyResolutionError
@@ -70,6 +71,24 @@ def _averaging_factor(policy: str, explicit_pair_count: int) -> float:
 
 def _canonical_pair(atom1: BoltzAtom, atom2: BoltzAtom) -> tuple[BoltzAtom, BoltzAtom]:
     return tuple(sorted((atom1, atom2)))  # type: ignore[return-value]
+
+
+def _residue_identity_mismatch(endpoint: Any, record: SequenceRecord) -> str | None:
+    supplied = {
+        str(name).upper()
+        for name in (endpoint.residue_name, endpoint.canonical_residue_name)
+        if name
+    }
+    mapped = {record.residue_name.upper()}
+    mapped.update(str(alias[2]).upper() for alias in record.aliases if len(alias) >= 3)
+    if not supplied or supplied & mapped:
+        return None
+    return (
+        f"restraint endpoint {endpoint.display()} declares residue "
+        f"{', '.join(sorted(supplied))}, but its resolved sequence record is "
+        f"{record.boltz_chain}:{record.boltz_residue_index} "
+        f"({', '.join(sorted(mapped))})"
+    )
 
 
 def project_document(
@@ -268,6 +287,28 @@ def _project_group(
                     reason="unresolved_residue_mapping",
                     details=str(exc),
                     row_ids=alternative.row_ids,
+                )
+            )
+            continue
+        identity_errors = [
+            message
+            for message in (
+                _residue_identity_mismatch(alternative.endpoint1, residue1),
+                _residue_identity_mismatch(alternative.endpoint2, residue2),
+            )
+            if message is not None
+        ]
+        if identity_errors:
+            rejections.append(
+                Rejection(
+                    group_id=group.group_id,
+                    reason="sequence_residue_mismatch",
+                    details="; ".join(identity_errors),
+                    row_ids=alternative.row_ids,
+                    endpoint=(
+                        f"{alternative.endpoint1.display()} -- "
+                        f"{alternative.endpoint2.display()}"
+                    ),
                 )
             )
             continue

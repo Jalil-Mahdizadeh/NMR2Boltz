@@ -1,0 +1,21 @@
+NMR-to-Boltz heavy-atom projection summary
+==============================================
+Input: benchmark\input\8S8O\8s8o_nmr-data.str
+Detected format: nmr-star
+Restraint groups read: 0
+Source alternatives read: 0
+Safe groups before pair deduplication: 0
+Unique Boltz constraints emitted: 0
+Ambiguous OR groups quarantined: 0
+Rejection records: 0
+
+Important:
+- boltz_constraints.yaml contains only constraints that may be imposed simultaneously.
+- ambiguous_groups.tsv preserves true OR alternatives; adding all of them would overconstrain the model.
+- proposed_atom_contact_unions.yaml is a proposed schema, not accepted by the current BoltzUI parser.
+- conversion_report.json is the lossless audit/provenance record.
+- sequences.fasta contains polymer-only sequences extracted from the source sequence map.
+
+Global warnings:
+- No _Gen_dist_constraint loop was found; producing an empty distance-constraint conversion.
+- No gen_dist_constraint rows matched the selected origin filter.

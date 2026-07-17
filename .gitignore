@@ -4,7 +4,5 @@
 __pycache__/
 *.py[cod]
 *.egg-info/
-graphify-out/
 tmp/
 *.log
-workspace/output/benchmark/*/

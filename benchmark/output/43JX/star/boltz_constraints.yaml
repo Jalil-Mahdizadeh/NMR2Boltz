@@ -1,0 +1,8583 @@
+# Conservative heavy-atom constraints safe to use as simultaneous (AND) Boltz contacts.
+# Merge the `constraints` list into the Boltz input YAML and run Boltz-2 with potentials enabled.
+constraints:
+- atom_contact:
+    atom1: [A, 1, CA]
+    atom2: [A, 1, CB]
+    max_distance: 6.560001
+    force: true
+- atom_contact:
+    atom1: [A, 1, CA]
+    atom2: [A, 2, N]
+    max_distance: 7.92
+    force: true
+- atom_contact:
+    atom1: [A, 1, CB]
+    atom2: [A, 2, N]
+    max_distance: 8.43
+    force: true
+- atom_contact:
+    atom1: [A, 1, CB]
+    atom2: [A, 36, CB]
+    max_distance: 9.88
+    force: true
+- atom_contact:
+    atom1: [A, 1, CB]
+    atom2: [A, 36, CG]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 2, CA]
+    atom2: [A, 2, N]
+    max_distance: 7.63
+    force: true
+- atom_contact:
+    atom1: [A, 2, CA]
+    atom2: [A, 3, CA]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 2, CA]
+    atom2: [A, 3, N]
+    max_distance: 7.24
+    force: true
+- atom_contact:
+    atom1: [A, 2, CA]
+    atom2: [A, 4, N]
+    max_distance: 7.59
+    force: true
+- atom_contact:
+    atom1: [A, 2, CA]
+    atom2: [A, 33, CA]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 2, N]
+    atom2: [A, 3, CA]
+    max_distance: 8.07
+    force: true
+- atom_contact:
+    atom1: [A, 2, N]
+    atom2: [A, 3, N]
+    max_distance: 7.84
+    force: true
+- atom_contact:
+    atom1: [A, 2, N]
+    atom2: [A, 33, N]
+    max_distance: 7.93
+    force: true
+- atom_contact:
+    atom1: [A, 2, N]
+    atom2: [A, 34, N]
+    max_distance: 7.93
+    force: true
+- atom_contact:
+    atom1: [A, 3, CA]
+    atom2: [A, 3, CB]
+    max_distance: 7.07
+    force: true
+- atom_contact:
+    atom1: [A, 3, CA]
+    atom2: [A, 3, CG2]
+    max_distance: 7.61
+    force: true
+- atom_contact:
+    atom1: [A, 3, CA]
+    atom2: [A, 3, N]
+    max_distance: 7.95
+    force: true
+- atom_contact:
+    atom1: [A, 3, CA]
+    atom2: [A, 4, N]
+    max_distance: 6.95
+    force: true
+- atom_contact:
+    atom1: [A, 3, CB]
+    atom2: [A, 3, CG2]
+    max_distance: 7.08
+    force: true
+- atom_contact:
+    atom1: [A, 3, CB]
+    atom2: [A, 3, N]
+    max_distance: 8.04
+    force: true
+- atom_contact:
+    atom1: [A, 3, CB]
+    atom2: [A, 4, CA]
+    max_distance: 7.07
+    force: true
+- atom_contact:
+    atom1: [A, 3, CB]
+    atom2: [A, 4, N]
+    max_distance: 8.34
+    force: true
+- atom_contact:
+    atom1: [A, 3, CG2]
+    atom2: [A, 3, N]
+    max_distance: 8.17
+    force: true
+- atom_contact:
+    atom1: [A, 3, N]
+    atom2: [A, 4, N]
+    max_distance: 7.84
+    force: true
+- atom_contact:
+    atom1: [A, 3, N]
+    atom2: [A, 33, N]
+    max_distance: 8.13
+    force: true
+- atom_contact:
+    atom1: [A, 4, CA]
+    atom2: [A, 4, CB]
+    max_distance: 6.92
+    force: true
+- atom_contact:
+    atom1: [A, 4, CA]
+    atom2: [A, 4, N]
+    max_distance: 6.95
+    force: true
+- atom_contact:
+    atom1: [A, 4, CA]
+    atom2: [A, 5, CB]
+    max_distance: 8.33
+    force: true
+- atom_contact:
+    atom1: [A, 4, CA]
+    atom2: [A, 5, N]
+    max_distance: 6.7
+    force: true
+- atom_contact:
+    atom1: [A, 4, CB]
+    atom2: [A, 4, N]
+    max_distance: 7.22
+    force: true
+- atom_contact:
+    atom1: [A, 4, CB]
+    atom2: [A, 5, N]
+    max_distance: 7.78
+    force: true
+- atom_contact:
+    atom1: [A, 4, CB]
+    atom2: [A, 36, CG]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 4, N]
+    atom2: [A, 5, N]
+    max_distance: 7.71
+    force: true
+- atom_contact:
+    atom1: [A, 5, CA]
+    atom2: [A, 5, CB]
+    max_distance: 7.850001
+    force: true
+- atom_contact:
+    atom1: [A, 5, CA]
+    atom2: [A, 5, CG]
+    max_distance: 8.07
+    force: true
+- atom_contact:
+    atom1: [A, 5, CA]
+    atom2: [A, 5, N]
+    max_distance: 6.7
+    force: true
+- atom_contact:
+    atom1: [A, 5, CA]
+    atom2: [A, 6, N]
+    max_distance: 7.020001
+    force: true
+- atom_contact:
+    atom1: [A, 5, CA]
+    atom2: [A, 32, CD1]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 5, CB]
+    atom2: [A, 5, CG]
+    max_distance: 7.42
+    force: true
+- atom_contact:
+    atom1: [A, 5, CB]
+    atom2: [A, 5, N]
+    max_distance: 7.34
+    force: true
+- atom_contact:
+    atom1: [A, 5, CB]
+    atom2: [A, 6, N]
+    max_distance: 8.14
+    force: true
+- atom_contact:
+    atom1: [A, 5, CB]
+    atom2: [A, 23, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 5, CG]
+    atom2: [A, 5, N]
+    max_distance: 7.810001
+    force: true
+- atom_contact:
+    atom1: [A, 5, CG]
+    atom2: [A, 6, N]
+    max_distance: 8.100001
+    force: true
+- atom_contact:
+    atom1: [A, 5, N]
+    atom2: [A, 32, CD1]
+    max_distance: 8.64
+    force: true
+- atom_contact:
+    atom1: [A, 6, CA]
+    atom2: [A, 6, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 6, CA]
+    atom2: [A, 6, CG1]
+    max_distance: 8.46
+    force: true
+- atom_contact:
+    atom1: [A, 6, CA]
+    atom2: [A, 6, CG2]
+    max_distance: 8.16
+    force: true
+- atom_contact:
+    atom1: [A, 6, CA]
+    atom2: [A, 6, N]
+    max_distance: 8.120001
+    force: true
+- atom_contact:
+    atom1: [A, 6, CA]
+    atom2: [A, 7, N]
+    max_distance: 7.33
+    force: true
+- atom_contact:
+    atom1: [A, 6, CB]
+    atom2: [A, 6, CG2]
+    max_distance: 7.88
+    force: true
+- atom_contact:
+    atom1: [A, 6, CB]
+    atom2: [A, 6, N]
+    max_distance: 7.34
+    force: true
+- atom_contact:
+    atom1: [A, 6, CB]
+    atom2: [A, 7, N]
+    max_distance: 8.47
+    force: true
+- atom_contact:
+    atom1: [A, 6, CB]
+    atom2: [A, 11, CZ3]
+    max_distance: 7.88
+    force: true
+- atom_contact:
+    atom1: [A, 6, CB]
+    atom2: [A, 23, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 6, CB]
+    atom2: [A, 28, CG2]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 6, CB]
+    atom2: [A, 32, CE3]
+    max_distance: 8.24
+    force: true
+- atom_contact:
+    atom1: [A, 6, CG1]
+    atom2: [A, 6, CG2]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 6, CG1]
+    atom2: [A, 7, CA]
+    max_distance: 8.620001
+    force: true
+- atom_contact:
+    atom1: [A, 6, CG1]
+    atom2: [A, 10, CB]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 6, CG2]
+    atom2: [A, 6, N]
+    max_distance: 7.75
+    force: true
+- atom_contact:
+    atom1: [A, 6, CG2]
+    atom2: [A, 7, N]
+    max_distance: 7.87
+    force: true
+- atom_contact:
+    atom1: [A, 6, CG2]
+    atom2: [A, 8, CA]
+    max_distance: 8.120001
+    force: true
+- atom_contact:
+    atom1: [A, 6, CG2]
+    atom2: [A, 11, CB]
+    max_distance: 8.280001
+    force: true
+- atom_contact:
+    atom1: [A, 6, CG2]
+    atom2: [A, 11, N]
+    max_distance: 8.47
+    force: true
+- atom_contact:
+    atom1: [A, 6, CG2]
+    atom2: [A, 23, CB]
+    max_distance: 7.4
+    force: true
+- atom_contact:
+    atom1: [A, 6, CG2]
+    atom2: [A, 28, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 6, N]
+    atom2: [A, 7, N]
+    max_distance: 8.46
+    force: true
+- atom_contact:
+    atom1: [A, 7, CA]
+    atom2: [A, 7, CB]
+    max_distance: 7.810001
+    force: true
+- atom_contact:
+    atom1: [A, 7, CA]
+    atom2: [A, 7, N]
+    max_distance: 8.2
+    force: true
+- atom_contact:
+    atom1: [A, 7, CA]
+    atom2: [A, 8, N]
+    max_distance: 7.640001
+    force: true
+- atom_contact:
+    atom1: [A, 7, CB]
+    atom2: [A, 7, N]
+    max_distance: 7.98
+    force: true
+- atom_contact:
+    atom1: [A, 7, CB]
+    atom2: [A, 9, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 7, CB]
+    atom2: [A, 10, CA]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 7, CB]
+    atom2: [A, 10, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 7, CB]
+    atom2: [A, 10, N]
+    max_distance: 7.87
+    force: true
+- atom_contact:
+    atom1: [A, 7, CB]
+    atom2: [A, 11, N]
+    max_distance: 8.29
+    force: true
+- atom_contact:
+    atom1: [A, 7, N]
+    atom2: [A, 8, N]
+    max_distance: 8.02
+    force: true
+- atom_contact:
+    atom1: [A, 7, N]
+    atom2: [A, 9, N]
+    max_distance: 8.600001
+    force: true
+- atom_contact:
+    atom1: [A, 7, N]
+    atom2: [A, 10, N]
+    max_distance: 8.4
+    force: true
+- atom_contact:
+    atom1: [A, 7, N]
+    atom2: [A, 11, N]
+    max_distance: 7.93
+    force: true
+- atom_contact:
+    atom1: [A, 7, O]
+    atom2: [A, 11, N]
+    max_distance: 3.88
+    force: true
+- atom_contact:
+    atom1: [A, 8, CA]
+    atom2: [A, 8, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 8, CA]
+    atom2: [A, 8, CG]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 8, CA]
+    atom2: [A, 8, N]
+    max_distance: 8.36
+    force: true
+- atom_contact:
+    atom1: [A, 8, CA]
+    atom2: [A, 11, CA]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 8, CA]
+    atom2: [A, 11, CB]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 8, CA]
+    atom2: [A, 11, N]
+    max_distance: 7.600001
+    force: true
+- atom_contact:
+    atom1: [A, 8, CA]
+    atom2: [A, 12, CA]
+    max_distance: 8.280001
+    force: true
+- atom_contact:
+    atom1: [A, 8, CA]
+    atom2: [A, 23, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 8, CB]
+    atom2: [A, 8, CG]
+    max_distance: 7.45
+    force: true
+- atom_contact:
+    atom1: [A, 8, CB]
+    atom2: [A, 8, N]
+    max_distance: 7.94
+    force: true
+- atom_contact:
+    atom1: [A, 8, CB]
+    atom2: [A, 9, N]
+    max_distance: 8.280001
+    force: true
+- atom_contact:
+    atom1: [A, 8, CB]
+    atom2: [A, 10, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 8, CB]
+    atom2: [A, 11, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 8, CB]
+    atom2: [A, 12, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 8, CG]
+    atom2: [A, 11, CD1]
+    max_distance: 9.25
+    force: true
+- atom_contact:
+    atom1: [A, 8, CG]
+    atom2: [A, 11, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 8, CG]
+    atom2: [A, 12, CB]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 8, CG]
+    atom2: [A, 12, CD]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 8, CG]
+    atom2: [A, 12, N]
+    max_distance: 8.280001
+    force: true
+- atom_contact:
+    atom1: [A, 8, CG]
+    atom2: [A, 23, CA]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 8, N]
+    atom2: [A, 9, N]
+    max_distance: 7.72
+    force: true
+- atom_contact:
+    atom1: [A, 8, N]
+    atom2: [A, 10, N]
+    max_distance: 8.4
+    force: true
+- atom_contact:
+    atom1: [A, 8, O]
+    atom2: [A, 12, N]
+    max_distance: 3.88
+    force: true
+- atom_contact:
+    atom1: [A, 9, CB]
+    atom2: [A, 9, N]
+    max_distance: 7.3
+    force: true
+- atom_contact:
+    atom1: [A, 9, CB]
+    atom2: [A, 10, N]
+    max_distance: 8.030001
+    force: true
+- atom_contact:
+    atom1: [A, 9, CB]
+    atom2: [A, 11, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 9, N]
+    atom2: [A, 10, N]
+    max_distance: 7.5
+    force: true
+- atom_contact:
+    atom1: [A, 9, N]
+    atom2: [A, 11, N]
+    max_distance: 7.93
+    force: true
+- atom_contact:
+    atom1: [A, 9, N]
+    atom2: [A, 12, N]
+    max_distance: 8.370001
+    force: true
+- atom_contact:
+    atom1: [A, 9, O]
+    atom2: [A, 13, N]
+    max_distance: 3.9
+    force: true
+- atom_contact:
+    atom1: [A, 10, CA]
+    atom2: [A, 10, CB]
+    max_distance: 7.66
+    force: true
+- atom_contact:
+    atom1: [A, 10, CA]
+    atom2: [A, 10, N]
+    max_distance: 7.850001
+    force: true
+- atom_contact:
+    atom1: [A, 10, CA]
+    atom2: [A, 11, N]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 10, CA]
+    atom2: [A, 13, N]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 10, CB]
+    atom2: [A, 10, N]
+    max_distance: 7.430001
+    force: true
+- atom_contact:
+    atom1: [A, 10, N]
+    atom2: [A, 13, N]
+    max_distance: 7.93
+    force: true
+- atom_contact:
+    atom1: [A, 11, CA]
+    atom2: [A, 11, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 11, CA]
+    atom2: [A, 11, CD1]
+    max_distance: 7.350001
+    force: true
+- atom_contact:
+    atom1: [A, 11, CA]
+    atom2: [A, 11, N]
+    max_distance: 8.34
+    force: true
+- atom_contact:
+    atom1: [A, 11, CA]
+    atom2: [A, 14, N]
+    max_distance: 8.120001
+    force: true
+- atom_contact:
+    atom1: [A, 11, CA]
+    atom2: [A, 15, N]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 11, CB]
+    atom2: [A, 11, CD1]
+    max_distance: 8.56
+    force: true
+- atom_contact:
+    atom1: [A, 11, CB]
+    atom2: [A, 11, N]
+    max_distance: 7.78
+    force: true
+- atom_contact:
+    atom1: [A, 11, CB]
+    atom2: [A, 12, N]
+    max_distance: 8.100001
+    force: true
+- atom_contact:
+    atom1: [A, 11, CB]
+    atom2: [A, 13, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 11, CB]
+    atom2: [A, 23, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 11, CD1]
+    atom2: [A, 12, CA]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 11, CD1]
+    atom2: [A, 12, N]
+    max_distance: 8.64
+    force: true
+- atom_contact:
+    atom1: [A, 11, CD1]
+    atom2: [A, 14, N]
+    max_distance: 7.98
+    force: true
+- atom_contact:
+    atom1: [A, 11, CD1]
+    atom2: [A, 15, CA]
+    max_distance: 8.16
+    force: true
+- atom_contact:
+    atom1: [A, 11, CD1]
+    atom2: [A, 15, CB]
+    max_distance: 7.560001
+    force: true
+- atom_contact:
+    atom1: [A, 11, CD1]
+    atom2: [A, 15, CG2]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 11, CD1]
+    atom2: [A, 15, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 11, CD1]
+    atom2: [A, 73, CD1]
+    max_distance: 9.05
+    force: true
+- atom_contact:
+    atom1: [A, 11, CH2]
+    atom2: [A, 11, CZ3]
+    max_distance: 8.16
+    force: true
+- atom_contact:
+    atom1: [A, 11, CH2]
+    atom2: [A, 28, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 11, CH2]
+    atom2: [A, 28, CG2]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 11, CH2]
+    atom2: [A, 32, CE3]
+    max_distance: 8.850001
+    force: true
+- atom_contact:
+    atom1: [A, 11, CH2]
+    atom2: [A, 73, CD1]
+    max_distance: 9.25
+    force: true
+- atom_contact:
+    atom1: [A, 11, CH2]
+    atom2: [A, 73, CE1]
+    max_distance: 9.25
+    force: true
+- atom_contact:
+    atom1: [A, 11, CZ2]
+    atom2: [A, 15, CG2]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 11, CZ2]
+    atom2: [A, 31, CB]
+    max_distance: 8.11
+    force: true
+- atom_contact:
+    atom1: [A, 11, CZ2]
+    atom2: [A, 73, CD1]
+    max_distance: 8.36
+    force: true
+- atom_contact:
+    atom1: [A, 11, CZ2]
+    atom2: [A, 73, CE1]
+    max_distance: 8.16
+    force: true
+- atom_contact:
+    atom1: [A, 11, CZ3]
+    atom2: [A, 32, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 11, CZ3]
+    atom2: [A, 35, CG1]
+    max_distance: 10.05
+    force: true
+- atom_contact:
+    atom1: [A, 11, N]
+    atom2: [A, 12, N]
+    max_distance: 7.93
+    force: true
+- atom_contact:
+    atom1: [A, 11, N]
+    atom2: [A, 13, N]
+    max_distance: 8.4
+    force: true
+- atom_contact:
+    atom1: [A, 11, N]
+    atom2: [A, 14, N]
+    max_distance: 7.93
+    force: true
+- atom_contact:
+    atom1: [A, 11, O]
+    atom2: [A, 15, N]
+    max_distance: 3.9
+    force: true
+- atom_contact:
+    atom1: [A, 12, CA]
+    atom2: [A, 12, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 12, CA]
+    atom2: [A, 12, N]
+    max_distance: 8.41
+    force: true
+- atom_contact:
+    atom1: [A, 12, CA]
+    atom2: [A, 13, N]
+    max_distance: 8.17
+    force: true
+- atom_contact:
+    atom1: [A, 12, CA]
+    atom2: [A, 14, N]
+    max_distance: 7.87
+    force: true
+- atom_contact:
+    atom1: [A, 12, CA]
+    atom2: [A, 15, CB]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 12, CA]
+    atom2: [A, 15, CG2]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 12, CA]
+    atom2: [A, 15, N]
+    max_distance: 7.890001
+    force: true
+- atom_contact:
+    atom1: [A, 12, CB]
+    atom2: [A, 12, CD]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 12, CB]
+    atom2: [A, 12, N]
+    max_distance: 7.76
+    force: true
+- atom_contact:
+    atom1: [A, 12, CB]
+    atom2: [A, 13, CA]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 12, CB]
+    atom2: [A, 13, N]
+    max_distance: 8.120001
+    force: true
+- atom_contact:
+    atom1: [A, 12, CD]
+    atom2: [A, 15, CB]
+    max_distance: 8.48
+    force: true
+- atom_contact:
+    atom1: [A, 12, CD]
+    atom2: [A, 17, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 12, CD]
+    atom2: [A, 21, CB]
+    max_distance: 8.280001
+    force: true
+- atom_contact:
+    atom1: [A, 12, N]
+    atom2: [A, 13, N]
+    max_distance: 8.11
+    force: true
+- atom_contact:
+    atom1: [A, 12, N]
+    atom2: [A, 14, N]
+    max_distance: 8.4
+    force: true
+- atom_contact:
+    atom1: [A, 12, N]
+    atom2: [A, 15, N]
+    max_distance: 8.4
+    force: true
+- atom_contact:
+    atom1: [A, 13, CA]
+    atom2: [A, 13, CB]
+    max_distance: 7.65
+    force: true
+- atom_contact:
+    atom1: [A, 13, CA]
+    atom2: [A, 13, N]
+    max_distance: 8.02
+    force: true
+- atom_contact:
+    atom1: [A, 13, CA]
+    atom2: [A, 14, N]
+    max_distance: 8.05
+    force: true
+- atom_contact:
+    atom1: [A, 13, CA]
+    atom2: [A, 15, N]
+    max_distance: 8.24
+    force: true
+- atom_contact:
+    atom1: [A, 13, CB]
+    atom2: [A, 13, N]
+    max_distance: 7.390001
+    force: true
+- atom_contact:
+    atom1: [A, 13, N]
+    atom2: [A, 14, N]
+    max_distance: 6.65
+    force: true
+- atom_contact:
+    atom1: [A, 13, N]
+    atom2: [A, 15, N]
+    max_distance: 8.32
+    force: true
+- atom_contact:
+    atom1: [A, 14, CA]
+    atom2: [A, 14, CB]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 14, CA]
+    atom2: [A, 14, N]
+    max_distance: 8.06
+    force: true
+- atom_contact:
+    atom1: [A, 14, CA]
+    atom2: [A, 15, N]
+    max_distance: 7.99
+    force: true
+- atom_contact:
+    atom1: [A, 14, CB]
+    atom2: [A, 14, N]
+    max_distance: 7.8
+    force: true
+- atom_contact:
+    atom1: [A, 14, CB]
+    atom2: [A, 72, CD]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 14, N]
+    atom2: [A, 15, CB]
+    max_distance: 8.33
+    force: true
+- atom_contact:
+    atom1: [A, 14, N]
+    atom2: [A, 15, N]
+    max_distance: 7.600001
+    force: true
+- atom_contact:
+    atom1: [A, 15, CA]
+    atom2: [A, 15, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 15, CA]
+    atom2: [A, 15, CG2]
+    max_distance: 7.890001
+    force: true
+- atom_contact:
+    atom1: [A, 15, CA]
+    atom2: [A, 15, N]
+    max_distance: 8.47
+    force: true
+- atom_contact:
+    atom1: [A, 15, CA]
+    atom2: [A, 16, N]
+    max_distance: 7.45
+    force: true
+- atom_contact:
+    atom1: [A, 15, CA]
+    atom2: [A, 73, CB]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 15, CA]
+    atom2: [A, 73, N]
+    max_distance: 7.24
+    force: true
+- atom_contact:
+    atom1: [A, 15, CB]
+    atom2: [A, 15, CG2]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 15, CB]
+    atom2: [A, 15, N]
+    max_distance: 7.5
+    force: true
+- atom_contact:
+    atom1: [A, 15, CB]
+    atom2: [A, 16, N]
+    max_distance: 8.47
+    force: true
+- atom_contact:
+    atom1: [A, 15, CG2]
+    atom2: [A, 15, N]
+    max_distance: 8.21
+    force: true
+- atom_contact:
+    atom1: [A, 15, CG2]
+    atom2: [A, 16, N]
+    max_distance: 7.82
+    force: true
+- atom_contact:
+    atom1: [A, 15, CG2]
+    atom2: [A, 17, CA]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 15, CG2]
+    atom2: [A, 73, CA]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 15, CG2]
+    atom2: [A, 74, CA]
+    max_distance: 8.09
+    force: true
+- atom_contact:
+    atom1: [A, 15, CG2]
+    atom2: [A, 75, CG1]
+    max_distance: 8.71
+    force: true
+- atom_contact:
+    atom1: [A, 15, CG2]
+    atom2: [A, 75, N]
+    max_distance: 7.78
+    force: true
+- atom_contact:
+    atom1: [A, 15, N]
+    atom2: [A, 16, N]
+    max_distance: 8.39
+    force: true
+- atom_contact:
+    atom1: [A, 15, N]
+    atom2: [A, 61, CB]
+    max_distance: 8.67
+    force: true
+- atom_contact:
+    atom1: [A, 16, CA]
+    atom2: [A, 16, CB]
+    max_distance: 8.120001
+    force: true
+- atom_contact:
+    atom1: [A, 16, CA]
+    atom2: [A, 16, CG]
+    max_distance: 8.48
+    force: true
+- atom_contact:
+    atom1: [A, 16, CA]
+    atom2: [A, 16, N]
+    max_distance: 7.91
+    force: true
+- atom_contact:
+    atom1: [A, 16, CA]
+    atom2: [A, 17, N]
+    max_distance: 7.430001
+    force: true
+- atom_contact:
+    atom1: [A, 16, CB]
+    atom2: [A, 16, CG]
+    max_distance: 7.42
+    force: true
+- atom_contact:
+    atom1: [A, 16, CB]
+    atom2: [A, 16, N]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 16, CB]
+    atom2: [A, 17, N]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 16, CB]
+    atom2: [A, 72, CG]
+    max_distance: 7.53
+    force: true
+- atom_contact:
+    atom1: [A, 16, CB]
+    atom2: [A, 74, CA]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 16, CB]
+    atom2: [A, 74, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 16, CB]
+    atom2: [A, 74, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 16, CB]
+    atom2: [A, 75, N]
+    max_distance: 8.14
+    force: true
+- atom_contact:
+    atom1: [A, 16, CG]
+    atom2: [A, 16, N]
+    max_distance: 8.47
+    force: true
+- atom_contact:
+    atom1: [A, 16, CG]
+    atom2: [A, 74, CA]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 16, N]
+    atom2: [A, 72, CG]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 16, N]
+    atom2: [A, 73, CB]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 16, N]
+    atom2: [A, 73, O]
+    max_distance: 3.88
+    force: true
+- atom_contact:
+    atom1: [A, 16, N]
+    atom2: [A, 74, CA]
+    max_distance: 6.71
+    force: true
+- atom_contact:
+    atom1: [A, 16, N]
+    atom2: [A, 74, CB]
+    max_distance: 8.38
+    force: true
+- atom_contact:
+    atom1: [A, 16, N]
+    atom2: [A, 75, N]
+    max_distance: 7.8
+    force: true
+- atom_contact:
+    atom1: [A, 17, CA]
+    atom2: [A, 17, CB]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 17, CA]
+    atom2: [A, 17, N]
+    max_distance: 7.98
+    force: true
+- atom_contact:
+    atom1: [A, 17, CA]
+    atom2: [A, 18, CA]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 17, CA]
+    atom2: [A, 18, N]
+    max_distance: 7.63
+    force: true
+- atom_contact:
+    atom1: [A, 17, CA]
+    atom2: [A, 75, CG1]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 17, CA]
+    atom2: [A, 75, N]
+    max_distance: 8.2
+    force: true
+- atom_contact:
+    atom1: [A, 17, CA]
+    atom2: [A, 76, CA]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 17, CA]
+    atom2: [A, 76, N]
+    max_distance: 8.67
+    force: true
+- atom_contact:
+    atom1: [A, 17, CB]
+    atom2: [A, 17, N]
+    max_distance: 8.41
+    force: true
+- atom_contact:
+    atom1: [A, 17, CB]
+    atom2: [A, 18, N]
+    max_distance: 8.280001
+    force: true
+- atom_contact:
+    atom1: [A, 17, CB]
+    atom2: [A, 21, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 17, CB]
+    atom2: [A, 75, CB]
+    max_distance: 9.11
+    force: true
+- atom_contact:
+    atom1: [A, 17, CB]
+    atom2: [A, 75, N]
+    max_distance: 8.64
+    force: true
+- atom_contact:
+    atom1: [A, 17, CB]
+    atom2: [A, 76, CA]
+    max_distance: 8.04
+    force: true
+- atom_contact:
+    atom1: [A, 17, N]
+    atom2: [A, 75, N]
+    max_distance: 8.030001
+    force: true
+- atom_contact:
+    atom1: [A, 18, CA]
+    atom2: [A, 18, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 18, CA]
+    atom2: [A, 18, CG]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 18, CA]
+    atom2: [A, 18, N]
+    max_distance: 7.930001
+    force: true
+- atom_contact:
+    atom1: [A, 18, CA]
+    atom2: [A, 19, N]
+    max_distance: 7.9
+    force: true
+- atom_contact:
+    atom1: [A, 18, CA]
+    atom2: [A, 20, N]
+    max_distance: 8.57
+    force: true
+- atom_contact:
+    atom1: [A, 18, CB]
+    atom2: [A, 18, CD]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 18, CB]
+    atom2: [A, 18, CG]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 18, CB]
+    atom2: [A, 18, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 18, CB]
+    atom2: [A, 19, N]
+    max_distance: 8.33
+    force: true
+- atom_contact:
+    atom1: [A, 18, CB]
+    atom2: [A, 76, CA]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 18, CB]
+    atom2: [A, 76, CB]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 18, CB]
+    atom2: [A, 76, CG]
+    max_distance: 7.19
+    force: true
+- atom_contact:
+    atom1: [A, 18, CB]
+    atom2: [A, 77, N]
+    max_distance: 8.47
+    force: true
+- atom_contact:
+    atom1: [A, 18, CB]
+    atom2: [A, 93, CG]
+    max_distance: 8.4
+    force: true
+- atom_contact:
+    atom1: [A, 18, CD]
+    atom2: [A, 74, CB]
+    max_distance: 7.66
+    force: true
+- atom_contact:
+    atom1: [A, 18, CD]
+    atom2: [A, 93, CG]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 18, N]
+    atom2: [A, 19, N]
+    max_distance: 8.600001
+    force: true
+- atom_contact:
+    atom1: [A, 18, N]
+    atom2: [A, 21, N]
+    max_distance: 8.600001
+    force: true
+- atom_contact:
+    atom1: [A, 18, N]
+    atom2: [A, 75, CG2]
+    max_distance: 8.64
+    force: true
+- atom_contact:
+    atom1: [A, 18, N]
+    atom2: [A, 75, N]
+    max_distance: 8.01
+    force: true
+- atom_contact:
+    atom1: [A, 18, N]
+    atom2: [A, 75, O]
+    max_distance: 3.88
+    force: true
+- atom_contact:
+    atom1: [A, 18, N]
+    atom2: [A, 76, CA]
+    max_distance: 7.8
+    force: true
+- atom_contact:
+    atom1: [A, 18, N]
+    atom2: [A, 76, CB]
+    max_distance: 7.640001
+    force: true
+- atom_contact:
+    atom1: [A, 18, N]
+    atom2: [A, 76, CG]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 18, N]
+    atom2: [A, 76, N]
+    max_distance: 7.93
+    force: true
+- atom_contact:
+    atom1: [A, 18, N]
+    atom2: [A, 77, N]
+    max_distance: 8.120001
+    force: true
+- atom_contact:
+    atom1: [A, 18, O]
+    atom2: [A, 77, N]
+    max_distance: 3.88
+    force: true
+- atom_contact:
+    atom1: [A, 19, CA]
+    atom2: [A, 19, N]
+    max_distance: 7.62
+    force: true
+- atom_contact:
+    atom1: [A, 19, CA]
+    atom2: [A, 20, N]
+    max_distance: 8.56
+    force: true
+- atom_contact:
+    atom1: [A, 19, CA]
+    atom2: [A, 21, N]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 19, CA]
+    atom2: [A, 76, CA]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 19, CA]
+    atom2: [A, 76, CB]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 19, CA]
+    atom2: [A, 77, CD]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 19, CA]
+    atom2: [A, 77, CG]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 19, CA]
+    atom2: [A, 77, N]
+    max_distance: 7.600001
+    force: true
+- atom_contact:
+    atom1: [A, 19, N]
+    atom2: [A, 20, CA]
+    max_distance: 8.64
+    force: true
+- atom_contact:
+    atom1: [A, 19, N]
+    atom2: [A, 20, N]
+    max_distance: 7.93
+    force: true
+- atom_contact:
+    atom1: [A, 19, N]
+    atom2: [A, 21, N]
+    max_distance: 8.4
+    force: true
+- atom_contact:
+    atom1: [A, 19, N]
+    atom2: [A, 77, CE]
+    max_distance: 8.84
+    force: true
+- atom_contact:
+    atom1: [A, 19, N]
+    atom2: [A, 77, N]
+    max_distance: 8.4
+    force: true
+- atom_contact:
+    atom1: [A, 20, CA]
+    atom2: [A, 20, N]
+    max_distance: 7.82
+    force: true
+- atom_contact:
+    atom1: [A, 20, CA]
+    atom2: [A, 21, CA]
+    max_distance: 8.100001
+    force: true
+- atom_contact:
+    atom1: [A, 20, CA]
+    atom2: [A, 21, N]
+    max_distance: 8.120001
+    force: true
+- atom_contact:
+    atom1: [A, 20, N]
+    atom2: [A, 21, N]
+    max_distance: 7.57
+    force: true
+- atom_contact:
+    atom1: [A, 20, N]
+    atom2: [A, 77, CB]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 21, CA]
+    atom2: [A, 21, CB]
+    max_distance: 8.3
+    force: true
+- atom_contact:
+    atom1: [A, 21, CA]
+    atom2: [A, 21, N]
+    max_distance: 8.120001
+    force: true
+- atom_contact:
+    atom1: [A, 21, CA]
+    atom2: [A, 22, N]
+    max_distance: 8.16
+    force: true
+- atom_contact:
+    atom1: [A, 21, CA]
+    atom2: [A, 25, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 21, CA]
+    atom2: [A, 75, CG2]
+    max_distance: 9.31
+    force: true
+- atom_contact:
+    atom1: [A, 21, CB]
+    atom2: [A, 21, N]
+    max_distance: 8.24
+    force: true
+- atom_contact:
+    atom1: [A, 21, CB]
+    atom2: [A, 22, N]
+    max_distance: 8.39
+    force: true
+- atom_contact:
+    atom1: [A, 21, CB]
+    atom2: [A, 75, CB]
+    max_distance: 8.280001
+    force: true
+- atom_contact:
+    atom1: [A, 21, CB]
+    atom2: [A, 75, CG2]
+    max_distance: 9.71
+    force: true
+- atom_contact:
+    atom1: [A, 21, CB]
+    atom2: [A, 76, CA]
+    max_distance: 7.600001
+    force: true
+- atom_contact:
+    atom1: [A, 21, CD1]
+    atom2: [A, 22, N]
+    max_distance: 8.120001
+    force: true
+- atom_contact:
+    atom1: [A, 21, CD1]
+    atom2: [A, 24, N]
+    max_distance: 8.92
+    force: true
+- atom_contact:
+    atom1: [A, 21, N]
+    atom2: [A, 76, CA]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 21, N]
+    atom2: [A, 77, N]
+    max_distance: 8.4
+    force: true
+- atom_contact:
+    atom1: [A, 22, CA]
+    atom2: [A, 22, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 22, CA]
+    atom2: [A, 22, CD2]
+    max_distance: 8.46
+    force: true
+- atom_contact:
+    atom1: [A, 22, CA]
+    atom2: [A, 22, N]
+    max_distance: 8.18
+    force: true
+- atom_contact:
+    atom1: [A, 22, CA]
+    atom2: [A, 23, CA]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 22, CA]
+    atom2: [A, 23, N]
+    max_distance: 8.18
+    force: true
+- atom_contact:
+    atom1: [A, 22, CA]
+    atom2: [A, 24, N]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 22, CA]
+    atom2: [A, 25, N]
+    max_distance: 8.47
+    force: true
+- atom_contact:
+    atom1: [A, 22, CB]
+    atom2: [A, 22, CD2]
+    max_distance: 7.38
+    force: true
+- atom_contact:
+    atom1: [A, 22, CB]
+    atom2: [A, 22, N]
+    max_distance: 8.47
+    force: true
+- atom_contact:
+    atom1: [A, 22, CB]
+    atom2: [A, 23, N]
+    max_distance: 8.06
+    force: true
+- atom_contact:
+    atom1: [A, 22, CB]
+    atom2: [A, 24, N]
+    max_distance: 8.22
+    force: true
+- atom_contact:
+    atom1: [A, 22, CB]
+    atom2: [A, 25, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 22, CD2]
+    atom2: [A, 22, N]
+    max_distance: 7.88
+    force: true
+- atom_contact:
+    atom1: [A, 22, CD2]
+    atom2: [A, 24, N]
+    max_distance: 7.96
+    force: true
+- atom_contact:
+    atom1: [A, 22, CD2]
+    atom2: [A, 25, CA]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 22, CD2]
+    atom2: [A, 25, CB]
+    max_distance: 7.12
+    force: true
+- atom_contact:
+    atom1: [A, 22, CD2]
+    atom2: [A, 25, N]
+    max_distance: 7.5
+    force: true
+- atom_contact:
+    atom1: [A, 22, CD2]
+    atom2: [A, 26, N]
+    max_distance: 8.64
+    force: true
+- atom_contact:
+    atom1: [A, 22, CD2]
+    atom2: [A, 27, N]
+    max_distance: 8.89
+    force: true
+- atom_contact:
+    atom1: [A, 22, CD2]
+    atom2: [A, 28, CB]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 22, CD2]
+    atom2: [A, 28, N]
+    max_distance: 8.64
+    force: true
+- atom_contact:
+    atom1: [A, 22, CE1]
+    atom2: [A, 26, N]
+    max_distance: 8.780001
+    force: true
+- atom_contact:
+    atom1: [A, 22, N]
+    atom2: [A, 23, N]
+    max_distance: 8.600001
+    force: true
+- atom_contact:
+    atom1: [A, 22, N]
+    atom2: [A, 24, N]
+    max_distance: 8.8
+    force: true
+- atom_contact:
+    atom1: [A, 22, N]
+    atom2: [A, 25, CD2]
+    max_distance: 8.16
+    force: true
+- atom_contact:
+    atom1: [A, 22, N]
+    atom2: [A, 25, N]
+    max_distance: 7.58
+    force: true
+- atom_contact:
+    atom1: [A, 22, N]
+    atom2: [A, 28, CB]
+    max_distance: 8.530001
+    force: true
+- atom_contact:
+    atom1: [A, 22, N]
+    atom2: [A, 75, CG1]
+    max_distance: 8.67
+    force: true
+- atom_contact:
+    atom1: [A, 23, CA]
+    atom2: [A, 23, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 23, CA]
+    atom2: [A, 23, N]
+    max_distance: 8.16
+    force: true
+- atom_contact:
+    atom1: [A, 23, CA]
+    atom2: [A, 24, CB]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 23, CA]
+    atom2: [A, 24, N]
+    max_distance: 8.3
+    force: true
+- atom_contact:
+    atom1: [A, 23, CA]
+    atom2: [A, 25, N]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 23, CA]
+    atom2: [A, 28, CA]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 23, CA]
+    atom2: [A, 28, CG2]
+    max_distance: 7.020001
+    force: true
+- atom_contact:
+    atom1: [A, 23, CA]
+    atom2: [A, 28, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 23, CB]
+    atom2: [A, 23, N]
+    max_distance: 7.9
+    force: true
+- atom_contact:
+    atom1: [A, 23, CB]
+    atom2: [A, 24, CA]
+    max_distance: 7.95
+    force: true
+- atom_contact:
+    atom1: [A, 23, CB]
+    atom2: [A, 24, N]
+    max_distance: 7.86
+    force: true
+- atom_contact:
+    atom1: [A, 23, CB]
+    atom2: [A, 25, N]
+    max_distance: 8.41
+    force: true
+- atom_contact:
+    atom1: [A, 23, CB]
+    atom2: [A, 28, CG2]
+    max_distance: 7.4
+    force: true
+- atom_contact:
+    atom1: [A, 23, N]
+    atom2: [A, 24, CB]
+    max_distance: 7.9
+    force: true
+- atom_contact:
+    atom1: [A, 23, N]
+    atom2: [A, 24, N]
+    max_distance: 8.47
+    force: true
+- atom_contact:
+    atom1: [A, 23, N]
+    atom2: [A, 25, N]
+    max_distance: 8.4
+    force: true
+- atom_contact:
+    atom1: [A, 24, CA]
+    atom2: [A, 24, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 24, CA]
+    atom2: [A, 24, N]
+    max_distance: 7.94
+    force: true
+- atom_contact:
+    atom1: [A, 24, CA]
+    atom2: [A, 25, N]
+    max_distance: 8.11
+    force: true
+- atom_contact:
+    atom1: [A, 24, CA]
+    atom2: [A, 28, CB]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 24, CA]
+    atom2: [A, 29, CD]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 24, CA]
+    atom2: [A, 29, CG]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 24, CB]
+    atom2: [A, 24, N]
+    max_distance: 7.7
+    force: true
+- atom_contact:
+    atom1: [A, 24, CB]
+    atom2: [A, 29, CD]
+    max_distance: 8.71
+    force: true
+- atom_contact:
+    atom1: [A, 24, N]
+    atom2: [A, 25, N]
+    max_distance: 7.520001
+    force: true
+- atom_contact:
+    atom1: [A, 25, CA]
+    atom2: [A, 25, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 25, CA]
+    atom2: [A, 25, N]
+    max_distance: 8.14
+    force: true
+- atom_contact:
+    atom1: [A, 25, CA]
+    atom2: [A, 26, CA]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 25, CA]
+    atom2: [A, 26, N]
+    max_distance: 7.270001
+    force: true
+- atom_contact:
+    atom1: [A, 25, CA]
+    atom2: [A, 27, N]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 25, CA]
+    atom2: [A, 28, CB]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 25, CA]
+    atom2: [A, 28, N]
+    max_distance: 7.9
+    force: true
+- atom_contact:
+    atom1: [A, 25, CA]
+    atom2: [A, 29, CD]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 25, CA]
+    atom2: [A, 29, N]
+    max_distance: 8.2
+    force: true
+- atom_contact:
+    atom1: [A, 25, CB]
+    atom2: [A, 25, CD2]
+    max_distance: 8.06
+    force: true
+- atom_contact:
+    atom1: [A, 25, CB]
+    atom2: [A, 25, N]
+    max_distance: 7.79
+    force: true
+- atom_contact:
+    atom1: [A, 25, CB]
+    atom2: [A, 26, N]
+    max_distance: 8.64
+    force: true
+- atom_contact:
+    atom1: [A, 25, CB]
+    atom2: [A, 27, CG2]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 25, CB]
+    atom2: [A, 27, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 25, CB]
+    atom2: [A, 28, CA]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 25, CB]
+    atom2: [A, 28, CB]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 25, CB]
+    atom2: [A, 28, N]
+    max_distance: 7.890001
+    force: true
+- atom_contact:
+    atom1: [A, 25, CB]
+    atom2: [A, 29, N]
+    max_distance: 8.64
+    force: true
+- atom_contact:
+    atom1: [A, 25, CD2]
+    atom2: [A, 26, N]
+    max_distance: 8.64
+    force: true
+- atom_contact:
+    atom1: [A, 25, CD2]
+    atom2: [A, 28, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 25, N]
+    atom2: [A, 27, CG2]
+    max_distance: 9.67
+    force: true
+- atom_contact:
+    atom1: [A, 25, N]
+    atom2: [A, 27, N]
+    max_distance: 7.93
+    force: true
+- atom_contact:
+    atom1: [A, 25, N]
+    atom2: [A, 28, CB]
+    max_distance: 7.7
+    force: true
+- atom_contact:
+    atom1: [A, 25, N]
+    atom2: [A, 28, CG2]
+    max_distance: 8.05
+    force: true
+- atom_contact:
+    atom1: [A, 25, N]
+    atom2: [A, 28, N]
+    max_distance: 8.23
+    force: true
+- atom_contact:
+    atom1: [A, 25, N]
+    atom2: [A, 29, N]
+    max_distance: 8.4
+    force: true
+- atom_contact:
+    atom1: [A, 25, O]
+    atom2: [A, 29, N]
+    max_distance: 3.88
+    force: true
+- atom_contact:
+    atom1: [A, 26, CA]
+    atom2: [A, 26, CB]
+    max_distance: 8.38
+    force: true
+- atom_contact:
+    atom1: [A, 26, CA]
+    atom2: [A, 26, CD1]
+    max_distance: 8.15
+    force: true
+- atom_contact:
+    atom1: [A, 26, CA]
+    atom2: [A, 26, N]
+    max_distance: 8.0
+    force: true
+- atom_contact:
+    atom1: [A, 26, CA]
+    atom2: [A, 27, N]
+    max_distance: 8.47
+    force: true
+- atom_contact:
+    atom1: [A, 26, CA]
+    atom2: [A, 28, N]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 26, CA]
+    atom2: [A, 29, CA]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 26, CA]
+    atom2: [A, 29, CB]
+    max_distance: 7.51
+    force: true
+- atom_contact:
+    atom1: [A, 26, CA]
+    atom2: [A, 29, CD]
+    max_distance: 7.560001
+    force: true
+- atom_contact:
+    atom1: [A, 26, CA]
+    atom2: [A, 29, CG]
+    max_distance: 7.83
+    force: true
+- atom_contact:
+    atom1: [A, 26, CA]
+    atom2: [A, 29, N]
+    max_distance: 7.69
+    force: true
+- atom_contact:
+    atom1: [A, 26, CA]
+    atom2: [A, 30, CA]
+    max_distance: 8.71
+    force: true
+- atom_contact:
+    atom1: [A, 26, CA]
+    atom2: [A, 30, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 26, CA]
+    atom2: [A, 30, N]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 26, CB]
+    atom2: [A, 26, CD1]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 26, CB]
+    atom2: [A, 26, CG1]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 26, CB]
+    atom2: [A, 26, CG2]
+    max_distance: 7.970001
+    force: true
+- atom_contact:
+    atom1: [A, 26, CB]
+    atom2: [A, 26, N]
+    max_distance: 7.390001
+    force: true
+- atom_contact:
+    atom1: [A, 26, CB]
+    atom2: [A, 27, N]
+    max_distance: 8.47
+    force: true
+- atom_contact:
+    atom1: [A, 26, CB]
+    atom2: [A, 29, CB]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 26, CD1]
+    atom2: [A, 26, CG2]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 26, CD1]
+    atom2: [A, 26, N]
+    max_distance: 8.23
+    force: true
+- atom_contact:
+    atom1: [A, 26, CD1]
+    atom2: [A, 29, CD]
+    max_distance: 8.71
+    force: true
+- atom_contact:
+    atom1: [A, 26, CD1]
+    atom2: [A, 29, N]
+    max_distance: 8.84
+    force: true
+- atom_contact:
+    atom1: [A, 26, CD1]
+    atom2: [A, 30, CD1]
+    max_distance: 9.25
+    force: true
+- atom_contact:
+    atom1: [A, 26, CD1]
+    atom2: [A, 30, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 26, CD1]
+    atom2: [A, 102, CA]
+    max_distance: 8.48
+    force: true
+- atom_contact:
+    atom1: [A, 26, CD1]
+    atom2: [A, 105, CB]
+    max_distance: 8.280001
+    force: true
+- atom_contact:
+    atom1: [A, 26, CD1]
+    atom2: [A, 105, CG]
+    max_distance: 8.48
+    force: true
+- atom_contact:
+    atom1: [A, 26, CG1]
+    atom2: [A, 26, CG2]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 26, CG1]
+    atom2: [A, 26, N]
+    max_distance: 8.23
+    force: true
+- atom_contact:
+    atom1: [A, 26, CG1]
+    atom2: [A, 29, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 26, CG1]
+    atom2: [A, 29, CD]
+    max_distance: 8.91
+    force: true
+- atom_contact:
+    atom1: [A, 26, CG1]
+    atom2: [A, 29, N]
+    max_distance: 8.64
+    force: true
+- atom_contact:
+    atom1: [A, 26, CG1]
+    atom2: [A, 30, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 26, CG1]
+    atom2: [A, 102, CA]
+    max_distance: 8.68
+    force: true
+- atom_contact:
+    atom1: [A, 26, CG1]
+    atom2: [A, 105, CB]
+    max_distance: 8.280001
+    force: true
+- atom_contact:
+    atom1: [A, 26, CG1]
+    atom2: [A, 105, CG]
+    max_distance: 8.68
+    force: true
+- atom_contact:
+    atom1: [A, 26, CG2]
+    atom2: [A, 26, N]
+    max_distance: 7.430001
+    force: true
+- atom_contact:
+    atom1: [A, 26, CG2]
+    atom2: [A, 27, CG1]
+    max_distance: 8.68
+    force: true
+- atom_contact:
+    atom1: [A, 26, CG2]
+    atom2: [A, 27, N]
+    max_distance: 7.850001
+    force: true
+- atom_contact:
+    atom1: [A, 26, N]
+    atom2: [A, 27, N]
+    max_distance: 8.370001
+    force: true
+- atom_contact:
+    atom1: [A, 26, N]
+    atom2: [A, 28, N]
+    max_distance: 8.33
+    force: true
+- atom_contact:
+    atom1: [A, 26, N]
+    atom2: [A, 29, CD]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 26, O]
+    atom2: [A, 30, N]
+    max_distance: 3.88
+    force: true
+- atom_contact:
+    atom1: [A, 27, CA]
+    atom2: [A, 27, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 27, CA]
+    atom2: [A, 27, CG1]
+    max_distance: 8.22
+    force: true
+- atom_contact:
+    atom1: [A, 27, CA]
+    atom2: [A, 27, CG2]
+    max_distance: 8.45
+    force: true
+- atom_contact:
+    atom1: [A, 27, CA]
+    atom2: [A, 27, N]
+    max_distance: 7.930001
+    force: true
+- atom_contact:
+    atom1: [A, 27, CA]
+    atom2: [A, 28, N]
+    max_distance: 8.47
+    force: true
+- atom_contact:
+    atom1: [A, 27, CA]
+    atom2: [A, 29, N]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 27, CA]
+    atom2: [A, 30, CB]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 27, CA]
+    atom2: [A, 30, CD1]
+    max_distance: 8.34
+    force: true
+- atom_contact:
+    atom1: [A, 27, CA]
+    atom2: [A, 30, N]
+    max_distance: 7.770001
+    force: true
+- atom_contact:
+    atom1: [A, 27, CA]
+    atom2: [A, 31, N]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 27, CB]
+    atom2: [A, 27, CG1]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 27, CB]
+    atom2: [A, 27, N]
+    max_distance: 7.75
+    force: true
+- atom_contact:
+    atom1: [A, 27, CB]
+    atom2: [A, 28, N]
+    max_distance: 8.26
+    force: true
+- atom_contact:
+    atom1: [A, 27, CG1]
+    atom2: [A, 27, CG2]
+    max_distance: 8.4
+    force: true
+- atom_contact:
+    atom1: [A, 27, CG1]
+    atom2: [A, 27, N]
+    max_distance: 7.61
+    force: true
+- atom_contact:
+    atom1: [A, 27, CG1]
+    atom2: [A, 75, CA]
+    max_distance: 8.48
+    force: true
+- atom_contact:
+    atom1: [A, 27, CG1]
+    atom2: [A, 75, CB]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 27, CG1]
+    atom2: [A, 75, CG1]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 27, CG1]
+    atom2: [A, 94, CD2]
+    max_distance: 8.06
+    force: true
+- atom_contact:
+    atom1: [A, 27, CG2]
+    atom2: [A, 27, N]
+    max_distance: 8.54
+    force: true
+- atom_contact:
+    atom1: [A, 27, CG2]
+    atom2: [A, 28, N]
+    max_distance: 8.46
+    force: true
+- atom_contact:
+    atom1: [A, 27, CG2]
+    atom2: [A, 75, CG2]
+    max_distance: 8.09
+    force: true
+- atom_contact:
+    atom1: [A, 27, N]
+    atom2: [A, 28, N]
+    max_distance: 7.95
+    force: true
+- atom_contact:
+    atom1: [A, 27, N]
+    atom2: [A, 29, N]
+    max_distance: 8.22
+    force: true
+- atom_contact:
+    atom1: [A, 27, N]
+    atom2: [A, 30, NE1]
+    max_distance: 8.13
+    force: true
+- atom_contact:
+    atom1: [A, 27, O]
+    atom2: [A, 31, N]
+    max_distance: 3.9
+    force: true
+- atom_contact:
+    atom1: [A, 28, CA]
+    atom2: [A, 28, CB]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 28, CA]
+    atom2: [A, 28, CG2]
+    max_distance: 8.2
+    force: true
+- atom_contact:
+    atom1: [A, 28, CA]
+    atom2: [A, 28, N]
+    max_distance: 8.100001
+    force: true
+- atom_contact:
+    atom1: [A, 28, CA]
+    atom2: [A, 29, N]
+    max_distance: 8.4
+    force: true
+- atom_contact:
+    atom1: [A, 28, CA]
+    atom2: [A, 30, N]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 28, CA]
+    atom2: [A, 31, CA]
+    max_distance: 8.71
+    force: true
+- atom_contact:
+    atom1: [A, 28, CA]
+    atom2: [A, 31, CB]
+    max_distance: 8.0
+    force: true
+- atom_contact:
+    atom1: [A, 28, CA]
+    atom2: [A, 31, N]
+    max_distance: 7.48
+    force: true
+- atom_contact:
+    atom1: [A, 28, CA]
+    atom2: [A, 32, CE3]
+    max_distance: 8.71
+    force: true
+- atom_contact:
+    atom1: [A, 28, CA]
+    atom2: [A, 32, N]
+    max_distance: 8.030001
+    force: true
+- atom_contact:
+    atom1: [A, 28, CB]
+    atom2: [A, 28, CG2]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 28, CB]
+    atom2: [A, 28, N]
+    max_distance: 8.14
+    force: true
+- atom_contact:
+    atom1: [A, 28, CB]
+    atom2: [A, 29, N]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 28, CB]
+    atom2: [A, 30, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 28, CG2]
+    atom2: [A, 28, N]
+    max_distance: 8.46
+    force: true
+- atom_contact:
+    atom1: [A, 28, CG2]
+    atom2: [A, 29, CA]
+    max_distance: 8.36
+    force: true
+- atom_contact:
+    atom1: [A, 28, CG2]
+    atom2: [A, 31, CB]
+    max_distance: 8.55
+    force: true
+- atom_contact:
+    atom1: [A, 28, CG2]
+    atom2: [A, 32, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 28, CG2]
+    atom2: [A, 32, N]
+    max_distance: 7.82
+    force: true
+- atom_contact:
+    atom1: [A, 28, N]
+    atom2: [A, 29, CB]
+    max_distance: 8.26
+    force: true
+- atom_contact:
+    atom1: [A, 28, N]
+    atom2: [A, 29, N]
+    max_distance: 7.770001
+    force: true
+- atom_contact:
+    atom1: [A, 28, N]
+    atom2: [A, 30, N]
+    max_distance: 8.26
+    force: true
+- atom_contact:
+    atom1: [A, 28, N]
+    atom2: [A, 31, CB]
+    max_distance: 8.64
+    force: true
+- atom_contact:
+    atom1: [A, 28, O]
+    atom2: [A, 32, N]
+    max_distance: 3.88
+    force: true
+- atom_contact:
+    atom1: [A, 29, CA]
+    atom2: [A, 29, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 29, CA]
+    atom2: [A, 29, CG]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 29, CA]
+    atom2: [A, 29, N]
+    max_distance: 8.21
+    force: true
+- atom_contact:
+    atom1: [A, 29, CA]
+    atom2: [A, 33, CA]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 29, CB]
+    atom2: [A, 29, CD]
+    max_distance: 8.24
+    force: true
+- atom_contact:
+    atom1: [A, 29, CB]
+    atom2: [A, 29, CG]
+    max_distance: 7.45
+    force: true
+- atom_contact:
+    atom1: [A, 29, CB]
+    atom2: [A, 29, N]
+    max_distance: 7.57
+    force: true
+- atom_contact:
+    atom1: [A, 29, CB]
+    atom2: [A, 30, CA]
+    max_distance: 7.640001
+    force: true
+- atom_contact:
+    atom1: [A, 29, CB]
+    atom2: [A, 30, N]
+    max_distance: 7.76
+    force: true
+- atom_contact:
+    atom1: [A, 29, CB]
+    atom2: [A, 31, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 29, CB]
+    atom2: [A, 32, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 29, CB]
+    atom2: [A, 33, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 29, CD]
+    atom2: [A, 29, CG]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 29, CG]
+    atom2: [A, 29, N]
+    max_distance: 8.47
+    force: true
+- atom_contact:
+    atom1: [A, 29, N]
+    atom2: [A, 30, N]
+    max_distance: 6.74
+    force: true
+- atom_contact:
+    atom1: [A, 29, N]
+    atom2: [A, 31, N]
+    max_distance: 8.4
+    force: true
+- atom_contact:
+    atom1: [A, 29, O]
+    atom2: [A, 33, N]
+    max_distance: 3.88
+    force: true
+- atom_contact:
+    atom1: [A, 30, CA]
+    atom2: [A, 30, CB]
+    max_distance: 7.41
+    force: true
+- atom_contact:
+    atom1: [A, 30, CA]
+    atom2: [A, 30, CD1]
+    max_distance: 8.01
+    force: true
+- atom_contact:
+    atom1: [A, 30, CA]
+    atom2: [A, 30, N]
+    max_distance: 7.97
+    force: true
+- atom_contact:
+    atom1: [A, 30, CA]
+    atom2: [A, 31, N]
+    max_distance: 8.64
+    force: true
+- atom_contact:
+    atom1: [A, 30, CA]
+    atom2: [A, 32, N]
+    max_distance: 7.48
+    force: true
+- atom_contact:
+    atom1: [A, 30, CA]
+    atom2: [A, 33, CB]
+    max_distance: 7.44
+    force: true
+- atom_contact:
+    atom1: [A, 30, CA]
+    atom2: [A, 33, N]
+    max_distance: 8.07
+    force: true
+- atom_contact:
+    atom1: [A, 30, CA]
+    atom2: [A, 34, CA]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 30, CA]
+    atom2: [A, 34, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 30, CA]
+    atom2: [A, 102, CD1]
+    max_distance: 7.020001
+    force: true
+- atom_contact:
+    atom1: [A, 30, CA]
+    atom2: [A, 102, CE1]
+    max_distance: 7.94
+    force: true
+- atom_contact:
+    atom1: [A, 30, CA]
+    atom2: [A, 102, CZ]
+    max_distance: 8.83
+    force: true
+- atom_contact:
+    atom1: [A, 30, CA]
+    atom2: [A, 106, CD1]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 30, CB]
+    atom2: [A, 30, CD1]
+    max_distance: 7.86
+    force: true
+- atom_contact:
+    atom1: [A, 30, CB]
+    atom2: [A, 30, N]
+    max_distance: 7.78
+    force: true
+- atom_contact:
+    atom1: [A, 30, CB]
+    atom2: [A, 31, N]
+    max_distance: 7.75
+    force: true
+- atom_contact:
+    atom1: [A, 30, CB]
+    atom2: [A, 34, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 30, CB]
+    atom2: [A, 34, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 30, CB]
+    atom2: [A, 102, CD1]
+    max_distance: 7.310001
+    force: true
+- atom_contact:
+    atom1: [A, 30, CB]
+    atom2: [A, 105, CA]
+    max_distance: 8.280001
+    force: true
+- atom_contact:
+    atom1: [A, 30, CB]
+    atom2: [A, 105, CB]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 30, CB]
+    atom2: [A, 105, CD1]
+    max_distance: 7.32
+    force: true
+- atom_contact:
+    atom1: [A, 30, CB]
+    atom2: [A, 105, CD2]
+    max_distance: 7.32
+    force: true
+- atom_contact:
+    atom1: [A, 30, CB]
+    atom2: [A, 105, CG]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 30, CB]
+    atom2: [A, 106, CA]
+    max_distance: 8.280001
+    force: true
+- atom_contact:
+    atom1: [A, 30, CD1]
+    atom2: [A, 30, N]
+    max_distance: 7.73
+    force: true
+- atom_contact:
+    atom1: [A, 30, CD1]
+    atom2: [A, 31, CA]
+    max_distance: 8.030001
+    force: true
+- atom_contact:
+    atom1: [A, 30, CD1]
+    atom2: [A, 31, CB]
+    max_distance: 8.21
+    force: true
+- atom_contact:
+    atom1: [A, 30, CD1]
+    atom2: [A, 31, N]
+    max_distance: 8.280001
+    force: true
+- atom_contact:
+    atom1: [A, 30, N]
+    atom2: [A, 31, CA]
+    max_distance: 8.18
+    force: true
+- atom_contact:
+    atom1: [A, 30, N]
+    atom2: [A, 31, N]
+    max_distance: 8.07
+    force: true
+- atom_contact:
+    atom1: [A, 30, N]
+    atom2: [A, 32, N]
+    max_distance: 7.93
+    force: true
+- atom_contact:
+    atom1: [A, 30, O]
+    atom2: [A, 34, N]
+    max_distance: 3.88
+    force: true
+- atom_contact:
+    atom1: [A, 31, CA]
+    atom2: [A, 31, CB]
+    max_distance: 8.05
+    force: true
+- atom_contact:
+    atom1: [A, 31, CA]
+    atom2: [A, 31, N]
+    max_distance: 7.75
+    force: true
+- atom_contact:
+    atom1: [A, 31, CA]
+    atom2: [A, 32, N]
+    max_distance: 7.82
+    force: true
+- atom_contact:
+    atom1: [A, 31, CA]
+    atom2: [A, 34, CB]
+    max_distance: 7.79
+    force: true
+- atom_contact:
+    atom1: [A, 31, CA]
+    atom2: [A, 34, N]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 31, CA]
+    atom2: [A, 35, CB]
+    max_distance: 7.78
+    force: true
+- atom_contact:
+    atom1: [A, 31, CA]
+    atom2: [A, 35, N]
+    max_distance: 7.23
+    force: true
+- atom_contact:
+    atom1: [A, 31, CA]
+    atom2: [A, 109, CB]
+    max_distance: 8.280001
+    force: true
+- atom_contact:
+    atom1: [A, 31, CB]
+    atom2: [A, 31, N]
+    max_distance: 7.72
+    force: true
+- atom_contact:
+    atom1: [A, 31, CB]
+    atom2: [A, 32, CE3]
+    max_distance: 9.0
+    force: true
+- atom_contact:
+    atom1: [A, 31, CB]
+    atom2: [A, 32, N]
+    max_distance: 7.57
+    force: true
+- atom_contact:
+    atom1: [A, 31, CB]
+    atom2: [A, 34, N]
+    max_distance: 8.64
+    force: true
+- atom_contact:
+    atom1: [A, 31, N]
+    atom2: [A, 32, CB]
+    max_distance: 7.72
+    force: true
+- atom_contact:
+    atom1: [A, 31, N]
+    atom2: [A, 32, CE3]
+    max_distance: 9.11
+    force: true
+- atom_contact:
+    atom1: [A, 31, N]
+    atom2: [A, 32, N]
+    max_distance: 8.23
+    force: true
+- atom_contact:
+    atom1: [A, 31, N]
+    atom2: [A, 33, N]
+    max_distance: 8.4
+    force: true
+- atom_contact:
+    atom1: [A, 31, N]
+    atom2: [A, 34, CB]
+    max_distance: 8.56
+    force: true
+- atom_contact:
+    atom1: [A, 31, N]
+    atom2: [A, 34, N]
+    max_distance: 7.93
+    force: true
+- atom_contact:
+    atom1: [A, 31, O]
+    atom2: [A, 35, N]
+    max_distance: 3.88
+    force: true
+- atom_contact:
+    atom1: [A, 32, CA]
+    atom2: [A, 32, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 32, CA]
+    atom2: [A, 32, CE3]
+    max_distance: 7.770001
+    force: true
+- atom_contact:
+    atom1: [A, 32, CA]
+    atom2: [A, 32, N]
+    max_distance: 7.82
+    force: true
+- atom_contact:
+    atom1: [A, 32, CA]
+    atom2: [A, 33, N]
+    max_distance: 8.29
+    force: true
+- atom_contact:
+    atom1: [A, 32, CA]
+    atom2: [A, 35, CA]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 32, CA]
+    atom2: [A, 35, CB]
+    max_distance: 7.36
+    force: true
+- atom_contact:
+    atom1: [A, 32, CA]
+    atom2: [A, 35, CG1]
+    max_distance: 8.120001
+    force: true
+- atom_contact:
+    atom1: [A, 32, CA]
+    atom2: [A, 35, N]
+    max_distance: 7.23
+    force: true
+- atom_contact:
+    atom1: [A, 32, CA]
+    atom2: [A, 36, N]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 32, CB]
+    atom2: [A, 32, CE3]
+    max_distance: 7.8
+    force: true
+- atom_contact:
+    atom1: [A, 32, CB]
+    atom2: [A, 32, N]
+    max_distance: 7.57
+    force: true
+- atom_contact:
+    atom1: [A, 32, CB]
+    atom2: [A, 33, N]
+    max_distance: 8.46
+    force: true
+- atom_contact:
+    atom1: [A, 32, CB]
+    atom2: [A, 34, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 32, CB]
+    atom2: [A, 35, CB]
+    max_distance: 9.11
+    force: true
+- atom_contact:
+    atom1: [A, 32, CB]
+    atom2: [A, 35, N]
+    max_distance: 8.64
+    force: true
+- atom_contact:
+    atom1: [A, 32, CB]
+    atom2: [A, 36, CG]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 32, CD1]
+    atom2: [A, 36, CB]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 32, CE3]
+    atom2: [A, 32, N]
+    max_distance: 8.29
+    force: true
+- atom_contact:
+    atom1: [A, 32, CE3]
+    atom2: [A, 35, CB]
+    max_distance: 7.94
+    force: true
+- atom_contact:
+    atom1: [A, 32, CE3]
+    atom2: [A, 35, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 32, N]
+    atom2: [A, 33, CB]
+    max_distance: 8.4
+    force: true
+- atom_contact:
+    atom1: [A, 32, N]
+    atom2: [A, 33, N]
+    max_distance: 7.76
+    force: true
+- atom_contact:
+    atom1: [A, 32, N]
+    atom2: [A, 35, CG1]
+    max_distance: 8.47
+    force: true
+- atom_contact:
+    atom1: [A, 32, N]
+    atom2: [A, 35, N]
+    max_distance: 8.4
+    force: true
+- atom_contact:
+    atom1: [A, 32, O]
+    atom2: [A, 36, N]
+    max_distance: 3.88
+    force: true
+- atom_contact:
+    atom1: [A, 33, CA]
+    atom2: [A, 33, CB]
+    max_distance: 7.49
+    force: true
+- atom_contact:
+    atom1: [A, 33, CA]
+    atom2: [A, 33, N]
+    max_distance: 7.88
+    force: true
+- atom_contact:
+    atom1: [A, 33, CA]
+    atom2: [A, 34, N]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 33, CA]
+    atom2: [A, 35, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 33, CA]
+    atom2: [A, 36, CG]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 33, CA]
+    atom2: [A, 36, N]
+    max_distance: 7.53
+    force: true
+- atom_contact:
+    atom1: [A, 33, CA]
+    atom2: [A, 37, CB]
+    max_distance: 7.770001
+    force: true
+- atom_contact:
+    atom1: [A, 33, CA]
+    atom2: [A, 102, CE1]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 33, CB]
+    atom2: [A, 33, N]
+    max_distance: 7.04
+    force: true
+- atom_contact:
+    atom1: [A, 33, CB]
+    atom2: [A, 34, N]
+    max_distance: 7.61
+    force: true
+- atom_contact:
+    atom1: [A, 33, CB]
+    atom2: [A, 36, CG]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 33, CB]
+    atom2: [A, 37, CB]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 33, CB]
+    atom2: [A, 37, N]
+    max_distance: 8.22
+    force: true
+- atom_contact:
+    atom1: [A, 33, N]
+    atom2: [A, 34, CA]
+    max_distance: 8.29
+    force: true
+- atom_contact:
+    atom1: [A, 33, N]
+    atom2: [A, 34, N]
+    max_distance: 7.53
+    force: true
+- atom_contact:
+    atom1: [A, 33, N]
+    atom2: [A, 35, N]
+    max_distance: 8.22
+    force: true
+- atom_contact:
+    atom1: [A, 33, N]
+    atom2: [A, 36, CG]
+    max_distance: 7.78
+    force: true
+- atom_contact:
+    atom1: [A, 33, N]
+    atom2: [A, 36, N]
+    max_distance: 7.93
+    force: true
+- atom_contact:
+    atom1: [A, 33, N]
+    atom2: [A, 102, CE1]
+    max_distance: 8.04
+    force: true
+- atom_contact:
+    atom1: [A, 33, O]
+    atom2: [A, 37, N]
+    max_distance: 3.88
+    force: true
+- atom_contact:
+    atom1: [A, 34, CA]
+    atom2: [A, 34, CB]
+    max_distance: 7.8
+    force: true
+- atom_contact:
+    atom1: [A, 34, CA]
+    atom2: [A, 34, N]
+    max_distance: 7.86
+    force: true
+- atom_contact:
+    atom1: [A, 34, CA]
+    atom2: [A, 35, N]
+    max_distance: 8.06
+    force: true
+- atom_contact:
+    atom1: [A, 34, CA]
+    atom2: [A, 37, CB]
+    max_distance: 7.86
+    force: true
+- atom_contact:
+    atom1: [A, 34, CA]
+    atom2: [A, 37, CG]
+    max_distance: 7.890001
+    force: true
+- atom_contact:
+    atom1: [A, 34, CA]
+    atom2: [A, 37, N]
+    max_distance: 8.120001
+    force: true
+- atom_contact:
+    atom1: [A, 34, CA]
+    atom2: [A, 38, CA]
+    max_distance: 9.11
+    force: true
+- atom_contact:
+    atom1: [A, 34, CA]
+    atom2: [A, 102, CE1]
+    max_distance: 8.13
+    force: true
+- atom_contact:
+    atom1: [A, 34, CA]
+    atom2: [A, 102, CZ]
+    max_distance: 7.44
+    force: true
+- atom_contact:
+    atom1: [A, 34, CA]
+    atom2: [A, 106, CA]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 34, CA]
+    atom2: [A, 106, CD1]
+    max_distance: 6.8
+    force: true
+- atom_contact:
+    atom1: [A, 34, CA]
+    atom2: [A, 106, CE1]
+    max_distance: 8.48
+    force: true
+- atom_contact:
+    atom1: [A, 34, CA]
+    atom2: [A, 109, CB]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 34, CB]
+    atom2: [A, 34, N]
+    max_distance: 7.26
+    force: true
+- atom_contact:
+    atom1: [A, 34, CB]
+    atom2: [A, 35, N]
+    max_distance: 7.7
+    force: true
+- atom_contact:
+    atom1: [A, 34, CB]
+    atom2: [A, 37, CB]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 34, CB]
+    atom2: [A, 37, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 34, CB]
+    atom2: [A, 38, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 34, CB]
+    atom2: [A, 38, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 34, CB]
+    atom2: [A, 102, CE1]
+    max_distance: 8.23
+    force: true
+- atom_contact:
+    atom1: [A, 34, CB]
+    atom2: [A, 106, CB]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 34, CB]
+    atom2: [A, 106, CD1]
+    max_distance: 6.130001
+    force: true
+- atom_contact:
+    atom1: [A, 34, CB]
+    atom2: [A, 106, CE1]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 34, CB]
+    atom2: [A, 109, CB]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 34, N]
+    atom2: [A, 35, CB]
+    max_distance: 8.01
+    force: true
+- atom_contact:
+    atom1: [A, 34, N]
+    atom2: [A, 35, N]
+    max_distance: 7.8
+    force: true
+- atom_contact:
+    atom1: [A, 34, N]
+    atom2: [A, 36, CG]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 34, N]
+    atom2: [A, 36, N]
+    max_distance: 8.3
+    force: true
+- atom_contact:
+    atom1: [A, 34, N]
+    atom2: [A, 37, CB]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 34, N]
+    atom2: [A, 37, N]
+    max_distance: 8.4
+    force: true
+- atom_contact:
+    atom1: [A, 34, N]
+    atom2: [A, 102, CE1]
+    max_distance: 7.28
+    force: true
+- atom_contact:
+    atom1: [A, 34, N]
+    atom2: [A, 102, CZ]
+    max_distance: 7.54
+    force: true
+- atom_contact:
+    atom1: [A, 34, N]
+    atom2: [A, 106, CD1]
+    max_distance: 8.43
+    force: true
+- atom_contact:
+    atom1: [A, 34, O]
+    atom2: [A, 38, N]
+    max_distance: 3.88
+    force: true
+- atom_contact:
+    atom1: [A, 35, CA]
+    atom2: [A, 35, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 35, CA]
+    atom2: [A, 35, CG1]
+    max_distance: 8.39
+    force: true
+- atom_contact:
+    atom1: [A, 35, CA]
+    atom2: [A, 35, N]
+    max_distance: 8.05
+    force: true
+- atom_contact:
+    atom1: [A, 35, CA]
+    atom2: [A, 36, N]
+    max_distance: 8.22
+    force: true
+- atom_contact:
+    atom1: [A, 35, CA]
+    atom2: [A, 37, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 35, CA]
+    atom2: [A, 38, CA]
+    max_distance: 8.71
+    force: true
+- atom_contact:
+    atom1: [A, 35, CA]
+    atom2: [A, 38, CB]
+    max_distance: 8.15
+    force: true
+- atom_contact:
+    atom1: [A, 35, CA]
+    atom2: [A, 38, N]
+    max_distance: 7.5
+    force: true
+- atom_contact:
+    atom1: [A, 35, CA]
+    atom2: [A, 42, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 35, CA]
+    atom2: [A, 42, CG]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 35, CA]
+    atom2: [A, 43, CG]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 35, CA]
+    atom2: [A, 106, CE1]
+    max_distance: 8.91
+    force: true
+- atom_contact:
+    atom1: [A, 35, CA]
+    atom2: [A, 109, CG]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 35, CB]
+    atom2: [A, 35, CG1]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 35, CB]
+    atom2: [A, 35, N]
+    max_distance: 7.600001
+    force: true
+- atom_contact:
+    atom1: [A, 35, CB]
+    atom2: [A, 36, N]
+    max_distance: 7.87
+    force: true
+- atom_contact:
+    atom1: [A, 35, CB]
+    atom2: [A, 42, CG]
+    max_distance: 8.48
+    force: true
+- atom_contact:
+    atom1: [A, 35, CB]
+    atom2: [A, 46, CB]
+    max_distance: 8.68
+    force: true
+- atom_contact:
+    atom1: [A, 35, CG1]
+    atom2: [A, 35, N]
+    max_distance: 8.14
+    force: true
+- atom_contact:
+    atom1: [A, 35, CG1]
+    atom2: [A, 37, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 35, CG1]
+    atom2: [A, 38, N]
+    max_distance: 8.63
+    force: true
+- atom_contact:
+    atom1: [A, 35, CG1]
+    atom2: [A, 43, CA]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 35, CG1]
+    atom2: [A, 43, CG]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 35, N]
+    atom2: [A, 36, CA]
+    max_distance: 8.42
+    force: true
+- atom_contact:
+    atom1: [A, 35, N]
+    atom2: [A, 36, N]
+    max_distance: 7.92
+    force: true
+- atom_contact:
+    atom1: [A, 35, N]
+    atom2: [A, 37, N]
+    max_distance: 7.93
+    force: true
+- atom_contact:
+    atom1: [A, 36, CA]
+    atom2: [A, 36, CB]
+    max_distance: 7.180001
+    force: true
+- atom_contact:
+    atom1: [A, 36, CA]
+    atom2: [A, 36, CG]
+    max_distance: 7.92
+    force: true
+- atom_contact:
+    atom1: [A, 36, CA]
+    atom2: [A, 36, N]
+    max_distance: 7.96
+    force: true
+- atom_contact:
+    atom1: [A, 36, CA]
+    atom2: [A, 37, N]
+    max_distance: 7.84
+    force: true
+- atom_contact:
+    atom1: [A, 36, CA]
+    atom2: [A, 39, CA]
+    max_distance: 8.59
+    force: true
+- atom_contact:
+    atom1: [A, 36, CB]
+    atom2: [A, 36, N]
+    max_distance: 7.09
+    force: true
+- atom_contact:
+    atom1: [A, 36, CB]
+    atom2: [A, 37, N]
+    max_distance: 7.180001
+    force: true
+- atom_contact:
+    atom1: [A, 36, CG]
+    atom2: [A, 36, N]
+    max_distance: 8.06
+    force: true
+- atom_contact:
+    atom1: [A, 36, CG]
+    atom2: [A, 37, CA]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 36, N]
+    atom2: [A, 37, CB]
+    max_distance: 7.49
+    force: true
+- atom_contact:
+    atom1: [A, 36, N]
+    atom2: [A, 37, N]
+    max_distance: 7.93
+    force: true
+- atom_contact:
+    atom1: [A, 37, CA]
+    atom2: [A, 37, CB]
+    max_distance: 7.88
+    force: true
+- atom_contact:
+    atom1: [A, 37, CA]
+    atom2: [A, 37, CG]
+    max_distance: 8.0
+    force: true
+- atom_contact:
+    atom1: [A, 37, CA]
+    atom2: [A, 37, N]
+    max_distance: 7.87
+    force: true
+- atom_contact:
+    atom1: [A, 37, CA]
+    atom2: [A, 38, N]
+    max_distance: 8.54
+    force: true
+- atom_contact:
+    atom1: [A, 37, CB]
+    atom2: [A, 37, CG]
+    max_distance: 7.140001
+    force: true
+- atom_contact:
+    atom1: [A, 37, CB]
+    atom2: [A, 37, N]
+    max_distance: 7.180001
+    force: true
+- atom_contact:
+    atom1: [A, 37, CB]
+    atom2: [A, 38, N]
+    max_distance: 8.17
+    force: true
+- atom_contact:
+    atom1: [A, 37, CD]
+    atom2: [A, 37, CG]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 37, CD]
+    atom2: [A, 102, CZ]
+    max_distance: 8.91
+    force: true
+- atom_contact:
+    atom1: [A, 37, CD]
+    atom2: [A, 106, CD1]
+    max_distance: 8.91
+    force: true
+- atom_contact:
+    atom1: [A, 37, CG]
+    atom2: [A, 37, N]
+    max_distance: 8.11
+    force: true
+- atom_contact:
+    atom1: [A, 37, CG]
+    atom2: [A, 106, CD1]
+    max_distance: 8.280001
+    force: true
+- atom_contact:
+    atom1: [A, 37, N]
+    atom2: [A, 38, N]
+    max_distance: 7.5
+    force: true
+- atom_contact:
+    atom1: [A, 37, N]
+    atom2: [A, 106, CD1]
+    max_distance: 8.49
+    force: true
+- atom_contact:
+    atom1: [A, 38, CA]
+    atom2: [A, 38, CB]
+    max_distance: 8.100001
+    force: true
+- atom_contact:
+    atom1: [A, 38, CA]
+    atom2: [A, 38, N]
+    max_distance: 8.26
+    force: true
+- atom_contact:
+    atom1: [A, 38, CA]
+    atom2: [A, 39, N]
+    max_distance: 8.24
+    force: true
+- atom_contact:
+    atom1: [A, 38, CA]
+    atom2: [A, 41, CG]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 38, CA]
+    atom2: [A, 42, CB]
+    max_distance: 8.280001
+    force: true
+- atom_contact:
+    atom1: [A, 38, CA]
+    atom2: [A, 42, CG]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 38, CB]
+    atom2: [A, 38, N]
+    max_distance: 7.67
+    force: true
+- atom_contact:
+    atom1: [A, 38, CB]
+    atom2: [A, 39, CA]
+    max_distance: 8.73
+    force: true
+- atom_contact:
+    atom1: [A, 38, CB]
+    atom2: [A, 39, N]
+    max_distance: 8.06
+    force: true
+- atom_contact:
+    atom1: [A, 38, CB]
+    atom2: [A, 41, N]
+    max_distance: 8.2
+    force: true
+- atom_contact:
+    atom1: [A, 38, CB]
+    atom2: [A, 42, CA]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 38, CB]
+    atom2: [A, 42, CB]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 38, CB]
+    atom2: [A, 42, CG]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 38, CB]
+    atom2: [A, 42, N]
+    max_distance: 8.02
+    force: true
+- atom_contact:
+    atom1: [A, 38, CB]
+    atom2: [A, 43, N]
+    max_distance: 8.39
+    force: true
+- atom_contact:
+    atom1: [A, 38, N]
+    atom2: [A, 39, N]
+    max_distance: 8.13
+    force: true
+- atom_contact:
+    atom1: [A, 38, N]
+    atom2: [A, 42, CB]
+    max_distance: 8.36
+    force: true
+- atom_contact:
+    atom1: [A, 39, CA]
+    atom2: [A, 39, CB]
+    max_distance: 6.91
+    force: true
+- atom_contact:
+    atom1: [A, 39, CA]
+    atom2: [A, 39, N]
+    max_distance: 7.46
+    force: true
+- atom_contact:
+    atom1: [A, 39, CA]
+    atom2: [A, 40, CA]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 39, CA]
+    atom2: [A, 40, N]
+    max_distance: 7.560001
+    force: true
+- atom_contact:
+    atom1: [A, 39, CA]
+    atom2: [A, 41, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 39, CA]
+    atom2: [A, 43, CB]
+    max_distance: 8.48
+    force: true
+- atom_contact:
+    atom1: [A, 39, CB]
+    atom2: [A, 39, N]
+    max_distance: 7.86
+    force: true
+- atom_contact:
+    atom1: [A, 39, CB]
+    atom2: [A, 40, N]
+    max_distance: 7.8
+    force: true
+- atom_contact:
+    atom1: [A, 39, CB]
+    atom2: [A, 41, CG]
+    max_distance: 8.71
+    force: true
+- atom_contact:
+    atom1: [A, 39, CB]
+    atom2: [A, 41, N]
+    max_distance: 8.0
+    force: true
+- atom_contact:
+    atom1: [A, 39, CB]
+    atom2: [A, 42, CB]
+    max_distance: 8.91
+    force: true
+- atom_contact:
+    atom1: [A, 39, CB]
+    atom2: [A, 42, N]
+    max_distance: 8.02
+    force: true
+- atom_contact:
+    atom1: [A, 39, N]
+    atom2: [A, 40, N]
+    max_distance: 8.13
+    force: true
+- atom_contact:
+    atom1: [A, 39, N]
+    atom2: [A, 41, CG]
+    max_distance: 7.51
+    force: true
+- atom_contact:
+    atom1: [A, 39, N]
+    atom2: [A, 41, N]
+    max_distance: 6.83
+    force: true
+- atom_contact:
+    atom1: [A, 39, N]
+    atom2: [A, 42, CA]
+    max_distance: 8.89
+    force: true
+- atom_contact:
+    atom1: [A, 39, N]
+    atom2: [A, 42, CB]
+    max_distance: 7.97
+    force: true
+- atom_contact:
+    atom1: [A, 39, N]
+    atom2: [A, 42, CG]
+    max_distance: 7.71
+    force: true
+- atom_contact:
+    atom1: [A, 39, O]
+    atom2: [A, 43, N]
+    max_distance: 3.88
+    force: true
+- atom_contact:
+    atom1: [A, 40, CA]
+    atom2: [A, 40, CB]
+    max_distance: 8.32
+    force: true
+- atom_contact:
+    atom1: [A, 40, CA]
+    atom2: [A, 40, N]
+    max_distance: 8.3
+    force: true
+- atom_contact:
+    atom1: [A, 40, CA]
+    atom2: [A, 41, N]
+    max_distance: 8.100001
+    force: true
+- atom_contact:
+    atom1: [A, 40, CA]
+    atom2: [A, 42, N]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 40, CA]
+    atom2: [A, 43, CB]
+    max_distance: 7.91
+    force: true
+- atom_contact:
+    atom1: [A, 40, CA]
+    atom2: [A, 43, CD]
+    max_distance: 7.75
+    force: true
+- atom_contact:
+    atom1: [A, 40, CA]
+    atom2: [A, 43, CG]
+    max_distance: 7.91
+    force: true
+- atom_contact:
+    atom1: [A, 40, CA]
+    atom2: [A, 44, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 40, CB]
+    atom2: [A, 40, N]
+    max_distance: 7.38
+    force: true
+- atom_contact:
+    atom1: [A, 40, CB]
+    atom2: [A, 41, N]
+    max_distance: 7.680001
+    force: true
+- atom_contact:
+    atom1: [A, 40, CB]
+    atom2: [A, 42, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 40, CB]
+    atom2: [A, 43, CB]
+    max_distance: 8.280001
+    force: true
+- atom_contact:
+    atom1: [A, 40, CB]
+    atom2: [A, 43, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 40, CB]
+    atom2: [A, 44, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 40, N]
+    atom2: [A, 41, N]
+    max_distance: 7.87
+    force: true
+- atom_contact:
+    atom1: [A, 40, N]
+    atom2: [A, 42, N]
+    max_distance: 7.91
+    force: true
+- atom_contact:
+    atom1: [A, 40, N]
+    atom2: [A, 43, CB]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 40, O]
+    atom2: [A, 44, N]
+    max_distance: 3.9
+    force: true
+- atom_contact:
+    atom1: [A, 41, CA]
+    atom2: [A, 41, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 41, CA]
+    atom2: [A, 41, CG]
+    max_distance: 8.030001
+    force: true
+- atom_contact:
+    atom1: [A, 41, CA]
+    atom2: [A, 41, N]
+    max_distance: 7.9
+    force: true
+- atom_contact:
+    atom1: [A, 41, CA]
+    atom2: [A, 42, N]
+    max_distance: 8.21
+    force: true
+- atom_contact:
+    atom1: [A, 41, CA]
+    atom2: [A, 44, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 41, CA]
+    atom2: [A, 45, CA]
+    max_distance: 9.11
+    force: true
+- atom_contact:
+    atom1: [A, 41, CB]
+    atom2: [A, 41, N]
+    max_distance: 7.3
+    force: true
+- atom_contact:
+    atom1: [A, 41, CG]
+    atom2: [A, 41, N]
+    max_distance: 7.79
+    force: true
+- atom_contact:
+    atom1: [A, 41, CG]
+    atom2: [A, 42, N]
+    max_distance: 7.87
+    force: true
+- atom_contact:
+    atom1: [A, 41, CG]
+    atom2: [A, 110, CB]
+    max_distance: 9.280001
+    force: true
+- atom_contact:
+    atom1: [A, 41, N]
+    atom2: [A, 42, CG]
+    max_distance: 9.190001
+    force: true
+- atom_contact:
+    atom1: [A, 41, N]
+    atom2: [A, 42, N]
+    max_distance: 7.600001
+    force: true
+- atom_contact:
+    atom1: [A, 41, O]
+    atom2: [A, 45, N]
+    max_distance: 3.9
+    force: true
+- atom_contact:
+    atom1: [A, 42, CA]
+    atom2: [A, 42, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 42, CA]
+    atom2: [A, 42, CG]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 42, CA]
+    atom2: [A, 42, N]
+    max_distance: 8.09
+    force: true
+- atom_contact:
+    atom1: [A, 42, CA]
+    atom2: [A, 43, N]
+    max_distance: 8.47
+    force: true
+- atom_contact:
+    atom1: [A, 42, CA]
+    atom2: [A, 45, N]
+    max_distance: 7.61
+    force: true
+- atom_contact:
+    atom1: [A, 42, CA]
+    atom2: [A, 46, CA]
+    max_distance: 8.280001
+    force: true
+- atom_contact:
+    atom1: [A, 42, CA]
+    atom2: [A, 46, CB]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 42, CA]
+    atom2: [A, 46, N]
+    max_distance: 7.61
+    force: true
+- atom_contact:
+    atom1: [A, 42, CA]
+    atom2: [A, 110, CA]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 42, CA]
+    atom2: [A, 114, CA]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 42, CA]
+    atom2: [A, 114, CG]
+    max_distance: 9.11
+    force: true
+- atom_contact:
+    atom1: [A, 42, CB]
+    atom2: [A, 42, CG]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 42, CB]
+    atom2: [A, 42, N]
+    max_distance: 8.26
+    force: true
+- atom_contact:
+    atom1: [A, 42, CB]
+    atom2: [A, 110, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 42, CG]
+    atom2: [A, 42, N]
+    max_distance: 7.87
+    force: true
+- atom_contact:
+    atom1: [A, 42, CG]
+    atom2: [A, 46, CD1]
+    max_distance: 8.280001
+    force: true
+- atom_contact:
+    atom1: [A, 42, CG]
+    atom2: [A, 110, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 42, CG]
+    atom2: [A, 110, CD2]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 42, N]
+    atom2: [A, 43, N]
+    max_distance: 7.93
+    force: true
+- atom_contact:
+    atom1: [A, 42, N]
+    atom2: [A, 44, N]
+    max_distance: 8.39
+    force: true
+- atom_contact:
+    atom1: [A, 42, O]
+    atom2: [A, 46, N]
+    max_distance: 3.88
+    force: true
+- atom_contact:
+    atom1: [A, 43, CA]
+    atom2: [A, 43, CG]
+    max_distance: 7.970001
+    force: true
+- atom_contact:
+    atom1: [A, 43, CA]
+    atom2: [A, 43, N]
+    max_distance: 8.29
+    force: true
+- atom_contact:
+    atom1: [A, 43, CA]
+    atom2: [A, 44, N]
+    max_distance: 8.47
+    force: true
+- atom_contact:
+    atom1: [A, 43, CB]
+    atom2: [A, 43, CD]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 43, CB]
+    atom2: [A, 43, N]
+    max_distance: 7.91
+    force: true
+- atom_contact:
+    atom1: [A, 43, CB]
+    atom2: [A, 44, N]
+    max_distance: 8.280001
+    force: true
+- atom_contact:
+    atom1: [A, 43, CD]
+    atom2: [A, 55, CB]
+    max_distance: 9.48
+    force: true
+- atom_contact:
+    atom1: [A, 43, CG]
+    atom2: [A, 43, N]
+    max_distance: 8.14
+    force: true
+- atom_contact:
+    atom1: [A, 43, CG]
+    atom2: [A, 55, CB]
+    max_distance: 9.11
+    force: true
+- atom_contact:
+    atom1: [A, 43, N]
+    atom2: [A, 44, CB]
+    max_distance: 8.14
+    force: true
+- atom_contact:
+    atom1: [A, 43, N]
+    atom2: [A, 44, N]
+    max_distance: 6.810001
+    force: true
+- atom_contact:
+    atom1: [A, 43, N]
+    atom2: [A, 45, N]
+    max_distance: 7.93
+    force: true
+- atom_contact:
+    atom1: [A, 43, N]
+    atom2: [A, 46, CB]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 43, O]
+    atom2: [A, 47, N]
+    max_distance: 3.9
+    force: true
+- atom_contact:
+    atom1: [A, 44, CA]
+    atom2: [A, 44, CB]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 44, CA]
+    atom2: [A, 47, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 44, CA]
+    atom2: [A, 55, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 44, CB]
+    atom2: [A, 44, CD2]
+    max_distance: 7.95
+    force: true
+- atom_contact:
+    atom1: [A, 44, CB]
+    atom2: [A, 44, CG]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 44, CB]
+    atom2: [A, 44, N]
+    max_distance: 8.13
+    force: true
+- atom_contact:
+    atom1: [A, 44, CB]
+    atom2: [A, 45, N]
+    max_distance: 8.47
+    force: true
+- atom_contact:
+    atom1: [A, 44, CB]
+    atom2: [A, 46, N]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 44, CB]
+    atom2: [A, 55, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 44, CD1]
+    atom2: [A, 54, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 44, CD2]
+    atom2: [A, 44, N]
+    max_distance: 8.56
+    force: true
+- atom_contact:
+    atom1: [A, 44, CD2]
+    atom2: [A, 48, N]
+    max_distance: 9.27
+    force: true
+- atom_contact:
+    atom1: [A, 44, CD2]
+    atom2: [A, 54, CB]
+    max_distance: 8.18
+    force: true
+- atom_contact:
+    atom1: [A, 44, CG]
+    atom2: [A, 44, N]
+    max_distance: 8.64
+    force: true
+- atom_contact:
+    atom1: [A, 44, N]
+    atom2: [A, 45, N]
+    max_distance: 7.71
+    force: true
+- atom_contact:
+    atom1: [A, 44, N]
+    atom2: [A, 46, N]
+    max_distance: 6.92
+    force: true
+- atom_contact:
+    atom1: [A, 44, N]
+    atom2: [A, 47, N]
+    max_distance: 8.21
+    force: true
+- atom_contact:
+    atom1: [A, 44, O]
+    atom2: [A, 48, N]
+    max_distance: 3.88
+    force: true
+- atom_contact:
+    atom1: [A, 45, CA]
+    atom2: [A, 48, CG]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 45, CA]
+    atom2: [A, 48, N]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 45, CA]
+    atom2: [A, 49, CB]
+    max_distance: 8.8
+    force: true
+- atom_contact:
+    atom1: [A, 45, CA]
+    atom2: [A, 54, CA]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 45, CB]
+    atom2: [A, 45, CD]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 45, CB]
+    atom2: [A, 48, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 45, N]
+    atom2: [A, 46, CA]
+    max_distance: 8.05
+    force: true
+- atom_contact:
+    atom1: [A, 45, N]
+    atom2: [A, 113, CG1]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 45, O]
+    atom2: [A, 49, N]
+    max_distance: 3.9
+    force: true
+- atom_contact:
+    atom1: [A, 46, CA]
+    atom2: [A, 46, CB]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 46, CA]
+    atom2: [A, 46, CG]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 46, CA]
+    atom2: [A, 47, N]
+    max_distance: 8.47
+    force: true
+- atom_contact:
+    atom1: [A, 46, CA]
+    atom2: [A, 48, N]
+    max_distance: 7.66
+    force: true
+- atom_contact:
+    atom1: [A, 46, CA]
+    atom2: [A, 49, N]
+    max_distance: 7.16
+    force: true
+- atom_contact:
+    atom1: [A, 46, CA]
+    atom2: [A, 50, CG2]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 46, CA]
+    atom2: [A, 113, CA]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 46, CA]
+    atom2: [A, 113, CG1]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 46, CA]
+    atom2: [A, 113, CG2]
+    max_distance: 8.190001
+    force: true
+- atom_contact:
+    atom1: [A, 46, CA]
+    atom2: [A, 117, CA]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 46, CB]
+    atom2: [A, 46, CD2]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 46, CB]
+    atom2: [A, 46, N]
+    max_distance: 7.310001
+    force: true
+- atom_contact:
+    atom1: [A, 46, CB]
+    atom2: [A, 113, CG1]
+    max_distance: 7.33
+    force: true
+- atom_contact:
+    atom1: [A, 46, CD1]
+    atom2: [A, 113, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 46, CG]
+    atom2: [A, 46, N]
+    max_distance: 7.310001
+    force: true
+- atom_contact:
+    atom1: [A, 46, N]
+    atom2: [A, 113, CG1]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 46, N]
+    atom2: [A, 114, N]
+    max_distance: 9.0
+    force: true
+- atom_contact:
+    atom1: [A, 46, O]
+    atom2: [A, 50, N]
+    max_distance: 3.9
+    force: true
+- atom_contact:
+    atom1: [A, 47, CA]
+    atom2: [A, 47, CB]
+    max_distance: 8.47
+    force: true
+- atom_contact:
+    atom1: [A, 47, CA]
+    atom2: [A, 47, CG]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 47, CA]
+    atom2: [A, 47, N]
+    max_distance: 8.100001
+    force: true
+- atom_contact:
+    atom1: [A, 47, CA]
+    atom2: [A, 48, N]
+    max_distance: 8.100001
+    force: true
+- atom_contact:
+    atom1: [A, 47, CA]
+    atom2: [A, 49, N]
+    max_distance: 8.25
+    force: true
+- atom_contact:
+    atom1: [A, 47, CA]
+    atom2: [A, 50, CB]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 47, CA]
+    atom2: [A, 50, N]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 47, CB]
+    atom2: [A, 47, N]
+    max_distance: 8.42
+    force: true
+- atom_contact:
+    atom1: [A, 47, CB]
+    atom2: [A, 48, N]
+    max_distance: 8.42
+    force: true
+- atom_contact:
+    atom1: [A, 47, CB]
+    atom2: [A, 51, N]
+    max_distance: 8.64
+    force: true
+- atom_contact:
+    atom1: [A, 47, CB]
+    atom2: [A, 55, CA]
+    max_distance: 8.280001
+    force: true
+- atom_contact:
+    atom1: [A, 47, O]
+    atom2: [A, 51, N]
+    max_distance: 3.88
+    force: true
+- atom_contact:
+    atom1: [A, 48, CA]
+    atom2: [A, 48, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 48, CA]
+    atom2: [A, 48, CG]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 48, CA]
+    atom2: [A, 48, N]
+    max_distance: 7.9
+    force: true
+- atom_contact:
+    atom1: [A, 48, CA]
+    atom2: [A, 49, N]
+    max_distance: 8.47
+    force: true
+- atom_contact:
+    atom1: [A, 48, CA]
+    atom2: [A, 52, CA]
+    max_distance: 7.44
+    force: true
+- atom_contact:
+    atom1: [A, 48, CA]
+    atom2: [A, 53, CA]
+    max_distance: 6.890001
+    force: true
+- atom_contact:
+    atom1: [A, 48, CB]
+    atom2: [A, 48, CG]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 48, CB]
+    atom2: [A, 48, N]
+    max_distance: 7.560001
+    force: true
+- atom_contact:
+    atom1: [A, 48, CB]
+    atom2: [A, 49, N]
+    max_distance: 8.16
+    force: true
+- atom_contact:
+    atom1: [A, 48, CB]
+    atom2: [A, 52, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 48, CG]
+    atom2: [A, 48, N]
+    max_distance: 7.54
+    force: true
+- atom_contact:
+    atom1: [A, 48, CG]
+    atom2: [A, 52, CA]
+    max_distance: 7.7
+    force: true
+- atom_contact:
+    atom1: [A, 48, CG]
+    atom2: [A, 52, N]
+    max_distance: 8.04
+    force: true
+- atom_contact:
+    atom1: [A, 48, CG]
+    atom2: [A, 53, CA]
+    max_distance: 7.220001
+    force: true
+- atom_contact:
+    atom1: [A, 48, CG]
+    atom2: [A, 53, CB]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 48, CG]
+    atom2: [A, 53, N]
+    max_distance: 7.59
+    force: true
+- atom_contact:
+    atom1: [A, 48, CG]
+    atom2: [A, 54, CB]
+    max_distance: 7.640001
+    force: true
+- atom_contact:
+    atom1: [A, 48, CG]
+    atom2: [A, 54, N]
+    max_distance: 7.87
+    force: true
+- atom_contact:
+    atom1: [A, 48, N]
+    atom2: [A, 49, N]
+    max_distance: 7.58
+    force: true
+- atom_contact:
+    atom1: [A, 48, N]
+    atom2: [A, 51, N]
+    max_distance: 7.97
+    force: true
+- atom_contact:
+    atom1: [A, 48, O]
+    atom2: [A, 52, N]
+    max_distance: 3.88
+    force: true
+- atom_contact:
+    atom1: [A, 49, CA]
+    atom2: [A, 49, CB]
+    max_distance: 7.86
+    force: true
+- atom_contact:
+    atom1: [A, 49, CA]
+    atom2: [A, 49, CD1]
+    max_distance: 6.95
+    force: true
+- atom_contact:
+    atom1: [A, 49, CA]
+    atom2: [A, 49, N]
+    max_distance: 7.66
+    force: true
+- atom_contact:
+    atom1: [A, 49, CA]
+    atom2: [A, 50, CA]
+    max_distance: 7.86
+    force: true
+- atom_contact:
+    atom1: [A, 49, CA]
+    atom2: [A, 50, N]
+    max_distance: 8.23
+    force: true
+- atom_contact:
+    atom1: [A, 49, CA]
+    atom2: [A, 87, CB]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 49, CA]
+    atom2: [A, 89, CG2]
+    max_distance: 8.71
+    force: true
+- atom_contact:
+    atom1: [A, 49, CA]
+    atom2: [A, 113, CA]
+    max_distance: 8.71
+    force: true
+- atom_contact:
+    atom1: [A, 49, CA]
+    atom2: [A, 117, CA]
+    max_distance: 7.57
+    force: true
+- atom_contact:
+    atom1: [A, 49, CA]
+    atom2: [A, 117, CB]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 49, CB]
+    atom2: [A, 49, CD1]
+    max_distance: 6.76
+    force: true
+- atom_contact:
+    atom1: [A, 49, CB]
+    atom2: [A, 49, N]
+    max_distance: 7.2
+    force: true
+- atom_contact:
+    atom1: [A, 49, CB]
+    atom2: [A, 50, CG2]
+    max_distance: 7.91
+    force: true
+- atom_contact:
+    atom1: [A, 49, CB]
+    atom2: [A, 50, N]
+    max_distance: 7.560001
+    force: true
+- atom_contact:
+    atom1: [A, 49, CB]
+    atom2: [A, 51, N]
+    max_distance: 8.18
+    force: true
+- atom_contact:
+    atom1: [A, 49, CB]
+    atom2: [A, 52, N]
+    max_distance: 8.64
+    force: true
+- atom_contact:
+    atom1: [A, 49, CB]
+    atom2: [A, 113, CA]
+    max_distance: 8.32
+    force: true
+- atom_contact:
+    atom1: [A, 49, CB]
+    atom2: [A, 113, CG1]
+    max_distance: 7.84
+    force: true
+- atom_contact:
+    atom1: [A, 49, CB]
+    atom2: [A, 117, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 49, CD1]
+    atom2: [A, 49, N]
+    max_distance: 7.75
+    force: true
+- atom_contact:
+    atom1: [A, 49, CD1]
+    atom2: [A, 50, CA]
+    max_distance: 7.36
+    force: true
+- atom_contact:
+    atom1: [A, 49, CD1]
+    atom2: [A, 50, N]
+    max_distance: 7.810001
+    force: true
+- atom_contact:
+    atom1: [A, 49, CD1]
+    atom2: [A, 113, CG2]
+    max_distance: 8.71
+    force: true
+- atom_contact:
+    atom1: [A, 49, CD1]
+    atom2: [A, 117, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 49, CE1]
+    atom2: [A, 50, CA]
+    max_distance: 8.4
+    force: true
+- atom_contact:
+    atom1: [A, 49, CE1]
+    atom2: [A, 87, CB]
+    max_distance: 6.79
+    force: true
+- atom_contact:
+    atom1: [A, 49, CE1]
+    atom2: [A, 87, N]
+    max_distance: 7.23
+    force: true
+- atom_contact:
+    atom1: [A, 49, N]
+    atom2: [A, 50, CG2]
+    max_distance: 8.18
+    force: true
+- atom_contact:
+    atom1: [A, 49, N]
+    atom2: [A, 50, N]
+    max_distance: 8.0
+    force: true
+- atom_contact:
+    atom1: [A, 49, N]
+    atom2: [A, 51, N]
+    max_distance: 7.890001
+    force: true
+- atom_contact:
+    atom1: [A, 49, N]
+    atom2: [A, 52, N]
+    max_distance: 7.93
+    force: true
+- atom_contact:
+    atom1: [A, 49, N]
+    atom2: [A, 53, N]
+    max_distance: 8.600001
+    force: true
+- atom_contact:
+    atom1: [A, 49, N]
+    atom2: [A, 113, CG1]
+    max_distance: 7.66
+    force: true
+- atom_contact:
+    atom1: [A, 50, CA]
+    atom2: [A, 50, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 50, CA]
+    atom2: [A, 50, CG1]
+    max_distance: 8.370001
+    force: true
+- atom_contact:
+    atom1: [A, 50, CA]
+    atom2: [A, 50, CG2]
+    max_distance: 8.15
+    force: true
+- atom_contact:
+    atom1: [A, 50, CA]
+    atom2: [A, 50, N]
+    max_distance: 7.560001
+    force: true
+- atom_contact:
+    atom1: [A, 50, CA]
+    atom2: [A, 51, N]
+    max_distance: 8.38
+    force: true
+- atom_contact:
+    atom1: [A, 50, CA]
+    atom2: [A, 52, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 50, CA]
+    atom2: [A, 87, CB]
+    max_distance: 7.01
+    force: true
+- atom_contact:
+    atom1: [A, 50, CA]
+    atom2: [A, 87, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 50, CA]
+    atom2: [A, 88, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 50, CA]
+    atom2: [A, 89, N]
+    max_distance: 8.47
+    force: true
+- atom_contact:
+    atom1: [A, 50, CA]
+    atom2: [A, 93, N]
+    max_distance: 8.870001
+    force: true
+- atom_contact:
+    atom1: [A, 50, CB]
+    atom2: [A, 50, CG2]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 50, CB]
+    atom2: [A, 50, N]
+    max_distance: 7.73
+    force: true
+- atom_contact:
+    atom1: [A, 50, CB]
+    atom2: [A, 51, N]
+    max_distance: 7.86
+    force: true
+- atom_contact:
+    atom1: [A, 50, CB]
+    atom2: [A, 87, CB]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 50, CB]
+    atom2: [A, 92, CA]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 50, CG1]
+    atom2: [A, 50, CG2]
+    max_distance: 8.600001
+    force: true
+- atom_contact:
+    atom1: [A, 50, CG1]
+    atom2: [A, 50, N]
+    max_distance: 8.46
+    force: true
+- atom_contact:
+    atom1: [A, 50, CG1]
+    atom2: [A, 74, N]
+    max_distance: 8.780001
+    force: true
+- atom_contact:
+    atom1: [A, 50, CG1]
+    atom2: [A, 87, CB]
+    max_distance: 7.38
+    force: true
+- atom_contact:
+    atom1: [A, 50, CG1]
+    atom2: [A, 89, CA]
+    max_distance: 8.030001
+    force: true
+- atom_contact:
+    atom1: [A, 50, CG1]
+    atom2: [A, 92, CA]
+    max_distance: 7.78
+    force: true
+- atom_contact:
+    atom1: [A, 50, CG1]
+    atom2: [A, 92, N]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 50, CG1]
+    atom2: [A, 93, CA]
+    max_distance: 8.280001
+    force: true
+- atom_contact:
+    atom1: [A, 50, CG1]
+    atom2: [A, 93, N]
+    max_distance: 7.72
+    force: true
+- atom_contact:
+    atom1: [A, 50, CG1]
+    atom2: [A, 94, CA]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 50, CG1]
+    atom2: [A, 94, CB]
+    max_distance: 8.75
+    force: true
+- atom_contact:
+    atom1: [A, 50, CG1]
+    atom2: [A, 94, N]
+    max_distance: 8.04
+    force: true
+- atom_contact:
+    atom1: [A, 50, CG2]
+    atom2: [A, 50, N]
+    max_distance: 7.4
+    force: true
+- atom_contact:
+    atom1: [A, 50, CG2]
+    atom2: [A, 51, N]
+    max_distance: 7.82
+    force: true
+- atom_contact:
+    atom1: [A, 50, CG2]
+    atom2: [A, 87, CA]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 50, CG2]
+    atom2: [A, 87, CB]
+    max_distance: 7.29
+    force: true
+- atom_contact:
+    atom1: [A, 50, CG2]
+    atom2: [A, 94, CA]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 50, CG2]
+    atom2: [A, 94, CB]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 50, N]
+    atom2: [A, 51, N]
+    max_distance: 7.87
+    force: true
+- atom_contact:
+    atom1: [A, 50, N]
+    atom2: [A, 52, CA]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 50, N]
+    atom2: [A, 52, N]
+    max_distance: 7.59
+    force: true
+- atom_contact:
+    atom1: [A, 50, N]
+    atom2: [A, 87, CB]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 51, CA]
+    atom2: [A, 89, CG2]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 51, CB]
+    atom2: [A, 51, CG2]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 51, CB]
+    atom2: [A, 53, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 51, CB]
+    atom2: [A, 55, CA]
+    max_distance: 7.91
+    force: true
+- atom_contact:
+    atom1: [A, 51, CG2]
+    atom2: [A, 53, CG2]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 51, CG2]
+    atom2: [A, 65, CB]
+    max_distance: 8.68
+    force: true
+- atom_contact:
+    atom1: [A, 51, N]
+    atom2: [A, 53, N]
+    max_distance: 7.88
+    force: true
+- atom_contact:
+    atom1: [A, 51, N]
+    atom2: [A, 89, CG2]
+    max_distance: 8.120001
+    force: true
+- atom_contact:
+    atom1: [A, 51, N]
+    atom2: [A, 92, CA]
+    max_distance: 8.67
+    force: true
+- atom_contact:
+    atom1: [A, 52, CA]
+    atom2: [A, 52, N]
+    max_distance: 7.21
+    force: true
+- atom_contact:
+    atom1: [A, 52, CA]
+    atom2: [A, 53, N]
+    max_distance: 7.49
+    force: true
+- atom_contact:
+    atom1: [A, 52, N]
+    atom2: [A, 53, N]
+    max_distance: 7.66
+    force: true
+- atom_contact:
+    atom1: [A, 52, N]
+    atom2: [A, 89, CB]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 52, N]
+    atom2: [A, 89, CG2]
+    max_distance: 7.19
+    force: true
+- atom_contact:
+    atom1: [A, 53, CA]
+    atom2: [A, 53, CB]
+    max_distance: 7.94
+    force: true
+- atom_contact:
+    atom1: [A, 53, CA]
+    atom2: [A, 53, CG2]
+    max_distance: 8.190001
+    force: true
+- atom_contact:
+    atom1: [A, 53, CA]
+    atom2: [A, 53, N]
+    max_distance: 8.280001
+    force: true
+- atom_contact:
+    atom1: [A, 53, CA]
+    atom2: [A, 54, CA]
+    max_distance: 7.560001
+    force: true
+- atom_contact:
+    atom1: [A, 53, CA]
+    atom2: [A, 54, N]
+    max_distance: 7.270001
+    force: true
+- atom_contact:
+    atom1: [A, 53, CB]
+    atom2: [A, 53, CG2]
+    max_distance: 7.36
+    force: true
+- atom_contact:
+    atom1: [A, 53, CB]
+    atom2: [A, 53, N]
+    max_distance: 8.23
+    force: true
+- atom_contact:
+    atom1: [A, 53, CB]
+    atom2: [A, 54, N]
+    max_distance: 7.930001
+    force: true
+- atom_contact:
+    atom1: [A, 53, CG2]
+    atom2: [A, 53, N]
+    max_distance: 7.65
+    force: true
+- atom_contact:
+    atom1: [A, 53, CG2]
+    atom2: [A, 65, CB]
+    max_distance: 8.68
+    force: true
+- atom_contact:
+    atom1: [A, 54, CA]
+    atom2: [A, 54, CB]
+    max_distance: 6.49
+    force: true
+- atom_contact:
+    atom1: [A, 54, CB]
+    atom2: [A, 54, N]
+    max_distance: 8.190001
+    force: true
+- atom_contact:
+    atom1: [A, 54, CB]
+    atom2: [A, 55, N]
+    max_distance: 8.47
+    force: true
+- atom_contact:
+    atom1: [A, 55, CA]
+    atom2: [A, 55, CB]
+    max_distance: 8.04
+    force: true
+- atom_contact:
+    atom1: [A, 55, CA]
+    atom2: [A, 55, N]
+    max_distance: 7.79
+    force: true
+- atom_contact:
+    atom1: [A, 55, CA]
+    atom2: [A, 56, N]
+    max_distance: 6.88
+    force: true
+- atom_contact:
+    atom1: [A, 55, CB]
+    atom2: [A, 55, N]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 55, CB]
+    atom2: [A, 56, N]
+    max_distance: 7.84
+    force: true
+- atom_contact:
+    atom1: [A, 57, CA]
+    atom2: [A, 57, CB]
+    max_distance: 7.850001
+    force: true
+- atom_contact:
+    atom1: [A, 57, CA]
+    atom2: [A, 57, CG]
+    max_distance: 8.18
+    force: true
+- atom_contact:
+    atom1: [A, 57, CA]
+    atom2: [A, 58, N]
+    max_distance: 7.25
+    force: true
+- atom_contact:
+    atom1: [A, 57, CA]
+    atom2: [A, 59, CG]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 57, CA]
+    atom2: [A, 59, N]
+    max_distance: 7.97
+    force: true
+- atom_contact:
+    atom1: [A, 57, CA]
+    atom2: [A, 60, N]
+    max_distance: 8.67
+    force: true
+- atom_contact:
+    atom1: [A, 57, CB]
+    atom2: [A, 58, N]
+    max_distance: 8.45
+    force: true
+- atom_contact:
+    atom1: [A, 58, CA]
+    atom2: [A, 58, CB]
+    max_distance: 8.120001
+    force: true
+- atom_contact:
+    atom1: [A, 58, CA]
+    atom2: [A, 58, CD1]
+    max_distance: 6.74
+    force: true
+- atom_contact:
+    atom1: [A, 58, CA]
+    atom2: [A, 58, CE1]
+    max_distance: 8.82
+    force: true
+- atom_contact:
+    atom1: [A, 58, CA]
+    atom2: [A, 58, N]
+    max_distance: 7.99
+    force: true
+- atom_contact:
+    atom1: [A, 58, CA]
+    atom2: [A, 59, N]
+    max_distance: 7.55
+    force: true
+- atom_contact:
+    atom1: [A, 58, CA]
+    atom2: [A, 60, N]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 58, CB]
+    atom2: [A, 58, CD1]
+    max_distance: 6.69
+    force: true
+- atom_contact:
+    atom1: [A, 58, CB]
+    atom2: [A, 58, CE1]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 58, CB]
+    atom2: [A, 58, N]
+    max_distance: 7.680001
+    force: true
+- atom_contact:
+    atom1: [A, 58, CB]
+    atom2: [A, 59, N]
+    max_distance: 8.15
+    force: true
+- atom_contact:
+    atom1: [A, 58, CD1]
+    atom2: [A, 58, CE1]
+    max_distance: 6.69
+    force: true
+- atom_contact:
+    atom1: [A, 58, CD1]
+    atom2: [A, 58, N]
+    max_distance: 7.66
+    force: true
+- atom_contact:
+    atom1: [A, 58, N]
+    atom2: [A, 59, CA]
+    max_distance: 7.99
+    force: true
+- atom_contact:
+    atom1: [A, 58, N]
+    atom2: [A, 60, N]
+    max_distance: 8.4
+    force: true
+- atom_contact:
+    atom1: [A, 59, CA]
+    atom2: [A, 59, CB]
+    max_distance: 7.9
+    force: true
+- atom_contact:
+    atom1: [A, 59, CA]
+    atom2: [A, 59, CG]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 59, CA]
+    atom2: [A, 59, N]
+    max_distance: 7.55
+    force: true
+- atom_contact:
+    atom1: [A, 59, CA]
+    atom2: [A, 60, N]
+    max_distance: 8.17
+    force: true
+- atom_contact:
+    atom1: [A, 59, CB]
+    atom2: [A, 59, CG]
+    max_distance: 6.850001
+    force: true
+- atom_contact:
+    atom1: [A, 59, CB]
+    atom2: [A, 59, N]
+    max_distance: 7.67
+    force: true
+- atom_contact:
+    atom1: [A, 59, CB]
+    atom2: [A, 60, N]
+    max_distance: 8.21
+    force: true
+- atom_contact:
+    atom1: [A, 59, CB]
+    atom2: [A, 62, CA]
+    max_distance: 9.280001
+    force: true
+- atom_contact:
+    atom1: [A, 59, CB]
+    atom2: [A, 63, CB]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 59, CB]
+    atom2: [A, 63, N]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 59, CG]
+    atom2: [A, 59, N]
+    max_distance: 7.55
+    force: true
+- atom_contact:
+    atom1: [A, 59, CG]
+    atom2: [A, 63, CB]
+    max_distance: 8.4
+    force: true
+- atom_contact:
+    atom1: [A, 59, N]
+    atom2: [A, 60, N]
+    max_distance: 7.68
+    force: true
+- atom_contact:
+    atom1: [A, 60, CA]
+    atom2: [A, 60, N]
+    max_distance: 7.430001
+    force: true
+- atom_contact:
+    atom1: [A, 60, CA]
+    atom2: [A, 61, N]
+    max_distance: 8.16
+    force: true
+- atom_contact:
+    atom1: [A, 60, CA]
+    atom2: [A, 62, N]
+    max_distance: 7.51
+    force: true
+- atom_contact:
+    atom1: [A, 60, N]
+    atom2: [A, 61, N]
+    max_distance: 7.91
+    force: true
+- atom_contact:
+    atom1: [A, 60, N]
+    atom2: [A, 62, N]
+    max_distance: 7.71
+    force: true
+- atom_contact:
+    atom1: [A, 60, N]
+    atom2: [A, 64, N]
+    max_distance: 7.93
+    force: true
+- atom_contact:
+    atom1: [A, 60, O]
+    atom2: [A, 64, N]
+    max_distance: 3.9
+    force: true
+- atom_contact:
+    atom1: [A, 61, CA]
+    atom2: [A, 61, CB]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 61, CA]
+    atom2: [A, 61, N]
+    max_distance: 8.07
+    force: true
+- atom_contact:
+    atom1: [A, 61, CA]
+    atom2: [A, 62, N]
+    max_distance: 8.13
+    force: true
+- atom_contact:
+    atom1: [A, 61, CA]
+    atom2: [A, 63, N]
+    max_distance: 8.47
+    force: true
+- atom_contact:
+    atom1: [A, 61, CA]
+    atom2: [A, 64, CA]
+    max_distance: 8.280001
+    force: true
+- atom_contact:
+    atom1: [A, 61, CA]
+    atom2: [A, 64, CD2]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 61, CA]
+    atom2: [A, 64, N]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 61, CA]
+    atom2: [A, 72, CA]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 61, CA]
+    atom2: [A, 72, CD]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 61, CB]
+    atom2: [A, 61, N]
+    max_distance: 8.24
+    force: true
+- atom_contact:
+    atom1: [A, 61, CB]
+    atom2: [A, 62, N]
+    max_distance: 8.47
+    force: true
+- atom_contact:
+    atom1: [A, 61, CB]
+    atom2: [A, 72, CD]
+    max_distance: 7.92
+    force: true
+- atom_contact:
+    atom1: [A, 61, CD1]
+    atom2: [A, 64, N]
+    max_distance: 8.17
+    force: true
+- atom_contact:
+    atom1: [A, 61, CD1]
+    atom2: [A, 72, N]
+    max_distance: 8.17
+    force: true
+- atom_contact:
+    atom1: [A, 61, N]
+    atom2: [A, 63, N]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 62, CA]
+    atom2: [A, 62, CB]
+    max_distance: 7.48
+    force: true
+- atom_contact:
+    atom1: [A, 62, CA]
+    atom2: [A, 62, N]
+    max_distance: 8.34
+    force: true
+- atom_contact:
+    atom1: [A, 62, CA]
+    atom2: [A, 63, N]
+    max_distance: 8.06
+    force: true
+- atom_contact:
+    atom1: [A, 62, CA]
+    atom2: [A, 64, N]
+    max_distance: 7.37
+    force: true
+- atom_contact:
+    atom1: [A, 62, CB]
+    atom2: [A, 62, N]
+    max_distance: 7.38
+    force: true
+- atom_contact:
+    atom1: [A, 62, CB]
+    atom2: [A, 63, N]
+    max_distance: 7.88
+    force: true
+- atom_contact:
+    atom1: [A, 62, N]
+    atom2: [A, 63, N]
+    max_distance: 7.69
+    force: true
+- atom_contact:
+    atom1: [A, 62, N]
+    atom2: [A, 64, N]
+    max_distance: 8.4
+    force: true
+- atom_contact:
+    atom1: [A, 63, CA]
+    atom2: [A, 63, CB]
+    max_distance: 6.7
+    force: true
+- atom_contact:
+    atom1: [A, 63, CB]
+    atom2: [A, 63, N]
+    max_distance: 7.930001
+    force: true
+- atom_contact:
+    atom1: [A, 63, CB]
+    atom2: [A, 64, N]
+    max_distance: 8.17
+    force: true
+- atom_contact:
+    atom1: [A, 63, N]
+    atom2: [A, 64, CA]
+    max_distance: 7.96
+    force: true
+- atom_contact:
+    atom1: [A, 63, N]
+    atom2: [A, 64, CD1]
+    max_distance: 8.82
+    force: true
+- atom_contact:
+    atom1: [A, 63, N]
+    atom2: [A, 64, N]
+    max_distance: 7.59
+    force: true
+- atom_contact:
+    atom1: [A, 64, CA]
+    atom2: [A, 64, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 64, CA]
+    atom2: [A, 64, N]
+    max_distance: 8.17
+    force: true
+- atom_contact:
+    atom1: [A, 64, CA]
+    atom2: [A, 65, N]
+    max_distance: 7.28
+    force: true
+- atom_contact:
+    atom1: [A, 64, CA]
+    atom2: [A, 72, CA]
+    max_distance: 8.91
+    force: true
+- atom_contact:
+    atom1: [A, 64, CB]
+    atom2: [A, 64, CD1]
+    max_distance: 8.22
+    force: true
+- atom_contact:
+    atom1: [A, 64, CB]
+    atom2: [A, 64, N]
+    max_distance: 7.7
+    force: true
+- atom_contact:
+    atom1: [A, 64, CB]
+    atom2: [A, 65, N]
+    max_distance: 8.47
+    force: true
+- atom_contact:
+    atom1: [A, 64, CB]
+    atom2: [A, 71, CA]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 64, CB]
+    atom2: [A, 71, CG]
+    max_distance: 7.73
+    force: true
+- atom_contact:
+    atom1: [A, 64, CB]
+    atom2: [A, 72, CA]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 64, CB]
+    atom2: [A, 73, N]
+    max_distance: 7.92
+    force: true
+- atom_contact:
+    atom1: [A, 64, CB]
+    atom2: [A, 92, CB]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 64, CD1]
+    atom2: [A, 71, N]
+    max_distance: 8.67
+    force: true
+- atom_contact:
+    atom1: [A, 64, CD1]
+    atom2: [A, 72, CA]
+    max_distance: 8.14
+    force: true
+- atom_contact:
+    atom1: [A, 64, CD1]
+    atom2: [A, 73, CB]
+    max_distance: 8.4
+    force: true
+- atom_contact:
+    atom1: [A, 64, CD1]
+    atom2: [A, 73, N]
+    max_distance: 8.05
+    force: true
+- atom_contact:
+    atom1: [A, 64, N]
+    atom2: [A, 72, CA]
+    max_distance: 8.64
+    force: true
+- atom_contact:
+    atom1: [A, 65, CA]
+    atom2: [A, 65, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 65, CA]
+    atom2: [A, 65, CD]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 65, CA]
+    atom2: [A, 66, CA]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 65, CA]
+    atom2: [A, 70, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 65, CB]
+    atom2: [A, 65, CG]
+    max_distance: 8.02
+    force: true
+- atom_contact:
+    atom1: [A, 65, CB]
+    atom2: [A, 65, N]
+    max_distance: 7.62
+    force: true
+- atom_contact:
+    atom1: [A, 65, CB]
+    atom2: [A, 66, N]
+    max_distance: 7.73
+    force: true
+- atom_contact:
+    atom1: [A, 65, CB]
+    atom2: [A, 70, CA]
+    max_distance: 8.55
+    force: true
+- atom_contact:
+    atom1: [A, 65, CB]
+    atom2: [A, 71, CB]
+    max_distance: 8.48
+    force: true
+- atom_contact:
+    atom1: [A, 65, CB]
+    atom2: [A, 71, N]
+    max_distance: 7.98
+    force: true
+- atom_contact:
+    atom1: [A, 65, CD]
+    atom2: [A, 65, CG]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 65, CG]
+    atom2: [A, 65, N]
+    max_distance: 8.47
+    force: true
+- atom_contact:
+    atom1: [A, 65, CG]
+    atom2: [A, 70, CA]
+    max_distance: 8.38
+    force: true
+- atom_contact:
+    atom1: [A, 65, CG]
+    atom2: [A, 71, N]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 65, N]
+    atom2: [A, 70, CA]
+    max_distance: 8.870001
+    force: true
+- atom_contact:
+    atom1: [A, 65, N]
+    atom2: [A, 71, CB]
+    max_distance: 7.25
+    force: true
+- atom_contact:
+    atom1: [A, 65, N]
+    atom2: [A, 71, N]
+    max_distance: 8.13
+    force: true
+- atom_contact:
+    atom1: [A, 66, CA]
+    atom2: [A, 66, N]
+    max_distance: 7.810001
+    force: true
+- atom_contact:
+    atom1: [A, 66, CA]
+    atom2: [A, 70, CA]
+    max_distance: 8.280001
+    force: true
+- atom_contact:
+    atom1: [A, 66, CA]
+    atom2: [A, 71, CA]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 66, CA]
+    atom2: [A, 71, CB]
+    max_distance: 8.29
+    force: true
+- atom_contact:
+    atom1: [A, 66, CA]
+    atom2: [A, 71, CG]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 66, CA]
+    atom2: [A, 71, N]
+    max_distance: 8.49
+    force: true
+- atom_contact:
+    atom1: [A, 66, CA]
+    atom2: [A, 89, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 66, N]
+    atom2: [A, 69, N]
+    max_distance: 8.26
+    force: true
+- atom_contact:
+    atom1: [A, 66, N]
+    atom2: [A, 70, CA]
+    max_distance: 8.09
+    force: true
+- atom_contact:
+    atom1: [A, 66, N]
+    atom2: [A, 70, CB]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 66, N]
+    atom2: [A, 71, CB]
+    max_distance: 7.34
+    force: true
+- atom_contact:
+    atom1: [A, 66, N]
+    atom2: [A, 71, CG]
+    max_distance: 7.74
+    force: true
+- atom_contact:
+    atom1: [A, 66, N]
+    atom2: [A, 71, N]
+    max_distance: 7.16
+    force: true
+- atom_contact:
+    atom1: [A, 67, CA]
+    atom2: [A, 67, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 67, CA]
+    atom2: [A, 90, CA]
+    max_distance: 7.15
+    force: true
+- atom_contact:
+    atom1: [A, 67, CB]
+    atom2: [A, 67, N]
+    max_distance: 8.030001
+    force: true
+- atom_contact:
+    atom1: [A, 67, CB]
+    atom2: [A, 68, N]
+    max_distance: 8.18
+    force: true
+- atom_contact:
+    atom1: [A, 67, CB]
+    atom2: [A, 89, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 67, N]
+    atom2: [A, 69, N]
+    max_distance: 7.93
+    force: true
+- atom_contact:
+    atom1: [A, 67, N]
+    atom2: [A, 89, N]
+    max_distance: 7.93
+    force: true
+- atom_contact:
+    atom1: [A, 67, N]
+    atom2: [A, 89, O]
+    max_distance: 3.88
+    force: true
+- atom_contact:
+    atom1: [A, 67, N]
+    atom2: [A, 90, CA]
+    max_distance: 7.66
+    force: true
+- atom_contact:
+    atom1: [A, 67, N]
+    atom2: [A, 90, CB]
+    max_distance: 8.59
+    force: true
+- atom_contact:
+    atom1: [A, 68, CA]
+    atom2: [A, 68, CB]
+    max_distance: 8.01
+    force: true
+- atom_contact:
+    atom1: [A, 68, CA]
+    atom2: [A, 68, N]
+    max_distance: 8.26
+    force: true
+- atom_contact:
+    atom1: [A, 68, CA]
+    atom2: [A, 69, N]
+    max_distance: 8.29
+    force: true
+- atom_contact:
+    atom1: [A, 68, CB]
+    atom2: [A, 68, N]
+    max_distance: 8.4
+    force: true
+- atom_contact:
+    atom1: [A, 68, CB]
+    atom2: [A, 69, N]
+    max_distance: 8.49
+    force: true
+- atom_contact:
+    atom1: [A, 68, CB]
+    atom2: [A, 90, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 68, N]
+    atom2: [A, 69, N]
+    max_distance: 7.78
+    force: true
+- atom_contact:
+    atom1: [A, 68, N]
+    atom2: [A, 90, N]
+    max_distance: 7.93
+    force: true
+- atom_contact:
+    atom1: [A, 69, N]
+    atom2: [A, 70, CD]
+    max_distance: 8.48
+    force: true
+- atom_contact:
+    atom1: [A, 69, N]
+    atom2: [A, 91, CA]
+    max_distance: 9.27
+    force: true
+- atom_contact:
+    atom1: [A, 70, CA]
+    atom2: [A, 70, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 70, CA]
+    atom2: [A, 70, CD]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 70, CA]
+    atom2: [A, 70, CG]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 70, CA]
+    atom2: [A, 71, N]
+    max_distance: 7.01
+    force: true
+- atom_contact:
+    atom1: [A, 70, CB]
+    atom2: [A, 70, CD]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 70, CB]
+    atom2: [A, 70, CG]
+    max_distance: 8.030001
+    force: true
+- atom_contact:
+    atom1: [A, 70, CB]
+    atom2: [A, 71, N]
+    max_distance: 8.52
+    force: true
+- atom_contact:
+    atom1: [A, 70, CD]
+    atom2: [A, 70, CG]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 70, CG]
+    atom2: [A, 71, N]
+    max_distance: 8.280001
+    force: true
+- atom_contact:
+    atom1: [A, 71, CA]
+    atom2: [A, 71, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 71, CA]
+    atom2: [A, 71, N]
+    max_distance: 7.01
+    force: true
+- atom_contact:
+    atom1: [A, 71, CA]
+    atom2: [A, 72, N]
+    max_distance: 7.22
+    force: true
+- atom_contact:
+    atom1: [A, 71, CA]
+    atom2: [A, 89, CA]
+    max_distance: 8.48
+    force: true
+- atom_contact:
+    atom1: [A, 71, CA]
+    atom2: [A, 90, CA]
+    max_distance: 8.71
+    force: true
+- atom_contact:
+    atom1: [A, 71, CA]
+    atom2: [A, 91, CA]
+    max_distance: 7.11
+    force: true
+- atom_contact:
+    atom1: [A, 71, CA]
+    atom2: [A, 92, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 71, CB]
+    atom2: [A, 71, CG]
+    max_distance: 6.7
+    force: true
+- atom_contact:
+    atom1: [A, 71, CB]
+    atom2: [A, 71, N]
+    max_distance: 8.02
+    force: true
+- atom_contact:
+    atom1: [A, 71, CB]
+    atom2: [A, 89, CB]
+    max_distance: 8.48
+    force: true
+- atom_contact:
+    atom1: [A, 71, CB]
+    atom2: [A, 91, CB]
+    max_distance: 9.91
+    force: true
+- atom_contact:
+    atom1: [A, 71, CB]
+    atom2: [A, 92, CA]
+    max_distance: 8.280001
+    force: true
+- atom_contact:
+    atom1: [A, 71, CB]
+    atom2: [A, 92, CB]
+    max_distance: 8.71
+    force: true
+- atom_contact:
+    atom1: [A, 71, CD]
+    atom2: [A, 92, CB]
+    max_distance: 8.04
+    force: true
+- atom_contact:
+    atom1: [A, 71, CG]
+    atom2: [A, 71, N]
+    max_distance: 8.02
+    force: true
+- atom_contact:
+    atom1: [A, 71, CG]
+    atom2: [A, 91, CA]
+    max_distance: 7.36
+    force: true
+- atom_contact:
+    atom1: [A, 72, CA]
+    atom2: [A, 72, CB]
+    max_distance: 7.88
+    force: true
+- atom_contact:
+    atom1: [A, 72, CA]
+    atom2: [A, 72, N]
+    max_distance: 8.4
+    force: true
+- atom_contact:
+    atom1: [A, 72, CA]
+    atom2: [A, 73, N]
+    max_distance: 8.030001
+    force: true
+- atom_contact:
+    atom1: [A, 72, CB]
+    atom2: [A, 72, CD]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 72, CB]
+    atom2: [A, 72, CG]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 72, CB]
+    atom2: [A, 72, N]
+    max_distance: 7.850001
+    force: true
+- atom_contact:
+    atom1: [A, 72, CB]
+    atom2: [A, 73, N]
+    max_distance: 8.36
+    force: true
+- atom_contact:
+    atom1: [A, 72, CB]
+    atom2: [A, 91, CA]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 72, N]
+    atom2: [A, 91, CA]
+    max_distance: 7.270001
+    force: true
+- atom_contact:
+    atom1: [A, 73, CA]
+    atom2: [A, 73, CB]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 73, CA]
+    atom2: [A, 73, CD1]
+    max_distance: 8.0
+    force: true
+- atom_contact:
+    atom1: [A, 73, CA]
+    atom2: [A, 73, N]
+    max_distance: 8.39
+    force: true
+- atom_contact:
+    atom1: [A, 73, CA]
+    atom2: [A, 74, N]
+    max_distance: 7.46
+    force: true
+- atom_contact:
+    atom1: [A, 73, CA]
+    atom2: [A, 92, CB]
+    max_distance: 8.2
+    force: true
+- atom_contact:
+    atom1: [A, 73, CA]
+    atom2: [A, 93, CA]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 73, CB]
+    atom2: [A, 73, CD1]
+    max_distance: 7.5
+    force: true
+- atom_contact:
+    atom1: [A, 73, CB]
+    atom2: [A, 73, N]
+    max_distance: 8.280001
+    force: true
+- atom_contact:
+    atom1: [A, 73, CD1]
+    atom2: [A, 73, N]
+    max_distance: 8.02
+    force: true
+- atom_contact:
+    atom1: [A, 74, CA]
+    atom2: [A, 74, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 74, CA]
+    atom2: [A, 93, CA]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 74, CB]
+    atom2: [A, 74, N]
+    max_distance: 8.100001
+    force: true
+- atom_contact:
+    atom1: [A, 74, CB]
+    atom2: [A, 91, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 74, CB]
+    atom2: [A, 92, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 74, CB]
+    atom2: [A, 93, CA]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 74, CB]
+    atom2: [A, 93, CG]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 74, CB]
+    atom2: [A, 94, N]
+    max_distance: 8.15
+    force: true
+- atom_contact:
+    atom1: [A, 74, N]
+    atom2: [A, 92, CB]
+    max_distance: 8.030001
+    force: true
+- atom_contact:
+    atom1: [A, 74, N]
+    atom2: [A, 92, O]
+    max_distance: 3.88
+    force: true
+- atom_contact:
+    atom1: [A, 74, N]
+    atom2: [A, 93, CA]
+    max_distance: 7.58
+    force: true
+- atom_contact:
+    atom1: [A, 74, N]
+    atom2: [A, 93, CG]
+    max_distance: 8.64
+    force: true
+- atom_contact:
+    atom1: [A, 74, N]
+    atom2: [A, 93, N]
+    max_distance: 8.4
+    force: true
+- atom_contact:
+    atom1: [A, 74, N]
+    atom2: [A, 94, CB]
+    max_distance: 8.64
+    force: true
+- atom_contact:
+    atom1: [A, 74, N]
+    atom2: [A, 94, N]
+    max_distance: 7.600001
+    force: true
+- atom_contact:
+    atom1: [A, 75, CA]
+    atom2: [A, 75, N]
+    max_distance: 8.45
+    force: true
+- atom_contact:
+    atom1: [A, 75, CA]
+    atom2: [A, 76, N]
+    max_distance: 7.94
+    force: true
+- atom_contact:
+    atom1: [A, 75, CA]
+    atom2: [A, 93, CG]
+    max_distance: 7.96
+    force: true
+- atom_contact:
+    atom1: [A, 75, CA]
+    atom2: [A, 94, CA]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 75, CA]
+    atom2: [A, 94, CB]
+    max_distance: 7.92
+    force: true
+- atom_contact:
+    atom1: [A, 75, CA]
+    atom2: [A, 94, CG]
+    max_distance: 8.16
+    force: true
+- atom_contact:
+    atom1: [A, 75, CB]
+    atom2: [A, 75, CG1]
+    max_distance: 8.05
+    force: true
+- atom_contact:
+    atom1: [A, 75, CB]
+    atom2: [A, 75, N]
+    max_distance: 8.21
+    force: true
+- atom_contact:
+    atom1: [A, 75, CB]
+    atom2: [A, 94, CD2]
+    max_distance: 9.83
+    force: true
+- atom_contact:
+    atom1: [A, 75, CG1]
+    atom2: [A, 75, N]
+    max_distance: 8.21
+    force: true
+- atom_contact:
+    atom1: [A, 75, CG2]
+    atom2: [A, 76, N]
+    max_distance: 8.22
+    force: true
+- atom_contact:
+    atom1: [A, 75, CG2]
+    atom2: [A, 77, CA]
+    max_distance: 10.91
+    force: true
+- atom_contact:
+    atom1: [A, 75, CG2]
+    atom2: [A, 94, CB]
+    max_distance: 7.76
+    force: true
+- atom_contact:
+    atom1: [A, 75, CG2]
+    atom2: [A, 94, CG]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 75, CG2]
+    atom2: [A, 95, CA]
+    max_distance: 9.51
+    force: true
+- atom_contact:
+    atom1: [A, 75, N]
+    atom2: [A, 94, N]
+    max_distance: 7.8
+    force: true
+- atom_contact:
+    atom1: [A, 76, CA]
+    atom2: [A, 76, CB]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 76, CA]
+    atom2: [A, 76, CG]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 76, CA]
+    atom2: [A, 77, N]
+    max_distance: 8.22
+    force: true
+- atom_contact:
+    atom1: [A, 76, CB]
+    atom2: [A, 76, CG]
+    max_distance: 7.9
+    force: true
+- atom_contact:
+    atom1: [A, 76, CB]
+    atom2: [A, 76, N]
+    max_distance: 8.42
+    force: true
+- atom_contact:
+    atom1: [A, 76, CB]
+    atom2: [A, 77, N]
+    max_distance: 8.34
+    force: true
+- atom_contact:
+    atom1: [A, 76, CB]
+    atom2: [A, 93, CG]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 76, CB]
+    atom2: [A, 95, CA]
+    max_distance: 8.71
+    force: true
+- atom_contact:
+    atom1: [A, 76, CG]
+    atom2: [A, 76, N]
+    max_distance: 8.39
+    force: true
+- atom_contact:
+    atom1: [A, 76, CG]
+    atom2: [A, 77, N]
+    max_distance: 8.530001
+    force: true
+- atom_contact:
+    atom1: [A, 76, CG]
+    atom2: [A, 78, N]
+    max_distance: 8.09
+    force: true
+- atom_contact:
+    atom1: [A, 76, CG]
+    atom2: [A, 93, CG]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 76, CG]
+    atom2: [A, 94, CB]
+    max_distance: 9.11
+    force: true
+- atom_contact:
+    atom1: [A, 76, CG]
+    atom2: [A, 95, CA]
+    max_distance: 8.22
+    force: true
+- atom_contact:
+    atom1: [A, 76, CG]
+    atom2: [A, 96, N]
+    max_distance: 7.87
+    force: true
+- atom_contact:
+    atom1: [A, 76, N]
+    atom2: [A, 77, N]
+    max_distance: 7.93
+    force: true
+- atom_contact:
+    atom1: [A, 76, N]
+    atom2: [A, 93, CG]
+    max_distance: 7.72
+    force: true
+- atom_contact:
+    atom1: [A, 76, N]
+    atom2: [A, 94, N]
+    max_distance: 7.93
+    force: true
+- atom_contact:
+    atom1: [A, 76, N]
+    atom2: [A, 94, O]
+    max_distance: 4.1
+    force: true
+- atom_contact:
+    atom1: [A, 76, N]
+    atom2: [A, 95, CA]
+    max_distance: 7.94
+    force: true
+- atom_contact:
+    atom1: [A, 76, N]
+    atom2: [A, 96, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 77, CA]
+    atom2: [A, 77, CB]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 77, CA]
+    atom2: [A, 77, CG]
+    max_distance: 7.98
+    force: true
+- atom_contact:
+    atom1: [A, 77, CA]
+    atom2: [A, 77, N]
+    max_distance: 8.47
+    force: true
+- atom_contact:
+    atom1: [A, 77, CA]
+    atom2: [A, 78, N]
+    max_distance: 7.58
+    force: true
+- atom_contact:
+    atom1: [A, 77, CA]
+    atom2: [A, 96, N]
+    max_distance: 8.67
+    force: true
+- atom_contact:
+    atom1: [A, 77, CB]
+    atom2: [A, 77, CE]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 77, CB]
+    atom2: [A, 77, CG]
+    max_distance: 8.23
+    force: true
+- atom_contact:
+    atom1: [A, 77, CB]
+    atom2: [A, 77, N]
+    max_distance: 7.91
+    force: true
+- atom_contact:
+    atom1: [A, 77, CB]
+    atom2: [A, 79, N]
+    max_distance: 8.84
+    force: true
+- atom_contact:
+    atom1: [A, 77, CD]
+    atom2: [A, 78, N]
+    max_distance: 8.33
+    force: true
+- atom_contact:
+    atom1: [A, 77, CG]
+    atom2: [A, 78, N]
+    max_distance: 8.33
+    force: true
+- atom_contact:
+    atom1: [A, 77, N]
+    atom2: [A, 78, N]
+    max_distance: 8.55
+    force: true
+- atom_contact:
+    atom1: [A, 77, N]
+    atom2: [A, 96, N]
+    max_distance: 9.0
+    force: true
+- atom_contact:
+    atom1: [A, 78, CA]
+    atom2: [A, 78, CB]
+    max_distance: 8.36
+    force: true
+- atom_contact:
+    atom1: [A, 78, CA]
+    atom2: [A, 78, CD1]
+    max_distance: 8.42
+    force: true
+- atom_contact:
+    atom1: [A, 78, CA]
+    atom2: [A, 78, N]
+    max_distance: 7.890001
+    force: true
+- atom_contact:
+    atom1: [A, 78, CA]
+    atom2: [A, 79, CA]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 78, CA]
+    atom2: [A, 79, N]
+    max_distance: 7.33
+    force: true
+- atom_contact:
+    atom1: [A, 78, CB]
+    atom2: [A, 78, N]
+    max_distance: 8.32
+    force: true
+- atom_contact:
+    atom1: [A, 78, CB]
+    atom2: [A, 79, CA]
+    max_distance: 8.32
+    force: true
+- atom_contact:
+    atom1: [A, 78, CB]
+    atom2: [A, 95, CA]
+    max_distance: 8.280001
+    force: true
+- atom_contact:
+    atom1: [A, 78, CB]
+    atom2: [A, 95, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 78, CB]
+    atom2: [A, 96, N]
+    max_distance: 8.84
+    force: true
+- atom_contact:
+    atom1: [A, 78, CD1]
+    atom2: [A, 78, CZ2]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 78, CD1]
+    atom2: [A, 79, N]
+    max_distance: 8.05
+    force: true
+- atom_contact:
+    atom1: [A, 78, CD1]
+    atom2: [A, 85, CA]
+    max_distance: 8.22
+    force: true
+- atom_contact:
+    atom1: [A, 78, CD1]
+    atom2: [A, 95, CA]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 78, CD1]
+    atom2: [A, 95, CB]
+    max_distance: 8.71
+    force: true
+- atom_contact:
+    atom1: [A, 78, CD1]
+    atom2: [A, 95, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 78, CZ2]
+    atom2: [A, 86, CD]
+    max_distance: 8.48
+    force: true
+- atom_contact:
+    atom1: [A, 78, N]
+    atom2: [A, 79, CA]
+    max_distance: 8.29
+    force: true
+- atom_contact:
+    atom1: [A, 78, N]
+    atom2: [A, 95, CA]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 78, N]
+    atom2: [A, 96, N]
+    max_distance: 8.24
+    force: true
+- atom_contact:
+    atom1: [A, 79, CA]
+    atom2: [A, 79, N]
+    max_distance: 7.62
+    force: true
+- atom_contact:
+    atom1: [A, 79, CA]
+    atom2: [A, 80, N]
+    max_distance: 7.66
+    force: true
+- atom_contact:
+    atom1: [A, 79, CA]
+    atom2: [A, 83, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 79, N]
+    atom2: [A, 80, N]
+    max_distance: 8.01
+    force: true
+- atom_contact:
+    atom1: [A, 79, N]
+    atom2: [A, 98, CG]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 80, CA]
+    atom2: [A, 80, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 80, CA]
+    atom2: [A, 80, CG]
+    max_distance: 8.120001
+    force: true
+- atom_contact:
+    atom1: [A, 80, CA]
+    atom2: [A, 80, N]
+    max_distance: 7.97
+    force: true
+- atom_contact:
+    atom1: [A, 80, CA]
+    atom2: [A, 81, CA]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 80, CA]
+    atom2: [A, 81, N]
+    max_distance: 7.45
+    force: true
+- atom_contact:
+    atom1: [A, 80, CA]
+    atom2: [A, 82, N]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 80, CA]
+    atom2: [A, 98, CD]
+    max_distance: 8.48
+    force: true
+- atom_contact:
+    atom1: [A, 80, CB]
+    atom2: [A, 80, CE]
+    max_distance: 8.280001
+    force: true
+- atom_contact:
+    atom1: [A, 80, CB]
+    atom2: [A, 80, CG]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 80, CB]
+    atom2: [A, 80, N]
+    max_distance: 8.09
+    force: true
+- atom_contact:
+    atom1: [A, 80, CB]
+    atom2: [A, 81, N]
+    max_distance: 8.18
+    force: true
+- atom_contact:
+    atom1: [A, 80, CB]
+    atom2: [A, 82, N]
+    max_distance: 7.180001
+    force: true
+- atom_contact:
+    atom1: [A, 80, CB]
+    atom2: [A, 83, N]
+    max_distance: 7.73
+    force: true
+- atom_contact:
+    atom1: [A, 80, CE]
+    atom2: [A, 98, CB]
+    max_distance: 9.01
+    force: true
+- atom_contact:
+    atom1: [A, 80, CE]
+    atom2: [A, 98, CG]
+    max_distance: 8.48
+    force: true
+- atom_contact:
+    atom1: [A, 80, CG]
+    atom2: [A, 80, N]
+    max_distance: 7.62
+    force: true
+- atom_contact:
+    atom1: [A, 80, N]
+    atom2: [A, 82, N]
+    max_distance: 8.600001
+    force: true
+- atom_contact:
+    atom1: [A, 80, N]
+    atom2: [A, 83, N]
+    max_distance: 8.34
+    force: true
+- atom_contact:
+    atom1: [A, 80, N]
+    atom2: [A, 98, CB]
+    max_distance: 8.83
+    force: true
+- atom_contact:
+    atom1: [A, 80, N]
+    atom2: [A, 98, CG]
+    max_distance: 8.23
+    force: true
+- atom_contact:
+    atom1: [A, 81, CA]
+    atom2: [A, 81, CB]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 81, CA]
+    atom2: [A, 81, CD1]
+    max_distance: 8.01
+    force: true
+- atom_contact:
+    atom1: [A, 81, CA]
+    atom2: [A, 81, CG1]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 81, CA]
+    atom2: [A, 81, CG2]
+    max_distance: 8.14
+    force: true
+- atom_contact:
+    atom1: [A, 81, CA]
+    atom2: [A, 81, N]
+    max_distance: 8.5
+    force: true
+- atom_contact:
+    atom1: [A, 81, CA]
+    atom2: [A, 82, N]
+    max_distance: 8.36
+    force: true
+- atom_contact:
+    atom1: [A, 81, CA]
+    atom2: [A, 83, N]
+    max_distance: 8.07
+    force: true
+- atom_contact:
+    atom1: [A, 81, CA]
+    atom2: [A, 99, N]
+    max_distance: 8.47
+    force: true
+- atom_contact:
+    atom1: [A, 81, CB]
+    atom2: [A, 81, CD1]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 81, CB]
+    atom2: [A, 81, CG1]
+    max_distance: 7.99
+    force: true
+- atom_contact:
+    atom1: [A, 81, CB]
+    atom2: [A, 81, CG2]
+    max_distance: 8.190001
+    force: true
+- atom_contact:
+    atom1: [A, 81, CB]
+    atom2: [A, 81, N]
+    max_distance: 7.97
+    force: true
+- atom_contact:
+    atom1: [A, 81, CB]
+    atom2: [A, 82, N]
+    max_distance: 8.64
+    force: true
+- atom_contact:
+    atom1: [A, 81, CB]
+    atom2: [A, 98, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 81, CB]
+    atom2: [A, 100, CA]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 81, CB]
+    atom2: [A, 100, CD]
+    max_distance: 8.3
+    force: true
+- atom_contact:
+    atom1: [A, 81, CD1]
+    atom2: [A, 81, N]
+    max_distance: 7.54
+    force: true
+- atom_contact:
+    atom1: [A, 81, CG1]
+    atom2: [A, 81, CG2]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 81, CG1]
+    atom2: [A, 81, N]
+    max_distance: 7.34
+    force: true
+- atom_contact:
+    atom1: [A, 81, CG2]
+    atom2: [A, 81, N]
+    max_distance: 7.54
+    force: true
+- atom_contact:
+    atom1: [A, 81, CG2]
+    atom2: [A, 98, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 81, N]
+    atom2: [A, 82, N]
+    max_distance: 8.120001
+    force: true
+- atom_contact:
+    atom1: [A, 81, N]
+    atom2: [A, 83, N]
+    max_distance: 8.4
+    force: true
+- atom_contact:
+    atom1: [A, 81, N]
+    atom2: [A, 98, CB]
+    max_distance: 7.770001
+    force: true
+- atom_contact:
+    atom1: [A, 82, CA]
+    atom2: [A, 82, CB]
+    max_distance: 6.95
+    force: true
+- atom_contact:
+    atom1: [A, 82, CA]
+    atom2: [A, 82, CG2]
+    max_distance: 7.42
+    force: true
+- atom_contact:
+    atom1: [A, 82, CA]
+    atom2: [A, 82, N]
+    max_distance: 8.36
+    force: true
+- atom_contact:
+    atom1: [A, 82, CA]
+    atom2: [A, 83, N]
+    max_distance: 8.120001
+    force: true
+- atom_contact:
+    atom1: [A, 82, CA]
+    atom2: [A, 100, CD]
+    max_distance: 8.280001
+    force: true
+- atom_contact:
+    atom1: [A, 82, CB]
+    atom2: [A, 82, CG2]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 82, CB]
+    atom2: [A, 82, N]
+    max_distance: 8.06
+    force: true
+- atom_contact:
+    atom1: [A, 82, CB]
+    atom2: [A, 83, N]
+    max_distance: 8.42
+    force: true
+- atom_contact:
+    atom1: [A, 82, CG2]
+    atom2: [A, 82, N]
+    max_distance: 7.49
+    force: true
+- atom_contact:
+    atom1: [A, 82, CG2]
+    atom2: [A, 83, N]
+    max_distance: 8.36
+    force: true
+- atom_contact:
+    atom1: [A, 82, N]
+    atom2: [A, 83, N]
+    max_distance: 7.29
+    force: true
+- atom_contact:
+    atom1: [A, 82, N]
+    atom2: [A, 100, CA]
+    max_distance: 9.07
+    force: true
+- atom_contact:
+    atom1: [A, 83, CA]
+    atom2: [A, 83, CB]
+    max_distance: 7.4
+    force: true
+- atom_contact:
+    atom1: [A, 83, CA]
+    atom2: [A, 83, N]
+    max_distance: 7.86
+    force: true
+- atom_contact:
+    atom1: [A, 83, CA]
+    atom2: [A, 84, N]
+    max_distance: 7.19
+    force: true
+- atom_contact:
+    atom1: [A, 83, CB]
+    atom2: [A, 83, N]
+    max_distance: 7.13
+    force: true
+- atom_contact:
+    atom1: [A, 83, CB]
+    atom2: [A, 84, N]
+    max_distance: 7.180001
+    force: true
+- atom_contact:
+    atom1: [A, 83, CB]
+    atom2: [A, 98, CG]
+    max_distance: 9.48
+    force: true
+- atom_contact:
+    atom1: [A, 85, CA]
+    atom2: [A, 85, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 85, CA]
+    atom2: [A, 85, CG]
+    max_distance: 8.48
+    force: true
+- atom_contact:
+    atom1: [A, 85, CA]
+    atom2: [A, 86, N]
+    max_distance: 7.51
+    force: true
+- atom_contact:
+    atom1: [A, 85, CA]
+    atom2: [A, 95, N]
+    max_distance: 7.73
+    force: true
+- atom_contact:
+    atom1: [A, 85, CB]
+    atom2: [A, 85, CG]
+    max_distance: 8.14
+    force: true
+- atom_contact:
+    atom1: [A, 85, CB]
+    atom2: [A, 86, N]
+    max_distance: 8.39
+    force: true
+- atom_contact:
+    atom1: [A, 85, CB]
+    atom2: [A, 94, CD2]
+    max_distance: 8.54
+    force: true
+- atom_contact:
+    atom1: [A, 85, CG]
+    atom2: [A, 86, N]
+    max_distance: 8.39
+    force: true
+- atom_contact:
+    atom1: [A, 85, CG]
+    atom2: [A, 109, CA]
+    max_distance: 8.48
+    force: true
+- atom_contact:
+    atom1: [A, 86, CA]
+    atom2: [A, 86, CB]
+    max_distance: 7.98
+    force: true
+- atom_contact:
+    atom1: [A, 86, CA]
+    atom2: [A, 86, CG]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 86, CA]
+    atom2: [A, 86, N]
+    max_distance: 7.67
+    force: true
+- atom_contact:
+    atom1: [A, 86, CA]
+    atom2: [A, 87, N]
+    max_distance: 7.67
+    force: true
+- atom_contact:
+    atom1: [A, 86, CA]
+    atom2: [A, 94, CA]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 86, CA]
+    atom2: [A, 94, CD1]
+    max_distance: 8.48
+    force: true
+- atom_contact:
+    atom1: [A, 86, CB]
+    atom2: [A, 86, CD]
+    max_distance: 8.0
+    force: true
+- atom_contact:
+    atom1: [A, 86, CB]
+    atom2: [A, 86, CG]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 86, CB]
+    atom2: [A, 86, N]
+    max_distance: 8.11
+    force: true
+- atom_contact:
+    atom1: [A, 86, CB]
+    atom2: [A, 87, N]
+    max_distance: 7.520001
+    force: true
+- atom_contact:
+    atom1: [A, 86, CB]
+    atom2: [A, 94, CA]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 86, CB]
+    atom2: [A, 95, CA]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 86, CB]
+    atom2: [A, 95, CB]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 86, CD]
+    atom2: [A, 86, CG]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 86, CD]
+    atom2: [A, 95, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 86, CG]
+    atom2: [A, 86, N]
+    max_distance: 8.11
+    force: true
+- atom_contact:
+    atom1: [A, 86, CG]
+    atom2: [A, 88, CD2]
+    max_distance: 9.45
+    force: true
+- atom_contact:
+    atom1: [A, 86, CG]
+    atom2: [A, 95, CB]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 86, N]
+    atom2: [A, 94, CA]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 86, N]
+    atom2: [A, 95, CB]
+    max_distance: 8.47
+    force: true
+- atom_contact:
+    atom1: [A, 86, N]
+    atom2: [A, 95, N]
+    max_distance: 7.63
+    force: true
+- atom_contact:
+    atom1: [A, 86, N]
+    atom2: [A, 95, O]
+    max_distance: 3.88
+    force: true
+- atom_contact:
+    atom1: [A, 86, O]
+    atom2: [A, 95, N]
+    max_distance: 3.88
+    force: true
+- atom_contact:
+    atom1: [A, 87, CA]
+    atom2: [A, 87, CB]
+    max_distance: 8.45
+    force: true
+- atom_contact:
+    atom1: [A, 87, CA]
+    atom2: [A, 88, CD2]
+    max_distance: 8.13
+    force: true
+- atom_contact:
+    atom1: [A, 87, CA]
+    atom2: [A, 88, N]
+    max_distance: 8.18
+    force: true
+- atom_contact:
+    atom1: [A, 87, CA]
+    atom2: [A, 94, CB]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 87, CA]
+    atom2: [A, 94, N]
+    max_distance: 7.91
+    force: true
+- atom_contact:
+    atom1: [A, 87, CA]
+    atom2: [A, 95, N]
+    max_distance: 7.25
+    force: true
+- atom_contact:
+    atom1: [A, 87, CB]
+    atom2: [A, 87, N]
+    max_distance: 7.46
+    force: true
+- atom_contact:
+    atom1: [A, 87, CB]
+    atom2: [A, 88, N]
+    max_distance: 7.84
+    force: true
+- atom_contact:
+    atom1: [A, 87, CB]
+    atom2: [A, 94, CA]
+    max_distance: 8.2
+    force: true
+- atom_contact:
+    atom1: [A, 87, CB]
+    atom2: [A, 94, CB]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 87, N]
+    atom2: [A, 94, CA]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 87, N]
+    atom2: [A, 95, N]
+    max_distance: 8.4
+    force: true
+- atom_contact:
+    atom1: [A, 88, CA]
+    atom2: [A, 88, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 88, CA]
+    atom2: [A, 88, CD2]
+    max_distance: 7.850001
+    force: true
+- atom_contact:
+    atom1: [A, 88, CA]
+    atom2: [A, 88, N]
+    max_distance: 7.96
+    force: true
+- atom_contact:
+    atom1: [A, 88, CA]
+    atom2: [A, 89, N]
+    max_distance: 7.37
+    force: true
+- atom_contact:
+    atom1: [A, 88, CB]
+    atom2: [A, 88, CD2]
+    max_distance: 7.180001
+    force: true
+- atom_contact:
+    atom1: [A, 88, CB]
+    atom2: [A, 88, N]
+    max_distance: 7.92
+    force: true
+- atom_contact:
+    atom1: [A, 88, CB]
+    atom2: [A, 90, N]
+    max_distance: 8.14
+    force: true
+- atom_contact:
+    atom1: [A, 88, CB]
+    atom2: [A, 91, CB]
+    max_distance: 8.71
+    force: true
+- atom_contact:
+    atom1: [A, 88, CB]
+    atom2: [A, 91, N]
+    max_distance: 7.640001
+    force: true
+- atom_contact:
+    atom1: [A, 88, CB]
+    atom2: [A, 92, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 88, CB]
+    atom2: [A, 93, CG]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 88, CB]
+    atom2: [A, 93, N]
+    max_distance: 7.33
+    force: true
+- atom_contact:
+    atom1: [A, 88, CD2]
+    atom2: [A, 88, N]
+    max_distance: 7.560001
+    force: true
+- atom_contact:
+    atom1: [A, 88, CD2]
+    atom2: [A, 91, CD1]
+    max_distance: 8.36
+    force: true
+- atom_contact:
+    atom1: [A, 88, CD2]
+    atom2: [A, 93, CD]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 88, CD2]
+    atom2: [A, 93, CG]
+    max_distance: 8.850001
+    force: true
+- atom_contact:
+    atom1: [A, 88, CD2]
+    atom2: [A, 93, N]
+    max_distance: 7.21
+    force: true
+- atom_contact:
+    atom1: [A, 88, CD2]
+    atom2: [A, 94, CA]
+    max_distance: 7.930001
+    force: true
+- atom_contact:
+    atom1: [A, 88, CD2]
+    atom2: [A, 95, CA]
+    max_distance: 8.84
+    force: true
+- atom_contact:
+    atom1: [A, 88, CD2]
+    atom2: [A, 95, N]
+    max_distance: 7.87
+    force: true
+- atom_contact:
+    atom1: [A, 88, N]
+    atom2: [A, 91, N]
+    max_distance: 8.600001
+    force: true
+- atom_contact:
+    atom1: [A, 88, N]
+    atom2: [A, 92, N]
+    max_distance: 8.4
+    force: true
+- atom_contact:
+    atom1: [A, 88, N]
+    atom2: [A, 93, CA]
+    max_distance: 7.5
+    force: true
+- atom_contact:
+    atom1: [A, 88, N]
+    atom2: [A, 93, N]
+    max_distance: 7.72
+    force: true
+- atom_contact:
+    atom1: [A, 88, N]
+    atom2: [A, 94, CA]
+    max_distance: 7.98
+    force: true
+- atom_contact:
+    atom1: [A, 88, N]
+    atom2: [A, 94, CB]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 88, N]
+    atom2: [A, 95, N]
+    max_distance: 8.13
+    force: true
+- atom_contact:
+    atom1: [A, 88, O]
+    atom2: [A, 93, N]
+    max_distance: 3.88
+    force: true
+- atom_contact:
+    atom1: [A, 89, CA]
+    atom2: [A, 89, CB]
+    max_distance: 8.48
+    force: true
+- atom_contact:
+    atom1: [A, 89, CA]
+    atom2: [A, 89, CG2]
+    max_distance: 7.96
+    force: true
+- atom_contact:
+    atom1: [A, 89, CA]
+    atom2: [A, 89, N]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 89, CA]
+    atom2: [A, 91, N]
+    max_distance: 7.53
+    force: true
+- atom_contact:
+    atom1: [A, 89, CA]
+    atom2: [A, 92, CA]
+    max_distance: 7.54
+    force: true
+- atom_contact:
+    atom1: [A, 89, CA]
+    atom2: [A, 92, N]
+    max_distance: 7.53
+    force: true
+- atom_contact:
+    atom1: [A, 89, CA]
+    atom2: [A, 93, N]
+    max_distance: 8.100001
+    force: true
+- atom_contact:
+    atom1: [A, 89, CB]
+    atom2: [A, 89, CG2]
+    max_distance: 7.970001
+    force: true
+- atom_contact:
+    atom1: [A, 89, CB]
+    atom2: [A, 89, N]
+    max_distance: 8.06
+    force: true
+- atom_contact:
+    atom1: [A, 89, CB]
+    atom2: [A, 90, N]
+    max_distance: 8.26
+    force: true
+- atom_contact:
+    atom1: [A, 89, CB]
+    atom2: [A, 92, N]
+    max_distance: 8.84
+    force: true
+- atom_contact:
+    atom1: [A, 89, CG2]
+    atom2: [A, 89, N]
+    max_distance: 7.44
+    force: true
+- atom_contact:
+    atom1: [A, 89, CG2]
+    atom2: [A, 92, N]
+    max_distance: 8.84
+    force: true
+- atom_contact:
+    atom1: [A, 89, N]
+    atom2: [A, 90, N]
+    max_distance: 7.87
+    force: true
+- atom_contact:
+    atom1: [A, 89, N]
+    atom2: [A, 91, N]
+    max_distance: 8.4
+    force: true
+- atom_contact:
+    atom1: [A, 89, N]
+    atom2: [A, 92, N]
+    max_distance: 8.4
+    force: true
+- atom_contact:
+    atom1: [A, 89, N]
+    atom2: [A, 93, N]
+    max_distance: 7.72
+    force: true
+- atom_contact:
+    atom1: [A, 90, CA]
+    atom2: [A, 90, CB]
+    max_distance: 8.030001
+    force: true
+- atom_contact:
+    atom1: [A, 90, CA]
+    atom2: [A, 90, N]
+    max_distance: 7.8
+    force: true
+- atom_contact:
+    atom1: [A, 90, CA]
+    atom2: [A, 91, N]
+    max_distance: 8.09
+    force: true
+- atom_contact:
+    atom1: [A, 90, CA]
+    atom2: [A, 92, N]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 90, CB]
+    atom2: [A, 90, N]
+    max_distance: 7.34
+    force: true
+- atom_contact:
+    atom1: [A, 90, CB]
+    atom2: [A, 91, N]
+    max_distance: 8.41
+    force: true
+- atom_contact:
+    atom1: [A, 90, CB]
+    atom2: [A, 92, N]
+    max_distance: 7.84
+    force: true
+- atom_contact:
+    atom1: [A, 90, N]
+    atom2: [A, 91, CA]
+    max_distance: 8.41
+    force: true
+- atom_contact:
+    atom1: [A, 90, N]
+    atom2: [A, 91, N]
+    max_distance: 7.74
+    force: true
+- atom_contact:
+    atom1: [A, 90, N]
+    atom2: [A, 92, N]
+    max_distance: 7.4
+    force: true
+- atom_contact:
+    atom1: [A, 90, N]
+    atom2: [A, 93, N]
+    max_distance: 8.4
+    force: true
+- atom_contact:
+    atom1: [A, 91, CA]
+    atom2: [A, 91, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 91, CA]
+    atom2: [A, 91, CD1]
+    max_distance: 7.140001
+    force: true
+- atom_contact:
+    atom1: [A, 91, CA]
+    atom2: [A, 91, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 91, CA]
+    atom2: [A, 92, N]
+    max_distance: 8.47
+    force: true
+- atom_contact:
+    atom1: [A, 91, CB]
+    atom2: [A, 91, CD1]
+    max_distance: 7.24
+    force: true
+- atom_contact:
+    atom1: [A, 91, CB]
+    atom2: [A, 91, N]
+    max_distance: 8.16
+    force: true
+- atom_contact:
+    atom1: [A, 91, CB]
+    atom2: [A, 92, N]
+    max_distance: 8.5
+    force: true
+- atom_contact:
+    atom1: [A, 91, CD1]
+    atom2: [A, 93, CD]
+    max_distance: 8.39
+    force: true
+- atom_contact:
+    atom1: [A, 91, CD1]
+    atom2: [A, 93, CG]
+    max_distance: 9.280001
+    force: true
+- atom_contact:
+    atom1: [A, 91, N]
+    atom2: [A, 92, N]
+    max_distance: 7.41
+    force: true
+- atom_contact:
+    atom1: [A, 91, N]
+    atom2: [A, 93, N]
+    max_distance: 7.26
+    force: true
+- atom_contact:
+    atom1: [A, 92, CA]
+    atom2: [A, 92, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 92, CA]
+    atom2: [A, 92, N]
+    max_distance: 7.48
+    force: true
+- atom_contact:
+    atom1: [A, 92, CA]
+    atom2: [A, 93, N]
+    max_distance: 8.04
+    force: true
+- atom_contact:
+    atom1: [A, 92, CB]
+    atom2: [A, 92, N]
+    max_distance: 8.45
+    force: true
+- atom_contact:
+    atom1: [A, 92, N]
+    atom2: [A, 93, N]
+    max_distance: 8.05
+    force: true
+- atom_contact:
+    atom1: [A, 93, CA]
+    atom2: [A, 93, CG]
+    max_distance: 8.45
+    force: true
+- atom_contact:
+    atom1: [A, 93, CA]
+    atom2: [A, 93, N]
+    max_distance: 8.52
+    force: true
+- atom_contact:
+    atom1: [A, 93, CA]
+    atom2: [A, 94, N]
+    max_distance: 7.640001
+    force: true
+- atom_contact:
+    atom1: [A, 93, CD]
+    atom2: [A, 93, CG]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 93, CG]
+    atom2: [A, 93, N]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 93, CG]
+    atom2: [A, 94, N]
+    max_distance: 8.47
+    force: true
+- atom_contact:
+    atom1: [A, 93, CG]
+    atom2: [A, 95, N]
+    max_distance: 8.120001
+    force: true
+- atom_contact:
+    atom1: [A, 94, CA]
+    atom2: [A, 94, CB]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 94, CA]
+    atom2: [A, 94, CD2]
+    max_distance: 8.100001
+    force: true
+- atom_contact:
+    atom1: [A, 94, CA]
+    atom2: [A, 94, N]
+    max_distance: 8.11
+    force: true
+- atom_contact:
+    atom1: [A, 94, CA]
+    atom2: [A, 95, CA]
+    max_distance: 8.280001
+    force: true
+- atom_contact:
+    atom1: [A, 94, CA]
+    atom2: [A, 95, N]
+    max_distance: 7.62
+    force: true
+- atom_contact:
+    atom1: [A, 94, CB]
+    atom2: [A, 94, CD1]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 94, CB]
+    atom2: [A, 94, CD2]
+    max_distance: 7.61
+    force: true
+- atom_contact:
+    atom1: [A, 94, CB]
+    atom2: [A, 94, CG]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 94, CB]
+    atom2: [A, 94, N]
+    max_distance: 8.32
+    force: true
+- atom_contact:
+    atom1: [A, 95, CA]
+    atom2: [A, 95, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 95, CA]
+    atom2: [A, 95, N]
+    max_distance: 8.11
+    force: true
+- atom_contact:
+    atom1: [A, 95, CA]
+    atom2: [A, 96, N]
+    max_distance: 7.430001
+    force: true
+- atom_contact:
+    atom1: [A, 95, CB]
+    atom2: [A, 95, N]
+    max_distance: 8.47
+    force: true
+- atom_contact:
+    atom1: [A, 95, N]
+    atom2: [A, 96, N]
+    max_distance: 7.93
+    force: true
+- atom_contact:
+    atom1: [A, 98, CA]
+    atom2: [A, 98, CB]
+    max_distance: 7.55
+    force: true
+- atom_contact:
+    atom1: [A, 98, CA]
+    atom2: [A, 98, CD]
+    max_distance: 7.09
+    force: true
+- atom_contact:
+    atom1: [A, 98, CA]
+    atom2: [A, 98, CG]
+    max_distance: 7.55
+    force: true
+- atom_contact:
+    atom1: [A, 98, CA]
+    atom2: [A, 99, N]
+    max_distance: 8.52
+    force: true
+- atom_contact:
+    atom1: [A, 98, CB]
+    atom2: [A, 98, CD]
+    max_distance: 6.350001
+    force: true
+- atom_contact:
+    atom1: [A, 98, CB]
+    atom2: [A, 98, CG]
+    max_distance: 6.5
+    force: true
+- atom_contact:
+    atom1: [A, 99, N]
+    atom2: [A, 105, CA]
+    max_distance: 8.870001
+    force: true
+- atom_contact:
+    atom1: [A, 99, N]
+    atom2: [A, 105, CB]
+    max_distance: 8.34
+    force: true
+- atom_contact:
+    atom1: [A, 100, CA]
+    atom2: [A, 100, CB]
+    max_distance: 7.48
+    force: true
+- atom_contact:
+    atom1: [A, 100, CA]
+    atom2: [A, 100, CD]
+    max_distance: 8.24
+    force: true
+- atom_contact:
+    atom1: [A, 100, CA]
+    atom2: [A, 100, CG]
+    max_distance: 8.36
+    force: true
+- atom_contact:
+    atom1: [A, 100, CA]
+    atom2: [A, 101, N]
+    max_distance: 8.02
+    force: true
+- atom_contact:
+    atom1: [A, 100, CB]
+    atom2: [A, 100, CD]
+    max_distance: 8.3
+    force: true
+- atom_contact:
+    atom1: [A, 100, CB]
+    atom2: [A, 100, CG]
+    max_distance: 6.54
+    force: true
+- atom_contact:
+    atom1: [A, 100, CB]
+    atom2: [A, 101, N]
+    max_distance: 8.47
+    force: true
+- atom_contact:
+    atom1: [A, 100, CB]
+    atom2: [A, 104, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 100, CB]
+    atom2: [A, 104, CG]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 100, CD]
+    atom2: [A, 100, CG]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 100, CD]
+    atom2: [A, 104, CA]
+    max_distance: 8.280001
+    force: true
+- atom_contact:
+    atom1: [A, 100, CD]
+    atom2: [A, 104, CB]
+    max_distance: 8.39
+    force: true
+- atom_contact:
+    atom1: [A, 100, CG]
+    atom2: [A, 101, N]
+    max_distance: 8.05
+    force: true
+- atom_contact:
+    atom1: [A, 100, CG]
+    atom2: [A, 104, CG]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 101, CA]
+    atom2: [A, 101, CB]
+    max_distance: 8.3
+    force: true
+- atom_contact:
+    atom1: [A, 101, CA]
+    atom2: [A, 101, N]
+    max_distance: 8.05
+    force: true
+- atom_contact:
+    atom1: [A, 101, CA]
+    atom2: [A, 102, N]
+    max_distance: 7.57
+    force: true
+- atom_contact:
+    atom1: [A, 101, CA]
+    atom2: [A, 103, N]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 101, CA]
+    atom2: [A, 104, CB]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 101, CA]
+    atom2: [A, 105, CG]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 101, CB]
+    atom2: [A, 101, N]
+    max_distance: 8.47
+    force: true
+- atom_contact:
+    atom1: [A, 101, CB]
+    atom2: [A, 102, N]
+    max_distance: 8.47
+    force: true
+- atom_contact:
+    atom1: [A, 101, CB]
+    atom2: [A, 103, CB]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 101, CB]
+    atom2: [A, 103, N]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 101, N]
+    atom2: [A, 104, CB]
+    max_distance: 7.21
+    force: true
+- atom_contact:
+    atom1: [A, 101, N]
+    atom2: [A, 105, N]
+    max_distance: 7.060001
+    force: true
+- atom_contact:
+    atom1: [A, 101, O]
+    atom2: [A, 105, N]
+    max_distance: 3.88
+    force: true
+- atom_contact:
+    atom1: [A, 102, CA]
+    atom2: [A, 104, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 102, CB]
+    atom2: [A, 102, N]
+    max_distance: 7.84
+    force: true
+- atom_contact:
+    atom1: [A, 102, CB]
+    atom2: [A, 103, N]
+    max_distance: 8.13
+    force: true
+- atom_contact:
+    atom1: [A, 102, CB]
+    atom2: [A, 104, N]
+    max_distance: 8.29
+    force: true
+- atom_contact:
+    atom1: [A, 102, CB]
+    atom2: [A, 106, N]
+    max_distance: 8.54
+    force: true
+- atom_contact:
+    atom1: [A, 102, CD1]
+    atom2: [A, 102, CE1]
+    max_distance: 7.16
+    force: true
+- atom_contact:
+    atom1: [A, 102, CD1]
+    atom2: [A, 102, CZ]
+    max_distance: 9.01
+    force: true
+- atom_contact:
+    atom1: [A, 102, CD1]
+    atom2: [A, 106, CB]
+    max_distance: 8.17
+    force: true
+- atom_contact:
+    atom1: [A, 102, CE1]
+    atom2: [A, 102, CZ]
+    max_distance: 9.05
+    force: true
+- atom_contact:
+    atom1: [A, 102, CE1]
+    atom2: [A, 105, CB]
+    max_distance: 8.030001
+    force: true
+- atom_contact:
+    atom1: [A, 102, CE1]
+    atom2: [A, 106, CB]
+    max_distance: 7.83
+    force: true
+- atom_contact:
+    atom1: [A, 102, CE1]
+    atom2: [A, 106, CD1]
+    max_distance: 8.16
+    force: true
+- atom_contact:
+    atom1: [A, 102, CZ]
+    atom2: [A, 106, CB]
+    max_distance: 8.030001
+    force: true
+- atom_contact:
+    atom1: [A, 102, CZ]
+    atom2: [A, 106, CD1]
+    max_distance: 8.16
+    force: true
+- atom_contact:
+    atom1: [A, 102, N]
+    atom2: [A, 103, N]
+    max_distance: 7.99
+    force: true
+- atom_contact:
+    atom1: [A, 102, N]
+    atom2: [A, 104, N]
+    max_distance: 7.93
+    force: true
+- atom_contact:
+    atom1: [A, 102, O]
+    atom2: [A, 106, N]
+    max_distance: 3.88
+    force: true
+- atom_contact:
+    atom1: [A, 103, CB]
+    atom2: [A, 103, N]
+    max_distance: 7.21
+    force: true
+- atom_contact:
+    atom1: [A, 103, CB]
+    atom2: [A, 104, N]
+    max_distance: 7.96
+    force: true
+- atom_contact:
+    atom1: [A, 103, CB]
+    atom2: [A, 105, N]
+    max_distance: 8.47
+    force: true
+- atom_contact:
+    atom1: [A, 103, CB]
+    atom2: [A, 106, CB]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 103, N]
+    atom2: [A, 104, N]
+    max_distance: 7.93
+    force: true
+- atom_contact:
+    atom1: [A, 103, N]
+    atom2: [A, 105, N]
+    max_distance: 7.93
+    force: true
+- atom_contact:
+    atom1: [A, 103, N]
+    atom2: [A, 106, N]
+    max_distance: 8.4
+    force: true
+- atom_contact:
+    atom1: [A, 103, O]
+    atom2: [A, 107, N]
+    max_distance: 3.88
+    force: true
+- atom_contact:
+    atom1: [A, 104, CA]
+    atom2: [A, 104, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 104, CA]
+    atom2: [A, 104, CG]
+    max_distance: 7.930001
+    force: true
+- atom_contact:
+    atom1: [A, 104, CA]
+    atom2: [A, 104, N]
+    max_distance: 7.99
+    force: true
+- atom_contact:
+    atom1: [A, 104, CA]
+    atom2: [A, 105, N]
+    max_distance: 8.07
+    force: true
+- atom_contact:
+    atom1: [A, 104, CA]
+    atom2: [A, 106, N]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 104, CA]
+    atom2: [A, 107, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 104, CA]
+    atom2: [A, 108, CG]
+    max_distance: 7.37
+    force: true
+- atom_contact:
+    atom1: [A, 104, CA]
+    atom2: [A, 108, N]
+    max_distance: 7.73
+    force: true
+- atom_contact:
+    atom1: [A, 104, CB]
+    atom2: [A, 104, CG]
+    max_distance: 8.33
+    force: true
+- atom_contact:
+    atom1: [A, 104, CB]
+    atom2: [A, 104, N]
+    max_distance: 7.680001
+    force: true
+- atom_contact:
+    atom1: [A, 104, CB]
+    atom2: [A, 107, N]
+    max_distance: 8.47
+    force: true
+- atom_contact:
+    atom1: [A, 104, CB]
+    atom2: [A, 108, CD]
+    max_distance: 6.810001
+    force: true
+- atom_contact:
+    atom1: [A, 104, CG]
+    atom2: [A, 104, N]
+    max_distance: 8.120001
+    force: true
+- atom_contact:
+    atom1: [A, 104, CG]
+    atom2: [A, 108, CD]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 104, N]
+    atom2: [A, 105, N]
+    max_distance: 7.7
+    force: true
+- atom_contact:
+    atom1: [A, 104, N]
+    atom2: [A, 106, CB]
+    max_distance: 8.25
+    force: true
+- atom_contact:
+    atom1: [A, 104, N]
+    atom2: [A, 106, N]
+    max_distance: 7.13
+    force: true
+- atom_contact:
+    atom1: [A, 104, O]
+    atom2: [A, 108, N]
+    max_distance: 3.88
+    force: true
+- atom_contact:
+    atom1: [A, 105, CA]
+    atom2: [A, 105, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 105, CA]
+    atom2: [A, 105, N]
+    max_distance: 8.26
+    force: true
+- atom_contact:
+    atom1: [A, 105, CA]
+    atom2: [A, 106, N]
+    max_distance: 8.47
+    force: true
+- atom_contact:
+    atom1: [A, 105, CA]
+    atom2: [A, 109, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 105, CA]
+    atom2: [A, 109, N]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 105, CB]
+    atom2: [A, 105, CG]
+    max_distance: 8.06
+    force: true
+- atom_contact:
+    atom1: [A, 105, CB]
+    atom2: [A, 106, CA]
+    max_distance: 8.190001
+    force: true
+- atom_contact:
+    atom1: [A, 105, CB]
+    atom2: [A, 106, N]
+    max_distance: 7.94
+    force: true
+- atom_contact:
+    atom1: [A, 105, CD2]
+    atom2: [A, 105, CG]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 105, N]
+    atom2: [A, 106, N]
+    max_distance: 7.99
+    force: true
+- atom_contact:
+    atom1: [A, 105, N]
+    atom2: [A, 107, N]
+    max_distance: 8.370001
+    force: true
+- atom_contact:
+    atom1: [A, 105, N]
+    atom2: [A, 108, N]
+    max_distance: 8.4
+    force: true
+- atom_contact:
+    atom1: [A, 105, O]
+    atom2: [A, 109, N]
+    max_distance: 3.88
+    force: true
+- atom_contact:
+    atom1: [A, 106, CA]
+    atom2: [A, 106, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 106, CA]
+    atom2: [A, 106, CD1]
+    max_distance: 7.310001
+    force: true
+- atom_contact:
+    atom1: [A, 106, CA]
+    atom2: [A, 106, N]
+    max_distance: 7.99
+    force: true
+- atom_contact:
+    atom1: [A, 106, CA]
+    atom2: [A, 107, N]
+    max_distance: 8.04
+    force: true
+- atom_contact:
+    atom1: [A, 106, CA]
+    atom2: [A, 109, CA]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 106, CA]
+    atom2: [A, 109, CB]
+    max_distance: 7.33
+    force: true
+- atom_contact:
+    atom1: [A, 106, CA]
+    atom2: [A, 110, N]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 106, CB]
+    atom2: [A, 106, CD1]
+    max_distance: 6.92
+    force: true
+- atom_contact:
+    atom1: [A, 106, CB]
+    atom2: [A, 106, N]
+    max_distance: 7.38
+    force: true
+- atom_contact:
+    atom1: [A, 106, CB]
+    atom2: [A, 107, N]
+    max_distance: 7.94
+    force: true
+- atom_contact:
+    atom1: [A, 106, CB]
+    atom2: [A, 109, CB]
+    max_distance: 8.48
+    force: true
+- atom_contact:
+    atom1: [A, 106, CE1]
+    atom2: [A, 109, CG]
+    max_distance: 9.31
+    force: true
+- atom_contact:
+    atom1: [A, 106, CE1]
+    atom2: [A, 110, N]
+    max_distance: 9.120001
+    force: true
+- atom_contact:
+    atom1: [A, 106, N]
+    atom2: [A, 107, N]
+    max_distance: 7.96
+    force: true
+- atom_contact:
+    atom1: [A, 106, N]
+    atom2: [A, 108, N]
+    max_distance: 7.93
+    force: true
+- atom_contact:
+    atom1: [A, 106, N]
+    atom2: [A, 109, N]
+    max_distance: 7.93
+    force: true
+- atom_contact:
+    atom1: [A, 106, O]
+    atom2: [A, 110, N]
+    max_distance: 3.88
+    force: true
+- atom_contact:
+    atom1: [A, 107, CA]
+    atom2: [A, 107, CB]
+    max_distance: 7.890001
+    force: true
+- atom_contact:
+    atom1: [A, 107, CA]
+    atom2: [A, 107, CG]
+    max_distance: 7.98
+    force: true
+- atom_contact:
+    atom1: [A, 107, CA]
+    atom2: [A, 107, N]
+    max_distance: 7.86
+    force: true
+- atom_contact:
+    atom1: [A, 107, CA]
+    atom2: [A, 108, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 107, CA]
+    atom2: [A, 109, N]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 107, CA]
+    atom2: [A, 110, N]
+    max_distance: 6.99
+    force: true
+- atom_contact:
+    atom1: [A, 107, CB]
+    atom2: [A, 107, CG]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 107, CB]
+    atom2: [A, 107, N]
+    max_distance: 7.310001
+    force: true
+- atom_contact:
+    atom1: [A, 107, CB]
+    atom2: [A, 108, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 107, CG]
+    atom2: [A, 107, N]
+    max_distance: 8.52
+    force: true
+- atom_contact:
+    atom1: [A, 107, CG]
+    atom2: [A, 111, CA]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 107, CG]
+    atom2: [A, 111, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 107, CG]
+    atom2: [A, 111, CG2]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 107, N]
+    atom2: [A, 108, N]
+    max_distance: 7.890001
+    force: true
+- atom_contact:
+    atom1: [A, 107, N]
+    atom2: [A, 109, N]
+    max_distance: 8.4
+    force: true
+- atom_contact:
+    atom1: [A, 107, N]
+    atom2: [A, 110, CG]
+    max_distance: 8.42
+    force: true
+- atom_contact:
+    atom1: [A, 107, N]
+    atom2: [A, 110, N]
+    max_distance: 7.93
+    force: true
+- atom_contact:
+    atom1: [A, 107, O]
+    atom2: [A, 111, N]
+    max_distance: 3.88
+    force: true
+- atom_contact:
+    atom1: [A, 108, CA]
+    atom2: [A, 108, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 108, CA]
+    atom2: [A, 108, CD]
+    max_distance: 8.48
+    force: true
+- atom_contact:
+    atom1: [A, 108, CA]
+    atom2: [A, 108, N]
+    max_distance: 7.96
+    force: true
+- atom_contact:
+    atom1: [A, 108, CA]
+    atom2: [A, 109, N]
+    max_distance: 8.030001
+    force: true
+- atom_contact:
+    atom1: [A, 108, CA]
+    atom2: [A, 110, N]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 108, CA]
+    atom2: [A, 111, CB]
+    max_distance: 7.83
+    force: true
+- atom_contact:
+    atom1: [A, 108, CB]
+    atom2: [A, 108, N]
+    max_distance: 7.310001
+    force: true
+- atom_contact:
+    atom1: [A, 108, CB]
+    atom2: [A, 109, N]
+    max_distance: 7.73
+    force: true
+- atom_contact:
+    atom1: [A, 108, CB]
+    atom2: [A, 112, N]
+    max_distance: 8.32
+    force: true
+- atom_contact:
+    atom1: [A, 108, CD]
+    atom2: [A, 108, CG]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 108, CD]
+    atom2: [A, 108, N]
+    max_distance: 7.86
+    force: true
+- atom_contact:
+    atom1: [A, 108, CD]
+    atom2: [A, 109, N]
+    max_distance: 8.4
+    force: true
+- atom_contact:
+    atom1: [A, 108, CG]
+    atom2: [A, 108, N]
+    max_distance: 7.850001
+    force: true
+- atom_contact:
+    atom1: [A, 108, CG]
+    atom2: [A, 109, N]
+    max_distance: 8.47
+    force: true
+- atom_contact:
+    atom1: [A, 108, N]
+    atom2: [A, 109, N]
+    max_distance: 7.78
+    force: true
+- atom_contact:
+    atom1: [A, 108, O]
+    atom2: [A, 112, N]
+    max_distance: 3.88
+    force: true
+- atom_contact:
+    atom1: [A, 109, CA]
+    atom2: [A, 109, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 109, CA]
+    atom2: [A, 109, CG]
+    max_distance: 8.280001
+    force: true
+- atom_contact:
+    atom1: [A, 109, CA]
+    atom2: [A, 109, N]
+    max_distance: 8.24
+    force: true
+- atom_contact:
+    atom1: [A, 109, CA]
+    atom2: [A, 110, N]
+    max_distance: 8.21
+    force: true
+- atom_contact:
+    atom1: [A, 109, CA]
+    atom2: [A, 112, CB]
+    max_distance: 7.51
+    force: true
+- atom_contact:
+    atom1: [A, 109, CA]
+    atom2: [A, 112, N]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 109, CB]
+    atom2: [A, 109, CG]
+    max_distance: 8.120001
+    force: true
+- atom_contact:
+    atom1: [A, 109, CB]
+    atom2: [A, 109, N]
+    max_distance: 7.55
+    force: true
+- atom_contact:
+    atom1: [A, 109, CB]
+    atom2: [A, 110, N]
+    max_distance: 7.97
+    force: true
+- atom_contact:
+    atom1: [A, 109, CG]
+    atom2: [A, 109, N]
+    max_distance: 8.56
+    force: true
+- atom_contact:
+    atom1: [A, 109, CG]
+    atom2: [A, 110, N]
+    max_distance: 7.86
+    force: true
+- atom_contact:
+    atom1: [A, 109, CG]
+    atom2: [A, 113, CB]
+    max_distance: 7.92
+    force: true
+- atom_contact:
+    atom1: [A, 109, N]
+    atom2: [A, 110, N]
+    max_distance: 7.84
+    force: true
+- atom_contact:
+    atom1: [A, 109, N]
+    atom2: [A, 112, N]
+    max_distance: 8.4
+    force: true
+- atom_contact:
+    atom1: [A, 110, CA]
+    atom2: [A, 110, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 110, CA]
+    atom2: [A, 113, CA]
+    max_distance: 8.51
+    force: true
+- atom_contact:
+    atom1: [A, 110, CA]
+    atom2: [A, 113, CG1]
+    max_distance: 7.95
+    force: true
+- atom_contact:
+    atom1: [A, 110, CA]
+    atom2: [A, 113, CG2]
+    max_distance: 8.39
+    force: true
+- atom_contact:
+    atom1: [A, 110, CA]
+    atom2: [A, 114, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 110, CA]
+    atom2: [A, 114, CG]
+    max_distance: 7.350001
+    force: true
+- atom_contact:
+    atom1: [A, 110, CA]
+    atom2: [A, 114, N]
+    max_distance: 7.13
+    force: true
+- atom_contact:
+    atom1: [A, 110, CB]
+    atom2: [A, 111, CA]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 110, CB]
+    atom2: [A, 111, N]
+    max_distance: 8.47
+    force: true
+- atom_contact:
+    atom1: [A, 110, CB]
+    atom2: [A, 113, CB]
+    max_distance: 8.280001
+    force: true
+- atom_contact:
+    atom1: [A, 110, CB]
+    atom2: [A, 113, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 110, CB]
+    atom2: [A, 114, CB]
+    max_distance: 8.280001
+    force: true
+- atom_contact:
+    atom1: [A, 110, CB]
+    atom2: [A, 114, CG]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 110, CG]
+    atom2: [A, 111, N]
+    max_distance: 7.91
+    force: true
+- atom_contact:
+    atom1: [A, 110, CG]
+    atom2: [A, 113, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 110, N]
+    atom2: [A, 114, CG]
+    max_distance: 8.64
+    force: true
+- atom_contact:
+    atom1: [A, 110, O]
+    atom2: [A, 114, N]
+    max_distance: 3.88
+    force: true
+- atom_contact:
+    atom1: [A, 111, CA]
+    atom2: [A, 111, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 111, CA]
+    atom2: [A, 111, CG2]
+    max_distance: 7.770001
+    force: true
+- atom_contact:
+    atom1: [A, 111, CA]
+    atom2: [A, 112, N]
+    max_distance: 8.39
+    force: true
+- atom_contact:
+    atom1: [A, 111, CA]
+    atom2: [A, 114, CB]
+    max_distance: 7.86
+    force: true
+- atom_contact:
+    atom1: [A, 111, CA]
+    atom2: [A, 114, CG]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 111, CA]
+    atom2: [A, 115, CG]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 111, CA]
+    atom2: [A, 115, N]
+    max_distance: 8.32
+    force: true
+- atom_contact:
+    atom1: [A, 111, CB]
+    atom2: [A, 111, CG2]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 111, CB]
+    atom2: [A, 112, N]
+    max_distance: 7.7
+    force: true
+- atom_contact:
+    atom1: [A, 111, CB]
+    atom2: [A, 115, CG]
+    max_distance: 8.16
+    force: true
+- atom_contact:
+    atom1: [A, 111, CG2]
+    atom2: [A, 112, CA]
+    max_distance: 8.52
+    force: true
+- atom_contact:
+    atom1: [A, 111, CG2]
+    atom2: [A, 112, N]
+    max_distance: 8.46
+    force: true
+- atom_contact:
+    atom1: [A, 111, CG2]
+    atom2: [A, 114, CG]
+    max_distance: 8.280001
+    force: true
+- atom_contact:
+    atom1: [A, 111, CG2]
+    atom2: [A, 115, CG]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 111, N]
+    atom2: [A, 114, CG]
+    max_distance: 7.38
+    force: true
+- atom_contact:
+    atom1: [A, 111, N]
+    atom2: [A, 114, N]
+    max_distance: 8.350001
+    force: true
+- atom_contact:
+    atom1: [A, 111, O]
+    atom2: [A, 115, N]
+    max_distance: 3.9
+    force: true
+- atom_contact:
+    atom1: [A, 112, CA]
+    atom2: [A, 112, CB]
+    max_distance: 7.560001
+    force: true
+- atom_contact:
+    atom1: [A, 112, CA]
+    atom2: [A, 112, N]
+    max_distance: 7.8
+    force: true
+- atom_contact:
+    atom1: [A, 112, CA]
+    atom2: [A, 113, N]
+    max_distance: 8.01
+    force: true
+- atom_contact:
+    atom1: [A, 112, CA]
+    atom2: [A, 115, CG]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 112, CA]
+    atom2: [A, 115, N]
+    max_distance: 8.41
+    force: true
+- atom_contact:
+    atom1: [A, 112, CA]
+    atom2: [A, 118, CA]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 112, CB]
+    atom2: [A, 112, N]
+    max_distance: 7.21
+    force: true
+- atom_contact:
+    atom1: [A, 112, CB]
+    atom2: [A, 113, CG2]
+    max_distance: 7.94
+    force: true
+- atom_contact:
+    atom1: [A, 112, CB]
+    atom2: [A, 113, N]
+    max_distance: 7.76
+    force: true
+- atom_contact:
+    atom1: [A, 112, CB]
+    atom2: [A, 115, CG]
+    max_distance: 8.88
+    force: true
+- atom_contact:
+    atom1: [A, 112, CB]
+    atom2: [A, 118, N]
+    max_distance: 8.64
+    force: true
+- atom_contact:
+    atom1: [A, 112, CB]
+    atom2: [A, 119, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 112, CB]
+    atom2: [A, 121, N]
+    max_distance: 8.67
+    force: true
+- atom_contact:
+    atom1: [A, 112, N]
+    atom2: [A, 113, N]
+    max_distance: 7.76
+    force: true
+- atom_contact:
+    atom1: [A, 112, N]
+    atom2: [A, 114, N]
+    max_distance: 7.93
+    force: true
+- atom_contact:
+    atom1: [A, 112, N]
+    atom2: [A, 119, N]
+    max_distance: 7.93
+    force: true
+- atom_contact:
+    atom1: [A, 113, CA]
+    atom2: [A, 113, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 113, CA]
+    atom2: [A, 113, CG1]
+    max_distance: 8.18
+    force: true
+- atom_contact:
+    atom1: [A, 113, CA]
+    atom2: [A, 113, CG2]
+    max_distance: 8.2
+    force: true
+- atom_contact:
+    atom1: [A, 113, CA]
+    atom2: [A, 113, N]
+    max_distance: 7.88
+    force: true
+- atom_contact:
+    atom1: [A, 113, CA]
+    atom2: [A, 114, N]
+    max_distance: 8.11
+    force: true
+- atom_contact:
+    atom1: [A, 113, CA]
+    atom2: [A, 116, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 113, CA]
+    atom2: [A, 116, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 113, CA]
+    atom2: [A, 119, CB]
+    max_distance: 8.280001
+    force: true
+- atom_contact:
+    atom1: [A, 113, CB]
+    atom2: [A, 113, CG1]
+    max_distance: 7.74
+    force: true
+- atom_contact:
+    atom1: [A, 113, CB]
+    atom2: [A, 113, CG2]
+    max_distance: 7.66
+    force: true
+- atom_contact:
+    atom1: [A, 113, CB]
+    atom2: [A, 113, N]
+    max_distance: 7.600001
+    force: true
+- atom_contact:
+    atom1: [A, 113, CB]
+    atom2: [A, 114, N]
+    max_distance: 7.08
+    force: true
+- atom_contact:
+    atom1: [A, 113, CG1]
+    atom2: [A, 113, N]
+    max_distance: 8.45
+    force: true
+- atom_contact:
+    atom1: [A, 113, CG2]
+    atom2: [A, 113, N]
+    max_distance: 7.48
+    force: true
+- atom_contact:
+    atom1: [A, 113, CG2]
+    atom2: [A, 114, N]
+    max_distance: 8.16
+    force: true
+- atom_contact:
+    atom1: [A, 113, N]
+    atom2: [A, 114, N]
+    max_distance: 7.71
+    force: true
+- atom_contact:
+    atom1: [A, 113, N]
+    atom2: [A, 116, N]
+    max_distance: 7.93
+    force: true
+- atom_contact:
+    atom1: [A, 114, CA]
+    atom2: [A, 114, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 114, CA]
+    atom2: [A, 114, CG]
+    max_distance: 8.21
+    force: true
+- atom_contact:
+    atom1: [A, 114, CA]
+    atom2: [A, 114, N]
+    max_distance: 7.96
+    force: true
+- atom_contact:
+    atom1: [A, 114, CA]
+    atom2: [A, 115, N]
+    max_distance: 8.4
+    force: true
+- atom_contact:
+    atom1: [A, 114, CB]
+    atom2: [A, 114, N]
+    max_distance: 7.08
+    force: true
+- atom_contact:
+    atom1: [A, 114, CG]
+    atom2: [A, 114, N]
+    max_distance: 7.96
+    force: true
+- atom_contact:
+    atom1: [A, 114, CG]
+    atom2: [A, 115, CG]
+    max_distance: 8.61
+    force: true
+- atom_contact:
+    atom1: [A, 114, N]
+    atom2: [A, 115, N]
+    max_distance: 7.74
+    force: true
+- atom_contact:
+    atom1: [A, 115, CA]
+    atom2: [A, 115, CG]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 115, CB]
+    atom2: [A, 115, CG]
+    max_distance: 7.59
+    force: true
+- atom_contact:
+    atom1: [A, 115, CB]
+    atom2: [A, 115, N]
+    max_distance: 7.12
+    force: true
+- atom_contact:
+    atom1: [A, 115, CB]
+    atom2: [A, 116, CA]
+    max_distance: 8.05
+    force: true
+- atom_contact:
+    atom1: [A, 115, CB]
+    atom2: [A, 116, N]
+    max_distance: 7.94
+    force: true
+- atom_contact:
+    atom1: [A, 115, CB]
+    atom2: [A, 117, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 115, CG]
+    atom2: [A, 115, N]
+    max_distance: 7.930001
+    force: true
+- atom_contact:
+    atom1: [A, 115, CG]
+    atom2: [A, 117, N]
+    max_distance: 8.84
+    force: true
+- atom_contact:
+    atom1: [A, 115, CG]
+    atom2: [A, 119, N]
+    max_distance: 8.06
+    force: true
+- atom_contact:
+    atom1: [A, 115, N]
+    atom2: [A, 119, CD1]
+    max_distance: 7.97
+    force: true
+- atom_contact:
+    atom1: [A, 116, CA]
+    atom2: [A, 116, CG2]
+    max_distance: 7.45
+    force: true
+- atom_contact:
+    atom1: [A, 116, CA]
+    atom2: [A, 116, N]
+    max_distance: 8.15
+    force: true
+- atom_contact:
+    atom1: [A, 116, CA]
+    atom2: [A, 117, N]
+    max_distance: 7.020001
+    force: true
+- atom_contact:
+    atom1: [A, 116, CB]
+    atom2: [A, 116, CG2]
+    max_distance: 7.45
+    force: true
+- atom_contact:
+    atom1: [A, 116, CB]
+    atom2: [A, 116, N]
+    max_distance: 8.4
+    force: true
+- atom_contact:
+    atom1: [A, 116, CB]
+    atom2: [A, 117, N]
+    max_distance: 7.020001
+    force: true
+- atom_contact:
+    atom1: [A, 116, CB]
+    atom2: [A, 119, CA]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 116, CB]
+    atom2: [A, 119, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 116, CG2]
+    atom2: [A, 116, N]
+    max_distance: 8.29
+    force: true
+- atom_contact:
+    atom1: [A, 116, CG2]
+    atom2: [A, 117, N]
+    max_distance: 8.45
+    force: true
+- atom_contact:
+    atom1: [A, 116, CG2]
+    atom2: [A, 118, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 116, N]
+    atom2: [A, 117, N]
+    max_distance: 7.78
+    force: true
+- atom_contact:
+    atom1: [A, 116, N]
+    atom2: [A, 118, N]
+    max_distance: 7.93
+    force: true
+- atom_contact:
+    atom1: [A, 116, N]
+    atom2: [A, 119, N]
+    max_distance: 7.93
+    force: true
+- atom_contact:
+    atom1: [A, 117, CA]
+    atom2: [A, 117, CB]
+    max_distance: 7.95
+    force: true
+- atom_contact:
+    atom1: [A, 117, CA]
+    atom2: [A, 117, N]
+    max_distance: 7.82
+    force: true
+- atom_contact:
+    atom1: [A, 117, CA]
+    atom2: [A, 118, N]
+    max_distance: 7.25
+    force: true
+- atom_contact:
+    atom1: [A, 117, CB]
+    atom2: [A, 117, N]
+    max_distance: 7.57
+    force: true
+- atom_contact:
+    atom1: [A, 117, CB]
+    atom2: [A, 118, N]
+    max_distance: 8.42
+    force: true
+- atom_contact:
+    atom1: [A, 117, N]
+    atom2: [A, 118, N]
+    max_distance: 6.62
+    force: true
+- atom_contact:
+    atom1: [A, 117, N]
+    atom2: [A, 119, N]
+    max_distance: 7.060001
+    force: true
+- atom_contact:
+    atom1: [A, 118, CA]
+    atom2: [A, 119, N]
+    max_distance: 7.640001
+    force: true
+- atom_contact:
+    atom1: [A, 118, CB]
+    atom2: [A, 118, CG2]
+    max_distance: 7.11
+    force: true
+- atom_contact:
+    atom1: [A, 118, CB]
+    atom2: [A, 119, N]
+    max_distance: 8.54
+    force: true
+- atom_contact:
+    atom1: [A, 118, CB]
+    atom2: [A, 121, CA]
+    max_distance: 8.120001
+    force: true
+- atom_contact:
+    atom1: [A, 118, CB]
+    atom2: [A, 121, CB]
+    max_distance: 8.31
+    force: true
+- atom_contact:
+    atom1: [A, 118, CB]
+    atom2: [A, 121, CD1]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 118, CB]
+    atom2: [A, 121, CG]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 118, CG2]
+    atom2: [A, 118, N]
+    max_distance: 8.15
+    force: true
+- atom_contact:
+    atom1: [A, 118, CG2]
+    atom2: [A, 121, CB]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 118, CG2]
+    atom2: [A, 121, CG]
+    max_distance: 8.08
+    force: true
+- atom_contact:
+    atom1: [A, 118, N]
+    atom2: [A, 122, N]
+    max_distance: 7.93
+    force: true
+- atom_contact:
+    atom1: [A, 119, CA]
+    atom2: [A, 119, CB]
+    max_distance: 7.29
+    force: true
+- atom_contact:
+    atom1: [A, 119, CA]
+    atom2: [A, 119, N]
+    max_distance: 7.810001
+    force: true
+- atom_contact:
+    atom1: [A, 119, CA]
+    atom2: [A, 120, N]
+    max_distance: 7.22
+    force: true
+- atom_contact:
+    atom1: [A, 119, CA]
+    atom2: [A, 121, N]
+    max_distance: 8.27
+    force: true
+- atom_contact:
+    atom1: [A, 119, CB]
+    atom2: [A, 119, N]
+    max_distance: 7.5
+    force: true
+- atom_contact:
+    atom1: [A, 119, N]
+    atom2: [A, 120, N]
+    max_distance: 7.88
+    force: true
+- atom_contact:
+    atom1: [A, 119, N]
+    atom2: [A, 121, N]
+    max_distance: 7.810001
+    force: true
+- atom_contact:
+    atom1: [A, 119, N]
+    atom2: [A, 122, N]
+    max_distance: 7.560001
+    force: true
+- atom_contact:
+    atom1: [A, 120, CA]
+    atom2: [A, 120, N]
+    max_distance: 7.01
+    force: true
+- atom_contact:
+    atom1: [A, 120, CA]
+    atom2: [A, 121, N]
+    max_distance: 7.49
+    force: true
+- atom_contact:
+    atom1: [A, 120, CA]
+    atom2: [A, 122, N]
+    max_distance: 8.440001
+    force: true
+- atom_contact:
+    atom1: [A, 120, N]
+    atom2: [A, 121, N]
+    max_distance: 7.770001
+    force: true
+- atom_contact:
+    atom1: [A, 120, N]
+    atom2: [A, 122, N]
+    max_distance: 7.93
+    force: true
+- atom_contact:
+    atom1: [A, 121, CA]
+    atom2: [A, 121, CB]
+    max_distance: 6.95
+    force: true
+- atom_contact:
+    atom1: [A, 121, CA]
+    atom2: [A, 121, CG]
+    max_distance: 6.95
+    force: true
+- atom_contact:
+    atom1: [A, 121, CA]
+    atom2: [A, 121, N]
+    max_distance: 8.11
+    force: true
+- atom_contact:
+    atom1: [A, 121, CA]
+    atom2: [A, 122, N]
+    max_distance: 7.51
+    force: true
+- atom_contact:
+    atom1: [A, 121, CB]
+    atom2: [A, 121, CD1]
+    max_distance: 7.600001
+    force: true
+- atom_contact:
+    atom1: [A, 121, CB]
+    atom2: [A, 121, N]
+    max_distance: 7.2
+    force: true
+- atom_contact:
+    atom1: [A, 121, CB]
+    atom2: [A, 122, N]
+    max_distance: 8.24
+    force: true
+- atom_contact:
+    atom1: [A, 121, CD1]
+    atom2: [A, 121, CG]
+    max_distance: 7.91
+    force: true
+- atom_contact:
+    atom1: [A, 121, CG]
+    atom2: [A, 121, N]
+    max_distance: 7.2
+    force: true
+- atom_contact:
+    atom1: [A, 121, CG]
+    atom2: [A, 122, N]
+    max_distance: 8.24
+    force: true

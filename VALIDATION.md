@@ -1,11 +1,11 @@
 # Validation status
 
-Status: PASS
-Date: 2026-07-16
+Status: PASS WITH DOCUMENTED FORMAT-PARITY LIMITATIONS
+Date: 2026-07-17
 
 ## Regression and stress validation
 
-- 39 Pytest tests passed.
+- 44 Pytest tests passed.
 - 100,000 randomized sum-r6 implication cases passed.
 - 100,000 constructive triangle-inequality cases passed.
 - 25,000 outward-rounding cases passed.
@@ -13,25 +13,31 @@ Date: 2026-07-16
 - All 850 built-in hydrogen-parent mappings resolved.
 - Deterministic NEF, NMR-STAR, compressed-input, custom-component, averaging-policy, and 32-hypothesis paths passed.
 - Target-YAML validation checks chain existence, one-based index bounds, canonical residue identity, declared modifications, mapping collisions, and emitted-contact positions.
-- The checksum-pinned 6M6O benchmark manifest passed all nine expected conversion and target-validation metrics.
+- Sequence-only NEF/NMR-STAR entries produce auditable empty distance conversions.
+- Sequence/residue conflicts are rejected explicitly before atom-topology resolution.
+- PDB coordinates are aligned to one-based Boltz sequence indices before distance evaluation.
 - NMR-STAR sequence-alias provenance is sorted deterministically rather than depending on Python set iteration.
-- Two isolated 6M6O container runs with `PYTHONHASHSEED=1` and `987654` produced the same sequence-map SHA-256 (`1a4ebace5cc19b330a2eb267550df81e58f3073455c08df2980c5a2b08e87c53`).
+- Sequence-map ordering remains deterministic across Python hash seeds.
 
-## Real deposited-data validation
+## Paired-format deposited-data validation
 
-PDB 6M6O and linked BMRB 28061 were tested across all 10 deposited conformers.
-The PDB and mmCIF files agreed exactly for 30,820 atom instances. The NOE-only
-conversion emitted 2,707 heavy-atom contacts. In 25,350 cases where all source
-antecedents were satisfied, the projected contact implication had zero failures.
+Twelve deposited NMR ensembles were converted from both NEF and NMR-STAR.
+All 24 conversions completed; the two 8S8O inputs are valid empty distance
+conversions containing sequence, shifts, and torsion data but no distance loop.
+The default safe projection emitted 13,004 NEF and 11,841 NMR-STAR contacts.
+Resolved contact/model satisfaction was 99.88% and 99.86%, respectively.
+Across 390,810 model/contact cases with satisfied source antecedents, the
+projected heavy-atom implication had zero failures.
 
-The detailed report, commands, raw data, CSV evidence, and JSON summary are under
-workspace/output. This benchmark validates conversion behavior, not the predictive
-accuracy of a GPU Boltz folding campaign.
+Only three positive-distance cases have exact NEF/STAR pair-and-bound parity
+(21CC, 9D99, and 9KG4); 8S8O also has exact empty-output parity. Large differences
+caused by pseudoatoms, atom-set multiplicity, and source inconsistencies remain
+visible and are not silently approximated. The complete current report is under
+`benchmark/output`. This benchmark validates conversion behavior, not the
+predictive accuracy of a GPU Boltz folding campaign.
 
-## Container
+## Container status
 
-- Image: nmr2boltz:0.1.0-validated
-- Digest: sha256:bb97a627d721afb4985caf3c5b86a48486b70f0cd1436b0129149ad172a22405
-- Default user: 65532:65532
-- Runtime checks used no network and a read-only root filesystem.
-- Only this nmr2boltz image remains.
+The previously validated container predates the current sequence-validation,
+FASTA-output, and corpus-runner changes. Rebuild and revalidate the image before
+using a container digest as the release artifact.

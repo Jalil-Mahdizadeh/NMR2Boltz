@@ -372,10 +372,17 @@ class TopologyLibrary:
         available = topology.available_atoms()
         pseudo_expression_early = _pseudoatom_to_expression(expression)
         if expression not in available and pseudo_expression_early is not None and pseudoatom_policy == "reject":
+            canonical_note = (
+                f" Canonical Atom_ID {canonical_hint!r} was preserved for audit but is not "
+                "trusted as a complete pseudoatom expansion."
+                if canonical_hint
+                else ""
+            )
             raise TopologyResolutionError(
                 f"{comp}:{expression} appears to be a geometric pseudoatom. "
-                "NEF pseudoatoms are not equivalent to wildcard atom sets; use "
+                "Geometric pseudoatoms are not equivalent to wildcard atom sets; use "
                 "--pseudoatom-policy atomset only after expert review."
+                + canonical_note
             )
         has_wildcard = any(symbol in expression for symbol in ("%", "*"))
         has_xy = "x" in expression or "y" in expression
@@ -490,7 +497,7 @@ class TopologyLibrary:
             if pseudoatom_policy == "reject":
                 raise TopologyResolutionError(
                     f"{comp}:{expression} appears to be a geometric pseudoatom. "
-                    "NEF pseudoatoms are not equivalent to wildcard atom sets; use "
+                    "Geometric pseudoatoms are not equivalent to wildcard atom sets; use "
                     "--pseudoatom-policy atomset only after expert review."
                 )
             if pseudoatom_policy == "atomset":

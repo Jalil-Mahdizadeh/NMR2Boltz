@@ -1,0 +1,51 @@
+# PROPOSED schema for preserving assignment ambiguity; not accepted by the current BoltzUI parser.
+x_nmr2boltz_schema: proposed-atom-contact-union-v1
+compatible_with_current_boltzui_atom_contact_parser: false
+note: Each item is one OR group. Implement as a shared union index in the Boltz distance potential; do not mark every alternative
+  as a simultaneous token contact.
+constraints:
+- atom_contact_union:
+    group_id: nef_distance_restraint_list_CNS_distance_restraints_1:78
+    restraint_id: '78'
+    alternatives:
+    - atom1: [A, 9, O]
+      atom2: [A, 65, NH1]
+      max_distance: 3.7
+      source_rows:
+      - '78'
+    - atom1: [A, 9, O]
+      atom2: [A, 65, NH2]
+      max_distance: 3.7
+      source_rows:
+      - '78'
+    force: true
+- atom_contact_union:
+    group_id: nef_distance_restraint_list_CNS_distance_restraints_1:79
+    restraint_id: '79'
+    alternatives:
+    - atom1: [A, 14, OE2]
+      atom2: [A, 65, NH1]
+      max_distance: 3.3
+      source_rows:
+      - '79'
+    - atom1: [A, 14, OE2]
+      atom2: [A, 65, NH2]
+      max_distance: 3.3
+      source_rows:
+      - '79'
+    force: true
+- atom_contact_union:
+    group_id: nef_distance_restraint_list_CNS_distance_restraints_1:85
+    restraint_id: '85'
+    alternatives:
+    - atom1: [A, 40, NH1]
+      atom2: [A, 66, OE2]
+      max_distance: 3.5
+      source_rows:
+      - '85'
+    - atom1: [A, 40, NH2]
+      atom2: [A, 66, OE2]
+      max_distance: 3.5
+      source_rows:
+      - '85'
+    force: true

@@ -1,0 +1,3090 @@
+{
+  "input_file": "benchmark\\input\\8S8O\\8s8o_nmr-data.str",
+  "detected_format": "nmr-star",
+  "settings": {
+    "benchmark_case": "8S8O",
+    "benchmark_format": "star",
+    "missing_upper_policy": "reject",
+    "origin_filter": "all",
+    "averaging_policy": "sum-r6",
+    "projection_margin_angstrom": 0.0,
+    "pseudoatom_policy": "reject",
+    "boltz_min_distance_angstrom": 2.0,
+    "boltz_max_distance_angstrom": 20.0,
+    "min_sequence_separation": 0,
+    "include_intraresidue": true
+  },
+  "sequence_map": [
+    {
+      "source_chain": "A",
+      "source_sequence_code": "1",
+      "residue_name": "GLY",
+      "boltz_chain": "A",
+      "boltz_residue_index": 1,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "1",
+          "GLY"
+        ],
+        [
+          "A",
+          "1",
+          "GLY"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "2",
+      "residue_name": "ALA",
+      "boltz_chain": "A",
+      "boltz_residue_index": 2,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "2",
+          "ALA"
+        ],
+        [
+          "A",
+          "2",
+          "ALA"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "3",
+      "residue_name": "MET",
+      "boltz_chain": "A",
+      "boltz_residue_index": 3,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "3",
+          "MET"
+        ],
+        [
+          "A",
+          "3",
+          "MET"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "4",
+      "residue_name": "GLY",
+      "boltz_chain": "A",
+      "boltz_residue_index": 4,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "4",
+          "GLY"
+        ],
+        [
+          "A",
+          "4",
+          "GLY"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "5",
+      "residue_name": "MET",
+      "boltz_chain": "A",
+      "boltz_residue_index": 5,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "5",
+          "MET"
+        ],
+        [
+          "A",
+          "5",
+          "MET"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "6",
+      "residue_name": "SER",
+      "boltz_chain": "A",
+      "boltz_residue_index": 6,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "6",
+          "SER"
+        ],
+        [
+          "A",
+          "6",
+          "SER"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "7",
+      "residue_name": "HIS",
+      "boltz_chain": "A",
+      "boltz_residue_index": 7,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "7",
+          "HIS"
+        ],
+        [
+          "A",
+          "7",
+          "HIS"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "8",
+      "residue_name": "ILE",
+      "boltz_chain": "A",
+      "boltz_residue_index": 8,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "8",
+          "ILE"
+        ],
+        [
+          "A",
+          "8",
+          "ILE"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "9",
+      "residue_name": "GLN",
+      "boltz_chain": "A",
+      "boltz_residue_index": 9,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "9",
+          "GLN"
+        ],
+        [
+          "A",
+          "9",
+          "GLN"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "10",
+      "residue_name": "ILE",
+      "boltz_chain": "A",
+      "boltz_residue_index": 10,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "10",
+          "ILE"
+        ],
+        [
+          "A",
+          "10",
+          "ILE"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "11",
+      "residue_name": "PRO",
+      "boltz_chain": "A",
+      "boltz_residue_index": 11,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "11",
+          "PRO"
+        ],
+        [
+          "A",
+          "11",
+          "PRO"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "12",
+      "residue_name": "PRO",
+      "boltz_chain": "A",
+      "boltz_residue_index": 12,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "12",
+          "PRO"
+        ],
+        [
+          "A",
+          "12",
+          "PRO"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "13",
+      "residue_name": "GLY",
+      "boltz_chain": "A",
+      "boltz_residue_index": 13,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "13",
+          "GLY"
+        ],
+        [
+          "A",
+          "13",
+          "GLY"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "14",
+      "residue_name": "LEU",
+      "boltz_chain": "A",
+      "boltz_residue_index": 14,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "14",
+          "LEU"
+        ],
+        [
+          "A",
+          "14",
+          "LEU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "15",
+      "residue_name": "THR",
+      "boltz_chain": "A",
+      "boltz_residue_index": 15,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "15",
+          "THR"
+        ],
+        [
+          "A",
+          "15",
+          "THR"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "16",
+      "residue_name": "GLU",
+      "boltz_chain": "A",
+      "boltz_residue_index": 16,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "16",
+          "GLU"
+        ],
+        [
+          "A",
+          "16",
+          "GLU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "17",
+      "residue_name": "LEU",
+      "boltz_chain": "A",
+      "boltz_residue_index": 17,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "17",
+          "LEU"
+        ],
+        [
+          "A",
+          "17",
+          "LEU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "18",
+      "residue_name": "LEU",
+      "boltz_chain": "A",
+      "boltz_residue_index": 18,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "18",
+          "LEU"
+        ],
+        [
+          "A",
+          "18",
+          "LEU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "19",
+      "residue_name": "GLN",
+      "boltz_chain": "A",
+      "boltz_residue_index": 19,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "19",
+          "GLN"
+        ],
+        [
+          "A",
+          "19",
+          "GLN"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "20",
+      "residue_name": "GLY",
+      "boltz_chain": "A",
+      "boltz_residue_index": 20,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "20",
+          "GLY"
+        ],
+        [
+          "A",
+          "20",
+          "GLY"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "21",
+      "residue_name": "TYR",
+      "boltz_chain": "A",
+      "boltz_residue_index": 21,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "21",
+          "TYR"
+        ],
+        [
+          "A",
+          "21",
+          "TYR"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "22",
+      "residue_name": "THR",
+      "boltz_chain": "A",
+      "boltz_residue_index": 22,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "22",
+          "THR"
+        ],
+        [
+          "A",
+          "22",
+          "THR"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "23",
+      "residue_name": "VAL",
+      "boltz_chain": "A",
+      "boltz_residue_index": 23,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "23",
+          "VAL"
+        ],
+        [
+          "A",
+          "23",
+          "VAL"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "24",
+      "residue_name": "GLU",
+      "boltz_chain": "A",
+      "boltz_residue_index": 24,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "24",
+          "GLU"
+        ],
+        [
+          "A",
+          "24",
+          "GLU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "25",
+      "residue_name": "VAL",
+      "boltz_chain": "A",
+      "boltz_residue_index": 25,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "25",
+          "VAL"
+        ],
+        [
+          "A",
+          "25",
+          "VAL"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "26",
+      "residue_name": "LEU",
+      "boltz_chain": "A",
+      "boltz_residue_index": 26,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "26",
+          "LEU"
+        ],
+        [
+          "A",
+          "26",
+          "LEU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "27",
+      "residue_name": "ARG",
+      "boltz_chain": "A",
+      "boltz_residue_index": 27,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "27",
+          "ARG"
+        ],
+        [
+          "A",
+          "27",
+          "ARG"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "28",
+      "residue_name": "GLN",
+      "boltz_chain": "A",
+      "boltz_residue_index": 28,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "28",
+          "GLN"
+        ],
+        [
+          "A",
+          "28",
+          "GLN"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "29",
+      "residue_name": "GLN",
+      "boltz_chain": "A",
+      "boltz_residue_index": 29,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "29",
+          "GLN"
+        ],
+        [
+          "A",
+          "29",
+          "GLN"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "30",
+      "residue_name": "PRO",
+      "boltz_chain": "A",
+      "boltz_residue_index": 30,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "30",
+          "PRO"
+        ],
+        [
+          "A",
+          "30",
+          "PRO"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "31",
+      "residue_name": "PRO",
+      "boltz_chain": "A",
+      "boltz_residue_index": 31,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "31",
+          "PRO"
+        ],
+        [
+          "A",
+          "31",
+          "PRO"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "32",
+      "residue_name": "ASP",
+      "boltz_chain": "A",
+      "boltz_residue_index": 32,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "32",
+          "ASP"
+        ],
+        [
+          "A",
+          "32",
+          "ASP"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "33",
+      "residue_name": "LEU",
+      "boltz_chain": "A",
+      "boltz_residue_index": 33,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "33",
+          "LEU"
+        ],
+        [
+          "A",
+          "33",
+          "LEU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "34",
+      "residue_name": "VAL",
+      "boltz_chain": "A",
+      "boltz_residue_index": 34,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "34",
+          "VAL"
+        ],
+        [
+          "A",
+          "34",
+          "VAL"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "35",
+      "residue_name": "GLU",
+      "boltz_chain": "A",
+      "boltz_residue_index": 35,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "35",
+          "GLU"
+        ],
+        [
+          "A",
+          "35",
+          "GLU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "36",
+      "residue_name": "PHE",
+      "boltz_chain": "A",
+      "boltz_residue_index": 36,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "36",
+          "PHE"
+        ],
+        [
+          "A",
+          "36",
+          "PHE"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "37",
+      "residue_name": "ALA",
+      "boltz_chain": "A",
+      "boltz_residue_index": 37,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "37",
+          "ALA"
+        ],
+        [
+          "A",
+          "37",
+          "ALA"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "38",
+      "residue_name": "VAL",
+      "boltz_chain": "A",
+      "boltz_residue_index": 38,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "38",
+          "VAL"
+        ],
+        [
+          "A",
+          "38",
+          "VAL"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "39",
+      "residue_name": "GLU",
+      "boltz_chain": "A",
+      "boltz_residue_index": 39,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "39",
+          "GLU"
+        ],
+        [
+          "A",
+          "39",
+          "GLU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "40",
+      "residue_name": "TYR",
+      "boltz_chain": "A",
+      "boltz_residue_index": 40,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "40",
+          "TYR"
+        ],
+        [
+          "A",
+          "40",
+          "TYR"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "41",
+      "residue_name": "PHE",
+      "boltz_chain": "A",
+      "boltz_residue_index": 41,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "41",
+          "PHE"
+        ],
+        [
+          "A",
+          "41",
+          "PHE"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "42",
+      "residue_name": "THR",
+      "boltz_chain": "A",
+      "boltz_residue_index": 42,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "42",
+          "THR"
+        ],
+        [
+          "A",
+          "42",
+          "THR"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "43",
+      "residue_name": "ARG",
+      "boltz_chain": "A",
+      "boltz_residue_index": 43,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "43",
+          "ARG"
+        ],
+        [
+          "A",
+          "43",
+          "ARG"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "44",
+      "residue_name": "LEU",
+      "boltz_chain": "A",
+      "boltz_residue_index": 44,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "44",
+          "LEU"
+        ],
+        [
+          "A",
+          "44",
+          "LEU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "45",
+      "residue_name": "ARG",
+      "boltz_chain": "A",
+      "boltz_residue_index": 45,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "45",
+          "ARG"
+        ],
+        [
+          "A",
+          "45",
+          "ARG"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "46",
+      "residue_name": "GLU",
+      "boltz_chain": "A",
+      "boltz_residue_index": 46,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "46",
+          "GLU"
+        ],
+        [
+          "A",
+          "46",
+          "GLU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "47",
+      "residue_name": "ALA",
+      "boltz_chain": "A",
+      "boltz_residue_index": 47,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "47",
+          "ALA"
+        ],
+        [
+          "A",
+          "47",
+          "ALA"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "48",
+      "residue_name": "ARG",
+      "boltz_chain": "A",
+      "boltz_residue_index": 48,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "48",
+          "ARG"
+        ],
+        [
+          "A",
+          "48",
+          "ARG"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "49",
+      "residue_name": "ALA",
+      "boltz_chain": "A",
+      "boltz_residue_index": 49,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "49",
+          "ALA"
+        ],
+        [
+          "A",
+          "49",
+          "ALA"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "50",
+      "residue_name": "PRO",
+      "boltz_chain": "A",
+      "boltz_residue_index": 50,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "50",
+          "PRO"
+        ],
+        [
+          "A",
+          "50",
+          "PRO"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "51",
+      "residue_name": "ALA",
+      "boltz_chain": "A",
+      "boltz_residue_index": 51,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "51",
+          "ALA"
+        ],
+        [
+          "A",
+          "51",
+          "ALA"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "52",
+      "residue_name": "SER",
+      "boltz_chain": "A",
+      "boltz_residue_index": 52,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "1",
+          "52",
+          "SER"
+        ],
+        [
+          "A",
+          "52",
+          "SER"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "1",
+      "residue_name": "GLY",
+      "boltz_chain": "B",
+      "boltz_residue_index": 1,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "1",
+          "GLY"
+        ],
+        [
+          "B",
+          "1",
+          "GLY"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "2",
+      "residue_name": "ALA",
+      "boltz_chain": "B",
+      "boltz_residue_index": 2,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "2",
+          "ALA"
+        ],
+        [
+          "B",
+          "2",
+          "ALA"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "3",
+      "residue_name": "MET",
+      "boltz_chain": "B",
+      "boltz_residue_index": 3,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "3",
+          "MET"
+        ],
+        [
+          "B",
+          "3",
+          "MET"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "4",
+      "residue_name": "GLY",
+      "boltz_chain": "B",
+      "boltz_residue_index": 4,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "4",
+          "GLY"
+        ],
+        [
+          "B",
+          "4",
+          "GLY"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "5",
+      "residue_name": "MET",
+      "boltz_chain": "B",
+      "boltz_residue_index": 5,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "5",
+          "MET"
+        ],
+        [
+          "B",
+          "5",
+          "MET"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "6",
+      "residue_name": "SER",
+      "boltz_chain": "B",
+      "boltz_residue_index": 6,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "6",
+          "SER"
+        ],
+        [
+          "B",
+          "6",
+          "SER"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "7",
+      "residue_name": "HIS",
+      "boltz_chain": "B",
+      "boltz_residue_index": 7,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "7",
+          "HIS"
+        ],
+        [
+          "B",
+          "7",
+          "HIS"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "8",
+      "residue_name": "ILE",
+      "boltz_chain": "B",
+      "boltz_residue_index": 8,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "8",
+          "ILE"
+        ],
+        [
+          "B",
+          "8",
+          "ILE"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "9",
+      "residue_name": "GLN",
+      "boltz_chain": "B",
+      "boltz_residue_index": 9,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "9",
+          "GLN"
+        ],
+        [
+          "B",
+          "9",
+          "GLN"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "10",
+      "residue_name": "ILE",
+      "boltz_chain": "B",
+      "boltz_residue_index": 10,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "10",
+          "ILE"
+        ],
+        [
+          "B",
+          "10",
+          "ILE"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "11",
+      "residue_name": "PRO",
+      "boltz_chain": "B",
+      "boltz_residue_index": 11,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "11",
+          "PRO"
+        ],
+        [
+          "B",
+          "11",
+          "PRO"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "12",
+      "residue_name": "PRO",
+      "boltz_chain": "B",
+      "boltz_residue_index": 12,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "12",
+          "PRO"
+        ],
+        [
+          "B",
+          "12",
+          "PRO"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "13",
+      "residue_name": "GLY",
+      "boltz_chain": "B",
+      "boltz_residue_index": 13,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "13",
+          "GLY"
+        ],
+        [
+          "B",
+          "13",
+          "GLY"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "14",
+      "residue_name": "LEU",
+      "boltz_chain": "B",
+      "boltz_residue_index": 14,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "14",
+          "LEU"
+        ],
+        [
+          "B",
+          "14",
+          "LEU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "15",
+      "residue_name": "THR",
+      "boltz_chain": "B",
+      "boltz_residue_index": 15,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "15",
+          "THR"
+        ],
+        [
+          "B",
+          "15",
+          "THR"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "16",
+      "residue_name": "GLU",
+      "boltz_chain": "B",
+      "boltz_residue_index": 16,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "16",
+          "GLU"
+        ],
+        [
+          "B",
+          "16",
+          "GLU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "17",
+      "residue_name": "LEU",
+      "boltz_chain": "B",
+      "boltz_residue_index": 17,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "17",
+          "LEU"
+        ],
+        [
+          "B",
+          "17",
+          "LEU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "18",
+      "residue_name": "LEU",
+      "boltz_chain": "B",
+      "boltz_residue_index": 18,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "18",
+          "LEU"
+        ],
+        [
+          "B",
+          "18",
+          "LEU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "19",
+      "residue_name": "GLN",
+      "boltz_chain": "B",
+      "boltz_residue_index": 19,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "19",
+          "GLN"
+        ],
+        [
+          "B",
+          "19",
+          "GLN"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "20",
+      "residue_name": "GLY",
+      "boltz_chain": "B",
+      "boltz_residue_index": 20,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "20",
+          "GLY"
+        ],
+        [
+          "B",
+          "20",
+          "GLY"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "21",
+      "residue_name": "TYR",
+      "boltz_chain": "B",
+      "boltz_residue_index": 21,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "21",
+          "TYR"
+        ],
+        [
+          "B",
+          "21",
+          "TYR"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "22",
+      "residue_name": "THR",
+      "boltz_chain": "B",
+      "boltz_residue_index": 22,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "22",
+          "THR"
+        ],
+        [
+          "B",
+          "22",
+          "THR"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "23",
+      "residue_name": "VAL",
+      "boltz_chain": "B",
+      "boltz_residue_index": 23,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "23",
+          "VAL"
+        ],
+        [
+          "B",
+          "23",
+          "VAL"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "24",
+      "residue_name": "GLU",
+      "boltz_chain": "B",
+      "boltz_residue_index": 24,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "24",
+          "GLU"
+        ],
+        [
+          "B",
+          "24",
+          "GLU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "25",
+      "residue_name": "VAL",
+      "boltz_chain": "B",
+      "boltz_residue_index": 25,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "25",
+          "VAL"
+        ],
+        [
+          "B",
+          "25",
+          "VAL"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "26",
+      "residue_name": "LEU",
+      "boltz_chain": "B",
+      "boltz_residue_index": 26,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "26",
+          "LEU"
+        ],
+        [
+          "B",
+          "26",
+          "LEU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "27",
+      "residue_name": "ARG",
+      "boltz_chain": "B",
+      "boltz_residue_index": 27,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "27",
+          "ARG"
+        ],
+        [
+          "B",
+          "27",
+          "ARG"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "28",
+      "residue_name": "GLN",
+      "boltz_chain": "B",
+      "boltz_residue_index": 28,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "28",
+          "GLN"
+        ],
+        [
+          "B",
+          "28",
+          "GLN"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "29",
+      "residue_name": "GLN",
+      "boltz_chain": "B",
+      "boltz_residue_index": 29,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "29",
+          "GLN"
+        ],
+        [
+          "B",
+          "29",
+          "GLN"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "30",
+      "residue_name": "PRO",
+      "boltz_chain": "B",
+      "boltz_residue_index": 30,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "30",
+          "PRO"
+        ],
+        [
+          "B",
+          "30",
+          "PRO"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "31",
+      "residue_name": "PRO",
+      "boltz_chain": "B",
+      "boltz_residue_index": 31,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "31",
+          "PRO"
+        ],
+        [
+          "B",
+          "31",
+          "PRO"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "32",
+      "residue_name": "ASP",
+      "boltz_chain": "B",
+      "boltz_residue_index": 32,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "32",
+          "ASP"
+        ],
+        [
+          "B",
+          "32",
+          "ASP"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "33",
+      "residue_name": "LEU",
+      "boltz_chain": "B",
+      "boltz_residue_index": 33,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "33",
+          "LEU"
+        ],
+        [
+          "B",
+          "33",
+          "LEU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "34",
+      "residue_name": "VAL",
+      "boltz_chain": "B",
+      "boltz_residue_index": 34,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "34",
+          "VAL"
+        ],
+        [
+          "B",
+          "34",
+          "VAL"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "35",
+      "residue_name": "GLU",
+      "boltz_chain": "B",
+      "boltz_residue_index": 35,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "35",
+          "GLU"
+        ],
+        [
+          "B",
+          "35",
+          "GLU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "36",
+      "residue_name": "PHE",
+      "boltz_chain": "B",
+      "boltz_residue_index": 36,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "36",
+          "PHE"
+        ],
+        [
+          "B",
+          "36",
+          "PHE"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "37",
+      "residue_name": "ALA",
+      "boltz_chain": "B",
+      "boltz_residue_index": 37,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "37",
+          "ALA"
+        ],
+        [
+          "B",
+          "37",
+          "ALA"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "38",
+      "residue_name": "VAL",
+      "boltz_chain": "B",
+      "boltz_residue_index": 38,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "38",
+          "VAL"
+        ],
+        [
+          "B",
+          "38",
+          "VAL"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "39",
+      "residue_name": "GLU",
+      "boltz_chain": "B",
+      "boltz_residue_index": 39,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "39",
+          "GLU"
+        ],
+        [
+          "B",
+          "39",
+          "GLU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "40",
+      "residue_name": "TYR",
+      "boltz_chain": "B",
+      "boltz_residue_index": 40,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "40",
+          "TYR"
+        ],
+        [
+          "B",
+          "40",
+          "TYR"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "41",
+      "residue_name": "PHE",
+      "boltz_chain": "B",
+      "boltz_residue_index": 41,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "41",
+          "PHE"
+        ],
+        [
+          "B",
+          "41",
+          "PHE"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "42",
+      "residue_name": "THR",
+      "boltz_chain": "B",
+      "boltz_residue_index": 42,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "42",
+          "THR"
+        ],
+        [
+          "B",
+          "42",
+          "THR"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "43",
+      "residue_name": "ARG",
+      "boltz_chain": "B",
+      "boltz_residue_index": 43,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "43",
+          "ARG"
+        ],
+        [
+          "B",
+          "43",
+          "ARG"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "44",
+      "residue_name": "LEU",
+      "boltz_chain": "B",
+      "boltz_residue_index": 44,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "44",
+          "LEU"
+        ],
+        [
+          "B",
+          "44",
+          "LEU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "45",
+      "residue_name": "ARG",
+      "boltz_chain": "B",
+      "boltz_residue_index": 45,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "45",
+          "ARG"
+        ],
+        [
+          "B",
+          "45",
+          "ARG"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "46",
+      "residue_name": "GLU",
+      "boltz_chain": "B",
+      "boltz_residue_index": 46,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "46",
+          "GLU"
+        ],
+        [
+          "B",
+          "46",
+          "GLU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "47",
+      "residue_name": "ALA",
+      "boltz_chain": "B",
+      "boltz_residue_index": 47,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "47",
+          "ALA"
+        ],
+        [
+          "B",
+          "47",
+          "ALA"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "48",
+      "residue_name": "ARG",
+      "boltz_chain": "B",
+      "boltz_residue_index": 48,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "48",
+          "ARG"
+        ],
+        [
+          "B",
+          "48",
+          "ARG"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "49",
+      "residue_name": "ALA",
+      "boltz_chain": "B",
+      "boltz_residue_index": 49,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "49",
+          "ALA"
+        ],
+        [
+          "B",
+          "49",
+          "ALA"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "50",
+      "residue_name": "PRO",
+      "boltz_chain": "B",
+      "boltz_residue_index": 50,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "50",
+          "PRO"
+        ],
+        [
+          "B",
+          "50",
+          "PRO"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "51",
+      "residue_name": "ALA",
+      "boltz_chain": "B",
+      "boltz_residue_index": 51,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "51",
+          "ALA"
+        ],
+        [
+          "B",
+          "51",
+          "ALA"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "52",
+      "residue_name": "SER",
+      "boltz_chain": "B",
+      "boltz_residue_index": 52,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "2",
+          "52",
+          "SER"
+        ],
+        [
+          "B",
+          "52",
+          "SER"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "84",
+      "residue_name": "ARG",
+      "boltz_chain": "C",
+      "boltz_residue_index": 1,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "3",
+          "1",
+          "ARG"
+        ],
+        [
+          "3",
+          "84",
+          "ARG"
+        ],
+        [
+          "C",
+          "1",
+          "ARG"
+        ],
+        [
+          "C",
+          "84",
+          "ARG"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "85",
+      "residue_name": "GLU",
+      "boltz_chain": "C",
+      "boltz_residue_index": 2,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "3",
+          "2",
+          "GLU"
+        ],
+        [
+          "3",
+          "85",
+          "GLU"
+        ],
+        [
+          "C",
+          "2",
+          "GLU"
+        ],
+        [
+          "C",
+          "85",
+          "GLU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "86",
+      "residue_name": "THR",
+      "boltz_chain": "C",
+      "boltz_residue_index": 3,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "3",
+          "3",
+          "THR"
+        ],
+        [
+          "3",
+          "86",
+          "THR"
+        ],
+        [
+          "C",
+          "3",
+          "THR"
+        ],
+        [
+          "C",
+          "86",
+          "THR"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "87",
+      "residue_name": "ALA",
+      "boltz_chain": "C",
+      "boltz_residue_index": 4,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "3",
+          "4",
+          "ALA"
+        ],
+        [
+          "3",
+          "87",
+          "ALA"
+        ],
+        [
+          "C",
+          "4",
+          "ALA"
+        ],
+        [
+          "C",
+          "87",
+          "ALA"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "88",
+      "residue_name": "GLU",
+      "boltz_chain": "C",
+      "boltz_residue_index": 5,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "3",
+          "5",
+          "GLU"
+        ],
+        [
+          "3",
+          "88",
+          "GLU"
+        ],
+        [
+          "C",
+          "5",
+          "GLU"
+        ],
+        [
+          "C",
+          "88",
+          "GLU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "89",
+      "residue_name": "GLU",
+      "boltz_chain": "C",
+      "boltz_residue_index": 6,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "3",
+          "6",
+          "GLU"
+        ],
+        [
+          "3",
+          "89",
+          "GLU"
+        ],
+        [
+          "C",
+          "6",
+          "GLU"
+        ],
+        [
+          "C",
+          "89",
+          "GLU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "90",
+      "residue_name": "VAL",
+      "boltz_chain": "C",
+      "boltz_residue_index": 7,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "3",
+          "7",
+          "VAL"
+        ],
+        [
+          "3",
+          "90",
+          "VAL"
+        ],
+        [
+          "C",
+          "7",
+          "VAL"
+        ],
+        [
+          "C",
+          "90",
+          "VAL"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "91",
+      "residue_name": "SER",
+      "boltz_chain": "C",
+      "boltz_residue_index": 8,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "3",
+          "8",
+          "SER"
+        ],
+        [
+          "3",
+          "91",
+          "SER"
+        ],
+        [
+          "C",
+          "8",
+          "SER"
+        ],
+        [
+          "C",
+          "91",
+          "SER"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "92",
+      "residue_name": "ALA",
+      "boltz_chain": "C",
+      "boltz_residue_index": 9,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "3",
+          "9",
+          "ALA"
+        ],
+        [
+          "3",
+          "92",
+          "ALA"
+        ],
+        [
+          "C",
+          "9",
+          "ALA"
+        ],
+        [
+          "C",
+          "92",
+          "ALA"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "93",
+      "residue_name": "ARG",
+      "boltz_chain": "C",
+      "boltz_residue_index": 10,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "3",
+          "10",
+          "ARG"
+        ],
+        [
+          "3",
+          "93",
+          "ARG"
+        ],
+        [
+          "C",
+          "10",
+          "ARG"
+        ],
+        [
+          "C",
+          "93",
+          "ARG"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "94",
+      "residue_name": "ILE",
+      "boltz_chain": "C",
+      "boltz_residue_index": 11,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "3",
+          "11",
+          "ILE"
+        ],
+        [
+          "3",
+          "94",
+          "ILE"
+        ],
+        [
+          "C",
+          "11",
+          "ILE"
+        ],
+        [
+          "C",
+          "94",
+          "ILE"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "95",
+      "residue_name": "VAL",
+      "boltz_chain": "C",
+      "boltz_residue_index": 12,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "3",
+          "12",
+          "VAL"
+        ],
+        [
+          "3",
+          "95",
+          "VAL"
+        ],
+        [
+          "C",
+          "12",
+          "VAL"
+        ],
+        [
+          "C",
+          "95",
+          "VAL"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "96",
+      "residue_name": "GLN",
+      "boltz_chain": "C",
+      "boltz_residue_index": 13,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "3",
+          "13",
+          "GLN"
+        ],
+        [
+          "3",
+          "96",
+          "GLN"
+        ],
+        [
+          "C",
+          "13",
+          "GLN"
+        ],
+        [
+          "C",
+          "96",
+          "GLN"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "97",
+      "residue_name": "VAL",
+      "boltz_chain": "C",
+      "boltz_residue_index": 14,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "3",
+          "14",
+          "VAL"
+        ],
+        [
+          "3",
+          "97",
+          "VAL"
+        ],
+        [
+          "C",
+          "14",
+          "VAL"
+        ],
+        [
+          "C",
+          "97",
+          "VAL"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "98",
+      "residue_name": "VAL",
+      "boltz_chain": "C",
+      "boltz_residue_index": 15,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "3",
+          "15",
+          "VAL"
+        ],
+        [
+          "3",
+          "98",
+          "VAL"
+        ],
+        [
+          "C",
+          "15",
+          "VAL"
+        ],
+        [
+          "C",
+          "98",
+          "VAL"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "99",
+      "residue_name": "THR",
+      "boltz_chain": "C",
+      "boltz_residue_index": 16,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "3",
+          "16",
+          "THR"
+        ],
+        [
+          "3",
+          "99",
+          "THR"
+        ],
+        [
+          "C",
+          "16",
+          "THR"
+        ],
+        [
+          "C",
+          "99",
+          "THR"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "100",
+      "residue_name": "ALA",
+      "boltz_chain": "C",
+      "boltz_residue_index": 17,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "3",
+          "17",
+          "ALA"
+        ],
+        [
+          "3",
+          "100",
+          "ALA"
+        ],
+        [
+          "C",
+          "17",
+          "ALA"
+        ],
+        [
+          "C",
+          "100",
+          "ALA"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "101",
+      "residue_name": "GLU",
+      "boltz_chain": "C",
+      "boltz_residue_index": 18,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "3",
+          "18",
+          "GLU"
+        ],
+        [
+          "3",
+          "101",
+          "GLU"
+        ],
+        [
+          "C",
+          "18",
+          "GLU"
+        ],
+        [
+          "C",
+          "101",
+          "GLU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "102",
+      "residue_name": "ALA",
+      "boltz_chain": "C",
+      "boltz_residue_index": 19,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "3",
+          "19",
+          "ALA"
+        ],
+        [
+          "3",
+          "102",
+          "ALA"
+        ],
+        [
+          "C",
+          "19",
+          "ALA"
+        ],
+        [
+          "C",
+          "102",
+          "ALA"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "103",
+      "residue_name": "VAL",
+      "boltz_chain": "C",
+      "boltz_residue_index": 20,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "3",
+          "20",
+          "VAL"
+        ],
+        [
+          "3",
+          "103",
+          "VAL"
+        ],
+        [
+          "C",
+          "20",
+          "VAL"
+        ],
+        [
+          "C",
+          "103",
+          "VAL"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "104",
+      "residue_name": "ALA",
+      "boltz_chain": "C",
+      "boltz_residue_index": 21,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "3",
+          "21",
+          "ALA"
+        ],
+        [
+          "3",
+          "104",
+          "ALA"
+        ],
+        [
+          "C",
+          "21",
+          "ALA"
+        ],
+        [
+          "C",
+          "104",
+          "ALA"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "105",
+      "residue_name": "VAL",
+      "boltz_chain": "C",
+      "boltz_residue_index": 22,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "3",
+          "22",
+          "VAL"
+        ],
+        [
+          "3",
+          "105",
+          "VAL"
+        ],
+        [
+          "C",
+          "22",
+          "VAL"
+        ],
+        [
+          "C",
+          "105",
+          "VAL"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "106",
+      "residue_name": "LEU",
+      "boltz_chain": "C",
+      "boltz_residue_index": 23,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "3",
+          "23",
+          "LEU"
+        ],
+        [
+          "3",
+          "106",
+          "LEU"
+        ],
+        [
+          "C",
+          "23",
+          "LEU"
+        ],
+        [
+          "C",
+          "106",
+          "LEU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "107",
+      "residue_name": "LYS",
+      "boltz_chain": "C",
+      "boltz_residue_index": 24,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "3",
+          "24",
+          "LYS"
+        ],
+        [
+          "3",
+          "107",
+          "LYS"
+        ],
+        [
+          "C",
+          "24",
+          "LYS"
+        ],
+        [
+          "C",
+          "107",
+          "LYS"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "108",
+      "residue_name": "GLY",
+      "boltz_chain": "C",
+      "boltz_residue_index": 25,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "3",
+          "25",
+          "GLY"
+        ],
+        [
+          "3",
+          "108",
+          "GLY"
+        ],
+        [
+          "C",
+          "25",
+          "GLY"
+        ],
+        [
+          "C",
+          "108",
+          "GLY"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "109",
+      "residue_name": "GLU",
+      "boltz_chain": "C",
+      "boltz_residue_index": 26,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "3",
+          "26",
+          "GLU"
+        ],
+        [
+          "3",
+          "109",
+          "GLU"
+        ],
+        [
+          "C",
+          "26",
+          "GLU"
+        ],
+        [
+          "C",
+          "109",
+          "GLU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "110",
+      "residue_name": "GLN",
+      "boltz_chain": "C",
+      "boltz_residue_index": 27,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "3",
+          "27",
+          "GLN"
+        ],
+        [
+          "3",
+          "110",
+          "GLN"
+        ],
+        [
+          "C",
+          "27",
+          "GLN"
+        ],
+        [
+          "C",
+          "110",
+          "GLN"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "111",
+      "residue_name": "GLU",
+      "boltz_chain": "C",
+      "boltz_residue_index": 28,
+      "source": "_Chem_comp_assembly",
+      "aliases": [
+        [
+          "3",
+          "28",
+          "GLU"
+        ],
+        [
+          "3",
+          "111",
+          "GLU"
+        ],
+        [
+          "C",
+          "28",
+          "GLU"
+        ],
+        [
+          "C",
+          "111",
+          "GLU"
+        ]
+      ],
+      "warnings": []
+    }
+  ],
+  "emitted_constraints": [],
+  "ambiguous_groups": [],
+  "rejections": [],
+  "warnings": [
+    "No _Gen_dist_constraint loop was found; producing an empty distance-constraint conversion.",
+    "No gen_dist_constraint rows matched the selected origin filter."
+  ],
+  "statistics": {
+    "restraint_groups_read": 0,
+    "source_alternatives_read": 0,
+    "safe_groups_before_pair_deduplication": 0,
+    "emitted_unique_heavy_atom_constraints": 0,
+    "ambiguous_or_groups_not_emitted": 0,
+    "rejection_records": 0,
+    "sequence_records": 132,
+    "embedded_component_topologies": 0
+  },
+  "source_restraint_groups": [],
+  "target_validation": null
+}

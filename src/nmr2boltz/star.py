@@ -231,21 +231,31 @@ def parse_star_document(
         raise StarDataError(f"Unable to parse STAR/NEF file {input_path}: {exc}") from exc
 
     categories = {_category(loop) for saveframe in entry for loop in saveframe}
+    warnings: list[str] = []
     if format_hint == "auto":
         if "nef_distance_restraint" in categories:
             detected = "nef"
         elif "gen_dist_constraint" in categories:
             detected = "nmr-star"
+        elif "nef_sequence" in categories:
+            detected = "nef"
+            warnings.append(
+                "No _nef_distance_restraint loop was found; producing an empty distance-constraint conversion."
+            )
+        elif categories & {"chem_comp_assembly", "entity_poly_seq"}:
+            detected = "nmr-star"
+            warnings.append(
+                "No _Gen_dist_constraint loop was found; producing an empty distance-constraint conversion."
+            )
         else:
             raise StarDataError(
-                "No _nef_distance_restraint or _Gen_dist_constraint loop was found."
+                "Unable to detect NEF or NMR-STAR from distance or sequence loop categories."
             )
     elif format_hint in {"nef", "nmr-star", "nmrstar"}:
         detected = "nmr-star" if format_hint in {"nmr-star", "nmrstar"} else "nef"
     else:
         raise StarDataError(f"Unsupported format hint: {format_hint}")
 
-    warnings: list[str] = []
     groups = extract_restraint_groups(
         entry,
         detected,

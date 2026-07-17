@@ -171,19 +171,26 @@ The converter itself does not silently download entries or CCD components. This 
 9. Score original restraints after hydrogen reconstruction.
 10. Report sensitivity to policy choices rather than one best-looking model.
 
-## 8. Suggested benchmark suite for future development
+## 8. Paired-format benchmark and remaining coverage
 
-A useful benchmark should span:
+The current 12-structure benchmark spans:
 
-- small proteins with dense unambiguous NOEs;
-- proteins where unguided Boltz predicts an incorrect topology;
-- methyl-rich proteins with wildcard atom sets;
-- aromatic-rich proteins with symmetry ambiguity;
-- nucleic acids using prime atom names;
-- modified residues with embedded or external CCD chemistry;
-- multichain complexes with interchain NOEs;
-- sparse/noisy lists with incorrect assignments;
-- flexible systems requiring ensembles;
-- entries with both NEF and NMR-STAR representations for round-trip comparison.
+- proteins, RNA, DNA, and a protein-DNA complex;
+- monomers, homomultimers, heterocomplexes, and interchain restraints;
+- wildcard atom sets, x/y assignments, geometric pseudoatoms, and complex logic;
+- non-one-based numbering, chain aliases, modified residues, caps, and ions;
+- partial coordinate observations and a sequence-only/no-distance negative case;
+- paired NEF and NMR-STAR representations for differential comparison.
 
-Metrics should include fold recovery, original-restraint satisfaction, stereochemical quality, diversity, robustness to wrong restraints, and the difference between OR-aware and incorrect-AND treatment.
+The benchmark showed that identical restraint-group counts do not imply
+equivalent projected contacts or bounds. Pseudoatom representation and atom-set
+multiplicity remain the dominant parity limitations. These differences must be
+reported at the physical atom-pair and bound level, not inferred from aggregate
+counts.
+
+Future additions should include intentionally corrupted inputs, independent
+author-generated files, protein-RNA complexes, sparse/noisy lists with known
+incorrect assignments, and systems selected for a blinded Boltz prediction
+comparison.
+
+Prediction-stage metrics should include fold recovery, held-out original-restraint satisfaction, stereochemical quality, diversity, robustness to wrong restraints, and the difference between OR-aware and incorrect-AND treatment.

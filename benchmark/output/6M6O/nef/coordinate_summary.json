@@ -1,0 +1,44 @@
+{
+  "pdb": "benchmark\\input\\6M6O\\6M6O.pdb",
+  "model_count": 10,
+  "tolerance_angstrom": 0.01,
+  "sequence_alignment": [
+    {
+      "boltz_chain": "A",
+      "coordinate_chain": "A",
+      "target_residues": 185,
+      "coordinate_residues": 185,
+      "aligned_residues": 185,
+      "exact_component_matches": 185,
+      "compatible_component_matches": 185,
+      "unmapped_target_residues": 0,
+      "unmapped_coordinate_residues": 0
+    }
+  ],
+  "source_restraints": {
+    "group_count": 3271,
+    "group_model_state_counts": {
+      "violated": 1413,
+      "satisfied": 31297
+    },
+    "groups_satisfied_in_any_model": 3220,
+    "groups_satisfied_in_every_model": 2962,
+    "groups_indeterminate_in_every_model": 0
+  },
+  "heavy_atom_constraints": {
+    "constraint_count": 2819,
+    "resolved_model_cases": 28190,
+    "satisfied_model_cases": 28110,
+    "violated_model_cases": 80,
+    "missing_model_cases": 0,
+    "satisfaction_fraction_of_resolved": 0.9971621142249024,
+    "constraints_resolved_in_every_model": 2819,
+    "constraints_satisfied_in_any_model": 2816,
+    "constraints_satisfied_in_every_model": 2805
+  },
+  "projection_implication_audit": {
+    "antecedent_cases": 26883,
+    "failure_count": 0,
+    "failures": []
+  }
+}

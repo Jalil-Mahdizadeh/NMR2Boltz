@@ -1,0 +1,44 @@
+{
+  "pdb": "benchmark\\input\\43JX\\43JX.pdb",
+  "model_count": 20,
+  "tolerance_angstrom": 0.01,
+  "sequence_alignment": [
+    {
+      "boltz_chain": "A",
+      "coordinate_chain": "A",
+      "target_residues": 122,
+      "coordinate_residues": 122,
+      "aligned_residues": 122,
+      "exact_component_matches": 122,
+      "compatible_component_matches": 122,
+      "unmapped_target_residues": 0,
+      "unmapped_coordinate_residues": 0
+    }
+  ],
+  "source_restraints": {
+    "group_count": 2387,
+    "group_model_state_counts": {
+      "violated": 1782,
+      "satisfied": 45958
+    },
+    "groups_satisfied_in_any_model": 2387,
+    "groups_satisfied_in_every_model": 2039,
+    "groups_indeterminate_in_every_model": 0
+  },
+  "heavy_atom_constraints": {
+    "constraint_count": 1716,
+    "resolved_model_cases": 34320,
+    "satisfied_model_cases": 34293,
+    "violated_model_cases": 27,
+    "missing_model_cases": 0,
+    "satisfaction_fraction_of_resolved": 0.9992132867132867,
+    "constraints_resolved_in_every_model": 1716,
+    "constraints_satisfied_in_any_model": 1716,
+    "constraints_satisfied_in_every_model": 1704
+  },
+  "projection_implication_audit": {
+    "antecedent_cases": 32583,
+    "failure_count": 0,
+    "failures": []
+  }
+}
