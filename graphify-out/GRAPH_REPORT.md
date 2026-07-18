@@ -1,16 +1,16 @@
-# Graph Report - nmr2boltz_toolkit  (2026-07-17)
+# Graph Report - nmr2boltz_toolkit  (2026-07-18)
 
 ## Corpus Check
-- 125 files · ~16,998,564 words
+- 126 files · ~17,120,885 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 548 nodes · 1435 edges · 30 communities (26 shown, 4 thin omitted)
-- Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 96 edges (avg confidence: 0.51)
+- 569 nodes · 1502 edges · 29 communities (25 shown, 4 thin omitted)
+- Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 101 edges (avg confidence: 0.51)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `30bff09b`
+- Built from commit: `67f094d7`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -25,7 +25,6 @@
 - [[_COMMUNITY_Community 7|Community 7]]
 - [[_COMMUNITY_Community 8|Community 8]]
 - [[_COMMUNITY_Community 9|Community 9]]
-- [[_COMMUNITY_Community 10|Community 10]]
 - [[_COMMUNITY_Community 11|Community 11]]
 - [[_COMMUNITY_Community 12|Community 12]]
 - [[_COMMUNITY_Community 13|Community 13]]
@@ -46,15 +45,15 @@
 - [[_COMMUNITY_Community 30|Community 30]]
 
 ## God Nodes (most connected - your core abstractions)
-1. `TopologyLibrary` - 57 edges
-2. `ProjectionSettings` - 47 edges
+1. `TopologyLibrary` - 58 edges
+2. `ProjectionSettings` - 48 edges
 3. `Scientific and computational method for projecting proton NMR distance restraints onto Boltz heavy-atom contacts` - 40 edges
-4. `project_document()` - 36 edges
-5. `parse_star_document()` - 34 edges
-6. `BoltzAtom` - 30 edges
-7. `ConversionReport` - 28 edges
-8. `SequenceRecord` - 24 edges
-9. `write_outputs()` - 23 edges
+4. `project_document()` - 37 edges
+5. `parse_star_document()` - 35 edges
+6. `BoltzAtom` - 32 edges
+7. `ConversionReport` - 31 edges
+8. `write_outputs()` - 30 edges
+9. `SequenceRecord` - 24 edges
 10. `ComponentTopology` - 23 edges
 
 ## Surprising Connections (you probably didn't know these)
@@ -64,19 +63,19 @@
   tests/test_robustness.py → src/nmr2boltz/star.py
 - `_StarLoop` --uses--> `StarDataError`  [INFERRED]
   tests/test_robustness.py → src/nmr2boltz/star.py
-- `test_compressed_nef_input()` --calls--> `parse_star_document()`  [EXTRACTED]
-  tests/test_logic.py → src/nmr2boltz/star.py
 - `_Saveframe` --uses--> `TopologyResolutionError`  [INFERRED]
+  tests/test_robustness.py → src/nmr2boltz/topology.py
+- `_StarLoop` --uses--> `TopologyResolutionError`  [INFERRED]
   tests/test_robustness.py → src/nmr2boltz/topology.py
 
 ## Import Cycles
 - None detected.
 
-## Communities (30 total, 4 thin omitted)
+## Communities (29 total, 4 thin omitted)
 
 ### Community 0 - "Community 0"
-Cohesion: 0.14
-Nodes (33): project_document(), ProjectionSettings, parse_star_document(), TopologyLibrary, convert(), test_embedded_custom_component_topology(), test_missing_upper_can_be_derived_only_by_explicit_policy(), test_nef_projection_and_ambiguity() (+25 more)
+Cohesion: 0.09
+Nodes (52): list, Rejection, _averaging_factor(), _canonical_pair(), _merge_independent_constraints(), _merge_or_alternatives(), project_document(), _project_group() (+44 more)
 
 ### Community 1 - "Community 1"
 Cohesion: 0.14
@@ -87,24 +86,24 @@ Cohesion: 0.05
 Nodes (36): 10.1 Safe default, 10.2 Union-aware potential, 10.3 Assignment hypotheses, 10. Ambiguous groups and recommended execution strategies, 12. Suggested confidence tiers, 14. Reproducibility and auditability, 15. Questions for NMR expert review before production deployment, 16. Primary specifications and references (+28 more)
 
 ### Community 3 - "Community 3"
-Cohesion: 0.08
-Nodes (49): list, Conservative NMR distance-restraint projection for Boltz atom contacts., AmbiguousGroup, BoltzAtom, ConversionReport, EmittedConstraint, ProjectedAlternative, Rejection (+41 more)
+Cohesion: 0.10
+Nodes (45): Decimal, float, Conservative NMR distance-restraint projection for Boltz atom contacts., AmbiguousGroup, BoltzAtom, ConversionReport, EmittedConstraint, ProjectedAlternative (+37 more)
 
 ### Community 4 - "Community 4"
 Cohesion: 0.32
 Nodes (13): Random, _add(), _distance(), main(), _projected(), Deterministic mathematical and converter stress validation for nmr2boltz.  This, _unit_vector(), validate_boolean_merge_order() (+5 more)
 
 ### Community 5 - "Community 5"
-Cohesion: 0.12
-Nodes (21): AtomChoice, AtomSetChoice, AtomTopologyValidationError, AtomTopologyViolation, build_builtin_topologies(), _compile_atom_pattern(), component_topology_snapshot(), ComponentTopology (+13 more)
+Cohesion: 0.11
+Nodes (25): AtomChoice, AtomSetChoice, atom_topology_violations(), AtomTopologyValidationError, AtomTopologyViolation, build_builtin_topologies(), _compile_atom_pattern(), component_topology_snapshot() (+17 more)
 
 ### Community 6 - "Community 6"
-Cohesion: 0.20
-Nodes (26): as_float(), clean(), Endpoint, Return a stripped STAR value or ``None`` for STAR null tokens., RawAlternative, RestraintGroup, SequenceRecord, _category() (+18 more)
+Cohesion: 0.15
+Nodes (37): as_float(), clean(), Endpoint, Return a stripped STAR value or ``None`` for STAR null tokens., RawAlternative, RestraintGroup, SequenceRecord, _category() (+29 more)
 
 ### Community 7 - "Community 7"
-Cohesion: 0.12
-Nodes (24): ArgumentParser, Namespace, build_parser(), command_benchmark(), command_convert(), main(), parse_chain_map(), load_boltz_target() (+16 more)
+Cohesion: 0.08
+Nodes (46): ArgumentParser, Namespace, BenchmarkCaseResult, BenchmarkManifestError, BenchmarkRunResult, _bool_option(), _case_metrics(), _expected_metrics() (+38 more)
 
 ### Community 8 - "Community 8"
 Cohesion: 0.09
@@ -113,10 +112,6 @@ Nodes (22): 1. Data sources reviewed, 2. NEF-to-NMR-STAR field correspondence us
 ### Community 9 - "Community 9"
 Cohesion: 0.11
 Nodes (17): Batch hypothesis fallback, Critical token-conditioning rule, Design proposal: ambiguity-aware `atom_contact_union` constraints in BoltzUI/Boltz-2, End-to-end tests, Energy tests, Feature tests, Multiple thresholds and duplicate parents, Optional weights (+9 more)
-
-### Community 10 - "Community 10"
-Cohesion: 0.44
-Nodes (11): emitted_atom_topology_violations(), _document(), _project(), test_available_modified_ligand_and_ion_topology_emits(), test_deposited_corpus_atom_defects_are_quarantined(), test_final_output_validator_fails_before_writing_invalid_yaml(), test_glutamine_zinc_atom_is_quarantined_with_complete_provenance(), test_protein_residue_rejects_projected_nucleotide_atoms() (+3 more)
 
 ### Community 11 - "Community 11"
 Cohesion: 0.10
@@ -144,7 +139,7 @@ Nodes (7): generated, hypotheses, requested, seed, skipped_groups_without_boltz_
 
 ### Community 17 - "Community 17"
 Cohesion: 0.33
-Nodes (5): Ambiguous restraints, BoltzUI integration guide, Current patched schema, Recommended run protocol, Residue numbering
+Nodes (5): Ambiguous restraints, BoltzUI integration guide, Exact-contact schema, Recommended run protocol, Residue numbering
 
 ### Community 18 - "Community 18"
 Cohesion: 0.29
@@ -171,8 +166,8 @@ Cohesion: 0.40
 Nodes (4): Current result, Fail-closed gate, nmr2boltz paired-format benchmark, Row-level format discrepancy audit
 
 ### Community 30 - "Community 30"
-Cohesion: 0.06
-Nodes (93): Any, BenchmarkCaseResult, BenchmarkManifestError, BenchmarkRunResult, _bool_option(), _case_metrics(), _expected_metrics(), _file_spec() (+85 more)
+Cohesion: 0.07
+Nodes (71): Any, _parse_entry_file(), Path, _alternative(), _endpoint(), _gate_run(), _report(), _semantic() (+63 more)
 
 ## Knowledge Gaps
 - **147 isolated node(s):** `nmr2boltz`, `warning`, `seed`, `requested`, `generated` (+142 more)
@@ -182,17 +177,17 @@ Nodes (93): Any, BenchmarkCaseResult, BenchmarkManifestError, BenchmarkRunResult
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `TopologyLibrary` connect `Community 0` to `Community 1`, `Community 3`, `Community 4`, `Community 5`, `Community 6`, `Community 7`, `Community 10`, `Community 30`?**
+- **Why does `TopologyLibrary` connect `Community 0` to `Community 1`, `Community 3`, `Community 4`, `Community 5`, `Community 6`, `Community 7`, `Community 30`?**
   _High betweenness centrality (0.053) - this node is a cross-community bridge._
-- **Why does `project_document()` connect `Community 0` to `Community 3`, `Community 5`, `Community 6`, `Community 7`, `Community 10`, `Community 30`?**
-  _High betweenness centrality (0.024) - this node is a cross-community bridge._
-- **Why does `BoltzAtom` connect `Community 3` to `Community 0`, `Community 4`, `Community 5`, `Community 6`, `Community 7`, `Community 10`, `Community 30`?**
+- **Why does `BoltzAtom` connect `Community 3` to `Community 0`, `Community 4`, `Community 5`, `Community 6`, `Community 7`?**
+  _High betweenness centrality (0.025) - this node is a cross-community bridge._
+- **Why does `project_document()` connect `Community 0` to `Community 3`, `Community 5`, `Community 6`, `Community 7`, `Community 30`?**
   _High betweenness centrality (0.023) - this node is a cross-community bridge._
 - **Are the 13 inferred relationships involving `TopologyLibrary` (e.g. with `BenchmarkCaseResult` and `BenchmarkManifestError`) actually correct?**
   _`TopologyLibrary` has 13 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 18 inferred relationships involving `ProjectionSettings` (e.g. with `BenchmarkCaseResult` and `BenchmarkManifestError`) actually correct?**
   _`ProjectionSettings` has 18 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `nmr2boltz`, `Conservative NMR distance-restraint projection for Boltz atom contacts.`, `Raised when a benchmark manifest does not satisfy the versioned schema.` to the rest of the system?**
-  _171 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _174 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
-  _Cohesion score 0.13630229419703105 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08644067796610169 - nodes in this community are weakly interconnected._

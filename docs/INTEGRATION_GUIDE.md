@@ -1,23 +1,28 @@
 # BoltzUI integration guide
 
-## Current patched schema
+## Exact-contact schema
 
-The converter's `boltz_constraints.yaml` contains only independent, unambiguous heavy-atom contacts that the present BoltzUI patch can represent:
+The converter's `atom_constraints_exact.yaml` contains only independent,
+unambiguous heavy-atom contacts:
 
 ```yaml
 constraints:
-  - atom_contact:
-      atom1: [A, 12, CB]
-      atom2: [A, 44, CG1]
-      max_distance: 6.72
-      force: true
+- atom_contact:
+    atom1: [A, 12, CB]
+    atom2: [A, 44, CG1]
+    max_distance: 6.720000
+    force: true
 ```
 
 Run Boltz 2 with inference potentials enabled. Keep the converter's JSON audit beside every prediction so that chain and residue mapping, atom expansion, bound calculation, merge decisions, and omissions remain reviewable.
 
 ## Ambiguous restraints
 
-`proposed_atom_contact_unions.yaml` preserves alternatives under a shared OR group. It is not accepted by the current patch; it is the recommended input to the extension described in `BOLTZUI_UNION_EXTENSION.md`.
+`atom_constraints_union.yaml` contains only `atom_contact_union` groups. Each
+alternative retains its own upper bound, and the file deliberately contains no
+provenance metadata. A consumer must implement the alternatives as one OR
+potential; see `BOLTZUI_UNION_EXTENSION.md`. The complete source provenance
+remains in `conversion_report.json` and `ambiguous_groups.tsv`.
 
 `hypotheses/`, when requested, provides one or more ordinary current-schema YAML files. Each file chooses one branch per ambiguous group. These are alternative calculations, not restraints to combine in one run. Rank or filter the resulting structures against the original proton-level restraints after adding hydrogens.
 

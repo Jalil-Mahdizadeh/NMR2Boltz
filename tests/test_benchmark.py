@@ -61,6 +61,10 @@ def test_benchmark_manifest_runs_conversion_and_writes_auditable_summary(tmp_pat
     assert run.passed == 1
     assert run.failed == 0
     assert (output / "fixture-nef" / "conversion_report.json").is_file()
+    assert (output / "fixture-nef" / "atom_constraints_exact.yaml").is_file()
+    assert (output / "fixture-nef" / "atom_constraints_union.yaml").is_file()
+    assert not (output / "fixture-nef" / "boltz_constraints.yaml").exists()
+    assert not (output / "fixture-nef" / "proposed_atom_contact_unions.yaml").exists()
     summary = json.loads((output / "benchmark_summary.json").read_text(encoding="utf-8"))
     assert summary["status"] == "pass"
     assert summary["cases"][0]["metrics"]["emitted_constraints"] > 0
@@ -68,7 +72,7 @@ def test_benchmark_manifest_runs_conversion_and_writes_auditable_summary(tmp_pat
 
 def test_benchmark_checksum_mismatch_is_recorded_as_case_failure(tmp_path):
     manifest = _manifest(tmp_path, "0" * 64)
-    stale = tmp_path / "results" / "fixture-nef" / "boltz_constraints.yaml"
+    stale = tmp_path / "results" / "fixture-nef" / "atom_constraints_exact.yaml"
     stale.parent.mkdir(parents=True)
     stale.write_text("stale executable output\n", encoding="utf-8")
 

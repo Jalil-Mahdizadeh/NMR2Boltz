@@ -119,7 +119,9 @@ A non-null combination identifier may encode logic across several restraint IDs.
 
 **Problems:** the parser/schema and token-conditioning path need changes; union sharpness requires calibration.
 
-**Decision:** recommended BoltzUI extension. A proposed schema is emitted separately.
+**Decision:** recommended BoltzUI extension. The minimal metadata-free
+`atom_contact_union` schema is emitted separately in
+`atom_constraints_union.yaml`; full provenance remains in the audit outputs.
 
 ## 4.7 Full Bayesian restraint model
 

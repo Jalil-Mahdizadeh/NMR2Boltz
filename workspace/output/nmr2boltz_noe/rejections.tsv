@@ -1,38 +1,38 @@
-group_id	reason	details	row_ids	endpoint
-XPLOR-NIH/CNS_distance_restraints_4:198	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	211	
-XPLOR-NIH/CNS_distance_restraints_4:218	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	266	
-XPLOR-NIH/CNS_distance_restraints_4:220	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	273	
-XPLOR-NIH/CNS_distance_restraints_4:223	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	280	
-XPLOR-NIH/CNS_distance_restraints_4:255	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	373	
-XPLOR-NIH/CNS_distance_restraints_4:256	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	374	
-XPLOR-NIH/CNS_distance_restraints_4:259	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	377	
-XPLOR-NIH/CNS_distance_restraints_4:266	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	392	
-XPLOR-NIH/CNS_distance_restraints_4:272	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	401	
-XPLOR-NIH/CNS_distance_restraints_4:274	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	403	
-XPLOR-NIH/CNS_distance_restraints_4:282	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	417	
-XPLOR-NIH/CNS_distance_restraints_4:288	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	437	
-XPLOR-NIH/CNS_distance_restraints_4:297	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	472	
-XPLOR-NIH/CNS_distance_restraints_4:312	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	515	
-XPLOR-NIH/CNS_distance_restraints_4:321	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	547	
-XPLOR-NIH/CNS_distance_restraints_4:324	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	550	
-XPLOR-NIH/CNS_distance_restraints_4:333	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	573	
-XPLOR-NIH/CNS_distance_restraints_4:338	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	588	
-XPLOR-NIH/CNS_distance_restraints_4:344	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	602	
-XPLOR-NIH/CNS_distance_restraints_4:367	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	655	
-XPLOR-NIH/CNS_distance_restraints_4:545	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	1017	
-XPLOR-NIH/CNS_distance_restraints_4:548	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	1020	
-XPLOR-NIH/CNS_distance_restraints_4:558	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	1043	
-XPLOR-NIH/CNS_distance_restraints_4:559	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	1044	
-XPLOR-NIH/CNS_distance_restraints_4:573	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	1074	
-XPLOR-NIH/CNS_distance_restraints_4:585	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	1110	
-XPLOR-NIH/CNS_distance_restraints_4:623	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	1207	
-XPLOR-NIH/CNS_distance_restraints_4:631	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	1227	
-XPLOR-NIH/CNS_distance_restraints_4:634	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	1230	
-XPLOR-NIH/CNS_distance_restraints_4:697	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	1386	
-XPLOR-NIH/CNS_distance_restraints_4:774	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	1515	
-XPLOR-NIH/CNS_distance_restraints_4:849	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	1655	
-XPLOR-NIH/CNS_distance_restraints_4:861	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	1681	
-XPLOR-NIH/CNS_distance_restraints_4:890	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	1764	
-XPLOR-NIH/CNS_distance_restraints_4:1565	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	3410	
-XPLOR-NIH/CNS_distance_restraints_4:1584	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	3465	
-XPLOR-NIH/CNS_distance_restraints_4:1712	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	3803	
+group_id	reason	details	row_ids	endpoint	provenance_json
+XPLOR-NIH/CNS_distance_restraints_4:198	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	211		{}
+XPLOR-NIH/CNS_distance_restraints_4:218	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	266		{}
+XPLOR-NIH/CNS_distance_restraints_4:220	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	273		{}
+XPLOR-NIH/CNS_distance_restraints_4:223	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	280		{}
+XPLOR-NIH/CNS_distance_restraints_4:255	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	373		{}
+XPLOR-NIH/CNS_distance_restraints_4:256	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	374		{}
+XPLOR-NIH/CNS_distance_restraints_4:259	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	377		{}
+XPLOR-NIH/CNS_distance_restraints_4:266	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	392		{}
+XPLOR-NIH/CNS_distance_restraints_4:272	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	401		{}
+XPLOR-NIH/CNS_distance_restraints_4:274	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	403		{}
+XPLOR-NIH/CNS_distance_restraints_4:282	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	417		{}
+XPLOR-NIH/CNS_distance_restraints_4:288	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	437		{}
+XPLOR-NIH/CNS_distance_restraints_4:297	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	472		{}
+XPLOR-NIH/CNS_distance_restraints_4:312	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	515		{}
+XPLOR-NIH/CNS_distance_restraints_4:321	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	547		{}
+XPLOR-NIH/CNS_distance_restraints_4:324	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	550		{}
+XPLOR-NIH/CNS_distance_restraints_4:333	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	573		{}
+XPLOR-NIH/CNS_distance_restraints_4:338	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	588		{}
+XPLOR-NIH/CNS_distance_restraints_4:344	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	602		{}
+XPLOR-NIH/CNS_distance_restraints_4:367	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	655		{}
+XPLOR-NIH/CNS_distance_restraints_4:545	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	1017		{}
+XPLOR-NIH/CNS_distance_restraints_4:548	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	1020		{}
+XPLOR-NIH/CNS_distance_restraints_4:558	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	1043		{}
+XPLOR-NIH/CNS_distance_restraints_4:559	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	1044		{}
+XPLOR-NIH/CNS_distance_restraints_4:573	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	1074		{}
+XPLOR-NIH/CNS_distance_restraints_4:585	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	1110		{}
+XPLOR-NIH/CNS_distance_restraints_4:623	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	1207		{}
+XPLOR-NIH/CNS_distance_restraints_4:631	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	1227		{}
+XPLOR-NIH/CNS_distance_restraints_4:634	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	1230		{}
+XPLOR-NIH/CNS_distance_restraints_4:697	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	1386		{}
+XPLOR-NIH/CNS_distance_restraints_4:774	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	1515		{}
+XPLOR-NIH/CNS_distance_restraints_4:849	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	1655		{}
+XPLOR-NIH/CNS_distance_restraints_4:861	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	1681		{}
+XPLOR-NIH/CNS_distance_restraints_4:890	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	1764		{}
+XPLOR-NIH/CNS_distance_restraints_4:1565	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	3410		{}
+XPLOR-NIH/CNS_distance_restraints_4:1584	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	3465		{}
+XPLOR-NIH/CNS_distance_restraints_4:1712	same_heavy_parent_atom	Every expanded nucleus pair maps to the same heavy atom, which Boltz cannot use as an atom-contact pair.	3803		{}

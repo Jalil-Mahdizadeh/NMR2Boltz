@@ -203,7 +203,9 @@ def test_rejection_provenance_and_yaml_atom_membership_are_deterministic(tmp_pat
     )
     report = _project(good)
     write_outputs(report, tmp_path / "valid")
-    payload = yaml.safe_load((tmp_path / "valid" / "boltz_constraints.yaml").read_text())
+    payload = yaml.safe_load(
+        (tmp_path / "valid" / "atom_constraints_exact.yaml").read_text()
+    )
     assert payload["constraints"][0]["atom_contact"]["atom1"] == ["A", 1, "CB"]
     assert emitted_atom_topology_violations(report) == []
 

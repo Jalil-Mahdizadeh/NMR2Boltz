@@ -1,11 +1,11 @@
 # Validation status
 
 Status: PASS WITH EXACT REVIEWED CORPUS LIMITATIONS
-Date: 2026-07-17
+Date: 2026-07-18
 
 ## Regression and stress validation
 
-- 73 Pytest tests passed.
+- 79 Pytest tests passed.
 - 100,000 randomized sum-r6 implication cases passed.
 - 100,000 constructive triangle-inequality cases passed.
 - 25,000 outward-rounding cases passed.
@@ -25,7 +25,10 @@ Date: 2026-07-17
   `parser_projection_bug` gate path.
 - Both projected endpoints are checked against the mapped standard or declared
   CCD component before deduplication, and the output writer independently
-  validates every emitted endpoint against the frozen target-topology snapshot.
+  validates every exact and union endpoint against the frozen target-topology
+  snapshot.
+- Exact and ambiguous constraints are serialized into separate metadata-free
+  files, with deterministic ordering and conservative six-decimal formatting.
 - Invalid contacts are quarantined deterministically with source rows, mapped
   residue/component identity, atom, restraint group, and original bounds;
   coordinate absence is not used as topology evidence.
@@ -67,17 +70,17 @@ predictive accuracy of a GPU Boltz folding campaign.
 
 - Image: `nmr2boltz:0.1.0-validated`
 - Image ID / repository digest:
-  `sha256:436b22af4f57d4960d2a0523a64b49d1d99b57be3eac95683a17504ab2c6d853`
+  `sha256:e1b8da2544111093b21f952077c9a601233d46d618c9b390b7f9ae4b835d7dc2`
 - Reported size: 243 MB; default user: `65532:65532`; other nmr2boltz images: 0.
 - An offline (`--network none`), read-only-root smoke test ran as UID/GID
   `65532:65532` and proved the standard GLN/LEU/TRP invalid-atom exclusions
   alongside valid adenine N6 and guanine O6 membership.
-- An offline, read-only-root 6M6O NMR-STAR conversion emitted 2,877 contacts,
-  7 quarantined OR groups, and 37 rejections. Its
+- An offline, read-only-root 6M6O NMR-STAR conversion emitted 2,877 exact
+  contacts, 7 atom-contact union groups, and 37 rejections. Its
   `heavy_atom_constraints.tsv` and `rejections.tsv` were byte-identical to the
   committed benchmark artifacts (SHA-256
   `ea1b6f17490457f860de36ae4a3854604c9ff8e7ad974da88c6004b3589b989a`
   and `16a0616e27ee91eab290c00f61f2aa084980492ca6411f7aa7aaae44eb809f2d`).
 - An offline, read-only-root 9CCH NEF conversion emitted 3,350 contacts,
   quarantined exactly 8 GLN B48/ZN rows, and wrote zero matching invalid atoms
-  to `boltz_constraints.yaml`.
+  to `atom_constraints_exact.yaml` or `atom_constraints_union.yaml`.

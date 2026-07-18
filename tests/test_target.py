@@ -102,7 +102,8 @@ def test_convert_does_not_write_constraints_when_target_validation_fails(tmp_pat
     )
 
     assert status == 2
-    assert not (output / "boltz_constraints.yaml").exists()
+    assert not (output / "atom_constraints_exact.yaml").exists()
+    assert not (output / "atom_constraints_union.yaml").exists()
 
 
 @pytest.mark.parametrize(

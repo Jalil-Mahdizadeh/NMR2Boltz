@@ -117,9 +117,11 @@ def test_embedded_custom_component_topology():
 def test_output_bundle(tmp_path):
     report = convert("example.nef")
     paths = write_outputs(report, tmp_path, hypothesis_count=3, random_seed=7)
-    assert (tmp_path / "boltz_constraints.yaml").is_file()
+    assert (tmp_path / "atom_constraints_exact.yaml").is_file()
     assert (tmp_path / "conversion_report.json").is_file()
-    assert (tmp_path / "proposed_atom_contact_unions.yaml").is_file()
+    assert (tmp_path / "atom_constraints_union.yaml").is_file()
+    assert not (tmp_path / "boltz_constraints.yaml").exists()
+    assert not (tmp_path / "proposed_atom_contact_unions.yaml").exists()
     assert (tmp_path / "sequences.fasta").read_text(encoding="utf-8") == ">A\nVAYLG\n"
     assert (tmp_path / "hypotheses" / "manifest.json").is_file()
     assert len(paths) >= 10

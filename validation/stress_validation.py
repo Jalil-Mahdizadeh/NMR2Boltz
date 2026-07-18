@@ -175,7 +175,9 @@ def validate_end_to_end() -> dict[str, int]:
         assert relative_files
         for relative in relative_files:
             assert (first / relative).read_bytes() == (second / relative).read_bytes()
-        payload = yaml.safe_load((first / "boltz_constraints.yaml").read_text(encoding="utf-8"))
+        payload = yaml.safe_load(
+            (first / "atom_constraints_exact.yaml").read_text(encoding="utf-8")
+        )
         for wrapped in payload["constraints"]:
             contact = wrapped["atom_contact"]
             assert contact["force"] is True

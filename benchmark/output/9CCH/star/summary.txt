@@ -5,14 +5,14 @@ Detected format: nmr-star
 Restraint groups read: 7065
 Source alternatives read: 8981
 Safe groups before pair deduplication: 5200
-Unique Boltz constraints emitted: 3516
-Ambiguous OR groups quarantined: 75
+Exact atom constraints emitted: 3516
+Atom-contact union groups emitted: 75
 Rejection records: 1790
 
 Important:
-- boltz_constraints.yaml contains only constraints that may be imposed simultaneously.
-- ambiguous_groups.tsv preserves true OR alternatives; adding all of them would overconstrain the model.
-- proposed_atom_contact_unions.yaml is a proposed schema, not accepted by the current BoltzUI parser.
+- atom_constraints_exact.yaml contains only non-ambiguous contacts.
+- atom_constraints_union.yaml contains only ambiguous OR groups with per-alternative bounds.
+- ambiguous_groups.tsv preserves the full audit metadata for those OR alternatives.
 - conversion_report.json is the lossless audit/provenance record.
 - sequences.fasta contains polymer-only sequences extracted from the source sequence map.
 

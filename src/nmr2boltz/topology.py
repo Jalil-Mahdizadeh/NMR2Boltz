@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import itertools
 import json
 import math
 import re
@@ -647,9 +648,48 @@ def emitted_atom_topology_violations(report: ConversionReport) -> list[AtomTopol
     )
 
 
+def output_atom_topology_violations(report: ConversionReport) -> list[AtomTopologyViolation]:
+    """Validate every atom that can be written to an executable constraint file."""
+    mapped = mapped_residue_index(report.sequence_map)
+    return atom_topology_violations(
+        itertools.chain(
+            (
+                atom
+                for constraint in report.emitted_constraints
+                for atom in (constraint.atom1, constraint.atom2)
+            ),
+            (
+                atom
+                for group in report.ambiguous_groups
+                for alternative in group.alternatives
+                for atom in (alternative.atom1, alternative.atom2)
+            ),
+        ),
+        mapped_residues=mapped,
+        component_topologies=report.target_component_topologies,
+    )
+
+
 def require_valid_emitted_atom_topology(report: ConversionReport) -> None:
     """Fail before executable YAML can contain an unproven atom."""
     violations = emitted_atom_topology_violations(report)
+    if not violations:
+        return
+    details = "; ".join(
+        f"{item.atom.display()} mapped to {item.residue_name or '?'} ({item.reason})"
+        for item in violations[:20]
+    )
+    remainder = len(violations) - 20
+    if remainder > 0:
+        details += f"; and {remainder} additional violation(s)"
+    raise AtomTopologyValidationError(
+        "Executable atom-contact topology validation failed: " + details
+    )
+
+
+def require_valid_output_atom_topology(report: ConversionReport) -> None:
+    """Fail before either exact or union output can contain an unproven atom."""
+    violations = output_atom_topology_violations(report)
     if not violations:
         return
     details = "; ".join(

@@ -20,11 +20,20 @@ from .model import (
     EmittedConstraint,
     ProjectedAlternative,
 )
-from .topology import require_valid_emitted_atom_topology
+from .topology import require_valid_output_atom_topology
 
 
 class FlowList(list):
     pass
+
+
+class SixDecimalFloat(float):
+    """A YAML float carrying its conservative, fixed-width decimal spelling."""
+
+    def __new__(cls, value: Decimal) -> SixDecimalFloat:
+        instance = float.__new__(cls, value)
+        instance.yaml_text = format(value, ".6f")
+        return instance
 
 
 class BoltzYamlDumper(yaml.SafeDumper):
@@ -35,15 +44,30 @@ def _flow_list_representer(dumper: yaml.SafeDumper, data: FlowList) -> yaml.Node
     return dumper.represent_sequence("tag:yaml.org,2002:seq", data, flow_style=True)
 
 
+def _six_decimal_float_representer(
+    dumper: yaml.SafeDumper, data: SixDecimalFloat
+) -> yaml.Node:
+    return dumper.represent_scalar("tag:yaml.org,2002:float", data.yaml_text)
+
+
 BoltzYamlDumper.add_representer(FlowList, _flow_list_representer)
+BoltzYamlDumper.add_representer(SixDecimalFloat, _six_decimal_float_representer)
 
 
 def _atom_list(atom: BoltzAtom) -> FlowList:
     return FlowList([atom.chain, atom.residue_index, atom.atom_name])
 
 
+def _outward_decimal(value: float) -> Decimal:
+    return Decimal(str(value)).quantize(Decimal("0.000001"), rounding=ROUND_CEILING)
+
+
 def _rounded(value: float) -> float:
-    return float(Decimal(str(value)).quantize(Decimal("0.000001"), rounding=ROUND_CEILING))
+    return float(_outward_decimal(value))
+
+
+def _yaml_distance(value: float) -> SixDecimalFloat:
+    return SixDecimalFloat(_outward_decimal(value))
 
 
 def _constraint_payload(constraints: Iterable[EmittedConstraint]) -> dict[str, Any]:
@@ -53,7 +77,7 @@ def _constraint_payload(constraints: Iterable[EmittedConstraint]) -> dict[str, A
                 "atom_contact": {
                     "atom1": _atom_list(item.atom1),
                     "atom2": _atom_list(item.atom2),
-                    "max_distance": _rounded(item.max_distance),
+                    "max_distance": _yaml_distance(item.max_distance),
                     "force": True,
                 }
             }
@@ -82,9 +106,11 @@ def write_outputs(
 ) -> list[Path]:
     # Independent final invariant: fail before creating the output directory or
     # writing audit/YAML files if any executable atom lacks topology evidence.
-    require_valid_emitted_atom_topology(report)
+    require_valid_output_atom_topology(report)
     output = Path(output_dir)
     output.mkdir(parents=True, exist_ok=True)
+    for obsolete_name in ("boltz_constraints.yaml", "proposed_atom_contact_unions.yaml"):
+        (output / obsolete_name).unlink(missing_ok=True)
     written: list[Path] = []
 
     report_path = output / "conversion_report.json"
@@ -94,13 +120,9 @@ def write_outputs(
     )
     written.append(report_path)
 
-    yaml_path = output / "boltz_constraints.yaml"
-    yaml_header = (
-        "# Conservative heavy-atom constraints safe to use as simultaneous (AND) Boltz contacts.\n"
-        "# Merge the `constraints` list into the Boltz input YAML and run Boltz-2 with potentials enabled.\n"
-    )
+    yaml_path = output / "atom_constraints_exact.yaml"
     yaml_path.write_text(
-        yaml_header + _dump_yaml(_constraint_payload(report.emitted_constraints)),
+        _dump_yaml(_constraint_payload(report.emitted_constraints)),
         encoding="utf-8",
     )
     written.append(yaml_path)
@@ -244,19 +266,23 @@ def write_outputs(
     )
     written.append(rejection_path)
 
-    union_path = output / "proposed_atom_contact_unions.yaml"
+    union_path = output / "atom_constraints_union.yaml"
     union_payload = {
-        "x_nmr2boltz_schema": "proposed-atom-contact-union-v1",
-        "compatible_with_current_boltzui_atom_contact_parser": False,
-        "note": (
-            "Each item is one OR group. Implement as a shared union index in the Boltz distance "
-            "potential; do not mark every alternative as a simultaneous token contact."
-        ),
-        "constraints": [_union_payload(group) for group in report.ambiguous_groups],
+        "constraints": [
+            _union_payload(group)
+            for group in sorted(
+                report.ambiguous_groups,
+                key=lambda item: (
+                    item.group_id,
+                    item.restraint_id,
+                    item.list_name,
+                    item.source_format,
+                ),
+            )
+        ]
     }
     union_path.write_text(
-        "# PROPOSED schema for preserving assignment ambiguity; not accepted by the current BoltzUI parser.\n"
-        + _dump_yaml(union_payload),
+        _dump_yaml(union_payload),
         encoding="utf-8",
     )
     written.append(union_path)
@@ -281,18 +307,24 @@ def write_outputs(
 
 
 def _union_payload(group: AmbiguousGroup) -> dict[str, Any]:
+    alternatives = sorted(
+        group.alternatives,
+        key=lambda item: (
+            item.pair_key[0],
+            item.pair_key[1],
+            item.max_distance,
+            tuple(item.source_rows),
+        ),
+    )
     return {
         "atom_contact_union": {
-            "group_id": group.group_id,
-            "restraint_id": group.restraint_id,
             "alternatives": [
                 {
-                    "atom1": _atom_list(alternative.atom1),
-                    "atom2": _atom_list(alternative.atom2),
-                    "max_distance": _rounded(alternative.max_distance),
-                    "source_rows": alternative.source_rows,
+                    "atom1": _atom_list(alternative.pair_key[0]),
+                    "atom2": _atom_list(alternative.pair_key[1]),
+                    "max_distance": _yaml_distance(alternative.max_distance),
                 }
-                for alternative in group.alternatives
+                for alternative in alternatives
             ],
             "force": True,
         }
@@ -495,14 +527,14 @@ def _summary_text(report: ConversionReport) -> str:
         f"Restraint groups read: {stats.get('restraint_groups_read', 0)}",
         f"Source alternatives read: {stats.get('source_alternatives_read', 0)}",
         f"Safe groups before pair deduplication: {stats.get('safe_groups_before_pair_deduplication', 0)}",
-        f"Unique Boltz constraints emitted: {stats.get('emitted_unique_heavy_atom_constraints', 0)}",
-        f"Ambiguous OR groups quarantined: {stats.get('ambiguous_or_groups_not_emitted', 0)}",
+        f"Exact atom constraints emitted: {stats.get('emitted_unique_heavy_atom_constraints', 0)}",
+        f"Atom-contact union groups emitted: {stats.get('ambiguous_or_groups_not_emitted', 0)}",
         f"Rejection records: {stats.get('rejection_records', 0)}",
         "",
         "Important:",
-        "- boltz_constraints.yaml contains only constraints that may be imposed simultaneously.",
-        "- ambiguous_groups.tsv preserves true OR alternatives; adding all of them would overconstrain the model.",
-        "- proposed_atom_contact_unions.yaml is a proposed schema, not accepted by the current BoltzUI parser.",
+        "- atom_constraints_exact.yaml contains only non-ambiguous contacts.",
+        "- atom_constraints_union.yaml contains only ambiguous OR groups with per-alternative bounds.",
+        "- ambiguous_groups.tsv preserves the full audit metadata for those OR alternatives.",
         "- conversion_report.json is the lossless audit/provenance record.",
         "- sequences.fasta contains polymer-only sequences extracted from the source sequence map.",
         "",

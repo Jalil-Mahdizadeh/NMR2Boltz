@@ -158,14 +158,14 @@ python validation/benchmark_corpus.py benchmark/input \
 
 | File | Purpose |
 |---|---|
-| `boltz_constraints.yaml` | Safe, unambiguous constraints that may be inserted together under the Boltz YAML `constraints` key. |
+| `atom_constraints_exact.yaml` | Non-ambiguous `atom_contact` constraints only. |
+| `atom_constraints_union.yaml` | Ambiguous OR groups only, as metadata-free `atom_contact_union` constraints with one bound per alternative. |
 | `heavy_atom_constraints.tsv` | Tabular `[X-Y: d]` result with Boltz chain, residue index, atom name, and bound. |
 | `heavy_atom_constraints.txt` | Compact human-readable `[A:17:N -- A:42:CB : 6.20]` form. |
 | `conversion_report.json` | Full machine-readable provenance, component-topology snapshot, formula terms, settings, warnings, ambiguity, and rejections. |
 | `sequence_map.tsv` | Source identifier to Boltz residue-index mapping. This should be manually checked. |
 | `sequences.fasta` | Clean polymer-only sequences extracted from the source mapping; caps, ions, and other non-polymers are omitted. |
-| `ambiguous_groups.tsv` | OR alternatives that were not emitted as simultaneous constraints. |
-| `proposed_atom_contact_unions.yaml` | Proposed union-aware schema for a future BoltzUI extension; not accepted by the current parser. |
+| `ambiguous_groups.tsv` | Full audit metadata for the OR alternatives emitted in the union file. |
 | `rejections.tsv` | Every restraint or group that could not be converted safely, with a reason and deterministic JSON provenance. |
 | `summary.txt` | Concise run summary. |
 | `hypotheses/*.yaml` | Optional assignment hypotheses generated with `--hypotheses N`. Each selects one alternative per ambiguous group. |
@@ -176,11 +176,11 @@ The emitted YAML has the form:
 
 ```yaml
 constraints:
-  - atom_contact:
-      atom1: [A, 17, CG1]
-      atom2: [A, 42, CB]
-      max_distance: 8.009
-      force: true
+- atom_contact:
+    atom1: [A, 17, CG1]
+    atom2: [A, 42, CB]
+    max_distance: 8.009000
+    force: true
 ```
 
 Merge the list into the same Boltz input that defines the corresponding chains and sequences. The current BoltzUI patch requires Boltz-2, `force: true`, and inference with potentials enabled. It also accepts distances only in the interval 2–20 Å. The converter therefore:
@@ -238,9 +238,9 @@ If any alternative or atom-set branch in an OR group cannot be projected safely,
 ## Safe workflow for structure generation
 
 1. Run the converter with default policies and inspect `sequence_map.tsv` first.
-2. Use `boltz_constraints.yaml` as the high-confidence guidance set.
+2. Use `atom_constraints_exact.yaml` as the high-confidence guidance set.
 3. Run multiple Boltz diffusion samples rather than relying on one structure.
-4. For ambiguous data, either implement union-aware potentials or generate several assignment hypotheses with `--hypotheses`.
+4. For ambiguous data, use `atom_constraints_union.yaml` only with a union-aware parser/potential, or generate several assignment hypotheses with `--hypotheses`.
 5. Reconstruct hydrogens on candidate structures using an NMR-aware protonation/geometry tool.
 6. Re-evaluate the original NEF/NMR-STAR restraints, including atom-set averaging and ensemble behavior, and rank/filter structures by violations.
 7. Compare restrained and unrestrained predictions to detect over-guidance or numbering mistakes.
@@ -251,7 +251,7 @@ If any alternative or atom-set branch in an OR group cannot be projected safely,
 - Dynamic and conformational-ensemble averaging is not reproduced by a single heavy-atom contact.
 - Exchangeable protons depend on protonation, tautomer, solvent, pH, and temperature.
 - The built-in topology covers standard protein and common RNA/DNA atom inventories. Modified components, ligands, and ions require embedded NMR-STAR chemistry or a local CCD file; unknown topology fails closed.
-- The current Boltz token-conditioning path cannot encode a disjunction. Marking every OR alternative as a contact would overconstrain the model.
+- A consumer must implement `atom_contact_union` as one disjunction. Marking every OR alternative as an independent contact would overconstrain the model.
 - A soft Boltz potential encourages a contact but does not guarantee restraint satisfaction. Post-prediction validation remains mandatory.
 - Paired NEF and NMR-STAR exports can encode different atom-set multiplicities; inspect `format_parity.json` before treating them as interchangeable.
 

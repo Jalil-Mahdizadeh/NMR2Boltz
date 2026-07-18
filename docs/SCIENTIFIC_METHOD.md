@@ -16,7 +16,15 @@ D(P_1,P_2) \le U(H_1,H_2) + L(P_1-H_1) + L(P_2-H_2) + m,
 
 where `P1/P2` are directly bonded heavy parents, `U` is the source proton-distance upper bound, `L` is a conservative covalent-bond-length upper envelope, and `m` is optional user-selected slack. For a proton-heavy restraint, only one X-H term is added. For a heavy-heavy restraint, no X-H term is added.
 
-This formula is rigorous for an explicit pair, but many NMR restraint rows are not explicit pairs. They may denote an r^-6 atom set, a non-stereospecific assignment, a peak-assignment alternative, or a geometric pseudoatom. The conversion therefore preserves **OR logic**. It emits a normal Boltz `atom_contact` only when every alternative reduces to the same heavy-atom pair. Otherwise the group is quarantined, represented in a proposed union schema, or sampled as an explicit assignment hypothesis.
+This formula is rigorous for an explicit pair, but many NMR restraint rows are
+not explicit pairs. They may denote an r^-6 atom set, a non-stereospecific
+assignment, a peak-assignment alternative, or a geometric pseudoatom. The
+conversion therefore preserves **OR logic**. It emits a normal Boltz
+`atom_contact` only when every alternative reduces to the same heavy-atom pair;
+otherwise a fully projectable group is written as one metadata-free
+`atom_contact_union`. Unsupported or partially projectable groups remain
+rejected, and explicit assignment hypotheses are available as a separate
+model-selection workflow.
 
 The method is intentionally one-sided: it is designed not to make an experimental upper bound tighter accidentally. It does not claim that the resulting heavy-atom contact is information-equivalent to the original NMR restraint.
 
@@ -430,11 +438,18 @@ Calculations use finite Python floating-point values. Executable YAML and tabula
 
 ## 10.1 Safe default
 
-Only groups that collapse to one heavy pair are emitted in `boltz_constraints.yaml`. This is the recommended first-stage guidance set.
+Only groups that collapse to one heavy pair are emitted in
+`atom_constraints_exact.yaml`. This is the recommended first-stage guidance
+set. Multi-pair groups are emitted separately in
+`atom_constraints_union.yaml`; exact contacts never appear there merely as a
+way to share a file.
 
 ## 10.2 Union-aware potential
 
-A correct representation of a multi-pair ambiguity is a group of alternatives sharing one union identifier in the distance potential. Boltz already contains union-energy machinery in its potential layer. The proposed schema and implementation plan are described in `BOLTZUI_UNION_EXTENSION.md`.
+A correct representation of a multi-pair ambiguity is a group of alternatives
+sharing one union identifier in the distance potential. NMR2Boltz writes that
+minimal schema to `atom_constraints_union.yaml`; the corresponding consumer
+implementation plan is described in `BOLTZUI_UNION_EXTENSION.md`.
 
 A critical restriction is that token-level conditioning must not mark every alternative as an independent contact. Doing so communicates an AND relation to the model even if the coordinate potential is union-aware.
 
@@ -523,9 +538,10 @@ from being mistaken for robustness.
 
 ### 11.5 Executed validation record
 
-The following checks were executed on 2026-07-17 against the current source tree:
+The following checks were executed on 2026-07-18 against the current source tree:
 
-- all 73 Pytest regression, format, topology, logic, target-validation, ensemble-alignment, and robustness tests passed;
+- all 79 Pytest regression, format, topology, logic, target-validation,
+  ensemble-alignment, constraint-serialization, and robustness tests passed;
 - Python byte compilation passed for source, tests, and the stress harness;
 - 100,000 randomized sum-r6 implication cases and 100,000 constructive triangle-inequality cases passed in the final Docker image;
 - 25,000 outward-rounding cases and 10,000 randomized OR-max/AND-min order-invariance cases passed;

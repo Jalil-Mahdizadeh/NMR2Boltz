@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+- Replaced the mixed legacy constraint artifacts with two deterministic,
+  metadata-free outputs: `atom_constraints_exact.yaml` for non-ambiguous
+  `atom_contact` constraints and `atom_constraints_union.yaml` for ambiguous
+  `atom_contact_union` groups. Every alternative retains its own conservatively
+  outward-rounded six-decimal bound.
 - Added a generic fail-closed atom-membership boundary after residue mapping and
   heavy-atom projection. A contact is quarantined in full as
   `atom_not_present_in_mapped_residue` unless both atoms exist in the mapped
@@ -25,14 +30,14 @@
   now fail CI while the exact reviewed 8R1X/9CCH set passes.
 - Rebuilt and validated `nmr2boltz:0.1.0-validated` as non-root and offline;
   image digest is
-  `sha256:436b22af4f57d4960d2a0523a64b49d1d99b57be3eac95683a17504ab2c6d853`.
+  `sha256:e1b8da2544111093b21f952077c9a601233d46d618c9b390b7f9ae4b835d7dc2`.
 - Added a paired NEF/NMR-STAR corpus runner with sequence-aware PDB ensemble
   alignment, exact contact/bound parity metrics, and per-case output directories.
 - Sequence/residue conflicts now use the explicit `sequence_residue_mismatch`
   rejection reason before topology resolution.
 - NEF/NMR-STAR files with sequence data but no distance loop now produce an
   auditable empty conversion rather than failing format detection.
-- Expanded the regression suite from 39 to 73 tests, including positive and
+- Expanded the regression suite from 39 to 79 tests, including positive and
   adversarial checks for every discrepancy predicate and fail-closed gate.
 - Added fail-fast `--target-yaml` validation for chain IDs, residue indices,
   canonical residue identities, declared modifications, mapping collisions, and
@@ -56,7 +61,7 @@ This research-grade reference implementation converts NEF 1.1 and NMR-STAR dista
 - conservative triangle-inequality projection from proton to parent-heavy-atom bounds;
 - selectable atom-set semantics: unnormalized sum-r6, normalized mean-r6, or hard-OR;
 - first-class handling of restraint OR groups, wildcard atom sets, x/y assignments, and pseudoatoms;
-- safe current-Boltz YAML, compact text, TSV, JSON audit, proposed union restraints, and optional hypothesis batches;
+- separate exact and union constraint YAML, compact text, TSV, JSON audit, and optional hypothesis batches;
 - Dockerfile, pinned dependency set, synthetic NEF/NMR-STAR fixtures, tests, and an expert-facing methods document.
 
 ## Safety defaults

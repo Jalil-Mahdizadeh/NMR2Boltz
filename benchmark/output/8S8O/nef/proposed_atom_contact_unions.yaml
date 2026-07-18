@@ -1,6 +1,0 @@
-# PROPOSED schema for preserving assignment ambiguity; not accepted by the current BoltzUI parser.
-x_nmr2boltz_schema: proposed-atom-contact-union-v1
-compatible_with_current_boltzui_atom_contact_parser: false
-note: Each item is one OR group. Implement as a shared union index in the Boltz distance potential; do not mark every alternative
-  as a simultaneous token contact.
-constraints: []

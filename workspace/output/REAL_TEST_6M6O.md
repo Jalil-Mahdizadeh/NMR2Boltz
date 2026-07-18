@@ -77,13 +77,14 @@ case verified all 185 mapped residues and all 2,707 emitted constraints against
 
 ## Robustness tests
 
-The final image passed all 39 Pytest tests and a containerized deterministic stress run containing:
+The current source tree passed all 79 Pytest tests. The retained containerized
+deterministic stress record contains:
 
 - 100,000 randomized unnormalized sum-r6 implication cases;
 - 100,000 constructive triangle-inequality projection cases;
 - 25,000 outward-rounding cases;
 - 10,000 randomized OR-max/AND-min merge-order cases;
-- all 850 built-in hydrogen-to-parent topology mappings;
+- all 845 built-in hydrogen-to-parent topology mappings;
 - NEF, NMR-STAR, compressed input, custom components, all averaging policies, and 32 reproducible ambiguity hypotheses.
 
 ## Docker result
@@ -91,11 +92,15 @@ The final image passed all 39 Pytest tests and a containerized deterministic str
 Only one nmr2boltz image remains:
 
 - image: nmr2boltz:0.1.0-validated
-- digest: sha256:366529d372944a278b74fa99c7e499c6f5aa73836dd8e60ed75513e91c0bb000
+- digest: sha256:e1b8da2544111093b21f952077c9a601233d46d618c9b390b7f9ae4b835d7dc2
 - reported size: 243 MB
 - default user: 65532:65532
 
 Every conversion, comparison, smoke, and stress container run mounted the repository workspace at /workspace. Runs used no network and a read-only root filesystem.
+
+The regenerated conversion bundles contain only
+`atom_constraints_exact.yaml` and `atom_constraints_union.yaml` as their
+standard constraint artifacts; neither retired filename remains.
 
 ## Reproduction and audit files
 

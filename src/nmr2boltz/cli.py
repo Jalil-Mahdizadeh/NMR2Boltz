@@ -260,8 +260,8 @@ def command_convert(args: argparse.Namespace) -> int:
     )
     print(f"Detected format: {report.detected_format}")
     print(f"Restraint groups read: {report.statistics['restraint_groups_read']}")
-    print(f"Boltz constraints emitted: {len(report.emitted_constraints)}")
-    print(f"Ambiguous OR groups quarantined: {len(report.ambiguous_groups)}")
+    print(f"Exact atom constraints emitted: {len(report.emitted_constraints)}")
+    print(f"Atom-contact union groups emitted: {len(report.ambiguous_groups)}")
     print(f"Rejection records: {len(report.rejections)}")
     if report.target_validation:
         print(

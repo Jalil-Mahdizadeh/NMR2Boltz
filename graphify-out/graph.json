@@ -143,7 +143,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "nmr2boltz_benchmark",
-      "community": 30,
+      "community": 7,
       "norm_label": "benchmark.py"
     },
     {
@@ -153,7 +153,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "nmr2boltz_benchmark_benchmarkmanifesterror",
-      "community": 30,
+      "community": 7,
       "norm_label": "benchmarkmanifesterror"
     },
     {
@@ -173,7 +173,7 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "nmr2boltz_benchmark_filespec",
-      "community": 30,
+      "community": 7,
       "norm_label": "filespec"
     },
     {
@@ -183,7 +183,7 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "nmr2boltz_benchmark_benchmarkcaseresult",
-      "community": 30,
+      "community": 7,
       "norm_label": "benchmarkcaseresult"
     },
     {
@@ -193,7 +193,7 @@
       "source_location": "L76",
       "_origin": "ast",
       "id": "nmr2boltz_benchmark_benchmarkrunresult",
-      "community": 30,
+      "community": 7,
       "norm_label": "benchmarkrunresult"
     },
     {
@@ -203,7 +203,7 @@
       "source_location": "L83",
       "_origin": "ast",
       "id": "nmr2boltz_benchmark_benchmarkrunresult_passed",
-      "community": 30,
+      "community": 7,
       "norm_label": ".passed()"
     },
     {
@@ -213,7 +213,7 @@
       "source_location": "L87",
       "_origin": "ast",
       "id": "nmr2boltz_benchmark_benchmarkrunresult_failed",
-      "community": 30,
+      "community": 7,
       "norm_label": ".failed()"
     },
     {
@@ -223,7 +223,7 @@
       "source_location": "L90",
       "_origin": "ast",
       "id": "nmr2boltz_benchmark_benchmarkrunresult_to_dict",
-      "community": 30,
+      "community": 7,
       "norm_label": ".to_dict()"
     },
     {
@@ -243,7 +243,7 @@
       "source_location": "L103",
       "_origin": "ast",
       "id": "nmr2boltz_benchmark_mapping",
-      "community": 30,
+      "community": 7,
       "norm_label": "_mapping()"
     },
     {
@@ -253,7 +253,7 @@
       "source_location": "L109",
       "_origin": "ast",
       "id": "nmr2boltz_benchmark_resolve_path",
-      "community": 30,
+      "community": 7,
       "norm_label": "_resolve_path()"
     },
     {
@@ -273,7 +273,7 @@
       "source_location": "L117",
       "_origin": "ast",
       "id": "nmr2boltz_benchmark_file_spec",
-      "community": 30,
+      "community": 7,
       "norm_label": "_file_spec()"
     },
     {
@@ -283,7 +283,7 @@
       "source_location": "L133",
       "_origin": "ast",
       "id": "nmr2boltz_benchmark_verify_file",
-      "community": 30,
+      "community": 7,
       "norm_label": "_verify_file()"
     },
     {
@@ -293,7 +293,7 @@
       "source_location": "L149",
       "_origin": "ast",
       "id": "nmr2boltz_benchmark_optional_path",
-      "community": 30,
+      "community": 7,
       "norm_label": "_optional_path()"
     },
     {
@@ -303,7 +303,7 @@
       "source_location": "L154",
       "_origin": "ast",
       "id": "nmr2boltz_benchmark_path_list",
-      "community": 30,
+      "community": 7,
       "norm_label": "_path_list()"
     },
     {
@@ -313,7 +313,7 @@
       "source_location": "L161",
       "_origin": "ast",
       "id": "nmr2boltz_benchmark_string_list",
-      "community": 30,
+      "community": 7,
       "norm_label": "_string_list()"
     },
     {
@@ -323,7 +323,7 @@
       "source_location": "L171",
       "_origin": "ast",
       "id": "nmr2boltz_benchmark_bool_option",
-      "community": 30,
+      "community": 7,
       "norm_label": "_bool_option()"
     },
     {
@@ -333,7 +333,7 @@
       "source_location": "L178",
       "_origin": "ast",
       "id": "nmr2boltz_benchmark_case_metrics",
-      "community": 30,
+      "community": 7,
       "norm_label": "_case_metrics()"
     },
     {
@@ -343,7 +343,7 @@
       "source_location": "L195",
       "_origin": "ast",
       "id": "nmr2boltz_benchmark_expected_metrics",
-      "community": 30,
+      "community": 7,
       "norm_label": "_expected_metrics()"
     },
     {
@@ -353,7 +353,7 @@
       "source_location": "L221",
       "_origin": "ast",
       "id": "nmr2boltz_benchmark_run_case",
-      "community": 30,
+      "community": 7,
       "norm_label": "_run_case()"
     },
     {
@@ -363,7 +363,7 @@
       "source_location": "L339",
       "_origin": "ast",
       "id": "nmr2boltz_benchmark_run_benchmark",
-      "community": 30,
+      "community": 7,
       "norm_label": "run_benchmark()"
     },
     {
@@ -373,7 +373,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "nmr2boltz_benchmark_rationale_21",
-      "community": 30,
+      "community": 7,
       "norm_label": "raised when a benchmark manifest does not satisfy the versioned schema."
     },
     {
@@ -553,7 +553,7 @@
       "source_location": "L96",
       "_origin": "ast",
       "id": "nmr2boltz_model_rawalternative_dedup_key",
-      "community": 6,
+      "community": 30,
       "norm_label": ".dedup_key()"
     },
     {
@@ -653,7 +653,7 @@
       "source_location": "L217",
       "_origin": "ast",
       "id": "nmr2boltz_model_rejection",
-      "community": 3,
+      "community": 0,
       "norm_label": "rejection"
     },
     {
@@ -673,7 +673,7 @@
       "source_location": "L241",
       "_origin": "ast",
       "id": "nmr2boltz_model_conversionreport_to_dict",
-      "community": 3,
+      "community": 30,
       "norm_label": ".to_dict()"
     },
     {
@@ -713,14 +713,54 @@
       "source_location": "",
       "_origin": "ast",
       "id": "list",
-      "community": 3,
+      "community": 0,
       "norm_label": "list"
+    },
+    {
+      "label": "SixDecimalFloat",
+      "file_type": "code",
+      "source_file": "src/nmr2boltz/output.py",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "nmr2boltz_output_sixdecimalfloat",
+      "community": 3,
+      "norm_label": "sixdecimalfloat"
+    },
+    {
+      "label": "float",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "float",
+      "community": 3,
+      "norm_label": "float"
+    },
+    {
+      "label": ".__new__()",
+      "file_type": "code",
+      "source_file": "src/nmr2boltz/output.py",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "nmr2boltz_output_sixdecimalfloat_new",
+      "community": 3,
+      "norm_label": ".__new__()"
+    },
+    {
+      "label": "Decimal",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "decimal",
+      "community": 3,
+      "norm_label": "decimal"
     },
     {
       "label": "BoltzYamlDumper",
       "file_type": "code",
       "source_file": "src/nmr2boltz/output.py",
-      "source_location": "L30",
+      "source_location": "L39",
       "_origin": "ast",
       "id": "nmr2boltz_output_boltzyamldumper",
       "community": 3,
@@ -730,7 +770,7 @@
       "label": "_flow_list_representer()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/output.py",
-      "source_location": "L34",
+      "source_location": "L43",
       "_origin": "ast",
       "id": "nmr2boltz_output_flow_list_representer",
       "community": 3,
@@ -757,30 +797,60 @@
       "norm_label": "node"
     },
     {
+      "label": "_six_decimal_float_representer()",
+      "file_type": "code",
+      "source_file": "src/nmr2boltz/output.py",
+      "source_location": "L47",
+      "_origin": "ast",
+      "id": "nmr2boltz_output_six_decimal_float_representer",
+      "community": 3,
+      "norm_label": "_six_decimal_float_representer()"
+    },
+    {
       "label": "_atom_list()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/output.py",
-      "source_location": "L41",
+      "source_location": "L57",
       "_origin": "ast",
       "id": "nmr2boltz_output_atom_list",
       "community": 3,
       "norm_label": "_atom_list()"
     },
     {
+      "label": "_outward_decimal()",
+      "file_type": "code",
+      "source_file": "src/nmr2boltz/output.py",
+      "source_location": "L61",
+      "_origin": "ast",
+      "id": "nmr2boltz_output_outward_decimal",
+      "community": 3,
+      "norm_label": "_outward_decimal()"
+    },
+    {
       "label": "_rounded()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/output.py",
-      "source_location": "L45",
+      "source_location": "L65",
       "_origin": "ast",
       "id": "nmr2boltz_output_rounded",
       "community": 3,
       "norm_label": "_rounded()"
     },
     {
+      "label": "_yaml_distance()",
+      "file_type": "code",
+      "source_file": "src/nmr2boltz/output.py",
+      "source_location": "L69",
+      "_origin": "ast",
+      "id": "nmr2boltz_output_yaml_distance",
+      "community": 3,
+      "norm_label": "_yaml_distance()"
+    },
+    {
       "label": "_constraint_payload()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/output.py",
-      "source_location": "L49",
+      "source_location": "L73",
       "_origin": "ast",
       "id": "nmr2boltz_output_constraint_payload",
       "community": 3,
@@ -790,7 +860,7 @@
       "label": "_dump_yaml()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/output.py",
-      "source_location": "L65",
+      "source_location": "L89",
       "_origin": "ast",
       "id": "nmr2boltz_output_dump_yaml",
       "community": 3,
@@ -800,7 +870,7 @@
       "label": "write_outputs()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/output.py",
-      "source_location": "L76",
+      "source_location": "L100",
       "_origin": "ast",
       "id": "nmr2boltz_output_write_outputs",
       "community": 3,
@@ -810,7 +880,7 @@
       "label": "_union_payload()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/output.py",
-      "source_location": "L283",
+      "source_location": "L309",
       "_origin": "ast",
       "id": "nmr2boltz_output_union_payload",
       "community": 3,
@@ -820,7 +890,7 @@
       "label": "write_hypotheses()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/output.py",
-      "source_location": "L302",
+      "source_location": "L334",
       "_origin": "ast",
       "id": "nmr2boltz_output_write_hypotheses",
       "community": 3,
@@ -830,7 +900,7 @@
       "label": "_clear_hypothesis_outputs()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/output.py",
-      "source_location": "L400",
+      "source_location": "L432",
       "_origin": "ast",
       "id": "nmr2boltz_output_clear_hypothesis_outputs",
       "community": 3,
@@ -840,7 +910,7 @@
       "label": "_combine_hypothesis_constraints()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/output.py",
-      "source_location": "L408",
+      "source_location": "L440",
       "_origin": "ast",
       "id": "nmr2boltz_output_combine_hypothesis_constraints",
       "community": 3,
@@ -850,7 +920,7 @@
       "label": "asdict_atom()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/output.py",
-      "source_location": "L454",
+      "source_location": "L486",
       "_origin": "ast",
       "id": "nmr2boltz_output_asdict_atom",
       "community": 3,
@@ -860,7 +930,7 @@
       "label": "_write_tsv()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/output.py",
-      "source_location": "L458",
+      "source_location": "L490",
       "_origin": "ast",
       "id": "nmr2boltz_output_write_tsv",
       "community": 3,
@@ -870,7 +940,7 @@
       "label": "_fasta_text()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/output.py",
-      "source_location": "L465",
+      "source_location": "L497",
       "_origin": "ast",
       "id": "nmr2boltz_output_fasta_text",
       "community": 3,
@@ -880,11 +950,21 @@
       "label": "_summary_text()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/output.py",
-      "source_location": "L488",
+      "source_location": "L520",
       "_origin": "ast",
       "id": "nmr2boltz_output_summary_text",
       "community": 3,
       "norm_label": "_summary_text()"
+    },
+    {
+      "label": "A YAML float carrying its conservative, fixed-width decimal spelling.",
+      "file_type": "rationale",
+      "source_file": "src/nmr2boltz/output.py",
+      "source_location": "L31",
+      "_origin": "ast",
+      "id": "nmr2boltz_output_rationale_31",
+      "community": 3,
+      "norm_label": "a yaml float carrying its conservative, fixed-width decimal spelling."
     },
     {
       "label": "project.py",
@@ -893,7 +973,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "nmr2boltz_project",
-      "community": 3,
+      "community": 0,
       "norm_label": "project.py"
     },
     {
@@ -933,7 +1013,7 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "nmr2boltz_project_averaging_factor",
-      "community": 3,
+      "community": 0,
       "norm_label": "_averaging_factor()"
     },
     {
@@ -943,7 +1023,7 @@
       "source_location": "L79",
       "_origin": "ast",
       "id": "nmr2boltz_project_canonical_pair",
-      "community": 3,
+      "community": 0,
       "norm_label": "_canonical_pair()"
     },
     {
@@ -953,7 +1033,7 @@
       "source_location": "L83",
       "_origin": "ast",
       "id": "nmr2boltz_project_residue_identity_mismatch",
-      "community": 3,
+      "community": 0,
       "norm_label": "_residue_identity_mismatch()"
     },
     {
@@ -973,7 +1053,7 @@
       "source_location": "L263",
       "_origin": "ast",
       "id": "nmr2boltz_project_quarantine_invalid_projected_atoms",
-      "community": 3,
+      "community": 0,
       "norm_label": "_quarantine_invalid_projected_atoms()"
     },
     {
@@ -983,7 +1063,7 @@
       "source_location": "L353",
       "_origin": "ast",
       "id": "nmr2boltz_project_project_group",
-      "community": 3,
+      "community": 0,
       "norm_label": "_project_group()"
     },
     {
@@ -993,7 +1073,7 @@
       "source_location": "L564",
       "_origin": "ast",
       "id": "nmr2boltz_project_merge_or_alternatives",
-      "community": 3,
+      "community": 0,
       "norm_label": "_merge_or_alternatives()"
     },
     {
@@ -1003,7 +1083,7 @@
       "source_location": "L596",
       "_origin": "ast",
       "id": "nmr2boltz_project_merge_independent_constraints",
-      "community": 3,
+      "community": 0,
       "norm_label": "_merge_independent_constraints()"
     },
     {
@@ -1013,7 +1093,7 @@
       "source_location": "L667",
       "_origin": "ast",
       "id": "nmr2boltz_project_row_ids",
-      "community": 3,
+      "community": 0,
       "norm_label": "_row_ids()"
     },
     {
@@ -1023,7 +1103,7 @@
       "source_location": "L269",
       "_origin": "ast",
       "id": "nmr2boltz_project_rationale_269",
-      "community": 3,
+      "community": 0,
       "norm_label": "remove complete projected contacts unless both atoms have topology evidence."
     },
     {
@@ -1033,7 +1113,7 @@
       "source_location": "L567",
       "_origin": "ast",
       "id": "nmr2boltz_project_rationale_567",
-      "community": 3,
+      "community": 0,
       "norm_label": "merge duplicate heavy pairs inside one or group.      for the same pair, ``d <="
     },
     {
@@ -1043,7 +1123,7 @@
       "source_location": "L600",
       "_origin": "ast",
       "id": "nmr2boltz_project_rationale_600",
-      "community": 3,
+      "community": 0,
       "norm_label": "merge independent restraint groups that happen to target the same pair.      ind"
     },
     {
@@ -1343,7 +1423,7 @@
       "source_location": "L98",
       "_origin": "ast",
       "id": "nmr2boltz_target_targetvalidationresult",
-      "community": 30,
+      "community": 7,
       "norm_label": "targetvalidationresult"
     },
     {
@@ -1373,7 +1453,7 @@
       "source_location": "L115",
       "_origin": "ast",
       "id": "nmr2boltz_target_targetvalidationresult_to_dict",
-      "community": 30,
+      "community": 7,
       "norm_label": ".to_dict()"
     },
     {
@@ -1470,7 +1550,7 @@
       "label": "TopologyResolutionError",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L26",
+      "source_location": "L27",
       "_origin": "ast",
       "id": "nmr2boltz_topology_topologyresolutionerror",
       "community": 5,
@@ -1480,7 +1560,7 @@
       "label": "AtomTopologyValidationError",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L30",
+      "source_location": "L31",
       "_origin": "ast",
       "id": "nmr2boltz_topology_atomtopologyvalidationerror",
       "community": 5,
@@ -1490,7 +1570,7 @@
       "label": "AtomTopologyViolation",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L35",
+      "source_location": "L36",
       "_origin": "ast",
       "id": "nmr2boltz_topology_atomtopologyviolation",
       "community": 5,
@@ -1500,7 +1580,7 @@
       "label": ".to_dict()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L41",
+      "source_location": "L42",
       "_origin": "ast",
       "id": "nmr2boltz_topology_atomtopologyviolation_to_dict",
       "community": 5,
@@ -1510,7 +1590,7 @@
       "label": "ComponentTopology",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L53",
+      "source_location": "L54",
       "_origin": "ast",
       "id": "nmr2boltz_topology_componenttopology",
       "community": 5,
@@ -1520,7 +1600,7 @@
       "label": ".add_atom()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L61",
+      "source_location": "L62",
       "_origin": "ast",
       "id": "nmr2boltz_topology_componenttopology_add_atom",
       "community": 5,
@@ -1530,7 +1610,7 @@
       "label": ".add_bond()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L68",
+      "source_location": "L69",
       "_origin": "ast",
       "id": "nmr2boltz_topology_componenttopology_add_bond",
       "community": 5,
@@ -1540,7 +1620,7 @@
       "label": ".add_hydrogen()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L99",
+      "source_location": "L100",
       "_origin": "ast",
       "id": "nmr2boltz_topology_componenttopology_add_hydrogen",
       "community": 5,
@@ -1550,7 +1630,7 @@
       "label": ".add_alias()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L106",
+      "source_location": "L107",
       "_origin": "ast",
       "id": "nmr2boltz_topology_componenttopology_add_alias",
       "community": 5,
@@ -1560,7 +1640,7 @@
       "label": ".available_atoms()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L109",
+      "source_location": "L110",
       "_origin": "ast",
       "id": "nmr2boltz_topology_componenttopology_available_atoms",
       "community": 5,
@@ -1570,7 +1650,7 @@
       "label": ".atom_choice()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L114",
+      "source_location": "L115",
       "_origin": "ast",
       "id": "nmr2boltz_topology_componenttopology_atom_choice",
       "community": 5,
@@ -1580,7 +1660,7 @@
       "label": "infer_element()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L141",
+      "source_location": "L142",
       "_origin": "ast",
       "id": "nmr2boltz_topology_infer_element",
       "community": 5,
@@ -1590,7 +1670,7 @@
       "label": "_leading_digit_alias()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L159",
+      "source_location": "L160",
       "_origin": "ast",
       "id": "nmr2boltz_topology_leading_digit_alias",
       "community": 5,
@@ -1600,7 +1680,7 @@
       "label": "_normalize_legacy_expression()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L166",
+      "source_location": "L167",
       "_origin": "ast",
       "id": "nmr2boltz_topology_normalize_legacy_expression",
       "community": 5,
@@ -1610,7 +1690,7 @@
       "label": "_compile_atom_pattern()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L178",
+      "source_location": "L179",
       "_origin": "ast",
       "id": "nmr2boltz_topology_compile_atom_pattern",
       "community": 5,
@@ -1630,7 +1710,7 @@
       "label": "_pseudoatom_to_expression()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L203",
+      "source_location": "L204",
       "_origin": "ast",
       "id": "nmr2boltz_topology_pseudoatom_to_expression",
       "community": 5,
@@ -1640,7 +1720,7 @@
       "label": "TopologyLibrary",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L213",
+      "source_location": "L214",
       "_origin": "ast",
       "id": "nmr2boltz_topology_topologylibrary",
       "community": 0,
@@ -1650,7 +1730,7 @@
       "label": ".__init__()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L214",
+      "source_location": "L215",
       "_origin": "ast",
       "id": "nmr2boltz_topology_topologylibrary_init",
       "community": 5,
@@ -1660,7 +1740,7 @@
       "label": "._load_bond_length_config()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L230",
+      "source_location": "L231",
       "_origin": "ast",
       "id": "nmr2boltz_topology_topologylibrary_load_bond_length_config",
       "community": 5,
@@ -1670,7 +1750,7 @@
       "label": "._apply_bond_overrides()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L263",
+      "source_location": "L264",
       "_origin": "ast",
       "id": "nmr2boltz_topology_topologylibrary_apply_bond_overrides",
       "community": 5,
@@ -1680,7 +1760,7 @@
       "label": ".register()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L275",
+      "source_location": "L276",
       "_origin": "ast",
       "id": "nmr2boltz_topology_topologylibrary_register",
       "community": 5,
@@ -1690,7 +1770,7 @@
       "label": ".get()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L281",
+      "source_location": "L282",
       "_origin": "ast",
       "id": "nmr2boltz_topology_topologylibrary_get",
       "community": 5,
@@ -1700,7 +1780,7 @@
       "label": "._load_external_for_component()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L289",
+      "source_location": "L290",
       "_origin": "ast",
       "id": "nmr2boltz_topology_topologylibrary_load_external_for_component",
       "community": 5,
@@ -1710,7 +1790,7 @@
       "label": "._load_ccd_file()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L308",
+      "source_location": "L309",
       "_origin": "ast",
       "id": "nmr2boltz_topology_topologylibrary_load_ccd_file",
       "community": 5,
@@ -1720,7 +1800,7 @@
       "label": ".resolve_expression()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L359",
+      "source_location": "L360",
       "_origin": "ast",
       "id": "nmr2boltz_topology_topologylibrary_resolve_expression",
       "community": 5,
@@ -1730,7 +1810,7 @@
       "label": "component_topology_snapshot()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L570",
+      "source_location": "L571",
       "_origin": "ast",
       "id": "nmr2boltz_topology_component_topology_snapshot",
       "community": 5,
@@ -1740,7 +1820,7 @@
       "label": "mapped_residue_index()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L589",
+      "source_location": "L590",
       "_origin": "ast",
       "id": "nmr2boltz_topology_mapped_residue_index",
       "community": 5,
@@ -1750,37 +1830,57 @@
       "label": "atom_topology_violations()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L607",
+      "source_location": "L608",
       "_origin": "ast",
       "id": "nmr2boltz_topology_atom_topology_violations",
-      "community": 3,
+      "community": 5,
       "norm_label": "atom_topology_violations()"
     },
     {
       "label": "emitted_atom_topology_violations()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L637",
+      "source_location": "L638",
       "_origin": "ast",
       "id": "nmr2boltz_topology_emitted_atom_topology_violations",
-      "community": 10,
+      "community": 6,
       "norm_label": "emitted_atom_topology_violations()"
+    },
+    {
+      "label": "output_atom_topology_violations()",
+      "file_type": "code",
+      "source_file": "src/nmr2boltz/topology.py",
+      "source_location": "L651",
+      "_origin": "ast",
+      "id": "nmr2boltz_topology_output_atom_topology_violations",
+      "community": 5,
+      "norm_label": "output_atom_topology_violations()"
     },
     {
       "label": "require_valid_emitted_atom_topology()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L650",
+      "source_location": "L673",
       "_origin": "ast",
       "id": "nmr2boltz_topology_require_valid_emitted_atom_topology",
       "community": 3,
       "norm_label": "require_valid_emitted_atom_topology()"
     },
     {
+      "label": "require_valid_output_atom_topology()",
+      "file_type": "code",
+      "source_file": "src/nmr2boltz/topology.py",
+      "source_location": "L690",
+      "_origin": "ast",
+      "id": "nmr2boltz_topology_require_valid_output_atom_topology",
+      "community": 3,
+      "norm_label": "require_valid_output_atom_topology()"
+    },
+    {
       "label": "_looks_like_hydrogen()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L667",
+      "source_location": "L707",
       "_origin": "ast",
       "id": "nmr2boltz_topology_looks_like_hydrogen",
       "community": 5,
@@ -1790,7 +1890,7 @@
       "label": "_optional_float()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L672",
+      "source_location": "L712",
       "_origin": "ast",
       "id": "nmr2boltz_topology_optional_float",
       "community": 5,
@@ -1800,7 +1900,7 @@
       "label": "build_builtin_topologies()",
       "file_type": "code",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L683",
+      "source_location": "L723",
       "_origin": "ast",
       "id": "nmr2boltz_topology_build_builtin_topologies",
       "community": 5,
@@ -1810,9 +1910,9 @@
       "label": "Raised when an executable constraint lacks exact component-topology evidence.",
       "file_type": "rationale",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L31",
+      "source_location": "L32",
       "_origin": "ast",
-      "id": "nmr2boltz_topology_rationale_31",
+      "id": "nmr2boltz_topology_rationale_32",
       "community": 5,
       "norm_label": "raised when an executable constraint lacks exact component-topology evidence."
     },
@@ -1820,9 +1920,9 @@
       "label": "Freeze exact component atom membership used by one conversion.      Unknown comp",
       "file_type": "rationale",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L573",
+      "source_location": "L574",
       "_origin": "ast",
-      "id": "nmr2boltz_topology_rationale_573",
+      "id": "nmr2boltz_topology_rationale_574",
       "community": 5,
       "norm_label": "freeze exact component atom membership used by one conversion.      unknown comp"
     },
@@ -1830,9 +1930,9 @@
       "label": "Return an unambiguous Boltz position-to-component mapping.",
       "file_type": "rationale",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L592",
+      "source_location": "L593",
       "_origin": "ast",
-      "id": "nmr2boltz_topology_rationale_592",
+      "id": "nmr2boltz_topology_rationale_593",
       "community": 5,
       "norm_label": "return an unambiguous boltz position-to-component mapping."
     },
@@ -1840,21 +1940,41 @@
       "label": "Check atoms against component dictionaries, never coordinate observations.",
       "file_type": "rationale",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L613",
+      "source_location": "L614",
       "_origin": "ast",
-      "id": "nmr2boltz_topology_rationale_613",
-      "community": 3,
+      "id": "nmr2boltz_topology_rationale_614",
+      "community": 5,
       "norm_label": "check atoms against component dictionaries, never coordinate observations."
+    },
+    {
+      "label": "Validate every atom that can be written to an executable constraint file.",
+      "file_type": "rationale",
+      "source_file": "src/nmr2boltz/topology.py",
+      "source_location": "L652",
+      "_origin": "ast",
+      "id": "nmr2boltz_topology_rationale_652",
+      "community": 5,
+      "norm_label": "validate every atom that can be written to an executable constraint file."
     },
     {
       "label": "Fail before executable YAML can contain an unproven atom.",
       "file_type": "rationale",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L651",
+      "source_location": "L674",
       "_origin": "ast",
-      "id": "nmr2boltz_topology_rationale_651",
+      "id": "nmr2boltz_topology_rationale_674",
       "community": 3,
       "norm_label": "fail before executable yaml can contain an unproven atom."
+    },
+    {
+      "label": "Fail before either exact or union output can contain an unproven atom.",
+      "file_type": "rationale",
+      "source_file": "src/nmr2boltz/topology.py",
+      "source_location": "L691",
+      "_origin": "ast",
+      "id": "nmr2boltz_topology_rationale_691",
+      "community": 3,
+      "norm_label": "fail before either exact or union output can contain an unproven atom."
     },
     {
       "label": "test_atom_topology.py",
@@ -1863,7 +1983,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_atom_topology",
-      "community": 10,
+      "community": 6,
       "norm_label": "test_atom_topology.py"
     },
     {
@@ -1873,7 +1993,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "tests_test_atom_topology_document",
-      "community": 10,
+      "community": 6,
       "norm_label": "_document()"
     },
     {
@@ -1883,7 +2003,7 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "tests_test_atom_topology_project",
-      "community": 10,
+      "community": 6,
       "norm_label": "_project()"
     },
     {
@@ -1893,7 +2013,7 @@
       "source_location": "L76",
       "_origin": "ast",
       "id": "tests_test_atom_topology_test_glutamine_zinc_atom_is_quarantined_with_complete_provenance",
-      "community": 10,
+      "community": 6,
       "norm_label": "test_glutamine_zinc_atom_is_quarantined_with_complete_provenance()"
     },
     {
@@ -1903,7 +2023,7 @@
       "source_location": "L110",
       "_origin": "ast",
       "id": "tests_test_atom_topology_test_protein_residue_rejects_projected_nucleotide_atoms",
-      "community": 10,
+      "community": 6,
       "norm_label": "test_protein_residue_rejects_projected_nucleotide_atoms()"
     },
     {
@@ -1913,7 +2033,7 @@
       "source_location": "L126",
       "_origin": "ast",
       "id": "tests_test_atom_topology_test_standard_amino_acid_and_nucleotide_heavy_atoms_still_emit",
-      "community": 10,
+      "community": 6,
       "norm_label": "test_standard_amino_acid_and_nucleotide_heavy_atoms_still_emit()"
     },
     {
@@ -1923,7 +2043,7 @@
       "source_location": "L142",
       "_origin": "ast",
       "id": "tests_test_atom_topology_test_available_modified_ligand_and_ion_topology_emits",
-      "community": 10,
+      "community": 6,
       "norm_label": "test_available_modified_ligand_and_ion_topology_emits()"
     },
     {
@@ -1933,7 +2053,7 @@
       "source_location": "L159",
       "_origin": "ast",
       "id": "tests_test_atom_topology_test_unknown_component_topology_fails_closed",
-      "community": 10,
+      "community": 6,
       "norm_label": "test_unknown_component_topology_fails_closed()"
     },
     {
@@ -1943,7 +2063,7 @@
       "source_location": "L175",
       "_origin": "ast",
       "id": "tests_test_atom_topology_test_final_output_validator_fails_before_writing_invalid_yaml",
-      "community": 10,
+      "community": 6,
       "norm_label": "test_final_output_validator_fails_before_writing_invalid_yaml()"
     },
     {
@@ -1953,17 +2073,17 @@
       "source_location": "L189",
       "_origin": "ast",
       "id": "tests_test_atom_topology_test_rejection_provenance_and_yaml_atom_membership_are_deterministic",
-      "community": 10,
+      "community": 6,
       "norm_label": "test_rejection_provenance_and_yaml_atom_membership_are_deterministic()"
     },
     {
       "label": "test_deposited_corpus_atom_defects_are_quarantined()",
       "file_type": "code",
       "source_file": "tests/test_atom_topology.py",
-      "source_location": "L215",
+      "source_location": "L217",
       "_origin": "ast",
       "id": "tests_test_atom_topology_test_deposited_corpus_atom_defects_are_quarantined",
-      "community": 10,
+      "community": 6,
       "norm_label": "test_deposited_corpus_atom_defects_are_quarantined()"
     },
     {
@@ -1973,7 +2093,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_benchmark",
-      "community": 30,
+      "community": 7,
       "norm_label": "test_benchmark.py"
     },
     {
@@ -1983,7 +2103,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "tests_test_benchmark_sha256",
-      "community": 30,
+      "community": 7,
       "norm_label": "_sha256()"
     },
     {
@@ -1993,7 +2113,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "tests_test_benchmark_manifest",
-      "community": 30,
+      "community": 7,
       "norm_label": "_manifest()"
     },
     {
@@ -2003,18 +2123,108 @@
       "source_location": "L54",
       "_origin": "ast",
       "id": "tests_test_benchmark_test_benchmark_manifest_runs_conversion_and_writes_auditable_summary",
-      "community": 30,
+      "community": 7,
       "norm_label": "test_benchmark_manifest_runs_conversion_and_writes_auditable_summary()"
     },
     {
       "label": "test_benchmark_checksum_mismatch_is_recorded_as_case_failure()",
       "file_type": "code",
       "source_file": "tests/test_benchmark.py",
-      "source_location": "L69",
+      "source_location": "L73",
       "_origin": "ast",
       "id": "tests_test_benchmark_test_benchmark_checksum_mismatch_is_recorded_as_case_failure",
-      "community": 30,
+      "community": 7,
       "norm_label": "test_benchmark_checksum_mismatch_is_recorded_as_case_failure()"
+    },
+    {
+      "label": "test_constraint_output.py",
+      "file_type": "code",
+      "source_file": "tests/test_constraint_output.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "tests_test_constraint_output",
+      "community": 3,
+      "norm_label": "test_constraint_output.py"
+    },
+    {
+      "label": "_report()",
+      "file_type": "code",
+      "source_file": "tests/test_constraint_output.py",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "tests_test_constraint_output_report",
+      "community": 3,
+      "norm_label": "_report()"
+    },
+    {
+      "label": "_all_keys()",
+      "file_type": "code",
+      "source_file": "tests/test_constraint_output.py",
+      "source_location": "L40",
+      "_origin": "ast",
+      "id": "tests_test_constraint_output_all_keys",
+      "community": 3,
+      "norm_label": "_all_keys()"
+    },
+    {
+      "label": "test_exact_and_union_files_have_disjoint_minimal_schemas()",
+      "file_type": "code",
+      "source_file": "tests/test_constraint_output.py",
+      "source_location": "L50",
+      "_origin": "ast",
+      "id": "tests_test_constraint_output_test_exact_and_union_files_have_disjoint_minimal_schemas",
+      "community": 3,
+      "norm_label": "test_exact_and_union_files_have_disjoint_minimal_schemas()"
+    },
+    {
+      "label": "test_empty_constraint_files_are_explicit_empty_lists()",
+      "file_type": "code",
+      "source_file": "tests/test_constraint_output.py",
+      "source_location": "L79",
+      "_origin": "ast",
+      "id": "tests_test_constraint_output_test_empty_constraint_files_are_explicit_empty_lists",
+      "community": 3,
+      "norm_label": "test_empty_constraint_files_are_explicit_empty_lists()"
+    },
+    {
+      "label": "test_union_preserves_per_alternative_bounds_with_outward_six_decimal_format()",
+      "file_type": "code",
+      "source_file": "tests/test_constraint_output.py",
+      "source_location": "L90",
+      "_origin": "ast",
+      "id": "tests_test_constraint_output_test_union_preserves_per_alternative_bounds_with_outward_six_decimal_format",
+      "community": 3,
+      "norm_label": "test_union_preserves_per_alternative_bounds_with_outward_six_decimal_format()"
+    },
+    {
+      "label": "test_exact_bounds_use_outward_six_decimal_format()",
+      "file_type": "code",
+      "source_file": "tests/test_constraint_output.py",
+      "source_location": "L113",
+      "_origin": "ast",
+      "id": "tests_test_constraint_output_test_exact_bounds_use_outward_six_decimal_format",
+      "community": 3,
+      "norm_label": "test_exact_bounds_use_outward_six_decimal_format()"
+    },
+    {
+      "label": "test_union_order_is_deterministic_and_old_outputs_are_removed()",
+      "file_type": "code",
+      "source_file": "tests/test_constraint_output.py",
+      "source_location": "L123",
+      "_origin": "ast",
+      "id": "tests_test_constraint_output_test_union_order_is_deterministic_and_old_outputs_are_removed",
+      "community": 3,
+      "norm_label": "test_union_order_is_deterministic_and_old_outputs_are_removed()"
+    },
+    {
+      "label": "test_invalid_union_atom_fails_before_any_output_is_written()",
+      "file_type": "code",
+      "source_file": "tests/test_constraint_output.py",
+      "source_location": "L145",
+      "_origin": "ast",
+      "id": "tests_test_constraint_output_test_invalid_union_atom_fails_before_any_output_is_written",
+      "community": 3,
+      "norm_label": "test_invalid_union_atom_fails_before_any_output_is_written()"
     },
     {
       "label": "test_conversion.py",
@@ -2100,7 +2310,7 @@
       "label": "test_sequence_only_nef_produces_empty_conversion()",
       "file_type": "code",
       "source_file": "tests/test_conversion.py",
-      "source_location": "L128",
+      "source_location": "L130",
       "_origin": "ast",
       "id": "tests_test_conversion_test_sequence_only_nef_produces_empty_conversion",
       "community": 0,
@@ -2110,7 +2320,7 @@
       "label": "test_residue_name_mismatch_is_rejected_before_topology()",
       "file_type": "code",
       "source_file": "tests/test_conversion.py",
-      "source_location": "L147",
+      "source_location": "L149",
       "_origin": "ast",
       "id": "tests_test_conversion_test_residue_name_mismatch_is_rejected_before_topology",
       "community": 0,
@@ -2333,7 +2543,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_logic",
-      "community": 3,
+      "community": 0,
       "norm_label": "test_logic.py"
     },
     {
@@ -2343,7 +2553,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "tests_test_logic_projected",
-      "community": 3,
+      "community": 0,
       "norm_label": "projected()"
     },
     {
@@ -2353,7 +2563,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "tests_test_logic_test_duplicate_pair_inside_or_uses_larger_bound",
-      "community": 3,
+      "community": 0,
       "norm_label": "test_duplicate_pair_inside_or_uses_larger_bound()"
     },
     {
@@ -2363,7 +2573,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "tests_test_logic_test_duplicate_pair_across_independent_groups_uses_smaller_bound",
-      "community": 3,
+      "community": 0,
       "norm_label": "test_duplicate_pair_across_independent_groups_uses_smaller_bound()"
     },
     {
@@ -2373,7 +2583,7 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "tests_test_logic_test_boltz_minimum_weakens_and_maximum_is_not_clipped",
-      "community": 3,
+      "community": 0,
       "norm_label": "test_boltz_minimum_weakens_and_maximum_is_not_clipped()"
     },
     {
@@ -2383,7 +2593,7 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "tests_test_logic_test_compressed_nef_input",
-      "community": 3,
+      "community": 0,
       "norm_label": "test_compressed_nef_input()"
     },
     {
@@ -2403,7 +2613,7 @@
       "source_location": "L98",
       "_origin": "ast",
       "id": "tests_test_logic_test_pseudoatom_atomset_mode_is_explicitly_labeled",
-      "community": 3,
+      "community": 0,
       "norm_label": "test_pseudoatom_atomset_mode_is_explicitly_labeled()"
     },
     {
@@ -2620,7 +2830,7 @@
       "label": "test_nucleic_acid_target_identity_validation()",
       "file_type": "code",
       "source_file": "tests/test_target.py",
-      "source_location": "L115",
+      "source_location": "L116",
       "_origin": "ast",
       "id": "tests_test_target_test_nucleic_acid_target_identity_validation",
       "community": 7,
@@ -2630,7 +2840,7 @@
       "label": "test_declared_polymer_modification_must_match_source_ccd()",
       "file_type": "code",
       "source_file": "tests/test_target.py",
-      "source_location": "L135",
+      "source_location": "L136",
       "_origin": "ast",
       "id": "tests_test_target_test_declared_polymer_modification_must_match_source_ccd",
       "community": 7,
@@ -3680,7 +3890,7 @@
       "label": "main()",
       "file_type": "code",
       "source_file": "validation/stress_validation.py",
-      "source_location": "L191",
+      "source_location": "L193",
       "_origin": "ast",
       "id": "validation_stress_validation_main",
       "community": 4,
@@ -4030,7 +4240,7 @@
       "label": "Included",
       "file_type": "document",
       "source_file": "RELEASE_NOTES.md",
-      "source_location": "L49",
+      "source_location": "L54",
       "_origin": "ast",
       "id": "release_notes_included",
       "community": 20,
@@ -4040,7 +4250,7 @@
       "label": "Safety defaults",
       "file_type": "document",
       "source_file": "RELEASE_NOTES.md",
-      "source_location": "L62",
+      "source_location": "L67",
       "_origin": "ast",
       "id": "release_notes_safety_defaults",
       "community": 20,
@@ -4050,7 +4260,7 @@
       "label": "Validation",
       "file_type": "document",
       "source_file": "RELEASE_NOTES.md",
-      "source_location": "L66",
+      "source_location": "L71",
       "_origin": "ast",
       "id": "release_notes_validation",
       "community": 20,
@@ -4090,7 +4300,7 @@
       "label": "Paired-format deposited-data validation",
       "file_type": "document",
       "source_file": "VALIDATION.md",
-      "source_location": "L33",
+      "source_location": "L36",
       "_origin": "ast",
       "id": "validation_paired_format_deposited_data_validation",
       "community": 11,
@@ -4100,7 +4310,7 @@
       "label": "Container status",
       "file_type": "document",
       "source_file": "VALIDATION.md",
-      "source_location": "L66",
+      "source_location": "L69",
       "_origin": "ast",
       "id": "validation_container_status",
       "community": 11,
@@ -4650,7 +4860,7 @@
       "label": "4.7 Full Bayesian restraint model",
       "file_type": "document",
       "source_file": "docs/FORMAT_RESEARCH_AND_DESIGN_DECISIONS.md",
-      "source_location": "L124",
+      "source_location": "L126",
       "_origin": "ast",
       "id": "docs_format_research_and_design_decisions_4_7_full_bayesian_restraint_model",
       "community": 8,
@@ -4660,7 +4870,7 @@
       "label": "5. Why the selected algorithm is robust",
       "file_type": "document",
       "source_file": "docs/FORMAT_RESEARCH_AND_DESIGN_DECISIONS.md",
-      "source_location": "L134",
+      "source_location": "L136",
       "_origin": "ast",
       "id": "docs_format_research_and_design_decisions_5_why_the_selected_algorithm_is_robust",
       "community": 8,
@@ -4670,7 +4880,7 @@
       "label": "6. BMRB/wwPDB retrieval considerations",
       "file_type": "document",
       "source_file": "docs/FORMAT_RESEARCH_AND_DESIGN_DECISIONS.md",
-      "source_location": "L148",
+      "source_location": "L150",
       "_origin": "ast",
       "id": "docs_format_research_and_design_decisions_6_bmrb_wwpdb_retrieval_considerations",
       "community": 8,
@@ -4680,7 +4890,7 @@
       "label": "7. Recommended dataset-level protocol",
       "file_type": "document",
       "source_file": "docs/FORMAT_RESEARCH_AND_DESIGN_DECISIONS.md",
-      "source_location": "L161",
+      "source_location": "L163",
       "_origin": "ast",
       "id": "docs_format_research_and_design_decisions_7_recommended_dataset_level_protocol",
       "community": 8,
@@ -4690,7 +4900,7 @@
       "label": "8. Paired-format benchmark and remaining coverage",
       "file_type": "document",
       "source_file": "docs/FORMAT_RESEARCH_AND_DESIGN_DECISIONS.md",
-      "source_location": "L174",
+      "source_location": "L176",
       "_origin": "ast",
       "id": "docs_format_research_and_design_decisions_8_paired_format_benchmark_and_remaining_coverage",
       "community": 8,
@@ -4717,20 +4927,20 @@
       "norm_label": "boltzui integration guide"
     },
     {
-      "label": "Current patched schema",
+      "label": "Exact-contact schema",
       "file_type": "document",
       "source_file": "docs/INTEGRATION_GUIDE.md",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "docs_integration_guide_current_patched_schema",
+      "id": "docs_integration_guide_exact_contact_schema",
       "community": 17,
-      "norm_label": "current patched schema"
+      "norm_label": "exact-contact schema"
     },
     {
       "label": "Ambiguous restraints",
       "file_type": "document",
       "source_file": "docs/INTEGRATION_GUIDE.md",
-      "source_location": "L18",
+      "source_location": "L19",
       "_origin": "ast",
       "id": "docs_integration_guide_ambiguous_restraints",
       "community": 17,
@@ -4740,7 +4950,7 @@
       "label": "Residue numbering",
       "file_type": "document",
       "source_file": "docs/INTEGRATION_GUIDE.md",
-      "source_location": "L24",
+      "source_location": "L29",
       "_origin": "ast",
       "id": "docs_integration_guide_residue_numbering",
       "community": 17,
@@ -4750,7 +4960,7 @@
       "label": "Recommended run protocol",
       "file_type": "document",
       "source_file": "docs/INTEGRATION_GUIDE.md",
-      "source_location": "L32",
+      "source_location": "L37",
       "_origin": "ast",
       "id": "docs_integration_guide_recommended_run_protocol",
       "community": 17,
@@ -4810,7 +5020,7 @@
       "label": "1. Scope and intended use",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L27",
+      "source_location": "L35",
       "_origin": "ast",
       "id": "docs_scientific_method_1_scope_and_intended_use",
       "community": 22,
@@ -4820,7 +5030,7 @@
       "label": "1.1 Included data",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L29",
+      "source_location": "L37",
       "_origin": "ast",
       "id": "docs_scientific_method_1_1_included_data",
       "community": 22,
@@ -4830,7 +5040,7 @@
       "label": "1.2 Excluded or deliberately non-flattened information",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L41",
+      "source_location": "L49",
       "_origin": "ast",
       "id": "docs_scientific_method_1_2_excluded_or_deliberately_non_flattened_information",
       "community": 22,
@@ -4840,7 +5050,7 @@
       "label": "1.3 Interpretation of a Boltz contact",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L56",
+      "source_location": "L64",
       "_origin": "ast",
       "id": "docs_scientific_method_1_3_interpretation_of_a_boltz_contact",
       "community": 22,
@@ -4850,7 +5060,7 @@
       "label": "2. Source data models",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L62",
+      "source_location": "L70",
       "_origin": "ast",
       "id": "docs_scientific_method_2_source_data_models",
       "community": 2,
@@ -4860,7 +5070,7 @@
       "label": "2.1 NEF",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L64",
+      "source_location": "L72",
       "_origin": "ast",
       "id": "docs_scientific_method_2_1_nef",
       "community": 2,
@@ -4870,7 +5080,7 @@
       "label": "2.2 NMR-STAR",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L83",
+      "source_location": "L91",
       "_origin": "ast",
       "id": "docs_scientific_method_2_2_nmr_star",
       "community": 2,
@@ -4880,7 +5090,7 @@
       "label": "2.3 Null values and optional fields",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L99",
+      "source_location": "L107",
       "_origin": "ast",
       "id": "docs_scientific_method_2_3_null_values_and_optional_fields",
       "community": 2,
@@ -4890,7 +5100,7 @@
       "label": "3. Internal logical representation",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L112",
+      "source_location": "L120",
       "_origin": "ast",
       "id": "docs_scientific_method_3_internal_logical_representation",
       "community": 2,
@@ -4900,7 +5110,7 @@
       "label": "4. Residue and chain mapping",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L154",
+      "source_location": "L162",
       "_origin": "ast",
       "id": "docs_scientific_method_4_residue_and_chain_mapping",
       "community": 2,
@@ -4910,7 +5120,7 @@
       "label": "4.1 Why source numbering cannot be copied blindly",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L156",
+      "source_location": "L164",
       "_origin": "ast",
       "id": "docs_scientific_method_4_1_why_source_numbering_cannot_be_copied_blindly",
       "community": 2,
@@ -4920,7 +5130,7 @@
       "label": "4.2 Mapping precedence",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L169",
+      "source_location": "L177",
       "_origin": "ast",
       "id": "docs_scientific_method_4_2_mapping_precedence",
       "community": 2,
@@ -4930,7 +5140,7 @@
       "label": "4.3 Inference policy",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L181",
+      "source_location": "L189",
       "_origin": "ast",
       "id": "docs_scientific_method_4_3_inference_policy",
       "community": 2,
@@ -4940,7 +5150,7 @@
       "label": "5. Chemical topology and proton-parent mapping",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L187",
+      "source_location": "L195",
       "_origin": "ast",
       "id": "docs_scientific_method_5_chemical_topology_and_proton_parent_mapping",
       "community": 2,
@@ -4950,7 +5160,7 @@
       "label": "5.1 Direct-bond rule",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L189",
+      "source_location": "L197",
       "_origin": "ast",
       "id": "docs_scientific_method_5_1_direct_bond_rule",
       "community": 2,
@@ -4960,7 +5170,7 @@
       "label": "5.2 Topology sources",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L202",
+      "source_location": "L210",
       "_origin": "ast",
       "id": "docs_scientific_method_5_2_topology_sources",
       "community": 2,
@@ -4970,7 +5180,7 @@
       "label": "5.3 Fail-closed atom membership",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L213",
+      "source_location": "L221",
       "_origin": "ast",
       "id": "docs_scientific_method_5_3_fail_closed_atom_membership",
       "community": 2,
@@ -4980,7 +5190,7 @@
       "label": "5.4 X-H upper envelopes",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L230",
+      "source_location": "L238",
       "_origin": "ast",
       "id": "docs_scientific_method_5_4_x_h_upper_envelopes",
       "community": 2,
@@ -4990,7 +5200,7 @@
       "label": "5.5 Isotopes and exchangeable protons",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L257",
+      "source_location": "L265",
       "_origin": "ast",
       "id": "docs_scientific_method_5_5_isotopes_and_exchangeable_protons",
       "community": 2,
@@ -5000,7 +5210,7 @@
       "label": "6. Mathematical projection for explicit pairs",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L263",
+      "source_location": "L271",
       "_origin": "ast",
       "id": "docs_scientific_method_6_mathematical_projection_for_explicit_pairs",
       "community": 2,
@@ -5010,7 +5220,7 @@
       "label": "7. Atom sets and r^-6 averaging",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L306",
+      "source_location": "L314",
       "_origin": "ast",
       "id": "docs_scientific_method_7_atom_sets_and_r_6_averaging",
       "community": 2,
@@ -5020,7 +5230,7 @@
       "label": "7.1 Unnormalized sum convention",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L308",
+      "source_location": "L316",
       "_origin": "ast",
       "id": "docs_scientific_method_7_1_unnormalized_sum_convention",
       "community": 2,
@@ -5030,7 +5240,7 @@
       "label": "7.2 Normalized mean convention",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L352",
+      "source_location": "L360",
       "_origin": "ast",
       "id": "docs_scientific_method_7_2_normalized_mean_convention",
       "community": 2,
@@ -5040,7 +5250,7 @@
       "label": "7.3 Hard existential assignment",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L368",
+      "source_location": "L376",
       "_origin": "ast",
       "id": "docs_scientific_method_7_3_hard_existential_assignment",
       "community": 2,
@@ -5050,7 +5260,7 @@
       "label": "7.4 Calibration caveat",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L372",
+      "source_location": "L380",
       "_origin": "ast",
       "id": "docs_scientific_method_7_4_calibration_caveat",
       "community": 2,
@@ -5060,7 +5270,7 @@
       "label": "8. Wildcards, stereochemistry, and pseudoatoms",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L378",
+      "source_location": "L386",
       "_origin": "ast",
       "id": "docs_scientific_method_8_wildcards_stereochemistry_and_pseudoatoms",
       "community": 2,
@@ -5070,7 +5280,7 @@
       "label": "8.1 Wildcard atom sets",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L380",
+      "source_location": "L388",
       "_origin": "ast",
       "id": "docs_scientific_method_8_1_wildcard_atom_sets",
       "community": 2,
@@ -5080,7 +5290,7 @@
       "label": "8.2 x/y non-stereospecific identifiers",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L390",
+      "source_location": "L398",
       "_origin": "ast",
       "id": "docs_scientific_method_8_2_x_y_non_stereospecific_identifiers",
       "community": 2,
@@ -5090,7 +5300,7 @@
       "label": "8.3 Geometric pseudoatoms",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L394",
+      "source_location": "L402",
       "_origin": "ast",
       "id": "docs_scientific_method_8_3_geometric_pseudoatoms",
       "community": 2,
@@ -5100,7 +5310,7 @@
       "label": "9. Boltz compatibility and bound handling",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L402",
+      "source_location": "L410",
       "_origin": "ast",
       "id": "docs_scientific_method_9_boltz_compatibility_and_bound_handling",
       "community": 23,
@@ -5110,7 +5320,7 @@
       "label": "9.1 Lower than 2 A",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L415",
+      "source_location": "L423",
       "_origin": "ast",
       "id": "docs_scientific_method_9_1_lower_than_2_a",
       "community": 23,
@@ -5120,7 +5330,7 @@
       "label": "9.2 Greater than 20 A",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L419",
+      "source_location": "L427",
       "_origin": "ast",
       "id": "docs_scientific_method_9_2_greater_than_20_a",
       "community": 23,
@@ -5130,7 +5340,7 @@
       "label": "9.3 Precision",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L423",
+      "source_location": "L431",
       "_origin": "ast",
       "id": "docs_scientific_method_9_3_precision",
       "community": 23,
@@ -5140,7 +5350,7 @@
       "label": "10. Ambiguous groups and recommended execution strategies",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L429",
+      "source_location": "L437",
       "_origin": "ast",
       "id": "docs_scientific_method_10_ambiguous_groups_and_recommended_execution_strategies",
       "community": 2,
@@ -5150,7 +5360,7 @@
       "label": "10.1 Safe default",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L431",
+      "source_location": "L439",
       "_origin": "ast",
       "id": "docs_scientific_method_10_1_safe_default",
       "community": 2,
@@ -5160,7 +5370,7 @@
       "label": "10.2 Union-aware potential",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L435",
+      "source_location": "L447",
       "_origin": "ast",
       "id": "docs_scientific_method_10_2_union_aware_potential",
       "community": 2,
@@ -5170,7 +5380,7 @@
       "label": "10.3 Assignment hypotheses",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L441",
+      "source_location": "L456",
       "_origin": "ast",
       "id": "docs_scientific_method_10_3_assignment_hypotheses",
       "community": 2,
@@ -5180,7 +5390,7 @@
       "label": "11. Validation protocol",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L456",
+      "source_location": "L471",
       "_origin": "ast",
       "id": "docs_scientific_method_11_validation_protocol",
       "community": 18,
@@ -5190,7 +5400,7 @@
       "label": "11.1 Parsing validation",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L460",
+      "source_location": "L475",
       "_origin": "ast",
       "id": "docs_scientific_method_11_1_parsing_validation",
       "community": 18,
@@ -5200,7 +5410,7 @@
       "label": "11.2 Identifier validation",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L469",
+      "source_location": "L484",
       "_origin": "ast",
       "id": "docs_scientific_method_11_2_identifier_validation",
       "community": 18,
@@ -5210,7 +5420,7 @@
       "label": "11.3 Geometric validation of candidate structures",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L476",
+      "source_location": "L491",
       "_origin": "ast",
       "id": "docs_scientific_method_11_3_geometric_validation_of_candidate_structures",
       "community": 18,
@@ -5220,7 +5430,7 @@
       "label": "11.4 Structural and statistical controls",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L484",
+      "source_location": "L499",
       "_origin": "ast",
       "id": "docs_scientific_method_11_4_structural_and_statistical_controls",
       "community": 18,
@@ -5230,7 +5440,7 @@
       "label": "11.5 Paired-format discrepancy audit and CI gate",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L493",
+      "source_location": "L508",
       "_origin": "ast",
       "id": "docs_scientific_method_11_5_paired_format_discrepancy_audit_and_ci_gate",
       "community": 18,
@@ -5240,7 +5450,7 @@
       "label": "11.5 Executed validation record",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L524",
+      "source_location": "L539",
       "_origin": "ast",
       "id": "docs_scientific_method_11_5_executed_validation_record",
       "community": 18,
@@ -5250,7 +5460,7 @@
       "label": "12. Suggested confidence tiers",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L564",
+      "source_location": "L580",
       "_origin": "ast",
       "id": "docs_scientific_method_12_suggested_confidence_tiers",
       "community": 2,
@@ -5260,7 +5470,7 @@
       "label": "13. Potential methodological extensions",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L579",
+      "source_location": "L595",
       "_origin": "ast",
       "id": "docs_scientific_method_13_potential_methodological_extensions",
       "community": 19,
@@ -5270,7 +5480,7 @@
       "label": "13.1 Probabilistic union restraints",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L581",
+      "source_location": "L597",
       "_origin": "ast",
       "id": "docs_scientific_method_13_1_probabilistic_union_restraints",
       "community": 19,
@@ -5280,7 +5490,7 @@
       "label": "13.2 Ensemble-aware objective",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L585",
+      "source_location": "L601",
       "_origin": "ast",
       "id": "docs_scientific_method_13_2_ensemble_aware_objective",
       "community": 19,
@@ -5290,7 +5500,7 @@
       "label": "13.3 Iterative assignment and folding",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L589",
+      "source_location": "L605",
       "_origin": "ast",
       "id": "docs_scientific_method_13_3_iterative_assignment_and_folding",
       "community": 19,
@@ -5300,7 +5510,7 @@
       "label": "13.4 Information-aware restraint selection",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L599",
+      "source_location": "L615",
       "_origin": "ast",
       "id": "docs_scientific_method_13_4_information_aware_restraint_selection",
       "community": 19,
@@ -5310,7 +5520,7 @@
       "label": "13.5 Broader experimental data",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L603",
+      "source_location": "L619",
       "_origin": "ast",
       "id": "docs_scientific_method_13_5_broader_experimental_data",
       "community": 19,
@@ -5320,7 +5530,7 @@
       "label": "14. Reproducibility and auditability",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L617",
+      "source_location": "L633",
       "_origin": "ast",
       "id": "docs_scientific_method_14_reproducibility_and_auditability",
       "community": 2,
@@ -5330,7 +5540,7 @@
       "label": "15. Questions for NMR expert review before production deployment",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L634",
+      "source_location": "L650",
       "_origin": "ast",
       "id": "docs_scientific_method_15_questions_for_nmr_expert_review_before_production_deployment",
       "community": 2,
@@ -5340,7 +5550,7 @@
       "label": "16. Primary specifications and references",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L649",
+      "source_location": "L665",
       "_origin": "ast",
       "id": "docs_scientific_method_16_primary_specifications_and_references",
       "community": 2,
@@ -5350,7 +5560,7 @@
       "label": "17. Concise algorithm",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L663",
+      "source_location": "L679",
       "_origin": "ast",
       "id": "docs_scientific_method_17_concise_algorithm",
       "community": 2,
@@ -5460,7 +5670,7 @@
       "label": "Docker result",
       "file_type": "document",
       "source_file": "workspace/output/REAL_TEST_6M6O.md",
-      "source_location": "L89",
+      "source_location": "L90",
       "_origin": "ast",
       "id": "output_real_test_6m6o_docker_result",
       "community": 12,
@@ -5470,7 +5680,7 @@
       "label": "Reproduction and audit files",
       "file_type": "document",
       "source_file": "workspace/output/REAL_TEST_6M6O.md",
-      "source_location": "L100",
+      "source_location": "L105",
       "_origin": "ast",
       "id": "output_real_test_6m6o_reproduction_and_audit_files",
       "community": 12,
@@ -5480,7 +5690,7 @@
       "label": "Scientific interpretation and limit",
       "file_type": "document",
       "source_file": "workspace/output/REAL_TEST_6M6O.md",
-      "source_location": "L112",
+      "source_location": "L117",
       "_origin": "ast",
       "id": "output_real_test_6m6o_scientific_interpretation_and_limit",
       "community": 12,
@@ -6189,9 +6399,9 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_topology_atomtopologyvalidationerror",
-      "target": "valueerror",
-      "confidence_score": 1.0
+      "target": "valueerror"
     },
     {
       "relation": "inherits",
@@ -8577,9 +8787,20 @@
       "source_file": "tests/test_atom_topology.py",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_atom_topology",
-      "target": "nmr2boltz_model",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_model"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_constraint_output.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_constraint_output",
+      "target": "nmr2boltz_model"
     },
     {
       "relation": "imports_from",
@@ -8897,6 +9118,16 @@
       "target": "nmr2boltz_model_boltzatom"
     },
     {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/nmr2boltz/output.py",
+      "source_location": "L16",
+      "weight": 0.8,
+      "confidence_score": 0.5,
+      "source": "nmr2boltz_output_sixdecimalfloat",
+      "target": "nmr2boltz_model_boltzatom"
+    },
+    {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -8997,9 +9228,9 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_topology",
-      "target": "nmr2boltz_model_boltzatom",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_model_boltzatom"
     },
     {
       "relation": "references",
@@ -9008,9 +9239,9 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L607",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_topology_atom_topology_violations",
-      "target": "nmr2boltz_model_boltzatom",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_model_boltzatom"
     },
     {
       "relation": "uses",
@@ -9018,9 +9249,9 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L10",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "nmr2boltz_topology_atomtopologyvalidationerror",
-      "target": "nmr2boltz_model_boltzatom",
-      "confidence_score": 0.5
+      "target": "nmr2boltz_model_boltzatom"
     },
     {
       "relation": "uses",
@@ -9028,9 +9259,9 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L10",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "nmr2boltz_topology_atomtopologyviolation",
-      "target": "nmr2boltz_model_boltzatom",
-      "confidence_score": 0.5
+      "target": "nmr2boltz_model_boltzatom"
     },
     {
       "relation": "uses",
@@ -9038,9 +9269,9 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L10",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "nmr2boltz_topology_componenttopology",
-      "target": "nmr2boltz_model_boltzatom",
-      "confidence_score": 0.5
+      "target": "nmr2boltz_model_boltzatom"
     },
     {
       "relation": "uses",
@@ -9048,9 +9279,9 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L10",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "nmr2boltz_topology_topologylibrary",
-      "target": "nmr2boltz_model_boltzatom",
-      "confidence_score": 0.5
+      "target": "nmr2boltz_model_boltzatom"
     },
     {
       "relation": "uses",
@@ -9058,9 +9289,9 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L10",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "nmr2boltz_topology_topologyresolutionerror",
-      "target": "nmr2boltz_model_boltzatom",
-      "confidence_score": 0.5
+      "target": "nmr2boltz_model_boltzatom"
     },
     {
       "relation": "calls",
@@ -9071,6 +9302,17 @@
       "source_location": "L181",
       "weight": 1.0,
       "source": "tests_test_atom_topology_test_final_output_validator_fails_before_writing_invalid_yaml",
+      "target": "nmr2boltz_model_boltzatom"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_constraint_output.py",
+      "source_location": "L147",
+      "weight": 1.0,
+      "source": "tests_test_constraint_output_test_invalid_union_atom_fails_before_any_output_is_written",
       "target": "nmr2boltz_model_boltzatom"
     },
     {
@@ -9263,9 +9505,9 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_topology",
-      "target": "nmr2boltz_model_sequencerecord",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_model_sequencerecord"
     },
     {
       "relation": "uses",
@@ -9273,9 +9515,9 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L10",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "nmr2boltz_topology_atomtopologyvalidationerror",
-      "target": "nmr2boltz_model_sequencerecord",
-      "confidence_score": 0.5
+      "target": "nmr2boltz_model_sequencerecord"
     },
     {
       "relation": "uses",
@@ -9283,9 +9525,9 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L10",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "nmr2boltz_topology_atomtopologyviolation",
-      "target": "nmr2boltz_model_sequencerecord",
-      "confidence_score": 0.5
+      "target": "nmr2boltz_model_sequencerecord"
     },
     {
       "relation": "references",
@@ -9294,9 +9536,9 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L570",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_topology_component_topology_snapshot",
-      "target": "nmr2boltz_model_sequencerecord",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_model_sequencerecord"
     },
     {
       "relation": "uses",
@@ -9304,9 +9546,9 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L10",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "nmr2boltz_topology_componenttopology",
-      "target": "nmr2boltz_model_sequencerecord",
-      "confidence_score": 0.5
+      "target": "nmr2boltz_model_sequencerecord"
     },
     {
       "relation": "references",
@@ -9315,9 +9557,9 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L589",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_topology_mapped_residue_index",
-      "target": "nmr2boltz_model_sequencerecord",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_model_sequencerecord"
     },
     {
       "relation": "uses",
@@ -9325,9 +9567,9 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L10",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "nmr2boltz_topology_topologylibrary",
-      "target": "nmr2boltz_model_sequencerecord",
-      "confidence_score": 0.5
+      "target": "nmr2boltz_model_sequencerecord"
     },
     {
       "relation": "uses",
@@ -9335,9 +9577,9 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L10",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "nmr2boltz_topology_topologyresolutionerror",
-      "target": "nmr2boltz_model_sequencerecord",
-      "confidence_score": 0.5
+      "target": "nmr2boltz_model_sequencerecord"
     },
     {
       "relation": "calls",
@@ -9684,9 +9926,9 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L10",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "nmr2boltz_topology_atomtopologyvalidationerror",
-      "target": "nmr2boltz_model_atomchoice",
-      "confidence_score": 0.5
+      "target": "nmr2boltz_model_atomchoice"
     },
     {
       "relation": "uses",
@@ -9694,9 +9936,9 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L10",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "nmr2boltz_topology_atomtopologyviolation",
-      "target": "nmr2boltz_model_atomchoice",
-      "confidence_score": 0.5
+      "target": "nmr2boltz_model_atomchoice"
     },
     {
       "relation": "uses",
@@ -9767,9 +10009,9 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L10",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "nmr2boltz_topology_atomtopologyvalidationerror",
-      "target": "nmr2boltz_model_atomsetchoice",
-      "confidence_score": 0.5
+      "target": "nmr2boltz_model_atomsetchoice"
     },
     {
       "relation": "uses",
@@ -9777,9 +10019,9 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L10",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "nmr2boltz_topology_atomtopologyviolation",
-      "target": "nmr2boltz_model_atomsetchoice",
-      "confidence_score": 0.5
+      "target": "nmr2boltz_model_atomsetchoice"
     },
     {
       "relation": "uses",
@@ -9875,6 +10117,16 @@
       "target": "nmr2boltz_model_projectedalternative"
     },
     {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/nmr2boltz/output.py",
+      "source_location": "L16",
+      "weight": 0.8,
+      "confidence_score": 0.5,
+      "source": "nmr2boltz_output_sixdecimalfloat",
+      "target": "nmr2boltz_model_projectedalternative"
+    },
+    {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -9935,9 +10187,9 @@
       "source_file": "src/nmr2boltz/project.py",
       "source_location": "L263",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_project_quarantine_invalid_projected_atoms",
-      "target": "nmr2boltz_model_projectedalternative",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_model_projectedalternative"
     },
     {
       "relation": "references",
@@ -10025,6 +10277,16 @@
       "target": "nmr2boltz_model_emittedconstraint"
     },
     {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/nmr2boltz/output.py",
+      "source_location": "L16",
+      "weight": 0.8,
+      "confidence_score": 0.5,
+      "source": "nmr2boltz_output_sixdecimalfloat",
+      "target": "nmr2boltz_model_emittedconstraint"
+    },
+    {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -10096,6 +10358,16 @@
       "weight": 0.8,
       "confidence_score": 0.5,
       "source": "nmr2boltz_output_flowlist",
+      "target": "nmr2boltz_model_ambiguousgroup"
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/nmr2boltz/output.py",
+      "source_location": "L16",
+      "weight": 0.8,
+      "confidence_score": 0.5,
+      "source": "nmr2boltz_output_sixdecimalfloat",
       "target": "nmr2boltz_model_ambiguousgroup"
     },
     {
@@ -10202,9 +10474,9 @@
       "source_file": "src/nmr2boltz/project.py",
       "source_location": "L263",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_project_quarantine_invalid_projected_atoms",
-      "target": "nmr2boltz_model_rejection",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_model_rejection"
     },
     {
       "relation": "method",
@@ -10256,6 +10528,16 @@
       "weight": 0.8,
       "confidence_score": 0.5,
       "source": "nmr2boltz_output_flowlist",
+      "target": "nmr2boltz_model_conversionreport"
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/nmr2boltz/output.py",
+      "source_location": "L16",
+      "weight": 0.8,
+      "confidence_score": 0.5,
+      "source": "nmr2boltz_output_sixdecimalfloat",
       "target": "nmr2boltz_model_conversionreport"
     },
     {
@@ -10392,9 +10674,9 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_topology",
-      "target": "nmr2boltz_model_conversionreport",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_model_conversionreport"
     },
     {
       "relation": "uses",
@@ -10402,9 +10684,9 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L10",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "nmr2boltz_topology_atomtopologyvalidationerror",
-      "target": "nmr2boltz_model_conversionreport",
-      "confidence_score": 0.5
+      "target": "nmr2boltz_model_conversionreport"
     },
     {
       "relation": "uses",
@@ -10412,9 +10694,9 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L10",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "nmr2boltz_topology_atomtopologyviolation",
-      "target": "nmr2boltz_model_conversionreport",
-      "confidence_score": 0.5
+      "target": "nmr2boltz_model_conversionreport"
     },
     {
       "relation": "uses",
@@ -10422,9 +10704,9 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L10",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "nmr2boltz_topology_componenttopology",
-      "target": "nmr2boltz_model_conversionreport",
-      "confidence_score": 0.5
+      "target": "nmr2boltz_model_conversionreport"
     },
     {
       "relation": "references",
@@ -10433,9 +10715,20 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L637",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_topology_emitted_atom_topology_violations",
-      "target": "nmr2boltz_model_conversionreport",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_model_conversionreport"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/nmr2boltz/topology.py",
+      "source_location": "L651",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nmr2boltz_topology_output_atom_topology_violations",
+      "target": "nmr2boltz_model_conversionreport"
     },
     {
       "relation": "references",
@@ -10444,9 +10737,20 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L650",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_topology_require_valid_emitted_atom_topology",
-      "target": "nmr2boltz_model_conversionreport",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_model_conversionreport"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/nmr2boltz/topology.py",
+      "source_location": "L690",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nmr2boltz_topology_require_valid_output_atom_topology",
+      "target": "nmr2boltz_model_conversionreport"
     },
     {
       "relation": "uses",
@@ -10454,9 +10758,9 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L10",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "nmr2boltz_topology_topologylibrary",
-      "target": "nmr2boltz_model_conversionreport",
-      "confidence_score": 0.5
+      "target": "nmr2boltz_model_conversionreport"
     },
     {
       "relation": "uses",
@@ -10464,9 +10768,9 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L10",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "nmr2boltz_topology_topologyresolutionerror",
-      "target": "nmr2boltz_model_conversionreport",
-      "confidence_score": 0.5
+      "target": "nmr2boltz_model_conversionreport"
     },
     {
       "relation": "references",
@@ -10478,6 +10782,17 @@
       "confidence_score": 1.0,
       "source": "tests_test_target_minimal_report",
       "target": "nmr2boltz_model_conversionreport"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/nmr2boltz/output.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nmr2boltz_output",
+      "target": "decimal"
     },
     {
       "relation": "contains",
@@ -10583,11 +10898,41 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/nmr2boltz/output.py",
+      "source_location": "L61",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nmr2boltz_output",
+      "target": "nmr2boltz_output_outward_decimal"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/nmr2boltz/output.py",
       "source_location": "L44",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "nmr2boltz_output",
       "target": "nmr2boltz_output_rounded"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/nmr2boltz/output.py",
+      "source_location": "L47",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nmr2boltz_output",
+      "target": "nmr2boltz_output_six_decimal_float_representer"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/nmr2boltz/output.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nmr2boltz_output",
+      "target": "nmr2boltz_output_sixdecimalfloat"
     },
     {
       "relation": "contains",
@@ -10640,15 +10985,25 @@
       "target": "nmr2boltz_output_write_tsv"
     },
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/nmr2boltz/output.py",
+      "source_location": "L69",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nmr2boltz_output",
+      "target": "nmr2boltz_output_yaml_distance"
+    },
+    {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/nmr2boltz/output.py",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_output",
-      "target": "nmr2boltz_topology",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_topology"
     },
     {
       "relation": "imports",
@@ -10657,9 +11012,20 @@
       "source_file": "src/nmr2boltz/output.py",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_output",
-      "target": "nmr2boltz_topology_require_valid_emitted_atom_topology",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_topology_require_valid_emitted_atom_topology"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/nmr2boltz/output.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nmr2boltz_output",
+      "target": "nmr2boltz_topology_require_valid_output_atom_topology"
     },
     {
       "relation": "imports",
@@ -10679,9 +11045,20 @@
       "source_file": "tests/test_atom_topology.py",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_atom_topology",
-      "target": "nmr2boltz_output",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_output"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_constraint_output.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_constraint_output",
+      "target": "nmr2boltz_output"
     },
     {
       "relation": "imports_from",
@@ -10770,6 +11147,81 @@
       "target": "list"
     },
     {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/nmr2boltz/output.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nmr2boltz_output_rationale_31",
+      "target": "nmr2boltz_output_sixdecimalfloat"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/nmr2boltz/output.py",
+      "source_location": "L47",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nmr2boltz_output_six_decimal_float_representer",
+      "target": "nmr2boltz_output_sixdecimalfloat"
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "src/nmr2boltz/output.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nmr2boltz_output_sixdecimalfloat",
+      "target": "float"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/nmr2boltz/output.py",
+      "source_location": "L33",
+      "weight": 1.0,
+      "context": "return_type",
+      "confidence_score": 1.0,
+      "source": "nmr2boltz_output_sixdecimalfloat_new",
+      "target": "nmr2boltz_output_sixdecimalfloat"
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/nmr2boltz/output.py",
+      "source_location": "L69",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nmr2boltz_output_yaml_distance",
+      "target": "nmr2boltz_output_sixdecimalfloat"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/nmr2boltz/output.py",
+      "source_location": "L33",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nmr2boltz_output_sixdecimalfloat_new",
+      "target": "decimal"
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/nmr2boltz/output.py",
+      "source_location": "L61",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nmr2boltz_output_outward_decimal",
+      "target": "decimal"
+    },
+    {
       "relation": "references",
       "context": "return_type",
       "confidence": "EXTRACTED",
@@ -10792,6 +11244,28 @@
       "target": "safedumper"
     },
     {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/nmr2boltz/output.py",
+      "source_location": "L47",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nmr2boltz_output_six_decimal_float_representer",
+      "target": "safedumper"
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/nmr2boltz/output.py",
+      "source_location": "L47",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nmr2boltz_output_six_decimal_float_representer",
+      "target": "node"
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -10812,6 +11286,28 @@
       "confidence_score": 1.0,
       "source": "nmr2boltz_output_union_payload",
       "target": "nmr2boltz_output_atom_list"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/nmr2boltz/output.py",
+      "source_location": "L66",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nmr2boltz_output_rounded",
+      "target": "nmr2boltz_output_outward_decimal"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/nmr2boltz/output.py",
+      "source_location": "L70",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nmr2boltz_output_yaml_distance",
+      "target": "nmr2boltz_output_outward_decimal"
     },
     {
       "relation": "calls",
@@ -10867,6 +11363,28 @@
       "weight": 1.0,
       "source": "validation_stress_validation_validate_outward_rounding",
       "target": "nmr2boltz_output_rounded"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/nmr2boltz/output.py",
+      "source_location": "L80",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nmr2boltz_output_constraint_payload",
+      "target": "nmr2boltz_output_yaml_distance"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/nmr2boltz/output.py",
+      "source_location": "L325",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nmr2boltz_output_union_payload",
+      "target": "nmr2boltz_output_yaml_distance"
     },
     {
       "relation": "calls",
@@ -10985,9 +11503,20 @@
       "source_file": "src/nmr2boltz/output.py",
       "source_location": "L85",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_output_write_outputs",
-      "target": "nmr2boltz_topology_require_valid_emitted_atom_topology",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_topology_require_valid_emitted_atom_topology"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/nmr2boltz/output.py",
+      "source_location": "L109",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nmr2boltz_output_write_outputs",
+      "target": "nmr2boltz_topology_require_valid_output_atom_topology"
     },
     {
       "relation": "calls",
@@ -11009,6 +11538,72 @@
       "source_location": "L205",
       "weight": 1.0,
       "source": "tests_test_atom_topology_test_rejection_provenance_and_yaml_atom_membership_are_deterministic",
+      "target": "nmr2boltz_output_write_outputs"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_constraint_output.py",
+      "source_location": "L84",
+      "weight": 1.0,
+      "source": "tests_test_constraint_output_test_empty_constraint_files_are_explicit_empty_lists",
+      "target": "nmr2boltz_output_write_outputs"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_constraint_output.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "tests_test_constraint_output_test_exact_and_union_files_have_disjoint_minimal_schemas",
+      "target": "nmr2boltz_output_write_outputs"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_constraint_output.py",
+      "source_location": "L116",
+      "weight": 1.0,
+      "source": "tests_test_constraint_output_test_exact_bounds_use_outward_six_decimal_format",
+      "target": "nmr2boltz_output_write_outputs"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_constraint_output.py",
+      "source_location": "L151",
+      "weight": 1.0,
+      "source": "tests_test_constraint_output_test_invalid_union_atom_fails_before_any_output_is_written",
+      "target": "nmr2boltz_output_write_outputs"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_constraint_output.py",
+      "source_location": "L130",
+      "weight": 1.0,
+      "source": "tests_test_constraint_output_test_union_order_is_deterministic_and_old_outputs_are_removed",
+      "target": "nmr2boltz_output_write_outputs"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_constraint_output.py",
+      "source_location": "L97",
+      "weight": 1.0,
+      "source": "tests_test_constraint_output_test_union_preserves_per_alternative_bounds_with_outward_six_decimal_format",
       "target": "nmr2boltz_output_write_outputs"
     },
     {
@@ -11164,9 +11759,9 @@
       "source_file": "src/nmr2boltz/project.py",
       "source_location": "L263",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_project",
-      "target": "nmr2boltz_project_quarantine_invalid_projected_atoms",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_project_quarantine_invalid_projected_atoms"
     },
     {
       "relation": "contains",
@@ -11239,9 +11834,9 @@
       "source_file": "src/nmr2boltz/project.py",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_project",
-      "target": "nmr2boltz_topology_atom_topology_violations",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_topology_atom_topology_violations"
     },
     {
       "relation": "imports",
@@ -11250,9 +11845,9 @@
       "source_file": "src/nmr2boltz/project.py",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_project",
-      "target": "nmr2boltz_topology_component_topology_snapshot",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_topology_component_topology_snapshot"
     },
     {
       "relation": "imports",
@@ -11261,9 +11856,9 @@
       "source_file": "src/nmr2boltz/project.py",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_project",
-      "target": "nmr2boltz_topology_mapped_residue_index",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_topology_mapped_residue_index"
     },
     {
       "relation": "imports",
@@ -11272,9 +11867,9 @@
       "source_file": "src/nmr2boltz/project.py",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_project",
-      "target": "nmr2boltz_topology_require_valid_emitted_atom_topology",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_topology_require_valid_emitted_atom_topology"
     },
     {
       "relation": "imports",
@@ -11305,9 +11900,20 @@
       "source_file": "tests/test_atom_topology.py",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_atom_topology",
-      "target": "nmr2boltz_project",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_project"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_constraint_output.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_constraint_output",
+      "target": "nmr2boltz_project"
     },
     {
       "relation": "imports_from",
@@ -11477,6 +12083,17 @@
       "source_location": "L72",
       "weight": 1.0,
       "source": "tests_test_atom_topology_project",
+      "target": "nmr2boltz_project_projectionsettings"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_constraint_output.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "tests_test_constraint_output_report",
       "target": "nmr2boltz_project_projectionsettings"
     },
     {
@@ -11792,9 +12409,9 @@
       "source_file": "src/nmr2boltz/project.py",
       "source_location": "L143",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_project_project_document",
-      "target": "nmr2boltz_project_quarantine_invalid_projected_atoms",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_project_quarantine_invalid_projected_atoms"
     },
     {
       "relation": "calls",
@@ -11825,9 +12442,9 @@
       "source_file": "src/nmr2boltz/project.py",
       "source_location": "L114",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_project_project_document",
-      "target": "nmr2boltz_topology_component_topology_snapshot",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_topology_component_topology_snapshot"
     },
     {
       "relation": "calls",
@@ -11836,9 +12453,9 @@
       "source_file": "src/nmr2boltz/project.py",
       "source_location": "L113",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_project_project_document",
-      "target": "nmr2boltz_topology_mapped_residue_index",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_topology_mapped_residue_index"
     },
     {
       "relation": "calls",
@@ -11847,9 +12464,9 @@
       "source_file": "src/nmr2boltz/project.py",
       "source_location": "L259",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_project_project_document",
-      "target": "nmr2boltz_topology_require_valid_emitted_atom_topology",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_topology_require_valid_emitted_atom_topology"
     },
     {
       "relation": "references",
@@ -11871,6 +12488,17 @@
       "source_location": "L68",
       "weight": 1.0,
       "source": "tests_test_atom_topology_project",
+      "target": "nmr2boltz_project_project_document"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_constraint_output.py",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "tests_test_constraint_output_report",
       "target": "nmr2boltz_project_project_document"
     },
     {
@@ -12023,9 +12651,9 @@
       "source_file": "src/nmr2boltz/project.py",
       "source_location": "L274",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_project_quarantine_invalid_projected_atoms",
-      "target": "nmr2boltz_topology_atom_topology_violations",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_topology_atom_topology_violations"
     },
     {
       "relation": "rationale_for",
@@ -12033,9 +12661,9 @@
       "source_file": "src/nmr2boltz/project.py",
       "source_location": "L269",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_project_rationale_269",
-      "target": "nmr2boltz_project_quarantine_invalid_projected_atoms",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_project_quarantine_invalid_projected_atoms"
     },
     {
       "relation": "references",
@@ -12065,9 +12693,9 @@
       "source_file": "src/nmr2boltz/project.py",
       "source_location": "L567",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_project_rationale_567",
-      "target": "nmr2boltz_project_merge_or_alternatives",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_project_merge_or_alternatives"
     },
     {
       "relation": "calls",
@@ -12097,9 +12725,9 @@
       "source_file": "src/nmr2boltz/project.py",
       "source_location": "L600",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_project_rationale_600",
-      "target": "nmr2boltz_project_merge_independent_constraints",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_project_merge_independent_constraints"
     },
     {
       "relation": "calls",
@@ -12373,9 +13001,20 @@
       "source_file": "tests/test_atom_topology.py",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_atom_topology",
-      "target": "nmr2boltz_star",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_star"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_constraint_output.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_constraint_output",
+      "target": "nmr2boltz_star"
     },
     {
       "relation": "imports_from",
@@ -12905,9 +13544,9 @@
       "source_file": "tests/test_atom_topology.py",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_atom_topology_document",
-      "target": "nmr2boltz_star_parsedstardocument",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_star_parsedstardocument"
     },
     {
       "relation": "references",
@@ -12916,9 +13555,9 @@
       "source_file": "tests/test_atom_topology.py",
       "source_location": "L67",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_atom_topology_project",
-      "target": "nmr2boltz_star_parsedstardocument",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_star_parsedstardocument"
     },
     {
       "relation": "calls",
@@ -12984,6 +13623,17 @@
       "source_location": "L219",
       "weight": 1.0,
       "source": "tests_test_atom_topology_test_deposited_corpus_atom_defects_are_quarantined",
+      "target": "nmr2boltz_star_parse_star_document"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_constraint_output.py",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "tests_test_constraint_output_report",
       "target": "nmr2boltz_star_parse_star_document"
     },
     {
@@ -13680,9 +14330,9 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L607",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_topology",
-      "target": "nmr2boltz_topology_atom_topology_violations",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_topology_atom_topology_violations"
     },
     {
       "relation": "contains",
@@ -13690,9 +14340,9 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_topology",
-      "target": "nmr2boltz_topology_atomtopologyvalidationerror",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_topology_atomtopologyvalidationerror"
     },
     {
       "relation": "contains",
@@ -13700,9 +14350,9 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L35",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_topology",
-      "target": "nmr2boltz_topology_atomtopologyviolation",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_topology_atomtopologyviolation"
     },
     {
       "relation": "contains",
@@ -13730,9 +14380,9 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L570",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_topology",
-      "target": "nmr2boltz_topology_component_topology_snapshot",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_topology_component_topology_snapshot"
     },
     {
       "relation": "contains",
@@ -13750,9 +14400,9 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L637",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_topology",
-      "target": "nmr2boltz_topology_emitted_atom_topology_violations",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_topology_emitted_atom_topology_violations"
     },
     {
       "relation": "contains",
@@ -13790,9 +14440,9 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L589",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_topology",
-      "target": "nmr2boltz_topology_mapped_residue_index",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_topology_mapped_residue_index"
     },
     {
       "relation": "contains",
@@ -13818,6 +14468,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/nmr2boltz/topology.py",
+      "source_location": "L651",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nmr2boltz_topology",
+      "target": "nmr2boltz_topology_output_atom_topology_violations"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L178",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -13830,9 +14490,19 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L650",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_topology",
-      "target": "nmr2boltz_topology_require_valid_emitted_atom_topology",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_topology_require_valid_emitted_atom_topology"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/nmr2boltz/topology.py",
+      "source_location": "L690",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nmr2boltz_topology",
+      "target": "nmr2boltz_topology_require_valid_output_atom_topology"
     },
     {
       "relation": "contains",
@@ -13861,9 +14531,20 @@
       "source_file": "tests/test_atom_topology.py",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_atom_topology",
-      "target": "nmr2boltz_topology",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_topology"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_constraint_output.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_constraint_output",
+      "target": "nmr2boltz_topology"
     },
     {
       "relation": "imports_from",
@@ -14056,19 +14737,19 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L599",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_topology_mapped_residue_index",
-      "target": "nmr2boltz_topology_atomtopologyvalidationerror",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_topology_atomtopologyvalidationerror"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L31",
+      "source_location": "L32",
       "weight": 1.0,
-      "source": "nmr2boltz_topology_rationale_31",
-      "target": "nmr2boltz_topology_atomtopologyvalidationerror",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "nmr2boltz_topology_rationale_32",
+      "target": "nmr2boltz_topology_atomtopologyvalidationerror"
     },
     {
       "relation": "calls",
@@ -14077,9 +14758,20 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L662",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_topology_require_valid_emitted_atom_topology",
-      "target": "nmr2boltz_topology_atomtopologyvalidationerror",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_topology_atomtopologyvalidationerror"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/nmr2boltz/topology.py",
+      "source_location": "L702",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nmr2boltz_topology_require_valid_output_atom_topology",
+      "target": "nmr2boltz_topology_atomtopologyvalidationerror"
     },
     {
       "relation": "references",
@@ -14088,9 +14780,9 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L607",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_topology_atom_topology_violations",
-      "target": "nmr2boltz_topology_atomtopologyviolation",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_topology_atomtopologyviolation"
     },
     {
       "relation": "method",
@@ -14098,9 +14790,9 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L41",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_topology_atomtopologyviolation",
-      "target": "nmr2boltz_topology_atomtopologyviolation_to_dict",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_topology_atomtopologyviolation_to_dict"
     },
     {
       "relation": "references",
@@ -14109,9 +14801,20 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L637",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_topology_emitted_atom_topology_violations",
-      "target": "nmr2boltz_topology_atomtopologyviolation",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_topology_atomtopologyviolation"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "src/nmr2boltz/topology.py",
+      "source_location": "L651",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nmr2boltz_topology_output_atom_topology_violations",
+      "target": "nmr2boltz_topology_atomtopologyviolation"
     },
     {
       "relation": "references",
@@ -14323,9 +15026,9 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L584",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_topology_component_topology_snapshot",
-      "target": "nmr2boltz_topology_componenttopology_available_atoms",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_topology_componenttopology_available_atoms"
     },
     {
       "relation": "calls",
@@ -14455,9 +15158,9 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L570",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_topology_component_topology_snapshot",
-      "target": "nmr2boltz_topology_topologylibrary",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_topology_topologylibrary"
     },
     {
       "relation": "method",
@@ -14546,9 +15249,9 @@
       "source_file": "tests/test_atom_topology.py",
       "source_location": "L67",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_atom_topology_project",
-      "target": "nmr2boltz_topology_topologylibrary",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_topology_topologylibrary"
     },
     {
       "relation": "calls",
@@ -14557,9 +15260,20 @@
       "source_file": "tests/test_atom_topology.py",
       "source_location": "L143",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_atom_topology_test_available_modified_ligand_and_ion_topology_emits",
-      "target": "nmr2boltz_topology_topologylibrary",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_topology_topologylibrary"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_constraint_output.py",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "tests_test_constraint_output_report",
+      "target": "nmr2boltz_topology_topologylibrary"
     },
     {
       "relation": "calls",
@@ -14950,9 +15664,9 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L616",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_topology_atom_topology_violations",
-      "target": "nmr2boltz_topology_topologylibrary_get",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_topology_topologylibrary_get"
     },
     {
       "relation": "calls",
@@ -14961,9 +15675,9 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L580",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_topology_component_topology_snapshot",
-      "target": "nmr2boltz_topology_topologylibrary_get",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_topology_topologylibrary_get"
     },
     {
       "relation": "calls",
@@ -14972,9 +15686,9 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L597",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_topology_mapped_residue_index",
-      "target": "nmr2boltz_topology_topologylibrary_get",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_topology_topologylibrary_get"
     },
     {
       "relation": "calls",
@@ -15035,11 +15749,11 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L573",
+      "source_location": "L574",
       "weight": 1.0,
-      "source": "nmr2boltz_topology_rationale_573",
-      "target": "nmr2boltz_topology_component_topology_snapshot",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "nmr2boltz_topology_rationale_574",
+      "target": "nmr2boltz_topology_component_topology_snapshot"
     },
     {
       "relation": "calls",
@@ -15048,19 +15762,30 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L638",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_topology_emitted_atom_topology_violations",
-      "target": "nmr2boltz_topology_mapped_residue_index",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_topology_mapped_residue_index"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/nmr2boltz/topology.py",
+      "source_location": "L653",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nmr2boltz_topology_output_atom_topology_violations",
+      "target": "nmr2boltz_topology_mapped_residue_index"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L592",
+      "source_location": "L593",
       "weight": 1.0,
-      "source": "nmr2boltz_topology_rationale_592",
-      "target": "nmr2boltz_topology_mapped_residue_index",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "nmr2boltz_topology_rationale_593",
+      "target": "nmr2boltz_topology_mapped_residue_index"
     },
     {
       "relation": "calls",
@@ -15069,19 +15794,30 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L639",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_topology_emitted_atom_topology_violations",
-      "target": "nmr2boltz_topology_atom_topology_violations",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_topology_atom_topology_violations"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/nmr2boltz/topology.py",
+      "source_location": "L654",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nmr2boltz_topology_output_atom_topology_violations",
+      "target": "nmr2boltz_topology_atom_topology_violations"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L613",
+      "source_location": "L614",
       "weight": 1.0,
-      "source": "nmr2boltz_topology_rationale_613",
-      "target": "nmr2boltz_topology_atom_topology_violations",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "nmr2boltz_topology_rationale_614",
+      "target": "nmr2boltz_topology_atom_topology_violations"
     },
     {
       "relation": "calls",
@@ -15090,9 +15826,9 @@
       "source_file": "src/nmr2boltz/topology.py",
       "source_location": "L652",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nmr2boltz_topology_require_valid_emitted_atom_topology",
-      "target": "nmr2boltz_topology_emitted_atom_topology_violations",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_topology_emitted_atom_topology_violations"
     },
     {
       "relation": "calls",
@@ -15153,11 +15889,42 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "src/nmr2boltz/topology.py",
-      "source_location": "L651",
+      "source_location": "L652",
       "weight": 1.0,
-      "source": "nmr2boltz_topology_rationale_651",
-      "target": "nmr2boltz_topology_require_valid_emitted_atom_topology",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "nmr2boltz_topology_rationale_652",
+      "target": "nmr2boltz_topology_output_atom_topology_violations"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/nmr2boltz/topology.py",
+      "source_location": "L692",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nmr2boltz_topology_require_valid_output_atom_topology",
+      "target": "nmr2boltz_topology_output_atom_topology_violations"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/nmr2boltz/topology.py",
+      "source_location": "L674",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nmr2boltz_topology_rationale_674",
+      "target": "nmr2boltz_topology_require_valid_emitted_atom_topology"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/nmr2boltz/topology.py",
+      "source_location": "L691",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nmr2boltz_topology_rationale_691",
+      "target": "nmr2boltz_topology_require_valid_output_atom_topology"
     },
     {
       "relation": "contains",
@@ -15165,9 +15932,9 @@
       "source_file": "tests/test_atom_topology.py",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_atom_topology",
-      "target": "tests_test_atom_topology_document",
-      "confidence_score": 1.0
+      "target": "tests_test_atom_topology_document"
     },
     {
       "relation": "contains",
@@ -15175,9 +15942,9 @@
       "source_file": "tests/test_atom_topology.py",
       "source_location": "L67",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_atom_topology",
-      "target": "tests_test_atom_topology_project",
-      "confidence_score": 1.0
+      "target": "tests_test_atom_topology_project"
     },
     {
       "relation": "contains",
@@ -15185,9 +15952,9 @@
       "source_file": "tests/test_atom_topology.py",
       "source_location": "L142",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_atom_topology",
-      "target": "tests_test_atom_topology_test_available_modified_ligand_and_ion_topology_emits",
-      "confidence_score": 1.0
+      "target": "tests_test_atom_topology_test_available_modified_ligand_and_ion_topology_emits"
     },
     {
       "relation": "contains",
@@ -15195,9 +15962,9 @@
       "source_file": "tests/test_atom_topology.py",
       "source_location": "L215",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_atom_topology",
-      "target": "tests_test_atom_topology_test_deposited_corpus_atom_defects_are_quarantined",
-      "confidence_score": 1.0
+      "target": "tests_test_atom_topology_test_deposited_corpus_atom_defects_are_quarantined"
     },
     {
       "relation": "contains",
@@ -15205,9 +15972,9 @@
       "source_file": "tests/test_atom_topology.py",
       "source_location": "L175",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_atom_topology",
-      "target": "tests_test_atom_topology_test_final_output_validator_fails_before_writing_invalid_yaml",
-      "confidence_score": 1.0
+      "target": "tests_test_atom_topology_test_final_output_validator_fails_before_writing_invalid_yaml"
     },
     {
       "relation": "contains",
@@ -15215,9 +15982,9 @@
       "source_file": "tests/test_atom_topology.py",
       "source_location": "L76",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_atom_topology",
-      "target": "tests_test_atom_topology_test_glutamine_zinc_atom_is_quarantined_with_complete_provenance",
-      "confidence_score": 1.0
+      "target": "tests_test_atom_topology_test_glutamine_zinc_atom_is_quarantined_with_complete_provenance"
     },
     {
       "relation": "contains",
@@ -15225,9 +15992,9 @@
       "source_file": "tests/test_atom_topology.py",
       "source_location": "L110",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_atom_topology",
-      "target": "tests_test_atom_topology_test_protein_residue_rejects_projected_nucleotide_atoms",
-      "confidence_score": 1.0
+      "target": "tests_test_atom_topology_test_protein_residue_rejects_projected_nucleotide_atoms"
     },
     {
       "relation": "contains",
@@ -15235,9 +16002,9 @@
       "source_file": "tests/test_atom_topology.py",
       "source_location": "L189",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_atom_topology",
-      "target": "tests_test_atom_topology_test_rejection_provenance_and_yaml_atom_membership_are_deterministic",
-      "confidence_score": 1.0
+      "target": "tests_test_atom_topology_test_rejection_provenance_and_yaml_atom_membership_are_deterministic"
     },
     {
       "relation": "contains",
@@ -15245,9 +16012,9 @@
       "source_file": "tests/test_atom_topology.py",
       "source_location": "L126",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_atom_topology",
-      "target": "tests_test_atom_topology_test_standard_amino_acid_and_nucleotide_heavy_atoms_still_emit",
-      "confidence_score": 1.0
+      "target": "tests_test_atom_topology_test_standard_amino_acid_and_nucleotide_heavy_atoms_still_emit"
     },
     {
       "relation": "contains",
@@ -15255,9 +16022,9 @@
       "source_file": "tests/test_atom_topology.py",
       "source_location": "L159",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_atom_topology",
-      "target": "tests_test_atom_topology_test_unknown_component_topology_fails_closed",
-      "confidence_score": 1.0
+      "target": "tests_test_atom_topology_test_unknown_component_topology_fails_closed"
     },
     {
       "relation": "calls",
@@ -15266,9 +16033,9 @@
       "source_file": "tests/test_atom_topology.py",
       "source_location": "L148",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_atom_topology_test_available_modified_ligand_and_ion_topology_emits",
-      "target": "tests_test_atom_topology_document",
-      "confidence_score": 1.0
+      "target": "tests_test_atom_topology_document"
     },
     {
       "relation": "calls",
@@ -15277,9 +16044,9 @@
       "source_file": "tests/test_atom_topology.py",
       "source_location": "L176",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_atom_topology_test_final_output_validator_fails_before_writing_invalid_yaml",
-      "target": "tests_test_atom_topology_document",
-      "confidence_score": 1.0
+      "target": "tests_test_atom_topology_document"
     },
     {
       "relation": "calls",
@@ -15288,9 +16055,9 @@
       "source_file": "tests/test_atom_topology.py",
       "source_location": "L77",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_atom_topology_test_glutamine_zinc_atom_is_quarantined_with_complete_provenance",
-      "target": "tests_test_atom_topology_document",
-      "confidence_score": 1.0
+      "target": "tests_test_atom_topology_document"
     },
     {
       "relation": "calls",
@@ -15299,9 +16066,9 @@
       "source_file": "tests/test_atom_topology.py",
       "source_location": "L111",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_atom_topology_test_protein_residue_rejects_projected_nucleotide_atoms",
-      "target": "tests_test_atom_topology_document",
-      "confidence_score": 1.0
+      "target": "tests_test_atom_topology_document"
     },
     {
       "relation": "calls",
@@ -15310,9 +16077,9 @@
       "source_file": "tests/test_atom_topology.py",
       "source_location": "L190",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_atom_topology_test_rejection_provenance_and_yaml_atom_membership_are_deterministic",
-      "target": "tests_test_atom_topology_document",
-      "confidence_score": 1.0
+      "target": "tests_test_atom_topology_document"
     },
     {
       "relation": "calls",
@@ -15321,9 +16088,9 @@
       "source_file": "tests/test_atom_topology.py",
       "source_location": "L127",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_atom_topology_test_standard_amino_acid_and_nucleotide_heavy_atoms_still_emit",
-      "target": "tests_test_atom_topology_document",
-      "confidence_score": 1.0
+      "target": "tests_test_atom_topology_document"
     },
     {
       "relation": "calls",
@@ -15332,9 +16099,9 @@
       "source_file": "tests/test_atom_topology.py",
       "source_location": "L160",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_atom_topology_test_unknown_component_topology_fails_closed",
-      "target": "tests_test_atom_topology_document",
-      "confidence_score": 1.0
+      "target": "tests_test_atom_topology_document"
     },
     {
       "relation": "calls",
@@ -15343,9 +16110,9 @@
       "source_file": "tests/test_atom_topology.py",
       "source_location": "L153",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_atom_topology_test_available_modified_ligand_and_ion_topology_emits",
-      "target": "tests_test_atom_topology_project",
-      "confidence_score": 1.0
+      "target": "tests_test_atom_topology_project"
     },
     {
       "relation": "calls",
@@ -15354,9 +16121,9 @@
       "source_file": "tests/test_atom_topology.py",
       "source_location": "L219",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_atom_topology_test_deposited_corpus_atom_defects_are_quarantined",
-      "target": "tests_test_atom_topology_project",
-      "confidence_score": 1.0
+      "target": "tests_test_atom_topology_project"
     },
     {
       "relation": "calls",
@@ -15365,9 +16132,9 @@
       "source_file": "tests/test_atom_topology.py",
       "source_location": "L180",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_atom_topology_test_final_output_validator_fails_before_writing_invalid_yaml",
-      "target": "tests_test_atom_topology_project",
-      "confidence_score": 1.0
+      "target": "tests_test_atom_topology_project"
     },
     {
       "relation": "calls",
@@ -15376,9 +16143,9 @@
       "source_file": "tests/test_atom_topology.py",
       "source_location": "L82",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_atom_topology_test_glutamine_zinc_atom_is_quarantined_with_complete_provenance",
-      "target": "tests_test_atom_topology_project",
-      "confidence_score": 1.0
+      "target": "tests_test_atom_topology_project"
     },
     {
       "relation": "calls",
@@ -15387,9 +16154,9 @@
       "source_file": "tests/test_atom_topology.py",
       "source_location": "L116",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_atom_topology_test_protein_residue_rejects_projected_nucleotide_atoms",
-      "target": "tests_test_atom_topology_project",
-      "confidence_score": 1.0
+      "target": "tests_test_atom_topology_project"
     },
     {
       "relation": "calls",
@@ -15398,9 +16165,9 @@
       "source_file": "tests/test_atom_topology.py",
       "source_location": "L194",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_atom_topology_test_rejection_provenance_and_yaml_atom_membership_are_deterministic",
-      "target": "tests_test_atom_topology_project",
-      "confidence_score": 1.0
+      "target": "tests_test_atom_topology_project"
     },
     {
       "relation": "calls",
@@ -15409,9 +16176,9 @@
       "source_file": "tests/test_atom_topology.py",
       "source_location": "L135",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_atom_topology_test_standard_amino_acid_and_nucleotide_heavy_atoms_still_emit",
-      "target": "tests_test_atom_topology_project",
-      "confidence_score": 1.0
+      "target": "tests_test_atom_topology_project"
     },
     {
       "relation": "calls",
@@ -15420,9 +16187,9 @@
       "source_file": "tests/test_atom_topology.py",
       "source_location": "L165",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_atom_topology_test_unknown_component_topology_fails_closed",
-      "target": "tests_test_atom_topology_project",
-      "confidence_score": 1.0
+      "target": "tests_test_atom_topology_project"
     },
     {
       "relation": "contains",
@@ -15507,6 +16274,163 @@
       "confidence_score": 1.0,
       "source": "tests_test_benchmark_test_benchmark_manifest_runs_conversion_and_writes_auditable_summary",
       "target": "tests_test_benchmark_manifest"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_constraint_output.py",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_constraint_output",
+      "target": "tests_test_constraint_output_all_keys"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_constraint_output.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_constraint_output",
+      "target": "tests_test_constraint_output_report"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_constraint_output.py",
+      "source_location": "L79",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_constraint_output",
+      "target": "tests_test_constraint_output_test_empty_constraint_files_are_explicit_empty_lists"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_constraint_output.py",
+      "source_location": "L50",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_constraint_output",
+      "target": "tests_test_constraint_output_test_exact_and_union_files_have_disjoint_minimal_schemas"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_constraint_output.py",
+      "source_location": "L113",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_constraint_output",
+      "target": "tests_test_constraint_output_test_exact_bounds_use_outward_six_decimal_format"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_constraint_output.py",
+      "source_location": "L145",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_constraint_output",
+      "target": "tests_test_constraint_output_test_invalid_union_atom_fails_before_any_output_is_written"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_constraint_output.py",
+      "source_location": "L123",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_constraint_output",
+      "target": "tests_test_constraint_output_test_union_order_is_deterministic_and_old_outputs_are_removed"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_constraint_output.py",
+      "source_location": "L90",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_constraint_output",
+      "target": "tests_test_constraint_output_test_union_preserves_per_alternative_bounds_with_outward_six_decimal_format"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_constraint_output.py",
+      "source_location": "L80",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_constraint_output_test_empty_constraint_files_are_explicit_empty_lists",
+      "target": "tests_test_constraint_output_report"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_constraint_output.py",
+      "source_location": "L51",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_constraint_output_test_exact_and_union_files_have_disjoint_minimal_schemas",
+      "target": "tests_test_constraint_output_report"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_constraint_output.py",
+      "source_location": "L114",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_constraint_output_test_exact_bounds_use_outward_six_decimal_format",
+      "target": "tests_test_constraint_output_report"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_constraint_output.py",
+      "source_location": "L146",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_constraint_output_test_invalid_union_atom_fails_before_any_output_is_written",
+      "target": "tests_test_constraint_output_report"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_constraint_output.py",
+      "source_location": "L124",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_constraint_output_test_union_order_is_deterministic_and_old_outputs_are_removed",
+      "target": "tests_test_constraint_output_report"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_constraint_output.py",
+      "source_location": "L91",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_constraint_output_test_union_preserves_per_alternative_bounds_with_outward_six_decimal_format",
+      "target": "tests_test_constraint_output_report"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_constraint_output.py",
+      "source_location": "L76",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_constraint_output_test_exact_and_union_files_have_disjoint_minimal_schemas",
+      "target": "tests_test_constraint_output_all_keys"
     },
     {
       "relation": "contains",
@@ -17315,9 +18239,9 @@
       "source_file": "validation/benchmark_corpus.py",
       "source_location": "L355",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "validation_benchmark_corpus_rationale_355",
-      "target": "validation_benchmark_corpus_metric_snapshot",
-      "confidence_score": 1.0
+      "target": "validation_benchmark_corpus_metric_snapshot"
     },
     {
       "relation": "calls",
@@ -17347,9 +18271,9 @@
       "source_file": "validation/benchmark_corpus.py",
       "source_location": "L390",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "validation_benchmark_corpus_rationale_390",
-      "target": "validation_benchmark_corpus_missing_coordinate_review",
-      "confidence_score": 1.0
+      "target": "validation_benchmark_corpus_missing_coordinate_review"
     },
     {
       "relation": "calls",
@@ -19968,7 +20892,7 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "docs_integration_guide_boltzui_integration_guide",
-      "target": "docs_integration_guide_current_patched_schema"
+      "target": "docs_integration_guide_exact_contact_schema"
     },
     {
       "relation": "contains",
@@ -20246,9 +21170,9 @@
       "source_file": "docs/SCIENTIFIC_METHOD.md",
       "source_location": "L213",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_scientific_method_scientific_and_computational_method_for_projecting_proton_nmr_distance_restraints_onto_boltz_heavy_atom_contacts",
-      "target": "docs_scientific_method_5_3_fail_closed_atom_membership",
-      "confidence_score": 1.0
+      "target": "docs_scientific_method_5_3_fail_closed_atom_membership"
     },
     {
       "relation": "contains",
@@ -20256,9 +21180,9 @@
       "source_file": "docs/SCIENTIFIC_METHOD.md",
       "source_location": "L230",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_scientific_method_scientific_and_computational_method_for_projecting_proton_nmr_distance_restraints_onto_boltz_heavy_atom_contacts",
-      "target": "docs_scientific_method_5_4_x_h_upper_envelopes",
-      "confidence_score": 1.0
+      "target": "docs_scientific_method_5_4_x_h_upper_envelopes"
     },
     {
       "relation": "contains",
@@ -20266,9 +21190,9 @@
       "source_file": "docs/SCIENTIFIC_METHOD.md",
       "source_location": "L257",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_scientific_method_scientific_and_computational_method_for_projecting_proton_nmr_distance_restraints_onto_boltz_heavy_atom_contacts",
-      "target": "docs_scientific_method_5_5_isotopes_and_exchangeable_protons",
-      "confidence_score": 1.0
+      "target": "docs_scientific_method_5_5_isotopes_and_exchangeable_protons"
     },
     {
       "relation": "contains",
@@ -20682,5 +21606,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "30bff09b17ec201a1a1aa11b27b156e3f9e650ce"
+  "built_at_commit": "67f094d7079d4a58d871c3661de6e6017d333efa"
 }

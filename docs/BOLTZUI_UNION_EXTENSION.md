@@ -131,7 +131,7 @@ For each union group, display:
 
 Provide three import modes:
 
-1. **safe only**: import `boltz_constraints.yaml`;
+1. **exact only**: import `atom_constraints_exact.yaml`;
 2. **safe + unions**: import union groups using the new schema;
 3. **hypothesis batch**: create one Boltz job per sampled assignment hypothesis.
 
@@ -182,7 +182,7 @@ Until this extension exists, `nmr2boltz --hypotheses N` is the safest compatible
 2. Route alternatives to the shared `union_index` in the potential layer.
 3. Explicitly disable binary token-contact conditioning for union groups.
 4. Add unit and synthetic energy tests.
-5. Add CLI/import support for `proposed_atom_contact_unions.yaml`.
+5. Add CLI/import support for `atom_constraints_union.yaml`.
 6. Add UI editing and provenance.
 7. Evaluate `union_lambda` and potential strength on blinded NMR-guided folding cases.
 8. Consider weighted priors only after the unweighted behavior is stable.
