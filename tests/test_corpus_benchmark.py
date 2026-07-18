@@ -14,6 +14,7 @@ from validation.benchmark_corpus import (
 from validation.discrepancy_audit import (
     _rejected_geometric_pseudoatom,
     _stereo_assignment_vs_physical_set,
+    _strictly_equivalent,
     _verified_canonical_alias,
     _wildcard_set_vs_explicit_or,
     audit_reports,
@@ -242,6 +243,49 @@ def test_verified_alias_predicate_requires_identical_physical_or_structure():
 
     assert _verified_canonical_alias(hn, h)
     assert not _verified_canonical_alias(hn, different)
+
+
+def test_semantic_equivalence_accepts_topology_proven_canonical_reconstruction():
+    nef_set = _semantic(
+        {"explicit_atom_or_alias", "physical_atom_set"},
+        [{"HA--HB2", "HA--HB3"}],
+        raw="HA--HB%",
+    )
+    star_set = _semantic(
+        {"explicit_atom_or_alias", "physical_atom_set"},
+        [{"HA--HB2", "HA--HB3"}],
+        raw="HA--HB[HB2,HB3]",
+    )
+
+    assert _strictly_equivalent(nef_set, star_set)
+
+
+def test_semantic_equivalence_rejects_superficially_matching_pair_sets():
+    physical_set = _semantic(
+        {"explicit_atom_or_alias", "physical_atom_set"},
+        [{"p1", "p2"}],
+        raw="HB%",
+    )
+    independent_or = _semantic(
+        {"explicit_atom_or_alias", "physical_atom_set"},
+        [{"p1"}, {"p2"}],
+        raw="HB1|HB2",
+    )
+    wrong_semantics = _semantic(
+        {"stereospecific_assignment_alternative"},
+        [{"p1", "p2"}],
+        raw="HBx",
+    )
+    rejected = _semantic(
+        {"explicit_atom_or_alias", "physical_atom_set"},
+        [{"p1", "p2"}],
+        raw="HB",
+        rejections={"missing_upper_bound"},
+    )
+
+    assert not _strictly_equivalent(physical_set, independent_or)
+    assert not _strictly_equivalent(physical_set, wrong_semantics)
+    assert not _strictly_equivalent(physical_set, rejected)
 
 
 def test_equivalent_source_evidence_with_different_bound_is_parser_bug():

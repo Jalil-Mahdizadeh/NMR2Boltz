@@ -1,0 +1,1 @@
+python validation/benchmark_corpus.py benchmark/input --output-directory benchmark/output --reviewed-baseline benchmark/reviewed_baseline.json

@@ -5,7 +5,7 @@ Date: 2026-07-18
 
 ## Regression and stress validation
 
-- 79 Pytest tests passed.
+- 91 Pytest tests passed.
 - 100,000 randomized sum-r6 implication cases passed.
 - 100,000 constructive triangle-inequality cases passed.
 - 25,000 outward-rounding cases passed.
@@ -40,14 +40,24 @@ All 24 conversions completed; the two 8S8O inputs are valid empty distance
 conversions containing sequence, shifts, and torsion data but no distance loop.
 The default safe projection emitted 12,998 NEF and 11,829 NMR-STAR contacts.
 Resolved contact/model satisfaction was 99.88% and 99.86%, respectively.
-Across 390,930 model/contact cases with satisfied source antecedents, the
+
+NMR-STAR canonical OR expansions are now reconstructed before projection when
+author endpoint identity, bounds/weights/logic, component topology, and the
+complete canonical Cartesian product agree. In 43JX this changed 591 emitted
+STAR bounds without changing the 1,716 emitted heavy-pair identities. Restraint
+468 now preserves STAR rows 796--798 as one three-proton set (`N=3`) and matches
+the NEF projected bound at 7.428047646 A. Observed reconstructed multiplicities
+cover `N=2`, `3`, `4`, `6`, and `9`; incomplete or unverifiable candidates are
+rejected rather than guessed.
+
+Across 379,449 model/contact cases with satisfied source antecedents, the
 projected heavy-atom implication had zero failures.
 
-The paired audit contains 4,179 discrepancies: 4,136 match an explicit tested
+The paired audit contains 4,177 discrepancies: 4,134 match an explicit tested
 semantic predicate and 43 are deposition inconsistencies. There are zero
 unresolved discrepancies and zero remaining parser/projection bugs. The audit
 digest is
-`3b4e4f3d54377d7f80854a1525db0f5351895fbb5c3b6bf2e63f2e3a649c86c8`.
+`e710f092a339fcf8d5d7a57d35207cc4b05bea25fe92c0c30b1f97815605c677`.
 
 The exact reviewed missing-coordinate set contains 82 format/contact records:
 41 each for NEF and STAR in partial-coordinate 8R1X. Four malformed 8R1X
@@ -61,8 +71,9 @@ corpus has zero such violations.
 
 Only three positive-distance cases have exact NEF/STAR pair-and-bound parity
 (21CC, 9D99, and 9KG4); 8S8O also has exact empty-output parity. Large differences
-caused by pseudoatoms, atom-set multiplicity, and source inconsistencies remain
-visible and are not silently approximated. The complete current report is under
+caused by geometric pseudoatoms, genuinely different atom-set/assignment
+semantics, and source inconsistencies remain visible and are not silently
+approximated. The complete current report is under
 `benchmark/output`. This benchmark validates conversion behavior, not the
 predictive accuracy of a GPU Boltz folding campaign.
 

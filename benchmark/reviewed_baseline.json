@@ -1,10 +1,10 @@
 {
   "schema_version": 3,
   "audit_review": {
-    "digest_sha256": "3b4e4f3d54377d7f80854a1525db0f5351895fbb5c3b6bf2e63f2e3a649c86c8",
-    "row_count": 4179,
+    "digest_sha256": "e710f092a339fcf8d5d7a57d35207cc4b05bea25fe92c0c30b1f97815605c677",
+    "row_count": 4177,
     "classification_counts": {
-      "expected_format_difference": 4136,
+      "expected_format_difference": 4134,
       "deposition_inconsistency": 43
     }
   },
@@ -977,8 +977,8 @@
           "common_atom_pairs": 1716,
           "nef_only_atom_pairs": 0,
           "star_only_atom_pairs": 0,
-          "common_pairs_with_different_bounds": 355,
-          "maximum_common_bound_delta_angstrom": 2.861354719888931,
+          "common_pairs_with_different_bounds": 353,
+          "maximum_common_bound_delta_angstrom": 1.7856576127777792,
           "exact_pair_and_bound_parity": false
         },
         "formats": {
@@ -1001,7 +1001,7 @@
           },
           "star": {
             "restraint_groups": 2387,
-            "source_alternatives": 3694,
+            "source_alternatives": 2419,
             "emitted_constraints": 1716,
             "ambiguous_groups": 16,
             "rejection_reasons": {
@@ -1009,11 +1009,11 @@
             },
             "atom_topology_violations": 0,
             "resolved_model_cases": 34320,
-            "satisfied_model_cases": 34293,
-            "violated_model_cases": 27,
+            "satisfied_model_cases": 34306,
+            "violated_model_cases": 14,
             "missing_model_cases": 0,
             "constraints_missing_in_any_model": 0,
-            "implication_antecedent_cases": 32583,
+            "implication_antecedent_cases": 21102,
             "implication_failures": 0
           }
         }

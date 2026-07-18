@@ -37,7 +37,15 @@ The exact NMR-STAR dictionary can evolve. Tag lookup is case-normalized at the l
 
 ### 3.1 Canonical expansion of one author atom set
 
-A source expression such as `HG1%` may be deposited in NMR-STAR as three rows whose canonical atom IDs are `HG11`, `HG12`, and `HG13`, while the author atom-name field remains `HG1%`. Treating the three rows as three independent restraints would be wrong. The code reconstructs the author-level expression and deduplicates the canonical expansion rows.
+A source atom set may be deposited in NMR-STAR as several explicit OR rows
+whose canonical atom IDs are `HG11`, `HG12`, and `HG13`, while the author
+atom-name field remains either `HG1%` or the less explicit `HG1`. Treating the
+rows as independent one-pair alternatives loses the physical multiplicity.
+The code reconstructs a set only when all source semantics match, component
+topology proves the complete proton membership, and one- or two-sided rows form
+the complete Cartesian product. It does not infer membership from `HB`/`HG`/`HD`
+prefixes. Incomplete or unverifiable candidates fail closed, and canonical atoms
+with different heavy parents remain separate union branches.
 
 ### 3.2 Aromatic and symmetric ambiguity
 
@@ -185,8 +193,10 @@ The current 12-structure benchmark spans:
 - paired NEF and NMR-STAR representations for differential comparison.
 
 The benchmark showed that identical restraint-group counts do not imply
-equivalent projected contacts or bounds. Pseudoatom representation and atom-set
-multiplicity remain the dominant parity limitations. These differences must be
+equivalent projected contacts or bounds. Topology-verified canonical row
+expansions are now assigned the same atom-set multiplicity as equivalent NEF
+evidence; geometric pseudoatoms and genuinely different wildcard or
+stereospecific-assignment semantics remain the dominant parity limitations. These differences must be
 reported at the physical atom-pair and bound level, not inferred from aggregate
 counts.
 

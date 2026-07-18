@@ -579,6 +579,7 @@ def _markdown(run: dict[str, Any]) -> str:
             f"- Classifications: {audit['classification_counts'].get('expected_format_difference', 0)} scientifically expected format differences; {audit['classification_counts'].get('deposition_inconsistency', 0)} deposition inconsistencies; {audit['unresolved_count']} unresolved; {audit['parser_projection_bug_count']} parser/projection bugs.",
             f"- Reviewed audit digest: `{audit['digest_sha256']}`.",
             "- `expected_format_difference` is allowlisted only for wildcard-set versus explicit OR, x/y assignment versus a compatible physical set, rejected Q/M pseudoatoms, or verified canonical aliases.",
+            "- Complete topology-verified NMR-STAR canonical OR expansions are reconstructed before projection, so their atom-set multiplicity is applied once and their source rows remain auditable.",
             "- 9PQH contains 43 contact discrepancies caused by its NEF sequence/residue numbering conflict; its remaining two different-bound rows are the expected explicit-OR versus wildcard atom-set distinction.",
             "- 9CCH's 16 cross-format `ZN`/`ZN*` discrepancy rows disappeared because all eight invalid contacts per format are now quarantined before emission; its remaining format differences satisfy the semantic allowlist.",
             "- 43JX, 6M6O, 9SGX, and 9VUY differences are justified by explicit-OR, wildcard atom-set, x/y assignment, or rejected geometric-pseudoatom semantics.",

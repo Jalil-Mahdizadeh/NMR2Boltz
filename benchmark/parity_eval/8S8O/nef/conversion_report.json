@@ -1,0 +1,2622 @@
+{
+  "input_file": "benchmark/input/8S8O/8s8o_nmr-data.nef",
+  "detected_format": "nef",
+  "settings": {
+    "benchmark_case": "8S8O",
+    "benchmark_format": "nef",
+    "missing_upper_policy": "reject",
+    "origin_filter": "all",
+    "averaging_policy": "sum-r6",
+    "projection_margin_angstrom": 0.0,
+    "pseudoatom_policy": "reject",
+    "boltz_min_distance_angstrom": 2.0,
+    "boltz_max_distance_angstrom": 20.0,
+    "min_sequence_separation": 0,
+    "include_intraresidue": true
+  },
+  "sequence_map": [
+    {
+      "source_chain": "A",
+      "source_sequence_code": "1",
+      "residue_name": "GLY",
+      "boltz_chain": "A",
+      "boltz_residue_index": 1,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "1",
+          "GLY"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "2",
+      "residue_name": "ALA",
+      "boltz_chain": "A",
+      "boltz_residue_index": 2,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "2",
+          "ALA"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "3",
+      "residue_name": "MET",
+      "boltz_chain": "A",
+      "boltz_residue_index": 3,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "3",
+          "MET"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "4",
+      "residue_name": "GLY",
+      "boltz_chain": "A",
+      "boltz_residue_index": 4,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "4",
+          "GLY"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "5",
+      "residue_name": "MET",
+      "boltz_chain": "A",
+      "boltz_residue_index": 5,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "5",
+          "MET"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "6",
+      "residue_name": "SER",
+      "boltz_chain": "A",
+      "boltz_residue_index": 6,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "6",
+          "SER"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "7",
+      "residue_name": "HIS",
+      "boltz_chain": "A",
+      "boltz_residue_index": 7,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "7",
+          "HIS"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "8",
+      "residue_name": "ILE",
+      "boltz_chain": "A",
+      "boltz_residue_index": 8,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "8",
+          "ILE"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "9",
+      "residue_name": "GLN",
+      "boltz_chain": "A",
+      "boltz_residue_index": 9,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "9",
+          "GLN"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "10",
+      "residue_name": "ILE",
+      "boltz_chain": "A",
+      "boltz_residue_index": 10,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "10",
+          "ILE"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "11",
+      "residue_name": "PRO",
+      "boltz_chain": "A",
+      "boltz_residue_index": 11,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "11",
+          "PRO"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "12",
+      "residue_name": "PRO",
+      "boltz_chain": "A",
+      "boltz_residue_index": 12,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "12",
+          "PRO"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "13",
+      "residue_name": "GLY",
+      "boltz_chain": "A",
+      "boltz_residue_index": 13,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "13",
+          "GLY"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "14",
+      "residue_name": "LEU",
+      "boltz_chain": "A",
+      "boltz_residue_index": 14,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "14",
+          "LEU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "15",
+      "residue_name": "THR",
+      "boltz_chain": "A",
+      "boltz_residue_index": 15,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "15",
+          "THR"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "16",
+      "residue_name": "GLU",
+      "boltz_chain": "A",
+      "boltz_residue_index": 16,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "16",
+          "GLU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "17",
+      "residue_name": "LEU",
+      "boltz_chain": "A",
+      "boltz_residue_index": 17,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "17",
+          "LEU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "18",
+      "residue_name": "LEU",
+      "boltz_chain": "A",
+      "boltz_residue_index": 18,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "18",
+          "LEU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "19",
+      "residue_name": "GLN",
+      "boltz_chain": "A",
+      "boltz_residue_index": 19,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "19",
+          "GLN"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "20",
+      "residue_name": "GLY",
+      "boltz_chain": "A",
+      "boltz_residue_index": 20,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "20",
+          "GLY"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "21",
+      "residue_name": "TYR",
+      "boltz_chain": "A",
+      "boltz_residue_index": 21,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "21",
+          "TYR"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "22",
+      "residue_name": "THR",
+      "boltz_chain": "A",
+      "boltz_residue_index": 22,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "22",
+          "THR"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "23",
+      "residue_name": "VAL",
+      "boltz_chain": "A",
+      "boltz_residue_index": 23,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "23",
+          "VAL"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "24",
+      "residue_name": "GLU",
+      "boltz_chain": "A",
+      "boltz_residue_index": 24,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "24",
+          "GLU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "25",
+      "residue_name": "VAL",
+      "boltz_chain": "A",
+      "boltz_residue_index": 25,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "25",
+          "VAL"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "26",
+      "residue_name": "LEU",
+      "boltz_chain": "A",
+      "boltz_residue_index": 26,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "26",
+          "LEU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "27",
+      "residue_name": "ARG",
+      "boltz_chain": "A",
+      "boltz_residue_index": 27,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "27",
+          "ARG"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "28",
+      "residue_name": "GLN",
+      "boltz_chain": "A",
+      "boltz_residue_index": 28,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "28",
+          "GLN"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "29",
+      "residue_name": "GLN",
+      "boltz_chain": "A",
+      "boltz_residue_index": 29,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "29",
+          "GLN"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "30",
+      "residue_name": "PRO",
+      "boltz_chain": "A",
+      "boltz_residue_index": 30,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "30",
+          "PRO"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "31",
+      "residue_name": "PRO",
+      "boltz_chain": "A",
+      "boltz_residue_index": 31,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "31",
+          "PRO"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "32",
+      "residue_name": "ASP",
+      "boltz_chain": "A",
+      "boltz_residue_index": 32,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "32",
+          "ASP"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "33",
+      "residue_name": "LEU",
+      "boltz_chain": "A",
+      "boltz_residue_index": 33,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "33",
+          "LEU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "34",
+      "residue_name": "VAL",
+      "boltz_chain": "A",
+      "boltz_residue_index": 34,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "34",
+          "VAL"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "35",
+      "residue_name": "GLU",
+      "boltz_chain": "A",
+      "boltz_residue_index": 35,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "35",
+          "GLU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "36",
+      "residue_name": "PHE",
+      "boltz_chain": "A",
+      "boltz_residue_index": 36,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "36",
+          "PHE"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "37",
+      "residue_name": "ALA",
+      "boltz_chain": "A",
+      "boltz_residue_index": 37,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "37",
+          "ALA"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "38",
+      "residue_name": "VAL",
+      "boltz_chain": "A",
+      "boltz_residue_index": 38,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "38",
+          "VAL"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "39",
+      "residue_name": "GLU",
+      "boltz_chain": "A",
+      "boltz_residue_index": 39,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "39",
+          "GLU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "40",
+      "residue_name": "TYR",
+      "boltz_chain": "A",
+      "boltz_residue_index": 40,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "40",
+          "TYR"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "41",
+      "residue_name": "PHE",
+      "boltz_chain": "A",
+      "boltz_residue_index": 41,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "41",
+          "PHE"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "42",
+      "residue_name": "THR",
+      "boltz_chain": "A",
+      "boltz_residue_index": 42,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "42",
+          "THR"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "43",
+      "residue_name": "ARG",
+      "boltz_chain": "A",
+      "boltz_residue_index": 43,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "43",
+          "ARG"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "44",
+      "residue_name": "LEU",
+      "boltz_chain": "A",
+      "boltz_residue_index": 44,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "44",
+          "LEU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "45",
+      "residue_name": "ARG",
+      "boltz_chain": "A",
+      "boltz_residue_index": 45,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "45",
+          "ARG"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "46",
+      "residue_name": "GLU",
+      "boltz_chain": "A",
+      "boltz_residue_index": 46,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "46",
+          "GLU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "47",
+      "residue_name": "ALA",
+      "boltz_chain": "A",
+      "boltz_residue_index": 47,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "47",
+          "ALA"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "48",
+      "residue_name": "ARG",
+      "boltz_chain": "A",
+      "boltz_residue_index": 48,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "48",
+          "ARG"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "49",
+      "residue_name": "ALA",
+      "boltz_chain": "A",
+      "boltz_residue_index": 49,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "49",
+          "ALA"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "50",
+      "residue_name": "PRO",
+      "boltz_chain": "A",
+      "boltz_residue_index": 50,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "50",
+          "PRO"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "51",
+      "residue_name": "ALA",
+      "boltz_chain": "A",
+      "boltz_residue_index": 51,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "51",
+          "ALA"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "A",
+      "source_sequence_code": "52",
+      "residue_name": "SER",
+      "boltz_chain": "A",
+      "boltz_residue_index": 52,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "A",
+          "52",
+          "SER"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "1",
+      "residue_name": "GLY",
+      "boltz_chain": "B",
+      "boltz_residue_index": 1,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "1",
+          "GLY"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "2",
+      "residue_name": "ALA",
+      "boltz_chain": "B",
+      "boltz_residue_index": 2,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "2",
+          "ALA"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "3",
+      "residue_name": "MET",
+      "boltz_chain": "B",
+      "boltz_residue_index": 3,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "3",
+          "MET"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "4",
+      "residue_name": "GLY",
+      "boltz_chain": "B",
+      "boltz_residue_index": 4,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "4",
+          "GLY"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "5",
+      "residue_name": "MET",
+      "boltz_chain": "B",
+      "boltz_residue_index": 5,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "5",
+          "MET"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "6",
+      "residue_name": "SER",
+      "boltz_chain": "B",
+      "boltz_residue_index": 6,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "6",
+          "SER"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "7",
+      "residue_name": "HIS",
+      "boltz_chain": "B",
+      "boltz_residue_index": 7,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "7",
+          "HIS"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "8",
+      "residue_name": "ILE",
+      "boltz_chain": "B",
+      "boltz_residue_index": 8,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "8",
+          "ILE"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "9",
+      "residue_name": "GLN",
+      "boltz_chain": "B",
+      "boltz_residue_index": 9,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "9",
+          "GLN"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "10",
+      "residue_name": "ILE",
+      "boltz_chain": "B",
+      "boltz_residue_index": 10,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "10",
+          "ILE"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "11",
+      "residue_name": "PRO",
+      "boltz_chain": "B",
+      "boltz_residue_index": 11,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "11",
+          "PRO"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "12",
+      "residue_name": "PRO",
+      "boltz_chain": "B",
+      "boltz_residue_index": 12,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "12",
+          "PRO"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "13",
+      "residue_name": "GLY",
+      "boltz_chain": "B",
+      "boltz_residue_index": 13,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "13",
+          "GLY"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "14",
+      "residue_name": "LEU",
+      "boltz_chain": "B",
+      "boltz_residue_index": 14,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "14",
+          "LEU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "15",
+      "residue_name": "THR",
+      "boltz_chain": "B",
+      "boltz_residue_index": 15,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "15",
+          "THR"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "16",
+      "residue_name": "GLU",
+      "boltz_chain": "B",
+      "boltz_residue_index": 16,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "16",
+          "GLU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "17",
+      "residue_name": "LEU",
+      "boltz_chain": "B",
+      "boltz_residue_index": 17,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "17",
+          "LEU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "18",
+      "residue_name": "LEU",
+      "boltz_chain": "B",
+      "boltz_residue_index": 18,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "18",
+          "LEU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "19",
+      "residue_name": "GLN",
+      "boltz_chain": "B",
+      "boltz_residue_index": 19,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "19",
+          "GLN"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "20",
+      "residue_name": "GLY",
+      "boltz_chain": "B",
+      "boltz_residue_index": 20,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "20",
+          "GLY"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "21",
+      "residue_name": "TYR",
+      "boltz_chain": "B",
+      "boltz_residue_index": 21,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "21",
+          "TYR"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "22",
+      "residue_name": "THR",
+      "boltz_chain": "B",
+      "boltz_residue_index": 22,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "22",
+          "THR"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "23",
+      "residue_name": "VAL",
+      "boltz_chain": "B",
+      "boltz_residue_index": 23,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "23",
+          "VAL"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "24",
+      "residue_name": "GLU",
+      "boltz_chain": "B",
+      "boltz_residue_index": 24,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "24",
+          "GLU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "25",
+      "residue_name": "VAL",
+      "boltz_chain": "B",
+      "boltz_residue_index": 25,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "25",
+          "VAL"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "26",
+      "residue_name": "LEU",
+      "boltz_chain": "B",
+      "boltz_residue_index": 26,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "26",
+          "LEU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "27",
+      "residue_name": "ARG",
+      "boltz_chain": "B",
+      "boltz_residue_index": 27,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "27",
+          "ARG"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "28",
+      "residue_name": "GLN",
+      "boltz_chain": "B",
+      "boltz_residue_index": 28,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "28",
+          "GLN"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "29",
+      "residue_name": "GLN",
+      "boltz_chain": "B",
+      "boltz_residue_index": 29,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "29",
+          "GLN"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "30",
+      "residue_name": "PRO",
+      "boltz_chain": "B",
+      "boltz_residue_index": 30,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "30",
+          "PRO"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "31",
+      "residue_name": "PRO",
+      "boltz_chain": "B",
+      "boltz_residue_index": 31,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "31",
+          "PRO"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "32",
+      "residue_name": "ASP",
+      "boltz_chain": "B",
+      "boltz_residue_index": 32,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "32",
+          "ASP"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "33",
+      "residue_name": "LEU",
+      "boltz_chain": "B",
+      "boltz_residue_index": 33,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "33",
+          "LEU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "34",
+      "residue_name": "VAL",
+      "boltz_chain": "B",
+      "boltz_residue_index": 34,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "34",
+          "VAL"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "35",
+      "residue_name": "GLU",
+      "boltz_chain": "B",
+      "boltz_residue_index": 35,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "35",
+          "GLU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "36",
+      "residue_name": "PHE",
+      "boltz_chain": "B",
+      "boltz_residue_index": 36,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "36",
+          "PHE"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "37",
+      "residue_name": "ALA",
+      "boltz_chain": "B",
+      "boltz_residue_index": 37,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "37",
+          "ALA"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "38",
+      "residue_name": "VAL",
+      "boltz_chain": "B",
+      "boltz_residue_index": 38,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "38",
+          "VAL"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "39",
+      "residue_name": "GLU",
+      "boltz_chain": "B",
+      "boltz_residue_index": 39,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "39",
+          "GLU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "40",
+      "residue_name": "TYR",
+      "boltz_chain": "B",
+      "boltz_residue_index": 40,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "40",
+          "TYR"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "41",
+      "residue_name": "PHE",
+      "boltz_chain": "B",
+      "boltz_residue_index": 41,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "41",
+          "PHE"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "42",
+      "residue_name": "THR",
+      "boltz_chain": "B",
+      "boltz_residue_index": 42,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "42",
+          "THR"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "43",
+      "residue_name": "ARG",
+      "boltz_chain": "B",
+      "boltz_residue_index": 43,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "43",
+          "ARG"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "44",
+      "residue_name": "LEU",
+      "boltz_chain": "B",
+      "boltz_residue_index": 44,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "44",
+          "LEU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "45",
+      "residue_name": "ARG",
+      "boltz_chain": "B",
+      "boltz_residue_index": 45,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "45",
+          "ARG"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "46",
+      "residue_name": "GLU",
+      "boltz_chain": "B",
+      "boltz_residue_index": 46,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "46",
+          "GLU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "47",
+      "residue_name": "ALA",
+      "boltz_chain": "B",
+      "boltz_residue_index": 47,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "47",
+          "ALA"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "48",
+      "residue_name": "ARG",
+      "boltz_chain": "B",
+      "boltz_residue_index": 48,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "48",
+          "ARG"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "49",
+      "residue_name": "ALA",
+      "boltz_chain": "B",
+      "boltz_residue_index": 49,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "49",
+          "ALA"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "50",
+      "residue_name": "PRO",
+      "boltz_chain": "B",
+      "boltz_residue_index": 50,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "50",
+          "PRO"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "51",
+      "residue_name": "ALA",
+      "boltz_chain": "B",
+      "boltz_residue_index": 51,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "51",
+          "ALA"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "B",
+      "source_sequence_code": "52",
+      "residue_name": "SER",
+      "boltz_chain": "B",
+      "boltz_residue_index": 52,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "B",
+          "52",
+          "SER"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "84",
+      "residue_name": "ARG",
+      "boltz_chain": "C",
+      "boltz_residue_index": 1,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "C",
+          "84",
+          "ARG"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "85",
+      "residue_name": "GLU",
+      "boltz_chain": "C",
+      "boltz_residue_index": 2,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "C",
+          "85",
+          "GLU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "86",
+      "residue_name": "THR",
+      "boltz_chain": "C",
+      "boltz_residue_index": 3,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "C",
+          "86",
+          "THR"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "87",
+      "residue_name": "ALA",
+      "boltz_chain": "C",
+      "boltz_residue_index": 4,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "C",
+          "87",
+          "ALA"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "88",
+      "residue_name": "GLU",
+      "boltz_chain": "C",
+      "boltz_residue_index": 5,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "C",
+          "88",
+          "GLU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "89",
+      "residue_name": "GLU",
+      "boltz_chain": "C",
+      "boltz_residue_index": 6,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "C",
+          "89",
+          "GLU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "90",
+      "residue_name": "VAL",
+      "boltz_chain": "C",
+      "boltz_residue_index": 7,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "C",
+          "90",
+          "VAL"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "91",
+      "residue_name": "SER",
+      "boltz_chain": "C",
+      "boltz_residue_index": 8,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "C",
+          "91",
+          "SER"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "92",
+      "residue_name": "ALA",
+      "boltz_chain": "C",
+      "boltz_residue_index": 9,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "C",
+          "92",
+          "ALA"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "93",
+      "residue_name": "ARG",
+      "boltz_chain": "C",
+      "boltz_residue_index": 10,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "C",
+          "93",
+          "ARG"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "94",
+      "residue_name": "ILE",
+      "boltz_chain": "C",
+      "boltz_residue_index": 11,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "C",
+          "94",
+          "ILE"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "95",
+      "residue_name": "VAL",
+      "boltz_chain": "C",
+      "boltz_residue_index": 12,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "C",
+          "95",
+          "VAL"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "96",
+      "residue_name": "GLN",
+      "boltz_chain": "C",
+      "boltz_residue_index": 13,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "C",
+          "96",
+          "GLN"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "97",
+      "residue_name": "VAL",
+      "boltz_chain": "C",
+      "boltz_residue_index": 14,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "C",
+          "97",
+          "VAL"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "98",
+      "residue_name": "VAL",
+      "boltz_chain": "C",
+      "boltz_residue_index": 15,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "C",
+          "98",
+          "VAL"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "99",
+      "residue_name": "THR",
+      "boltz_chain": "C",
+      "boltz_residue_index": 16,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "C",
+          "99",
+          "THR"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "100",
+      "residue_name": "ALA",
+      "boltz_chain": "C",
+      "boltz_residue_index": 17,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "C",
+          "100",
+          "ALA"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "101",
+      "residue_name": "GLU",
+      "boltz_chain": "C",
+      "boltz_residue_index": 18,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "C",
+          "101",
+          "GLU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "102",
+      "residue_name": "ALA",
+      "boltz_chain": "C",
+      "boltz_residue_index": 19,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "C",
+          "102",
+          "ALA"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "103",
+      "residue_name": "VAL",
+      "boltz_chain": "C",
+      "boltz_residue_index": 20,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "C",
+          "103",
+          "VAL"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "104",
+      "residue_name": "ALA",
+      "boltz_chain": "C",
+      "boltz_residue_index": 21,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "C",
+          "104",
+          "ALA"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "105",
+      "residue_name": "VAL",
+      "boltz_chain": "C",
+      "boltz_residue_index": 22,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "C",
+          "105",
+          "VAL"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "106",
+      "residue_name": "LEU",
+      "boltz_chain": "C",
+      "boltz_residue_index": 23,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "C",
+          "106",
+          "LEU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "107",
+      "residue_name": "LYS",
+      "boltz_chain": "C",
+      "boltz_residue_index": 24,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "C",
+          "107",
+          "LYS"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "108",
+      "residue_name": "GLY",
+      "boltz_chain": "C",
+      "boltz_residue_index": 25,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "C",
+          "108",
+          "GLY"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "109",
+      "residue_name": "GLU",
+      "boltz_chain": "C",
+      "boltz_residue_index": 26,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "C",
+          "109",
+          "GLU"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "110",
+      "residue_name": "GLN",
+      "boltz_chain": "C",
+      "boltz_residue_index": 27,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "C",
+          "110",
+          "GLN"
+        ]
+      ],
+      "warnings": []
+    },
+    {
+      "source_chain": "C",
+      "source_sequence_code": "111",
+      "residue_name": "GLU",
+      "boltz_chain": "C",
+      "boltz_residue_index": 28,
+      "source": "_nef_sequence",
+      "aliases": [
+        [
+          "C",
+          "111",
+          "GLU"
+        ]
+      ],
+      "warnings": []
+    }
+  ],
+  "emitted_constraints": [],
+  "ambiguous_groups": [],
+  "rejections": [],
+  "warnings": [
+    "No _nef_distance_restraint loop was found; producing an empty distance-constraint conversion.",
+    "No nef_distance_restraint rows matched the selected origin filter."
+  ],
+  "statistics": {
+    "restraint_groups_read": 0,
+    "source_alternatives_read": 0,
+    "safe_groups_before_pair_deduplication": 0,
+    "emitted_unique_heavy_atom_constraints": 0,
+    "ambiguous_or_groups_not_emitted": 0,
+    "rejection_records": 0,
+    "sequence_records": 132,
+    "embedded_component_topologies": 0,
+    "atom_topology_quarantines": 0,
+    "emitted_atom_topology_violations": 0
+  },
+  "source_restraint_groups": [],
+  "target_component_topologies": {
+    "ALA": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB1",
+        "HB2",
+        "HB3",
+        "HXT",
+        "N",
+        "O",
+        "OXT"
+      ]
+    },
+    "ARG": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CD",
+        "CG",
+        "CZ",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HD2",
+        "HD3",
+        "HE",
+        "HG2",
+        "HG3",
+        "HH11",
+        "HH12",
+        "HH21",
+        "HH22",
+        "HXT",
+        "N",
+        "NE",
+        "NH1",
+        "NH2",
+        "O",
+        "OXT"
+      ]
+    },
+    "ASP": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CG",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HD1",
+        "HD2",
+        "HXT",
+        "N",
+        "O",
+        "OD1",
+        "OD2",
+        "OXT"
+      ]
+    },
+    "GLN": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CD",
+        "CG",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HE21",
+        "HE22",
+        "HG2",
+        "HG3",
+        "HXT",
+        "N",
+        "NE2",
+        "O",
+        "OE1",
+        "OXT"
+      ]
+    },
+    "GLU": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CD",
+        "CG",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HE1",
+        "HE2",
+        "HG2",
+        "HG3",
+        "HXT",
+        "N",
+        "O",
+        "OE1",
+        "OE2",
+        "OXT"
+      ]
+    },
+    "GLY": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA2",
+        "HA3",
+        "HXT",
+        "N",
+        "O",
+        "OXT"
+      ]
+    },
+    "HIS": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CD2",
+        "CE1",
+        "CG",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HD1",
+        "HD2",
+        "HE1",
+        "HE2",
+        "HXT",
+        "N",
+        "ND1",
+        "NE2",
+        "O",
+        "OXT"
+      ]
+    },
+    "ILE": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CD1",
+        "CG1",
+        "CG2",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB",
+        "HD11",
+        "HD12",
+        "HD13",
+        "HG12",
+        "HG13",
+        "HG21",
+        "HG22",
+        "HG23",
+        "HXT",
+        "N",
+        "O",
+        "OXT"
+      ]
+    },
+    "LEU": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CD1",
+        "CD2",
+        "CG",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HD11",
+        "HD12",
+        "HD13",
+        "HD21",
+        "HD22",
+        "HD23",
+        "HG",
+        "HXT",
+        "N",
+        "O",
+        "OXT"
+      ]
+    },
+    "LYS": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CD",
+        "CE",
+        "CG",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HD2",
+        "HD3",
+        "HE2",
+        "HE3",
+        "HG2",
+        "HG3",
+        "HXT",
+        "HZ1",
+        "HZ2",
+        "HZ3",
+        "N",
+        "NZ",
+        "O",
+        "OXT"
+      ]
+    },
+    "MET": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CE",
+        "CG",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HE1",
+        "HE2",
+        "HE3",
+        "HG2",
+        "HG3",
+        "HXT",
+        "N",
+        "O",
+        "OXT",
+        "SD"
+      ]
+    },
+    "PHE": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CD1",
+        "CD2",
+        "CE1",
+        "CE2",
+        "CG",
+        "CZ",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HD1",
+        "HD2",
+        "HE1",
+        "HE2",
+        "HXT",
+        "HZ",
+        "N",
+        "O",
+        "OXT"
+      ]
+    },
+    "PRO": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CD",
+        "CG",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HD2",
+        "HD3",
+        "HG2",
+        "HG3",
+        "HXT",
+        "N",
+        "O",
+        "OXT"
+      ]
+    },
+    "SER": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HG",
+        "HXT",
+        "N",
+        "O",
+        "OG",
+        "OXT"
+      ]
+    },
+    "THR": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CG2",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB",
+        "HG1",
+        "HG21",
+        "HG22",
+        "HG23",
+        "HXT",
+        "N",
+        "O",
+        "OG1",
+        "OXT"
+      ]
+    },
+    "TYR": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CD1",
+        "CD2",
+        "CE1",
+        "CE2",
+        "CG",
+        "CZ",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB2",
+        "HB3",
+        "HD1",
+        "HD2",
+        "HE1",
+        "HE2",
+        "HH",
+        "HXT",
+        "N",
+        "O",
+        "OH",
+        "OXT"
+      ]
+    },
+    "VAL": {
+      "available": true,
+      "source": "builtin-standard",
+      "atoms": [
+        "C",
+        "CA",
+        "CB",
+        "CG1",
+        "CG2",
+        "H",
+        "H1",
+        "H2",
+        "H3",
+        "HA",
+        "HB",
+        "HG11",
+        "HG12",
+        "HG13",
+        "HG21",
+        "HG22",
+        "HG23",
+        "HXT",
+        "N",
+        "O",
+        "OXT"
+      ]
+    }
+  },
+  "target_validation": null
+}

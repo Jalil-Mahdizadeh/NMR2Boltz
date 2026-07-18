@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+- Added a generic pre-projection NMR-STAR normalization pass for complete,
+  topology-verified canonical OR expansions of one author-level proton set.
+  One- and two-sided expansions now use the correct `sum-r6` multiplicity
+  (`N=3`, `6`, or `9` for the covered methyl/methylene cases), while branches
+  with different heavy parents remain union alternatives. Incomplete,
+  inconsistent, or unverifiable expansions are rejected in full with source
+  rows and canonical expansions preserved.
 - Replaced the mixed legacy constraint artifacts with two deterministic,
   metadata-free outputs: `atom_constraints_exact.yaml` for non-ambiguous
   `atom_contact` constraints and `atom_constraints_union.yaml` for ambiguous
@@ -37,7 +44,7 @@
   rejection reason before topology resolution.
 - NEF/NMR-STAR files with sequence data but no distance loop now produce an
   auditable empty conversion rather than failing format detection.
-- Expanded the regression suite from 39 to 79 tests, including positive and
+- Expanded the regression suite from 39 to 91 tests, including positive and
   adversarial checks for every discrepancy predicate and fail-closed gate.
 - Added fail-fast `--target-yaml` validation for chain IDs, residue indices,
   canonical residue identities, declared modifications, mapping collisions, and

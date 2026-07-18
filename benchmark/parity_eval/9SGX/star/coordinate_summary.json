@@ -1,0 +1,59 @@
+{
+  "pdb": "benchmark/input/9SGX/9SGX.pdb",
+  "model_count": 20,
+  "tolerance_angstrom": 0.01,
+  "sequence_alignment": [
+    {
+      "boltz_chain": "B",
+      "coordinate_chain": "B",
+      "target_residues": 54,
+      "coordinate_residues": 54,
+      "aligned_residues": 54,
+      "exact_component_matches": 54,
+      "compatible_component_matches": 54,
+      "unmapped_target_residues": 0,
+      "unmapped_coordinate_residues": 0
+    },
+    {
+      "boltz_chain": "A",
+      "coordinate_chain": "A",
+      "target_residues": 70,
+      "coordinate_residues": 70,
+      "aligned_residues": 70,
+      "exact_component_matches": 70,
+      "compatible_component_matches": 70,
+      "unmapped_target_residues": 0,
+      "unmapped_coordinate_residues": 0
+    }
+  ],
+  "source_restraints": {
+    "group_count": 2720,
+    "group_model_state_counts": {
+      "indeterminate": 36100,
+      "satisfied": 15473,
+      "violated": 2827
+    },
+    "groups_satisfied_in_any_model": 829,
+    "groups_satisfied_in_every_model": 671,
+    "groups_indeterminate_in_every_model": 1805
+  },
+  "heavy_atom_constraints": {
+    "constraint_count": 765,
+    "resolved_model_cases": 15300,
+    "satisfied_model_cases": 15300,
+    "violated_model_cases": 0,
+    "missing_model_cases": 0,
+    "constraints_missing_in_any_model": 0,
+    "missing_coordinate_contacts": [],
+    "missing_constraint_examples": [],
+    "satisfaction_fraction_of_resolved": 1.0,
+    "constraints_resolved_in_every_model": 765,
+    "constraints_satisfied_in_any_model": 765,
+    "constraints_satisfied_in_every_model": 765
+  },
+  "projection_implication_audit": {
+    "antecedent_cases": 12569,
+    "failure_count": 0,
+    "failures": []
+  }
+}

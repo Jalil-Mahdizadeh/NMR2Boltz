@@ -1,0 +1,1 @@
+# [heavy-atom X -- heavy-atom Y : conservative upper bound in angstrom]

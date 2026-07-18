@@ -32,31 +32,31 @@
       "star": {
         "emitted_constraints": 11829,
         "resolved_model_cases": 198200,
-        "satisfied_model_cases": 197917,
-        "violated_model_cases": 283,
+        "satisfied_model_cases": 197930,
+        "violated_model_cases": 270,
         "missing_model_cases": 820,
         "constraints_missing_in_any_model": 41,
-        "satisfaction_fraction_of_resolved": 0.9985721493440969,
-        "implication_antecedent_cases": 183907,
+        "satisfaction_fraction_of_resolved": 0.9986377396569122,
+        "implication_antecedent_cases": 172426,
         "implication_failures": 0,
         "sequence_residue_mismatch_rejections": 0
       }
     }
   },
   "discrepancy_audit": {
-    "row_count": 4179,
-    "digest_sha256": "3b4e4f3d54377d7f80854a1525db0f5351895fbb5c3b6bf2e63f2e3a649c86c8",
+    "row_count": 4177,
+    "digest_sha256": "e710f092a339fcf8d5d7a57d35207cc4b05bea25fe92c0c30b1f97815605c677",
     "discrepancy_type_counts": {
-      "different_bound": 2456,
+      "different_bound": 2454,
       "star_only": 277,
       "nef_only": 1446
     },
     "classification_counts": {
-      "expected_format_difference": 4136,
+      "expected_format_difference": 4134,
       "deposition_inconsistency": 43
     },
     "case_counts": {
-      "43JX": 355,
+      "43JX": 353,
       "6M6O": 149,
       "8R1X": 160,
       "9CCH": 1920,
@@ -318,7 +318,7 @@
           "detected_format": "nmr-star",
           "has_distance_restraints": true,
           "restraint_groups": 2387,
-          "source_alternatives": 3694,
+          "source_alternatives": 2419,
           "emitted_constraints": 1716,
           "ambiguous_groups": 16,
           "rejection_records": 38,
@@ -351,29 +351,30 @@
             "source_restraints": {
               "group_count": 2387,
               "group_model_state_counts": {
-                "violated": 1782,
-                "satisfied": 45958
+                "indeterminate": 14020,
+                "satisfied": 32548,
+                "violated": 1172
               },
-              "groups_satisfied_in_any_model": 2387,
-              "groups_satisfied_in_every_model": 2039,
-              "groups_indeterminate_in_every_model": 0
+              "groups_satisfied_in_any_model": 1686,
+              "groups_satisfied_in_every_model": 1478,
+              "groups_indeterminate_in_every_model": 701
             },
             "heavy_atom_constraints": {
               "constraint_count": 1716,
               "resolved_model_cases": 34320,
-              "satisfied_model_cases": 34293,
-              "violated_model_cases": 27,
+              "satisfied_model_cases": 34306,
+              "violated_model_cases": 14,
               "missing_model_cases": 0,
               "constraints_missing_in_any_model": 0,
               "missing_coordinate_contacts": [],
               "missing_constraint_examples": [],
-              "satisfaction_fraction_of_resolved": 0.9992132867132867,
+              "satisfaction_fraction_of_resolved": 0.9995920745920746,
               "constraints_resolved_in_every_model": 1716,
               "constraints_satisfied_in_any_model": 1716,
-              "constraints_satisfied_in_every_model": 1704
+              "constraints_satisfied_in_every_model": 1712
             },
             "projection_implication_audit": {
-              "antecedent_cases": 32583,
+              "antecedent_cases": 21102,
               "failure_count": 0,
               "failures": []
             }
@@ -386,21 +387,21 @@
         "common_atom_pairs": 1716,
         "nef_only_atom_pairs": 0,
         "star_only_atom_pairs": 0,
-        "common_pairs_with_different_bounds": 355,
-        "maximum_common_bound_delta_angstrom": 2.861354719888931,
+        "common_pairs_with_different_bounds": 353,
+        "maximum_common_bound_delta_angstrom": 1.7856576127777792,
         "exact_pair_and_bound_parity": false
       },
       "discrepancy_audit": {
-        "row_count": 355,
-        "digest_sha256": "0bc94eb3071a2fa4fd7c09ea3a65325f0c7022b6da436dd07cda813543a83a43",
+        "row_count": 353,
+        "digest_sha256": "d4891833bd54c1ca922a1b0a8f5abc2adcc29de8aa9cc01117bc186505ce6a93",
         "discrepancy_type_counts": {
-          "different_bound": 355
+          "different_bound": 353
         },
         "classification_counts": {
-          "expected_format_difference": 355
+          "expected_format_difference": 353
         },
         "case_counts": {
-          "43JX": 355
+          "43JX": 353
         },
         "unresolved_count": 0,
         "parser_projection_bug_count": 0

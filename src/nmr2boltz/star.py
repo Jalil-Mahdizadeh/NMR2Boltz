@@ -7,7 +7,7 @@ import lzma
 import json
 import re
 from collections import defaultdict
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 from pathlib import Path
 from typing import Any, Iterable
 
@@ -21,7 +21,7 @@ from .model import (
     as_float,
     clean,
 )
-from .topology import ComponentTopology
+from .topology import ComponentTopology, TopologyLibrary, TopologyResolutionError
 
 
 class StarDataError(ValueError):
@@ -202,6 +202,12 @@ class ParsedStarDocument:
     restraint_groups: list[RestraintGroup]
     embedded_topologies: list[ComponentTopology]
     warnings: list[str]
+
+
+@dataclass(frozen=True)
+class CanonicalExpansionIssue:
+    details: str
+    row_ids: tuple[str, ...]
 
 
 def parse_star_document(
@@ -385,6 +391,311 @@ def extract_restraint_groups(
     if not result:
         warnings.append(f"No {target_category} rows matched the selected origin filter.")
     return result
+
+
+def normalize_nmrstar_canonical_expansions(
+    group: RestraintGroup,
+    topology_library: TopologyLibrary,
+) -> list[CanonicalExpansionIssue]:
+    """Reconstruct topology-proven author atom sets before projection.
+
+    NMR-STAR depositions may enumerate one author-level proton set as explicit
+    OR rows. Rows are combined only when their complete non-atom semantics and
+    author endpoint identities match. Canonical atoms are partitioned by heavy
+    parent, so true assignment ambiguity remains a disjunction.
+    """
+    if group.source_format != "nmr-star" or group.complex_logic:
+        return []
+
+    families: dict[tuple[Any, ...], list[RawAlternative]] = defaultdict(list)
+    for alternative in group.alternatives:
+        families[_canonical_expansion_family_key(alternative)].append(alternative)
+
+    normalized: list[RawAlternative] = []
+    issues: list[CanonicalExpansionIssue] = []
+    for family in families.values():
+        family = sorted(family, key=_alternative_row_key)
+        if len(family) < 2 or any(
+            _is_geometric_pseudoatom(endpoint.atom_expression)
+            for alternative in family
+            for endpoint in (alternative.endpoint1, alternative.endpoint2)
+        ):
+            normalized.extend(family)
+            continue
+
+        raw_names1 = {
+            alternative.endpoint1.canonical_atom_hint for alternative in family
+        }
+        raw_names2 = {
+            alternative.endpoint2.canonical_atom_hint for alternative in family
+        }
+        if len(raw_names1) == 1 and len(raw_names2) == 1:
+            normalized.extend(family)
+            continue
+        if None in raw_names1 or None in raw_names2:
+            issues.append(
+                _canonical_expansion_issue(
+                    family,
+                    "Canonical expansion rows are inconsistent: one or more canonical "
+                    "Atom_ID values are missing.",
+                )
+            )
+            continue
+        logic_codes = {
+            (alternative.member_logic_code or "").strip().upper()
+            for alternative in family
+        }
+        if logic_codes != {"OR"}:
+            issues.append(
+                _canonical_expansion_issue(
+                    family,
+                    "Canonical expansion rows are not one explicit OR family; "
+                    f"member logic codes={sorted(logic_codes)!r}.",
+                )
+            )
+            continue
+        semantic_signatures = {
+            _canonical_expansion_semantics_key(alternative)
+            for alternative in family
+        }
+        if len(semantic_signatures) != 1:
+            issues.append(
+                _canonical_expansion_issue(
+                    family,
+                    "Canonical expansion rows have inconsistent bounds, target values, "
+                    "weights, origin, combination membership, or bound source.",
+                )
+            )
+            continue
+
+        resolved_rows: list[tuple[RawAlternative, str, str, str, str]] = []
+        resolution_error: str | None = None
+        for alternative in family:
+            try:
+                atom1, parent1 = _resolve_canonical_proton(
+                    topology_library, alternative.endpoint1
+                )
+                atom2, parent2 = _resolve_canonical_proton(
+                    topology_library, alternative.endpoint2
+                )
+            except TopologyResolutionError as exc:
+                resolution_error = str(exc)
+                break
+            resolved_rows.append((alternative, atom1, parent1, atom2, parent2))
+        if resolution_error is not None:
+            issues.append(
+                _canonical_expansion_issue(
+                    family,
+                    "Canonical expansion rows could not be topology-verified: "
+                    + resolution_error,
+                )
+            )
+            continue
+
+        physical_names1 = {row[1] for row in resolved_rows}
+        physical_names2 = {row[3] for row in resolved_rows}
+        if len(physical_names1) == 1 and len(physical_names2) == 1:
+            normalized.extend(bucket)
+            continue
+
+        branches: dict[
+            tuple[str, str],
+            list[tuple[RawAlternative, str, str, str, str]],
+        ] = defaultdict(list)
+        for row in resolved_rows:
+            branches[(row[2], row[4])].append(row)
+
+        branch_alternatives: list[RawAlternative] = []
+        branch_error: str | None = None
+        for (_parent1, _parent2), rows in sorted(branches.items()):
+            names1 = sorted({row[1] for row in rows})
+            names2 = sorted({row[3] for row in rows})
+            observed = {(row[1], row[3]) for row in rows}
+            expected = {(atom1, atom2) for atom1 in names1 for atom2 in names2}
+            if observed != expected:
+                missing = sorted(expected - observed)
+                extra = sorted(observed - expected)
+                branch_error = (
+                    "Canonical expansion rows do not form a complete Cartesian product; "
+                    f"missing={missing!r}, extra={extra!r}."
+                )
+                break
+            for endpoint_index, names, parent in (
+                (1, names1, _parent1),
+                (2, names2, _parent2),
+            ):
+                if len(names) < 2:
+                    continue
+                comp_id = _endpoint_component(rows[0][0], endpoint_index)
+                topology = topology_library.get(comp_id)
+                if topology is None:
+                    branch_error = f"No topology is available for component {comp_id}."
+                    break
+                physical = sorted(
+                    hydrogen
+                    for hydrogen, heavy_parent in topology.hydrogen_parent.items()
+                    if heavy_parent == parent
+                )
+                if names != physical:
+                    branch_error = (
+                        f"Canonical expansion for endpoint {endpoint_index} is incomplete "
+                        f"for topology-proven {comp_id}:{parent}; observed={names!r}, "
+                        f"expected={physical!r}."
+                    )
+                    break
+            if branch_error is not None:
+                break
+            branch_alternatives.append(
+                _reconstructed_alternative(rows, names1=names1, names2=names2)
+            )
+
+        if branch_error is not None:
+            issues.append(_canonical_expansion_issue(family, branch_error))
+            continue
+        normalized.extend(branch_alternatives)
+
+    if issues:
+        group.warnings.extend(
+            issue.details for issue in issues if issue.details not in group.warnings
+        )
+        return issues
+    group.alternatives = normalized
+    return []
+
+
+def _canonical_expansion_family_key(alternative: RawAlternative) -> tuple[Any, ...]:
+    def endpoint_key(endpoint: Endpoint) -> tuple[str | None, ...]:
+        return (
+            endpoint.chain_code,
+            endpoint.sequence_code,
+            endpoint.residue_name,
+            endpoint.atom_expression,
+            endpoint.canonical_chain_code,
+            endpoint.canonical_sequence_code,
+            endpoint.canonical_residue_name,
+        )
+
+    return endpoint_key(alternative.endpoint1), endpoint_key(alternative.endpoint2)
+
+
+def _canonical_expansion_semantics_key(
+    alternative: RawAlternative,
+) -> tuple[Any, ...]:
+    return (
+        alternative.upper_bound,
+        alternative.lower_bound,
+        alternative.target_value,
+        alternative.target_uncertainty,
+        alternative.upper_linear_limit,
+        alternative.weight,
+        alternative.origin,
+        alternative.combination_id,
+        alternative.bound_source,
+    )
+
+
+def _is_geometric_pseudoatom(expression: str | None) -> bool:
+    return bool(
+        expression
+        and re.fullmatch(r"[QM][A-Z][A-Z0-9']*", expression.strip().upper())
+    )
+
+
+def _alternative_row_key(alternative: RawAlternative) -> tuple[tuple[int, int, str], ...]:
+    return tuple(_natural_sequence_key(row_id) for row_id in alternative.row_ids)
+
+
+def _endpoint_component(alternative: RawAlternative, side: int) -> str:
+    endpoint = alternative.endpoint1 if side == 1 else alternative.endpoint2
+    comp_id = endpoint.canonical_residue_name or endpoint.residue_name
+    if not comp_id:
+        raise TopologyResolutionError(
+            f"Endpoint {side} has no component identity for canonical expansion."
+        )
+    return comp_id.upper()
+
+
+def _resolve_canonical_proton(
+    topology_library: TopologyLibrary, endpoint: Endpoint
+) -> tuple[str, str]:
+    comp_id = (endpoint.canonical_residue_name or endpoint.residue_name or "").upper()
+    canonical = endpoint.canonical_atom_hint
+    if not comp_id or not canonical:
+        raise TopologyResolutionError(
+            "Canonical expansion endpoint lacks a component or canonical Atom_ID."
+        )
+    choices = topology_library.resolve_expression(comp_id, canonical)
+    atoms = [atom for choice in choices for atom in choice.atoms]
+    if len(atoms) != 1 or atoms[0].element != "H":
+        raise TopologyResolutionError(
+            f"{comp_id}:{canonical} is not one topology-proven proton."
+        )
+    return atoms[0].atom_name, atoms[0].parent_atom
+
+
+def _reconstructed_alternative(
+    rows: list[tuple[RawAlternative, str, str, str, str]],
+    *,
+    names1: list[str],
+    names2: list[str],
+) -> RawAlternative:
+    source_rows = [row[0] for row in rows]
+    base = source_rows[0]
+
+    def endpoint(original: Endpoint, names: list[str]) -> Endpoint:
+        return replace(
+            original,
+            canonical_atom_hint=names[0] if len(names) == 1 else None,
+            canonical_atom_set=names if len(names) > 1 else [],
+        )
+
+    expansions: list[dict[str, str | None]] = []
+    for alternative in source_rows:
+        if alternative.canonical_expansions:
+            expansions.extend(
+                item for item in alternative.canonical_expansions if item not in expansions
+            )
+        else:
+            expansions.extend(
+                {
+                    "row_id": row_id,
+                    "atom1": alternative.endpoint1.canonical_atom_hint,
+                    "atom2": alternative.endpoint2.canonical_atom_hint,
+                }
+                for row_id in alternative.row_ids
+            )
+    row_ids = list(
+        dict.fromkeys(row_id for alternative in source_rows for row_id in alternative.row_ids)
+    )
+    return replace(
+        base,
+        endpoint1=endpoint(base.endpoint1, names1),
+        endpoint2=endpoint(base.endpoint2, names2),
+        member_id=None,
+        row_ids=row_ids,
+        canonical_expansions=expansions,
+        warnings=list(
+            dict.fromkeys(
+                warning for alternative in source_rows for warning in alternative.warnings
+            )
+        )
+        + [
+            "complete NMR-STAR canonical OR expansion reconstructed before projection"
+        ],
+    )
+
+
+def _canonical_expansion_issue(
+    alternatives: list[RawAlternative], details: str
+) -> CanonicalExpansionIssue:
+    return CanonicalExpansionIssue(
+        details=details,
+        row_ids=tuple(
+            dict.fromkeys(
+                row_id for alternative in alternatives for row_id in alternative.row_ids
+            )
+        ),
+    )
 
 
 def _parse_nef_row(

@@ -1,0 +1,17 @@
+NMR-to-Boltz heavy-atom projection summary
+==============================================
+Input: benchmark/input/43JX/43jx_nmr-data.nef
+Detected format: nef
+Restraint groups read: 2387
+Source alternatives read: 2821
+Safe groups before pair deduplication: 2333
+Exact atom constraints emitted: 1716
+Atom-contact union groups emitted: 16
+Rejection records: 41
+
+Important:
+- atom_constraints_exact.yaml contains only non-ambiguous contacts.
+- atom_constraints_union.yaml contains only ambiguous OR groups with per-alternative bounds.
+- ambiguous_groups.tsv preserves the full audit metadata for those OR alternatives.
+- conversion_report.json is the lossless audit/provenance record.
+- sequences.fasta contains polymer-only sequences extracted from the source sequence map.

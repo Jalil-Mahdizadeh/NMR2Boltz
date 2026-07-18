@@ -135,6 +135,13 @@ a compatible physical set, rejected geometric Q/M pseudoatoms, or a verified
 canonical naming alias. Unknown representation or rejection differences remain
 `unresolved` and fail CI.
 
+NMR-STAR canonical OR rows that retain one author-level atom name are
+normalized before projection only when component topology proves a complete
+proton set and the rows form its complete Cartesian product. This restores the
+same `sum-r6` multiplicity used by the equivalent NEF atom set. Incomplete,
+inconsistent, non-OR, or topology-unverified candidates fail closed; canonical
+branches with different heavy parents remain union alternatives.
+
 The reviewed scientific interpretation of the current corpus is documented in
 [`docs/BENCHMARK_DISCREPANCY_FINDINGS.md`](docs/BENCHMARK_DISCREPANCY_FINDINGS.md).
 
@@ -222,6 +229,7 @@ The converter distinguishes:
 - **non-stereospecific x/y assignment**, which remains an assignment alternative unless all choices share a parent;
 - **geometric Q/M pseudoatom**, which is rejected by default because it is not the same object as a wildcard atom set;
 - **multiple rows with the same restraint ID**, which are treated as alternatives, not independent simultaneous contacts;
+- **topology-proven canonical expansions of one author atom set**, whose complete OR-row Cartesian product is reconstructed before `sum-r6` projection;
 - **non-null restraint-combination identifiers or non-OR NMR-STAR member logic**, which are preserved but not flattened because they may encode nested logic.
 
 After residue mapping and proton-to-heavy projection, both heavy atoms are
@@ -253,7 +261,9 @@ If any alternative or atom-set branch in an OR group cannot be projected safely,
 - The built-in topology covers standard protein and common RNA/DNA atom inventories. Modified components, ligands, and ions require embedded NMR-STAR chemistry or a local CCD file; unknown topology fails closed.
 - A consumer must implement `atom_contact_union` as one disjunction. Marking every OR alternative as an independent contact would overconstrain the model.
 - A soft Boltz potential encourages a contact but does not guarantee restraint satisfaction. Post-prediction validation remains mandatory.
-- Paired NEF and NMR-STAR exports can encode different atom-set multiplicities; inspect `format_parity.json` before treating them as interchangeable.
+- Paired NEF and NMR-STAR exports can still encode genuinely different wildcard,
+  stereospecific-assignment, or geometric-pseudoatom semantics; inspect
+  `format_parity.json` before treating them as interchangeable.
 
 ## Documentation
 

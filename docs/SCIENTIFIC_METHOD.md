@@ -98,7 +98,18 @@ The NMR-STAR counterpart is usually:
 - `Distance_upper_bound_val` and related fields;
 - member IDs and logic codes for alternatives.
 
-A translated NMR-STAR entry may expand one author wildcard into several canonical rows. For example, author-level `HG1%` can appear as canonical `HG11`, `HG12`, and `HG13` rows with the same restraint ID and upper bound. The converter preferentially reads `Auth_atom_name` when present and deduplicates these canonical expansion rows. The canonical atom ID is retained as a resolution hint.
+A translated NMR-STAR entry may expand one author-level atom set into several
+canonical OR rows. For example, author-level `HG1%` or `HG1` can appear as
+canonical `HG11`, `HG12`, and `HG13` rows with the same restraint ID and upper
+bound. Before projection, the converter groups rows only when author endpoint
+identities and all bounds, target, uncertainty, weight, origin, combination,
+and explicit OR semantics agree. Component topology must prove that the
+canonical atoms form the complete proton set on each heavy parent, and the
+observed rows must form the complete one- or two-sided Cartesian product. The
+reconstructed atom sets determine `N` once before heavy-parent projection.
+Branches on different heavy parents remain disjunctive alternatives. Missing,
+incomplete, inconsistent, or topology-unverified expansions are rejected in
+full rather than inferred from lexical prefixes.
 
 The NMR-STAR dictionary defines `Combination_ID` and `Member_logic_code` in addition to the constraint ID. The converter flattens only explicit `OR` member logic. Any non-null combination identifier, `AND` member logic, or unknown non-OR code marks the group as complex and prevents emission. This conservative rule avoids converting a structured Boolean expression into an accidental conjunction of Boltz contacts.
 
@@ -477,7 +488,9 @@ A production validation should include at least four levels.
 - compare group and row counts with the source file;
 - confirm the detected format and restraint origin;
 - inspect missing/null upper bounds;
-- verify that canonical expansion rows were deduplicated only when their author expressions match;
+- verify that canonical expansion rows were reconstructed only when their
+  complete author/source semantics, topology-proven proton sets, and Cartesian
+  product match;
 - review all non-null combination identifiers.
 - review every NMR-STAR member logic code and confirm that only explicit OR groups were flattened.
 
@@ -540,7 +553,7 @@ from being mistaken for robustness.
 
 The following checks were executed on 2026-07-18 against the current source tree:
 
-- all 79 Pytest regression, format, topology, logic, target-validation,
+- all 91 Pytest regression, format, topology, logic, target-validation,
   ensemble-alignment, constraint-serialization, and robustness tests passed;
 - Python byte compilation passed for source, tests, and the stress harness;
 - 100,000 randomized sum-r6 implication cases and 100,000 constructive triangle-inequality cases passed in the final Docker image;
@@ -562,8 +575,8 @@ and NMR-STAR conversions completed, including two valid empty distance
 conversions for 8S8O. Conservative defaults emitted 12,998 NEF and 11,829
 NMR-STAR contacts. Resolved contact/model satisfaction against the deposited
 ensembles was 99.88% and 99.86%, respectively. The projected implication had
-zero failures in 390,930 cases with satisfied source antecedents. The 4,179-row
-format audit contains 4,136 allowlisted expected differences, 43 deposition
+zero failures in 379,449 cases with satisfied source antecedents. The 4,177-row
+format audit contains 4,134 allowlisted expected differences, 43 deposition
 inconsistencies, zero unresolved rows, and zero remaining parser/projection
 bugs. Exact
 pair-and-bound parity was observed for three positive-distance cases; the

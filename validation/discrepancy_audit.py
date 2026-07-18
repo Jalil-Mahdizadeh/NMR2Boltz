@@ -154,12 +154,22 @@ def _physical_set(endpoint: dict[str, Any], topology: TopologyLibrary) -> tuple[
     if not expression:
         return "ERROR: missing atom expression", "unresolved"
     try:
-        choices = topology.resolve_expression(
-            residue,
-            expression,
-            canonical_hint=endpoint.get("canonical_atom_hint"),
-            pseudoatom_policy="reject",
-        )
+        canonical_atom_set = endpoint.get("canonical_atom_set") or []
+        if canonical_atom_set:
+            choices = [
+                topology.resolve_canonical_atom_set(
+                    residue,
+                    canonical_atom_set,
+                    author_expression=expression,
+                )
+            ]
+        else:
+            choices = topology.resolve_expression(
+                residue,
+                expression,
+                canonical_hint=endpoint.get("canonical_atom_hint"),
+                pseudoatom_policy="reject",
+            )
     except TopologyResolutionError as exc:
         message = str(exc)
         handling = (
@@ -177,7 +187,9 @@ def _physical_set(endpoint: dict[str, Any], topology: TopologyLibrary) -> tuple[
         }
         for choice in choices
     ]
-    if any(symbol in expression for symbol in ("%", "*", "#")):
+    if endpoint.get("canonical_atom_set"):
+        handling = "physical_atom_set"
+    elif any(symbol in expression for symbol in ("%", "*", "#")):
         handling = "physical_atom_set"
     elif expression.endswith(("x", "y")):
         handling = "stereospecific_assignment_alternative"
@@ -562,9 +574,22 @@ ALLOWLIST_PREDICATES = (
 
 
 def _strictly_equivalent(first: dict[str, Any], second: dict[str, Any]) -> bool:
+    if first["rejection_reasons"] != second["rejection_reasons"]:
+        return False
+    if first["raw_signature"] == second["raw_signature"]:
+        return True
+    # A NEF atom-set expression and a topology-verified reconstruction of the
+    # corresponding NMR-STAR canonical rows are semantically identical even
+    # though their raw spellings differ. Require the complete OR structure,
+    # physical atoms, and semantic kinds to agree; pair-set equality alone
+    # would incorrectly accept superficially similar representations.
     return bool(
-        first["raw_signature"] == second["raw_signature"]
-        and first["rejection_reasons"] == second["rejection_reasons"]
+        not first["rejection_reasons"]
+        and first["physical_pairs"]
+        and first["physical_pairs"] == second["physical_pairs"]
+        and first["physical_alternative_signature"]
+        == second["physical_alternative_signature"]
+        and first["kinds"] == second["kinds"]
     )
 
 

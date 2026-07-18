@@ -10,13 +10,19 @@ from .model import (
     BoltzAtom,
     ConversionReport,
     EmittedConstraint,
+    Endpoint,
     ProjectedAlternative,
     Rejection,
     RestraintGroup,
     SequenceRecord,
 )
-from .star import ParsedStarDocument, StarDataError
+from .star import (
+    ParsedStarDocument,
+    StarDataError,
+    normalize_nmrstar_canonical_expansions,
+)
 from .topology import (
+    AtomSetChoice,
     TopologyLibrary,
     TopologyResolutionError,
     atom_topology_violations,
@@ -132,6 +138,20 @@ def project_document(
                     ),
                     row_ids=_row_ids(group),
                 )
+            )
+            continue
+        normalization_issues = normalize_nmrstar_canonical_expansions(
+            group, topology_library
+        )
+        if normalization_issues:
+            rejections.extend(
+                Rejection(
+                    group_id=group.group_id,
+                    reason="inconsistent_nmrstar_canonical_expansion",
+                    details=issue.details,
+                    row_ids=list(issue.row_ids),
+                )
+                for issue in normalization_issues
             )
             continue
         projected, group_rejections = _project_group(
@@ -430,16 +450,16 @@ def _project_group(
         comp1 = alternative.endpoint1.canonical_residue_name or residue1.residue_name
         comp2 = alternative.endpoint2.canonical_residue_name or residue2.residue_name
         try:
-            endpoint_choices1 = topology_library.resolve_expression(
+            endpoint_choices1 = _resolve_endpoint_choices(
+                topology_library,
                 comp1,
-                alternative.endpoint1.atom_expression,
-                canonical_hint=alternative.endpoint1.canonical_atom_hint,
+                alternative.endpoint1,
                 pseudoatom_policy=settings.pseudoatom_policy,
             )
-            endpoint_choices2 = topology_library.resolve_expression(
+            endpoint_choices2 = _resolve_endpoint_choices(
+                topology_library,
                 comp2,
-                alternative.endpoint2.atom_expression,
-                canonical_hint=alternative.endpoint2.canonical_atom_hint,
+                alternative.endpoint2,
                 pseudoatom_policy=settings.pseudoatom_policy,
             )
         except TopologyResolutionError as exc:
@@ -466,6 +486,9 @@ def _project_group(
             "combination_id": alternative.combination_id,
             "member_id": alternative.member_id,
             "member_logic_code": alternative.member_logic_code,
+            "canonical_expansions": [
+                dict(item) for item in alternative.canonical_expansions
+            ],
         }
 
         for set1, set2 in product(endpoint_choices1, endpoint_choices2):
@@ -559,6 +582,29 @@ def _project_group(
                     )
                 )
     return projected, rejections
+
+
+def _resolve_endpoint_choices(
+    topology_library: TopologyLibrary,
+    comp_id: str,
+    endpoint: Endpoint,
+    *,
+    pseudoatom_policy: str,
+) -> list[AtomSetChoice]:
+    if endpoint.canonical_atom_set:
+        return [
+            topology_library.resolve_canonical_atom_set(
+                comp_id,
+                endpoint.canonical_atom_set,
+                author_expression=endpoint.atom_expression,
+            )
+        ]
+    return topology_library.resolve_expression(
+        comp_id,
+        endpoint.atom_expression,
+        canonical_hint=endpoint.canonical_atom_hint,
+        pseudoatom_policy=pseudoatom_policy,
+    )
 
 
 def _merge_or_alternatives(

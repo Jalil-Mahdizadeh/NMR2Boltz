@@ -567,6 +567,45 @@ class TopologyLibrary:
             f"Unable to resolve {comp}:{expression}. Available mapped hydrogens include: {preview or 'none'}."
         )
 
+    def resolve_canonical_atom_set(
+        self,
+        comp_id: str,
+        atom_names: Iterable[str],
+        *,
+        author_expression: str,
+    ) -> AtomSetChoice:
+        """Resolve a topology-verified canonical expansion as one physical set."""
+        topology = self.get(comp_id.upper())
+        if topology is None:
+            raise TopologyResolutionError(
+                f"No topology is available for component {comp_id.upper()}; "
+                "cannot verify a canonical atom-set expansion."
+            )
+        names = list(dict.fromkeys(str(name) for name in atom_names))
+        if len(names) < 2:
+            raise TopologyResolutionError(
+                "A reconstructed canonical atom set must contain at least two atoms."
+            )
+        atoms = [
+            topology.atom_choice(name, f"{topology.source}:canonical-expansion")
+            for name in names
+        ]
+        parents = {atom.parent_atom for atom in atoms}
+        if len(parents) != 1 or any(atom.element != "H" for atom in atoms):
+            raise TopologyResolutionError(
+                f"Canonical atoms {names!r} in {comp_id.upper()} are not one physical "
+                "proton set on a single heavy parent."
+            )
+        return AtomSetChoice(
+            atoms=atoms,
+            expression=author_expression,
+            semantics="canonical-expansion-atom-set",
+            warnings=[
+                "NMR-STAR canonical OR rows reconstructed as one topology-verified "
+                "author-level proton set"
+            ],
+        )
+
 
 def component_topology_snapshot(
     records: Iterable[SequenceRecord], library: TopologyLibrary

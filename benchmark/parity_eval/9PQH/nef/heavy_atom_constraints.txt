@@ -1,0 +1,4 @@
+# [heavy-atom X -- heavy-atom Y : conservative upper bound in angstrom]
+[A:85:CB -- B:12:CG1 : 5.640001]
+[A:144:CG2 -- B:8:CB : 7.540000]
+[A:144:CG2 -- B:12:CG1 : 8.240000]

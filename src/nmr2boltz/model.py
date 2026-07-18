@@ -59,6 +59,7 @@ class Endpoint:
     canonical_sequence_code: str | None = None
     canonical_residue_name: str | None = None
     canonical_atom_hint: str | None = None
+    canonical_atom_set: list[str] = field(default_factory=list)
 
     def display(self) -> str:
         return ":".join(
@@ -113,6 +114,7 @@ class RawAlternative:
                 endpoint.residue_name,
                 endpoint.atom_expression,
                 canonical_hint,
+                tuple(endpoint.canonical_atom_set),
             )
 
         e1 = endpoint_key(self.endpoint1)

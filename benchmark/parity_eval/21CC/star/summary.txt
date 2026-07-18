@@ -1,0 +1,20 @@
+NMR-to-Boltz heavy-atom projection summary
+==============================================
+Input: benchmark/input/21CC/21cc_nmr-data.str
+Detected format: nmr-star
+Restraint groups read: 202
+Source alternatives read: 218
+Safe groups before pair deduplication: 186
+Exact atom constraints emitted: 176
+Atom-contact union groups emitted: 16
+Rejection records: 0
+
+Important:
+- atom_constraints_exact.yaml contains only non-ambiguous contacts.
+- atom_constraints_union.yaml contains only ambiguous OR groups with per-alternative bounds.
+- ambiguous_groups.tsv preserves the full audit metadata for those OR alternatives.
+- conversion_report.json is the lossless audit/provenance record.
+- sequences.fasta contains polymer-only sequences extracted from the source sequence map.
+
+Global warnings:
+- NMR-STAR component indices for chain B were not contiguous 1..N; Boltz indices use sequence-loop order
