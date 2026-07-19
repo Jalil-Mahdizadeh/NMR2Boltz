@@ -182,6 +182,8 @@ class ProjectedAlternative:
     source_rows: list[str] = field(default_factory=list)
     source_endpoints: list[str] = field(default_factory=list)
     warnings: list[str] = field(default_factory=list)
+    raw_projected_distance: float | None = None
+    boltz_adjustment: str | None = None
 
     @property
     def pair_key(self) -> tuple[BoltzAtom, BoltzAtom]:
@@ -248,4 +250,12 @@ class ConversionReport:
             for alternative in group["alternatives"]:
                 if not alternative["canonical_expansions"]:
                     del alternative["canonical_expansions"]
+        # Union-bound adjustment provenance is present only when the producer
+        # had to weaken a projected alternative to the Boltz minimum.
+        for group in payload["ambiguous_groups"]:
+            for alternative in group["alternatives"]:
+                if alternative["raw_projected_distance"] is None:
+                    del alternative["raw_projected_distance"]
+                if alternative["boltz_adjustment"] is None:
+                    del alternative["boltz_adjustment"]
         return payload

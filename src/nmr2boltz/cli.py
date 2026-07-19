@@ -80,8 +80,8 @@ def build_parser() -> argparse.ArgumentParser:
         "--target-yaml",
         type=Path,
         help=(
-            "Validate every mapped chain, residue index, and residue identity against the exact "
-            "Boltz input YAML before writing executable constraints."
+            "Validate every mapped chain, residue index, residue identity, exact endpoint, and "
+            "union-alternative endpoint against the Boltz input YAML before writing constraints."
         ),
     )
     convert.add_argument(
@@ -132,14 +132,20 @@ def build_parser() -> argparse.ArgumentParser:
         type=float,
         default=2.0,
         metavar="ANGSTROM",
-        help="Minimum accepted by the current BoltzUI atom_contact implementation (default: 2.0).",
+        help=(
+            "Minimum accepted by BoltzUI atom_contact; lower exact and union bounds are "
+            "raised conservatively (default: 2.0)."
+        ),
     )
     convert.add_argument(
         "--boltz-max-distance",
         type=float,
         default=20.0,
         metavar="ANGSTROM",
-        help="Maximum accepted by the current BoltzUI atom_contact implementation (default: 20.0).",
+        help=(
+            "Maximum accepted by BoltzUI atom_contact; larger exact bounds and complete "
+            "union groups containing a larger alternative are rejected (default: 20.0)."
+        ),
     )
     convert.add_argument(
         "--min-sequence-separation",

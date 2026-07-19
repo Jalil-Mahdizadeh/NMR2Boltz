@@ -131,6 +131,8 @@ def project_document(
     intrachain_groups_filtered = 0
     projected_alternatives_removed_by_intrachain_filter = 0
     mixed_chain_scope_groups_filtered = 0
+    union_alternatives_raised_to_boltz_minimum = 0
+    union_groups_quarantined_above_boltz_maximum = 0
 
     for group in parsed.restraint_groups:
         if group.complex_logic:
@@ -258,6 +260,16 @@ def project_document(
                 continue
             safe_by_group.append(candidate)
         else:
+            merged, bound_rejection, adjusted_count = _adapt_ambiguous_group_bounds(
+                group,
+                merged,
+                settings,
+            )
+            union_alternatives_raised_to_boltz_minimum += adjusted_count
+            if bound_rejection is not None:
+                union_groups_quarantined_above_boltz_maximum += 1
+                rejections.append(bound_rejection)
+                continue
             ambiguous.append(
                 AmbiguousGroup(
                     group_id=group.group_id,
@@ -294,6 +306,12 @@ def project_document(
             projected_alternatives_removed_by_intrachain_filter
         ),
         "mixed_chain_scope_groups_filtered": mixed_chain_scope_groups_filtered,
+        "union_alternatives_raised_to_boltz_minimum": (
+            union_alternatives_raised_to_boltz_minimum
+        ),
+        "union_groups_quarantined_above_boltz_maximum": (
+            union_groups_quarantined_above_boltz_maximum
+        ),
         "emitted_atom_topology_violations": 0,
     }
     combined_settings = dict(parser_settings or {})
@@ -750,6 +768,86 @@ def _merge_or_alternatives(
             )
             current.warnings = list(dict.fromkeys(current.warnings + alternative.warnings))
     return sorted(merged.values(), key=lambda item: item.pair_key)
+
+
+def _adapt_ambiguous_group_bounds(
+    group: RestraintGroup,
+    alternatives: list[ProjectedAlternative],
+    settings: ProjectionSettings,
+) -> tuple[list[ProjectedAlternative], Rejection | None, int]:
+    """Apply Boltz's executable interval without strengthening an OR group."""
+    over_maximum = [
+        alternative
+        for alternative in alternatives
+        if alternative.max_distance > settings.boltz_max_distance
+    ]
+    if over_maximum:
+        maximum = max(alternative.max_distance for alternative in over_maximum)
+        provenance = {
+            "boltz_max_distance_angstrom": settings.boltz_max_distance,
+            "complete_union_group_quarantined": True,
+            "alternatives": [
+                {
+                    "atom1": {
+                        "chain": alternative.pair_key[0].chain,
+                        "residue_index": alternative.pair_key[0].residue_index,
+                        "atom_name": alternative.pair_key[0].atom_name,
+                    },
+                    "atom2": {
+                        "chain": alternative.pair_key[1].chain,
+                        "residue_index": alternative.pair_key[1].residue_index,
+                        "atom_name": alternative.pair_key[1].atom_name,
+                    },
+                    "projected_upper_bound_angstrom": alternative.max_distance,
+                    "source_upper_bound_angstrom": alternative.source_upper_bound,
+                    "source_rows": list(alternative.source_rows),
+                }
+                for alternative in alternatives
+            ],
+        }
+        return (
+            [],
+            Rejection(
+                group_id=group.group_id,
+                reason="ambiguous_group_bound_exceeds_boltz_maximum",
+                details=(
+                    "At least one conservative union-alternative upper bound "
+                    f"({maximum:.6g} A) exceeds the Boltz atom_contact maximum "
+                    f"{settings.boltz_max_distance:.6g} A. The complete OR group "
+                    "was quarantined; clipping or dropping only the incompatible "
+                    "alternative would strengthen the source disjunction."
+                ),
+                row_ids=list(
+                    dict.fromkeys(
+                        row
+                        for alternative in alternatives
+                        for row in alternative.source_rows
+                    )
+                )
+                or _row_ids(group),
+                provenance=provenance,
+            ),
+            0,
+        )
+
+    adjusted_count = 0
+    for alternative in alternatives:
+        raw = alternative.max_distance
+        if raw >= settings.boltz_min_distance:
+            continue
+        adjustment = (
+            f"raised from {raw:.6g} to Boltz minimum "
+            f"{settings.boltz_min_distance:.6g} A; this weakens rather than "
+            "strengthens the union alternative"
+        )
+        alternative.raw_projected_distance = raw
+        alternative.max_distance = settings.boltz_min_distance
+        alternative.boltz_adjustment = adjustment
+        alternative.warnings = list(
+            dict.fromkeys([*alternative.warnings, adjustment])
+        )
+        adjusted_count += 1
+    return alternatives, None, adjusted_count
 
 
 def _merge_independent_constraints(

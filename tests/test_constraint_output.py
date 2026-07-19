@@ -8,7 +8,7 @@ import yaml
 import pytest
 
 from nmr2boltz.model import BoltzAtom
-from nmr2boltz.output import write_outputs
+from nmr2boltz.output import OutputBoundValidationError, write_outputs
 from nmr2boltz.project import ProjectionSettings, project_document
 from nmr2boltz.star import parse_star_document
 from nmr2boltz.topology import AtomTopologyValidationError, TopologyLibrary
@@ -108,6 +108,70 @@ def test_union_preserves_per_alternative_bounds_with_outward_six_decimal_format(
     serialized = re.findall(r"max_distance: ([0-9]+\.[0-9]+)$", text, re.MULTILINE)
     assert serialized
     assert all(re.fullmatch(r"[0-9]+\.[0-9]{6}", value) for value in serialized)
+
+
+def test_projected_union_bounds_are_raised_to_configured_minimum_before_serialization(
+    tmp_path,
+):
+    path = FIXTURES / "example.nef"
+    report = project_document(
+        parse_star_document(path),
+        input_file=str(path),
+        topology_library=TopologyLibrary(),
+        settings=ProjectionSettings(boltz_min_distance=10.0),
+    )
+
+    adjusted = [
+        alternative
+        for group in report.ambiguous_groups
+        for alternative in group.alternatives
+        if alternative.raw_projected_distance is not None
+    ]
+    assert adjusted
+    assert all(alternative.max_distance == 10.0 for alternative in adjusted)
+    assert all(alternative.raw_projected_distance < 10.0 for alternative in adjusted)
+
+    write_outputs(report, tmp_path)
+    payload = yaml.safe_load((tmp_path / "atom_constraints_union.yaml").read_text())
+    assert all(
+        alternative["max_distance"] >= 10.0
+        for wrapped in payload["constraints"]
+        for alternative in wrapped["atom_contact_union"]["alternatives"]
+    )
+
+
+def test_project_document_quarantines_complete_union_above_configured_maximum():
+    path = FIXTURES / "example.nef"
+    report = project_document(
+        parse_star_document(path),
+        input_file=str(path),
+        topology_library=TopologyLibrary(),
+        settings=ProjectionSettings(boltz_max_distance=7.5),
+    )
+
+    assert not report.ambiguous_groups
+    rejection = next(
+        item
+        for item in report.rejections
+        if item.reason == "ambiguous_group_bound_exceeds_boltz_maximum"
+    )
+    assert rejection.group_id == "distance_restraints:2"
+    assert rejection.provenance["complete_union_group_quarantined"] is True
+    assert report.statistics["union_groups_quarantined_above_boltz_maximum"] == 1
+
+
+@pytest.mark.parametrize("bound", [1.999999, 20.000001, float("nan")])
+def test_final_output_bound_invariant_rejects_corrupt_union_report(
+    tmp_path, bound
+):
+    report = _report()
+    report.ambiguous_groups[0].alternatives[0].max_distance = bound
+    destination = tmp_path / "invalid-union-bound"
+
+    with pytest.raises(OutputBoundValidationError, match="bounds must be finite"):
+        write_outputs(report, destination)
+
+    assert not destination.exists()
 
 
 def test_exact_bounds_use_outward_six_decimal_format(tmp_path):

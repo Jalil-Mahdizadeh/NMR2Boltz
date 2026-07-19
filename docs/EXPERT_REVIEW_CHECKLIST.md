@@ -46,7 +46,9 @@ Use this checklist before treating converted contacts as production restraints.
 
 ## Boltz usage
 
-- [ ] Use Boltz-2 with potentials enabled and `force: true` as required by the atom-contact implementation.
+- [ ] Use Boltz-2 with `force: true`. Decide separately whether optional
+  `--use_potentials` FK/physical steering is appropriate; atom-contact
+  guidance remains active without it.
 - [ ] Start with the safe unambiguous set; retain an unrestrained control.
 - [ ] Generate multiple diffusion samples and, for ambiguous data, multiple assignment hypotheses or union-aware runs.
 - [ ] Avoid flooding the model with redundant local restraints; document any selection criteria.

@@ -1,9 +1,10 @@
 import gzip
 from pathlib import Path
 
-from nmr2boltz.model import BoltzAtom, ProjectedAlternative
+from nmr2boltz.model import BoltzAtom, ProjectedAlternative, RestraintGroup
 from nmr2boltz.project import (
     ProjectionSettings,
+    _adapt_ambiguous_group_bounds,
     _merge_independent_constraints,
     _merge_or_alternatives,
     project_document,
@@ -57,6 +58,54 @@ def test_boltz_minimum_weakens_and_maximum_is_not_clipped():
     assert not over
     assert over_rejected[0].reason == "projected_bound_exceeds_boltz_maximum"
     assert "not clipped" in over_rejected[0].details
+
+
+def test_union_minimum_raises_each_low_alternative_with_provenance():
+    low = projected("list:1", 1.5)
+    low.source_rows = ["row-low"]
+    other = projected("list:1", 3.0)
+    other.atom2 = BoltzAtom("A", 9, "CB")
+    other.source_rows = ["row-other"]
+    group = RestraintGroup("nef", "list", "1", [])
+
+    adjusted, rejection, count = _adapt_ambiguous_group_bounds(
+        group,
+        [low, other],
+        ProjectionSettings(),
+    )
+
+    assert rejection is None
+    assert count == 1
+    assert adjusted[0].max_distance == 2.0
+    assert adjusted[0].raw_projected_distance == 1.5
+    assert adjusted[0].boltz_adjustment is not None
+    assert "weakens" in adjusted[0].boltz_adjustment
+    assert adjusted[1].max_distance == 3.0
+    assert adjusted[1].raw_projected_distance is None
+
+
+def test_union_over_maximum_quarantines_complete_group_without_trimming():
+    acceptable = projected("list:1", 5.0)
+    acceptable.source_rows = ["row-acceptable"]
+    over = projected("list:1", 20.000001)
+    over.atom2 = BoltzAtom("A", 9, "CB")
+    over.source_rows = ["row-over"]
+    group = RestraintGroup("nef", "list", "1", [])
+
+    adjusted, rejection, count = _adapt_ambiguous_group_bounds(
+        group,
+        [acceptable, over],
+        ProjectionSettings(),
+    )
+
+    assert not adjusted
+    assert count == 0
+    assert rejection is not None
+    assert rejection.reason == "ambiguous_group_bound_exceeds_boltz_maximum"
+    assert rejection.row_ids == ["row-acceptable", "row-over"]
+    assert rejection.provenance["complete_union_group_quarantined"] is True
+    assert len(rejection.provenance["alternatives"]) == 2
+    assert "dropping only" in rejection.details
 
 
 def test_compressed_nef_input(tmp_path):

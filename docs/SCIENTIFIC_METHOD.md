@@ -433,11 +433,16 @@ The accepted interval in that custom fork is 2-20 A. Each atom pair retains its 
 
 ### 9.1 Lower than 2 A
 
-Raising a bound from, for example, 1.8 A to 2.0 A weakens it. This is logically safe and is recorded as a Boltz adjustment.
+Raising a bound from, for example, 1.8 A to 2.0 A weakens it. This is logically
+safe and is recorded as a Boltz adjustment for exact constraints and individual
+union alternatives.
 
 ### 9.2 Greater than 20 A
 
 Reducing 21 A to 20 A would strengthen the constraint. The converter never does this. The value is retained in the audit report and rejected from normal Boltz YAML.
+For an ambiguous OR group, one over-maximum alternative quarantines the
+complete group. Dropping only that branch would replace the source disjunction
+with a smaller, stronger one.
 
 ### 9.3 Precision
 
@@ -595,7 +600,7 @@ CSV digests and per-entry counts are stored in
 
 The following checks were executed on 2026-07-19 against the current source tree:
 
-- all 111 Pytest regression, format, topology, logic, target-validation,
+- all 119 Pytest regression, format, topology, logic, target-validation,
   ensemble-alignment, constraint-serialization, and robustness tests passed;
 - Python byte compilation passed for source, tests, and the stress harness;
 - 100,000 randomized sum-r6 implication cases and 100,000 constructive triangle-inequality cases passed in the final Docker image;

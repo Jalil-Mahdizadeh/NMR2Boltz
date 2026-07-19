@@ -77,7 +77,8 @@ nmr2boltz convert experiment.nef --residue-map residue_map.tsv -o converted
 
 The safer production path also supplies the exact Boltz input. Conversion stops
 before writing executable constraints if a mapped chain, residue index, declared
-modification, or residue identity is incompatible with that target:
+modification, residue identity, exact-contact endpoint, or union-alternative
+endpoint is incompatible with that target:
 
 ```bash
 nmr2boltz convert experiment.nef \
@@ -206,7 +207,7 @@ artifact digests are in
 | `conversion_report.json` | Full machine-readable provenance, component-topology snapshot, formula terms, settings, warnings, ambiguity, and rejections. |
 | `sequence_map.tsv` | Source identifier to Boltz residue-index mapping. This should be manually checked. |
 | `sequences.fasta` | Clean polymer-only sequences extracted from the source mapping; caps, ions, and other non-polymers are omitted. |
-| `ambiguous_groups.tsv` | Full audit metadata for the OR alternatives emitted in the union file. |
+| `ambiguous_groups.tsv` | Full audit metadata for the OR alternatives emitted in the union file, including any raw-to-Boltz minimum-bound adjustment. |
 | `rejections.tsv` | Every restraint or group that could not be converted safely, with a reason and deterministic JSON provenance. |
 | `summary.txt` | Concise run summary. |
 | `hypotheses/*.yaml` | Optional assignment hypotheses generated with `--hypotheses N`. Each selects one alternative per ambiguous group. |
@@ -224,11 +225,18 @@ constraints:
     force: true
 ```
 
-Merge the list into the same Boltz input that defines the corresponding chains and sequences. The current BoltzUI patch requires Boltz-2, `force: true`, and inference with potentials enabled. It also accepts distances only in the interval 2–20 Å. The converter therefore:
+Merge the list into the same Boltz input that defines the corresponding chains
+and sequences. The current BoltzUI patch requires Boltz-2 and `force: true`.
+Atom-contact guidance remains active independently of `--use_potentials`; that
+flag enables additional FK/physical steering and is optional. The patch accepts
+distances only in the interval 2–20 Å. The converter therefore:
 
-- raises a projected value below 2 Å to 2 Å, which weakens the restraint;
+- raises every exact or union-alternative value below 2 Å to 2 Å, which weakens
+  the restraint and is recorded in provenance;
 - never clips a value above 20 Å, because clipping would strengthen it;
-- reports an over-20 Å value instead of emitting it.
+- rejects an over-20 Å exact contact and quarantines a complete union group if
+  any alternative exceeds 20 Å; it never strengthens an OR by dropping only
+  the incompatible alternative.
 
 ## Projection policies
 

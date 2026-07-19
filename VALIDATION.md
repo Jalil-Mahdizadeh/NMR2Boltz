@@ -5,14 +5,17 @@ Date: 2026-07-19
 
 ## Regression and stress validation
 
-- 111 Pytest tests passed.
+- 119 Pytest tests passed.
 - 100,000 randomized sum-r6 implication cases passed.
 - 100,000 constructive triangle-inequality cases passed.
 - 25,000 outward-rounding cases passed.
 - 10,000 randomized OR-max/AND-min merge-order cases passed.
 - All 845 built-in hydrogen-parent mappings resolved.
 - Deterministic NEF, NMR-STAR, compressed-input, custom-component, averaging-policy, and 32-hypothesis paths passed.
-- Target-YAML validation checks chain existence, one-based index bounds, canonical residue identity, declared modifications, mapping collisions, and emitted-contact positions.
+- Target-YAML validation checks chain existence, one-based index bounds,
+  canonical residue identity, declared modifications, mapping collisions, and
+  every exact and union-alternative position. Its report counts exact
+  constraints, union groups, and union alternatives explicitly.
 - Sequence-only NEF/NMR-STAR entries produce auditable empty distance conversions.
 - Sequence/residue conflicts are rejected explicitly before atom-topology resolution.
 - PDB coordinates are aligned to one-based Boltz sequence indices before distance evaluation.
@@ -29,6 +32,10 @@ Date: 2026-07-19
   snapshot.
 - Exact and ambiguous constraints are serialized into separate metadata-free
   files, with deterministic ordering and conservative six-decimal formatting.
+- Exact and union bounds share the executable interval policy: sub-minimum
+  values are weakened to the configured minimum, while any over-maximum union
+  alternative quarantines its complete OR group. The writer independently
+  rejects non-finite or out-of-interval exact and union bounds.
 - `--exclude-intrachain` was exercised end to end for NEF and NMR-STAR
   protein, DNA, and RNA chains. The tests cover exact contacts, all-inter-chain
   unions, mixed-scope OR quarantine, mapped-chain identity, empty constraint

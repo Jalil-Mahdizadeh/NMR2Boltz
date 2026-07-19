@@ -71,6 +71,48 @@ def _yaml_distance(value: float) -> SixDecimalFloat:
     return SixDecimalFloat(_outward_decimal(value))
 
 
+class OutputBoundValidationError(ValueError):
+    """Raised before executable YAML can contain an incompatible distance."""
+
+
+def _require_valid_output_bounds(report: ConversionReport) -> None:
+    minimum = float(report.settings.get("boltz_min_distance_angstrom", 2.0))
+    maximum = float(report.settings.get("boltz_max_distance_angstrom", 20.0))
+    violations: list[str] = []
+    for constraint in report.emitted_constraints:
+        if (
+            not math.isfinite(constraint.max_distance)
+            or constraint.max_distance < minimum
+            or constraint.max_distance > maximum
+        ):
+            violations.append(
+                "exact "
+                f"{constraint.atom1.display()} -- {constraint.atom2.display()} "
+                f"has {constraint.max_distance!r} A"
+            )
+    for group in report.ambiguous_groups:
+        for alternative in group.alternatives:
+            if (
+                not math.isfinite(alternative.max_distance)
+                or alternative.max_distance < minimum
+                or alternative.max_distance > maximum
+            ):
+                violations.append(
+                    f"union {group.group_id} "
+                    f"{alternative.atom1.display()} -- {alternative.atom2.display()} "
+                    f"has {alternative.max_distance!r} A"
+                )
+    if not violations:
+        return
+    details = "; ".join(violations[:20])
+    if len(violations) > 20:
+        details += f"; and {len(violations) - 20} additional violation(s)"
+    raise OutputBoundValidationError(
+        f"Executable atom-contact bounds must be finite and within "
+        f"{minimum:g}-{maximum:g} A: {details}"
+    )
+
+
 def _constraint_payload(constraints: Iterable[EmittedConstraint]) -> dict[str, Any]:
     return {
         "constraints": [
@@ -106,7 +148,8 @@ def write_outputs(
     random_seed: int = 0,
 ) -> list[Path]:
     # Independent final invariant: fail before creating the output directory or
-    # writing audit/YAML files if any executable atom lacks topology evidence.
+    # writing audit/YAML files if any executable bound or atom is invalid.
+    _require_valid_output_bounds(report)
     require_valid_output_atom_topology(report)
     require_valid_interchain_output(report)
     output = Path(output_dir)
@@ -220,6 +263,12 @@ def write_outputs(
                     alternative.atom2.residue_index,
                     alternative.atom2.atom_name,
                     f"{_rounded(alternative.max_distance):.6f}",
+                    (
+                        f"{alternative.raw_projected_distance:.6f}"
+                        if alternative.raw_projected_distance is not None
+                        else ""
+                    ),
+                    alternative.boltz_adjustment or "",
                     f"{alternative.averaging_factor:.8f}",
                     alternative.explicit_pair_count,
                     ";".join(alternative.source_rows),
@@ -240,6 +289,8 @@ def write_outputs(
             "residue_index_2",
             "atom_2",
             "max_distance_A",
+            "raw_projected_distance_A",
+            "boltz_adjustment",
             "averaging_factor",
             "explicit_pair_count",
             "source_rows",
@@ -349,11 +400,10 @@ def write_hypotheses(
     used_groups: list[AmbiguousGroup] = []
     skipped_groups: list[str] = []
     for group in report.ambiguous_groups:
-        candidates = [item for item in group.alternatives if item.max_distance <= maximum]
-        if not candidates:
+        if any(item.max_distance > maximum for item in group.alternatives):
             skipped_groups.append(group.group_id)
             continue
-        choice_sets.append(candidates)
+        choice_sets.append(list(group.alternatives))
         used_groups.append(group)
     if not choice_sets:
         return []
@@ -531,6 +581,14 @@ def _summary_text(report: ConversionReport) -> str:
         f"Safe groups before pair deduplication: {stats.get('safe_groups_before_pair_deduplication', 0)}",
         f"Exact atom constraints emitted: {stats.get('emitted_unique_heavy_atom_constraints', 0)}",
         f"Atom-contact union groups emitted: {stats.get('ambiguous_or_groups_not_emitted', 0)}",
+        (
+            "Union alternatives raised to the Boltz minimum: "
+            f"{stats.get('union_alternatives_raised_to_boltz_minimum', 0)}"
+        ),
+        (
+            "Union groups quarantined above the Boltz maximum: "
+            f"{stats.get('union_groups_quarantined_above_boltz_maximum', 0)}"
+        ),
         (
             "Inter-chain-only filter enabled: "
             f"{'yes' if report.settings.get('exclude_intrachain', False) else 'no'}"

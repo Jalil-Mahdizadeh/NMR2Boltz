@@ -167,7 +167,8 @@ Construct two alternatives where only one is within threshold and verify that:
 ### End-to-end tests
 
 - parse one `atom_contact` plus one union group from YAML;
-- run a minimal Boltz-2 inference job with potentials enabled;
+- run minimal Boltz-2 inference jobs with `--use_potentials` both disabled and
+  enabled, verifying that atom-contact guidance remains active in both;
 - verify no token-conditioning AND leak;
 - preserve provenance in output logs;
 - compare a synthetic two-fold system under unrestrained, incorrect-AND, and union-aware guidance.

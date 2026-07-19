@@ -14,7 +14,11 @@ constraints:
     force: true
 ```
 
-Run Boltz 2 with inference potentials enabled. Keep the converter's JSON audit beside every prediction so that chain and residue mapping, atom expansion, bound calculation, merge decisions, and omissions remain reviewable.
+Run Boltz 2 with `force: true`. Atom-contact guidance remains active whether
+or not `--use_potentials` is selected; that option controls additional
+FK/physical steering and is optional. Keep the converter's JSON audit beside
+every prediction so that chain and residue mapping, atom expansion, bound
+calculation, merge decisions, and omissions remain reviewable.
 
 ## Ambiguous restraints
 
@@ -23,6 +27,11 @@ alternative retains its own upper bound, and the file deliberately contains no
 provenance metadata. A consumer must implement the alternatives as one OR
 potential; see `BOLTZUI_UNION_EXTENSION.md`. The complete source provenance
 remains in `conversion_report.json` and `ambiguous_groups.tsv`.
+
+The same executable interval applies to exact and union output. A
+sub-minimum union alternative is raised to the minimum, which weakens it. If
+any alternative exceeds the maximum, NMR2Boltz quarantines the complete union
+group rather than dropping one branch and strengthening the source OR.
 
 `hypotheses/`, when requested, provides one or more ordinary current-schema YAML files. Each file chooses one branch per ambiguous group. These are alternative calculations, not restraints to combine in one run. Rank or filter the resulting structures against the original proton-level restraints after adding hydrogens.
 

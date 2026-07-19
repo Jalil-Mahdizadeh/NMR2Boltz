@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import re
 from dataclasses import asdict, dataclass, field
+from itertools import chain as itertools_chain
 from pathlib import Path
 from typing import Any
 
@@ -101,6 +102,9 @@ class TargetValidationResult:
     target_chains: list[str]
     checked_sequence_records: int
     checked_constraints: int
+    checked_exact_constraints: int
+    checked_union_groups: int
+    checked_union_alternatives: int
     mapped_positions: int
     issues: list[ValidationIssue] = field(default_factory=list)
 
@@ -119,6 +123,9 @@ class TargetValidationResult:
             "target_chains": self.target_chains,
             "checked_sequence_records": self.checked_sequence_records,
             "checked_constraints": self.checked_constraints,
+            "checked_exact_constraints": self.checked_exact_constraints,
+            "checked_union_groups": self.checked_union_groups,
+            "checked_union_alternatives": self.checked_union_alternatives,
             "mapped_positions": self.mapped_positions,
             "error_count": len(self.errors),
             "warning_count": len(self.warnings),
@@ -411,19 +418,35 @@ def validate_report_against_target(
         )
 
     checked_atoms: set[BoltzAtom] = set()
-    for constraint in report.emitted_constraints:
-        for atom in (constraint.atom1, constraint.atom2):
-            if atom in checked_atoms:
-                continue
-            checked_atoms.add(atom)
-            _validate_position(
-                chain=atom.chain,
-                residue_index=atom.residue_index,
-                residue_name=None,
-                entities=entities,
-                issues=issues,
-                check_identity=False,
-            )
+    constraint_atoms = (
+        atom
+        for constraint in report.emitted_constraints
+        for atom in (constraint.atom1, constraint.atom2)
+    )
+    union_atoms = (
+        atom
+        for group in report.ambiguous_groups
+        for alternative in group.alternatives
+        for atom in (alternative.atom1, alternative.atom2)
+    )
+    for atom in itertools_chain(constraint_atoms, union_atoms):
+        if atom in checked_atoms:
+            continue
+        checked_atoms.add(atom)
+        _validate_position(
+            chain=atom.chain,
+            residue_index=atom.residue_index,
+            residue_name=None,
+            entities=entities,
+            issues=issues,
+            check_identity=False,
+        )
+
+    exact_count = len(report.emitted_constraints)
+    union_group_count = len(report.ambiguous_groups)
+    union_alternative_count = sum(
+        len(group.alternatives) for group in report.ambiguous_groups
+    )
 
     for chain, entity in entities.items():
         mapped_count = sum(mapped_chain == chain for mapped_chain, _index in mapped)
@@ -442,7 +465,10 @@ def validate_report_against_target(
         target_version=version,
         target_chains=sorted(entities),
         checked_sequence_records=len(report.sequence_map),
-        checked_constraints=len(report.emitted_constraints),
+        checked_constraints=exact_count + union_group_count,
+        checked_exact_constraints=exact_count,
+        checked_union_groups=union_group_count,
+        checked_union_alternatives=union_alternative_count,
         mapped_positions=len(mapped),
         issues=issues,
     )

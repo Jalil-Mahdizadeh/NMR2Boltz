@@ -4,7 +4,7 @@ import pytest
 import yaml
 
 from nmr2boltz.cli import main
-from nmr2boltz.model import ConversionReport, SequenceRecord
+from nmr2boltz.model import BoltzAtom, ConversionReport, SequenceRecord
 from nmr2boltz.project import ProjectionSettings, project_document
 from nmr2boltz.star import parse_star_document
 from nmr2boltz.target import validate_report_against_target
@@ -68,9 +68,38 @@ def test_matching_boltz_target_validates_sequence_and_constraints(tmp_path):
 
     assert not result.errors
     assert result.checked_sequence_records == 5
-    assert result.checked_constraints > 0
+    report = _report()
+    assert result.checked_constraints == (
+        len(report.emitted_constraints) + len(report.ambiguous_groups)
+    )
+    assert result.checked_exact_constraints == len(report.emitted_constraints)
+    assert result.checked_union_groups == len(report.ambiguous_groups)
+    assert result.checked_union_alternatives == sum(
+        len(group.alternatives) for group in report.ambiguous_groups
+    )
     assert result.mapped_positions == 5
     assert result.target_chains == ["A", "B"]
+
+
+def test_target_validation_checks_union_endpoints_and_counts_union_groups(tmp_path):
+    target = tmp_path / "target.yaml"
+    _write_target(target, "VAYLG")
+    report = _report()
+    report.emitted_constraints = []
+    report.ambiguous_groups[0].alternatives[0].atom2 = BoltzAtom("Z", 1, "CB")
+
+    result = validate_report_against_target(report, target)
+
+    assert result.checked_constraints == len(report.ambiguous_groups)
+    assert result.checked_exact_constraints == 0
+    assert result.checked_union_groups == len(report.ambiguous_groups)
+    assert result.checked_union_alternatives == sum(
+        len(group.alternatives) for group in report.ambiguous_groups
+    )
+    assert any(
+        issue.code == "target_chain_missing" and issue.chain == "Z"
+        for issue in result.errors
+    )
 
 
 def test_target_residue_mismatch_is_an_error(tmp_path):

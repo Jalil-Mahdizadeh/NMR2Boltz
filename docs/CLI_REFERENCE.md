@@ -45,14 +45,14 @@ supported by the parser may also be used.
 | `--missing-upper-policy {reject,upper-linear,target-plus-uncertainty,target}` | Select how rows without an explicit upper bound are handled. | `reject` |
 | `--pseudoatom-policy {reject,atomset}` | Reject geometric Q/M pseudoatoms or explicitly approximate them as atom sets. | `reject` |
 | `--residue-map PATH` | Load a CSV, TSV, or JSON source-to-Boltz residue mapping. | Not set; use sequence-loop mapping. |
-| `--target-yaml PATH` | Validate mapped chains, residues, modifications, and emitted positions against an exact Boltz target before writing. | Not set; target-YAML validation is skipped. |
+| `--target-yaml PATH` | Validate mapped chains, residues, modifications, and every exact/union-alternative position against an exact Boltz target before writing. | Not set; target-YAML validation is skipped. |
 | `--chain-map SOURCE=BOLTZ` | Map one source chain code to a Boltz chain ID. Repeat for multiple mappings. | No mappings; preserve resolved source chain IDs. |
 | `--allow-inferred-sequence-map` | Permit residue-order inference from restraints when no sequence loop exists. | `false` |
 | `--ccd PATH` | Add an external CCD mmCIF file or directory for modified residues, ligands, or ions. Repeat as needed. | No external paths; use built-in and embedded topology only. |
 | `--bond-length-config PATH` | Load JSON overrides for conservative X-H bond-length upper envelopes. | Not set; use built-in envelopes. |
 | `--origin TYPE` | Include only a case-insensitive restraint origin/type such as `NOE`. Repeat to allow several types. | No filter; process all general distance-restraint origins. |
-| `--boltz-min-distance ANGSTROM` | Set the minimum executable BoltzUI atom-contact distance. Smaller projected bounds are raised, which weakens them. | `2.0` Å |
-| `--boltz-max-distance ANGSTROM` | Set the maximum executable BoltzUI atom-contact distance. Larger projected bounds are rejected, never clipped. | `20.0` Å |
+| `--boltz-min-distance ANGSTROM` | Set the minimum executable BoltzUI atom-contact distance. Smaller exact and union-alternative bounds are raised, which weakens them. | `2.0` Å |
+| `--boltz-max-distance ANGSTROM` | Set the maximum executable BoltzUI atom-contact distance. Larger exact bounds are rejected; a union with any larger alternative is quarantined in full. Bounds are never clipped. | `20.0` Å |
 | `--min-sequence-separation N` | Filter same-chain projected contacts whose residue-index separation is less than `N`. | `0` (disabled) |
 | `--exclude-intraresidue` | Omit projected contacts whose mapped endpoints are in the same residue. | `false` |
 | `--exclude-intrachain` | Emit only contacts between different mapped Boltz chain IDs; mixed intra/inter OR groups are omitted in full. | `false` |

@@ -2,6 +2,15 @@
 
 ## Unreleased
 
+- Applied the Boltz executable distance interval generically to ambiguous
+  unions. Sub-minimum alternatives are raised with raw-bound provenance; if
+  any alternative exceeds the maximum, the complete OR group is quarantined
+  rather than narrowed. The final writer now fails closed on any non-finite or
+  out-of-interval exact or union bound.
+- Extended `--target-yaml` validation to every union-alternative endpoint and
+  added explicit exact-constraint, union-group, and union-alternative counts.
+  Updated BoltzUI guidance to state that atom-contact guidance remains active
+  independently of optional `--use_potentials` physical steering.
 - Added deterministic per-entry exact-contact distance matrices under
   `benchmark/distance_check`. The generator places NEF and NMR-STAR executable
   bounds beside one aligned Euclidean distance per deposited PDB model,
@@ -60,11 +69,11 @@
   rejection reason before topology resolution.
 - NEF/NMR-STAR files with sequence data but no distance loop now produce an
   auditable empty conversion rather than failing format detection.
-- Expanded the regression suite from 39 to 111 tests, including positive and
+- Expanded the regression suite from 39 to 119 tests, including positive and
   adversarial checks for every discrepancy predicate and fail-closed gate.
 - Added fail-fast `--target-yaml` validation for chain IDs, residue indices,
   canonical residue identities, declared modifications, mapping collisions, and
-  emitted-contact positions.
+  exact and union-alternative positions.
 - Added the versioned, checksum-aware `nmr2boltz benchmark` command.
 - Made NMR-STAR sequence-alias provenance ordering deterministic across Python
   hash seeds and container runs.
