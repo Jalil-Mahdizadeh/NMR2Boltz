@@ -10,7 +10,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "nmr_to_boltz",
-      "community": 7,
+      "community": 0,
       "norm_label": "nmr_to_boltz.py"
     },
     {
@@ -113,7 +113,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "nmr2boltz_init",
-      "community": 7,
+      "community": 5,
       "norm_label": "__init__.py"
     },
     {
@@ -123,7 +123,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "nmr2boltz_init_rationale_1",
-      "community": 7,
+      "community": 5,
       "norm_label": "conservative nmr distance-restraint projection for boltz atom contacts."
     },
     {
@@ -133,7 +133,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "nmr2boltz_main",
-      "community": 7,
+      "community": 0,
       "norm_label": "__main__.py"
     },
     {
@@ -163,7 +163,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "valueerror",
-      "community": 5,
+      "community": 6,
       "norm_label": "valueerror"
     },
     {
@@ -383,7 +383,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "nmr2boltz_cli",
-      "community": 7,
+      "community": 0,
       "norm_label": "cli.py"
     },
     {
@@ -393,7 +393,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "nmr2boltz_cli_build_parser",
-      "community": 7,
+      "community": 0,
       "norm_label": "build_parser()"
     },
     {
@@ -403,7 +403,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "argumentparser",
-      "community": 7,
+      "community": 0,
       "norm_label": "argumentparser"
     },
     {
@@ -413,7 +413,7 @@
       "source_location": "L201",
       "_origin": "ast",
       "id": "nmr2boltz_cli_parse_chain_map",
-      "community": 7,
+      "community": 0,
       "norm_label": "parse_chain_map()"
     },
     {
@@ -433,7 +433,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "namespace",
-      "community": 7,
+      "community": 0,
       "norm_label": "namespace"
     },
     {
@@ -443,7 +443,7 @@
       "source_location": "L293",
       "_origin": "ast",
       "id": "nmr2boltz_cli_command_benchmark",
-      "community": 7,
+      "community": 0,
       "norm_label": "command_benchmark()"
     },
     {
@@ -453,7 +453,7 @@
       "source_location": "L309",
       "_origin": "ast",
       "id": "nmr2boltz_cli_main",
-      "community": 7,
+      "community": 0,
       "norm_label": "main()"
     },
     {
@@ -463,7 +463,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "nmr2boltz_model",
-      "community": 4,
+      "community": 6,
       "norm_label": "model.py"
     },
     {
@@ -473,7 +473,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "nmr2boltz_model_clean",
-      "community": 5,
+      "community": 6,
       "norm_label": "clean()"
     },
     {
@@ -493,7 +493,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "nmr2boltz_model_boltzatom",
-      "community": 7,
+      "community": 3,
       "norm_label": "boltzatom"
     },
     {
@@ -503,7 +503,7 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "nmr2boltz_model_boltzatom_display",
-      "community": 7,
+      "community": 3,
       "norm_label": ".display()"
     },
     {
@@ -553,7 +553,7 @@
       "source_location": "L97",
       "_origin": "ast",
       "id": "nmr2boltz_model_rawalternative_dedup_key",
-      "community": 6,
+      "community": 30,
       "norm_label": ".dedup_key()"
     },
     {
@@ -563,7 +563,7 @@
       "source_location": "L137",
       "_origin": "ast",
       "id": "nmr2boltz_model_restraintgroup",
-      "community": 4,
+      "community": 6,
       "norm_label": "restraintgroup"
     },
     {
@@ -573,7 +573,7 @@
       "source_location": "L147",
       "_origin": "ast",
       "id": "nmr2boltz_model_restraintgroup_group_id",
-      "community": 4,
+      "community": 6,
       "norm_label": ".group_id()"
     },
     {
@@ -603,7 +603,7 @@
       "source_location": "L171",
       "_origin": "ast",
       "id": "nmr2boltz_model_projectedalternative",
-      "community": 4,
+      "community": 3,
       "norm_label": "projectedalternative"
     },
     {
@@ -613,7 +613,7 @@
       "source_location": "L187",
       "_origin": "ast",
       "id": "nmr2boltz_model_projectedalternative_pair_key",
-      "community": 7,
+      "community": 3,
       "norm_label": ".pair_key()"
     },
     {
@@ -633,7 +633,7 @@
       "source_location": "L202",
       "_origin": "ast",
       "id": "nmr2boltz_model_emittedconstraint_pair_key",
-      "community": 7,
+      "community": 3,
       "norm_label": ".pair_key()"
     },
     {
@@ -653,7 +653,7 @@
       "source_location": "L219",
       "_origin": "ast",
       "id": "nmr2boltz_model_rejection",
-      "community": 4,
+      "community": 0,
       "norm_label": "rejection"
     },
     {
@@ -663,7 +663,7 @@
       "source_location": "L229",
       "_origin": "ast",
       "id": "nmr2boltz_model_conversionreport",
-      "community": 3,
+      "community": 5,
       "norm_label": "conversionreport"
     },
     {
@@ -673,7 +673,7 @@
       "source_location": "L243",
       "_origin": "ast",
       "id": "nmr2boltz_model_conversionreport_to_dict",
-      "community": 3,
+      "community": 5,
       "norm_label": ".to_dict()"
     },
     {
@@ -683,7 +683,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "nmr2boltz_model_rationale_10",
-      "community": 5,
+      "community": 6,
       "norm_label": "return a stripped star value or ``none`` for star null tokens."
     },
     {
@@ -713,7 +713,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "list",
-      "community": 3,
+      "community": 0,
       "norm_label": "list"
     },
     {
@@ -973,7 +973,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "nmr2boltz_project",
-      "community": 4,
+      "community": 0,
       "norm_label": "project.py"
     },
     {
@@ -1013,7 +1013,7 @@
       "source_location": "L80",
       "_origin": "ast",
       "id": "nmr2boltz_project_averaging_factor",
-      "community": 4,
+      "community": 0,
       "norm_label": "_averaging_factor()"
     },
     {
@@ -1023,7 +1023,7 @@
       "source_location": "L88",
       "_origin": "ast",
       "id": "nmr2boltz_project_canonical_pair",
-      "community": 4,
+      "community": 0,
       "norm_label": "_canonical_pair()"
     },
     {
@@ -1033,7 +1033,7 @@
       "source_location": "L92",
       "_origin": "ast",
       "id": "nmr2boltz_project_residue_identity_mismatch",
-      "community": 4,
+      "community": 0,
       "norm_label": "_residue_identity_mismatch()"
     },
     {
@@ -1053,7 +1053,7 @@
       "source_location": "L319",
       "_origin": "ast",
       "id": "nmr2boltz_project_intrachain_filter_rejection",
-      "community": 4,
+      "community": 0,
       "norm_label": "_intrachain_filter_rejection()"
     },
     {
@@ -1073,7 +1073,7 @@
       "source_location": "L396",
       "_origin": "ast",
       "id": "nmr2boltz_project_quarantine_invalid_projected_atoms",
-      "community": 4,
+      "community": 0,
       "norm_label": "_quarantine_invalid_projected_atoms()"
     },
     {
@@ -1083,7 +1083,7 @@
       "source_location": "L486",
       "_origin": "ast",
       "id": "nmr2boltz_project_project_group",
-      "community": 4,
+      "community": 0,
       "norm_label": "_project_group()"
     },
     {
@@ -1093,7 +1093,7 @@
       "source_location": "L700",
       "_origin": "ast",
       "id": "nmr2boltz_project_resolve_endpoint_choices",
-      "community": 4,
+      "community": 0,
       "norm_label": "_resolve_endpoint_choices()"
     },
     {
@@ -1103,7 +1103,7 @@
       "source_location": "L723",
       "_origin": "ast",
       "id": "nmr2boltz_project_merge_or_alternatives",
-      "community": 4,
+      "community": 0,
       "norm_label": "_merge_or_alternatives()"
     },
     {
@@ -1113,7 +1113,7 @@
       "source_location": "L755",
       "_origin": "ast",
       "id": "nmr2boltz_project_merge_independent_constraints",
-      "community": 4,
+      "community": 0,
       "norm_label": "_merge_independent_constraints()"
     },
     {
@@ -1123,7 +1123,7 @@
       "source_location": "L826",
       "_origin": "ast",
       "id": "nmr2boltz_project_row_ids",
-      "community": 4,
+      "community": 0,
       "norm_label": "_row_ids()"
     },
     {
@@ -1143,7 +1143,7 @@
       "source_location": "L402",
       "_origin": "ast",
       "id": "nmr2boltz_project_rationale_402",
-      "community": 4,
+      "community": 0,
       "norm_label": "remove complete projected contacts unless both atoms have topology evidence."
     },
     {
@@ -1153,7 +1153,7 @@
       "source_location": "L726",
       "_origin": "ast",
       "id": "nmr2boltz_project_rationale_726",
-      "community": 4,
+      "community": 0,
       "norm_label": "merge duplicate heavy pairs inside one or group.      for the same pair, ``d <="
     },
     {
@@ -1163,7 +1163,7 @@
       "source_location": "L759",
       "_origin": "ast",
       "id": "nmr2boltz_project_rationale_759",
-      "community": 4,
+      "community": 0,
       "norm_label": "merge independent restraint groups that happen to target the same pair.      ind"
     },
     {
@@ -1293,7 +1293,7 @@
       "source_location": "L198",
       "_origin": "ast",
       "id": "nmr2boltz_star_parsedstardocument",
-      "community": 0,
+      "community": 6,
       "norm_label": "parsedstardocument"
     },
     {
@@ -1523,7 +1523,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "nmr2boltz_target",
-      "community": 7,
+      "community": 21,
       "norm_label": "target.py"
     },
     {
@@ -1533,7 +1533,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "nmr2boltz_target_targetvalidationerror",
-      "community": 7,
+      "community": 21,
       "norm_label": "targetvalidationerror"
     },
     {
@@ -1543,7 +1543,7 @@
       "source_location": "L75",
       "_origin": "ast",
       "id": "nmr2boltz_target_targetentity",
-      "community": 7,
+      "community": 21,
       "norm_label": "targetentity"
     },
     {
@@ -1553,7 +1553,7 @@
       "source_location": "L84",
       "_origin": "ast",
       "id": "nmr2boltz_target_targetentity_length",
-      "community": 7,
+      "community": 21,
       "norm_label": ".length()"
     },
     {
@@ -1563,7 +1563,7 @@
       "source_location": "L89",
       "_origin": "ast",
       "id": "nmr2boltz_target_validationissue",
-      "community": 7,
+      "community": 21,
       "norm_label": "validationissue"
     },
     {
@@ -1583,7 +1583,7 @@
       "source_location": "L108",
       "_origin": "ast",
       "id": "nmr2boltz_target_targetvalidationresult_errors",
-      "community": 7,
+      "community": 21,
       "norm_label": ".errors()"
     },
     {
@@ -1593,7 +1593,7 @@
       "source_location": "L112",
       "_origin": "ast",
       "id": "nmr2boltz_target_targetvalidationresult_warnings",
-      "community": 7,
+      "community": 21,
       "norm_label": ".warnings()"
     },
     {
@@ -1613,7 +1613,7 @@
       "source_location": "L128",
       "_origin": "ast",
       "id": "nmr2boltz_target_targetvalidationresult_require_valid",
-      "community": 7,
+      "community": 21,
       "norm_label": ".require_valid()"
     },
     {
@@ -1623,7 +1623,7 @@
       "source_location": "L138",
       "_origin": "ast",
       "id": "nmr2boltz_target_nonempty_text",
-      "community": 7,
+      "community": 21,
       "norm_label": "_nonempty_text()"
     },
     {
@@ -1633,7 +1633,7 @@
       "source_location": "L145",
       "_origin": "ast",
       "id": "nmr2boltz_target_parse_modifications",
-      "community": 7,
+      "community": 21,
       "norm_label": "_parse_modifications()"
     },
     {
@@ -1643,7 +1643,7 @@
       "source_location": "L175",
       "_origin": "ast",
       "id": "nmr2boltz_target_load_boltz_target",
-      "community": 7,
+      "community": 21,
       "norm_label": "load_boltz_target()"
     },
     {
@@ -1653,7 +1653,7 @@
       "source_location": "L251",
       "_origin": "ast",
       "id": "nmr2boltz_target_residue_symbol",
-      "community": 7,
+      "community": 21,
       "norm_label": "_residue_symbol()"
     },
     {
@@ -1663,7 +1663,7 @@
       "source_location": "L264",
       "_origin": "ast",
       "id": "nmr2boltz_target_validate_position",
-      "community": 7,
+      "community": 21,
       "norm_label": "_validate_position()"
     },
     {
@@ -1673,7 +1673,7 @@
       "source_location": "L371",
       "_origin": "ast",
       "id": "nmr2boltz_target_validate_report_against_target",
-      "community": 7,
+      "community": 21,
       "norm_label": "validate_report_against_target()"
     },
     {
@@ -1683,7 +1683,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "nmr2boltz_target_rationale_14",
-      "community": 7,
+      "community": 21,
       "norm_label": "raised when a boltz target is malformed or incompatible with a conversion."
     },
     {
@@ -1703,7 +1703,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "nmr2boltz_topology_topologyresolutionerror",
-      "community": 5,
+      "community": 6,
       "norm_label": "topologyresolutionerror"
     },
     {
@@ -2003,7 +2003,7 @@
       "source_location": "L677",
       "_origin": "ast",
       "id": "nmr2boltz_topology_emitted_atom_topology_violations",
-      "community": 10,
+      "community": 5,
       "norm_label": "emitted_atom_topology_violations()"
     },
     {
@@ -2023,7 +2023,7 @@
       "source_location": "L712",
       "_origin": "ast",
       "id": "nmr2boltz_topology_require_valid_emitted_atom_topology",
-      "community": 3,
+      "community": 5,
       "norm_label": "require_valid_emitted_atom_topology()"
     },
     {
@@ -2033,7 +2033,7 @@
       "source_location": "L729",
       "_origin": "ast",
       "id": "nmr2boltz_topology_require_valid_output_atom_topology",
-      "community": 3,
+      "community": 5,
       "norm_label": "require_valid_output_atom_topology()"
     },
     {
@@ -2123,7 +2123,7 @@
       "source_location": "L691",
       "_origin": "ast",
       "id": "nmr2boltz_topology_rationale_691",
-      "community": 3,
+      "community": 5,
       "norm_label": "validate every atom that can be written to an executable constraint file."
     },
     {
@@ -2133,7 +2133,7 @@
       "source_location": "L713",
       "_origin": "ast",
       "id": "nmr2boltz_topology_rationale_713",
-      "community": 3,
+      "community": 5,
       "norm_label": "fail before executable yaml can contain an unproven atom."
     },
     {
@@ -2143,7 +2143,7 @@
       "source_location": "L730",
       "_origin": "ast",
       "id": "nmr2boltz_topology_rationale_730",
-      "community": 3,
+      "community": 5,
       "norm_label": "fail before either exact or union output can contain an unproven atom."
     },
     {
@@ -2315,6 +2315,56 @@
       "id": "tests_test_benchmark_test_benchmark_manifest_supports_exclude_intrachain",
       "community": 21,
       "norm_label": "test_benchmark_manifest_supports_exclude_intrachain()"
+    },
+    {
+      "label": "test_cli_documentation.py",
+      "file_type": "code",
+      "source_file": "tests/test_cli_documentation.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "tests_test_cli_documentation",
+      "community": 31,
+      "norm_label": "test_cli_documentation.py"
+    },
+    {
+      "label": "_parser_flags()",
+      "file_type": "code",
+      "source_file": "tests/test_cli_documentation.py",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "tests_test_cli_documentation_parser_flags",
+      "community": 31,
+      "norm_label": "_parser_flags()"
+    },
+    {
+      "label": "_documented_flag_rows()",
+      "file_type": "code",
+      "source_file": "tests/test_cli_documentation.py",
+      "source_location": "L31",
+      "_origin": "ast",
+      "id": "tests_test_cli_documentation_documented_flag_rows",
+      "community": 31,
+      "norm_label": "_documented_flag_rows()"
+    },
+    {
+      "label": "test_cli_reference_covers_every_parser_flag_and_states_a_default()",
+      "file_type": "code",
+      "source_file": "tests/test_cli_documentation.py",
+      "source_location": "L48",
+      "_origin": "ast",
+      "id": "tests_test_cli_documentation_test_cli_reference_covers_every_parser_flag_and_states_a_default",
+      "community": 31,
+      "norm_label": "test_cli_reference_covers_every_parser_flag_and_states_a_default()"
+    },
+    {
+      "label": "test_cli_reference_covers_commands_positionals_and_exit_statuses()",
+      "file_type": "code",
+      "source_file": "tests/test_cli_documentation.py",
+      "source_location": "L57",
+      "_origin": "ast",
+      "id": "tests_test_cli_documentation_test_cli_reference_covers_commands_positionals_and_exit_statuses",
+      "community": 31,
+      "norm_label": "test_cli_reference_covers_commands_positionals_and_exit_statuses()"
     },
     {
       "label": "test_constraint_output.py",
@@ -2523,7 +2573,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "tests_test_corpus_benchmark_constraint",
-      "community": 30,
+      "community": 3,
       "norm_label": "_constraint()"
     },
     {
@@ -2533,7 +2583,7 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "tests_test_corpus_benchmark_test_compare_reports_detects_pair_and_bound_differences",
-      "community": 30,
+      "community": 3,
       "norm_label": "test_compare_reports_detects_pair_and_bound_differences()"
     },
     {
@@ -2753,7 +2803,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_intrachain_filter",
-      "community": 7,
+      "community": 0,
       "norm_label": "test_intrachain_filter.py"
     },
     {
@@ -2763,7 +2813,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "tests_test_intrachain_filter_convert",
-      "community": 7,
+      "community": 0,
       "norm_label": "_convert()"
     },
     {
@@ -2773,7 +2823,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "tests_test_intrachain_filter_assert_only_interchain",
-      "community": 7,
+      "community": 0,
       "norm_label": "_assert_only_interchain()"
     },
     {
@@ -2783,7 +2833,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "tests_test_intrachain_filter_test_exclude_intrachain_filters_exact_and_union_outputs_for_both_formats",
-      "community": 7,
+      "community": 0,
       "norm_label": "test_exclude_intrachain_filters_exact_and_union_outputs_for_both_formats()"
     },
     {
@@ -2793,7 +2843,7 @@
       "source_location": "L86",
       "_origin": "ast",
       "id": "tests_test_intrachain_filter_test_default_keeps_intrachain_constraints",
-      "community": 7,
+      "community": 0,
       "norm_label": "test_default_keeps_intrachain_constraints()"
     },
     {
@@ -2803,7 +2853,7 @@
       "source_location": "L100",
       "_origin": "ast",
       "id": "tests_test_intrachain_filter_test_cli_flag_writes_only_interchain_exact_and_union_yaml",
-      "community": 7,
+      "community": 0,
       "norm_label": "test_cli_flag_writes_only_interchain_exact_and_union_yaml()"
     },
     {
@@ -2813,7 +2863,7 @@
       "source_location": "L133",
       "_origin": "ast",
       "id": "tests_test_intrachain_filter_test_cli_help_exposes_exact_flag_name",
-      "community": 7,
+      "community": 0,
       "norm_label": "test_cli_help_exposes_exact_flag_name()"
     },
     {
@@ -2823,7 +2873,7 @@
       "source_location": "L140",
       "_origin": "ast",
       "id": "tests_test_intrachain_filter_test_all_intrachain_input_writes_empty_constraint_files_and_strict_audit",
-      "community": 7,
+      "community": 0,
       "norm_label": "test_all_intrachain_input_writes_empty_constraint_files_and_strict_audit()"
     },
     {
@@ -2843,7 +2893,7 @@
       "source_location": "L189",
       "_origin": "ast",
       "id": "tests_test_intrachain_filter_test_writer_fails_closed_if_interchain_report_is_mutated",
-      "community": 7,
+      "community": 0,
       "norm_label": "test_writer_fails_closed_if_interchain_report_is_mutated()"
     },
     {
@@ -2853,7 +2903,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_logic",
-      "community": 4,
+      "community": 0,
       "norm_label": "test_logic.py"
     },
     {
@@ -2863,7 +2913,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "tests_test_logic_projected",
-      "community": 4,
+      "community": 0,
       "norm_label": "projected()"
     },
     {
@@ -2873,7 +2923,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "tests_test_logic_test_duplicate_pair_inside_or_uses_larger_bound",
-      "community": 4,
+      "community": 0,
       "norm_label": "test_duplicate_pair_inside_or_uses_larger_bound()"
     },
     {
@@ -2883,7 +2933,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "tests_test_logic_test_duplicate_pair_across_independent_groups_uses_smaller_bound",
-      "community": 4,
+      "community": 0,
       "norm_label": "test_duplicate_pair_across_independent_groups_uses_smaller_bound()"
     },
     {
@@ -2893,7 +2943,7 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "tests_test_logic_test_boltz_minimum_weakens_and_maximum_is_not_clipped",
-      "community": 4,
+      "community": 0,
       "norm_label": "test_boltz_minimum_weakens_and_maximum_is_not_clipped()"
     },
     {
@@ -2903,7 +2953,7 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "tests_test_logic_test_compressed_nef_input",
-      "community": 4,
+      "community": 0,
       "norm_label": "test_compressed_nef_input()"
     },
     {
@@ -2923,7 +2973,7 @@
       "source_location": "L98",
       "_origin": "ast",
       "id": "tests_test_logic_test_pseudoatom_atomset_mode_is_explicitly_labeled",
-      "community": 4,
+      "community": 0,
       "norm_label": "test_pseudoatom_atomset_mode_is_explicitly_labeled()"
     },
     {
@@ -2933,7 +2983,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_nmrstar_expansion",
-      "community": 31,
+      "community": 6,
       "norm_label": "test_nmrstar_expansion.py"
     },
     {
@@ -2943,7 +2993,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "tests_test_nmrstar_expansion_endpoint",
-      "community": 31,
+      "community": 6,
       "norm_label": "_endpoint()"
     },
     {
@@ -2953,7 +3003,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "tests_test_nmrstar_expansion_star_group",
-      "community": 31,
+      "community": 6,
       "norm_label": "_star_group()"
     },
     {
@@ -2963,7 +3013,7 @@
       "source_location": "L65",
       "_origin": "ast",
       "id": "tests_test_nmrstar_expansion_nef_group",
-      "community": 31,
+      "community": 6,
       "norm_label": "_nef_group()"
     },
     {
@@ -2973,7 +3023,7 @@
       "source_location": "L92",
       "_origin": "ast",
       "id": "tests_test_nmrstar_expansion_report",
-      "community": 31,
+      "community": 6,
       "norm_label": "_report()"
     },
     {
@@ -2983,7 +3033,7 @@
       "source_location": "L112",
       "_origin": "ast",
       "id": "tests_test_nmrstar_expansion_cartesian_rows",
-      "community": 31,
+      "community": 6,
       "norm_label": "_cartesian_rows()"
     },
     {
@@ -2993,7 +3043,7 @@
       "source_location": "L132",
       "_origin": "ast",
       "id": "tests_test_nmrstar_expansion_test_topology_verified_expansions_use_full_pair_multiplicity",
-      "community": 31,
+      "community": 6,
       "norm_label": "test_topology_verified_expansions_use_full_pair_multiplicity()"
     },
     {
@@ -3003,7 +3053,7 @@
       "source_location": "L150",
       "_origin": "ast",
       "id": "tests_test_nmrstar_expansion_test_incomplete_or_expansion_is_rejected_fail_closed",
-      "community": 31,
+      "community": 6,
       "norm_label": "test_incomplete_or_expansion_is_rejected_fail_closed()"
     },
     {
@@ -3013,7 +3063,7 @@
       "source_location": "L168",
       "_origin": "ast",
       "id": "tests_test_nmrstar_expansion_test_incomplete_two_sided_cartesian_expansion_is_rejected",
-      "community": 31,
+      "community": 6,
       "norm_label": "test_incomplete_two_sided_cartesian_expansion_is_rejected()"
     },
     {
@@ -3023,7 +3073,7 @@
       "source_location": "L187",
       "_origin": "ast",
       "id": "tests_test_nmrstar_expansion_test_inconsistent_expansion_bounds_are_rejected_not_split_into_n1_rows",
-      "community": 31,
+      "community": 6,
       "norm_label": "test_inconsistent_expansion_bounds_are_rejected_not_split_into_n1_rows()"
     },
     {
@@ -3033,7 +3083,7 @@
       "source_location": "L206",
       "_origin": "ast",
       "id": "tests_test_nmrstar_expansion_test_unavailable_component_topology_rejects_expansion_in_full",
-      "community": 31,
+      "community": 6,
       "norm_label": "test_unavailable_component_topology_rejects_expansion_in_full()"
     },
     {
@@ -3043,7 +3093,7 @@
       "source_location": "L227",
       "_origin": "ast",
       "id": "tests_test_nmrstar_expansion_test_leu_hd1_hd2_parent_ambiguity_remains_union_with_n3_per_branch",
-      "community": 31,
+      "community": 6,
       "norm_label": "test_leu_hd1_hd2_parent_ambiguity_remains_union_with_n3_per_branch()"
     },
     {
@@ -3053,7 +3103,7 @@
       "source_location": "L244",
       "_origin": "ast",
       "id": "tests_test_nmrstar_expansion_test_equivalent_nef_and_star_exact_and_union_yaml_match",
-      "community": 31,
+      "community": 6,
       "norm_label": "test_equivalent_nef_and_star_exact_and_union_yaml_match()"
     },
     {
@@ -3213,7 +3263,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_target",
-      "community": 7,
+      "community": 21,
       "norm_label": "test_target.py"
     },
     {
@@ -3233,7 +3283,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "tests_test_target_write_target",
-      "community": 7,
+      "community": 21,
       "norm_label": "_write_target()"
     },
     {
@@ -3243,7 +3293,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "tests_test_target_minimal_report",
-      "community": 7,
+      "community": 21,
       "norm_label": "_minimal_report()"
     },
     {
@@ -3253,7 +3303,7 @@
       "source_location": "L63",
       "_origin": "ast",
       "id": "tests_test_target_test_matching_boltz_target_validates_sequence_and_constraints",
-      "community": 7,
+      "community": 21,
       "norm_label": "test_matching_boltz_target_validates_sequence_and_constraints()"
     },
     {
@@ -3263,7 +3313,7 @@
       "source_location": "L76",
       "_origin": "ast",
       "id": "tests_test_target_test_target_residue_mismatch_is_an_error",
-      "community": 7,
+      "community": 21,
       "norm_label": "test_target_residue_mismatch_is_an_error()"
     },
     {
@@ -3273,7 +3323,7 @@
       "source_location": "L88",
       "_origin": "ast",
       "id": "tests_test_target_test_convert_does_not_write_constraints_when_target_validation_fails",
-      "community": 7,
+      "community": 21,
       "norm_label": "test_convert_does_not_write_constraints_when_target_validation_fails()"
     },
     {
@@ -3283,7 +3333,7 @@
       "source_location": "L116",
       "_origin": "ast",
       "id": "tests_test_target_test_nucleic_acid_target_identity_validation",
-      "community": 7,
+      "community": 21,
       "norm_label": "test_nucleic_acid_target_identity_validation()"
     },
     {
@@ -3293,7 +3343,7 @@
       "source_location": "L136",
       "_origin": "ast",
       "id": "tests_test_target_test_declared_polymer_modification_must_match_source_ccd",
-      "community": 7,
+      "community": 21,
       "norm_label": "test_declared_polymer_modification_must_match_source_ccd()"
     },
     {
@@ -3623,7 +3673,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "validation_compare_ensemble_load_structure",
-      "community": 30,
+      "community": 1,
       "norm_label": "load_structure()"
     },
     {
@@ -3843,7 +3893,7 @@
       "source_location": "L649",
       "_origin": "ast",
       "id": "validation_compare_ensemble_implication_audit",
-      "community": 30,
+      "community": 1,
       "norm_label": "implication_audit()"
     },
     {
@@ -4650,7 +4700,7 @@
       "label": "Primary references and specifications",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L298",
+      "source_location": "L300",
       "_origin": "ast",
       "id": "readme_primary_references_and_specifications",
       "community": 11,
@@ -4690,7 +4740,7 @@
       "label": "Included",
       "file_type": "document",
       "source_file": "RELEASE_NOTES.md",
-      "source_location": "L67",
+      "source_location": "L71",
       "_origin": "ast",
       "id": "release_notes_included",
       "community": 20,
@@ -4700,7 +4750,7 @@
       "label": "Safety defaults",
       "file_type": "document",
       "source_file": "RELEASE_NOTES.md",
-      "source_location": "L80",
+      "source_location": "L84",
       "_origin": "ast",
       "id": "release_notes_safety_defaults",
       "community": 20,
@@ -4710,7 +4760,7 @@
       "label": "Validation",
       "file_type": "document",
       "source_file": "RELEASE_NOTES.md",
-      "source_location": "L84",
+      "source_location": "L88",
       "_origin": "ast",
       "id": "release_notes_validation",
       "community": 20,
@@ -4750,7 +4800,7 @@
       "label": "Paired-format deposited-data validation",
       "file_type": "document",
       "source_file": "VALIDATION.md",
-      "source_location": "L40",
+      "source_location": "L43",
       "_origin": "ast",
       "id": "validation_paired_format_deposited_data_validation",
       "community": 11,
@@ -4760,7 +4810,7 @@
       "label": "Container status",
       "file_type": "document",
       "source_file": "VALIDATION.md",
-      "source_location": "L84",
+      "source_location": "L87",
       "_origin": "ast",
       "id": "validation_container_status",
       "community": 11,
@@ -5045,6 +5095,86 @@
       "id": "docs_boltzui_union_extension_scientific_acceptance_criterion",
       "community": 9,
       "norm_label": "scientific acceptance criterion"
+    },
+    {
+      "label": "CLI_REFERENCE.md",
+      "file_type": "document",
+      "source_file": "docs/CLI_REFERENCE.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_cli_reference",
+      "community": 7,
+      "norm_label": "cli_reference.md"
+    },
+    {
+      "label": "NMR2Boltz command-line reference",
+      "file_type": "document",
+      "source_file": "docs/CLI_REFERENCE.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_cli_reference_nmr2boltz_command_line_reference",
+      "community": 7,
+      "norm_label": "nmr2boltz command-line reference"
+    },
+    {
+      "label": "Command structure",
+      "file_type": "document",
+      "source_file": "docs/CLI_REFERENCE.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "docs_cli_reference_command_structure",
+      "community": 7,
+      "norm_label": "command structure"
+    },
+    {
+      "label": "Global flags",
+      "file_type": "document",
+      "source_file": "docs/CLI_REFERENCE.md",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "docs_cli_reference_global_flags",
+      "community": 7,
+      "norm_label": "global flags"
+    },
+    {
+      "label": "`convert`",
+      "file_type": "document",
+      "source_file": "docs/CLI_REFERENCE.md",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "docs_cli_reference_convert",
+      "community": 7,
+      "norm_label": "`convert`"
+    },
+    {
+      "label": "`convert` effective-default notes",
+      "file_type": "document",
+      "source_file": "docs/CLI_REFERENCE.md",
+      "source_location": "L63",
+      "_origin": "ast",
+      "id": "docs_cli_reference_convert_effective_default_notes",
+      "community": 7,
+      "norm_label": "`convert` effective-default notes"
+    },
+    {
+      "label": "`benchmark`",
+      "file_type": "document",
+      "source_file": "docs/CLI_REFERENCE.md",
+      "source_location": "L76",
+      "_origin": "ast",
+      "id": "docs_cli_reference_benchmark",
+      "community": 7,
+      "norm_label": "`benchmark`"
+    },
+    {
+      "label": "Exit statuses",
+      "file_type": "document",
+      "source_file": "docs/CLI_REFERENCE.md",
+      "source_location": "L90",
+      "_origin": "ast",
+      "id": "docs_cli_reference_exit_statuses",
+      "community": 7,
+      "norm_label": "exit statuses"
     },
     {
       "label": "EXPERT_REVIEW_CHECKLIST.md",
@@ -8915,6 +9045,17 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "tests/test_cli_documentation.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "tests_test_cli_documentation",
+      "target": "nmr2boltz_cli",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "tests/test_intrachain_filter.py",
       "source_location": "L9",
       "weight": 1.0,
@@ -8953,6 +9094,17 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "nmr2boltz_cli_main",
+      "target": "nmr2boltz_cli_build_parser"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_cli_documentation.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "tests_test_cli_documentation_parser_flags",
       "target": "nmr2boltz_cli_build_parser"
     },
     {
@@ -18100,6 +18252,68 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "tests/test_cli_documentation.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "tests_test_cli_documentation",
+      "target": "tests_test_cli_documentation_documented_flag_rows",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_cli_documentation.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "tests_test_cli_documentation",
+      "target": "tests_test_cli_documentation_parser_flags",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_cli_documentation.py",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "tests_test_cli_documentation",
+      "target": "tests_test_cli_documentation_test_cli_reference_covers_commands_positionals_and_exit_statuses",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_cli_documentation.py",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "tests_test_cli_documentation",
+      "target": "tests_test_cli_documentation_test_cli_reference_covers_every_parser_flag_and_states_a_default",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_cli_documentation.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "tests_test_cli_documentation_test_cli_reference_covers_every_parser_flag_and_states_a_default",
+      "target": "tests_test_cli_documentation_parser_flags",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_cli_documentation.py",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "tests_test_cli_documentation_test_cli_reference_covers_every_parser_flag_and_states_a_default",
+      "target": "tests_test_cli_documentation_documented_flag_rows",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "tests/test_constraint_output.py",
       "source_location": "L40",
       "weight": 1.0,
@@ -23023,6 +23237,76 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "docs/CLI_REFERENCE.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_cli_reference",
+      "target": "docs_cli_reference_nmr2boltz_command_line_reference",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CLI_REFERENCE.md",
+      "source_location": "L76",
+      "weight": 1.0,
+      "source": "docs_cli_reference_nmr2boltz_command_line_reference",
+      "target": "docs_cli_reference_benchmark",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CLI_REFERENCE.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "docs_cli_reference_nmr2boltz_command_line_reference",
+      "target": "docs_cli_reference_command_structure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CLI_REFERENCE.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "docs_cli_reference_nmr2boltz_command_line_reference",
+      "target": "docs_cli_reference_convert",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CLI_REFERENCE.md",
+      "source_location": "L90",
+      "weight": 1.0,
+      "source": "docs_cli_reference_nmr2boltz_command_line_reference",
+      "target": "docs_cli_reference_exit_statuses",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CLI_REFERENCE.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "docs_cli_reference_nmr2boltz_command_line_reference",
+      "target": "docs_cli_reference_global_flags",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CLI_REFERENCE.md",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "docs_cli_reference_convert",
+      "target": "docs_cli_reference_convert_effective_default_notes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "docs/EXPERT_REVIEW_CHECKLIST.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -24082,5 +24366,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "29a55b1475617bf2cf2112e4323e2209fa32f331"
+  "built_at_commit": "6adfd4599d8c49af9e69a6a8f8879b271e71a259"
 }

@@ -465,18 +465,18 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1784460362.9424162,
-    "ast_hash": "919702799187e6c6c65b4498219411ca",
+    "mtime": 1784461824.0721257,
+    "ast_hash": "c9bd1b7458323306e2197c5b52033a9e",
     "semantic_hash": ""
   },
   "RELEASE_NOTES.md": {
-    "mtime": 1784461134.8892038,
-    "ast_hash": "c3d76b37c4165ba3ba19338e8c28c4e7",
+    "mtime": 1784461870.2292464,
+    "ast_hash": "bb8ff1658d5a24ba6c1982115326467e",
     "semantic_hash": ""
   },
   "VALIDATION.md": {
-    "mtime": 1784461131.1625655,
-    "ast_hash": "f16d9b2215b2334c16279759db9bb44b",
+    "mtime": 1784461866.43483,
+    "ast_hash": "c23138ec4b6d041059dcb4efde782bd5",
     "semantic_hash": ""
   },
   "benchmark/README.md": {
@@ -760,8 +760,8 @@
     "semantic_hash": ""
   },
   "docs/SCIENTIFIC_METHOD.md": {
-    "mtime": 1784461138.6199498,
-    "ast_hash": "156c9c43b4ef80f4bee580de6d6d3a9b",
+    "mtime": 1784461873.8965902,
+    "ast_hash": "03aa39efbf4dffe75d080d9cae8e3c1f",
     "semantic_hash": ""
   },
   "examples/proposed_union_schema.yaml": {
@@ -810,8 +810,8 @@
     "semantic_hash": ""
   },
   "workspace/output/REAL_TEST_6M6O.md": {
-    "mtime": 1784461142.430759,
-    "ast_hash": "6468b3620aeee1241ef26c64c041d0e8",
+    "mtime": 1784461877.5643227,
+    "ast_hash": "fee003975813e6dcfecbc891534ea0cd",
     "semantic_hash": ""
   },
   "workspace/output/nmr2boltz_all/heavy_atom_constraints.txt": {
@@ -1562,6 +1562,16 @@
   "tests/test_intrachain_filter.py": {
     "mtime": 1784461127.3841312,
     "ast_hash": "1101dedc9ed3644a0d896b1e4e4f6e4e",
+    "semantic_hash": ""
+  },
+  "tests/test_cli_documentation.py": {
+    "mtime": 1784461832.236241,
+    "ast_hash": "68cafbe1c01d168ffef9a00e5acd3bec",
+    "semantic_hash": ""
+  },
+  "docs/CLI_REFERENCE.md": {
+    "mtime": 1784461820.0142114,
+    "ast_hash": "adf5f4e377fe5c4647b780fa70957e2c",
     "semantic_hash": ""
   }
 }

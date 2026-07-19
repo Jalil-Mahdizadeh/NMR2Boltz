@@ -290,6 +290,8 @@ inter-chain-only output bundle.
 
 ## Documentation
 
+- `docs/CLI_REFERENCE.md`: complete global, conversion, and benchmark CLI flag
+  list with descriptions and effective default values.
 - `docs/SCIENTIFIC_METHOD.md`: derivation, format interpretation, assumptions, and validation plan for NMR experts.
 - `benchmark/output/BENCHMARK_REPORT.md`: current 12-structure paired-format benchmark and coordinate audit.
 - `docs/BOLTZUI_UNION_EXTENSION.md`: proposed representation and implementation path for ambiguity-aware atom contacts.

@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- Added a complete `docs/CLI_REFERENCE.md` covering every global, `convert`,
+  and `benchmark` flag, including aliases, repeatability, effective defaults,
+  positional arguments, and exit statuses. Regression coverage now prevents a
+  parser flag from being added without updating the reference.
 - Added `--exclude-intrachain` for protein, DNA, and RNA complexes. The filter
   uses mapped Boltz chain IDs, applies to both exact and union outputs, removes
   mixed intra/inter OR groups in full, records deterministic
@@ -50,7 +54,7 @@
   rejection reason before topology resolution.
 - NEF/NMR-STAR files with sequence data but no distance loop now produce an
   auditable empty conversion rather than failing format detection.
-- Expanded the regression suite from 39 to 103 tests, including positive and
+- Expanded the regression suite from 39 to 105 tests, including positive and
   adversarial checks for every discrepancy predicate and fail-closed gate.
 - Added fail-fast `--target-yaml` validation for chain IDs, residue indices,
   canonical residue identities, declared modifications, mapping collisions, and

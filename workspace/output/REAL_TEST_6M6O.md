@@ -77,7 +77,7 @@ case verified all 185 mapped residues and all 2,707 emitted constraints against
 
 ## Robustness tests
 
-The current source tree passed all 103 Pytest tests. The retained containerized
+The current source tree passed all 105 Pytest tests. The retained containerized
 deterministic stress record contains:
 
 - 100,000 randomized unnormalized sum-r6 implication cases;

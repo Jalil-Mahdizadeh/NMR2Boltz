@@ -573,7 +573,7 @@ from being mistaken for robustness.
 
 The following checks were executed on 2026-07-19 against the current source tree:
 
-- all 103 Pytest regression, format, topology, logic, target-validation,
+- all 105 Pytest regression, format, topology, logic, target-validation,
   ensemble-alignment, constraint-serialization, and robustness tests passed;
 - Python byte compilation passed for source, tests, and the stress harness;
 - 100,000 randomized sum-r6 implication cases and 100,000 constructive triangle-inequality cases passed in the final Docker image;

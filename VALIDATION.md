@@ -5,7 +5,7 @@ Date: 2026-07-19
 
 ## Regression and stress validation
 
-- 103 Pytest tests passed.
+- 105 Pytest tests passed.
 - 100,000 randomized sum-r6 implication cases passed.
 - 100,000 constructive triangle-inequality cases passed.
 - 25,000 outward-rounding cases passed.
@@ -33,6 +33,9 @@ Date: 2026-07-19
   protein, DNA, and RNA chains. The tests cover exact contacts, all-inter-chain
   unions, mixed-scope OR quarantine, mapped-chain identity, empty constraint
   files, strict status, benchmark manifests, and the final writer invariant.
+- The version-controlled CLI reference is checked against the live argparse
+  tree so every global, `convert`, and `benchmark` flag has a documented row
+  and default value.
 - Invalid contacts are quarantined deterministically with source rows, mapped
   residue/component identity, atom, restraint group, and original bounds;
   coordinate absence is not used as topology evidence.
