@@ -34,12 +34,23 @@ Boltz atom selectors use one-based positions in the sequence supplied to Boltz. 
 Caps, ions, and non-polymer ligands are intentionally omitted from FASTA and
 must be represented separately when they are part of the Boltz target.
 
+## Inter-chain-only constraints
+
+Use `--exclude-intrachain` when a protein, DNA, or RNA complex should be guided
+only by contacts between different mapped Boltz chain IDs. The policy applies
+to both exact and union outputs. Mixed intra/inter OR groups are omitted in
+full, not trimmed, and appear as `intrachain_filtered` audit records. Confirm
+the intended chain mapping in `sequence_map.tsv` before using the resulting
+constraints.
+
 ## Recommended run protocol
 
 1. Convert with strict defaults and inspect all rejected and ambiguous groups.
 2. Confirm sequence mapping and non-standard component topology. Every emitted
    atom is checked against the mapped component dictionary; do not substitute a
    coordinate-presence check for this topology invariant.
+   For an inter-chain-only run, also confirm that every exact endpoint pair and
+   every union alternative has different mapped chain IDs.
 3. Ask an NMR expert to confirm the atom-set averaging convention used to calibrate each restraint list.
 4. Run multiple Boltz diffusion samples per safe or hypothesis input.
 5. Add hydrogens to generated structures using an appropriate protonation model.

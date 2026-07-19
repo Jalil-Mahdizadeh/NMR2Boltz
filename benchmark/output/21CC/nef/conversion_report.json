@@ -12,7 +12,9 @@
     "boltz_min_distance_angstrom": 2.0,
     "boltz_max_distance_angstrom": 20.0,
     "min_sequence_separation": 0,
-    "include_intraresidue": true
+    "include_intraresidue": true,
+    "include_intrachain": true,
+    "exclude_intrachain": false
   },
   "sequence_map": [
     {
@@ -10998,6 +11000,9 @@
     "sequence_records": 25,
     "embedded_component_topologies": 0,
     "atom_topology_quarantines": 0,
+    "intrachain_groups_filtered": 0,
+    "projected_alternatives_removed_by_intrachain_filter": 0,
+    "mixed_chain_scope_groups_filtered": 0,
     "emitted_atom_topology_violations": 0
   },
   "source_restraint_groups": [

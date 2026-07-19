@@ -7,6 +7,10 @@ Source alternatives read: 7718
 Safe groups before pair deduplication: 923
 Exact atom constraints emitted: 703
 Atom-contact union groups emitted: 0
+Inter-chain-only filter enabled: no
+Intrachain restraint groups filtered: 0
+Projected alternatives removed by intrachain filtering: 0
+Mixed intrachain/inter-chain OR groups filtered in full: 0
 Rejection records: 6737
 
 Important:

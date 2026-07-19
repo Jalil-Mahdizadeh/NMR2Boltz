@@ -1,4 +1,0 @@
-chain_1	residue_index_1	atom_1	chain_2	residue_index_2	atom_2	max_distance_A	raw_projected_distance_A	source_groups	boltz_adjustment
-A	85	CB	B	12	CG1	5.640001	5.640000	nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:32	
-A	144	CG2	B	8	CB	7.540000	7.540000	nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:59	
-A	144	CG2	B	12	CG1	8.240000	8.240000	nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:60	

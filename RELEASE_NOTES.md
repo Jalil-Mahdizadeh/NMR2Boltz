@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+- Added `--exclude-intrachain` for protein, DNA, and RNA complexes. The filter
+  uses mapped Boltz chain IDs, applies to both exact and union outputs, removes
+  mixed intra/inter OR groups in full, records deterministic
+  `intrachain_filtered` provenance and counts, and is independently enforced
+  again by the output writer. Benchmark manifests support
+  `options: {exclude_intrachain: true}`.
 - Added a generic pre-projection NMR-STAR normalization pass for complete,
   topology-verified canonical OR expansions of one author-level proton set.
   One- and two-sided expansions now use the correct `sum-r6` multiplicity
@@ -37,14 +43,14 @@
   now fail CI while the exact reviewed 8R1X/9CCH set passes.
 - Rebuilt and validated `nmr2boltz:0.1.0-validated` as non-root and offline;
   image digest is
-  `sha256:e1b8da2544111093b21f952077c9a601233d46d618c9b390b7f9ae4b835d7dc2`.
+  `sha256:09a2f2af1930a54ceb1b859aa745ebf83b3e463c8a413156d5b9a3ccc9ffc070`.
 - Added a paired NEF/NMR-STAR corpus runner with sequence-aware PDB ensemble
   alignment, exact contact/bound parity metrics, and per-case output directories.
 - Sequence/residue conflicts now use the explicit `sequence_residue_mismatch`
   rejection reason before topology resolution.
 - NEF/NMR-STAR files with sequence data but no distance loop now produce an
   auditable empty conversion rather than failing format detection.
-- Expanded the regression suite from 39 to 91 tests, including positive and
+- Expanded the regression suite from 39 to 103 tests, including positive and
   adversarial checks for every discrepancy predicate and fail-closed gate.
 - Added fail-fast `--target-yaml` validation for chain IDs, residue indices,
   canonical residue identities, declared modifications, mapping collisions, and

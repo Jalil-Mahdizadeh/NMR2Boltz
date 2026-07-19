@@ -81,3 +81,48 @@ def test_benchmark_checksum_mismatch_is_recorded_as_case_failure(tmp_path):
     assert run.failed == 1
     assert "checksum mismatch" in (run.cases[0].error or "")
     assert not stale.exists()
+
+
+def test_benchmark_manifest_supports_exclude_intrachain(tmp_path):
+    restraints = FIXTURES / "multichain.nef"
+    manifest = tmp_path / "benchmark.yaml"
+    manifest.write_text(
+        yaml.safe_dump(
+            {
+                "schema_version": 1,
+                "cases": [
+                    {
+                        "id": "interchain-only",
+                        "restraints": {
+                            "path": str(restraints),
+                            "sha256": _sha256(restraints),
+                        },
+                        "options": {"exclude_intrachain": True},
+                        "expected": {
+                            "emitted_constraints": 2,
+                            "ambiguous_groups": 1,
+                            "intrachain_groups_filtered": 3,
+                            "mixed_chain_scope_groups_filtered": 1,
+                        },
+                    }
+                ],
+            },
+            sort_keys=False,
+        ),
+        encoding="utf-8",
+    )
+    output = tmp_path / "results"
+
+    run = run_benchmark(manifest, output)
+
+    assert run.passed == 1
+    conversion = json.loads(
+        (output / "interchain-only" / "conversion_report.json").read_text()
+    )
+    assert conversion["settings"]["include_intrachain"] is False
+    assert conversion["settings"]["exclude_intrachain"] is True
+    for constraint in conversion["emitted_constraints"]:
+        assert constraint["atom1"]["chain"] != constraint["atom2"]["chain"]
+    for group in conversion["ambiguous_groups"]:
+        for alternative in group["alternatives"]:
+            assert alternative["atom1"]["chain"] != alternative["atom2"]["chain"]

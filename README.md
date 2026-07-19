@@ -30,6 +30,22 @@ nmr2boltz convert experiment.nef -o converted
 nmr2boltz convert entry.str -o converted
 ```
 
+For a protein, DNA, or RNA complex, request only contacts between different
+mapped Boltz chain IDs:
+
+```bash
+nmr2boltz convert complex.nef --exclude-intrachain -o interchain
+```
+
+The comparison is applied after source-to-Boltz residue and chain mapping.
+Exact same-chain contacts are omitted from `atom_constraints_exact.yaml`.
+Ambiguous groups are retained in `atom_constraints_union.yaml` only when every
+alternative is inter-chain. A group that mixes intra- and inter-chain
+alternatives is omitted in full because keeping only its inter-chain branches
+would narrow and strengthen the source OR restraint. Every omission is recorded
+as `intrachain_filtered` in the audit outputs. With `--strict`, these audited
+filter records produce the documented status 3.
+
 For data lacking an explicit upper limit, the safe default is rejection. A heuristic may be requested explicitly:
 
 ```bash
@@ -107,7 +123,9 @@ nmr2boltz benchmark workspace/benchmark.yaml \
 Each case records its complete conversion bundle and a suite-level
 `benchmark_summary.json`. A target mismatch, checksum mismatch, conversion
 exception, or changed expected metric fails that case without preventing the
-remaining corpus from running.
+remaining corpus from running. A manifest case can set
+`options: {exclude_intrachain: true}` to exercise the same inter-chain-only
+policy reproducibly.
 
 The paired-format deposited-structure corpus is run separately so that each
 NEF/NMR-STAR pair is compared against every PDB conformer with sequence-aware
@@ -242,6 +260,11 @@ evidence.
 
 Inside one OR group, two alternatives that map to the same heavy pair are combined using the **larger** bound. Across independent restraint groups, duplicate heavy pairs are combined using the **smaller** bound.
 If any alternative or atom-set branch in an OR group cannot be projected safely, none of the remaining alternatives are emitted because a partial OR would be stronger than the source restraint. Executable upper bounds are rounded upward at six decimal places so serialization never tightens them.
+
+`--exclude-intrachain` applies the same completeness rule after projection and
+topology validation, using the mapped Boltz chain IDs. A final writer invariant
+prevents any same-chain exact contact or union alternative from entering an
+inter-chain-only output bundle.
 
 ## Safe workflow for structure generation
 

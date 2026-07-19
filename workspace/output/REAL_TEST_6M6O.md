@@ -77,7 +77,7 @@ case verified all 185 mapped residues and all 2,707 emitted constraints against
 
 ## Robustness tests
 
-The current source tree passed all 79 Pytest tests. The retained containerized
+The current source tree passed all 103 Pytest tests. The retained containerized
 deterministic stress record contains:
 
 - 100,000 randomized unnormalized sum-r6 implication cases;
@@ -92,7 +92,7 @@ deterministic stress record contains:
 Only one nmr2boltz image remains:
 
 - image: nmr2boltz:0.1.0-validated
-- digest: sha256:e1b8da2544111093b21f952077c9a601233d46d618c9b390b7f9ae4b835d7dc2
+- digest: sha256:09a2f2af1930a54ceb1b859aa745ebf83b3e463c8a413156d5b9a3ccc9ffc070
 - reported size: 243 MB
 - default user: 65532:65532
 

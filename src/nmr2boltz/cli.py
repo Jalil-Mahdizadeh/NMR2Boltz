@@ -154,6 +154,14 @@ def build_parser() -> argparse.ArgumentParser:
         help="Do not emit projected pairs within the same residue.",
     )
     convert.add_argument(
+        "--exclude-intrachain",
+        action="store_true",
+        help=(
+            "Emit only contacts between different mapped Boltz polymer chain IDs. "
+            "Mixed intrachain/inter-chain OR groups are excluded in full."
+        ),
+    )
+    convert.add_argument(
         "--hypotheses",
         type=int,
         default=0,
@@ -229,6 +237,7 @@ def command_convert(args: argparse.Namespace) -> int:
         boltz_max_distance=args.boltz_max_distance,
         min_sequence_separation=args.min_sequence_separation,
         include_intraresidue=not args.exclude_intraresidue,
+        include_intrachain=not args.exclude_intrachain,
     )
     parser_settings = {
         "format_hint": args.format,
@@ -262,6 +271,11 @@ def command_convert(args: argparse.Namespace) -> int:
     print(f"Restraint groups read: {report.statistics['restraint_groups_read']}")
     print(f"Exact atom constraints emitted: {len(report.emitted_constraints)}")
     print(f"Atom-contact union groups emitted: {len(report.ambiguous_groups)}")
+    if args.exclude_intrachain:
+        print(
+            "Intrachain restraint groups excluded: "
+            f"{report.statistics['intrachain_groups_filtered']}"
+        )
     print(f"Rejection records: {len(report.rejections)}")
     if report.target_validation:
         print(

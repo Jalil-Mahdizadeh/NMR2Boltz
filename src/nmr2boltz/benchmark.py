@@ -38,6 +38,7 @@ _OPTION_KEYS = {
     "boltz_max_distance",
     "min_sequence_separation",
     "include_intraresidue",
+    "exclude_intrachain",
 }
 _METRIC_KEYS = {
     "restraint_groups_read",
@@ -49,6 +50,9 @@ _METRIC_KEYS = {
     "sequence_records",
     "target_validation_errors",
     "target_validation_warnings",
+    "intrachain_groups_filtered",
+    "projected_alternatives_removed_by_intrachain_filter",
+    "mixed_chain_scope_groups_filtered",
 }
 
 
@@ -189,6 +193,15 @@ def _case_metrics(report: Any, target: TargetValidationResult | None) -> dict[st
         "sequence_records": len(report.sequence_map),
         "target_validation_errors": len(target.errors) if target else 0,
         "target_validation_warnings": len(target.warnings) if target else 0,
+        "intrachain_groups_filtered": int(
+            statistics["intrachain_groups_filtered"]
+        ),
+        "projected_alternatives_removed_by_intrachain_filter": int(
+            statistics["projected_alternatives_removed_by_intrachain_filter"]
+        ),
+        "mixed_chain_scope_groups_filtered": int(
+            statistics["mixed_chain_scope_groups_filtered"]
+        ),
     }
 
 
@@ -287,6 +300,9 @@ def _run_case(
             boltz_max_distance=float(options.get("boltz_max_distance", 20.0)),
             min_sequence_separation=int(options.get("min_sequence_separation", 0)),
             include_intraresidue=_bool_option(options, "include_intraresidue", True),
+            include_intrachain=not _bool_option(
+                options, "exclude_intrachain", False
+            ),
         )
         parser_settings = {
             "benchmark_case": case_id,

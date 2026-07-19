@@ -477,6 +477,26 @@ Recommended use:
 
 The number of assignment combinations grows exponentially, so hypotheses are sampled deterministically from a user seed.
 
+## 10.4 Inter-chain-only selection
+
+For protein, DNA, and RNA complexes, `--exclude-intrachain` selects restraints
+whose projected endpoints belong to different mapped Boltz chain IDs. Chain
+scope is evaluated after residue mapping and proton-to-heavy-atom projection,
+so aliases or author chain labels cannot bypass the selected target mapping.
+
+An exact projected contact is retained only when its two mapped chain IDs
+differ. An ambiguous group is retained only when every projected alternative
+is inter-chain. If a source OR group contains both intra- and inter-chain
+alternatives, the complete group is omitted: selecting only the inter-chain
+branches would replace the source disjunction with a smaller, stronger
+disjunction. The audit records the complete source row set, projected pairs,
+scope of each alternative, and `intrachain_filtered` reason.
+
+The filter does not alter bounds, atom-set multiplicity, topology decisions, or
+alternative ordering. Before any file is created, an independent writer check
+fails closed if an inter-chain-only report contains a same-chain exact contact
+or union alternative.
+
 ---
 
 ## 11. Validation protocol
@@ -551,9 +571,9 @@ from being mistaken for robustness.
 
 ### 11.5 Executed validation record
 
-The following checks were executed on 2026-07-18 against the current source tree:
+The following checks were executed on 2026-07-19 against the current source tree:
 
-- all 91 Pytest regression, format, topology, logic, target-validation,
+- all 103 Pytest regression, format, topology, logic, target-validation,
   ensemble-alignment, constraint-serialization, and robustness tests passed;
 - Python byte compilation passed for source, tests, and the stress harness;
 - 100,000 randomized sum-r6 implication cases and 100,000 constructive triangle-inequality cases passed in the final Docker image;
@@ -565,6 +585,10 @@ The following checks were executed on 2026-07-18 against the current source tree
 - source residue identities are checked against the resolved sequence record before topology lookup;
 - every executable atom is proven against its mapped component both before
   deduplication and again before output serialization;
+- the inter-chain-only path is exercised for NEF and NMR-STAR protein,
+  DNA, and RNA chains, including mapped-chain identity, exact contacts,
+  all-inter-chain unions, mixed-scope union quarantine, and the final writer
+  invariant;
 - every conversion writes a polymer-only FASTA sequence file;
 - PDB author numbering is aligned to Boltz one-based sequence positions before coordinate evaluation.
 

@@ -41,6 +41,7 @@ class ProjectionSettings:
     boltz_max_distance: float = 20.0
     min_sequence_separation: int = 0
     include_intraresidue: bool = True
+    include_intrachain: bool = True
 
     def validate(self) -> None:
         if self.averaging_policy not in {"sum-r6", "mean-r6", "hard-or"}:
@@ -71,6 +72,8 @@ class ProjectionSettings:
             "boltz_max_distance_angstrom": self.boltz_max_distance,
             "min_sequence_separation": self.min_sequence_separation,
             "include_intraresidue": self.include_intraresidue,
+            "include_intrachain": self.include_intrachain,
+            "exclude_intrachain": not self.include_intrachain,
         }
 
 
@@ -125,6 +128,9 @@ def project_document(
     ambiguous: list[AmbiguousGroup] = []
     rejections: list[Rejection] = []
     warnings = list(parsed.warnings)
+    intrachain_groups_filtered = 0
+    projected_alternatives_removed_by_intrachain_filter = 0
+    mixed_chain_scope_groups_filtered = 0
 
     for group in parsed.restraint_groups:
         if group.complex_logic:
@@ -194,6 +200,30 @@ def project_document(
             continue
 
         merged = _merge_or_alternatives(projected)
+        if not settings.include_intrachain:
+            intrachain = [
+                alternative
+                for alternative in merged
+                if alternative.atom1.chain == alternative.atom2.chain
+            ]
+            if intrachain:
+                intrachain_groups_filtered += 1
+                projected_alternatives_removed_by_intrachain_filter += len(merged)
+                chain_scope = (
+                    "intrachain"
+                    if len(intrachain) == len(merged)
+                    else "mixed_intrachain_interchain"
+                )
+                if chain_scope == "mixed_intrachain_interchain":
+                    mixed_chain_scope_groups_filtered += 1
+                rejections.append(
+                    _intrachain_filter_rejection(
+                        group,
+                        merged,
+                        chain_scope=chain_scope,
+                    )
+                )
+                continue
         if len(merged) == 1:
             candidate = merged[0]
             if not settings.include_intraresidue and (
@@ -259,6 +289,11 @@ def project_document(
         "atom_topology_quarantines": sum(
             item.reason == "atom_not_present_in_mapped_residue" for item in rejections
         ),
+        "intrachain_groups_filtered": intrachain_groups_filtered,
+        "projected_alternatives_removed_by_intrachain_filter": (
+            projected_alternatives_removed_by_intrachain_filter
+        ),
+        "mixed_chain_scope_groups_filtered": mixed_chain_scope_groups_filtered,
         "emitted_atom_topology_violations": 0,
     }
     combined_settings = dict(parser_settings or {})
@@ -277,7 +312,85 @@ def project_document(
         target_component_topologies=component_topologies,
     )
     require_valid_emitted_atom_topology(report)
+    require_valid_interchain_output(report)
     return report
+
+
+def _intrachain_filter_rejection(
+    group: RestraintGroup,
+    alternatives: list[ProjectedAlternative],
+    *,
+    chain_scope: str,
+) -> Rejection:
+    projected = [
+        {
+            "atom1": {
+                "chain": alternative.atom1.chain,
+                "residue_index": alternative.atom1.residue_index,
+                "atom_name": alternative.atom1.atom_name,
+            },
+            "atom2": {
+                "chain": alternative.atom2.chain,
+                "residue_index": alternative.atom2.residue_index,
+                "atom_name": alternative.atom2.atom_name,
+            },
+            "scope": (
+                "intrachain"
+                if alternative.atom1.chain == alternative.atom2.chain
+                else "interchain"
+            ),
+            "source_rows": list(alternative.source_rows),
+        }
+        for alternative in alternatives
+    ]
+    if chain_scope == "mixed_intrachain_interchain":
+        details = (
+            "The complete restraint group was removed by the inter-chain-only policy "
+            "because its OR alternatives mix intrachain and inter-chain contacts. "
+            "Keeping only the inter-chain alternatives would narrow and strengthen the "
+            "source disjunction."
+        )
+    else:
+        details = (
+            "The complete projected restraint group was removed by the "
+            "inter-chain-only policy because every alternative is intrachain."
+        )
+    return Rejection(
+        group_id=group.group_id,
+        reason="intrachain_filtered",
+        details=details,
+        row_ids=_row_ids(group),
+        provenance={
+            "filter": "exclude_intrachain",
+            "chain_identity": "mapped_boltz_chain",
+            "chain_scope": chain_scope,
+            "projected_alternatives": projected,
+        },
+    )
+
+
+def require_valid_interchain_output(report: ConversionReport) -> None:
+    """Fail closed if an inter-chain-only report contains a same-chain endpoint pair."""
+    if report.settings.get("include_intrachain", True):
+        return
+    violations: list[str] = []
+    for constraint in report.emitted_constraints:
+        if constraint.atom1.chain == constraint.atom2.chain:
+            violations.append(
+                f"exact {constraint.atom1.display()} -- {constraint.atom2.display()}"
+            )
+    for group in report.ambiguous_groups:
+        for alternative in group.alternatives:
+            if alternative.atom1.chain == alternative.atom2.chain:
+                violations.append(
+                    f"union {group.group_id} "
+                    f"{alternative.atom1.display()} -- {alternative.atom2.display()}"
+                )
+    if violations:
+        raise ValueError(
+            "Inter-chain-only output validation failed: "
+            + "; ".join(sorted(violations))
+        )
 
 
 def _quarantine_invalid_projected_atoms(

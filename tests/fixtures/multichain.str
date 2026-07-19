@@ -1,0 +1,61 @@
+data_multichain_nmrstar
+
+save_assembly
+_Assembly.Sf_category assembly
+_Assembly.Sf_framecode assembly
+loop_
+_Chem_comp_assembly.ID
+_Chem_comp_assembly.Entity_assembly_ID
+_Chem_comp_assembly.Comp_index_ID
+_Chem_comp_assembly.Comp_ID
+_Chem_comp_assembly.Auth_asym_ID
+_Chem_comp_assembly.Auth_seq_ID
+_Chem_comp_assembly.Auth_comp_ID
+1 1 1 ALA A 1 ALA
+2 1 2 LEU A 2 LEU
+3 2 1 GLY B 1 GLY
+4 3 1 A R 1 A
+5 4 1 DA D 1 DA
+stop_
+save_
+
+save_general_distance_constraints
+_Gen_dist_constraint_list.Sf_category general_distance_constraints
+_Gen_dist_constraint_list.Sf_framecode general_distance_constraints
+_Gen_dist_constraint_list.Constraint_type NOE
+loop_
+_Gen_dist_constraint.Index_ID
+_Gen_dist_constraint.ID
+_Gen_dist_constraint.Member_ID
+_Gen_dist_constraint.Member_logic_code
+_Gen_dist_constraint.Entity_assembly_ID_1
+_Gen_dist_constraint.Comp_index_ID_1
+_Gen_dist_constraint.Comp_ID_1
+_Gen_dist_constraint.Atom_ID_1
+_Gen_dist_constraint.Auth_asym_ID_1
+_Gen_dist_constraint.Auth_seq_ID_1
+_Gen_dist_constraint.Auth_comp_ID_1
+_Gen_dist_constraint.Auth_atom_ID_1
+_Gen_dist_constraint.Auth_atom_name_1
+_Gen_dist_constraint.Entity_assembly_ID_2
+_Gen_dist_constraint.Comp_index_ID_2
+_Gen_dist_constraint.Comp_ID_2
+_Gen_dist_constraint.Atom_ID_2
+_Gen_dist_constraint.Auth_asym_ID_2
+_Gen_dist_constraint.Auth_seq_ID_2
+_Gen_dist_constraint.Auth_comp_ID_2
+_Gen_dist_constraint.Auth_atom_ID_2
+_Gen_dist_constraint.Auth_atom_name_2
+_Gen_dist_constraint.Distance_lower_bound_val
+_Gen_dist_constraint.Distance_upper_bound_val
+_Gen_dist_constraint.Weight
+1 1 1 OR 1 1 ALA HA A 1 ALA HA HA 2 1 GLY HA2 B 1 GLY HA2 HA2 . 4.0 1.0
+2 2 1 OR 1 1 ALA HA A 1 ALA HA HA 1 2 LEU HA A 2 LEU HA HA . 4.0 1.0
+3 3 1 OR 1 1 ALA HA A 1 ALA HA HA 2 1 GLY HA2 B 1 GLY HA2 HA2 . 5.0 1.0
+4 3 2 OR 1 1 ALA HB1 A 1 ALA HB1 HB1 2 1 GLY HA2 B 1 GLY HA2 HA2 . 5.0 1.0
+5 4 1 OR 1 1 ALA HA A 1 ALA HA HA 2 1 GLY HA2 B 1 GLY HA2 HA2 . 5.0 1.0
+6 4 2 OR 1 1 ALA HA A 1 ALA HA HA 1 2 LEU HA A 2 LEU HA HA . 5.0 1.0
+7 5 1 OR 3 1 A H8 R 1 A H8 H8 4 1 DA H8 D 1 DA H8 H8 . 4.0 1.0
+8 6 1 OR 3 1 A H8 R 1 A H8 H8 3 1 A H2 R 1 A H2 H2 . 4.0 1.0
+stop_
+save_

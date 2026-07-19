@@ -20,6 +20,7 @@ from .model import (
     EmittedConstraint,
     ProjectedAlternative,
 )
+from .project import require_valid_interchain_output
 from .topology import require_valid_output_atom_topology
 
 
@@ -107,6 +108,7 @@ def write_outputs(
     # Independent final invariant: fail before creating the output directory or
     # writing audit/YAML files if any executable atom lacks topology evidence.
     require_valid_output_atom_topology(report)
+    require_valid_interchain_output(report)
     output = Path(output_dir)
     output.mkdir(parents=True, exist_ok=True)
     for obsolete_name in ("boltz_constraints.yaml", "proposed_atom_contact_unions.yaml"):
@@ -529,6 +531,19 @@ def _summary_text(report: ConversionReport) -> str:
         f"Safe groups before pair deduplication: {stats.get('safe_groups_before_pair_deduplication', 0)}",
         f"Exact atom constraints emitted: {stats.get('emitted_unique_heavy_atom_constraints', 0)}",
         f"Atom-contact union groups emitted: {stats.get('ambiguous_or_groups_not_emitted', 0)}",
+        (
+            "Inter-chain-only filter enabled: "
+            f"{'yes' if report.settings.get('exclude_intrachain', False) else 'no'}"
+        ),
+        f"Intrachain restraint groups filtered: {stats.get('intrachain_groups_filtered', 0)}",
+        (
+            "Projected alternatives removed by intrachain filtering: "
+            f"{stats.get('projected_alternatives_removed_by_intrachain_filter', 0)}"
+        ),
+        (
+            "Mixed intrachain/inter-chain OR groups filtered in full: "
+            f"{stats.get('mixed_chain_scope_groups_filtered', 0)}"
+        ),
         f"Rejection records: {stats.get('rejection_records', 0)}",
         "",
         "Important:",

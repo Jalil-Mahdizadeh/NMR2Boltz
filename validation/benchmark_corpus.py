@@ -319,6 +319,7 @@ def _aggregate(cases: list[dict[str, Any]]) -> dict[str, Any]:
         aggregate["fasta_files"] += len(conversions)
         aggregate["formats"][format_name] = {
             "emitted_constraints": sum(item["emitted_constraints"] for item in conversions),
+            "ambiguous_groups": sum(item["ambiguous_groups"] for item in conversions),
             "resolved_model_cases": satisfied + violated,
             "satisfied_model_cases": satisfied,
             "violated_model_cases": violated,
@@ -538,12 +539,15 @@ def _markdown(run: dict[str, Any]) -> str:
         "",
         "All 12 deposited ensembles were converted from both NEF and NMR-STAR with conservative defaults, then audited against every PDB conformer using sequence-aware coordinate alignment.",
         "",
-        "| Case | NEF contacts | STAR contacts | NEF PDB satisfaction | STAR PDB satisfaction | Exact parity | Implication failures |",
-        "|---|---:|---:|---:|---:|---:|---:|",
+        "| Case | NEF exact | NEF unions | STAR exact | STAR unions | NEF PDB satisfaction | STAR PDB satisfaction | Pair/bound parity | Implication failures |",
+        "|---|---:|---:|---:|---:|---:|---:|---:|---:|",
     ]
     for case in run["cases"]:
         if case["status"] != "pass":
-            lines.append(f"| {case['case_id']} | error | error | N/A | N/A | no | N/A |")
+            lines.append(
+                f"| {case['case_id']} | error | error | error | error | "
+                "N/A | N/A | no | N/A |"
+            )
             continue
         nef = case["formats"]["nef"]
         star = case["formats"]["star"]
@@ -554,7 +558,9 @@ def _markdown(run: dict[str, Any]) -> str:
             + star["coordinates"]["projection_implication_audit"]["failure_count"]
         )
         lines.append(
-            f"| {case['case_id']} | {nef['emitted_constraints']} | {star['emitted_constraints']} | "
+            f"| {case['case_id']} | {nef['emitted_constraints']} | "
+            f"{nef['ambiguous_groups']} | {star['emitted_constraints']} | "
+            f"{star['ambiguous_groups']} | "
             f"{_percent(nef_heavy['satisfaction_fraction_of_resolved'])} | "
             f"{_percent(star_heavy['satisfaction_fraction_of_resolved'])} | "
             f"{'yes' if case['format_parity']['exact_pair_and_bound_parity'] else 'no'} | {failures} |"
@@ -567,11 +573,18 @@ def _markdown(run: dict[str, Any]) -> str:
             "## Current result",
             "",
             f"- {aggregate['successful_conversions']}/24 conversions completed; {aggregate['no_distance_conversions']} are valid empty distance conversions for 8S8O.",
-            f"- NEF: {nef['emitted_constraints']} contacts, {_percent(nef['satisfaction_fraction_of_resolved'])} resolved PDB satisfaction.",
-            f"- NMR-STAR: {star['emitted_constraints']} contacts, {_percent(star['satisfaction_fraction_of_resolved'])} resolved PDB satisfaction.",
+            f"- NEF: {nef['emitted_constraints']} exact contacts and {nef['ambiguous_groups']} union groups; {_percent(nef['satisfaction_fraction_of_resolved'])} resolved PDB satisfaction for exact contacts.",
+            f"- NMR-STAR: {star['emitted_constraints']} exact contacts and {star['ambiguous_groups']} union groups; {_percent(star['satisfaction_fraction_of_resolved'])} resolved PDB satisfaction for exact contacts.",
             f"- Conservative implication failures: {nef['implication_failures'] + star['implication_failures']} across {nef['implication_antecedent_cases'] + star['implication_antecedent_cases']} satisfied-antecedent cases.",
             "- Final executable-topology violations: 0; every emitted endpoint is proven by its mapped component dictionary.",
             f"- Exact NEF/STAR pair-and-bound parity: {aggregate['exact_positive_distance_parity_cases']}/11 positive-distance cases; 8S8O also has exact empty-output parity.",
+            "",
+            "## Constraint output split",
+            "",
+            "- `atom_constraints_exact.yaml` contains only non-ambiguous `atom_contact` constraints counted in the `exact` columns.",
+            "- `atom_constraints_union.yaml` contains only ambiguous `atom_contact_union` OR groups counted in the `unions` columns; every alternative retains its own conservatively rounded bound.",
+            "- Both files are written for every conversion, including explicit empty `constraints: []` files. Exact contacts never appear in the union file, and union groups never appear in the exact file.",
+            "- PDB satisfaction and implication denominators cover exact contacts only. Union alternatives are not treated as simultaneous contacts because that would convert OR semantics into AND.",
             "",
             "## Row-level format discrepancy audit",
             "",

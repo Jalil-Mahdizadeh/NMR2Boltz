@@ -19,6 +19,7 @@
     "formats": {
       "nef": {
         "emitted_constraints": 12998,
+        "ambiguous_groups": 2056,
         "resolved_model_cases": 222570,
         "satisfied_model_cases": 222292,
         "violated_model_cases": 278,
@@ -31,6 +32,7 @@
       },
       "star": {
         "emitted_constraints": 11829,
+        "ambiguous_groups": 294,
         "resolved_model_cases": 198200,
         "satisfied_model_cases": 197930,
         "violated_model_cases": 270,

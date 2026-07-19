@@ -8,6 +8,7 @@ from validation.benchmark_corpus import (
     _baseline_payload,
     _evaluate_gate,
     _missing_coordinate_review,
+    _markdown,
     _portable_path,
     compare_reports,
 )
@@ -48,6 +49,25 @@ def test_compare_reports_detects_pair_and_bound_differences():
     assert result["common_pairs_with_different_bounds"] == 1
     assert result["maximum_common_bound_delta_angstrom"] == 0.5
     assert result["exact_pair_and_bound_parity"] is False
+
+
+def test_benchmark_markdown_reports_exact_and_union_outputs():
+    root = Path(__file__).parents[1]
+    run = json.loads(
+        (root / "benchmark" / "output" / "benchmark_summary.json").read_text(
+            encoding="utf-8"
+        )
+    )
+
+    rendered = _markdown(run)
+
+    assert "| Case | NEF exact | NEF unions | STAR exact | STAR unions |" in rendered
+    assert "| 43JX | 1716 | 16 | 1716 | 16 |" in rendered
+    assert "NEF: 12998 exact contacts and 2056 union groups" in rendered
+    assert "NMR-STAR: 11829 exact contacts and 294 union groups" in rendered
+    assert "`atom_constraints_exact.yaml`" in rendered
+    assert "`atom_constraints_union.yaml`" in rendered
+    assert "Union alternatives are not treated as simultaneous contacts" in rendered
 
 
 def _endpoint(expression: str, hint: str | None = None) -> dict:

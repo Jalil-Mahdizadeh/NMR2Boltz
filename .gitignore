@@ -6,3 +6,5 @@ __pycache__/
 *.egg-info/
 tmp/
 *.log
+benchmark/parity_eval/
+workspace/output/docker_*/

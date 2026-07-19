@@ -19,6 +19,9 @@ Use this checklist before treating converted contacts as production restraints.
 - [ ] Verify all modified residues and ligands against the selected CCD chemistry.
 - [ ] Ensure the Boltz residue index is the one-based position in the input sequence, not the author residue number.
 - [ ] Reject or manually verify every mapping labeled inferred.
+- [ ] For `--exclude-intrachain`, verify that mapped Boltz chain IDs represent
+  the intended protein/DNA/RNA chains; source author-chain labels are not the
+  filtering boundary.
 
 ## Atom semantics
 
@@ -37,6 +40,8 @@ Use this checklist before treating converted contacts as production restraints.
 - [ ] Inspect every projected bound near or above the 20 Å Boltz limit.
 - [ ] Confirm that no over-20 Å value was clipped.
 - [ ] Confirm that multiple alternatives in one restraint ID were not emitted as simultaneous contacts.
+- [ ] Confirm that mixed intra/inter OR groups were omitted in full rather than
+  reduced to only their inter-chain alternatives.
 - [ ] When paired NEF/NMR-STAR files exist, inspect exact atom-pair and bound parity rather than only total counts.
 
 ## Boltz usage
