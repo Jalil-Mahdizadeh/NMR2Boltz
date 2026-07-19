@@ -5,7 +5,7 @@ Date: 2026-07-19
 
 ## Regression and stress validation
 
-- 105 Pytest tests passed.
+- 111 Pytest tests passed.
 - 100,000 randomized sum-r6 implication cases passed.
 - 100,000 constructive triangle-inequality cases passed.
 - 25,000 outward-rounding cases passed.
@@ -83,6 +83,30 @@ semantics, and source inconsistencies remain visible and are not silently
 approximated. The complete current report is under
 `benchmark/output`. This benchmark validates conversion behavior, not the
 predictive accuracy of a GPU Boltz folding campaign.
+
+## Exact-contact distance matrices
+
+`benchmark/distance_check` contains one CSV for each of the 12 PDB IDs. The
+files cover the union of 13,275 exact heavy-atom pairs emitted by NEF and
+NMR-STAR and contain 227,920 requested pair/model distance cells. Of these,
+227,100 resolve from deposited coordinates. The remaining 820 blank cells are
+exactly 41 pairs absent from every model of the partial-coordinate 8R1X
+ensemble; no other entry has a missing distance cell.
+
+The generator independently aligns PDB author numbering through each format's
+sequence map. A common pair is accepted only if NEF and NMR-STAR resolve it in
+the same models and their computed distances agree within 1e-6 A. It also
+requires the exact executable YAML pair set and conservatively rounded bound to
+match `conversion_report.json`. Two consecutive generations produced
+byte-identical files, and every CSV digest is pinned in
+`benchmark/distance_check/distance_check_summary.json`.
+
+The CSVs intentionally exclude ambiguous `atom_contact_union` groups because a
+row identified only by an atom pair cannot preserve restraint-group OR
+semantics. Their alternatives remain available in the normal union and
+provenance artifacts. Descriptive satisfaction fractions in the distance-check
+README compare deposited structures with source-driven exact bounds; they do
+not establish predictive accuracy.
 
 ## Container status
 

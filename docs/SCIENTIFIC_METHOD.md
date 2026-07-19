@@ -569,11 +569,33 @@ digest rather than waived by count. A run still writes its evidence before
 returning a nonzero exit. This prevents denominator omission and baseline drift
 from being mistaken for robustness.
 
-### 11.5 Executed validation record
+### 11.6 Exact-contact PDB-model distance matrix
+
+For a directly inspectable geometric comparison, the distance-check generator
+forms the union of the exact heavy-atom pairs emitted from paired NEF and
+NMR-STAR conversions. Each row records the canonical Boltz atom pair, the
+executable bound from each format when present, and the Euclidean distance in
+every deposited PDB model. Bounds are cross-checked against conversion
+provenance and retain the executable six-decimal outward rounding.
+
+PDB author numbering is aligned independently through each format's sequence
+map. For a pair common to both formats, differing coordinate resolution or a
+distance disagreement above 1e-6 A is a hard error. Coordinate absence produces
+a blank distance cell; it is not evidence that the mapped atom is chemically
+invalid. Ambiguous union alternatives are excluded because flattening them
+would replace an OR group with multiple apparently independent constraints.
+
+The current 12-entry matrix contains 13,275 rows and 227,920 pair/model cells.
+It resolves 227,100 distances. All 820 blanks are the 41 exact contacts absent
+from all 20 models of the partial-coordinate 8R1X ensemble. The checked
+CSV digests and per-entry counts are stored in
+`benchmark/distance_check/distance_check_summary.json`.
+
+### 11.7 Executed validation record
 
 The following checks were executed on 2026-07-19 against the current source tree:
 
-- all 105 Pytest regression, format, topology, logic, target-validation,
+- all 111 Pytest regression, format, topology, logic, target-validation,
   ensemble-alignment, constraint-serialization, and robustness tests passed;
 - Python byte compilation passed for source, tests, and the stress harness;
 - 100,000 randomized sum-r6 implication cases and 100,000 constructive triangle-inequality cases passed in the final Docker image;

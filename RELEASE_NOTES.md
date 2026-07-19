@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+- Added deterministic per-entry exact-contact distance matrices under
+  `benchmark/distance_check`. The generator places NEF and NMR-STAR executable
+  bounds beside one aligned Euclidean distance per deposited PDB model,
+  cross-checks YAML against conversion provenance, fails closed on
+  format-dependent mapping, preserves missing coordinate observations as blank
+  cells, and records SHA-256 artifact digests.
 - Added a complete `docs/CLI_REFERENCE.md` covering every global, `convert`,
   and `benchmark` flag, including aliases, repeatability, effective defaults,
   positional arguments, and exit statuses. Regression coverage now prevents a
@@ -54,7 +60,7 @@
   rejection reason before topology resolution.
 - NEF/NMR-STAR files with sequence data but no distance loop now produce an
   auditable empty conversion rather than failing format detection.
-- Expanded the regression suite from 39 to 105 tests, including positive and
+- Expanded the regression suite from 39 to 111 tests, including positive and
   adversarial checks for every discrepancy predicate and fail-closed gate.
 - Added fail-fast `--target-yaml` validation for chain IDs, residue indices,
   canonical residue identities, declared modifications, mapping collisions, and

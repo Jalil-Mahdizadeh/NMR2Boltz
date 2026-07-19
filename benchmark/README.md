@@ -35,6 +35,24 @@ benchmark/output/
   RUN_COMMAND.txt
 ```
 
+The exact-contact/PDB-model distance matrix is generated after the corpus gate:
+
+```bash
+python validation/distance_check.py benchmark/input \
+  --conversion-output benchmark/output \
+  --output-directory benchmark/distance_check
+```
+
+This creates one CSV per PDB ID under `distance_check/`. Each row is the union
+of the NEF- and NMR-STAR-emitted exact heavy-atom pairs, followed by the
+corresponding six-decimal bounds and one Euclidean distance column per PDB
+model. A blank bound means that format did not emit the pair; a blank distance
+means that the deposited model does not observe an endpoint. Ambiguous union
+groups are excluded because treating their alternatives as independent
+constraints would change OR semantics. See
+[`distance_check/README.md`](distance_check/README.md) for current counts,
+scientific limitations, and artifact digests.
+
 The runner uses conservative defaults (`sum-r6`, explicit upper bounds only,
 and pseudoatom rejection) and evaluates every deposited conformer with a 0.01 Å
 coordinate tolerance. The PDB sequence is aligned to Boltz one-based positions,

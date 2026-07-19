@@ -113,7 +113,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "nmr2boltz_init",
-      "community": 5,
+      "community": 3,
       "norm_label": "__init__.py"
     },
     {
@@ -123,7 +123,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "nmr2boltz_init_rationale_1",
-      "community": 5,
+      "community": 3,
       "norm_label": "conservative nmr distance-restraint projection for boltz atom contacts."
     },
     {
@@ -263,7 +263,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "path",
-      "community": 30,
+      "community": 1,
       "norm_label": "path"
     },
     {
@@ -433,7 +433,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "namespace",
-      "community": 0,
+      "community": 1,
       "norm_label": "namespace"
     },
     {
@@ -463,7 +463,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "nmr2boltz_model",
-      "community": 6,
+      "community": 3,
       "norm_label": "model.py"
     },
     {
@@ -473,7 +473,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "nmr2boltz_model_clean",
-      "community": 6,
+      "community": 5,
       "norm_label": "clean()"
     },
     {
@@ -653,7 +653,7 @@
       "source_location": "L219",
       "_origin": "ast",
       "id": "nmr2boltz_model_rejection",
-      "community": 0,
+      "community": 3,
       "norm_label": "rejection"
     },
     {
@@ -663,7 +663,7 @@
       "source_location": "L229",
       "_origin": "ast",
       "id": "nmr2boltz_model_conversionreport",
-      "community": 5,
+      "community": 3,
       "norm_label": "conversionreport"
     },
     {
@@ -673,7 +673,7 @@
       "source_location": "L243",
       "_origin": "ast",
       "id": "nmr2boltz_model_conversionreport_to_dict",
-      "community": 5,
+      "community": 3,
       "norm_label": ".to_dict()"
     },
     {
@@ -683,7 +683,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "nmr2boltz_model_rationale_10",
-      "community": 6,
+      "community": 5,
       "norm_label": "return a stripped star value or ``none`` for star null tokens."
     },
     {
@@ -713,7 +713,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "list",
-      "community": 0,
+      "community": 3,
       "norm_label": "list"
     },
     {
@@ -973,7 +973,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "nmr2boltz_project",
-      "community": 0,
+      "community": 3,
       "norm_label": "project.py"
     },
     {
@@ -1013,7 +1013,7 @@
       "source_location": "L80",
       "_origin": "ast",
       "id": "nmr2boltz_project_averaging_factor",
-      "community": 0,
+      "community": 3,
       "norm_label": "_averaging_factor()"
     },
     {
@@ -1023,7 +1023,7 @@
       "source_location": "L88",
       "_origin": "ast",
       "id": "nmr2boltz_project_canonical_pair",
-      "community": 0,
+      "community": 3,
       "norm_label": "_canonical_pair()"
     },
     {
@@ -1033,7 +1033,7 @@
       "source_location": "L92",
       "_origin": "ast",
       "id": "nmr2boltz_project_residue_identity_mismatch",
-      "community": 0,
+      "community": 3,
       "norm_label": "_residue_identity_mismatch()"
     },
     {
@@ -1053,7 +1053,7 @@
       "source_location": "L319",
       "_origin": "ast",
       "id": "nmr2boltz_project_intrachain_filter_rejection",
-      "community": 0,
+      "community": 3,
       "norm_label": "_intrachain_filter_rejection()"
     },
     {
@@ -1073,7 +1073,7 @@
       "source_location": "L396",
       "_origin": "ast",
       "id": "nmr2boltz_project_quarantine_invalid_projected_atoms",
-      "community": 0,
+      "community": 3,
       "norm_label": "_quarantine_invalid_projected_atoms()"
     },
     {
@@ -1083,7 +1083,7 @@
       "source_location": "L486",
       "_origin": "ast",
       "id": "nmr2boltz_project_project_group",
-      "community": 0,
+      "community": 3,
       "norm_label": "_project_group()"
     },
     {
@@ -1093,7 +1093,7 @@
       "source_location": "L700",
       "_origin": "ast",
       "id": "nmr2boltz_project_resolve_endpoint_choices",
-      "community": 0,
+      "community": 3,
       "norm_label": "_resolve_endpoint_choices()"
     },
     {
@@ -1103,7 +1103,7 @@
       "source_location": "L723",
       "_origin": "ast",
       "id": "nmr2boltz_project_merge_or_alternatives",
-      "community": 0,
+      "community": 3,
       "norm_label": "_merge_or_alternatives()"
     },
     {
@@ -1113,7 +1113,7 @@
       "source_location": "L755",
       "_origin": "ast",
       "id": "nmr2boltz_project_merge_independent_constraints",
-      "community": 0,
+      "community": 3,
       "norm_label": "_merge_independent_constraints()"
     },
     {
@@ -1123,7 +1123,7 @@
       "source_location": "L826",
       "_origin": "ast",
       "id": "nmr2boltz_project_row_ids",
-      "community": 0,
+      "community": 3,
       "norm_label": "_row_ids()"
     },
     {
@@ -1143,7 +1143,7 @@
       "source_location": "L402",
       "_origin": "ast",
       "id": "nmr2boltz_project_rationale_402",
-      "community": 0,
+      "community": 3,
       "norm_label": "remove complete projected contacts unless both atoms have topology evidence."
     },
     {
@@ -1153,7 +1153,7 @@
       "source_location": "L726",
       "_origin": "ast",
       "id": "nmr2boltz_project_rationale_726",
-      "community": 0,
+      "community": 3,
       "norm_label": "merge duplicate heavy pairs inside one or group.      for the same pair, ``d <="
     },
     {
@@ -1163,7 +1163,7 @@
       "source_location": "L759",
       "_origin": "ast",
       "id": "nmr2boltz_project_rationale_759",
-      "community": 0,
+      "community": 3,
       "norm_label": "merge independent restraint groups that happen to target the same pair.      ind"
     },
     {
@@ -1993,7 +1993,7 @@
       "source_location": "L647",
       "_origin": "ast",
       "id": "nmr2boltz_topology_atom_topology_violations",
-      "community": 5,
+      "community": 3,
       "norm_label": "atom_topology_violations()"
     },
     {
@@ -2003,7 +2003,7 @@
       "source_location": "L677",
       "_origin": "ast",
       "id": "nmr2boltz_topology_emitted_atom_topology_violations",
-      "community": 5,
+      "community": 10,
       "norm_label": "emitted_atom_topology_violations()"
     },
     {
@@ -2023,7 +2023,7 @@
       "source_location": "L712",
       "_origin": "ast",
       "id": "nmr2boltz_topology_require_valid_emitted_atom_topology",
-      "community": 5,
+      "community": 3,
       "norm_label": "require_valid_emitted_atom_topology()"
     },
     {
@@ -2113,7 +2113,7 @@
       "source_location": "L653",
       "_origin": "ast",
       "id": "nmr2boltz_topology_rationale_653",
-      "community": 5,
+      "community": 3,
       "norm_label": "check atoms against component dictionaries, never coordinate observations."
     },
     {
@@ -2133,7 +2133,7 @@
       "source_location": "L713",
       "_origin": "ast",
       "id": "nmr2boltz_topology_rationale_713",
-      "community": 5,
+      "community": 3,
       "norm_label": "fail before executable yaml can contain an unproven atom."
     },
     {
@@ -2323,7 +2323,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_cli_documentation",
-      "community": 31,
+      "community": 0,
       "norm_label": "test_cli_documentation.py"
     },
     {
@@ -2333,7 +2333,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "tests_test_cli_documentation_parser_flags",
-      "community": 31,
+      "community": 0,
       "norm_label": "_parser_flags()"
     },
     {
@@ -2343,7 +2343,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "tests_test_cli_documentation_documented_flag_rows",
-      "community": 31,
+      "community": 0,
       "norm_label": "_documented_flag_rows()"
     },
     {
@@ -2353,7 +2353,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "tests_test_cli_documentation_test_cli_reference_covers_every_parser_flag_and_states_a_default",
-      "community": 31,
+      "community": 0,
       "norm_label": "test_cli_reference_covers_every_parser_flag_and_states_a_default()"
     },
     {
@@ -2363,7 +2363,7 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "tests_test_cli_documentation_test_cli_reference_covers_commands_positionals_and_exit_statuses",
-      "community": 31,
+      "community": 0,
       "norm_label": "test_cli_reference_covers_commands_positionals_and_exit_statuses()"
     },
     {
@@ -2767,6 +2767,106 @@
       "norm_label": "test_benchmark_artifact_paths_are_portable()"
     },
     {
+      "label": "test_distance_check.py",
+      "file_type": "code",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "tests_test_distance_check",
+      "community": 1,
+      "norm_label": "test_distance_check.py"
+    },
+    {
+      "label": "_atom()",
+      "file_type": "code",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "tests_test_distance_check_atom",
+      "community": 1,
+      "norm_label": "_atom()"
+    },
+    {
+      "label": "_write_format()",
+      "file_type": "code",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "tests_test_distance_check_write_format",
+      "community": 1,
+      "norm_label": "_write_format()"
+    },
+    {
+      "label": "_write_pdb()",
+      "file_type": "code",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L81",
+      "_origin": "ast",
+      "id": "tests_test_distance_check_write_pdb",
+      "community": 1,
+      "norm_label": "_write_pdb()"
+    },
+    {
+      "label": "test_build_case_writes_union_of_exact_pairs_with_model_distances()",
+      "file_type": "code",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L101",
+      "_origin": "ast",
+      "id": "tests_test_distance_check_test_build_case_writes_union_of_exact_pairs_with_model_distances",
+      "community": 1,
+      "norm_label": "test_build_case_writes_union_of_exact_pairs_with_model_distances()"
+    },
+    {
+      "label": "test_empty_exact_files_still_write_model_columns()",
+      "file_type": "code",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L155",
+      "_origin": "ast",
+      "id": "tests_test_distance_check_test_empty_exact_files_still_write_model_columns",
+      "community": 1,
+      "norm_label": "test_empty_exact_files_still_write_model_columns()"
+    },
+    {
+      "label": "test_missing_coordinate_is_blank_not_invalid_atom_evidence()",
+      "file_type": "code",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L179",
+      "_origin": "ast",
+      "id": "tests_test_distance_check_test_missing_coordinate_is_blank_not_invalid_atom_evidence",
+      "community": 1,
+      "norm_label": "test_missing_coordinate_is_blank_not_invalid_atom_evidence()"
+    },
+    {
+      "label": "test_exact_yaml_and_report_must_match()",
+      "file_type": "code",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L214",
+      "_origin": "ast",
+      "id": "tests_test_distance_check_test_exact_yaml_and_report_must_match",
+      "community": 1,
+      "norm_label": "test_exact_yaml_and_report_must_match()"
+    },
+    {
+      "label": "test_common_pair_mapping_mismatch_fails_closed()",
+      "file_type": "code",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L230",
+      "_origin": "ast",
+      "id": "tests_test_distance_check_test_common_pair_mapping_mismatch_fails_closed",
+      "community": 1,
+      "norm_label": "test_common_pair_mapping_mismatch_fails_closed()"
+    },
+    {
+      "label": "test_run_requires_exact_expected_corpus_size()",
+      "file_type": "code",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L240",
+      "_origin": "ast",
+      "id": "tests_test_distance_check_test_run_requires_exact_expected_corpus_size",
+      "community": 1,
+      "norm_label": "test_run_requires_exact_expected_corpus_size()"
+    },
+    {
       "label": "test_ensemble.py",
       "file_type": "code",
       "source_file": "tests/test_ensemble.py",
@@ -2903,7 +3003,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_logic",
-      "community": 0,
+      "community": 3,
       "norm_label": "test_logic.py"
     },
     {
@@ -2913,7 +3013,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "tests_test_logic_projected",
-      "community": 0,
+      "community": 3,
       "norm_label": "projected()"
     },
     {
@@ -2923,7 +3023,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "tests_test_logic_test_duplicate_pair_inside_or_uses_larger_bound",
-      "community": 0,
+      "community": 3,
       "norm_label": "test_duplicate_pair_inside_or_uses_larger_bound()"
     },
     {
@@ -2933,7 +3033,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "tests_test_logic_test_duplicate_pair_across_independent_groups_uses_smaller_bound",
-      "community": 0,
+      "community": 3,
       "norm_label": "test_duplicate_pair_across_independent_groups_uses_smaller_bound()"
     },
     {
@@ -2943,7 +3043,7 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "tests_test_logic_test_boltz_minimum_weakens_and_maximum_is_not_clipped",
-      "community": 0,
+      "community": 3,
       "norm_label": "test_boltz_minimum_weakens_and_maximum_is_not_clipped()"
     },
     {
@@ -2953,7 +3053,7 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "tests_test_logic_test_compressed_nef_input",
-      "community": 0,
+      "community": 3,
       "norm_label": "test_compressed_nef_input()"
     },
     {
@@ -2973,7 +3073,7 @@
       "source_location": "L98",
       "_origin": "ast",
       "id": "tests_test_logic_test_pseudoatom_atomset_mode_is_explicitly_labeled",
-      "community": 0,
+      "community": 3,
       "norm_label": "test_pseudoatom_atomset_mode_is_explicitly_labeled()"
     },
     {
@@ -3133,7 +3233,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "tests_test_robustness_starloop",
-      "community": 0,
+      "community": 6,
       "norm_label": "_starloop"
     },
     {
@@ -3143,7 +3243,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "tests_test_robustness_starloop_init",
-      "community": 0,
+      "community": 6,
       "norm_label": ".__init__()"
     },
     {
@@ -3153,7 +3253,7 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "tests_test_robustness_saveframe",
-      "community": 0,
+      "community": 6,
       "norm_label": "_saveframe"
     },
     {
@@ -3173,7 +3273,7 @@
       "source_location": "L64",
       "_origin": "ast",
       "id": "tests_test_robustness_test_nmrstar_member_logic_is_only_flattened_for_explicit_or",
-      "community": 0,
+      "community": 6,
       "norm_label": "test_nmrstar_member_logic_is_only_flattened_for_explicit_or()"
     },
     {
@@ -3473,7 +3573,7 @@
       "source_location": "L120",
       "_origin": "ast",
       "id": "validation_benchmark_corpus_coordinate_summary",
-      "community": 30,
+      "community": 1,
       "norm_label": "_coordinate_summary()"
     },
     {
@@ -4257,6 +4357,216 @@
       "norm_label": "return one complete evidence row per pair or bound discrepancy."
     },
     {
+      "label": "distance_check.py",
+      "file_type": "code",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "validation_distance_check",
+      "community": 1,
+      "norm_label": "distance_check.py"
+    },
+    {
+      "label": "parse_args()",
+      "file_type": "code",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L37",
+      "_origin": "ast",
+      "id": "validation_distance_check_parse_args",
+      "community": 1,
+      "norm_label": "parse_args()"
+    },
+    {
+      "label": "_single_file()",
+      "file_type": "code",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L80",
+      "_origin": "ast",
+      "id": "validation_distance_check_single_file",
+      "community": 1,
+      "norm_label": "_single_file()"
+    },
+    {
+      "label": "_atom_key()",
+      "file_type": "code",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L89",
+      "_origin": "ast",
+      "id": "validation_distance_check_atom_key",
+      "community": 1,
+      "norm_label": "_atom_key()"
+    },
+    {
+      "label": "_pair_key()",
+      "file_type": "code",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L97",
+      "_origin": "ast",
+      "id": "validation_distance_check_pair_key",
+      "community": 1,
+      "norm_label": "_pair_key()"
+    },
+    {
+      "label": "PairKey",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "pairkey",
+      "community": 1,
+      "norm_label": "pairkey"
+    },
+    {
+      "label": "_pair_text()",
+      "file_type": "code",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L101",
+      "_origin": "ast",
+      "id": "validation_distance_check_pair_text",
+      "community": 1,
+      "norm_label": "_pair_text()"
+    },
+    {
+      "label": "_load_json()",
+      "file_type": "code",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L105",
+      "_origin": "ast",
+      "id": "validation_distance_check_load_json",
+      "community": 1,
+      "norm_label": "_load_json()"
+    },
+    {
+      "label": "_report_bounds()",
+      "file_type": "code",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L112",
+      "_origin": "ast",
+      "id": "validation_distance_check_report_bounds",
+      "community": 1,
+      "norm_label": "_report_bounds()"
+    },
+    {
+      "label": "_yaml_bounds()",
+      "file_type": "code",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L125",
+      "_origin": "ast",
+      "id": "validation_distance_check_yaml_bounds",
+      "community": 1,
+      "norm_label": "_yaml_bounds()"
+    },
+    {
+      "label": "load_exact_bounds()",
+      "file_type": "code",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L167",
+      "_origin": "ast",
+      "id": "validation_distance_check_load_exact_bounds",
+      "community": 1,
+      "norm_label": "load_exact_bounds()"
+    },
+    {
+      "label": "_aligned_models()",
+      "file_type": "code",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L191",
+      "_origin": "ast",
+      "id": "validation_distance_check_aligned_models",
+      "community": 1,
+      "norm_label": "_aligned_models()"
+    },
+    {
+      "label": "_pair_distances()",
+      "file_type": "code",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L202",
+      "_origin": "ast",
+      "id": "validation_distance_check_pair_distances",
+      "community": 1,
+      "norm_label": "_pair_distances()"
+    },
+    {
+      "label": "_merge_distances()",
+      "file_type": "code",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L215",
+      "_origin": "ast",
+      "id": "validation_distance_check_merge_distances",
+      "community": 1,
+      "norm_label": "_merge_distances()"
+    },
+    {
+      "label": "_format_bound()",
+      "file_type": "code",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L250",
+      "_origin": "ast",
+      "id": "validation_distance_check_format_bound",
+      "community": 1,
+      "norm_label": "_format_bound()"
+    },
+    {
+      "label": "_format_distance()",
+      "file_type": "code",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L254",
+      "_origin": "ast",
+      "id": "validation_distance_check_format_distance",
+      "community": 1,
+      "norm_label": "_format_distance()"
+    },
+    {
+      "label": "build_case()",
+      "file_type": "code",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L258",
+      "_origin": "ast",
+      "id": "validation_distance_check_build_case",
+      "community": 1,
+      "norm_label": "build_case()"
+    },
+    {
+      "label": "_percent()",
+      "file_type": "code",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L373",
+      "_origin": "ast",
+      "id": "validation_distance_check_percent",
+      "community": 1,
+      "norm_label": "_percent()"
+    },
+    {
+      "label": "_write_readme()",
+      "file_type": "code",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L377",
+      "_origin": "ast",
+      "id": "validation_distance_check_write_readme",
+      "community": 1,
+      "norm_label": "_write_readme()"
+    },
+    {
+      "label": "run()",
+      "file_type": "code",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L438",
+      "_origin": "ast",
+      "id": "validation_distance_check_run",
+      "community": 1,
+      "norm_label": "run()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L505",
+      "_origin": "ast",
+      "id": "validation_distance_check_main",
+      "community": 1,
+      "norm_label": "main()"
+    },
+    {
       "label": "stress_validation.py",
       "file_type": "code",
       "source_file": "validation/stress_validation.py",
@@ -4630,7 +4940,7 @@
       "label": "Output files",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L182",
+      "source_location": "L198",
       "_origin": "ast",
       "id": "readme_output_files",
       "community": 11,
@@ -4640,7 +4950,7 @@
       "label": "BoltzUI integration",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L198",
+      "source_location": "L214",
       "_origin": "ast",
       "id": "readme_boltzui_integration",
       "community": 11,
@@ -4650,7 +4960,7 @@
       "label": "Projection policies",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L217",
+      "source_location": "L233",
       "_origin": "ast",
       "id": "readme_projection_policies",
       "community": 11,
@@ -4660,7 +4970,7 @@
       "label": "Ambiguity rules",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L241",
+      "source_location": "L257",
       "_origin": "ast",
       "id": "readme_ambiguity_rules",
       "community": 11,
@@ -4670,7 +4980,7 @@
       "label": "Safe workflow for structure generation",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L269",
+      "source_location": "L285",
       "_origin": "ast",
       "id": "readme_safe_workflow_for_structure_generation",
       "community": 11,
@@ -4680,7 +4990,7 @@
       "label": "Important limitations",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L279",
+      "source_location": "L295",
       "_origin": "ast",
       "id": "readme_important_limitations",
       "community": 11,
@@ -4690,7 +5000,7 @@
       "label": "Documentation",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L291",
+      "source_location": "L307",
       "_origin": "ast",
       "id": "readme_documentation",
       "community": 11,
@@ -4700,7 +5010,7 @@
       "label": "Primary references and specifications",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L300",
+      "source_location": "L317",
       "_origin": "ast",
       "id": "readme_primary_references_and_specifications",
       "community": 11,
@@ -4740,7 +5050,7 @@
       "label": "Included",
       "file_type": "document",
       "source_file": "RELEASE_NOTES.md",
-      "source_location": "L71",
+      "source_location": "L77",
       "_origin": "ast",
       "id": "release_notes_included",
       "community": 20,
@@ -4750,7 +5060,7 @@
       "label": "Safety defaults",
       "file_type": "document",
       "source_file": "RELEASE_NOTES.md",
-      "source_location": "L84",
+      "source_location": "L90",
       "_origin": "ast",
       "id": "release_notes_safety_defaults",
       "community": 20,
@@ -4760,7 +5070,7 @@
       "label": "Validation",
       "file_type": "document",
       "source_file": "RELEASE_NOTES.md",
-      "source_location": "L88",
+      "source_location": "L94",
       "_origin": "ast",
       "id": "release_notes_validation",
       "community": 20,
@@ -4807,10 +5117,20 @@
       "norm_label": "paired-format deposited-data validation"
     },
     {
-      "label": "Container status",
+      "label": "Exact-contact distance matrices",
       "file_type": "document",
       "source_file": "VALIDATION.md",
       "source_location": "L87",
+      "_origin": "ast",
+      "id": "validation_exact_contact_distance_matrices",
+      "community": 11,
+      "norm_label": "exact-contact distance matrices"
+    },
+    {
+      "label": "Container status",
+      "file_type": "document",
+      "source_file": "VALIDATION.md",
+      "source_location": "L111",
       "_origin": "ast",
       "id": "validation_container_status",
       "community": 11,
@@ -4823,7 +5143,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "benchmark_readme",
-      "community": 25,
+      "community": 11,
       "norm_label": "readme.md"
     },
     {
@@ -4833,8 +5153,28 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "benchmark_readme_paired_nef_nmr_star_benchmark",
-      "community": 25,
+      "community": 11,
       "norm_label": "paired nef/nmr-star benchmark"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "benchmark/distance_check/README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "distance_check_readme",
+      "community": 11,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "Exact-contact distance check",
+      "file_type": "document",
+      "source_file": "benchmark/distance_check/README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "distance_check_readme_exact_contact_distance_check",
+      "community": 11,
+      "norm_label": "exact-contact distance check"
     },
     {
       "label": "BENCHMARK_REPORT.md",
@@ -6057,20 +6397,30 @@
       "norm_label": "11.5 paired-format discrepancy audit and ci gate"
     },
     {
-      "label": "11.5 Executed validation record",
+      "label": "11.6 Exact-contact PDB-model distance matrix",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
       "source_location": "L572",
       "_origin": "ast",
-      "id": "docs_scientific_method_11_5_executed_validation_record",
+      "id": "docs_scientific_method_11_6_exact_contact_pdb_model_distance_matrix",
       "community": 18,
-      "norm_label": "11.5 executed validation record"
+      "norm_label": "11.6 exact-contact pdb-model distance matrix"
+    },
+    {
+      "label": "11.7 Executed validation record",
+      "file_type": "document",
+      "source_file": "docs/SCIENTIFIC_METHOD.md",
+      "source_location": "L594",
+      "_origin": "ast",
+      "id": "docs_scientific_method_11_7_executed_validation_record",
+      "community": 18,
+      "norm_label": "11.7 executed validation record"
     },
     {
       "label": "12. Suggested confidence tiers",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L617",
+      "source_location": "L639",
       "_origin": "ast",
       "id": "docs_scientific_method_12_suggested_confidence_tiers",
       "community": 2,
@@ -6080,7 +6430,7 @@
       "label": "13. Potential methodological extensions",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L632",
+      "source_location": "L654",
       "_origin": "ast",
       "id": "docs_scientific_method_13_potential_methodological_extensions",
       "community": 19,
@@ -6090,7 +6440,7 @@
       "label": "13.1 Probabilistic union restraints",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L634",
+      "source_location": "L656",
       "_origin": "ast",
       "id": "docs_scientific_method_13_1_probabilistic_union_restraints",
       "community": 19,
@@ -6100,7 +6450,7 @@
       "label": "13.2 Ensemble-aware objective",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L638",
+      "source_location": "L660",
       "_origin": "ast",
       "id": "docs_scientific_method_13_2_ensemble_aware_objective",
       "community": 19,
@@ -6110,7 +6460,7 @@
       "label": "13.3 Iterative assignment and folding",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L642",
+      "source_location": "L664",
       "_origin": "ast",
       "id": "docs_scientific_method_13_3_iterative_assignment_and_folding",
       "community": 19,
@@ -6120,7 +6470,7 @@
       "label": "13.4 Information-aware restraint selection",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L652",
+      "source_location": "L674",
       "_origin": "ast",
       "id": "docs_scientific_method_13_4_information_aware_restraint_selection",
       "community": 19,
@@ -6130,7 +6480,7 @@
       "label": "13.5 Broader experimental data",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L656",
+      "source_location": "L678",
       "_origin": "ast",
       "id": "docs_scientific_method_13_5_broader_experimental_data",
       "community": 19,
@@ -6140,7 +6490,7 @@
       "label": "14. Reproducibility and auditability",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L670",
+      "source_location": "L692",
       "_origin": "ast",
       "id": "docs_scientific_method_14_reproducibility_and_auditability",
       "community": 2,
@@ -6150,7 +6500,7 @@
       "label": "15. Questions for NMR expert review before production deployment",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L687",
+      "source_location": "L709",
       "_origin": "ast",
       "id": "docs_scientific_method_15_questions_for_nmr_expert_review_before_production_deployment",
       "community": 2,
@@ -6160,7 +6510,7 @@
       "label": "16. Primary specifications and references",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L702",
+      "source_location": "L724",
       "_origin": "ast",
       "id": "docs_scientific_method_16_primary_specifications_and_references",
       "community": 2,
@@ -6170,7 +6520,7 @@
       "label": "17. Concise algorithm",
       "file_type": "document",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L716",
+      "source_location": "L738",
       "_origin": "ast",
       "id": "docs_scientific_method_17_concise_algorithm",
       "community": 2,
@@ -8156,6 +8506,105 @@
       "target": "any"
     },
     {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L191",
+      "weight": 1.0,
+      "source": "validation_distance_check_aligned_models",
+      "target": "any",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L89",
+      "weight": 1.0,
+      "source": "validation_distance_check_atom_key",
+      "target": "any",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L258",
+      "weight": 1.0,
+      "source": "validation_distance_check_build_case",
+      "target": "any",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L167",
+      "weight": 1.0,
+      "source": "validation_distance_check_load_exact_bounds",
+      "target": "any",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L105",
+      "weight": 1.0,
+      "source": "validation_distance_check_load_json",
+      "target": "any",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L97",
+      "weight": 1.0,
+      "source": "validation_distance_check_pair_key",
+      "target": "any",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L112",
+      "weight": 1.0,
+      "source": "validation_distance_check_report_bounds",
+      "target": "any",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L438",
+      "weight": 1.0,
+      "source": "validation_distance_check_run",
+      "target": "any",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L377",
+      "weight": 1.0,
+      "source": "validation_distance_check_write_readme",
+      "target": "any",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -8456,6 +8905,83 @@
       "relation": "references",
       "context": "parameter_type",
       "confidence": "EXTRACTED",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L101",
+      "weight": 1.0,
+      "source": "tests_test_distance_check_test_build_case_writes_union_of_exact_pairs_with_model_distances",
+      "target": "path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L155",
+      "weight": 1.0,
+      "source": "tests_test_distance_check_test_empty_exact_files_still_write_model_columns",
+      "target": "path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L214",
+      "weight": 1.0,
+      "source": "tests_test_distance_check_test_exact_yaml_and_report_must_match",
+      "target": "path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L179",
+      "weight": 1.0,
+      "source": "tests_test_distance_check_test_missing_coordinate_is_blank_not_invalid_atom_evidence",
+      "target": "path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L240",
+      "weight": 1.0,
+      "source": "tests_test_distance_check_test_run_requires_exact_expected_corpus_size",
+      "target": "path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "tests_test_distance_check_write_format",
+      "target": "path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L81",
+      "weight": 1.0,
+      "source": "tests_test_distance_check_write_pdb",
+      "target": "path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
       "source_file": "tests/test_target.py",
       "source_location": "L27",
       "weight": 1.0,
@@ -8583,6 +9109,94 @@
       "confidence_score": 1.0,
       "source": "validation_discrepancy_audit_write_audit_tsv",
       "target": "path"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L258",
+      "weight": 1.0,
+      "source": "validation_distance_check_build_case",
+      "target": "path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L167",
+      "weight": 1.0,
+      "source": "validation_distance_check_load_exact_bounds",
+      "target": "path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L105",
+      "weight": 1.0,
+      "source": "validation_distance_check_load_json",
+      "target": "path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "validation_distance_check_parse_args",
+      "target": "path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L112",
+      "weight": 1.0,
+      "source": "validation_distance_check_report_bounds",
+      "target": "path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L80",
+      "weight": 1.0,
+      "source": "validation_distance_check_single_file",
+      "target": "path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L377",
+      "weight": 1.0,
+      "source": "validation_distance_check_write_readme",
+      "target": "path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L125",
+      "weight": 1.0,
+      "source": "validation_distance_check_yaml_bounds",
+      "target": "path",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -9048,9 +9662,9 @@
       "source_file": "tests/test_cli_documentation.py",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_cli_documentation",
-      "target": "nmr2boltz_cli",
-      "confidence_score": 1.0
+      "target": "nmr2boltz_cli"
     },
     {
       "relation": "imports_from",
@@ -9249,6 +9863,28 @@
       "confidence_score": 1.0,
       "source": "validation_compare_ensemble_parse_args",
       "target": "namespace"
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "validation_distance_check_parse_args",
+      "target": "namespace",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L438",
+      "weight": 1.0,
+      "source": "validation_distance_check_run",
+      "target": "namespace",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -12164,6 +12800,17 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "tests_test_distance_check",
+      "target": "nmr2boltz_output",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "tests/test_intrachain_filter.py",
       "source_location": "L11",
       "weight": 1.0,
@@ -12203,6 +12850,17 @@
       "confidence_score": 1.0,
       "source": "validation_benchmark_corpus",
       "target": "nmr2boltz_output"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "validation_distance_check",
+      "target": "nmr2boltz_output",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -12418,6 +13076,39 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "nmr2boltz_output_yaml_distance",
+      "target": "nmr2boltz_output_outward_decimal"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "tests_test_distance_check_write_format",
+      "target": "nmr2boltz_output_outward_decimal"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "validation/distance_check.py",
+      "source_location": "L251",
+      "weight": 1.0,
+      "source": "validation_distance_check_format_bound",
+      "target": "nmr2boltz_output_outward_decimal"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "validation/distance_check.py",
+      "source_location": "L181",
+      "weight": 1.0,
+      "source": "validation_distance_check_load_exact_bounds",
       "target": "nmr2boltz_output_outward_decimal"
     },
     {
@@ -18255,9 +18946,9 @@
       "source_file": "tests/test_cli_documentation.py",
       "source_location": "L31",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_cli_documentation",
-      "target": "tests_test_cli_documentation_documented_flag_rows",
-      "confidence_score": 1.0
+      "target": "tests_test_cli_documentation_documented_flag_rows"
     },
     {
       "relation": "contains",
@@ -18265,9 +18956,9 @@
       "source_file": "tests/test_cli_documentation.py",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_cli_documentation",
-      "target": "tests_test_cli_documentation_parser_flags",
-      "confidence_score": 1.0
+      "target": "tests_test_cli_documentation_parser_flags"
     },
     {
       "relation": "contains",
@@ -18275,9 +18966,9 @@
       "source_file": "tests/test_cli_documentation.py",
       "source_location": "L57",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_cli_documentation",
-      "target": "tests_test_cli_documentation_test_cli_reference_covers_commands_positionals_and_exit_statuses",
-      "confidence_score": 1.0
+      "target": "tests_test_cli_documentation_test_cli_reference_covers_commands_positionals_and_exit_statuses"
     },
     {
       "relation": "contains",
@@ -18285,9 +18976,9 @@
       "source_file": "tests/test_cli_documentation.py",
       "source_location": "L48",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_cli_documentation",
-      "target": "tests_test_cli_documentation_test_cli_reference_covers_every_parser_flag_and_states_a_default",
-      "confidence_score": 1.0
+      "target": "tests_test_cli_documentation_test_cli_reference_covers_every_parser_flag_and_states_a_default"
     },
     {
       "relation": "calls",
@@ -18296,9 +18987,9 @@
       "source_file": "tests/test_cli_documentation.py",
       "source_location": "L52",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_cli_documentation_test_cli_reference_covers_every_parser_flag_and_states_a_default",
-      "target": "tests_test_cli_documentation_parser_flags",
-      "confidence_score": 1.0
+      "target": "tests_test_cli_documentation_parser_flags"
     },
     {
       "relation": "calls",
@@ -18307,9 +18998,9 @@
       "source_file": "tests/test_cli_documentation.py",
       "source_location": "L50",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_cli_documentation_test_cli_reference_covers_every_parser_flag_and_states_a_default",
-      "target": "tests_test_cli_documentation_documented_flag_rows",
-      "confidence_score": 1.0
+      "target": "tests_test_cli_documentation_documented_flag_rows"
     },
     {
       "relation": "contains",
@@ -19329,6 +20020,327 @@
       "confidence_score": 1.0,
       "source": "tests_test_corpus_benchmark_test_benchmark_artifact_paths_are_portable",
       "target": "validation_benchmark_corpus_portable_path"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "tests_test_distance_check",
+      "target": "tests_test_distance_check_atom",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L101",
+      "weight": 1.0,
+      "source": "tests_test_distance_check",
+      "target": "tests_test_distance_check_test_build_case_writes_union_of_exact_pairs_with_model_distances",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L230",
+      "weight": 1.0,
+      "source": "tests_test_distance_check",
+      "target": "tests_test_distance_check_test_common_pair_mapping_mismatch_fails_closed",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L155",
+      "weight": 1.0,
+      "source": "tests_test_distance_check",
+      "target": "tests_test_distance_check_test_empty_exact_files_still_write_model_columns",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L214",
+      "weight": 1.0,
+      "source": "tests_test_distance_check",
+      "target": "tests_test_distance_check_test_exact_yaml_and_report_must_match",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L179",
+      "weight": 1.0,
+      "source": "tests_test_distance_check",
+      "target": "tests_test_distance_check_test_missing_coordinate_is_blank_not_invalid_atom_evidence",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L240",
+      "weight": 1.0,
+      "source": "tests_test_distance_check",
+      "target": "tests_test_distance_check_test_run_requires_exact_expected_corpus_size",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "tests_test_distance_check",
+      "target": "tests_test_distance_check_write_format",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L81",
+      "weight": 1.0,
+      "source": "tests_test_distance_check",
+      "target": "tests_test_distance_check_write_pdb",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "tests_test_distance_check",
+      "target": "validation_distance_check",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "tests_test_distance_check",
+      "target": "validation_distance_check_build_case",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "tests_test_distance_check",
+      "target": "validation_distance_check_load_exact_bounds",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "tests_test_distance_check",
+      "target": "validation_distance_check_merge_distances",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "tests_test_distance_check",
+      "target": "validation_distance_check_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L106",
+      "weight": 1.0,
+      "source": "tests_test_distance_check_test_build_case_writes_union_of_exact_pairs_with_model_distances",
+      "target": "tests_test_distance_check_atom",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L216",
+      "weight": 1.0,
+      "source": "tests_test_distance_check_test_exact_yaml_and_report_must_match",
+      "target": "tests_test_distance_check_atom",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L192",
+      "weight": 1.0,
+      "source": "tests_test_distance_check_test_missing_coordinate_is_blank_not_invalid_atom_evidence",
+      "target": "tests_test_distance_check_atom",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L109",
+      "weight": 1.0,
+      "source": "tests_test_distance_check_test_build_case_writes_union_of_exact_pairs_with_model_distances",
+      "target": "tests_test_distance_check_write_format",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L160",
+      "weight": 1.0,
+      "source": "tests_test_distance_check_test_empty_exact_files_still_write_model_columns",
+      "target": "tests_test_distance_check_write_format",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L217",
+      "weight": 1.0,
+      "source": "tests_test_distance_check_test_exact_yaml_and_report_must_match",
+      "target": "tests_test_distance_check_write_format",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L193",
+      "weight": 1.0,
+      "source": "tests_test_distance_check_test_missing_coordinate_is_blank_not_invalid_atom_evidence",
+      "target": "tests_test_distance_check_write_format",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L104",
+      "weight": 1.0,
+      "source": "tests_test_distance_check_test_build_case_writes_union_of_exact_pairs_with_model_distances",
+      "target": "tests_test_distance_check_write_pdb",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L158",
+      "weight": 1.0,
+      "source": "tests_test_distance_check_test_empty_exact_files_still_write_model_columns",
+      "target": "tests_test_distance_check_write_pdb",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L182",
+      "weight": 1.0,
+      "source": "tests_test_distance_check_test_missing_coordinate_is_blank_not_invalid_atom_evidence",
+      "target": "tests_test_distance_check_write_pdb",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L112",
+      "weight": 1.0,
+      "source": "tests_test_distance_check_test_build_case_writes_union_of_exact_pairs_with_model_distances",
+      "target": "validation_distance_check_build_case",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L163",
+      "weight": 1.0,
+      "source": "tests_test_distance_check_test_empty_exact_files_still_write_model_columns",
+      "target": "validation_distance_check_build_case",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L196",
+      "weight": 1.0,
+      "source": "tests_test_distance_check_test_missing_coordinate_is_blank_not_invalid_atom_evidence",
+      "target": "validation_distance_check_build_case",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L223",
+      "weight": 1.0,
+      "source": "tests_test_distance_check_test_exact_yaml_and_report_must_match",
+      "target": "validation_distance_check_load_exact_bounds",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L233",
+      "weight": 1.0,
+      "source": "tests_test_distance_check_test_common_pair_mapping_mismatch_fails_closed",
+      "target": "validation_distance_check_merge_distances",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_distance_check.py",
+      "source_location": "L252",
+      "weight": 1.0,
+      "source": "tests_test_distance_check_test_run_requires_exact_expected_corpus_size",
+      "target": "validation_distance_check_run",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -21244,6 +22256,17 @@
       "target": "validation_compare_ensemble_write_csv"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "validation_distance_check",
+      "target": "validation_compare_ensemble",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -21308,6 +22331,28 @@
       "confidence_score": 1.0,
       "source": "validation_compare_ensemble_main",
       "target": "validation_compare_ensemble_load_structure"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "validation_distance_check",
+      "target": "validation_compare_ensemble_load_structure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L271",
+      "weight": 1.0,
+      "source": "validation_distance_check_build_case",
+      "target": "validation_compare_ensemble_load_structure",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -21379,6 +22424,39 @@
       "relation": "references",
       "context": "generic_arg",
       "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L191",
+      "weight": 1.0,
+      "source": "validation_distance_check_aligned_models",
+      "target": "atomkey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L89",
+      "weight": 1.0,
+      "source": "validation_distance_check_atom_key",
+      "target": "atomkey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L202",
+      "weight": 1.0,
+      "source": "validation_distance_check_pair_distances",
+      "target": "atomkey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
       "source_file": "validation/compare_ensemble.py",
       "source_location": "L139",
       "weight": 1.0,
@@ -21429,6 +22507,28 @@
       "confidence_score": 1.0,
       "source": "validation_compare_ensemble_evaluate_source_groups",
       "target": "point"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L191",
+      "weight": 1.0,
+      "source": "validation_distance_check_aligned_models",
+      "target": "point",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L202",
+      "weight": 1.0,
+      "source": "validation_distance_check_pair_distances",
+      "target": "point",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -21496,6 +22596,28 @@
       "target": "validation_compare_ensemble_align_structure_to_sequence_map"
     },
     {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "validation_distance_check",
+      "target": "validation_compare_ensemble_align_structure_to_sequence_map",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L196",
+      "weight": 1.0,
+      "source": "validation_distance_check_aligned_models",
+      "target": "validation_compare_ensemble_align_structure_to_sequence_map",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -21527,6 +22649,28 @@
       "confidence_score": 1.0,
       "source": "validation_compare_ensemble_evaluate_source_groups",
       "target": "validation_compare_ensemble_distance"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "validation_distance_check",
+      "target": "validation_compare_ensemble_distance",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L210",
+      "weight": 1.0,
+      "source": "validation_distance_check_pair_distances",
+      "target": "validation_compare_ensemble_distance",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -22297,6 +23441,526 @@
       "target": "validation_discrepancy_audit_audit_digest"
     },
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L191",
+      "weight": 1.0,
+      "source": "validation_distance_check",
+      "target": "validation_distance_check_aligned_models",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L89",
+      "weight": 1.0,
+      "source": "validation_distance_check",
+      "target": "validation_distance_check_atom_key",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L258",
+      "weight": 1.0,
+      "source": "validation_distance_check",
+      "target": "validation_distance_check_build_case",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L250",
+      "weight": 1.0,
+      "source": "validation_distance_check",
+      "target": "validation_distance_check_format_bound",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L254",
+      "weight": 1.0,
+      "source": "validation_distance_check",
+      "target": "validation_distance_check_format_distance",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L167",
+      "weight": 1.0,
+      "source": "validation_distance_check",
+      "target": "validation_distance_check_load_exact_bounds",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L105",
+      "weight": 1.0,
+      "source": "validation_distance_check",
+      "target": "validation_distance_check_load_json",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L505",
+      "weight": 1.0,
+      "source": "validation_distance_check",
+      "target": "validation_distance_check_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L215",
+      "weight": 1.0,
+      "source": "validation_distance_check",
+      "target": "validation_distance_check_merge_distances",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L202",
+      "weight": 1.0,
+      "source": "validation_distance_check",
+      "target": "validation_distance_check_pair_distances",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L97",
+      "weight": 1.0,
+      "source": "validation_distance_check",
+      "target": "validation_distance_check_pair_key",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L101",
+      "weight": 1.0,
+      "source": "validation_distance_check",
+      "target": "validation_distance_check_pair_text",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "validation_distance_check",
+      "target": "validation_distance_check_parse_args",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L373",
+      "weight": 1.0,
+      "source": "validation_distance_check",
+      "target": "validation_distance_check_percent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L112",
+      "weight": 1.0,
+      "source": "validation_distance_check",
+      "target": "validation_distance_check_report_bounds",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L438",
+      "weight": 1.0,
+      "source": "validation_distance_check",
+      "target": "validation_distance_check_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L80",
+      "weight": 1.0,
+      "source": "validation_distance_check",
+      "target": "validation_distance_check_single_file",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L377",
+      "weight": 1.0,
+      "source": "validation_distance_check",
+      "target": "validation_distance_check_write_readme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L125",
+      "weight": 1.0,
+      "source": "validation_distance_check",
+      "target": "validation_distance_check_yaml_bounds",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L506",
+      "weight": 1.0,
+      "source": "validation_distance_check_main",
+      "target": "validation_distance_check_parse_args",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L270",
+      "weight": 1.0,
+      "source": "validation_distance_check_build_case",
+      "target": "validation_distance_check_single_file",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L98",
+      "weight": 1.0,
+      "source": "validation_distance_check_pair_key",
+      "target": "validation_distance_check_atom_key",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L97",
+      "weight": 1.0,
+      "source": "validation_distance_check_pair_key",
+      "target": "pairkey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L115",
+      "weight": 1.0,
+      "source": "validation_distance_check_report_bounds",
+      "target": "validation_distance_check_pair_key",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L157",
+      "weight": 1.0,
+      "source": "validation_distance_check_yaml_bounds",
+      "target": "validation_distance_check_pair_key",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L167",
+      "weight": 1.0,
+      "source": "validation_distance_check_load_exact_bounds",
+      "target": "pairkey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L215",
+      "weight": 1.0,
+      "source": "validation_distance_check_merge_distances",
+      "target": "pairkey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L202",
+      "weight": 1.0,
+      "source": "validation_distance_check_pair_distances",
+      "target": "pairkey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L101",
+      "weight": 1.0,
+      "source": "validation_distance_check_pair_text",
+      "target": "pairkey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L112",
+      "weight": 1.0,
+      "source": "validation_distance_check_report_bounds",
+      "target": "pairkey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L125",
+      "weight": 1.0,
+      "source": "validation_distance_check_yaml_bounds",
+      "target": "pairkey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L299",
+      "weight": 1.0,
+      "source": "validation_distance_check_build_case",
+      "target": "validation_distance_check_pair_text",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L184",
+      "weight": 1.0,
+      "source": "validation_distance_check_load_exact_bounds",
+      "target": "validation_distance_check_pair_text",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L226",
+      "weight": 1.0,
+      "source": "validation_distance_check_merge_distances",
+      "target": "validation_distance_check_pair_text",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L118",
+      "weight": 1.0,
+      "source": "validation_distance_check_report_bounds",
+      "target": "validation_distance_check_pair_text",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L160",
+      "weight": 1.0,
+      "source": "validation_distance_check_yaml_bounds",
+      "target": "validation_distance_check_pair_text",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L170",
+      "weight": 1.0,
+      "source": "validation_distance_check_load_exact_bounds",
+      "target": "validation_distance_check_load_json",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L171",
+      "weight": 1.0,
+      "source": "validation_distance_check_load_exact_bounds",
+      "target": "validation_distance_check_report_bounds",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L172",
+      "weight": 1.0,
+      "source": "validation_distance_check_load_exact_bounds",
+      "target": "validation_distance_check_yaml_bounds",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L268",
+      "weight": 1.0,
+      "source": "validation_distance_check_build_case",
+      "target": "validation_distance_check_load_exact_bounds",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L279",
+      "weight": 1.0,
+      "source": "validation_distance_check_build_case",
+      "target": "validation_distance_check_aligned_models",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L292",
+      "weight": 1.0,
+      "source": "validation_distance_check_build_case",
+      "target": "validation_distance_check_pair_distances",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L294",
+      "weight": 1.0,
+      "source": "validation_distance_check_build_case",
+      "target": "validation_distance_check_merge_distances",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L300",
+      "weight": 1.0,
+      "source": "validation_distance_check_build_case",
+      "target": "validation_distance_check_format_bound",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L305",
+      "weight": 1.0,
+      "source": "validation_distance_check_build_case",
+      "target": "validation_distance_check_format_distance",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L455",
+      "weight": 1.0,
+      "source": "validation_distance_check_run",
+      "target": "validation_distance_check_build_case",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L416",
+      "weight": 1.0,
+      "source": "validation_distance_check_write_readme",
+      "target": "validation_distance_check_percent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L496",
+      "weight": 1.0,
+      "source": "validation_distance_check_run",
+      "target": "validation_distance_check_write_readme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "validation/distance_check.py",
+      "source_location": "L507",
+      "weight": 1.0,
+      "source": "validation_distance_check_main",
+      "target": "validation_distance_check_run",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -22768,6 +24432,16 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
+      "source_location": "L196",
+      "weight": 1.0,
+      "source": "readme",
+      "target": "distance_check_readme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
       "source_location": "L126",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -22978,6 +24652,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "VALIDATION.md",
+      "source_location": "L87",
+      "weight": 1.0,
+      "source": "validation_validation_status",
+      "target": "validation_exact_contact_distance_matrices",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "VALIDATION.md",
       "source_location": "L22",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -23003,6 +24687,26 @@
       "confidence_score": 1.0,
       "source": "benchmark_readme",
       "target": "benchmark_readme_paired_nef_nmr_star_benchmark"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "benchmark/README.md",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "benchmark_readme",
+      "target": "distance_check_readme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "benchmark/distance_check/README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "distance_check_readme",
+      "target": "distance_check_readme_exact_contact_distance_check",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -23240,9 +24944,9 @@
       "source_file": "docs/CLI_REFERENCE.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_cli_reference",
-      "target": "docs_cli_reference_nmr2boltz_command_line_reference",
-      "confidence_score": 1.0
+      "target": "docs_cli_reference_nmr2boltz_command_line_reference"
     },
     {
       "relation": "contains",
@@ -23250,9 +24954,9 @@
       "source_file": "docs/CLI_REFERENCE.md",
       "source_location": "L76",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_cli_reference_nmr2boltz_command_line_reference",
-      "target": "docs_cli_reference_benchmark",
-      "confidence_score": 1.0
+      "target": "docs_cli_reference_benchmark"
     },
     {
       "relation": "contains",
@@ -23260,9 +24964,9 @@
       "source_file": "docs/CLI_REFERENCE.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_cli_reference_nmr2boltz_command_line_reference",
-      "target": "docs_cli_reference_command_structure",
-      "confidence_score": 1.0
+      "target": "docs_cli_reference_command_structure"
     },
     {
       "relation": "contains",
@@ -23270,9 +24974,9 @@
       "source_file": "docs/CLI_REFERENCE.md",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_cli_reference_nmr2boltz_command_line_reference",
-      "target": "docs_cli_reference_convert",
-      "confidence_score": 1.0
+      "target": "docs_cli_reference_convert"
     },
     {
       "relation": "contains",
@@ -23280,9 +24984,9 @@
       "source_file": "docs/CLI_REFERENCE.md",
       "source_location": "L90",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_cli_reference_nmr2boltz_command_line_reference",
-      "target": "docs_cli_reference_exit_statuses",
-      "confidence_score": 1.0
+      "target": "docs_cli_reference_exit_statuses"
     },
     {
       "relation": "contains",
@@ -23290,9 +24994,9 @@
       "source_file": "docs/CLI_REFERENCE.md",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_cli_reference_nmr2boltz_command_line_reference",
-      "target": "docs_cli_reference_global_flags",
-      "confidence_score": 1.0
+      "target": "docs_cli_reference_global_flags"
     },
     {
       "relation": "contains",
@@ -23300,9 +25004,9 @@
       "source_file": "docs/CLI_REFERENCE.md",
       "source_location": "L63",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_cli_reference_convert",
-      "target": "docs_cli_reference_convert_effective_default_notes",
-      "confidence_score": 1.0
+      "target": "docs_cli_reference_convert_effective_default_notes"
     },
     {
       "relation": "contains",
@@ -24192,17 +25896,27 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "docs_scientific_method_11_validation_protocol",
-      "target": "docs_scientific_method_11_5_executed_validation_record"
+      "target": "docs_scientific_method_11_5_paired_format_discrepancy_audit_and_ci_gate"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/SCIENTIFIC_METHOD.md",
-      "source_location": "L476",
+      "source_location": "L572",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "docs_scientific_method_11_validation_protocol",
-      "target": "docs_scientific_method_11_5_paired_format_discrepancy_audit_and_ci_gate"
+      "target": "docs_scientific_method_11_6_exact_contact_pdb_model_distance_matrix",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/SCIENTIFIC_METHOD.md",
+      "source_location": "L594",
+      "weight": 1.0,
+      "source": "docs_scientific_method_11_validation_protocol",
+      "target": "docs_scientific_method_11_7_executed_validation_record",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -24366,5 +26080,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "6adfd4599d8c49af9e69a6a8f8879b271e71a259"
+  "built_at_commit": "690dc686c0d1aaf84cbeeae324d7566e342cc730"
 }

@@ -179,6 +179,22 @@ python validation/benchmark_corpus.py benchmark/input \
   --write-reviewed-baseline
 ```
 
+For a direct row-wise comparison of executable exact-contact bounds with every
+deposited PDB conformer, generate the 12 per-entry CSV files:
+
+```bash
+python validation/distance_check.py benchmark/input \
+  --conversion-output benchmark/output \
+  --output-directory benchmark/distance_check
+```
+
+The generator independently applies each format's sequence map, cross-checks
+the executable YAML bounds against conversion provenance, and fails on any
+NEF/STAR coordinate-mapping disagreement for a common pair. Ambiguous union
+alternatives are not flattened into independent rows. Current results and
+artifact digests are in
+[`benchmark/distance_check/README.md`](benchmark/distance_check/README.md).
+
 ## Output files
 
 | File | Purpose |
@@ -294,6 +310,7 @@ inter-chain-only output bundle.
   list with descriptions and effective default values.
 - `docs/SCIENTIFIC_METHOD.md`: derivation, format interpretation, assumptions, and validation plan for NMR experts.
 - `benchmark/output/BENCHMARK_REPORT.md`: current 12-structure paired-format benchmark and coordinate audit.
+- `benchmark/distance_check/README.md`: exact-contact NEF/STAR bounds beside every deposited PDB-model distance.
 - `docs/BOLTZUI_UNION_EXTENSION.md`: proposed representation and implementation path for ambiguity-aware atom contacts.
 - `docs/EXPERT_REVIEW_CHECKLIST.md`: decisions that should be reviewed before production use.
 
