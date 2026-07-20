@@ -174,7 +174,10 @@ normalized before projection only when component topology proves a complete
 proton set and the rows form its complete Cartesian product. This restores the
 same `sum-r6` multiplicity used by the equivalent NEF atom set. Incomplete,
 inconsistent, non-OR, or topology-unverified candidates fail closed; canonical
-branches with different heavy parents remain union alternatives.
+branches with different heavy parents remain union alternatives. Distinct
+canonical spellings that topology resolves to the same physical proton remain
+duplicate source evidence and are deduplicated only after projection; they are
+not counted as additional physical protons.
 
 The reviewed scientific interpretation of the current corpus is documented in
 [`docs/BENCHMARK_DISCREPANCY_FINDINGS.md`](docs/BENCHMARK_DISCREPANCY_FINDINGS.md).

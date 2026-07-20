@@ -5,7 +5,7 @@ Date: 2026-07-20
 
 ## Regression and stress validation
 
-- 126 Pytest tests passed.
+- 127 Pytest tests passed.
 - 100,000 randomized sum-r6 implication cases passed.
 - 100,000 constructive triangle-inequality cases passed.
 - 25,000 outward-rounding cases passed.
@@ -20,6 +20,9 @@ Date: 2026-07-20
 - Sequence/residue conflicts are rejected explicitly before atom-topology resolution.
 - PDB coordinates are aligned to one-based Boltz sequence indices before distance evaluation.
 - NMR-STAR sequence-alias provenance is sorted deterministically rather than depending on Python set iteration.
+- Distinct NMR-STAR canonical atom spellings that topology proves are aliases
+  of the same physical proton are exercised on both endpoints; the rows retain
+  their source identities and deduplicate only after projection.
 - Sequence-map ordering remains deterministic across Python hash seeds.
 - Nucleotide x/y expressions consume only stereochemical numeric suffixes;
   `H4y` no longer matches the literal prime in `H4'`.

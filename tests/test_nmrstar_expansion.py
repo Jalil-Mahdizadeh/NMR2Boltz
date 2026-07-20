@@ -9,7 +9,12 @@ import yaml
 from nmr2boltz.model import Endpoint, RawAlternative, RestraintGroup, SequenceRecord
 from nmr2boltz.output import write_outputs
 from nmr2boltz.project import ProjectionSettings, project_document
-from nmr2boltz.star import ParsedStarDocument, SequenceResolver, parse_star_document
+from nmr2boltz.star import (
+    ParsedStarDocument,
+    SequenceResolver,
+    normalize_nmrstar_canonical_expansions,
+    parse_star_document,
+)
 from nmr2boltz.topology import TopologyLibrary
 
 
@@ -222,6 +227,35 @@ def test_unavailable_component_topology_rejects_expansion_in_full():
     )
     assert "topology-verified" in rejection.details
     assert rejection.row_ids == ["1", "2"]
+
+
+def test_alias_equivalent_canonical_spellings_are_not_reconstructed_as_atom_set():
+    group = _star_group(
+        [
+            ("HN", "HN", "HN", "HN"),
+            ("HN", "H", "HN", "H"),
+        ],
+        component1="ALA",
+        component2="ALA",
+    )
+
+    issues = normalize_nmrstar_canonical_expansions(group, TopologyLibrary())
+
+    assert issues == []
+    assert [alternative.row_ids for alternative in group.alternatives] == [["1"], ["2"]]
+    assert [
+        (
+            alternative.endpoint1.canonical_atom_hint,
+            alternative.endpoint2.canonical_atom_hint,
+        )
+        for alternative in group.alternatives
+    ] == [("HN", "HN"), ("H", "H")]
+
+    report = _report(group, "ALA", "ALA")
+    assert len(report.emitted_constraints) == 1
+    assert not report.ambiguous_groups
+    assert not report.rejections
+    assert report.emitted_constraints[0].provenance[0]["source_rows"] == ["1", "2"]
 
 
 def test_leu_hd1_hd2_parent_ambiguity_remains_union_with_n3_per_branch():

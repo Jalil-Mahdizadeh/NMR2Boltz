@@ -109,7 +109,10 @@ observed rows must form the complete one- or two-sided Cartesian product. The
 reconstructed atom sets determine `N` once before heavy-parent projection.
 Branches on different heavy parents remain disjunctive alternatives. Missing,
 incomplete, inconsistent, or topology-unverified expansions are rejected in
-full rather than inferred from lexical prefixes.
+full rather than inferred from lexical prefixes. Canonical spellings that
+topology proves are aliases of the same proton remain duplicate source
+evidence; they are deduplicated only after projection and never inflate the
+physical pair count.
 
 The NMR-STAR dictionary defines `Combination_ID` and `Member_logic_code` in addition to the constraint ID. The converter flattens only explicit `OR` member logic. Any non-null combination identifier, `AND` member logic, or unknown non-OR code marks the group as complex and prevents emission. This conservative rule avoids converting a structured Boolean expression into an accidental conjunction of Boltz contacts.
 
@@ -617,9 +620,9 @@ CSV digests and per-entry counts are stored in
 
 ### 11.7 Executed validation record
 
-The following checks were executed on 2026-07-19 against the current source tree:
+The following checks were executed on 2026-07-20 against the current source tree:
 
-- all 126 Pytest regression, format, topology, logic, target-validation,
+- all 127 Pytest regression, format, topology, logic, target-validation,
   ensemble-alignment, constraint-serialization, and robustness tests passed;
 - Python byte compilation passed for source, tests, and the stress harness;
 - 100,000 randomized sum-r6 implication cases and 100,000 constructive triangle-inequality cases passed in the final Docker image;

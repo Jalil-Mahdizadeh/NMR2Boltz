@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+- Fixed a reachable NMR-STAR canonical-normalization crash caused by an
+  undefined collection name when distinct canonical spellings on both
+  endpoints resolve through topology aliases to the same physical protons.
+  Alias-equivalent rows now remain duplicate OR evidence, retain deterministic
+  source provenance, and pass through normal projected-pair deduplication
+  without being mistaken for a multi-proton atom-set expansion.
 - Fixed `--exclude-intraresidue` at the projected-group boundary. Exact
   contacts retain their established rejection behavior; all-intraresidue and
   mixed intraresidue/inter-residue OR groups are now quarantined in full with

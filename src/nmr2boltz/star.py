@@ -495,7 +495,10 @@ def normalize_nmrstar_canonical_expansions(
         physical_names1 = {row[1] for row in resolved_rows}
         physical_names2 = {row[3] for row in resolved_rows}
         if len(physical_names1) == 1 and len(physical_names2) == 1:
-            normalized.extend(bucket)
+            # Distinct canonical spellings can be topology aliases for the
+            # same physical proton (for example HN and H). Such rows are
+            # duplicate OR evidence, not a multi-proton atom-set expansion.
+            normalized.extend(family)
             continue
 
         branches: dict[

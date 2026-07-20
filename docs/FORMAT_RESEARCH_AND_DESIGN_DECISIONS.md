@@ -47,6 +47,12 @@ the complete Cartesian product. It does not infer membership from `HB`/`HG`/`HD`
 prefixes. Incomplete or unverifiable candidates fail closed, and canonical atoms
 with different heavy parents remain separate union branches.
 
+Canonical names may also differ only by a verified naming alias, such as
+protein `HN` and `H`. When every differing spelling on both endpoints resolves
+to the same physical proton, the rows are preserved as duplicate OR evidence
+and deduplicated after projection. They are not reconstructed as a larger
+physical atom set and do not increase the `sum-r6` multiplicity.
+
 ### 3.2 Aromatic and symmetric ambiguity
 
 Aromatic expressions such as `HD%` can map to different heavy parents. The code does not collapse them merely because they are chemically similar or symmetry-related. A Boltz structure has explicit atom names, so `CD1` and `CD2` remain distinct alternatives unless the exact component/assignment model proves otherwise.
