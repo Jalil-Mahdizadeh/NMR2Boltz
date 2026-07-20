@@ -20,7 +20,10 @@ from .model import (
     EmittedConstraint,
     ProjectedAlternative,
 )
-from .project import require_valid_interchain_output
+from .project import (
+    require_valid_interchain_output,
+    require_valid_intraresidue_output,
+)
 from .topology import require_valid_output_atom_topology
 
 
@@ -152,6 +155,7 @@ def write_outputs(
     _require_valid_output_bounds(report)
     require_valid_output_atom_topology(report)
     require_valid_interchain_output(report)
+    require_valid_intraresidue_output(report)
     output = Path(output_dir)
     output.mkdir(parents=True, exist_ok=True)
     for obsolete_name in ("boltz_constraints.yaml", "proposed_atom_contact_unions.yaml"):
@@ -601,6 +605,18 @@ def _summary_text(report: ConversionReport) -> str:
         (
             "Mixed intrachain/inter-chain OR groups filtered in full: "
             f"{stats.get('mixed_chain_scope_groups_filtered', 0)}"
+        ),
+        (
+            "Intraresidue restraint groups filtered: "
+            f"{stats.get('intraresidue_groups_filtered', 0)}"
+        ),
+        (
+            "Projected alternatives removed by intraresidue filtering: "
+            f"{stats.get('projected_alternatives_removed_by_intraresidue_filter', 0)}"
+        ),
+        (
+            "Mixed intraresidue/inter-residue OR groups filtered in full: "
+            f"{stats.get('mixed_intraresidue_interresidue_groups_filtered', 0)}"
         ),
         f"Rejection records: {stats.get('rejection_records', 0)}",
         "",

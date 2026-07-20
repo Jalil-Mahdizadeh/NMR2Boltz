@@ -54,7 +54,7 @@ supported by the parser may also be used.
 | `--boltz-min-distance ANGSTROM` | Set the minimum executable BoltzUI atom-contact distance. Smaller exact and union-alternative bounds are raised, which weakens them. | `2.0` Å |
 | `--boltz-max-distance ANGSTROM` | Set the maximum executable BoltzUI atom-contact distance. Larger exact bounds are rejected; a union with any larger alternative is quarantined in full. Bounds are never clipped. | `20.0` Å |
 | `--min-sequence-separation N` | Filter same-chain projected contacts whose residue-index separation is less than `N`. | `0` (disabled) |
-| `--exclude-intraresidue` | Omit projected contacts whose mapped endpoints are in the same residue. | `false` |
+| `--exclude-intraresidue` | Omit contacts within one mapped residue; all-intraresidue and mixed intra/inter-residue OR groups are omitted in full. | `false` |
 | `--exclude-intrachain` | Emit only contacts between different mapped Boltz chain IDs; mixed intra/inter OR groups are omitted in full. | `false` |
 | `--hypotheses N` | Generate up to `N` deterministic assignment-hypothesis YAML files from ambiguous OR groups. | `0` (none) |
 | `--seed SEED` | Set the random seed used to choose assignment hypotheses. | `0` |

@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+- Fixed `--exclude-intraresidue` at the projected-group boundary. Exact
+  contacts retain their established rejection behavior; all-intraresidue and
+  mixed intraresidue/inter-residue OR groups are now quarantined in full with
+  deterministic `intraresidue_filtered` provenance and counters. A final
+  writer invariant prevents local contacts from re-entering either output.
+- Audited `--exclude-intrachain` for the analogous defect. It already applies
+  before the exact/union split, quarantines mixed groups in full, and validates
+  final exact and union output independently; no code correction was needed.
 - Applied the Boltz executable distance interval generically to ambiguous
   unions. Sub-minimum alternatives are raised with raw-bound provenance; if
   any alternative exceeds the maximum, the complete OR group is quarantined
@@ -69,7 +77,7 @@
   rejection reason before topology resolution.
 - NEF/NMR-STAR files with sequence data but no distance loop now produce an
   auditable empty conversion rather than failing format detection.
-- Expanded the regression suite from 39 to 119 tests, including positive and
+- Expanded the regression suite from 39 to 126 tests, including positive and
   adversarial checks for every discrepancy predicate and fail-closed gate.
 - Added fail-fast `--target-yaml` validation for chain IDs, residue indices,
   canonical residue identities, declared modifications, mapping collisions, and

@@ -157,7 +157,10 @@ def build_parser() -> argparse.ArgumentParser:
     convert.add_argument(
         "--exclude-intraresidue",
         action="store_true",
-        help="Do not emit projected pairs within the same residue.",
+        help=(
+            "Do not emit projected pairs within the same mapped residue. "
+            "All-local and mixed local/nonlocal OR groups are excluded in full."
+        ),
     )
     convert.add_argument(
         "--exclude-intrachain",

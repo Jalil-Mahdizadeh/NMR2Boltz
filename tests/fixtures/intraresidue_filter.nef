@@ -1,0 +1,44 @@
+data_intraresidue_filter_nef
+
+save_system
+_nef_molecular_system.sf_category nef_molecular_system
+_nef_molecular_system.sf_framecode system
+loop_
+_nef_sequence.index
+_nef_sequence.chain_code
+_nef_sequence.sequence_code
+_nef_sequence.residue_name
+_nef_sequence.linking
+_nef_sequence.residue_variant
+1 A 1 ALA start .
+2 A 2 LEU end .
+stop_
+save_
+
+save_restraints
+_nef_distance_restraint_list.sf_category nef_distance_restraint_list
+_nef_distance_restraint_list.sf_framecode restraints
+_nef_distance_restraint_list.restraint_origin noe
+loop_
+_nef_distance_restraint.index
+_nef_distance_restraint.restraint_id
+_nef_distance_restraint.restraint_combination_id
+_nef_distance_restraint.chain_code_1
+_nef_distance_restraint.sequence_code_1
+_nef_distance_restraint.residue_name_1
+_nef_distance_restraint.atom_name_1
+_nef_distance_restraint.chain_code_2
+_nef_distance_restraint.sequence_code_2
+_nef_distance_restraint.residue_name_2
+_nef_distance_restraint.atom_name_2
+_nef_distance_restraint.upper_limit
+1 1 . A 1 ALA H A 1 ALA HB1 4.0
+2 2 . A 1 ALA H A 1 ALA HB1 5.0
+3 2 . A 1 ALA HA A 1 ALA HB1 5.0
+4 3 . A 1 ALA H A 1 ALA HB1 5.0
+5 3 . A 1 ALA H A 2 LEU HA 5.0
+6 4 . A 1 ALA H A 2 LEU HA 5.0
+7 4 . A 1 ALA HB1 A 2 LEU HA 5.0
+8 5 . A 1 ALA HA A 2 LEU HA 4.0
+stop_
+save_

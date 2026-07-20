@@ -131,6 +131,9 @@ def project_document(
     intrachain_groups_filtered = 0
     projected_alternatives_removed_by_intrachain_filter = 0
     mixed_chain_scope_groups_filtered = 0
+    intraresidue_groups_filtered = 0
+    projected_alternatives_removed_by_intraresidue_filter = 0
+    mixed_intraresidue_interresidue_groups_filtered = 0
     union_alternatives_raised_to_boltz_minimum = 0
     union_groups_quarantined_above_boltz_maximum = 0
 
@@ -226,21 +229,38 @@ def project_document(
                     )
                 )
                 continue
-        if len(merged) == 1:
-            candidate = merged[0]
-            if not settings.include_intraresidue and (
-                candidate.atom1.chain == candidate.atom2.chain
-                and candidate.atom1.residue_index == candidate.atom2.residue_index
-            ):
+        if not settings.include_intraresidue:
+            intraresidue = [
+                alternative
+                for alternative in merged
+                if (
+                    alternative.atom1.chain == alternative.atom2.chain
+                    and alternative.atom1.residue_index
+                    == alternative.atom2.residue_index
+                )
+            ]
+            if intraresidue:
+                intraresidue_groups_filtered += 1
+                projected_alternatives_removed_by_intraresidue_filter += len(
+                    merged
+                )
+                residue_scope = (
+                    "intraresidue"
+                    if len(intraresidue) == len(merged)
+                    else "mixed_intraresidue_interresidue"
+                )
+                if residue_scope == "mixed_intraresidue_interresidue":
+                    mixed_intraresidue_interresidue_groups_filtered += 1
                 rejections.append(
-                    Rejection(
-                        group_id=group.group_id,
-                        reason="intraresidue_filtered",
-                        details="The projected restraint is intraresidue and was removed by policy.",
-                        row_ids=candidate.source_rows,
+                    _intraresidue_filter_rejection(
+                        group,
+                        merged,
+                        residue_scope=residue_scope,
                     )
                 )
                 continue
+        if len(merged) == 1:
+            candidate = merged[0]
             if (
                 settings.min_sequence_separation > 0
                 and candidate.atom1.chain == candidate.atom2.chain
@@ -306,6 +326,13 @@ def project_document(
             projected_alternatives_removed_by_intrachain_filter
         ),
         "mixed_chain_scope_groups_filtered": mixed_chain_scope_groups_filtered,
+        "intraresidue_groups_filtered": intraresidue_groups_filtered,
+        "projected_alternatives_removed_by_intraresidue_filter": (
+            projected_alternatives_removed_by_intraresidue_filter
+        ),
+        "mixed_intraresidue_interresidue_groups_filtered": (
+            mixed_intraresidue_interresidue_groups_filtered
+        ),
         "union_alternatives_raised_to_boltz_minimum": (
             union_alternatives_raised_to_boltz_minimum
         ),
@@ -331,6 +358,7 @@ def project_document(
     )
     require_valid_emitted_atom_topology(report)
     require_valid_interchain_output(report)
+    require_valid_intraresidue_output(report)
     return report
 
 
@@ -387,6 +415,70 @@ def _intrachain_filter_rejection(
     )
 
 
+def _intraresidue_filter_rejection(
+    group: RestraintGroup,
+    alternatives: list[ProjectedAlternative],
+    *,
+    residue_scope: str,
+) -> Rejection:
+    projected = [
+        {
+            "atom1": {
+                "chain": alternative.atom1.chain,
+                "residue_index": alternative.atom1.residue_index,
+                "atom_name": alternative.atom1.atom_name,
+            },
+            "atom2": {
+                "chain": alternative.atom2.chain,
+                "residue_index": alternative.atom2.residue_index,
+                "atom_name": alternative.atom2.atom_name,
+            },
+            "scope": (
+                "intraresidue"
+                if (
+                    alternative.atom1.chain == alternative.atom2.chain
+                    and alternative.atom1.residue_index
+                    == alternative.atom2.residue_index
+                )
+                else "interresidue"
+            ),
+            "source_rows": list(alternative.source_rows),
+        }
+        for alternative in alternatives
+    ]
+    if residue_scope == "mixed_intraresidue_interresidue":
+        details = (
+            "The complete restraint group was removed by the "
+            "intraresidue-exclusion policy because its OR alternatives mix "
+            "intraresidue and inter-residue contacts. Keeping only the "
+            "inter-residue alternatives would narrow and strengthen the "
+            "source disjunction."
+        )
+    elif len(alternatives) == 1:
+        # Preserve the established exact-contact audit wording.
+        details = (
+            "The projected restraint is intraresidue and was removed by policy."
+        )
+    else:
+        details = (
+            "The complete projected restraint group was removed by the "
+            "intraresidue-exclusion policy because every alternative is "
+            "intraresidue."
+        )
+    return Rejection(
+        group_id=group.group_id,
+        reason="intraresidue_filtered",
+        details=details,
+        row_ids=_row_ids(group),
+        provenance={
+            "filter": "exclude_intraresidue",
+            "residue_identity": "mapped_boltz_chain_and_residue_index",
+            "residue_scope": residue_scope,
+            "projected_alternatives": projected,
+        },
+    )
+
+
 def require_valid_interchain_output(report: ConversionReport) -> None:
     """Fail closed if an inter-chain-only report contains a same-chain endpoint pair."""
     if report.settings.get("include_intrachain", True):
@@ -407,6 +499,40 @@ def require_valid_interchain_output(report: ConversionReport) -> None:
     if violations:
         raise ValueError(
             "Inter-chain-only output validation failed: "
+            + "; ".join(sorted(violations))
+        )
+
+
+def require_valid_intraresidue_output(report: ConversionReport) -> None:
+    """Fail closed if an intraresidue-excluded report contains a local pair."""
+    if report.settings.get("include_intraresidue", True):
+        return
+    violations: list[str] = []
+    for constraint in report.emitted_constraints:
+        if (
+            constraint.atom1.chain == constraint.atom2.chain
+            and constraint.atom1.residue_index
+            == constraint.atom2.residue_index
+        ):
+            violations.append(
+                f"exact {constraint.atom1.display()} -- "
+                f"{constraint.atom2.display()}"
+            )
+    for group in report.ambiguous_groups:
+        for alternative in group.alternatives:
+            if (
+                alternative.atom1.chain == alternative.atom2.chain
+                and alternative.atom1.residue_index
+                == alternative.atom2.residue_index
+            ):
+                violations.append(
+                    f"union {group.group_id} "
+                    f"{alternative.atom1.display()} -- "
+                    f"{alternative.atom2.display()}"
+                )
+    if violations:
+        raise ValueError(
+            "Intraresidue-excluded output validation failed: "
             + "; ".join(sorted(violations))
         )
 

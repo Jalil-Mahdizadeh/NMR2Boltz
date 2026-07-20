@@ -22,6 +22,9 @@ Use this checklist before treating converted contacts as production restraints.
 - [ ] For `--exclude-intrachain`, verify that mapped Boltz chain IDs represent
   the intended protein/DNA/RNA chains; source author-chain labels are not the
   filtering boundary.
+- [ ] For `--exclude-intraresidue`, verify both mapped Boltz chain IDs and
+  residue indices; all-local and mixed local/nonlocal OR groups must be absent
+  from executable output and preserved in the rejection audit.
 
 ## Atom semantics
 

@@ -482,7 +482,26 @@ Recommended use:
 
 The number of assignment combinations grows exponentially, so hypotheses are sampled deterministically from a user seed.
 
-## 10.4 Inter-chain-only selection
+## 10.4 Intraresidue exclusion
+
+`--exclude-intraresidue` evaluates residue identity after source-to-Boltz
+mapping and heavy-atom projection. An exact contact is retained only when its
+endpoints do not share both mapped chain ID and residue index.
+
+The same rule is applied to a complete ambiguous group before the exact/union
+split. If every branch is intraresidue, the complete group is omitted. If
+intraresidue and inter-residue branches coexist, the complete group is also
+omitted: retaining only the inter-residue branches would replace the source OR
+with a smaller, stronger disjunction. The `intraresidue_filtered` audit record
+preserves the full source row set, every projected pair, per-branch scope, and
+whether the group was all-local or mixed.
+
+The filter does not alter bounds, atom-set multiplicity, topology decisions,
+or alternative ordering. An independent writer invariant rejects any
+intraresidue exact or union contact remaining in a report whose policy excludes
+such contacts.
+
+## 10.5 Inter-chain-only selection
 
 For protein, DNA, and RNA complexes, `--exclude-intrachain` selects restraints
 whose projected endpoints belong to different mapped Boltz chain IDs. Chain
@@ -600,7 +619,7 @@ CSV digests and per-entry counts are stored in
 
 The following checks were executed on 2026-07-19 against the current source tree:
 
-- all 119 Pytest regression, format, topology, logic, target-validation,
+- all 126 Pytest regression, format, topology, logic, target-validation,
   ensemble-alignment, constraint-serialization, and robustness tests passed;
 - Python byte compilation passed for source, tests, and the stress harness;
 - 100,000 randomized sum-r6 implication cases and 100,000 constructive triangle-inequality cases passed in the final Docker image;

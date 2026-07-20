@@ -46,6 +46,21 @@ would narrow and strengthen the source OR restraint. Every omission is recorded
 as `intrachain_filtered` in the audit outputs. With `--strict`, these audited
 filter records produce the documented status 3.
 
+To omit contacts within one mapped residue while retaining inter-residue
+contacts:
+
+```bash
+nmr2boltz convert experiment.nef --exclude-intraresidue -o nonlocal
+```
+
+This policy applies to both exact and union output after residue mapping and
+heavy-atom projection. An all-intraresidue OR group is omitted in full. A group
+mixing intraresidue and inter-residue alternatives is also omitted in full,
+because deleting only its intraresidue branches would narrow and strengthen
+the source disjunction. Audit records use `intraresidue_filtered`, preserve
+every source row and projected alternative, and distinguish all-local from
+mixed residue scope.
+
 For data lacking an explicit upper limit, the safe default is rejection. A heuristic may be requested explicitly:
 
 ```bash
@@ -289,6 +304,11 @@ If any alternative or atom-set branch in an OR group cannot be projected safely,
 topology validation, using the mapped Boltz chain IDs. A final writer invariant
 prevents any same-chain exact contact or union alternative from entering an
 inter-chain-only output bundle.
+
+`--exclude-intraresidue` likewise applies before the exact/union split using
+mapped Boltz chain and residue-index identity. Its final writer invariant
+prevents any intraresidue exact contact or union alternative from entering the
+filtered output bundle.
 
 ## Safe workflow for structure generation
 

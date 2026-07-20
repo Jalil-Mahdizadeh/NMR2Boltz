@@ -1,11 +1,11 @@
 # Validation status
 
 Status: PASS WITH EXACT REVIEWED CORPUS LIMITATIONS
-Date: 2026-07-19
+Date: 2026-07-20
 
 ## Regression and stress validation
 
-- 119 Pytest tests passed.
+- 126 Pytest tests passed.
 - 100,000 randomized sum-r6 implication cases passed.
 - 100,000 constructive triangle-inequality cases passed.
 - 25,000 outward-rounding cases passed.
@@ -40,6 +40,11 @@ Date: 2026-07-19
   protein, DNA, and RNA chains. The tests cover exact contacts, all-inter-chain
   unions, mixed-scope OR quarantine, mapped-chain identity, empty constraint
   files, strict status, benchmark manifests, and the final writer invariant.
+- `--exclude-intraresidue` is enforced before the exact/union split. Regression
+  tests cover exact contacts, all-intraresidue unions, mixed
+  intraresidue/inter-residue unions, unaffected inter-residue unions, CLI
+  output, deterministic provenance and counters, and the final writer
+  invariant.
 - The version-controlled CLI reference is checked against the live argparse
   tree so every global, `convert`, and `benchmark` flag has a documented row
   and default value.
