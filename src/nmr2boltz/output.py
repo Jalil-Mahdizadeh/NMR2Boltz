@@ -6,6 +6,9 @@ import itertools
 import json
 import math
 import random
+import shutil
+import tempfile
+import uuid
 from dataclasses import asdict
 from pathlib import Path
 from typing import Any, Iterable
@@ -76,6 +79,10 @@ def _yaml_distance(value: float) -> SixDecimalFloat:
 
 class OutputBoundValidationError(ValueError):
     """Raised before executable YAML can contain an incompatible distance."""
+
+
+class OutputBundleError(OSError):
+    """Raised when a staged output bundle cannot be committed or restored."""
 
 
 def _require_valid_output_bounds(report: ConversionReport) -> None:
@@ -156,6 +163,78 @@ def write_outputs(
     require_valid_output_atom_topology(report)
     require_valid_interchain_output(report)
     require_valid_intraresidue_output(report)
+    output = Path(output_dir)
+    if output.is_symlink():
+        raise OutputBundleError(
+            f"Refusing to replace symlinked output directory {output}."
+        )
+    if output.exists() and not output.is_dir():
+        raise OutputBundleError(
+            f"Output destination exists but is not a directory: {output}."
+        )
+    output.parent.mkdir(parents=True, exist_ok=True)
+    staging = Path(
+        tempfile.mkdtemp(
+            prefix=f".{output.name or 'nmr2boltz'}.staging-",
+            dir=output.parent,
+        )
+    )
+    if output.exists():
+        shutil.copymode(output, staging)
+    else:
+        # tempfile uses 0700, whereas the previous direct mkdir path used the
+        # normal shared/readable directory mode. Avoid changing container-host
+        # accessibility merely because the bundle is staged.
+        staging.chmod(0o755)
+    try:
+        if output.exists():
+            shutil.copytree(output, staging, dirs_exist_ok=True)
+        staged_paths = _write_output_bundle(
+            report,
+            staging,
+            hypothesis_count=hypothesis_count,
+            random_seed=random_seed,
+        )
+        relative_paths = [path.relative_to(staging) for path in staged_paths]
+        _commit_output_bundle(staging, output)
+    except BaseException:
+        shutil.rmtree(staging, ignore_errors=True)
+        raise
+    return [output / relative_path for relative_path in relative_paths]
+
+
+def _commit_output_bundle(staging: Path, output: Path) -> None:
+    """Swap a complete staged bundle into place, restoring the prior bundle on error."""
+    backup: Path | None = None
+    if output.exists():
+        backup = output.parent / f".{output.name}.backup-{uuid.uuid4().hex}"
+        output.replace(backup)
+    try:
+        staging.replace(output)
+    except BaseException as exc:
+        if backup is not None and backup.exists():
+            try:
+                backup.replace(output)
+            except BaseException as restore_exc:
+                raise OutputBundleError(
+                    f"Unable to commit staged output {staging} and unable to "
+                    f"restore prior output from {backup}."
+                ) from restore_exc
+        raise OutputBundleError(
+            f"Unable to commit staged output bundle {staging} to {output}: {exc}"
+        ) from exc
+    if backup is not None:
+        shutil.rmtree(backup)
+
+
+def _write_output_bundle(
+    report: ConversionReport,
+    output_dir: str | Path,
+    *,
+    hypothesis_count: int = 0,
+    random_seed: int = 0,
+) -> list[Path]:
+    """Write every artifact into an isolated staging directory."""
     output = Path(output_dir)
     output.mkdir(parents=True, exist_ok=True)
     for obsolete_name in ("boltz_constraints.yaml", "proposed_atom_contact_unions.yaml"):

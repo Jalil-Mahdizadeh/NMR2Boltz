@@ -12,6 +12,7 @@ from nmr2boltz.topology import (
     AtomTopologyValidationError,
     ComponentTopology,
     TopologyLibrary,
+    TopologyResolutionError,
     emitted_atom_topology_violations,
 )
 
@@ -170,6 +171,153 @@ def test_unknown_component_topology_fails_closed():
         if item.reason == "atom_not_present_in_mapped_residue"
     )
     assert rejection.provenance["invalid_endpoints"][0]["reason"] == "component_topology_unavailable"
+
+
+def test_distinct_same_component_source_residues_cannot_share_boltz_position():
+    resolver = SequenceResolver()
+    for source_sequence, boltz_index, residue in (
+        ("1", 1, "ALA"),
+        ("2", 1, "ALA"),
+        ("3", 2, "GLY"),
+    ):
+        resolver.add(
+            SequenceRecord(
+                source_chain="A",
+                source_sequence_code=source_sequence,
+                residue_name=residue,
+                boltz_chain="A",
+                boltz_residue_index=boltz_index,
+                source="synthetic-collision",
+            )
+        )
+    parsed = ParsedStarDocument(
+        entry=None,
+        detected_format="nef",
+        sequence_resolver=resolver,
+        restraint_groups=[],
+        embedded_topologies=[],
+        warnings=[],
+    )
+
+    with pytest.raises(
+        AtomTopologyValidationError,
+        match=r"Distinct source residues A:1 \(ALA\) and A:2 \(ALA\).*A:1",
+    ):
+        _project(parsed)
+
+
+def test_hydrogen_with_multiple_heavy_parents_fails_closed_deterministically():
+    def topology(bonds):
+        component = ComponentTopology("SYN", source="synthetic-ccd")
+        for atom, element in (("H1", "H"), ("C1", "C"), ("N1", "N")):
+            component.add_atom(atom, element)
+        for atom1, atom2 in bonds:
+            component.add_bond(atom1, atom2)
+        return component
+
+    forward = topology([("H1", "C1"), ("H1", "N1")])
+    reverse = topology([("H1", "N1"), ("H1", "C1")])
+
+    assert forward.hydrogen_parent_conflicts["H1"] == ("C1", "N1")
+    assert reverse.hydrogen_parent_conflicts["H1"] == ("C1", "N1")
+    for component in (forward, reverse):
+        assert "H1" not in component.hydrogen_parent
+        with pytest.raises(
+            TopologyResolutionError,
+            match=r"H1 has multiple heavy-atom parents.*C1, N1",
+        ):
+            component.atom_choice("H1", "test")
+
+
+def test_canonical_component_alias_topology_is_valid_at_mapped_position():
+    resolver = SequenceResolver()
+    resolver.add(
+        SequenceRecord(
+            source_chain="A",
+            source_sequence_code="1",
+            residue_name="HSD",
+            boltz_chain="A",
+            boltz_residue_index=1,
+            source="synthetic-nmrstar",
+            aliases=[("A", "1", "HIS")],
+        )
+    )
+    resolver.add(
+        SequenceRecord("A", "2", "ALA", "A", 2, "synthetic-nmrstar")
+    )
+    group = RestraintGroup(
+        source_format="nmr-star",
+        list_name="canonical-component",
+        restraint_id="1",
+        alternatives=[
+            RawAlternative(
+                source_format="nmr-star",
+                list_name="canonical-component",
+                restraint_id="1",
+                endpoint1=Endpoint(
+                    "A", "1", "HSD", "HD2", "A", "1", "HIS", "HD2"
+                ),
+                endpoint2=Endpoint(
+                    "A", "2", "ALA", "HA", "A", "2", "ALA", "HA"
+                ),
+                upper_bound=4.0,
+                row_ids=["1"],
+            )
+        ],
+    )
+    parsed = ParsedStarDocument(
+        entry=None,
+        detected_format="nmr-star",
+        sequence_resolver=resolver,
+        restraint_groups=[group],
+        embedded_topologies=[],
+        warnings=[],
+    )
+
+    report = _project(parsed)
+
+    assert len(report.emitted_constraints) == 1
+    assert not any(
+        rejection.reason == "atom_not_present_in_mapped_residue"
+        for rejection in report.rejections
+    )
+    assert emitted_atom_topology_violations(report) == []
+
+
+def test_external_ccd_without_readable_atom_table_is_not_silently_ignored(
+    tmp_path,
+):
+    ccd = tmp_path / "bad.cif"
+    ccd.write_text("data_BAD\n_chem_comp.id BAD\n", encoding="utf-8")
+    library = TopologyLibrary(external_ccd_paths=[ccd])
+
+    with pytest.raises(
+        TopologyResolutionError,
+        match=r"BAD.*no readable _chem_comp_atom",
+    ):
+        library.get("BAD")
+
+
+def test_external_ccd_two_column_bond_table_still_loads(tmp_path):
+    ccd = tmp_path / "lig.cif"
+    ccd.write_text(
+        "data_LIG\n"
+        "_chem_comp.id LIG\n"
+        "loop_\n"
+        "_chem_comp_atom.atom_id\n"
+        "_chem_comp_atom.type_symbol\n"
+        "H1 H\n"
+        "C1 C\n"
+        "loop_\n"
+        "_chem_comp_bond.atom_id_1\n"
+        "_chem_comp_bond.atom_id_2\n"
+        "H1 C1\n",
+        encoding="utf-8",
+    )
+    topology = TopologyLibrary(external_ccd_paths=[ccd]).get("LIG")
+
+    assert topology is not None
+    assert topology.hydrogen_parent["H1"] == "C1"
 
 
 def test_final_output_validator_fails_before_writing_invalid_yaml(tmp_path):

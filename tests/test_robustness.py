@@ -6,9 +6,12 @@ from pathlib import Path
 import pytest
 import yaml
 
+import nmr2boltz.output as output_module
+from nmr2boltz.model import Endpoint, SequenceRecord
 from nmr2boltz.output import _rounded, write_outputs
 from nmr2boltz.project import ProjectionSettings, project_document
 from nmr2boltz.star import (
+    SequenceResolver,
     StarDataError,
     extract_restraint_groups,
     parse_star_document,
@@ -170,6 +173,44 @@ def test_residue_map_replaces_records_and_requires_positive_indices(tmp_path):
         parse_star_document(FIXTURES / "example.nef", residue_map_path=invalid_map)
 
 
+def test_missing_chain_conflicting_author_and_canonical_identifiers_are_rejected():
+    resolver = SequenceResolver()
+    resolver.add(SequenceRecord("A", "1", "ALA", "A", 1, "synthetic"))
+    resolver.add(SequenceRecord("B", "2", "ALA", "B", 1, "synthetic"))
+    endpoint = Endpoint(
+        chain_code=None,
+        sequence_code="1",
+        residue_name="ALA",
+        atom_expression="HA",
+        canonical_chain_code=None,
+        canonical_sequence_code="2",
+        canonical_residue_name="ALA",
+        canonical_atom_hint="HA",
+    )
+
+    with pytest.raises(
+        StarDataError,
+        match=r"Conflicting missing-chain identifiers.*'1'->A:1, '2'->B:2",
+    ):
+        resolver.resolve(endpoint)
+
+
+def test_missing_chain_equivalent_identifiers_resolve_once():
+    resolver = SequenceResolver()
+    record = SequenceRecord("A", "1", "ALA", "A", 1, "synthetic")
+    resolver.add(record)
+    endpoint = Endpoint(
+        None, "1", "ALA", "HA", None, "1", "ALA", "HA"
+    )
+
+    resolved, warnings = resolver.resolve(endpoint)
+
+    assert resolved is record
+    assert warnings == [
+        "missing/unresolved chain for ?:1:ALA:HA inferred as A"
+    ]
+
+
 def test_non_finite_bond_length_override_is_rejected(tmp_path):
     config = tmp_path / "bond-lengths.json"
     config.write_text(json.dumps({"element_upper": {"C": math.nan}}), encoding="utf-8")
@@ -190,3 +231,70 @@ def test_reused_output_directory_removes_stale_hypotheses(tmp_path):
     hypothesis_files = sorted((tmp_path / "hypotheses").glob("hypothesis_*.yaml"))
     assert [path.name for path in hypothesis_files] == ["hypothesis_0001.yaml"]
     assert yaml.safe_load(hypothesis_files[0].read_text(encoding="utf-8"))["constraints"]
+
+
+def test_output_bundle_failure_leaves_prior_directory_unchanged(
+    tmp_path, monkeypatch
+):
+    parsed = parse_star_document(FIXTURES / "example.nef")
+    report = project_document(
+        parsed,
+        input_file=str(FIXTURES / "example.nef"),
+        topology_library=TopologyLibrary(),
+        settings=ProjectionSettings(),
+    )
+    destination = tmp_path / "bundle"
+    destination.mkdir()
+    old_exact = destination / "atom_constraints_exact.yaml"
+    old_exact.write_text("old exact bundle\n", encoding="utf-8")
+    marker = destination / "keep.me"
+    marker.write_text("prior output\n", encoding="utf-8")
+
+    def fail_tsv(*_args, **_kwargs):
+        raise OSError("simulated filesystem failure")
+
+    monkeypatch.setattr(output_module, "_write_tsv", fail_tsv)
+
+    with pytest.raises(OSError, match="simulated filesystem failure"):
+        write_outputs(report, destination)
+
+    assert old_exact.read_text(encoding="utf-8") == "old exact bundle\n"
+    assert marker.read_text(encoding="utf-8") == "prior output\n"
+    assert not (destination / "conversion_report.json").exists()
+    assert not list(tmp_path.glob(".bundle.staging-*"))
+    assert not list(tmp_path.glob(".bundle.backup-*"))
+
+
+def test_output_bundle_commit_failure_restores_prior_directory(
+    tmp_path, monkeypatch
+):
+    parsed = parse_star_document(FIXTURES / "example.nef")
+    report = project_document(
+        parsed,
+        input_file=str(FIXTURES / "example.nef"),
+        topology_library=TopologyLibrary(),
+        settings=ProjectionSettings(),
+    )
+    destination = tmp_path / "bundle"
+    destination.mkdir()
+    marker = destination / "prior.txt"
+    marker.write_text("prior output\n", encoding="utf-8")
+    original_replace = Path.replace
+
+    def fail_staging_commit(path, target):
+        if path.name.startswith(".bundle.staging-") and Path(target) == destination:
+            raise OSError("simulated commit failure")
+        return original_replace(path, target)
+
+    monkeypatch.setattr(Path, "replace", fail_staging_commit)
+
+    with pytest.raises(
+        output_module.OutputBundleError,
+        match="Unable to commit staged output bundle",
+    ):
+        write_outputs(report, destination)
+
+    assert marker.read_text(encoding="utf-8") == "prior output\n"
+    assert not (destination / "conversion_report.json").exists()
+    assert not list(tmp_path.glob(".bundle.staging-*"))
+    assert not list(tmp_path.glob(".bundle.backup-*"))

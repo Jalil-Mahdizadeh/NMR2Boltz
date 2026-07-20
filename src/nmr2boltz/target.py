@@ -9,6 +9,11 @@ from typing import Any
 import yaml
 
 from .model import BoltzAtom, ConversionReport
+from .topology import (
+    sequence_mapping_collision_message,
+    sequence_mapping_collisions,
+    sequence_record_component_ids,
+)
 
 
 class TargetValidationError(ValueError):
@@ -381,11 +386,46 @@ def validate_report_against_target(
 ) -> TargetValidationResult:
     version, entities = load_boltz_target(target_path)
     issues: list[ValidationIssue] = []
+    for key, prior_record, record in sequence_mapping_collisions(
+        report.sequence_map
+    ):
+        issues.append(
+            ValidationIssue(
+                "error",
+                "target_mapping_collision",
+                sequence_mapping_collision_message(key, prior_record, record),
+                key[0],
+                key[1],
+            )
+        )
     mapped: dict[tuple[str, int], str] = {}
     inferred_mapping = False
     for record in report.sequence_map:
         key = (record.boltz_chain, record.boltz_residue_index)
-        residue = record.residue_name.strip().upper()
+        candidates = sequence_record_component_ids(record)
+        candidate_results: list[tuple[str, list[ValidationIssue]]] = []
+        residue = candidates[0]
+        position_issues: list[ValidationIssue] = []
+        for candidate in candidates:
+            candidate_issues: list[ValidationIssue] = []
+            _validate_position(
+                chain=key[0],
+                residue_index=key[1],
+                residue_name=candidate,
+                entities=entities,
+                issues=candidate_issues,
+                check_identity=True,
+            )
+            candidate_results.append((candidate, candidate_issues))
+            if not any(
+                issue.severity == "error" for issue in candidate_issues
+            ):
+                residue = candidate
+                position_issues = candidate_issues
+                break
+        else:
+            position_issues = candidate_results[0][1]
+        issues.extend(position_issues)
         prior = mapped.get(key)
         if prior is not None and prior != residue:
             issues.append(
@@ -399,14 +439,6 @@ def validate_report_against_target(
             )
         mapped[key] = residue
         inferred_mapping = inferred_mapping or record.source == "inferred-from-restraint-identifiers"
-        _validate_position(
-            chain=key[0],
-            residue_index=key[1],
-            residue_name=residue,
-            entities=entities,
-            issues=issues,
-            check_identity=True,
-        )
 
     if inferred_mapping:
         issues.append(

@@ -2,6 +2,22 @@
 
 ## Unreleased
 
+- Reject distinct source residues that collide at one Boltz chain/index even
+  when their component names match. The same generic injectivity check now
+  protects projection, final atom-topology validation, and `--target-yaml`.
+- Resolve missing-chain endpoints deterministically. Author and canonical
+  sequence identifiers that select different records now fail closed instead
+  of depending on `PYTHONHASHSEED`.
+- Reject CCD hydrogens bonded to multiple heavy atoms independently of bond-row
+  order, and surface malformed CCD atom/bond tables as contextual topology
+  errors rather than silently suppressing them.
+- Preserve declared author and canonical component identities in the frozen
+  topology mapping, allowing topology-verified aliases such as HSD/HIS while
+  still requiring the emitted atom to exist in at least one declared
+  component.
+- Write conversion artifacts through a sibling staging directory and commit
+  them as one rollback-safe bundle. Simulated write and commit failures retain
+  the complete previous output instead of leaving mixed-generation files.
 - Fixed a reachable NMR-STAR canonical-normalization crash caused by an
   undefined collection name when distinct canonical spellings on both
   endpoints resolve through topology aliases to the same physical protons.
@@ -76,14 +92,14 @@
   now fail CI while the exact reviewed 8R1X/9CCH set passes.
 - Rebuilt and validated `nmr2boltz:0.1.0-validated` as non-root and offline;
   image digest is
-  `sha256:09a2f2af1930a54ceb1b859aa745ebf83b3e463c8a413156d5b9a3ccc9ffc070`.
+  `sha256:dd488022ae6a425812f0268fb33e2abf5003e25278c62b408a95ed9b85d01882`.
 - Added a paired NEF/NMR-STAR corpus runner with sequence-aware PDB ensemble
   alignment, exact contact/bound parity metrics, and per-case output directories.
 - Sequence/residue conflicts now use the explicit `sequence_residue_mismatch`
   rejection reason before topology resolution.
 - NEF/NMR-STAR files with sequence data but no distance loop now produce an
   auditable empty conversion rather than failing format detection.
-- Expanded the regression suite from 39 to 126 tests, including positive and
+- Expanded the regression suite from 39 to 138 tests, including positive and
   adversarial checks for every discrepancy predicate and fail-closed gate.
 - Added fail-fast `--target-yaml` validation for chain IDs, residue indices,
   canonical residue identities, declared modifications, mapping collisions, and

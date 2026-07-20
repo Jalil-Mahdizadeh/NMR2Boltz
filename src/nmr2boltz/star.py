@@ -183,14 +183,52 @@ class SequenceResolver:
                     f"{len(candidates)} sequence records match {chain}:{sequence}."
                 )
         # A missing chain can be resolved only if the sequence code is globally unique.
-        sequences = [value for value in {endpoint.sequence_code, endpoint.canonical_sequence_code} if value]
-        for sequence in sequences:
-            candidates = [record for record in self.records if record.source_sequence_code == sequence]
-            if len(candidates) == 1:
-                warnings.append(
-                    f"missing/unresolved chain for {endpoint.display()} inferred as {candidates[0].source_chain}"
+        sequences = list(
+            dict.fromkeys(
+                value
+                for value in (
+                    endpoint.sequence_code,
+                    endpoint.canonical_sequence_code,
                 )
-                return candidates[0], warnings
+                if value
+            )
+        )
+        resolved: list[tuple[str, SequenceRecord]] = []
+        for sequence in sequences:
+            candidates = [
+                record
+                for record in self.records
+                if record.source_sequence_code == sequence
+            ]
+            if len(candidates) > 1:
+                raise StarDataError(
+                    f"Ambiguous missing-chain mapping for endpoint "
+                    f"{endpoint.display()}: sequence identifier {sequence!r} "
+                    f"matches {len(candidates)} records."
+                )
+            if len(candidates) == 1:
+                if all(
+                    candidates[0] is not record
+                    for _identifier, record in resolved
+                ):
+                    resolved.append((sequence, candidates[0]))
+        if len(resolved) > 1:
+            details = ", ".join(
+                f"{identifier!r}->{record.source_chain}:"
+                f"{record.source_sequence_code}"
+                for identifier, record in resolved
+            )
+            raise StarDataError(
+                f"Conflicting missing-chain identifiers for endpoint "
+                f"{endpoint.display()}: {details}."
+            )
+        if resolved:
+            record = resolved[0][1]
+            warnings.append(
+                f"missing/unresolved chain for {endpoint.display()} inferred as "
+                f"{record.source_chain}"
+            )
+            return record, warnings
         raise StarDataError(f"No Boltz residue mapping for endpoint {endpoint.display()}.")
 
 

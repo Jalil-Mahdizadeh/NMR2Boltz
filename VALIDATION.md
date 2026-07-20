@@ -5,7 +5,7 @@ Date: 2026-07-20
 
 ## Regression and stress validation
 
-- 127 Pytest tests passed.
+- 138 Pytest tests passed.
 - 100,000 randomized sum-r6 implication cases passed.
 - 100,000 constructive triangle-inequality cases passed.
 - 25,000 outward-rounding cases passed.
@@ -18,6 +18,10 @@ Date: 2026-07-20
   constraints, union groups, and union alternatives explicitly.
 - Sequence-only NEF/NMR-STAR entries produce auditable empty distance conversions.
 - Sequence/residue conflicts are rejected explicitly before atom-topology resolution.
+- Distinct source residues cannot share one mapped Boltz chain/index, including
+  same-component collisions; both projection and target validation reject them.
+- Missing-chain author/canonical sequence identifiers are evaluated in stable
+  order and conflicting unique resolutions fail closed.
 - PDB coordinates are aligned to one-based Boltz sequence indices before distance evaluation.
 - NMR-STAR sequence-alias provenance is sorted deterministically rather than depending on Python set iteration.
 - Distinct NMR-STAR canonical atom spellings that topology proves are aliases
@@ -33,6 +37,12 @@ Date: 2026-07-20
   CCD component before deduplication, and the output writer independently
   validates every exact and union endpoint against the frozen target-topology
   snapshot.
+- Author and canonical component identities are frozen together, so a
+  topology-verified canonical alias validates correctly without accepting an
+  atom absent from every declared component.
+- CCD hydrogens with multiple heavy parents are rejected deterministically,
+  independent of bond-row order; malformed CCD atom/bond tables raise
+  contextual errors instead of being silently skipped.
 - Exact and ambiguous constraints are serialized into separate metadata-free
   files, with deterministic ordering and conservative six-decimal formatting.
 - Exact and union bounds share the executable interval policy: sub-minimum
@@ -54,6 +64,9 @@ Date: 2026-07-20
 - Invalid contacts are quarantined deterministically with source rows, mapped
   residue/component identity, atom, restraint group, and original bounds;
   coordinate absence is not used as topology evidence.
+- Output artifacts are written as one staged bundle. Simulated staging-write
+  and commit failures preserve the complete prior directory and leave no
+  staging/backup residue.
 
 ## Paired-format deposited-data validation
 
@@ -127,8 +140,15 @@ not establish predictive accuracy.
 
 - Image: `nmr2boltz:0.1.0-validated`
 - Image ID / repository digest:
-  `sha256:09a2f2af1930a54ceb1b859aa745ebf83b3e463c8a413156d5b9a3ccc9ffc070`
+  `sha256:dd488022ae6a425812f0268fb33e2abf5003e25278c62b408a95ed9b85d01882`
 - Reported size: 243 MB; default user: `65532:65532`; other nmr2boltz images: 0.
+- The rebuilt image passed the 100,000-case `sum-r6` and triangle-inequality
+  stress checks, 25,000 outward-rounding checks, 10,000 merge-order checks,
+  all 845 built-in hydrogen-parent mappings, and deterministic 32-hypothesis
+  generation while offline, read-only, and non-root.
+- An offline, read-only-root, non-root conversion using the documented writable
+  `/workspace` parent mount emitted 3 exact constraints and 1 union group into
+  a complete 10-file staged bundle.
 - Offline, read-only-root, non-root NEF and NMR-STAR smoke runs of
   `--exclude-intrachain` each emitted 2 exact contacts and 1 all-inter-chain
   union, filtered 3 restraint groups including 1 mixed-scope OR group, and

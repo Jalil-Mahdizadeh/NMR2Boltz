@@ -188,3 +188,36 @@ def test_declared_polymer_modification_must_match_source_ccd(tmp_path):
 
     assert not matching.errors
     assert [issue.code for issue in mismatching.errors] == ["target_modification_mismatch"]
+
+
+def test_target_rejects_distinct_same_component_sources_at_one_destination(
+    tmp_path,
+):
+    target = tmp_path / "target.yaml"
+    _write_target(target, "AG")
+    report = _minimal_report(["ALA", "ALA", "GLY"])
+    report.sequence_map[0].boltz_residue_index = 1
+    report.sequence_map[1].boltz_residue_index = 1
+    report.sequence_map[2].boltz_residue_index = 2
+
+    result = validate_report_against_target(report, target)
+
+    collisions = [
+        issue for issue in result.errors
+        if issue.code == "target_mapping_collision"
+    ]
+    assert len(collisions) == 1
+    assert "Distinct source residues A:1 (ALA) and A:2 (ALA)" in (
+        collisions[0].message
+    )
+
+
+def test_target_accepts_topology_verified_canonical_component_alias(tmp_path):
+    target = tmp_path / "target.yaml"
+    _write_target(target, "HA")
+    report = _minimal_report(["HSD", "ALA"])
+    report.sequence_map[0].aliases = [("A", "1", "HIS")]
+
+    result = validate_report_against_target(report, target)
+
+    assert not result.errors

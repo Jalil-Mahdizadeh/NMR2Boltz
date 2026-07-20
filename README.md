@@ -77,7 +77,9 @@ nmr2boltz convert experiment.nef --ccd ./ccd -o converted
 
 Standard protein and RNA/DNA atom inventories are built in. Modified residues,
 ligands, and ions are accepted only when embedded or supplied CCD topology
-proves the atom name; unknown component topology is quarantined, never guessed.
+proves the atom name; declared author/canonical component aliases are both
+retained so a verified canonical topology can validate an author name such as
+`HSD`. Unknown component topology is quarantined, never guessed.
 
 When the source numbering does not match the exact Boltz input, provide a tab-separated map:
 
@@ -89,6 +91,12 @@ A             24B                   GLY                  A            25
 ```bash
 nmr2boltz convert experiment.nef --residue-map residue_map.tsv -o converted
 ```
+
+The residue map must be injective: two distinct source residues may not map to
+the same Boltz chain/index, even when their residue names are identical. When a
+restraint omits its chain and its author and canonical sequence identifiers
+uniquely select different records, conversion rejects the endpoint instead of
+choosing one identifier by iteration order.
 
 The safer production path also supplies the exact Boltz input. Conversion stops
 before writing executable constraints if a mapped chain, residue index, declared
@@ -118,6 +126,10 @@ docker run --rm --network none --read-only --tmpfs /tmp:size=64m \
   nmr2boltz:0.1.0-validated \
   convert /workspace/input/experiment.nef -o /workspace/output/converted
 ```
+
+Mount the writable workspace parent, not only the final output directory: the
+rollback-safe writer creates its staging and backup directories beside the
+requested output.
 
 The image runs as numeric UID/GID 65532 by default. On Linux, add
 `-u "$(id -u):$(id -g)"` if host-owned output files are preferred.
@@ -230,6 +242,10 @@ artifact digests are in
 | `summary.txt` | Concise run summary. |
 | `hypotheses/*.yaml` | Optional assignment hypotheses generated with `--hypotheses N`. Each selects one alternative per ambiguous group. |
 
+The complete output bundle is first written in a sibling staging directory.
+Only after every artifact succeeds is it swapped into place; a failed write or
+commit restores the prior bundle, preventing mixtures of old and new files.
+
 ## BoltzUI integration
 
 The emitted YAML has the form:
@@ -299,6 +315,11 @@ contact is quarantined as `atom_not_present_in_mapped_residue`. The writer then
 repeats the invariant against the frozen target-topology snapshot before it
 creates any output file. Coordinate absence is never used as atom-validity
 evidence.
+
+For external or embedded CCD data, a hydrogen must have exactly one heavy-atom
+bond. Multiple heavy parents are retained as a deterministic topology conflict
+and fail closed; bond-file ordering can never choose a parent. Malformed atom
+or bond tables raise a contextual topology error rather than being ignored.
 
 Inside one OR group, two alternatives that map to the same heavy pair are combined using the **larger** bound. Across independent restraint groups, duplicate heavy pairs are combined using the **smaller** bound.
 If any alternative or atom-set branch in an OR group cannot be projected safely, none of the remaining alternatives are emitted because a partial OR would be stronger than the source restraint. Executable upper bounds are rounded upward at six decimal places so serialization never tightens them.

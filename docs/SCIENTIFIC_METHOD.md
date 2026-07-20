@@ -198,6 +198,14 @@ The converter resolves a source endpoint in this order:
 4. globally unique sequence match when the chain is absent;
 5. explicit user residue-map override.
 
+A valid mapping is injective at residue identity: two distinct source
+chain/sequence records cannot share one Boltz chain/index, even if both source
+residue names are identical. The converter and target validator independently
+reject such collisions before constraints can merge. When a chain is absent,
+author and canonical sequence identifiers are evaluated in stable order. If
+they uniquely identify different records, the endpoint is rejected as
+conflicting rather than resolved from iteration order.
+
 A user map can override extracted records. It should be mandatory in production whenever the sequence used for Boltz differs from the deposited molecular system.
 
 ## 4.3 Inference policy
@@ -230,7 +238,12 @@ Topology is resolved in the following hierarchy:
 3. a bundled atom inventory and proton-parent map for the 20 standard amino
    acids, common protonation variants, MSE/SEC, and common RNA/DNA residues.
 
-Embedded and external bond tables are data-driven. A hydrogen is accepted only when it has a unique non-hydrogen neighbor.
+Embedded and external bond tables are data-driven. A hydrogen is accepted only
+when it has a unique non-hydrogen neighbor. If the CCD bonds one hydrogen to
+multiple heavy atoms, every candidate parent is retained as a deterministic
+conflict and projection fails closed independently of bond-row order.
+Malformed atom or bond tables raise a contextual topology error rather than
+being silently treated as missing data.
 
 ## 5.3 Fail-closed atom membership
 
@@ -243,11 +256,13 @@ endpoint expressions, mapped chain/residue/component/atom, restraint group, and
 original bounds.
 
 The conversion report freezes the component atom dictionaries used for that
-decision. Immediately before writing, an independent validator checks every
-emitted endpoint against this target-topology snapshot and raises on any
-violation before creating files. This is a chemical-topology invariant:
-coordinate absence is neither necessary nor sufficient evidence that an atom is
-invalid.
+decision. Declared author and canonical component identities are both retained,
+so a canonical topology alias may prove membership only when the atom exists in
+at least one component declared for that mapped residue. Immediately before
+writing, an independent validator checks every emitted endpoint against this
+target-topology snapshot and raises on any violation before creating files.
+This is a chemical-topology invariant: coordinate absence is neither necessary
+nor sufficient evidence that an atom is invalid.
 
 ## 5.4 X-H upper envelopes
 
@@ -622,7 +637,7 @@ CSV digests and per-entry counts are stored in
 
 The following checks were executed on 2026-07-20 against the current source tree:
 
-- all 127 Pytest regression, format, topology, logic, target-validation,
+- all 138 Pytest regression, format, topology, logic, target-validation,
   ensemble-alignment, constraint-serialization, and robustness tests passed;
 - Python byte compilation passed for source, tests, and the stress harness;
 - 100,000 randomized sum-r6 implication cases and 100,000 constructive triangle-inequality cases passed in the final Docker image;
@@ -729,7 +744,11 @@ Every run writes:
 - ambiguity and rejection reasons;
 - Boltz min/max adjustments.
 
-The JSON report is intended to be the primary reproducibility object. The compact YAML is only the execution artifact.
+The JSON report is intended to be the primary reproducibility object. The
+compact YAML is only the execution artifact. All artifacts are first completed
+in a sibling staging directory and then committed as one rollback-safe bundle.
+If staging or the final directory swap fails, the prior output directory is
+restored rather than mixed with partially written new files.
 
 ---
 

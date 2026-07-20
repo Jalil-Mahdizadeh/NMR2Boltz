@@ -56,6 +56,7 @@ class ComponentTopology:
     atom_elements: dict[str, str] = field(default_factory=dict)
     hydrogen_parent: dict[str, str] = field(default_factory=dict)
     hydrogen_bond_upper: dict[str, float] = field(default_factory=dict)
+    hydrogen_parent_conflicts: dict[str, tuple[str, ...]] = field(default_factory=dict)
     atom_aliases: dict[str, str] = field(default_factory=dict)
     source: str = "unknown"
 
@@ -92,17 +93,42 @@ class ComponentTopology:
             upper = max(default, candidate)
         else:
             upper = default
-        self.hydrogen_parent[hydrogen] = parent
-        self.hydrogen_bond_upper[hydrogen] = upper
         self.atom_elements.setdefault(hydrogen, "H")
         self.atom_elements.setdefault(parent, parent_element)
+        self._record_hydrogen_parent(hydrogen, parent, upper)
 
     def add_hydrogen(self, hydrogen: str, parent: str, parent_element: str | None = None) -> None:
         elem = (parent_element or infer_element(parent)).upper()
         self.atom_elements[hydrogen] = "H"
         self.atom_elements.setdefault(parent, elem)
+        self._record_hydrogen_parent(
+            hydrogen,
+            parent,
+            DEFAULT_XH_UPPER.get(elem, FALLBACK_XH_UPPER),
+        )
+
+    def _record_hydrogen_parent(
+        self, hydrogen: str, parent: str, bond_upper: float
+    ) -> None:
+        """Record one unique parent or retain a deterministic conflict."""
+        conflicted = set(self.hydrogen_parent_conflicts.get(hydrogen, ()))
+        if conflicted:
+            conflicted.add(parent)
+            self.hydrogen_parent_conflicts[hydrogen] = tuple(sorted(conflicted))
+            return
+        existing = self.hydrogen_parent.get(hydrogen)
+        if existing is not None and existing != parent:
+            self.hydrogen_parent_conflicts[hydrogen] = tuple(
+                sorted({existing, parent})
+            )
+            self.hydrogen_parent.pop(hydrogen, None)
+            self.hydrogen_bond_upper.pop(hydrogen, None)
+            return
         self.hydrogen_parent[hydrogen] = parent
-        self.hydrogen_bond_upper[hydrogen] = DEFAULT_XH_UPPER.get(elem, FALLBACK_XH_UPPER)
+        self.hydrogen_bond_upper[hydrogen] = max(
+            self.hydrogen_bond_upper.get(hydrogen, 0.0),
+            bond_upper,
+        )
 
     def add_alias(self, alias: str, canonical_atom: str) -> None:
         self.atom_aliases[alias] = canonical_atom
@@ -115,6 +141,12 @@ class ComponentTopology:
     def atom_choice(self, atom_name: str, resolution_source: str) -> AtomChoice:
         element = self.atom_elements.get(atom_name, infer_element(atom_name)).upper()
         if element in HYDROGEN_ELEMENTS or atom_name in self.hydrogen_parent:
+            conflicting = self.hydrogen_parent_conflicts.get(atom_name)
+            if conflicting:
+                raise TopologyResolutionError(
+                    f"Hydrogen {self.comp_id}:{atom_name} has multiple heavy-atom "
+                    f"parents in {self.source}: {', '.join(conflicting)}."
+                )
             parent = self.hydrogen_parent.get(atom_name)
             if parent is None:
                 raise TopologyResolutionError(
@@ -333,8 +365,15 @@ class TopologyLibrary:
                 )
                 for row in atom_table:
                     topology.add_atom(str(row[0]), str(row[1]))
-            except Exception:
-                pass
+            except Exception as exc:
+                raise TopologyResolutionError(
+                    f"Malformed _chem_comp_atom table for {key} in {path}: {exc}"
+                ) from exc
+            if not atom_table or not topology.atom_elements:
+                raise TopologyResolutionError(
+                    f"CCD component {key} in {path} has no readable "
+                    "_chem_comp_atom atom_id/type_symbol rows."
+                )
             bond_tags = [
                 "_chem_comp_bond.atom_id_1",
                 "_chem_comp_bond.atom_id_2",
@@ -343,19 +382,22 @@ class TopologyLibrary:
             ]
             try:
                 bond_table = block.find(bond_tags)
-                for row in bond_table:
-                    distance = _optional_float(str(row[2]))
-                    error = _optional_float(str(row[3]))
-                    topology.add_bond(str(row[0]), str(row[1]), distance, error)
-            except Exception:
-                try:
+                if bond_table:
+                    for row in bond_table:
+                        distance = _optional_float(str(row[2]))
+                        error = _optional_float(str(row[3]))
+                        topology.add_bond(
+                            str(row[0]), str(row[1]), distance, error
+                        )
+                else:
                     bond_table = block.find(bond_tags[:2])
                     for row in bond_table:
                         topology.add_bond(str(row[0]), str(row[1]))
-                except Exception:
-                    pass
-            if topology.atom_elements:
-                self.register(topology)
+            except Exception as exc:
+                raise TopologyResolutionError(
+                    f"Malformed _chem_comp_bond table for {key} in {path}: {exc}"
+                ) from exc
+            self.register(topology)
 
     def resolve_expression(
         self,
@@ -616,20 +658,96 @@ def component_topology_snapshot(
     keeps the output validator fail-closed and makes the evidence auditable.
     """
     snapshot: dict[str, dict[str, object]] = {}
-    for comp_id in sorted({record.residue_name.strip().upper() for record in records}):
+    component_ids = {
+        comp_id
+        for record in records
+        for comp_id in sequence_record_component_ids(record)
+    }
+    for comp_id in sorted(component_ids):
         topology = library.get(comp_id)
         snapshot[comp_id] = {
             "available": topology is not None,
             "source": topology.source if topology is not None else None,
             "atoms": sorted(topology.available_atoms()) if topology is not None else [],
+            "hydrogen_parent_conflicts": (
+                {
+                    hydrogen: list(parents)
+                    for hydrogen, parents in sorted(
+                        topology.hydrogen_parent_conflicts.items()
+                    )
+                }
+                if topology is not None
+                else {}
+            ),
         }
     return snapshot
+
+
+def sequence_record_component_ids(record: SequenceRecord) -> tuple[str, ...]:
+    """Return author and declared alias component IDs in stable order."""
+    values = [record.residue_name]
+    values.extend(
+        str(alias[2])
+        for alias in record.aliases
+        if len(alias) >= 3 and alias[2]
+    )
+    return tuple(
+        dict.fromkeys(value.strip().upper() for value in values if value.strip())
+    )
+
+
+def sequence_mapping_collisions(
+    records: Iterable[SequenceRecord],
+) -> list[
+    tuple[
+        tuple[str, int],
+        SequenceRecord,
+        SequenceRecord,
+    ]
+]:
+    """Find distinct source residues assigned to one Boltz destination."""
+    by_destination: dict[tuple[str, int], list[SequenceRecord]] = {}
+    collisions: list[
+        tuple[tuple[str, int], SequenceRecord, SequenceRecord]
+    ] = []
+    for record in records:
+        key = (record.boltz_chain, record.boltz_residue_index)
+        source_key = (record.source_chain, record.source_sequence_code)
+        for prior in by_destination.get(key, []):
+            prior_source_key = (
+                prior.source_chain,
+                prior.source_sequence_code,
+            )
+            if prior_source_key != source_key:
+                collisions.append((key, prior, record))
+        by_destination.setdefault(key, []).append(record)
+    return collisions
+
+
+def sequence_mapping_collision_message(
+    key: tuple[str, int],
+    prior: SequenceRecord,
+    record: SequenceRecord,
+) -> str:
+    return (
+        f"Distinct source residues {prior.source_chain}:{prior.source_sequence_code} "
+        f"({prior.residue_name}) and {record.source_chain}:"
+        f"{record.source_sequence_code} ({record.residue_name}) both map to "
+        f"{key[0]}:{key[1]}."
+    )
 
 
 def mapped_residue_index(
     records: Iterable[SequenceRecord],
 ) -> dict[tuple[str, int], str]:
     """Return an unambiguous Boltz position-to-component mapping."""
+    records = list(records)
+    collisions = sequence_mapping_collisions(records)
+    if collisions:
+        key, prior_record, record = collisions[0]
+        raise AtomTopologyValidationError(
+            sequence_mapping_collision_message(key, prior_record, record)
+        )
     mapped: dict[tuple[str, int], str] = {}
     for record in records:
         key = (record.boltz_chain, record.boltz_residue_index)
@@ -644,38 +762,87 @@ def mapped_residue_index(
     return mapped
 
 
+def mapped_residue_component_index(
+    records: Iterable[SequenceRecord],
+) -> dict[tuple[str, int], tuple[str, ...]]:
+    """Map positions to every author/canonical component identity declared there."""
+    records = list(records)
+    # Reuse the same fail-closed destination collision boundary.
+    mapped_residue_index(records)
+    mapped: dict[tuple[str, int], tuple[str, ...]] = {}
+    for record in records:
+        key = (record.boltz_chain, record.boltz_residue_index)
+        mapped[key] = tuple(
+            dict.fromkeys(
+                mapped.get(key, ()) + sequence_record_component_ids(record)
+            )
+        )
+    return mapped
+
+
 def atom_topology_violations(
     atoms: Iterable[BoltzAtom],
     *,
-    mapped_residues: dict[tuple[str, int], str],
+    mapped_residues: dict[tuple[str, int], tuple[str, ...]],
     component_topologies: dict[str, dict[str, object]],
 ) -> list[AtomTopologyViolation]:
     """Check atoms against component dictionaries, never coordinate observations."""
     violations: list[AtomTopologyViolation] = []
     for atom in atoms:
-        comp_id = mapped_residues.get((atom.chain, atom.residue_index))
-        if comp_id is None:
+        comp_ids = mapped_residues.get((atom.chain, atom.residue_index))
+        if comp_ids is None:
             violations.append(
                 AtomTopologyViolation(atom, None, None, "mapped_residue_not_found")
             )
             continue
-        evidence = component_topologies.get(comp_id)
-        source = str(evidence.get("source")) if evidence and evidence.get("source") else None
-        if not evidence or evidence.get("available") is not True:
+        evidences = [
+            (comp_id, component_topologies.get(comp_id))
+            for comp_id in comp_ids
+        ]
+        available = [
+            (comp_id, evidence)
+            for comp_id, evidence in evidences
+            if evidence and evidence.get("available") is True
+        ]
+        residue_label = "/".join(comp_ids)
+        if not available:
             violations.append(
-                AtomTopologyViolation(atom, comp_id, source, "component_topology_unavailable")
+                AtomTopologyViolation(
+                    atom,
+                    residue_label,
+                    None,
+                    "component_topology_unavailable",
+                )
             )
             continue
-        available = evidence.get("atoms")
-        if not isinstance(available, list) or atom.atom_name not in available:
+        if any(
+            isinstance(evidence.get("atoms"), list)
+            and atom.atom_name in evidence["atoms"]
+            for _comp_id, evidence in available
+        ):
+            continue
+        sources = sorted(
+            {
+                str(evidence.get("source"))
+                for _comp_id, evidence in available
+                if evidence.get("source")
+            }
+        )
+        source = "/".join(sources) or None
+        if available:
             violations.append(
-                AtomTopologyViolation(atom, comp_id, source, "atom_absent_from_component_topology")
+                AtomTopologyViolation(
+                    atom,
+                    residue_label,
+                    source,
+                    "atom_absent_from_component_topology",
+                )
             )
     return violations
 
 
 def emitted_atom_topology_violations(report: ConversionReport) -> list[AtomTopologyViolation]:
-    mapped = mapped_residue_index(report.sequence_map)
+    mapped = mapped_residue_component_index(report.sequence_map)
     return atom_topology_violations(
         (
             atom
@@ -689,7 +856,7 @@ def emitted_atom_topology_violations(report: ConversionReport) -> list[AtomTopol
 
 def output_atom_topology_violations(report: ConversionReport) -> list[AtomTopologyViolation]:
     """Validate every atom that can be written to an executable constraint file."""
-    mapped = mapped_residue_index(report.sequence_map)
+    mapped = mapped_residue_component_index(report.sequence_map)
     return atom_topology_violations(
         itertools.chain(
             (

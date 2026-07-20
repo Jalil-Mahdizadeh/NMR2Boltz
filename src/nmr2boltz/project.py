@@ -27,6 +27,7 @@ from .topology import (
     TopologyResolutionError,
     atom_topology_violations,
     component_topology_snapshot,
+    mapped_residue_component_index,
     mapped_residue_index,
     require_valid_emitted_atom_topology,
 )
@@ -120,6 +121,9 @@ def project_document(
         topology_library.register(topology, replace=True)
 
     mapped_residues = mapped_residue_index(parsed.sequence_resolver.records)
+    mapped_components = mapped_residue_component_index(
+        parsed.sequence_resolver.records
+    )
     component_topologies = component_topology_snapshot(
         parsed.sequence_resolver.records, topology_library
     )
@@ -174,6 +178,7 @@ def project_document(
         projected, topology_rejections = _quarantine_invalid_projected_atoms(
             projected,
             mapped_residues=mapped_residues,
+            mapped_components=mapped_components,
             component_topologies=component_topologies,
         )
         group_rejections.extend(topology_rejections)
@@ -541,6 +546,7 @@ def _quarantine_invalid_projected_atoms(
     projected: list[ProjectedAlternative],
     *,
     mapped_residues: dict[tuple[str, int], str],
+    mapped_components: dict[tuple[str, int], tuple[str, ...]],
     component_topologies: dict[str, dict[str, object]],
 ) -> tuple[list[ProjectedAlternative], list[Rejection]]:
     """Remove complete projected contacts unless both atoms have topology evidence."""
@@ -550,7 +556,7 @@ def _quarantine_invalid_projected_atoms(
     for alternative in projected:
         violations = atom_topology_violations(
             (alternative.atom1, alternative.atom2),
-            mapped_residues=mapped_residues,
+            mapped_residues=mapped_components,
             component_topologies=component_topologies,
         )
         if not violations:
