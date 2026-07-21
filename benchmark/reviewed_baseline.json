@@ -1,5 +1,5 @@
 {
-  "schema_version": 3,
+  "schema_version": 4,
   "audit_review": {
     "digest_sha256": "e710f092a339fcf8d5d7a57d35207cc4b05bea25fe92c0c30b1f97815605c677",
     "row_count": 4177,
@@ -934,7 +934,15 @@
           "star_only_atom_pairs": 0,
           "common_pairs_with_different_bounds": 0,
           "maximum_common_bound_delta_angstrom": 0.0,
-          "exact_pair_and_bound_parity": true
+          "exact_pair_and_bound_parity": true,
+          "nef_token_constraints": 18,
+          "star_token_constraints": 18,
+          "common_token_pairs": 18,
+          "nef_only_token_pairs": 0,
+          "star_only_token_pairs": 0,
+          "common_token_pairs_with_different_bounds": 0,
+          "maximum_common_token_bound_delta_angstrom": 0.0,
+          "token_pair_and_bound_parity": true
         },
         "formats": {
           "nef": {
@@ -942,6 +950,23 @@
             "source_alternatives": 218,
             "emitted_constraints": 176,
             "ambiguous_groups": 16,
+            "token_constraints": 18,
+            "token_projection_omissions": 136,
+            "token_projection_statistics": {
+              "token_min_distance_angstrom": 4.0,
+              "token_max_distance_angstrom": 20.0,
+              "token_candidates": 56,
+              "exact_candidates": 56,
+              "collapsed_union_candidates": 0,
+              "unique_token_constraints_emitted": 18,
+              "same_token_omissions": 120,
+              "multi_token_union_omissions": 16,
+              "subminimum_adjustments": 0,
+              "above_maximum_omissions": 0,
+              "non_finite_bound_omissions": 0,
+              "duplicate_token_pair_merges": 38,
+              "token_projection_omissions": 136
+            },
             "rejection_reasons": {},
             "atom_topology_violations": 0,
             "resolved_model_cases": 1760,
@@ -957,6 +982,23 @@
             "source_alternatives": 218,
             "emitted_constraints": 176,
             "ambiguous_groups": 16,
+            "token_constraints": 18,
+            "token_projection_omissions": 136,
+            "token_projection_statistics": {
+              "token_min_distance_angstrom": 4.0,
+              "token_max_distance_angstrom": 20.0,
+              "token_candidates": 56,
+              "exact_candidates": 56,
+              "collapsed_union_candidates": 0,
+              "unique_token_constraints_emitted": 18,
+              "same_token_omissions": 120,
+              "multi_token_union_omissions": 16,
+              "subminimum_adjustments": 0,
+              "above_maximum_omissions": 0,
+              "non_finite_bound_omissions": 0,
+              "duplicate_token_pair_merges": 38,
+              "token_projection_omissions": 136
+            },
             "rejection_reasons": {},
             "atom_topology_violations": 0,
             "resolved_model_cases": 1760,
@@ -979,7 +1021,15 @@
           "star_only_atom_pairs": 0,
           "common_pairs_with_different_bounds": 353,
           "maximum_common_bound_delta_angstrom": 1.7856576127777792,
-          "exact_pair_and_bound_parity": false
+          "exact_pair_and_bound_parity": false,
+          "nef_token_constraints": 442,
+          "star_token_constraints": 442,
+          "common_token_pairs": 442,
+          "nef_only_token_pairs": 0,
+          "star_only_token_pairs": 0,
+          "common_token_pairs_with_different_bounds": 59,
+          "maximum_common_token_bound_delta_angstrom": 1.7856576127777792,
+          "token_pair_and_bound_parity": false
         },
         "formats": {
           "nef": {
@@ -987,6 +1037,23 @@
             "source_alternatives": 2821,
             "emitted_constraints": 1716,
             "ambiguous_groups": 16,
+            "token_constraints": 442,
+            "token_projection_omissions": 515,
+            "token_projection_statistics": {
+              "token_min_distance_angstrom": 4.0,
+              "token_max_distance_angstrom": 20.0,
+              "token_candidates": 1217,
+              "exact_candidates": 1207,
+              "collapsed_union_candidates": 10,
+              "unique_token_constraints_emitted": 442,
+              "same_token_omissions": 515,
+              "multi_token_union_omissions": 0,
+              "subminimum_adjustments": 43,
+              "above_maximum_omissions": 0,
+              "non_finite_bound_omissions": 0,
+              "duplicate_token_pair_merges": 775,
+              "token_projection_omissions": 515
+            },
             "rejection_reasons": {
               "same_heavy_parent_atom": 41
             },
@@ -1004,6 +1071,23 @@
             "source_alternatives": 2419,
             "emitted_constraints": 1716,
             "ambiguous_groups": 16,
+            "token_constraints": 442,
+            "token_projection_omissions": 515,
+            "token_projection_statistics": {
+              "token_min_distance_angstrom": 4.0,
+              "token_max_distance_angstrom": 20.0,
+              "token_candidates": 1217,
+              "exact_candidates": 1207,
+              "collapsed_union_candidates": 10,
+              "unique_token_constraints_emitted": 442,
+              "same_token_omissions": 515,
+              "multi_token_union_omissions": 0,
+              "subminimum_adjustments": 43,
+              "above_maximum_omissions": 0,
+              "non_finite_bound_omissions": 0,
+              "duplicate_token_pair_merges": 775,
+              "token_projection_omissions": 515
+            },
             "rejection_reasons": {
               "same_heavy_parent_atom": 38
             },
@@ -1028,7 +1112,15 @@
           "star_only_atom_pairs": 59,
           "common_pairs_with_different_bounds": 89,
           "maximum_common_bound_delta_angstrom": 1.5595262993692387,
-          "exact_pair_and_bound_parity": false
+          "exact_pair_and_bound_parity": false,
+          "nef_token_constraints": 828,
+          "star_token_constraints": 828,
+          "common_token_pairs": 828,
+          "nef_only_token_pairs": 0,
+          "star_only_token_pairs": 0,
+          "common_token_pairs_with_different_bounds": 21,
+          "maximum_common_token_bound_delta_angstrom": 1.5595262993692387,
+          "token_pair_and_bound_parity": false
         },
         "formats": {
           "nef": {
@@ -1036,6 +1128,23 @@
             "source_alternatives": 3416,
             "emitted_constraints": 2819,
             "ambiguous_groups": 71,
+            "token_constraints": 828,
+            "token_projection_omissions": 760,
+            "token_projection_statistics": {
+              "token_min_distance_angstrom": 4.0,
+              "token_max_distance_angstrom": 20.0,
+              "token_candidates": 2130,
+              "exact_candidates": 2063,
+              "collapsed_union_candidates": 67,
+              "unique_token_constraints_emitted": 828,
+              "same_token_omissions": 760,
+              "multi_token_union_omissions": 0,
+              "subminimum_adjustments": 1,
+              "above_maximum_omissions": 0,
+              "non_finite_bound_omissions": 0,
+              "duplicate_token_pair_merges": 1302,
+              "token_projection_omissions": 760
+            },
             "rejection_reasons": {
               "same_heavy_parent_atom": 148
             },
@@ -1053,6 +1162,23 @@
             "source_alternatives": 3271,
             "emitted_constraints": 2877,
             "ambiguous_groups": 7,
+            "token_constraints": 828,
+            "token_projection_omissions": 760,
+            "token_projection_statistics": {
+              "token_min_distance_angstrom": 4.0,
+              "token_max_distance_angstrom": 20.0,
+              "token_candidates": 2124,
+              "exact_candidates": 2117,
+              "collapsed_union_candidates": 7,
+              "unique_token_constraints_emitted": 828,
+              "same_token_omissions": 760,
+              "multi_token_union_omissions": 0,
+              "subminimum_adjustments": 1,
+              "above_maximum_omissions": 0,
+              "non_finite_bound_omissions": 0,
+              "duplicate_token_pair_merges": 1296,
+              "token_projection_omissions": 760
+            },
             "rejection_reasons": {
               "same_heavy_parent_atom": 37
             },
@@ -1077,7 +1203,15 @@
           "star_only_atom_pairs": 0,
           "common_pairs_with_different_bounds": 160,
           "maximum_common_bound_delta_angstrom": 3.184196906213339,
-          "exact_pair_and_bound_parity": false
+          "exact_pair_and_bound_parity": false,
+          "nef_token_constraints": 286,
+          "star_token_constraints": 286,
+          "common_token_pairs": 286,
+          "nef_only_token_pairs": 0,
+          "star_only_token_pairs": 0,
+          "common_token_pairs_with_different_bounds": 46,
+          "maximum_common_token_bound_delta_angstrom": 4.029999209426258,
+          "token_pair_and_bound_parity": false
         },
         "formats": {
           "nef": {
@@ -1085,6 +1219,23 @@
             "source_alternatives": 2282,
             "emitted_constraints": 1114,
             "ambiguous_groups": 165,
+            "token_constraints": 286,
+            "token_projection_omissions": 490,
+            "token_projection_statistics": {
+              "token_min_distance_angstrom": 4.0,
+              "token_max_distance_angstrom": 20.0,
+              "token_candidates": 789,
+              "exact_candidates": 668,
+              "collapsed_union_candidates": 121,
+              "unique_token_constraints_emitted": 286,
+              "same_token_omissions": 486,
+              "multi_token_union_omissions": 4,
+              "subminimum_adjustments": 41,
+              "above_maximum_omissions": 0,
+              "non_finite_bound_omissions": 0,
+              "duplicate_token_pair_merges": 503,
+              "token_projection_omissions": 490
+            },
             "rejection_reasons": {
               "same_heavy_parent_atom": 12,
               "unresolved_atom_topology": 39,
@@ -1105,6 +1256,23 @@
             "source_alternatives": 3382,
             "emitted_constraints": 1114,
             "ambiguous_groups": 165,
+            "token_constraints": 286,
+            "token_projection_omissions": 490,
+            "token_projection_statistics": {
+              "token_min_distance_angstrom": 4.0,
+              "token_max_distance_angstrom": 20.0,
+              "token_candidates": 789,
+              "exact_candidates": 668,
+              "collapsed_union_candidates": 121,
+              "unique_token_constraints_emitted": 286,
+              "same_token_omissions": 486,
+              "multi_token_union_omissions": 4,
+              "subminimum_adjustments": 41,
+              "above_maximum_omissions": 0,
+              "non_finite_bound_omissions": 0,
+              "duplicate_token_pair_merges": 503,
+              "token_projection_omissions": 490
+            },
             "rejection_reasons": {
               "same_heavy_parent_atom": 3,
               "unresolved_atom_topology": 39,
@@ -1132,7 +1300,15 @@
           "star_only_atom_pairs": 0,
           "common_pairs_with_different_bounds": 0,
           "maximum_common_bound_delta_angstrom": null,
-          "exact_pair_and_bound_parity": true
+          "exact_pair_and_bound_parity": true,
+          "nef_token_constraints": 0,
+          "star_token_constraints": 0,
+          "common_token_pairs": 0,
+          "nef_only_token_pairs": 0,
+          "star_only_token_pairs": 0,
+          "common_token_pairs_with_different_bounds": 0,
+          "maximum_common_token_bound_delta_angstrom": null,
+          "token_pair_and_bound_parity": true
         },
         "formats": {
           "nef": {
@@ -1140,6 +1316,23 @@
             "source_alternatives": 0,
             "emitted_constraints": 0,
             "ambiguous_groups": 0,
+            "token_constraints": 0,
+            "token_projection_omissions": 0,
+            "token_projection_statistics": {
+              "token_min_distance_angstrom": 4.0,
+              "token_max_distance_angstrom": 20.0,
+              "token_candidates": 0,
+              "exact_candidates": 0,
+              "collapsed_union_candidates": 0,
+              "unique_token_constraints_emitted": 0,
+              "same_token_omissions": 0,
+              "multi_token_union_omissions": 0,
+              "subminimum_adjustments": 0,
+              "above_maximum_omissions": 0,
+              "non_finite_bound_omissions": 0,
+              "duplicate_token_pair_merges": 0,
+              "token_projection_omissions": 0
+            },
             "rejection_reasons": {},
             "atom_topology_violations": 0,
             "resolved_model_cases": 0,
@@ -1155,6 +1348,23 @@
             "source_alternatives": 0,
             "emitted_constraints": 0,
             "ambiguous_groups": 0,
+            "token_constraints": 0,
+            "token_projection_omissions": 0,
+            "token_projection_statistics": {
+              "token_min_distance_angstrom": 4.0,
+              "token_max_distance_angstrom": 20.0,
+              "token_candidates": 0,
+              "exact_candidates": 0,
+              "collapsed_union_candidates": 0,
+              "unique_token_constraints_emitted": 0,
+              "same_token_omissions": 0,
+              "multi_token_union_omissions": 0,
+              "subminimum_adjustments": 0,
+              "above_maximum_omissions": 0,
+              "non_finite_bound_omissions": 0,
+              "duplicate_token_pair_merges": 0,
+              "token_projection_omissions": 0
+            },
             "rejection_reasons": {},
             "atom_topology_violations": 0,
             "resolved_model_cases": 0,
@@ -1177,7 +1387,15 @@
           "star_only_atom_pairs": 166,
           "common_pairs_with_different_bounds": 1754,
           "maximum_common_bound_delta_angstrom": 2.786172292936673,
-          "exact_pair_and_bound_parity": false
+          "exact_pair_and_bound_parity": false,
+          "nef_token_constraints": 678,
+          "star_token_constraints": 678,
+          "common_token_pairs": 678,
+          "nef_only_token_pairs": 0,
+          "star_only_token_pairs": 0,
+          "common_token_pairs_with_different_bounds": 271,
+          "maximum_common_token_bound_delta_angstrom": 2.1924387739628504,
+          "token_pair_and_bound_parity": false
         },
         "formats": {
           "nef": {
@@ -1185,6 +1403,23 @@
             "source_alternatives": 18740,
             "emitted_constraints": 3350,
             "ambiguous_groups": 292,
+            "token_constraints": 678,
+            "token_projection_omissions": 927,
+            "token_projection_statistics": {
+              "token_min_distance_angstrom": 4.0,
+              "token_max_distance_angstrom": 20.0,
+              "token_candidates": 2715,
+              "exact_candidates": 2506,
+              "collapsed_union_candidates": 209,
+              "unique_token_constraints_emitted": 678,
+              "same_token_omissions": 927,
+              "multi_token_union_omissions": 0,
+              "subminimum_adjustments": 0,
+              "above_maximum_omissions": 0,
+              "non_finite_bound_omissions": 0,
+              "duplicate_token_pair_merges": 2037,
+              "token_projection_omissions": 927
+            },
             "rejection_reasons": {
               "unresolved_atom_topology": 317,
               "same_heavy_parent_atom": 250,
@@ -1206,6 +1441,23 @@
             "source_alternatives": 8981,
             "emitted_constraints": 3516,
             "ambiguous_groups": 75,
+            "token_constraints": 678,
+            "token_projection_omissions": 912,
+            "token_projection_statistics": {
+              "token_min_distance_angstrom": 4.0,
+              "token_max_distance_angstrom": 20.0,
+              "token_candidates": 2679,
+              "exact_candidates": 2625,
+              "collapsed_union_candidates": 54,
+              "unique_token_constraints_emitted": 678,
+              "same_token_omissions": 912,
+              "multi_token_union_omissions": 0,
+              "subminimum_adjustments": 0,
+              "above_maximum_omissions": 0,
+              "non_finite_bound_omissions": 0,
+              "duplicate_token_pair_merges": 2001,
+              "token_projection_omissions": 912
+            },
             "rejection_reasons": {
               "unresolved_atom_topology": 138,
               "same_heavy_parent_atom": 60,
@@ -1233,7 +1485,15 @@
           "star_only_atom_pairs": 0,
           "common_pairs_with_different_bounds": 0,
           "maximum_common_bound_delta_angstrom": 0.0,
-          "exact_pair_and_bound_parity": true
+          "exact_pair_and_bound_parity": true,
+          "nef_token_constraints": 146,
+          "star_token_constraints": 146,
+          "common_token_pairs": 146,
+          "nef_only_token_pairs": 0,
+          "star_only_token_pairs": 0,
+          "common_token_pairs_with_different_bounds": 0,
+          "maximum_common_token_bound_delta_angstrom": 0.0,
+          "token_pair_and_bound_parity": true
         },
         "formats": {
           "nef": {
@@ -1241,6 +1501,23 @@
             "source_alternatives": 3386,
             "emitted_constraints": 456,
             "ambiguous_groups": 0,
+            "token_constraints": 146,
+            "token_projection_omissions": 190,
+            "token_projection_statistics": {
+              "token_min_distance_angstrom": 4.0,
+              "token_max_distance_angstrom": 20.0,
+              "token_candidates": 266,
+              "exact_candidates": 266,
+              "collapsed_union_candidates": 0,
+              "unique_token_constraints_emitted": 146,
+              "same_token_omissions": 190,
+              "multi_token_union_omissions": 0,
+              "subminimum_adjustments": 32,
+              "above_maximum_omissions": 0,
+              "non_finite_bound_omissions": 0,
+              "duplicate_token_pair_merges": 120,
+              "token_projection_omissions": 190
+            },
             "rejection_reasons": {
               "complex_restraint_combination_logic": 894,
               "same_heavy_parent_atom": 192,
@@ -1260,6 +1537,23 @@
             "source_alternatives": 4292,
             "emitted_constraints": 456,
             "ambiguous_groups": 0,
+            "token_constraints": 146,
+            "token_projection_omissions": 190,
+            "token_projection_statistics": {
+              "token_min_distance_angstrom": 4.0,
+              "token_max_distance_angstrom": 20.0,
+              "token_candidates": 266,
+              "exact_candidates": 266,
+              "collapsed_union_candidates": 0,
+              "unique_token_constraints_emitted": 146,
+              "same_token_omissions": 190,
+              "multi_token_union_omissions": 0,
+              "subminimum_adjustments": 32,
+              "above_maximum_omissions": 0,
+              "non_finite_bound_omissions": 0,
+              "duplicate_token_pair_merges": 120,
+              "token_projection_omissions": 190
+            },
             "rejection_reasons": {
               "complex_restraint_combination_logic": 894,
               "same_heavy_parent_atom": 48,
@@ -1286,7 +1580,15 @@
           "star_only_atom_pairs": 0,
           "common_pairs_with_different_bounds": 0,
           "maximum_common_bound_delta_angstrom": 0.0,
-          "exact_pair_and_bound_parity": true
+          "exact_pair_and_bound_parity": true,
+          "nef_token_constraints": 53,
+          "star_token_constraints": 53,
+          "common_token_pairs": 53,
+          "nef_only_token_pairs": 0,
+          "star_only_token_pairs": 0,
+          "common_token_pairs_with_different_bounds": 0,
+          "maximum_common_token_bound_delta_angstrom": 0.0,
+          "token_pair_and_bound_parity": true
         },
         "formats": {
           "nef": {
@@ -1294,6 +1596,23 @@
             "source_alternatives": 554,
             "emitted_constraints": 406,
             "ambiguous_groups": 0,
+            "token_constraints": 53,
+            "token_projection_omissions": 219,
+            "token_projection_statistics": {
+              "token_min_distance_angstrom": 4.0,
+              "token_max_distance_angstrom": 20.0,
+              "token_candidates": 187,
+              "exact_candidates": 187,
+              "collapsed_union_candidates": 0,
+              "unique_token_constraints_emitted": 53,
+              "same_token_omissions": 219,
+              "multi_token_union_omissions": 0,
+              "subminimum_adjustments": 24,
+              "above_maximum_omissions": 0,
+              "non_finite_bound_omissions": 0,
+              "duplicate_token_pair_merges": 134,
+              "token_projection_omissions": 219
+            },
             "rejection_reasons": {},
             "atom_topology_violations": 0,
             "resolved_model_cases": 6090,
@@ -1309,6 +1628,23 @@
             "source_alternatives": 554,
             "emitted_constraints": 406,
             "ambiguous_groups": 0,
+            "token_constraints": 53,
+            "token_projection_omissions": 219,
+            "token_projection_statistics": {
+              "token_min_distance_angstrom": 4.0,
+              "token_max_distance_angstrom": 20.0,
+              "token_candidates": 187,
+              "exact_candidates": 187,
+              "collapsed_union_candidates": 0,
+              "unique_token_constraints_emitted": 53,
+              "same_token_omissions": 219,
+              "multi_token_union_omissions": 0,
+              "subminimum_adjustments": 24,
+              "above_maximum_omissions": 0,
+              "non_finite_bound_omissions": 0,
+              "duplicate_token_pair_merges": 134,
+              "token_projection_omissions": 219
+            },
             "rejection_reasons": {},
             "atom_topology_violations": 0,
             "resolved_model_cases": 6090,
@@ -1331,7 +1667,15 @@
           "star_only_atom_pairs": 42,
           "common_pairs_with_different_bounds": 2,
           "maximum_common_bound_delta_angstrom": 2.653497421844449,
-          "exact_pair_and_bound_parity": false
+          "exact_pair_and_bound_parity": false,
+          "nef_token_constraints": 3,
+          "star_token_constraints": 32,
+          "common_token_pairs": 2,
+          "nef_only_token_pairs": 1,
+          "star_only_token_pairs": 30,
+          "common_token_pairs_with_different_bounds": 2,
+          "maximum_common_token_bound_delta_angstrom": 2.653497421844449,
+          "token_pair_and_bound_parity": false
         },
         "formats": {
           "nef": {
@@ -1339,6 +1683,23 @@
             "source_alternatives": 336,
             "emitted_constraints": 3,
             "ambiguous_groups": 0,
+            "token_constraints": 3,
+            "token_projection_omissions": 0,
+            "token_projection_statistics": {
+              "token_min_distance_angstrom": 4.0,
+              "token_max_distance_angstrom": 20.0,
+              "token_candidates": 3,
+              "exact_candidates": 3,
+              "collapsed_union_candidates": 0,
+              "unique_token_constraints_emitted": 3,
+              "same_token_omissions": 0,
+              "multi_token_union_omissions": 0,
+              "subminimum_adjustments": 0,
+              "above_maximum_omissions": 0,
+              "non_finite_bound_omissions": 0,
+              "duplicate_token_pair_merges": 0,
+              "token_projection_omissions": 0
+            },
             "rejection_reasons": {
               "sequence_residue_mismatch": 312
             },
@@ -1356,6 +1717,23 @@
             "source_alternatives": 60,
             "emitted_constraints": 44,
             "ambiguous_groups": 15,
+            "token_constraints": 32,
+            "token_projection_omissions": 0,
+            "token_projection_statistics": {
+              "token_min_distance_angstrom": 4.0,
+              "token_max_distance_angstrom": 20.0,
+              "token_candidates": 59,
+              "exact_candidates": 44,
+              "collapsed_union_candidates": 15,
+              "unique_token_constraints_emitted": 32,
+              "same_token_omissions": 0,
+              "multi_token_union_omissions": 0,
+              "subminimum_adjustments": 0,
+              "above_maximum_omissions": 0,
+              "non_finite_bound_omissions": 0,
+              "duplicate_token_pair_merges": 27,
+              "token_projection_omissions": 0
+            },
             "rejection_reasons": {},
             "atom_topology_violations": 0,
             "resolved_model_cases": 440,
@@ -1378,7 +1756,15 @@
           "star_only_atom_pairs": 0,
           "common_pairs_with_different_bounds": 0,
           "maximum_common_bound_delta_angstrom": 0.0,
-          "exact_pair_and_bound_parity": false
+          "exact_pair_and_bound_parity": false,
+          "nef_token_constraints": 399,
+          "star_token_constraints": 285,
+          "common_token_pairs": 285,
+          "nef_only_token_pairs": 114,
+          "star_only_token_pairs": 0,
+          "common_token_pairs_with_different_bounds": 72,
+          "maximum_common_token_bound_delta_angstrom": 2.13,
+          "token_pair_and_bound_parity": false
         },
         "formats": {
           "nef": {
@@ -1386,6 +1772,23 @@
             "source_alternatives": 4926,
             "emitted_constraints": 1578,
             "ambiguous_groups": 766,
+            "token_constraints": 399,
+            "token_projection_omissions": 482,
+            "token_projection_statistics": {
+              "token_min_distance_angstrom": 4.0,
+              "token_max_distance_angstrom": 20.0,
+              "token_candidates": 1862,
+              "exact_candidates": 1207,
+              "collapsed_union_candidates": 655,
+              "unique_token_constraints_emitted": 399,
+              "same_token_omissions": 481,
+              "multi_token_union_omissions": 1,
+              "subminimum_adjustments": 0,
+              "above_maximum_omissions": 0,
+              "non_finite_bound_omissions": 0,
+              "duplicate_token_pair_merges": 1463,
+              "token_projection_omissions": 482
+            },
             "rejection_reasons": {},
             "atom_topology_violations": 0,
             "resolved_model_cases": 31560,
@@ -1401,6 +1804,23 @@
             "source_alternatives": 8430,
             "emitted_constraints": 765,
             "ambiguous_groups": 0,
+            "token_constraints": 285,
+            "token_projection_omissions": 102,
+            "token_projection_statistics": {
+              "token_min_distance_angstrom": 4.0,
+              "token_max_distance_angstrom": 20.0,
+              "token_candidates": 663,
+              "exact_candidates": 663,
+              "collapsed_union_candidates": 0,
+              "unique_token_constraints_emitted": 285,
+              "same_token_omissions": 102,
+              "multi_token_union_omissions": 0,
+              "subminimum_adjustments": 0,
+              "above_maximum_omissions": 0,
+              "non_finite_bound_omissions": 0,
+              "duplicate_token_pair_merges": 378,
+              "token_projection_omissions": 102
+            },
             "rejection_reasons": {
               "unresolved_atom_topology": 7507,
               "partially_unprojectable_or_group": 2
@@ -1426,7 +1846,15 @@
           "star_only_atom_pairs": 3,
           "common_pairs_with_different_bounds": 0,
           "maximum_common_bound_delta_angstrom": 0.0,
-          "exact_pair_and_bound_parity": false
+          "exact_pair_and_bound_parity": false,
+          "nef_token_constraints": 54,
+          "star_token_constraints": 54,
+          "common_token_pairs": 54,
+          "nef_only_token_pairs": 0,
+          "star_only_token_pairs": 0,
+          "common_token_pairs_with_different_bounds": 0,
+          "maximum_common_token_bound_delta_angstrom": 0.0,
+          "token_pair_and_bound_parity": true
         },
         "formats": {
           "nef": {
@@ -1434,6 +1862,23 @@
             "source_alternatives": 100,
             "emitted_constraints": 53,
             "ambiguous_groups": 3,
+            "token_constraints": 54,
+            "token_projection_omissions": 0,
+            "token_projection_statistics": {
+              "token_min_distance_angstrom": 4.0,
+              "token_max_distance_angstrom": 20.0,
+              "token_candidates": 56,
+              "exact_candidates": 53,
+              "collapsed_union_candidates": 3,
+              "unique_token_constraints_emitted": 54,
+              "same_token_omissions": 0,
+              "multi_token_union_omissions": 0,
+              "subminimum_adjustments": 53,
+              "above_maximum_omissions": 0,
+              "non_finite_bound_omissions": 0,
+              "duplicate_token_pair_merges": 2,
+              "token_projection_omissions": 0
+            },
             "rejection_reasons": {},
             "atom_topology_violations": 0,
             "resolved_model_cases": 1060,
@@ -1449,6 +1894,23 @@
             "source_alternatives": 100,
             "emitted_constraints": 56,
             "ambiguous_groups": 0,
+            "token_constraints": 54,
+            "token_projection_omissions": 0,
+            "token_projection_statistics": {
+              "token_min_distance_angstrom": 4.0,
+              "token_max_distance_angstrom": 20.0,
+              "token_candidates": 56,
+              "exact_candidates": 56,
+              "collapsed_union_candidates": 0,
+              "unique_token_constraints_emitted": 54,
+              "same_token_omissions": 0,
+              "multi_token_union_omissions": 0,
+              "subminimum_adjustments": 53,
+              "above_maximum_omissions": 0,
+              "non_finite_bound_omissions": 0,
+              "duplicate_token_pair_merges": 2,
+              "token_projection_omissions": 0
+            },
             "rejection_reasons": {},
             "atom_topology_violations": 0,
             "resolved_model_cases": 1120,
@@ -1471,7 +1933,15 @@
           "star_only_atom_pairs": 7,
           "common_pairs_with_different_bounds": 96,
           "maximum_common_bound_delta_angstrom": 1.660000000000001,
-          "exact_pair_and_bound_parity": false
+          "exact_pair_and_bound_parity": false,
+          "nef_token_constraints": 440,
+          "star_token_constraints": 287,
+          "common_token_pairs": 287,
+          "nef_only_token_pairs": 153,
+          "star_only_token_pairs": 0,
+          "common_token_pairs_with_different_bounds": 82,
+          "maximum_common_token_bound_delta_angstrom": 2.4400000000000004,
+          "token_pair_and_bound_parity": false
         },
         "formats": {
           "nef": {
@@ -1479,6 +1949,23 @@
             "source_alternatives": 5020,
             "emitted_constraints": 1327,
             "ambiguous_groups": 727,
+            "token_constraints": 440,
+            "token_projection_omissions": 492,
+            "token_projection_statistics": {
+              "token_min_distance_angstrom": 4.0,
+              "token_max_distance_angstrom": 20.0,
+              "token_candidates": 1562,
+              "exact_candidates": 979,
+              "collapsed_union_candidates": 583,
+              "unique_token_constraints_emitted": 440,
+              "same_token_omissions": 492,
+              "multi_token_union_omissions": 0,
+              "subminimum_adjustments": 42,
+              "above_maximum_omissions": 0,
+              "non_finite_bound_omissions": 0,
+              "duplicate_token_pair_merges": 1122,
+              "token_projection_omissions": 492
+            },
             "rejection_reasons": {
               "missing_upper_bound": 168
             },
@@ -1496,6 +1983,23 @@
             "source_alternatives": 7718,
             "emitted_constraints": 703,
             "ambiguous_groups": 0,
+            "token_constraints": 287,
+            "token_projection_omissions": 145,
+            "token_projection_statistics": {
+              "token_min_distance_angstrom": 4.0,
+              "token_max_distance_angstrom": 20.0,
+              "token_candidates": 558,
+              "exact_candidates": 558,
+              "collapsed_union_candidates": 0,
+              "unique_token_constraints_emitted": 287,
+              "same_token_omissions": 145,
+              "multi_token_union_omissions": 0,
+              "subminimum_adjustments": 42,
+              "above_maximum_omissions": 0,
+              "non_finite_bound_omissions": 0,
+              "duplicate_token_pair_merges": 271,
+              "token_projection_omissions": 145
+            },
             "rejection_reasons": {
               "unresolved_atom_topology": 6569,
               "missing_upper_bound": 168

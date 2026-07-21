@@ -43,6 +43,8 @@ def _atom_priority(atom: gemmi.Atom) -> int:
 
 def load_structure(
     path: Path,
+    *,
+    heavy_atoms_only: bool = False,
 ) -> tuple[list[str], list[dict[AtomKey, Point]], list[dict[tuple[str, int], str]]]:
     structure = gemmi.read_structure(str(path))
     model_ids: list[str] = []
@@ -59,6 +61,8 @@ def load_structure(
                 residue_key = (chain.name, sequence_number)
                 names.setdefault(residue_key, residue.name.upper())
                 for atom in residue:
+                    if heavy_atoms_only and atom.element.is_hydrogen:
+                        continue
                     key = (chain.name, sequence_number, atom.name.strip())
                     priority = _atom_priority(atom)
                     if key in atoms and priority >= priorities[key]:

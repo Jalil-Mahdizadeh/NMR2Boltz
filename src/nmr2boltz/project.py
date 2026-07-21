@@ -21,6 +21,7 @@ from .star import (
     StarDataError,
     normalize_nmrstar_canonical_expansions,
 )
+from .token import project_token_constraints, require_valid_token_projection
 from .topology import (
     AtomSetChoice,
     TopologyLibrary,
@@ -364,6 +365,11 @@ def project_document(
     require_valid_emitted_atom_topology(report)
     require_valid_interchain_output(report)
     require_valid_intraresidue_output(report)
+    token_projection = project_token_constraints(report)
+    report.token_constraints = token_projection.constraints
+    report.token_projection_omissions = token_projection.omissions
+    report.token_projection_statistics = token_projection.statistics
+    require_valid_token_projection(report)
     return report
 
 

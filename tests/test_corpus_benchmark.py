@@ -33,13 +33,30 @@ def _constraint(atom1: BoltzAtom, atom2: BoltzAtom, distance: float) -> EmittedC
     )
 
 
+def _token(
+    chain1: str, index1: int, chain2: str, index2: int, distance: float
+) -> SimpleNamespace:
+    return SimpleNamespace(
+        token1=SimpleNamespace(chain=chain1, residue_index=index1),
+        token2=SimpleNamespace(chain=chain2, residue_index=index2),
+        max_distance=distance,
+    )
+
+
 def test_compare_reports_detects_pair_and_bound_differences():
     a = BoltzAtom("A", 1, "CA")
     b = BoltzAtom("A", 2, "CB")
     c = BoltzAtom("A", 3, "CG")
-    nef = SimpleNamespace(emitted_constraints=[_constraint(a, b, 5.0)])
+    nef = SimpleNamespace(
+        emitted_constraints=[_constraint(a, b, 5.0)],
+        token_constraints=[_token("A", 1, "A", 2, 5.0)],
+    )
     star = SimpleNamespace(
-        emitted_constraints=[_constraint(b, a, 5.5), _constraint(a, c, 7.0)]
+        emitted_constraints=[_constraint(b, a, 5.5), _constraint(a, c, 7.0)],
+        token_constraints=[
+            _token("A", 2, "A", 1, 5.5),
+            _token("A", 1, "A", 3, 7.0),
+        ],
     )
 
     result = compare_reports(nef, star)
@@ -49,6 +66,11 @@ def test_compare_reports_detects_pair_and_bound_differences():
     assert result["common_pairs_with_different_bounds"] == 1
     assert result["maximum_common_bound_delta_angstrom"] == 0.5
     assert result["exact_pair_and_bound_parity"] is False
+    assert result["common_token_pairs"] == 1
+    assert result["star_only_token_pairs"] == 1
+    assert result["common_token_pairs_with_different_bounds"] == 1
+    assert result["maximum_common_token_bound_delta_angstrom"] == 0.5
+    assert result["token_pair_and_bound_parity"] is False
 
 
 def test_benchmark_markdown_reports_exact_and_union_outputs():
@@ -61,12 +83,15 @@ def test_benchmark_markdown_reports_exact_and_union_outputs():
 
     rendered = _markdown(run)
 
-    assert "| Case | NEF exact | NEF unions | STAR exact | STAR unions |" in rendered
-    assert "| 43JX | 1716 | 16 | 1716 | 16 |" in rendered
+    assert "| Case | NEF exact | NEF unions | NEF tokens |" in rendered
+    assert "| 43JX | 1716 | 16 | 442 | 1716 | 16 | 442 |" in rendered
     assert "NEF: 12998 exact contacts and 2056 union groups" in rendered
     assert "NMR-STAR: 11829 exact contacts and 294 union groups" in rendered
+    assert "3347 NEF and 3109 NMR-STAR unique contacts" in rendered
+    assert "1855 collapsed-union candidates" in rendered
     assert "`atom_constraints_exact.yaml`" in rendered
     assert "`atom_constraints_union.yaml`" in rendered
+    assert "`token_constraints.yaml`" in rendered
     assert "Union alternatives are not treated as simultaneous contacts" in rendered
 
 
@@ -363,6 +388,23 @@ def _gate_run(missing_contacts: list[dict]) -> dict:
             "source_alternatives": 1,
             "emitted_constraints": 1,
             "ambiguous_groups": 0,
+            "token_constraints": 1,
+            "token_projection_omissions": 0,
+            "token_projection_statistics": {
+                "token_min_distance_angstrom": 4.0,
+                "token_max_distance_angstrom": 20.0,
+                "token_candidates": 1,
+                "exact_candidates": 1,
+                "collapsed_union_candidates": 0,
+                "unique_token_constraints_emitted": 1,
+                "same_token_omissions": 0,
+                "multi_token_union_omissions": 0,
+                "subminimum_adjustments": 0,
+                "above_maximum_omissions": 0,
+                "non_finite_bound_omissions": 0,
+                "duplicate_token_pair_merges": 0,
+                "token_projection_omissions": 0,
+            },
             "rejection_reasons": {},
             "atom_topology_validation": {
                 "checked_constraints": 1,
@@ -450,6 +492,21 @@ def test_fail_closed_gate_accepts_only_exact_reviewed_coordinate_set(tmp_path):
         }
 
 
+def test_gate_rejects_outdated_reviewed_baseline_schema(tmp_path):
+    run = _gate_run([])
+    baseline_payload = _baseline_payload(run)
+    baseline_payload["schema_version"] -= 1
+    baseline = tmp_path / "reviewed.json"
+    baseline.write_text(json.dumps(baseline_payload), encoding="utf-8")
+
+    gate = _evaluate_gate(run, baseline)
+
+    assert gate["status"] == "fail"
+    assert "reviewed_baseline_schema_mismatch" in {
+        failure["reason"] for failure in gate["failures"]
+    }
+
+
 def test_gate_remains_fail_closed_for_every_scientific_failure(tmp_path):
     run = _gate_run([])
     baseline = tmp_path / "reviewed.json"
@@ -488,6 +545,11 @@ def test_gate_remains_fail_closed_for_every_scientific_failure(tmp_path):
     changed_metric = copy.deepcopy(run)
     changed_metric["cases"][0]["formats"]["nef"]["emitted_constraints"] = 2
 
+    changed_token_metric = copy.deepcopy(run)
+    changed_token_metric["cases"][0]["formats"]["nef"][
+        "token_projection_statistics"
+    ]["unique_token_constraints_emitted"] = 2
+
     topology_violation = copy.deepcopy(run)
     topology_violation["cases"][0]["formats"]["nef"]["atom_topology_validation"][
         "violation_count"
@@ -499,6 +561,7 @@ def test_gate_remains_fail_closed_for_every_scientific_failure(tmp_path):
         (parser_bug, "parser_projection_bug"),
         (changed_audit, "unreviewed_discrepancy_change"),
         (changed_metric, "unreviewed_metric_change"),
+        (changed_token_metric, "unreviewed_metric_change"),
         (topology_violation, "emitted_atom_topology_violation"),
     )
     for changed_run, reason in expected:

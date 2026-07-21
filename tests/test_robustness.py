@@ -247,6 +247,8 @@ def test_output_bundle_failure_leaves_prior_directory_unchanged(
     destination.mkdir()
     old_exact = destination / "atom_constraints_exact.yaml"
     old_exact.write_text("old exact bundle\n", encoding="utf-8")
+    old_token = destination / "token_constraints.yaml"
+    old_token.write_text("old token bundle\n", encoding="utf-8")
     marker = destination / "keep.me"
     marker.write_text("prior output\n", encoding="utf-8")
 
@@ -259,6 +261,7 @@ def test_output_bundle_failure_leaves_prior_directory_unchanged(
         write_outputs(report, destination)
 
     assert old_exact.read_text(encoding="utf-8") == "old exact bundle\n"
+    assert old_token.read_text(encoding="utf-8") == "old token bundle\n"
     assert marker.read_text(encoding="utf-8") == "prior output\n"
     assert not (destination / "conversion_report.json").exists()
     assert not list(tmp_path.glob(".bundle.staging-*"))

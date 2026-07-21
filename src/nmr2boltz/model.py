@@ -37,6 +37,15 @@ class BoltzAtom:
         return f"{self.chain}:{self.residue_index}:{self.atom_name}"
 
 
+@dataclass(frozen=True, order=True)
+class BoltzToken:
+    chain: str
+    residue_index: int
+
+    def display(self) -> str:
+        return f"{self.chain}:{self.residue_index}"
+
+
 @dataclass
 class SequenceRecord:
     source_chain: str
@@ -228,6 +237,42 @@ class Rejection:
 
 
 @dataclass
+class TokenContribution:
+    source_kind: str
+    source_groups: list[str]
+    raw_bound: float
+    candidate_bound: float
+    adjustments: list[str] = field(default_factory=list)
+    provenance: dict[str, Any] = field(default_factory=dict)
+
+
+@dataclass
+class TokenConstraint:
+    token1: BoltzToken
+    token2: BoltzToken
+    max_distance: float
+    raw_candidate_bounds: list[float]
+    source_groups: list[str]
+    source_kinds: list[str]
+    adjustments: list[str] = field(default_factory=list)
+    contributions: list[TokenContribution] = field(default_factory=list)
+
+    @property
+    def pair_key(self) -> tuple[BoltzToken, BoltzToken]:
+        return tuple(sorted((self.token1, self.token2)))  # type: ignore[return-value]
+
+
+@dataclass
+class TokenProjectionOmission:
+    source_kind: str
+    source_groups: list[str]
+    reason: str
+    details: str
+    raw_bound: float | None = None
+    provenance: dict[str, Any] = field(default_factory=dict)
+
+
+@dataclass
 class ConversionReport:
     input_file: str
     detected_format: str
@@ -241,6 +286,9 @@ class ConversionReport:
     source_restraint_groups: list[RestraintGroup] = field(default_factory=list)
     target_component_topologies: dict[str, dict[str, Any]] = field(default_factory=dict)
     target_validation: dict[str, Any] | None = None
+    token_constraints: list[TokenConstraint] = field(default_factory=list)
+    token_projection_omissions: list[TokenProjectionOmission] = field(default_factory=list)
+    token_projection_statistics: dict[str, Any] = field(default_factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
         payload = asdict(self)

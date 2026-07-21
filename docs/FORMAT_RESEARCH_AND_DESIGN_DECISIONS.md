@@ -136,6 +136,10 @@ A non-null combination identifier may encode logic across several restraint IDs.
 **Decision:** recommended BoltzUI extension. The minimal metadata-free
 `atom_contact_union` schema is emitted separately in
 `atom_constraints_union.yaml`; full provenance remains in the audit outputs.
+The separate native `token_constraints.yaml` never flattens a multi-token OR.
+It may collapse a union only when every alternative projects to one non-self
+token pair, using the maximum alternative bound; that adds coarse token
+conditioning while the union atom potential remains explicitly disjunctive.
 
 ## 4.7 Full Bayesian restraint model
 
@@ -159,7 +163,10 @@ The selected method is robust in the narrow but important sense that every emitt
 6. Boltz range adaptation never tightens the bound;
 7. all discarded or ambiguous information remains available for review.
 
-It is also deliberately modular. Sequence mapping, topology, source parsing, projection, and output can be tested independently.
+It is also deliberately modular. Sequence mapping, topology, source parsing,
+heavy-atom projection, token projection, and atomic output can be tested
+independently. Token projection consumes canonical resolved exact/union objects,
+not a second parser or generated YAML.
 
 ## 6. BMRB/wwPDB retrieval considerations
 
@@ -183,7 +190,8 @@ The converter itself does not silently download entries or CCD components. This 
 5. Repeat with the scientifically confirmed averaging convention.
 6. Validate the source-to-Boltz sequence map.
 7. Select a high-confidence long-range subset if the full set is redundant.
-8. Run unrestrained, safe-restraint, and ambiguity-aware/hypothesis ensembles.
+8. Run unrestrained, atom-only, token-only, hybrid, and
+   ambiguity-aware/hypothesis ensembles as explicitly distinct arms.
 9. Score original restraints after hydrogen reconstruction.
 10. Report sensitivity to policy choices rather than one best-looking model.
 

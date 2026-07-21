@@ -97,12 +97,41 @@ def _constraint_key(constraint: Any) -> tuple[tuple[str, int, str], tuple[str, i
     return tuple(sorted(ends))  # type: ignore[return-value]
 
 
+def _token_key(constraint: Any) -> tuple[tuple[str, int], tuple[str, int]]:
+    ends = (
+        (constraint.token1.chain, constraint.token1.residue_index),
+        (constraint.token2.chain, constraint.token2.residue_index),
+    )
+    return tuple(sorted(ends))  # type: ignore[return-value]
+
+
 def compare_reports(nef_report: Any, star_report: Any) -> dict[str, Any]:
-    nef = {_constraint_key(item): float(item.max_distance) for item in nef_report.emitted_constraints}
-    star = {_constraint_key(item): float(item.max_distance) for item in star_report.emitted_constraints}
+    nef = {
+        _constraint_key(item): float(item.max_distance)
+        for item in nef_report.emitted_constraints
+    }
+    star = {
+        _constraint_key(item): float(item.max_distance)
+        for item in star_report.emitted_constraints
+    }
     common = set(nef) & set(star)
     bound_deltas = [abs(nef[key] - star[key]) for key in common]
     different = [delta for delta in bound_deltas if delta > 1e-6]
+    nef_tokens = {
+        _token_key(item): float(item.max_distance)
+        for item in nef_report.token_constraints
+    }
+    star_tokens = {
+        _token_key(item): float(item.max_distance)
+        for item in star_report.token_constraints
+    }
+    common_tokens = set(nef_tokens) & set(star_tokens)
+    token_bound_deltas = [
+        abs(nef_tokens[key] - star_tokens[key]) for key in common_tokens
+    ]
+    different_token_bounds = [
+        delta for delta in token_bound_deltas if delta > 1e-6
+    ]
     return {
         "nef_constraints": len(nef),
         "star_constraints": len(star),
@@ -113,6 +142,18 @@ def compare_reports(nef_report: Any, star_report: Any) -> dict[str, Any]:
         "maximum_common_bound_delta_angstrom": max(bound_deltas) if bound_deltas else None,
         "exact_pair_and_bound_parity": (
             set(nef) == set(star) and not different
+        ),
+        "nef_token_constraints": len(nef_tokens),
+        "star_token_constraints": len(star_tokens),
+        "common_token_pairs": len(common_tokens),
+        "nef_only_token_pairs": len(set(nef_tokens) - set(star_tokens)),
+        "star_only_token_pairs": len(set(star_tokens) - set(nef_tokens)),
+        "common_token_pairs_with_different_bounds": len(different_token_bounds),
+        "maximum_common_token_bound_delta_angstrom": (
+            max(token_bound_deltas) if token_bound_deltas else None
+        ),
+        "token_pair_and_bound_parity": (
+            set(nef_tokens) == set(star_tokens) and not different_token_bounds
         ),
     }
 
@@ -205,6 +246,9 @@ def _conversion_summary(report: Any, coordinates: dict[str, Any]) -> dict[str, A
         "source_alternatives": int(report.statistics["source_alternatives_read"]),
         "emitted_constraints": len(report.emitted_constraints),
         "ambiguous_groups": len(report.ambiguous_groups),
+        "token_constraints": len(report.token_constraints),
+        "token_projection_omissions": len(report.token_projection_omissions),
+        "token_projection_statistics": dict(report.token_projection_statistics),
         "rejection_records": len(report.rejections),
         "rejection_reasons": dict(reasons),
         "sequence_records": len(report.sequence_map),
@@ -296,6 +340,15 @@ def _aggregate(cases: list[dict[str, Any]]) -> dict[str, Any]:
             and case.get("formats", {}).get("nef", {}).get("has_distance_restraints", False)
             for case in cases
         ),
+        "token_format_parity_cases": sum(
+            case.get("format_parity", {}).get("token_pair_and_bound_parity", False)
+            for case in cases
+        ),
+        "token_positive_distance_parity_cases": sum(
+            case.get("format_parity", {}).get("token_pair_and_bound_parity", False)
+            and case.get("formats", {}).get("nef", {}).get("has_distance_restraints", False)
+            for case in cases
+        ),
         "formats": {},
     }
     for format_name in ("nef", "star"):
@@ -320,6 +373,43 @@ def _aggregate(cases: list[dict[str, Any]]) -> dict[str, Any]:
         aggregate["formats"][format_name] = {
             "emitted_constraints": sum(item["emitted_constraints"] for item in conversions),
             "ambiguous_groups": sum(item["ambiguous_groups"] for item in conversions),
+            "token_constraints": sum(item["token_constraints"] for item in conversions),
+            "token_candidates": sum(
+                item["token_projection_statistics"]["token_candidates"]
+                for item in conversions
+            ),
+            "exact_token_candidates": sum(
+                item["token_projection_statistics"]["exact_candidates"]
+                for item in conversions
+            ),
+            "collapsed_union_token_candidates": sum(
+                item["token_projection_statistics"]["collapsed_union_candidates"]
+                for item in conversions
+            ),
+            "token_projection_omissions": sum(
+                item["token_projection_statistics"]["token_projection_omissions"]
+                for item in conversions
+            ),
+            "same_token_omissions": sum(
+                item["token_projection_statistics"]["same_token_omissions"]
+                for item in conversions
+            ),
+            "multi_token_union_omissions": sum(
+                item["token_projection_statistics"]["multi_token_union_omissions"]
+                for item in conversions
+            ),
+            "subminimum_token_adjustments": sum(
+                item["token_projection_statistics"]["subminimum_adjustments"]
+                for item in conversions
+            ),
+            "above_maximum_token_omissions": sum(
+                item["token_projection_statistics"]["above_maximum_omissions"]
+                for item in conversions
+            ),
+            "duplicate_token_pair_merges": sum(
+                item["token_projection_statistics"]["duplicate_token_pair_merges"]
+                for item in conversions
+            ),
             "resolved_model_cases": satisfied + violated,
             "satisfied_model_cases": satisfied,
             "violated_model_cases": violated,
@@ -369,6 +459,13 @@ def _metric_snapshot(run: dict[str, Any]) -> dict[str, Any]:
                     "source_alternatives": conversion["source_alternatives"],
                     "emitted_constraints": conversion["emitted_constraints"],
                     "ambiguous_groups": conversion["ambiguous_groups"],
+                    "token_constraints": conversion["token_constraints"],
+                    "token_projection_omissions": conversion[
+                        "token_projection_omissions"
+                    ],
+                    "token_projection_statistics": conversion[
+                        "token_projection_statistics"
+                    ],
                     "rejection_reasons": conversion["rejection_reasons"],
                     "atom_topology_violations": conversion[
                         "atom_topology_validation"
@@ -435,7 +532,7 @@ def _missing_coordinate_review(run: dict[str, Any]) -> dict[str, Any]:
 def _baseline_payload(run: dict[str, Any]) -> dict[str, Any]:
     audit = run["discrepancy_audit"]
     return {
-        "schema_version": 3,
+        "schema_version": 4,
         "audit_review": {
             "digest_sha256": audit["digest_sha256"],
             "row_count": audit["row_count"],
@@ -485,6 +582,14 @@ def _evaluate_gate(run: dict[str, Any], baseline_path: Path) -> dict[str, Any]:
     else:
         baseline = json.loads(baseline_path.read_text(encoding="utf-8"))
         current = _baseline_payload(run)
+        if baseline.get("schema_version") != current["schema_version"]:
+            failures.append(
+                {
+                    "reason": "reviewed_baseline_schema_mismatch",
+                    "expected": current["schema_version"],
+                    "observed": baseline.get("schema_version"),
+                }
+            )
         if baseline.get("audit_review") != current["audit_review"]:
             failures.append(
                 {
@@ -539,14 +644,14 @@ def _markdown(run: dict[str, Any]) -> str:
         "",
         "All 12 deposited ensembles were converted from both NEF and NMR-STAR with conservative defaults, then audited against every PDB conformer using sequence-aware coordinate alignment.",
         "",
-        "| Case | NEF exact | NEF unions | STAR exact | STAR unions | NEF PDB satisfaction | STAR PDB satisfaction | Pair/bound parity | Implication failures |",
-        "|---|---:|---:|---:|---:|---:|---:|---:|---:|",
+        "| Case | NEF exact | NEF unions | NEF tokens | STAR exact | STAR unions | STAR tokens | NEF PDB satisfaction | STAR PDB satisfaction | Atom parity | Token parity | Implication failures |",
+        "|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
     ]
     for case in run["cases"]:
         if case["status"] != "pass":
             lines.append(
-                f"| {case['case_id']} | error | error | error | error | "
-                "N/A | N/A | no | N/A |"
+                f"| {case['case_id']} | error | error | error | error | error | error | "
+                "N/A | N/A | no | no | N/A |"
             )
             continue
         nef = case["formats"]["nef"]
@@ -559,11 +664,13 @@ def _markdown(run: dict[str, Any]) -> str:
         )
         lines.append(
             f"| {case['case_id']} | {nef['emitted_constraints']} | "
-            f"{nef['ambiguous_groups']} | {star['emitted_constraints']} | "
-            f"{star['ambiguous_groups']} | "
+            f"{nef['ambiguous_groups']} | {nef['token_constraints']} | "
+            f"{star['emitted_constraints']} | {star['ambiguous_groups']} | "
+            f"{star['token_constraints']} | "
             f"{_percent(nef_heavy['satisfaction_fraction_of_resolved'])} | "
             f"{_percent(star_heavy['satisfaction_fraction_of_resolved'])} | "
-            f"{'yes' if case['format_parity']['exact_pair_and_bound_parity'] else 'no'} | {failures} |"
+            f"{'yes' if case['format_parity']['exact_pair_and_bound_parity'] else 'no'} | "
+            f"{'yes' if case['format_parity']['token_pair_and_bound_parity'] else 'no'} | {failures} |"
         )
     nef = aggregate["formats"]["nef"]
     star = aggregate["formats"]["star"]
@@ -575,15 +682,19 @@ def _markdown(run: dict[str, Any]) -> str:
             f"- {aggregate['successful_conversions']}/24 conversions completed; {aggregate['no_distance_conversions']} are valid empty distance conversions for 8S8O.",
             f"- NEF: {nef['emitted_constraints']} exact contacts and {nef['ambiguous_groups']} union groups; {_percent(nef['satisfaction_fraction_of_resolved'])} resolved PDB satisfaction for exact contacts.",
             f"- NMR-STAR: {star['emitted_constraints']} exact contacts and {star['ambiguous_groups']} union groups; {_percent(star['satisfaction_fraction_of_resolved'])} resolved PDB satisfaction for exact contacts.",
+            f"- Token projection: {nef['token_constraints']} NEF and {star['token_constraints']} NMR-STAR unique contacts from {nef['token_candidates'] + star['token_candidates']} accepted candidates, including {nef['collapsed_union_token_candidates'] + star['collapsed_union_token_candidates']} collapsed-union candidates.",
+            f"- Token audit: {nef['token_projection_omissions'] + star['token_projection_omissions']} projection omissions, {nef['subminimum_token_adjustments'] + star['subminimum_token_adjustments']} sub-4 Å adjustments, {nef['above_maximum_token_omissions'] + star['above_maximum_token_omissions']} over-20 Å omissions, and {nef['duplicate_token_pair_merges'] + star['duplicate_token_pair_merges']} duplicate-pair merges.",
             f"- Conservative implication failures: {nef['implication_failures'] + star['implication_failures']} across {nef['implication_antecedent_cases'] + star['implication_antecedent_cases']} satisfied-antecedent cases.",
             "- Final executable-topology violations: 0; every emitted endpoint is proven by its mapped component dictionary.",
             f"- Exact NEF/STAR pair-and-bound parity: {aggregate['exact_positive_distance_parity_cases']}/11 positive-distance cases; 8S8O also has exact empty-output parity.",
+            f"- Token NEF/STAR pair-and-bound parity: {aggregate['token_positive_distance_parity_cases']}/11 positive-distance cases; 8S8O also has token empty-output parity.",
             "",
             "## Constraint output split",
             "",
             "- `atom_constraints_exact.yaml` contains only non-ambiguous `atom_contact` constraints counted in the `exact` columns.",
             "- `atom_constraints_union.yaml` contains only ambiguous `atom_contact_union` OR groups counted in the `unions` columns; every alternative retains its own conservatively rounded bound.",
-            "- Both files are written for every conversion, including explicit empty `constraints: []` files. Exact contacts never appear in the union file, and union groups never appear in the exact file.",
+            "- `token_constraints.yaml` is a standalone coarse projection counted in the `tokens` columns. Exact-derived contacts and safely collapsed same-token-pair unions are merged conjunctively; multi-token OR groups remain omitted intact.",
+            "- All three files are written for every conversion, including explicit empty `constraints: []` files. Exact contacts never appear in the union file, and union groups never appear in the exact file.",
             "- PDB satisfaction and implication denominators cover exact contacts only. Union alternatives are not treated as simultaneous contacts because that would convert OR semantics into AND.",
             "",
             "## Row-level format discrepancy audit",
@@ -643,7 +754,7 @@ def run_corpus(
                 }
             )
     run = {
-        "schema_version": 3,
+        "schema_version": 4,
         "input_directory": _portable_path(input_directory),
         "output_directory": _portable_path(output_directory),
         "settings": {

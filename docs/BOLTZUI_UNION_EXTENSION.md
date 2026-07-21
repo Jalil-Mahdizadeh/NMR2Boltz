@@ -14,6 +14,13 @@ The existing `atom_contact` schema represents one exact pair. Writing both alter
 
 The Boltz potential layer already has the useful abstraction of a `union_index`: multiple terms with the same union index are combined as one soft alternative group. The clean extension is therefore to expose that grouping in the BoltzUI input schema and preserve it through preprocessing.
 
+NMR2Boltz's standalone `token_constraints.yaml` follows the same logical
+boundary. It emits one ordinary token contact only when every union alternative
+maps to the same non-self token pair, using the maximum alternative bound. A
+multi-token or self-token union is omitted in full. This coarse projection is
+an optional experimental arm and does not replace the disjunctive atom-level
+potential proposed here.
+
 ## Proposed YAML schema
 
 ```yaml

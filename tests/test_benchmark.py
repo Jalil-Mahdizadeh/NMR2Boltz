@@ -63,11 +63,14 @@ def test_benchmark_manifest_runs_conversion_and_writes_auditable_summary(tmp_pat
     assert (output / "fixture-nef" / "conversion_report.json").is_file()
     assert (output / "fixture-nef" / "atom_constraints_exact.yaml").is_file()
     assert (output / "fixture-nef" / "atom_constraints_union.yaml").is_file()
+    assert (output / "fixture-nef" / "token_constraints.yaml").is_file()
+    assert (output / "fixture-nef" / "token_constraints.tsv").is_file()
     assert not (output / "fixture-nef" / "boltz_constraints.yaml").exists()
     assert not (output / "fixture-nef" / "proposed_atom_contact_unions.yaml").exists()
     summary = json.loads((output / "benchmark_summary.json").read_text(encoding="utf-8"))
     assert summary["status"] == "pass"
     assert summary["cases"][0]["metrics"]["emitted_constraints"] > 0
+    assert summary["cases"][0]["metrics"]["token_constraints"] > 0
 
 
 def test_benchmark_checksum_mismatch_is_recorded_as_case_failure(tmp_path):

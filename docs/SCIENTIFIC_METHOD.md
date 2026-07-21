@@ -28,7 +28,7 @@ model-selection workflow.
 
 The method is intentionally one-sided: it is designed not to make an experimental upper bound tighter accidentally. It does not claim that the resulting heavy-atom contact is information-equivalent to the original NMR restraint.
 
-Validation record: this document describes toolkit version 0.1.0 as audited on 2026-07-17. The executed software and mathematical validation is reported in Section 11.5. That validation establishes converter behavior, paired-format differences, and target-schema compatibility; it does not establish the empirical accuracy of Boltz predictions on experimental benchmark structures.
+Validation record: this document describes toolkit version 0.1.0 as audited on 2026-07-21. The executed software and mathematical validation is reported in Section 11.7. That validation establishes converter behavior, paired-format differences, and target-schema compatibility; it does not establish the empirical accuracy of Boltz predictions on experimental benchmark structures.
 
 ---
 
@@ -170,6 +170,12 @@ By contrast, independent restraint groups are conjunctive. If two independent re
 This max-inside-OR/min-across-AND rule is implemented explicitly.
 
 Completeness is also required. If any source OR alternative, or any explicit pair within an atom-set branch, cannot be projected conservatively, the converter emits none of the remaining alternatives from that group. Keeping only the successful alternatives would narrow the disjunction and strengthen the source restraint.
+
+Token projection is a second view of this same normalized, sequence-mapped,
+topology-validated representation. It does not parse NEF/NMR-STAR again and
+does not infer semantics from either atom YAML file. Token-only omissions are
+kept separate from general rejections because the corresponding atom
+constraint or union may remain valid.
 
 ---
 
@@ -466,6 +472,58 @@ with a smaller, stronger one.
 
 Calculations use finite Python floating-point values. Executable YAML and tabular upper bounds are rounded upward to six decimal places. Upward rounding can weaken an upper bound by less than one millionth of an angstrom but can never tighten it. Full unrounded formula inputs remain in JSON provenance.
 
+### 9.4 Token-domain projection
+
+For the standalone native token-contact arm, each heavy atom
+`(chain, residue_index, atom_name)` is projected to the polymer token
+`(chain, residue_index)`, and the pair is canonicalized as unordered. A
+singleton exact constraint produces one candidate unless both endpoints are the
+same token.
+
+For an atom-level OR group, every alternative is projected before any token
+contact is emitted. If all alternatives produce the same non-self token pair,
+the union collapses exactly at token resolution:
+
+\[
+(D_1 \le u_1) \lor \cdots \lor (D_K \le u_K)
+\longrightarrow D_{token} \le \max_i u_i.
+\]
+
+If alternatives span multiple token pairs, contain a self-token alternative,
+or mix self and non-self pairs, the complete union is omitted from token
+output. Emitting several ordinary contacts would replace OR with AND. Once
+each restraint group has produced at most one candidate, candidates from
+independent groups are conjunctive and identical/reversed token pairs merge
+with the minimum bound. This merge crosses exact-derived and
+collapsed-union-derived candidates.
+
+Native token contacts have a fixed finite interval of 4-20 A. Raising a
+sub-4 A projected heavy-atom bound to 4 A weakens it and is audited as
+`raised_to_token_minimum`. A value above 20 A is never reduced; the complete
+applicable semantic unit is omitted from token output and recorded separately.
+Consequently, native token contacts cannot exactly reproduce sub-4 A token
+thresholds induced internally by exact atom constraints in the patched
+BoltzUI.
+
+The executable schema is deliberately minimal:
+
+```yaml
+constraints:
+- contact:
+    token1: [A, 12]
+    token2: [B, 44]
+    max_distance: 6.720000
+    force: false
+```
+
+`force: false` avoids introducing an additional forced token-contact potential.
+Exact atom constraints already activate token conditioning in the patched
+BoltzUI, so loading the exact and token files together is partly redundant.
+Collapsed unions are the exception of interest: they add token conditioning
+that union atom constraints intentionally do not add. Token-only, atom-only,
+and hybrid calculations must therefore be treated as distinct experimental
+arms.
+
 ---
 
 ## 10. Ambiguous groups and recommended execution strategies
@@ -635,9 +693,9 @@ CSV digests and per-entry counts are stored in
 
 ### 11.7 Executed validation record
 
-The following checks were executed on 2026-07-20 against the current source tree:
+The following checks were executed on 2026-07-21 against the current source tree:
 
-- all 138 Pytest regression, format, topology, logic, target-validation,
+- all 154 Pytest regression, format, topology, logic, target-validation,
   ensemble-alignment, constraint-serialization, and robustness tests passed;
 - Python byte compilation passed for source, tests, and the stress harness;
 - 100,000 randomized sum-r6 implication cases and 100,000 constructive triangle-inequality cases passed in the final Docker image;
@@ -649,6 +707,14 @@ The following checks were executed on 2026-07-20 against the current source tree
 - source residue identities are checked against the resolved sequence record before topology lookup;
 - every executable atom is proven against its mapped component both before
   deduplication and again before output serialization;
+- token projection tests cover exact and reversed pairs, same-token omission,
+  maximum-within-OR collapse, complete multi-token/self-token OR omission,
+  minimum-across-independent exact/collapsed-union candidates, fixed 4-20 A
+  compatibility, audits, deterministic YAML/TSV, atomic rollback, and final
+  pre-commit invariants;
+- the configured 12-entry gate passed all 24 conversions, all 48 regenerated
+  exact/union YAML files were byte-identical to the committed corpus outputs,
+  and every conversion produced token YAML and TSV artifacts;
 - the inter-chain-only path is exercised for NEF and NMR-STAR protein,
   DNA, and RNA chains, including mapped-chain identity, exact contacts,
   all-inter-chain unions, mixed-scope union quarantine, and the final writer
@@ -743,6 +809,9 @@ Every run writes:
 - X-H offset and final projected value;
 - ambiguity and rejection reasons;
 - Boltz min/max adjustments.
+- token candidates, collapsed unions, separately classified token omissions,
+  fixed-range adjustments, independent-pair merges, and contribution
+  provenance.
 
 The JSON report is intended to be the primary reproducibility object. The
 compact YAML is only the execution artifact. All artifacts are first completed
@@ -805,5 +874,15 @@ else:
     retain the OR group; do not emit every alternative
 merge the same heavy pair across independent groups using min(U_parent)
 raise values below Boltz minimum; never clip values above Boltz maximum
-write safe YAML plus complete audit, ambiguity, rejection, and mapping files
+from the resolved exact and union objects, project atom endpoints to tokens
+for each exact constraint:
+    omit a self-token pair; otherwise form one token candidate
+for each union group:
+    omit the complete group if any alternative is self-token
+    if alternatives span token pairs, omit the complete group
+    otherwise collapse to one candidate with max(alternative bound)
+raise token candidates below 4 A; omit semantic units above 20 A
+merge equal/reversed token pairs across independent candidates using min(bound)
+validate token existence, non-self canonical uniqueness, range, and ordering
+write exact, union, and token YAML plus complete audit and mapping files atomically
 ```

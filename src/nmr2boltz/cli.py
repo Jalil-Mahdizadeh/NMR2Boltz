@@ -280,6 +280,7 @@ def command_convert(args: argparse.Namespace) -> int:
     print(f"Restraint groups read: {report.statistics['restraint_groups_read']}")
     print(f"Exact atom constraints emitted: {len(report.emitted_constraints)}")
     print(f"Atom-contact union groups emitted: {len(report.ambiguous_groups)}")
+    print(f"Token contacts emitted: {len(report.token_constraints)}")
     if args.exclude_intrachain:
         print(
             "Intrachain restraint groups excluded: "

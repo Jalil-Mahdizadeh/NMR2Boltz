@@ -18,6 +18,8 @@ benchmark/output/
     nef/
       conversion_report.json
       coordinate_summary.json
+      token_constraints.yaml
+      token_constraints.tsv
       sequences.fasta
       ...
     star/
@@ -53,6 +55,26 @@ constraints would change OR semantics. See
 [`distance_check/README.md`](distance_check/README.md) for current counts,
 scientific limitations, and artifact digests.
 
+The corresponding token-contact audit is generated in the production Docker
+image:
+
+```bash
+mkdir -p benchmark/distance_check_token
+docker run --rm --network none --read-only \
+  -v "$PWD:/work:ro" \
+  -v "$PWD/benchmark/distance_check_token:/output" \
+  --entrypoint python -w /work nmr2boltz:latest \
+  validation/distance_check_token.py benchmark/input \
+  --conversion-output benchmark/output --output-directory /output
+```
+
+This writes one CSV per PDB ID under `distance_check_token/`. Each row is the
+union of the NEF- and NMR-STAR-emitted residue pairs, retaining separate format
+bounds. Every model column contains the minimum distance between any heavy atom
+in the two residues. See
+[`distance_check_token/README.md`](distance_check_token/README.md) for current
+counts, missing-coordinate totals, and artifact digests.
+
 The runner uses conservative defaults (`sum-r6`, explicit upper bounds only,
 and pseudoatom rejection) and evaluates every deposited conformer with a 0.01 Å
 coordinate tolerance. The PDB sequence is aligned to Boltz one-based positions,
@@ -69,5 +91,8 @@ metric changes, and changes to the exact reviewed missing-coordinate set all
 produce a nonzero exit. The reviewed set contains full contact identities,
 bounds, source provenance, and a SHA-256 digest rather than a count-only waiver.
 Audit files are still written on failure so the cause remains inspectable.
-Baseline replacement requires the explicit `--write-reviewed-baseline` flag
-and should only follow review of every changed row and metric.
+The schema-version-4 benchmark summary and reviewed baseline also pin token
+candidate, emitted-contact, omission, adjustment, duplicate-merge, and
+NEF/NMR-STAR token-pair parity metrics. Baseline replacement requires the
+explicit `--write-reviewed-baseline` flag and should only follow review of
+every changed row and metric.

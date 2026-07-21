@@ -120,11 +120,13 @@ def test_output_bundle(tmp_path):
     assert (tmp_path / "atom_constraints_exact.yaml").is_file()
     assert (tmp_path / "conversion_report.json").is_file()
     assert (tmp_path / "atom_constraints_union.yaml").is_file()
+    assert (tmp_path / "token_constraints.yaml").is_file()
+    assert (tmp_path / "token_constraints.tsv").is_file()
     assert not (tmp_path / "boltz_constraints.yaml").exists()
     assert not (tmp_path / "proposed_atom_contact_unions.yaml").exists()
     assert (tmp_path / "sequences.fasta").read_text(encoding="utf-8") == ">A\nVAYLG\n"
     assert (tmp_path / "hypotheses" / "manifest.json").is_file()
-    assert len(paths) >= 10
+    assert len(paths) >= 12
 
 
 def test_sequence_only_nef_produces_empty_conversion(tmp_path):

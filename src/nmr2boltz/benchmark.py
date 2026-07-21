@@ -46,6 +46,9 @@ _METRIC_KEYS = {
     "safe_groups_before_pair_deduplication",
     "emitted_constraints",
     "ambiguous_groups",
+    "token_candidates",
+    "token_constraints",
+    "token_projection_omissions",
     "rejection_records",
     "sequence_records",
     "target_validation_errors",
@@ -189,6 +192,11 @@ def _case_metrics(report: Any, target: TargetValidationResult | None) -> dict[st
         ),
         "emitted_constraints": len(report.emitted_constraints),
         "ambiguous_groups": len(report.ambiguous_groups),
+        "token_candidates": int(
+            report.token_projection_statistics.get("token_candidates", 0)
+        ),
+        "token_constraints": len(report.token_constraints),
+        "token_projection_omissions": len(report.token_projection_omissions),
         "rejection_records": len(report.rejections),
         "sequence_records": len(report.sequence_map),
         "target_validation_errors": len(target.errors) if target else 0,

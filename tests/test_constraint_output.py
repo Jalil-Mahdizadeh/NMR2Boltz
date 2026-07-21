@@ -80,11 +80,13 @@ def test_empty_constraint_files_are_explicit_empty_lists(tmp_path):
     report = _report()
     report.emitted_constraints = []
     report.ambiguous_groups = []
+    report.token_constraints = []
 
     write_outputs(report, tmp_path)
 
     assert (tmp_path / "atom_constraints_exact.yaml").read_text() == "constraints: []\n"
     assert (tmp_path / "atom_constraints_union.yaml").read_text() == "constraints: []\n"
+    assert (tmp_path / "token_constraints.yaml").read_text() == "constraints: []\n"
 
 
 def test_union_preserves_per_alternative_bounds_with_outward_six_decimal_format(tmp_path):

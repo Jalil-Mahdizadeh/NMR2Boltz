@@ -2150,6 +2150,11 @@
     "intrachain_groups_filtered": 0,
     "projected_alternatives_removed_by_intrachain_filter": 0,
     "mixed_chain_scope_groups_filtered": 0,
+    "intraresidue_groups_filtered": 0,
+    "projected_alternatives_removed_by_intraresidue_filter": 0,
+    "mixed_intraresidue_interresidue_groups_filtered": 0,
+    "union_alternatives_raised_to_boltz_minimum": 0,
+    "union_groups_quarantined_above_boltz_maximum": 0,
     "emitted_atom_topology_violations": 0
   },
   "source_restraint_groups": [],
@@ -2173,7 +2178,8 @@
         "N",
         "O",
         "OXT"
-      ]
+      ],
+      "hydrogen_parent_conflicts": {}
     },
     "ARG": {
       "available": true,
@@ -2208,7 +2214,8 @@
         "NH2",
         "O",
         "OXT"
-      ]
+      ],
+      "hydrogen_parent_conflicts": {}
     },
     "ASP": {
       "available": true,
@@ -2233,7 +2240,8 @@
         "OD1",
         "OD2",
         "OXT"
-      ]
+      ],
+      "hydrogen_parent_conflicts": {}
     },
     "GLN": {
       "available": true,
@@ -2261,7 +2269,8 @@
         "O",
         "OE1",
         "OXT"
-      ]
+      ],
+      "hydrogen_parent_conflicts": {}
     },
     "GLU": {
       "available": true,
@@ -2289,7 +2298,8 @@
         "OE1",
         "OE2",
         "OXT"
-      ]
+      ],
+      "hydrogen_parent_conflicts": {}
     },
     "GLY": {
       "available": true,
@@ -2307,7 +2317,8 @@
         "N",
         "O",
         "OXT"
-      ]
+      ],
+      "hydrogen_parent_conflicts": {}
     },
     "HIS": {
       "available": true,
@@ -2336,7 +2347,8 @@
         "NE2",
         "O",
         "OXT"
-      ]
+      ],
+      "hydrogen_parent_conflicts": {}
     },
     "ILE": {
       "available": true,
@@ -2366,7 +2378,8 @@
         "N",
         "O",
         "OXT"
-      ]
+      ],
+      "hydrogen_parent_conflicts": {}
     },
     "LEU": {
       "available": true,
@@ -2396,7 +2409,8 @@
         "N",
         "O",
         "OXT"
-      ]
+      ],
+      "hydrogen_parent_conflicts": {}
     },
     "LYS": {
       "available": true,
@@ -2429,7 +2443,8 @@
         "NZ",
         "O",
         "OXT"
-      ]
+      ],
+      "hydrogen_parent_conflicts": {}
     },
     "MET": {
       "available": true,
@@ -2457,7 +2472,8 @@
         "O",
         "OXT",
         "SD"
-      ]
+      ],
+      "hydrogen_parent_conflicts": {}
     },
     "PHE": {
       "available": true,
@@ -2488,7 +2504,8 @@
         "N",
         "O",
         "OXT"
-      ]
+      ],
+      "hydrogen_parent_conflicts": {}
     },
     "PRO": {
       "available": true,
@@ -2514,7 +2531,8 @@
         "N",
         "O",
         "OXT"
-      ]
+      ],
+      "hydrogen_parent_conflicts": {}
     },
     "SER": {
       "available": true,
@@ -2536,7 +2554,8 @@
         "O",
         "OG",
         "OXT"
-      ]
+      ],
+      "hydrogen_parent_conflicts": {}
     },
     "THR": {
       "available": true,
@@ -2561,7 +2580,8 @@
         "O",
         "OG1",
         "OXT"
-      ]
+      ],
+      "hydrogen_parent_conflicts": {}
     },
     "TYR": {
       "available": true,
@@ -2593,7 +2613,8 @@
         "O",
         "OH",
         "OXT"
-      ]
+      ],
+      "hydrogen_parent_conflicts": {}
     },
     "VAL": {
       "available": true,
@@ -2620,8 +2641,26 @@
         "N",
         "O",
         "OXT"
-      ]
+      ],
+      "hydrogen_parent_conflicts": {}
     }
   },
-  "target_validation": null
+  "target_validation": null,
+  "token_constraints": [],
+  "token_projection_omissions": [],
+  "token_projection_statistics": {
+    "token_min_distance_angstrom": 4.0,
+    "token_max_distance_angstrom": 20.0,
+    "token_candidates": 0,
+    "exact_candidates": 0,
+    "collapsed_union_candidates": 0,
+    "unique_token_constraints_emitted": 0,
+    "same_token_omissions": 0,
+    "multi_token_union_omissions": 0,
+    "subminimum_adjustments": 0,
+    "above_maximum_omissions": 0,
+    "non_finite_bound_omissions": 0,
+    "duplicate_token_pair_merges": 0,
+    "token_projection_omissions": 0
+  }
 }

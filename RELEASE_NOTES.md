@@ -2,6 +2,20 @@
 
 ## Unreleased
 
+- Added token-level contact projection from the canonical topology-validated
+  exact/union representation. Every conversion now atomically writes minimal
+  `token_constraints.yaml` (`contact`, fixed 4-20 Å range, outward six-decimal
+  bounds, `force: false`) and provenance-rich `token_constraints.tsv` alongside
+  unchanged exact and union atom YAML. Same-token candidates and unsafe OR
+  groups are omitted only from the token projection; same-pair OR alternatives
+  collapse with their maximum bound, while independent exact/collapsed-union
+  candidates merge with their minimum. JSON and summary audits report token
+  results, omissions, range adjustments, and duplicate merges separately.
+- Extended the 12-entry paired-format benchmark to report and fail-closed pin
+  token contacts, candidates, collapsible unions, projection omissions, range
+  adjustments, duplicate-pair merges, and NEF/NMR-STAR token parity. The
+  reviewed benchmark schema is now version 4.
+
 - Reject distinct source residues that collide at one Boltz chain/index even
   when their component names match. The same generic injectivity check now
   protects projection, final atom-topology validation, and `--target-yaml`.
@@ -92,7 +106,7 @@
   now fail CI while the exact reviewed 8R1X/9CCH set passes.
 - Rebuilt and validated `nmr2boltz:0.1.0-validated` as non-root and offline;
   image digest is
-  `sha256:dd488022ae6a425812f0268fb33e2abf5003e25278c62b408a95ed9b85d01882`.
+  `sha256:2e8fd2f26e7b6056ed1a04cf2029058837e1ef25f4c2cee89bfa2fb6d27bb40b`.
 - Added a paired NEF/NMR-STAR corpus runner with sequence-aware PDB ensemble
   alignment, exact contact/bound parity metrics, and per-case output directories.
 - Sequence/residue conflicts now use the explicit `sequence_residue_mismatch`

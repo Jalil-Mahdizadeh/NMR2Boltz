@@ -2,35 +2,39 @@
 
 All 12 deposited ensembles were converted from both NEF and NMR-STAR with conservative defaults, then audited against every PDB conformer using sequence-aware coordinate alignment.
 
-| Case | NEF exact | NEF unions | STAR exact | STAR unions | NEF PDB satisfaction | STAR PDB satisfaction | Pair/bound parity | Implication failures |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 21CC | 176 | 16 | 176 | 16 | 99.72% | 99.72% | yes | 0 |
-| 43JX | 1716 | 16 | 1716 | 16 | 99.96% | 99.96% | no | 0 |
-| 6M6O | 2819 | 71 | 2877 | 7 | 99.72% | 99.60% | no | 0 |
-| 8R1X | 1114 | 165 | 1114 | 165 | 99.74% | 99.74% | no | 0 |
-| 8S8O | 0 | 0 | 0 | 0 | N/A | N/A | yes | 0 |
-| 9CCH | 3350 | 292 | 3516 | 75 | 99.98% | 100.00% | no | 0 |
-| 9D99 | 456 | 0 | 456 | 0 | 100.00% | 100.00% | yes | 0 |
-| 9KG4 | 406 | 0 | 406 | 0 | 99.74% | 99.74% | yes | 0 |
-| 9PQH | 3 | 0 | 44 | 15 | 3.33% | 100.00% | no | 0 |
-| 9SGX | 1578 | 766 | 765 | 0 | 100.00% | 100.00% | no | 0 |
-| 9VQ1 | 53 | 3 | 56 | 0 | 95.00% | 94.20% | no | 0 |
-| 9VUY | 1327 | 727 | 703 | 0 | 99.96% | 100.00% | no | 0 |
+| Case | NEF exact | NEF unions | NEF tokens | STAR exact | STAR unions | STAR tokens | NEF PDB satisfaction | STAR PDB satisfaction | Atom parity | Token parity | Implication failures |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 21CC | 176 | 16 | 18 | 176 | 16 | 18 | 99.72% | 99.72% | yes | yes | 0 |
+| 43JX | 1716 | 16 | 442 | 1716 | 16 | 442 | 99.96% | 99.96% | no | no | 0 |
+| 6M6O | 2819 | 71 | 828 | 2877 | 7 | 828 | 99.72% | 99.60% | no | no | 0 |
+| 8R1X | 1114 | 165 | 286 | 1114 | 165 | 286 | 99.74% | 99.74% | no | no | 0 |
+| 8S8O | 0 | 0 | 0 | 0 | 0 | 0 | N/A | N/A | yes | yes | 0 |
+| 9CCH | 3350 | 292 | 678 | 3516 | 75 | 678 | 99.98% | 100.00% | no | no | 0 |
+| 9D99 | 456 | 0 | 146 | 456 | 0 | 146 | 100.00% | 100.00% | yes | yes | 0 |
+| 9KG4 | 406 | 0 | 53 | 406 | 0 | 53 | 99.74% | 99.74% | yes | yes | 0 |
+| 9PQH | 3 | 0 | 3 | 44 | 15 | 32 | 3.33% | 100.00% | no | no | 0 |
+| 9SGX | 1578 | 766 | 399 | 765 | 0 | 285 | 100.00% | 100.00% | no | no | 0 |
+| 9VQ1 | 53 | 3 | 54 | 56 | 0 | 54 | 95.00% | 94.20% | no | yes | 0 |
+| 9VUY | 1327 | 727 | 440 | 703 | 0 | 287 | 99.96% | 100.00% | no | no | 0 |
 
 ## Current result
 
 - 24/24 conversions completed; 2 are valid empty distance conversions for 8S8O.
 - NEF: 12998 exact contacts and 2056 union groups; 99.88% resolved PDB satisfaction for exact contacts.
 - NMR-STAR: 11829 exact contacts and 294 union groups; 99.86% resolved PDB satisfaction for exact contacts.
+- Token projection: 3347 NEF and 3109 NMR-STAR unique contacts from 19497 accepted candidates, including 1855 collapsed-union candidates.
+- Token audit: 7680 projection omissions, 472 sub-4 Å adjustments, 0 over-20 Å omissions, and 13041 duplicate-pair merges.
 - Conservative implication failures: 0 across 379449 satisfied-antecedent cases.
 - Final executable-topology violations: 0; every emitted endpoint is proven by its mapped component dictionary.
 - Exact NEF/STAR pair-and-bound parity: 3/11 positive-distance cases; 8S8O also has exact empty-output parity.
+- Token NEF/STAR pair-and-bound parity: 4/11 positive-distance cases; 8S8O also has token empty-output parity.
 
 ## Constraint output split
 
 - `atom_constraints_exact.yaml` contains only non-ambiguous `atom_contact` constraints counted in the `exact` columns.
 - `atom_constraints_union.yaml` contains only ambiguous `atom_contact_union` OR groups counted in the `unions` columns; every alternative retains its own conservatively rounded bound.
-- Both files are written for every conversion, including explicit empty `constraints: []` files. Exact contacts never appear in the union file, and union groups never appear in the exact file.
+- `token_constraints.yaml` is a standalone coarse projection counted in the `tokens` columns. Exact-derived contacts and safely collapsed same-token-pair unions are merged conjunctively; multi-token OR groups remain omitted intact.
+- All three files are written for every conversion, including explicit empty `constraints: []` files. Exact contacts never appear in the union file, and union groups never appear in the exact file.
 - PDB satisfaction and implication denominators cover exact contacts only. Union alternatives are not treated as simultaneous contacts because that would convert OR semantics into AND.
 
 ## Row-level format discrepancy audit

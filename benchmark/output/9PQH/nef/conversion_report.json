@@ -6069,6 +6069,11 @@
     "intrachain_groups_filtered": 0,
     "projected_alternatives_removed_by_intrachain_filter": 0,
     "mixed_chain_scope_groups_filtered": 0,
+    "intraresidue_groups_filtered": 0,
+    "projected_alternatives_removed_by_intraresidue_filter": 0,
+    "mixed_intraresidue_interresidue_groups_filtered": 0,
+    "union_alternatives_raised_to_boltz_minimum": 0,
+    "union_groups_quarantined_above_boltz_maximum": 0,
     "emitted_atom_topology_violations": 0
   },
   "source_restraint_groups": [
@@ -20805,7 +20810,8 @@
         "N",
         "O",
         "OXT"
-      ]
+      ],
+      "hydrogen_parent_conflicts": {}
     },
     "ARG": {
       "available": true,
@@ -20840,7 +20846,8 @@
         "NH2",
         "O",
         "OXT"
-      ]
+      ],
+      "hydrogen_parent_conflicts": {}
     },
     "ASN": {
       "available": true,
@@ -20865,7 +20872,8 @@
         "O",
         "OD1",
         "OXT"
-      ]
+      ],
+      "hydrogen_parent_conflicts": {}
     },
     "ASP": {
       "available": true,
@@ -20890,12 +20898,14 @@
         "OD1",
         "OD2",
         "OXT"
-      ]
+      ],
+      "hydrogen_parent_conflicts": {}
     },
     "CAL": {
       "available": false,
       "source": null,
-      "atoms": []
+      "atoms": [],
+      "hydrogen_parent_conflicts": {}
     },
     "GLN": {
       "available": true,
@@ -20923,7 +20933,8 @@
         "O",
         "OE1",
         "OXT"
-      ]
+      ],
+      "hydrogen_parent_conflicts": {}
     },
     "GLU": {
       "available": true,
@@ -20951,7 +20962,8 @@
         "OE1",
         "OE2",
         "OXT"
-      ]
+      ],
+      "hydrogen_parent_conflicts": {}
     },
     "GLY": {
       "available": true,
@@ -20969,7 +20981,8 @@
         "N",
         "O",
         "OXT"
-      ]
+      ],
+      "hydrogen_parent_conflicts": {}
     },
     "HIS": {
       "available": true,
@@ -20998,7 +21011,8 @@
         "NE2",
         "O",
         "OXT"
-      ]
+      ],
+      "hydrogen_parent_conflicts": {}
     },
     "ILE": {
       "available": true,
@@ -21028,7 +21042,8 @@
         "N",
         "O",
         "OXT"
-      ]
+      ],
+      "hydrogen_parent_conflicts": {}
     },
     "LEU": {
       "available": true,
@@ -21058,7 +21073,8 @@
         "N",
         "O",
         "OXT"
-      ]
+      ],
+      "hydrogen_parent_conflicts": {}
     },
     "LYS": {
       "available": true,
@@ -21091,7 +21107,8 @@
         "NZ",
         "O",
         "OXT"
-      ]
+      ],
+      "hydrogen_parent_conflicts": {}
     },
     "MET": {
       "available": true,
@@ -21119,7 +21136,8 @@
         "O",
         "OXT",
         "SD"
-      ]
+      ],
+      "hydrogen_parent_conflicts": {}
     },
     "PHE": {
       "available": true,
@@ -21150,7 +21168,8 @@
         "N",
         "O",
         "OXT"
-      ]
+      ],
+      "hydrogen_parent_conflicts": {}
     },
     "PRO": {
       "available": true,
@@ -21176,7 +21195,8 @@
         "N",
         "O",
         "OXT"
-      ]
+      ],
+      "hydrogen_parent_conflicts": {}
     },
     "SER": {
       "available": true,
@@ -21198,7 +21218,8 @@
         "O",
         "OG",
         "OXT"
-      ]
+      ],
+      "hydrogen_parent_conflicts": {}
     },
     "THR": {
       "available": true,
@@ -21223,7 +21244,8 @@
         "O",
         "OG1",
         "OXT"
-      ]
+      ],
+      "hydrogen_parent_conflicts": {}
     },
     "TRP": {
       "available": true,
@@ -21258,7 +21280,8 @@
         "NE1",
         "O",
         "OXT"
-      ]
+      ],
+      "hydrogen_parent_conflicts": {}
     },
     "TYR": {
       "available": true,
@@ -21290,7 +21313,8 @@
         "O",
         "OH",
         "OXT"
-      ]
+      ],
+      "hydrogen_parent_conflicts": {}
     },
     "VAL": {
       "available": true,
@@ -21317,8 +21341,309 @@
         "N",
         "O",
         "OXT"
-      ]
+      ],
+      "hydrogen_parent_conflicts": {}
     }
   },
-  "target_validation": null
+  "target_validation": null,
+  "token_constraints": [
+    {
+      "token1": {
+        "chain": "A",
+        "residue_index": 85
+      },
+      "token2": {
+        "chain": "B",
+        "residue_index": 12
+      },
+      "max_distance": 5.640000000000001,
+      "raw_candidate_bounds": [
+        5.640000000000001
+      ],
+      "source_groups": [
+        "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:32"
+      ],
+      "source_kinds": [
+        "exact"
+      ],
+      "adjustments": [],
+      "contributions": [
+        {
+          "source_kind": "exact",
+          "source_groups": [
+            "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:32"
+          ],
+          "raw_bound": 5.640000000000001,
+          "candidate_bound": 5.640000000000001,
+          "adjustments": [],
+          "provenance": {
+            "atom1": {
+              "chain": "A",
+              "residue_index": 85,
+              "atom_name": "CB"
+            },
+            "atom2": {
+              "chain": "B",
+              "residue_index": 12,
+              "atom_name": "CG1"
+            },
+            "atom_constraint_bound": 5.640000000000001,
+            "raw_projected_distance": 5.640000000000001,
+            "atom_constraint_adjustment": null,
+            "atom_constraint_provenance": [
+              {
+                "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:32",
+                "projected_upper_bound": 5.640000000000001,
+                "source_upper_bound": 3.4,
+                "averaging_policy": "sum-r6",
+                "averaging_factor": 1.0,
+                "explicit_pair_count": 1,
+                "bond_offset": 2.24,
+                "source_observation": {
+                  "bound_source": "explicit_upper_bound",
+                  "explicit_or_derived_upper_bound": 3.4,
+                  "lower_bound": 1.8,
+                  "target_value": 1.9,
+                  "target_uncertainty": null,
+                  "upper_linear_limit": null,
+                  "weight": 1.0,
+                  "origin": "noe",
+                  "combination_id": null,
+                  "member_id": null,
+                  "member_logic_code": null,
+                  "canonical_expansions": []
+                },
+                "source_rows": [
+                  "166",
+                  "167",
+                  "168",
+                  "169",
+                  "170",
+                  "171"
+                ],
+                "source_endpoints": [
+                  "A:88:GLU:HB2 -- B:857:VAL:HG11",
+                  "A:88:GLU:HB2 -- B:857:VAL:HG12",
+                  "A:88:GLU:HB2 -- B:857:VAL:HG13",
+                  "A:88:GLU:HB3 -- B:857:VAL:HG11",
+                  "A:88:GLU:HB3 -- B:857:VAL:HG12",
+                  "A:88:GLU:HB3 -- B:857:VAL:HG13"
+                ],
+                "warnings": []
+              }
+            ],
+            "token_raw_bound": 5.640000000000001
+          }
+        }
+      ]
+    },
+    {
+      "token1": {
+        "chain": "A",
+        "residue_index": 144
+      },
+      "token2": {
+        "chain": "B",
+        "residue_index": 8
+      },
+      "max_distance": 7.54,
+      "raw_candidate_bounds": [
+        7.54
+      ],
+      "source_groups": [
+        "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:59"
+      ],
+      "source_kinds": [
+        "exact"
+      ],
+      "adjustments": [],
+      "contributions": [
+        {
+          "source_kind": "exact",
+          "source_groups": [
+            "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:59"
+          ],
+          "raw_bound": 7.54,
+          "candidate_bound": 7.54,
+          "adjustments": [],
+          "provenance": {
+            "atom1": {
+              "chain": "A",
+              "residue_index": 144,
+              "atom_name": "CG2"
+            },
+            "atom2": {
+              "chain": "B",
+              "residue_index": 8,
+              "atom_name": "CB"
+            },
+            "atom_constraint_bound": 7.54,
+            "raw_projected_distance": 7.54,
+            "atom_constraint_adjustment": null,
+            "atom_constraint_provenance": [
+              {
+                "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:59",
+                "projected_upper_bound": 7.54,
+                "source_upper_bound": 5.3,
+                "averaging_policy": "sum-r6",
+                "averaging_factor": 1.0,
+                "explicit_pair_count": 1,
+                "bond_offset": 2.24,
+                "source_observation": {
+                  "bound_source": "explicit_upper_bound",
+                  "explicit_or_derived_upper_bound": 5.3,
+                  "lower_bound": 1.8,
+                  "target_value": 3.8,
+                  "target_uncertainty": null,
+                  "upper_linear_limit": null,
+                  "weight": 1.0,
+                  "origin": "noe",
+                  "combination_id": null,
+                  "member_id": null,
+                  "member_logic_code": null,
+                  "canonical_expansions": []
+                },
+                "source_rows": [
+                  "319",
+                  "320",
+                  "321",
+                  "322",
+                  "323",
+                  "324",
+                  "325",
+                  "326",
+                  "327"
+                ],
+                "source_endpoints": [
+                  "A:147:THR:HG21 -- B:853:ALA:HB1",
+                  "A:147:THR:HG21 -- B:853:ALA:HB2",
+                  "A:147:THR:HG21 -- B:853:ALA:HB3",
+                  "A:147:THR:HG22 -- B:853:ALA:HB1",
+                  "A:147:THR:HG22 -- B:853:ALA:HB2",
+                  "A:147:THR:HG22 -- B:853:ALA:HB3",
+                  "A:147:THR:HG23 -- B:853:ALA:HB1",
+                  "A:147:THR:HG23 -- B:853:ALA:HB2",
+                  "A:147:THR:HG23 -- B:853:ALA:HB3"
+                ],
+                "warnings": []
+              }
+            ],
+            "token_raw_bound": 7.54
+          }
+        }
+      ]
+    },
+    {
+      "token1": {
+        "chain": "A",
+        "residue_index": 144
+      },
+      "token2": {
+        "chain": "B",
+        "residue_index": 12
+      },
+      "max_distance": 8.24,
+      "raw_candidate_bounds": [
+        8.24
+      ],
+      "source_groups": [
+        "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:60"
+      ],
+      "source_kinds": [
+        "exact"
+      ],
+      "adjustments": [],
+      "contributions": [
+        {
+          "source_kind": "exact",
+          "source_groups": [
+            "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:60"
+          ],
+          "raw_bound": 8.24,
+          "candidate_bound": 8.24,
+          "adjustments": [],
+          "provenance": {
+            "atom1": {
+              "chain": "A",
+              "residue_index": 144,
+              "atom_name": "CG2"
+            },
+            "atom2": {
+              "chain": "B",
+              "residue_index": 12,
+              "atom_name": "CG1"
+            },
+            "atom_constraint_bound": 8.24,
+            "raw_projected_distance": 8.24,
+            "atom_constraint_adjustment": null,
+            "atom_constraint_provenance": [
+              {
+                "group_id": "nef_distance_restraint_list_XPLOR-NIH_distance_restraints_1:60",
+                "projected_upper_bound": 8.24,
+                "source_upper_bound": 6.0,
+                "averaging_policy": "sum-r6",
+                "averaging_factor": 1.0,
+                "explicit_pair_count": 1,
+                "bond_offset": 2.24,
+                "source_observation": {
+                  "bound_source": "explicit_upper_bound",
+                  "explicit_or_derived_upper_bound": 6.0,
+                  "lower_bound": 1.8,
+                  "target_value": 4.5,
+                  "target_uncertainty": null,
+                  "upper_linear_limit": null,
+                  "weight": 1.0,
+                  "origin": "noe",
+                  "combination_id": null,
+                  "member_id": null,
+                  "member_logic_code": null,
+                  "canonical_expansions": []
+                },
+                "source_rows": [
+                  "328",
+                  "329",
+                  "330",
+                  "331",
+                  "332",
+                  "333",
+                  "334",
+                  "335",
+                  "336"
+                ],
+                "source_endpoints": [
+                  "A:147:THR:HG21 -- B:857:VAL:HG11",
+                  "A:147:THR:HG21 -- B:857:VAL:HG12",
+                  "A:147:THR:HG21 -- B:857:VAL:HG13",
+                  "A:147:THR:HG22 -- B:857:VAL:HG11",
+                  "A:147:THR:HG22 -- B:857:VAL:HG12",
+                  "A:147:THR:HG22 -- B:857:VAL:HG13",
+                  "A:147:THR:HG23 -- B:857:VAL:HG11",
+                  "A:147:THR:HG23 -- B:857:VAL:HG12",
+                  "A:147:THR:HG23 -- B:857:VAL:HG13"
+                ],
+                "warnings": []
+              }
+            ],
+            "token_raw_bound": 8.24
+          }
+        }
+      ]
+    }
+  ],
+  "token_projection_omissions": [],
+  "token_projection_statistics": {
+    "token_min_distance_angstrom": 4.0,
+    "token_max_distance_angstrom": 20.0,
+    "token_candidates": 3,
+    "exact_candidates": 3,
+    "collapsed_union_candidates": 0,
+    "unique_token_constraints_emitted": 3,
+    "same_token_omissions": 0,
+    "multi_token_union_omissions": 0,
+    "subminimum_adjustments": 0,
+    "above_maximum_omissions": 0,
+    "non_finite_bound_omissions": 0,
+    "duplicate_token_pair_merges": 0,
+    "token_projection_omissions": 0
+  }
 }

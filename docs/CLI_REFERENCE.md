@@ -73,6 +73,32 @@ supported by the parser may also be used.
 - `--strict` does not suppress output. It writes the audit bundle first and
   then returns status 3 when unresolved ambiguity or rejection records exist.
 
+### `convert` output bundle
+
+Every successful conversion atomically writes these executable constraint
+files:
+
+| File | Semantics |
+|---|---|
+| `atom_constraints_exact.yaml` | Non-ambiguous heavy-atom `atom_contact` constraints. |
+| `atom_constraints_union.yaml` | Complete heavy-atom `atom_contact_union` disjunctions. |
+| `token_constraints.yaml` | Standalone coarse-grained ordinary `contact` constraints with `force: false`. |
+
+`token_constraints.tsv` records final and raw token bounds, contributing source
+groups, source kind (`exact` or `collapsed_union`), adjustments, and provenance.
+`conversion_report.json` keeps token results, token-only omissions, and token
+statistics separate from general atom-constraint rejections. The executable
+token YAML never contains provenance metadata. Empty executable files use the
+explicit `constraints: []` form.
+
+Token contacts use a fixed native interval of 4-20 Å regardless of the
+configurable atom-contact interval. Values below 4 Å are weakened to 4 Å;
+values above 20 Å are omitted rather than clipped. Token-only, atom-only, and
+hybrid Boltz runs are distinct experimental arms. Exact atom constraints in the
+patched BoltzUI already activate token conditioning, so hybrid loading is
+partly redundant, while collapsed unions can contribute token conditioning not
+provided by the union atom file.
+
 ## `benchmark`
 
 ```text

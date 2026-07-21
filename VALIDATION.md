@@ -1,11 +1,15 @@
 # Validation status
 
 Status: PASS WITH EXACT REVIEWED CORPUS LIMITATIONS
-Date: 2026-07-20
+Date: 2026-07-21
 
 ## Regression and stress validation
 
-- 138 Pytest tests passed.
+- 155 Pytest tests passed inside the Docker test image derived from the final
+  `nmr2boltz:0.1.0-validated` image.
+- Source/tests/validation byte compilation and `pip check` passed. A wheel built
+  successfully inside the dedicated Docker runtime and contains
+  `nmr2boltz/token.py`.
 - 100,000 randomized sum-r6 implication cases passed.
 - 100,000 constructive triangle-inequality cases passed.
 - 25,000 outward-rounding cases passed.
@@ -45,6 +49,12 @@ Date: 2026-07-20
   contextual errors instead of being silently skipped.
 - Exact and ambiguous constraints are serialized into separate metadata-free
   files, with deterministic ordering and conservative six-decimal formatting.
+- Token contacts are projected from the same canonical exact/union objects,
+  serialized as metadata-free ordinary `contact` constraints with
+  `force: false`, and audited separately in JSON/TSV. Tests cover same-token
+  omission, OR-safe collapse/omission, cross-kind minimum merge, the fixed
+  4-20 A range, deterministic outward rounding, empty output, and pre-commit
+  invariants.
 - Exact and union bounds share the executable interval policy: sub-minimum
   values are weakened to the configured minimum, while any over-maximum union
   alternative quarantines its complete OR group. The writer independently
@@ -67,6 +77,10 @@ Date: 2026-07-20
 - Output artifacts are written as one staged bundle. Simulated staging-write
   and commit failures preserve the complete prior directory and leave no
   staging/backup residue.
+- The configured 12-entry paired-format gate passed all 24 conversions with
+  zero scientific-gate failures. All 48 regenerated exact/union YAML files were
+  content-identical to the committed corpus artifacts, and all 24 conversions
+  produced both `token_constraints.yaml` and `token_constraints.tsv`.
 
 ## Paired-format deposited-data validation
 
@@ -75,6 +89,16 @@ All 24 conversions completed; the two 8S8O inputs are valid empty distance
 conversions containing sequence, shifts, and torsion data but no distance loop.
 The default safe projection emitted 12,998 NEF and 11,829 NMR-STAR contacts.
 Resolved contact/model satisfaction was 99.88% and 99.86%, respectively.
+
+The token projection emitted 3,347 NEF and 3,109 NMR-STAR unique contacts from
+19,497 accepted candidates. Of those candidates, 1,855 came from safely
+collapsed same-token-pair unions. The audit records 7,680 token-specific
+omissions, 472 sub-4 Å adjustments, zero over-20 Å omissions, and 13,041
+duplicate-pair merges. Four positive-distance cases have exact token
+pair-and-bound parity (21CC, 9D99, 9KG4, and 9VQ1); 8S8O also has explicit empty
+token parity. These schema-version-4 token metrics are pinned in the reviewed
+baseline so token regressions fail the corpus gate independently of unchanged
+atom outputs.
 
 NMR-STAR canonical OR expansions are now reconstructed before projection when
 author endpoint identity, bounds/weights/logic, component topology, and the
@@ -140,15 +164,18 @@ not establish predictive accuracy.
 
 - Image: `nmr2boltz:0.1.0-validated`
 - Image ID / repository digest:
-  `sha256:dd488022ae6a425812f0268fb33e2abf5003e25278c62b408a95ed9b85d01882`
-- Reported size: 243 MB; default user: `65532:65532`; other nmr2boltz images: 0.
+  `sha256:2e8fd2f26e7b6056ed1a04cf2029058837e1ef25f4c2cee89bfa2fb6d27bb40b`
+- `docker image ls` reported 243 MB; default user: `65532:65532`.
 - The rebuilt image passed the 100,000-case `sum-r6` and triangle-inequality
   stress checks, 25,000 outward-rounding checks, 10,000 merge-order checks,
   all 845 built-in hydrogen-parent mappings, and deterministic 32-hypothesis
   generation while offline, read-only, and non-root.
-- An offline, read-only-root, non-root conversion using the documented writable
-  `/workspace` parent mount emitted 3 exact constraints and 1 union group into
-  a complete 10-file staged bundle.
+- The complete paired NEF/NMR-STAR corpus ran offline, read-only-root, and
+  non-root using the installed package in the rebuilt image. The repository
+  was mounted read-only for the validation runner and inputs; only staged
+  benchmark output was writable. All 24 conversions completed, and an
+  independent second run matched all 353 committed output files after native
+  LF/CRLF normalization.
 - Offline, read-only-root, non-root NEF and NMR-STAR smoke runs of
   `--exclude-intrachain` each emitted 2 exact contacts and 1 all-inter-chain
   union, filtered 3 restraint groups including 1 mixed-scope OR group, and
@@ -159,7 +186,7 @@ not establish predictive accuracy.
   alongside valid adenine N6 and guanine O6 membership.
 - An offline, read-only-root 43JX NMR-STAR conversion emitted 1,716 exact
   contacts, 16 atom-contact union groups, and 38 rejections. Restraint 468
-  preserved rows 796--798, used `N=3`, and projected to 7.428047646 A. Its
+  preserved rows 796--798, used `N=3`, and projected to 7.428047646 Å. Its
   `heavy_atom_constraints.tsv` was byte-identical to the committed benchmark
   artifact (SHA-256
   `017eec00dfaafc8655e2c5867a4d81951fffd077647f33dc5f11a01e72c67c84`).

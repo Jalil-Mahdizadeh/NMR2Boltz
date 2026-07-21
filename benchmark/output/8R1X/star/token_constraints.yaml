@@ -1,0 +1,1431 @@
+constraints:
+- contact:
+    token1: [A, 2]
+    token2: [A, 3]
+    max_distance: 7.840000
+    force: false
+- contact:
+    token1: [A, 3]
+    token2: [A, 4]
+    max_distance: 6.120000
+    force: false
+- contact:
+    token1: [A, 4]
+    token2: [A, 5]
+    max_distance: 6.160000
+    force: false
+- contact:
+    token1: [A, 4]
+    token2: [A, 70]
+    max_distance: 5.488000
+    force: false
+- contact:
+    token1: [A, 5]
+    token2: [A, 6]
+    max_distance: 5.100000
+    force: false
+- contact:
+    token1: [A, 5]
+    token2: [A, 63]
+    max_distance: 6.630400
+    force: false
+- contact:
+    token1: [A, 5]
+    token2: [A, 67]
+    max_distance: 6.120000
+    force: false
+- contact:
+    token1: [A, 5]
+    token2: [A, 70]
+    max_distance: 6.630400
+    force: false
+- contact:
+    token1: [A, 6]
+    token2: [A, 7]
+    max_distance: 5.100000
+    force: false
+- contact:
+    token1: [A, 6]
+    token2: [C, 5]
+    max_distance: 7.840000
+    force: false
+- contact:
+    token1: [A, 6]
+    token2: [C, 6]
+    max_distance: 6.160000
+    force: false
+- contact:
+    token1: [A, 7]
+    token2: [A, 8]
+    max_distance: 5.488000
+    force: false
+- contact:
+    token1: [A, 7]
+    token2: [A, 63]
+    max_distance: 6.160000
+    force: false
+- contact:
+    token1: [A, 7]
+    token2: [C, 4]
+    max_distance: 5.488000
+    force: false
+- contact:
+    token1: [A, 7]
+    token2: [C, 5]
+    max_distance: 5.488000
+    force: false
+- contact:
+    token1: [A, 8]
+    token2: [A, 9]
+    max_distance: 5.100000
+    force: false
+- contact:
+    token1: [A, 8]
+    token2: [A, 59]
+    max_distance: 5.720001
+    force: false
+- contact:
+    token1: [A, 8]
+    token2: [A, 60]
+    max_distance: 7.840000
+    force: false
+- contact:
+    token1: [A, 8]
+    token2: [A, 63]
+    max_distance: 8.512000
+    force: false
+- contact:
+    token1: [A, 9]
+    token2: [A, 10]
+    max_distance: 5.100000
+    force: false
+- contact:
+    token1: [A, 9]
+    token2: [A, 13]
+    max_distance: 8.990000
+    force: false
+- contact:
+    token1: [A, 9]
+    token2: [A, 14]
+    max_distance: 7.532000
+    force: false
+- contact:
+    token1: [A, 9]
+    token2: [A, 56]
+    max_distance: 6.400000
+    force: false
+- contact:
+    token1: [A, 9]
+    token2: [C, 5]
+    max_distance: 8.990000
+    force: false
+- contact:
+    token1: [A, 9]
+    token2: [C, 6]
+    max_distance: 6.155000
+    force: false
+- contact:
+    token1: [A, 9]
+    token2: [C, 7]
+    max_distance: 8.990000
+    force: false
+- contact:
+    token1: [A, 10]
+    token2: [A, 11]
+    max_distance: 5.100000
+    force: false
+- contact:
+    token1: [A, 10]
+    token2: [A, 13]
+    max_distance: 7.200000
+    force: false
+- contact:
+    token1: [A, 10]
+    token2: [A, 14]
+    max_distance: 4.000000
+    force: false
+- contact:
+    token1: [A, 11]
+    token2: [A, 12]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 11]
+    token2: [A, 13]
+    max_distance: 7.160000
+    force: false
+- contact:
+    token1: [A, 11]
+    token2: [A, 14]
+    max_distance: 6.160000
+    force: false
+- contact:
+    token1: [A, 11]
+    token2: [A, 15]
+    max_distance: 4.000000
+    force: false
+- contact:
+    token1: [A, 11]
+    token2: [A, 43]
+    max_distance: 5.720001
+    force: false
+- contact:
+    token1: [A, 11]
+    token2: [A, 52]
+    max_distance: 6.137601
+    force: false
+- contact:
+    token1: [A, 11]
+    token2: [A, 53]
+    max_distance: 6.137601
+    force: false
+- contact:
+    token1: [A, 11]
+    token2: [A, 56]
+    max_distance: 7.280000
+    force: false
+- contact:
+    token1: [A, 12]
+    token2: [A, 13]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 12]
+    token2: [A, 15]
+    max_distance: 5.700000
+    force: false
+- contact:
+    token1: [A, 12]
+    token2: [A, 16]
+    max_distance: 4.000000
+    force: false
+- contact:
+    token1: [A, 12]
+    token2: [A, 40]
+    max_distance: 7.800000
+    force: false
+- contact:
+    token1: [A, 12]
+    token2: [A, 43]
+    max_distance: 7.240000
+    force: false
+- contact:
+    token1: [A, 12]
+    token2: [B, 7]
+    max_distance: 7.240000
+    force: false
+- contact:
+    token1: [A, 12]
+    token2: [B, 8]
+    max_distance: 5.488000
+    force: false
+- contact:
+    token1: [A, 13]
+    token2: [A, 14]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 13]
+    token2: [A, 15]
+    max_distance: 7.160000
+    force: false
+- contact:
+    token1: [A, 13]
+    token2: [A, 16]
+    max_distance: 5.700000
+    force: false
+- contact:
+    token1: [A, 13]
+    token2: [A, 17]
+    max_distance: 4.000000
+    force: false
+- contact:
+    token1: [A, 13]
+    token2: [C, 6]
+    max_distance: 6.440000
+    force: false
+- contact:
+    token1: [A, 13]
+    token2: [C, 7]
+    max_distance: 5.720001
+    force: false
+- contact:
+    token1: [A, 14]
+    token2: [A, 15]
+    max_distance: 5.448000
+    force: false
+- contact:
+    token1: [A, 14]
+    token2: [A, 17]
+    max_distance: 6.160000
+    force: false
+- contact:
+    token1: [A, 14]
+    token2: [A, 52]
+    max_distance: 6.155000
+    force: false
+- contact:
+    token1: [A, 14]
+    token2: [A, 55]
+    max_distance: 6.624801
+    force: false
+- contact:
+    token1: [A, 14]
+    token2: [A, 56]
+    max_distance: 5.966000
+    force: false
+- contact:
+    token1: [A, 15]
+    token2: [A, 16]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 15]
+    token2: [A, 17]
+    max_distance: 7.200000
+    force: false
+- contact:
+    token1: [A, 15]
+    token2: [A, 18]
+    max_distance: 5.700000
+    force: false
+- contact:
+    token1: [A, 15]
+    token2: [A, 19]
+    max_distance: 4.000000
+    force: false
+- contact:
+    token1: [A, 15]
+    token2: [A, 23]
+    max_distance: 8.240000
+    force: false
+- contact:
+    token1: [A, 15]
+    token2: [A, 39]
+    max_distance: 6.160000
+    force: false
+- contact:
+    token1: [A, 15]
+    token2: [A, 42]
+    max_distance: 5.345001
+    force: false
+- contact:
+    token1: [A, 15]
+    token2: [A, 43]
+    max_distance: 4.816001
+    force: false
+- contact:
+    token1: [A, 15]
+    token2: [A, 46]
+    max_distance: 6.400000
+    force: false
+- contact:
+    token1: [A, 15]
+    token2: [A, 52]
+    max_distance: 5.740000
+    force: false
+- contact:
+    token1: [A, 16]
+    token2: [A, 17]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 16]
+    token2: [A, 19]
+    max_distance: 5.700000
+    force: false
+- contact:
+    token1: [A, 16]
+    token2: [A, 20]
+    max_distance: 8.990000
+    force: false
+- contact:
+    token1: [A, 16]
+    token2: [A, 23]
+    max_distance: 10.340000
+    force: false
+- contact:
+    token1: [A, 16]
+    token2: [A, 35]
+    max_distance: 11.352501
+    force: false
+- contact:
+    token1: [A, 16]
+    token2: [A, 36]
+    max_distance: 8.990000
+    force: false
+- contact:
+    token1: [A, 16]
+    token2: [A, 39]
+    max_distance: 9.800000
+    force: false
+- contact:
+    token1: [A, 16]
+    token2: [C, 7]
+    max_distance: 8.990000
+    force: false
+- contact:
+    token1: [A, 17]
+    token2: [A, 18]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 17]
+    token2: [A, 19]
+    max_distance: 7.160000
+    force: false
+- contact:
+    token1: [A, 17]
+    token2: [A, 20]
+    max_distance: 5.700000
+    force: false
+- contact:
+    token1: [A, 18]
+    token2: [A, 19]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 18]
+    token2: [A, 20]
+    max_distance: 7.160000
+    force: false
+- contact:
+    token1: [A, 18]
+    token2: [A, 21]
+    max_distance: 5.700000
+    force: false
+- contact:
+    token1: [A, 18]
+    token2: [A, 52]
+    max_distance: 6.160000
+    force: false
+- contact:
+    token1: [A, 19]
+    token2: [A, 20]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 19]
+    token2: [A, 21]
+    max_distance: 7.200000
+    force: false
+- contact:
+    token1: [A, 19]
+    token2: [A, 22]
+    max_distance: 5.700000
+    force: false
+- contact:
+    token1: [A, 19]
+    token2: [A, 23]
+    max_distance: 4.000000
+    force: false
+- contact:
+    token1: [A, 20]
+    token2: [A, 21]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 20]
+    token2: [A, 23]
+    max_distance: 5.700000
+    force: false
+- contact:
+    token1: [A, 20]
+    token2: [A, 24]
+    max_distance: 4.000000
+    force: false
+- contact:
+    token1: [A, 20]
+    token2: [A, 30]
+    max_distance: 6.944000
+    force: false
+- contact:
+    token1: [A, 20]
+    token2: [A, 35]
+    max_distance: 6.155000
+    force: false
+- contact:
+    token1: [A, 21]
+    token2: [A, 22]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 21]
+    token2: [A, 23]
+    max_distance: 7.800000
+    force: false
+- contact:
+    token1: [A, 21]
+    token2: [A, 24]
+    max_distance: 5.700000
+    force: false
+- contact:
+    token1: [A, 21]
+    token2: [A, 25]
+    max_distance: 4.000000
+    force: false
+- contact:
+    token1: [A, 22]
+    token2: [A, 23]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 22]
+    token2: [A, 25]
+    max_distance: 5.700000
+    force: false
+- contact:
+    token1: [A, 23]
+    token2: [A, 24]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 23]
+    token2: [A, 25]
+    max_distance: 7.200000
+    force: false
+- contact:
+    token1: [A, 23]
+    token2: [A, 26]
+    max_distance: 5.700000
+    force: false
+- contact:
+    token1: [A, 23]
+    token2: [A, 27]
+    max_distance: 5.680000
+    force: false
+- contact:
+    token1: [A, 23]
+    token2: [A, 30]
+    max_distance: 6.137601
+    force: false
+- contact:
+    token1: [A, 23]
+    token2: [A, 35]
+    max_distance: 6.938001
+    force: false
+- contact:
+    token1: [A, 23]
+    token2: [A, 38]
+    max_distance: 6.944000
+    force: false
+- contact:
+    token1: [A, 23]
+    token2: [A, 39]
+    max_distance: 8.200000
+    force: false
+- contact:
+    token1: [A, 23]
+    token2: [A, 42]
+    max_distance: 8.990000
+    force: false
+- contact:
+    token1: [A, 24]
+    token2: [A, 25]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 24]
+    token2: [A, 30]
+    max_distance: 5.720001
+    force: false
+- contact:
+    token1: [A, 25]
+    token2: [A, 26]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 25]
+    token2: [A, 27]
+    max_distance: 7.160000
+    force: false
+- contact:
+    token1: [A, 26]
+    token2: [A, 27]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 26]
+    token2: [C, 11]
+    max_distance: 8.200000
+    force: false
+- contact:
+    token1: [A, 27]
+    token2: [A, 28]
+    max_distance: 5.488000
+    force: false
+- contact:
+    token1: [A, 27]
+    token2: [A, 30]
+    max_distance: 7.800000
+    force: false
+- contact:
+    token1: [A, 28]
+    token2: [A, 29]
+    max_distance: 7.800000
+    force: false
+- contact:
+    token1: [A, 28]
+    token2: [A, 30]
+    max_distance: 7.200000
+    force: false
+- contact:
+    token1: [A, 29]
+    token2: [A, 30]
+    max_distance: 5.660000
+    force: false
+- contact:
+    token1: [A, 30]
+    token2: [A, 31]
+    max_distance: 5.100000
+    force: false
+- contact:
+    token1: [A, 30]
+    token2: [A, 34]
+    max_distance: 7.200000
+    force: false
+- contact:
+    token1: [A, 30]
+    token2: [A, 35]
+    max_distance: 7.200000
+    force: false
+- contact:
+    token1: [A, 31]
+    token2: [A, 32]
+    max_distance: 5.700000
+    force: false
+- contact:
+    token1: [A, 31]
+    token2: [A, 33]
+    max_distance: 7.160000
+    force: false
+- contact:
+    token1: [A, 31]
+    token2: [A, 35]
+    max_distance: 8.990000
+    force: false
+- contact:
+    token1: [A, 32]
+    token2: [A, 33]
+    max_distance: 5.660000
+    force: false
+- contact:
+    token1: [A, 32]
+    token2: [A, 35]
+    max_distance: 5.740000
+    force: false
+- contact:
+    token1: [A, 32]
+    token2: [C, 7]
+    max_distance: 6.965000
+    force: false
+- contact:
+    token1: [A, 32]
+    token2: [C, 8]
+    max_distance: 6.965000
+    force: false
+- contact:
+    token1: [A, 33]
+    token2: [A, 34]
+    max_distance: 7.160000
+    force: false
+- contact:
+    token1: [A, 33]
+    token2: [A, 36]
+    max_distance: 5.700000
+    force: false
+- contact:
+    token1: [A, 33]
+    token2: [A, 37]
+    max_distance: 4.000000
+    force: false
+- contact:
+    token1: [A, 33]
+    token2: [B, 5]
+    max_distance: 5.720001
+    force: false
+- contact:
+    token1: [A, 33]
+    token2: [B, 6]
+    max_distance: 5.720001
+    force: false
+- contact:
+    token1: [A, 33]
+    token2: [C, 7]
+    max_distance: 8.240000
+    force: false
+- contact:
+    token1: [A, 34]
+    token2: [A, 35]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 34]
+    token2: [A, 37]
+    max_distance: 5.700000
+    force: false
+- contact:
+    token1: [A, 34]
+    token2: [A, 38]
+    max_distance: 4.000000
+    force: false
+- contact:
+    token1: [A, 35]
+    token2: [A, 36]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 35]
+    token2: [A, 38]
+    max_distance: 5.700000
+    force: false
+- contact:
+    token1: [A, 35]
+    token2: [A, 39]
+    max_distance: 4.000000
+    force: false
+- contact:
+    token1: [A, 36]
+    token2: [A, 37]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 36]
+    token2: [A, 39]
+    max_distance: 5.700000
+    force: false
+- contact:
+    token1: [A, 36]
+    token2: [A, 40]
+    max_distance: 4.000000
+    force: false
+- contact:
+    token1: [A, 36]
+    token2: [B, 6]
+    max_distance: 5.720001
+    force: false
+- contact:
+    token1: [A, 36]
+    token2: [B, 7]
+    max_distance: 5.720001
+    force: false
+- contact:
+    token1: [A, 36]
+    token2: [C, 7]
+    max_distance: 6.440000
+    force: false
+- contact:
+    token1: [A, 37]
+    token2: [A, 38]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 37]
+    token2: [A, 39]
+    max_distance: 7.160000
+    force: false
+- contact:
+    token1: [A, 37]
+    token2: [A, 40]
+    max_distance: 5.700000
+    force: false
+- contact:
+    token1: [A, 37]
+    token2: [A, 41]
+    max_distance: 4.000000
+    force: false
+- contact:
+    token1: [A, 37]
+    token2: [B, 6]
+    max_distance: 6.160000
+    force: false
+- contact:
+    token1: [A, 38]
+    token2: [A, 39]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 38]
+    token2: [A, 41]
+    max_distance: 5.700000
+    force: false
+- contact:
+    token1: [A, 38]
+    token2: [A, 42]
+    max_distance: 4.000000
+    force: false
+- contact:
+    token1: [A, 39]
+    token2: [A, 40]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 39]
+    token2: [A, 42]
+    max_distance: 6.120000
+    force: false
+- contact:
+    token1: [A, 39]
+    token2: [A, 43]
+    max_distance: 4.000000
+    force: false
+- contact:
+    token1: [A, 40]
+    token2: [A, 41]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 40]
+    token2: [A, 43]
+    max_distance: 7.800000
+    force: false
+- contact:
+    token1: [A, 40]
+    token2: [A, 44]
+    max_distance: 4.000000
+    force: false
+- contact:
+    token1: [A, 41]
+    token2: [A, 42]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 41]
+    token2: [A, 44]
+    max_distance: 5.700000
+    force: false
+- contact:
+    token1: [A, 42]
+    token2: [A, 43]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 42]
+    token2: [A, 45]
+    max_distance: 5.700000
+    force: false
+- contact:
+    token1: [A, 43]
+    token2: [A, 44]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 43]
+    token2: [A, 45]
+    max_distance: 7.160000
+    force: false
+- contact:
+    token1: [A, 43]
+    token2: [A, 46]
+    max_distance: 5.700000
+    force: false
+- contact:
+    token1: [A, 43]
+    token2: [A, 49]
+    max_distance: 7.840000
+    force: false
+- contact:
+    token1: [A, 43]
+    token2: [A, 52]
+    max_distance: 5.740000
+    force: false
+- contact:
+    token1: [A, 44]
+    token2: [A, 45]
+    max_distance: 5.660000
+    force: false
+- contact:
+    token1: [A, 45]
+    token2: [A, 46]
+    max_distance: 5.700000
+    force: false
+- contact:
+    token1: [A, 46]
+    token2: [A, 47]
+    max_distance: 5.100000
+    force: false
+- contact:
+    token1: [A, 46]
+    token2: [A, 49]
+    max_distance: 8.240000
+    force: false
+- contact:
+    token1: [A, 46]
+    token2: [A, 52]
+    max_distance: 5.720001
+    force: false
+- contact:
+    token1: [A, 47]
+    token2: [A, 48]
+    max_distance: 5.100000
+    force: false
+- contact:
+    token1: [A, 48]
+    token2: [A, 49]
+    max_distance: 5.100000
+    force: false
+- contact:
+    token1: [A, 48]
+    token2: [A, 50]
+    max_distance: 7.800000
+    force: false
+- contact:
+    token1: [A, 49]
+    token2: [A, 50]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 49]
+    token2: [A, 51]
+    max_distance: 7.200000
+    force: false
+- contact:
+    token1: [A, 49]
+    token2: [A, 52]
+    max_distance: 7.240000
+    force: false
+- contact:
+    token1: [A, 49]
+    token2: [A, 53]
+    max_distance: 4.000000
+    force: false
+- contact:
+    token1: [A, 50]
+    token2: [A, 51]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 50]
+    token2: [A, 52]
+    max_distance: 7.800000
+    force: false
+- contact:
+    token1: [A, 50]
+    token2: [A, 53]
+    max_distance: 5.700000
+    force: false
+- contact:
+    token1: [A, 51]
+    token2: [A, 52]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 51]
+    token2: [A, 53]
+    max_distance: 7.160000
+    force: false
+- contact:
+    token1: [A, 51]
+    token2: [A, 54]
+    max_distance: 5.700000
+    force: false
+- contact:
+    token1: [A, 51]
+    token2: [A, 55]
+    max_distance: 7.200000
+    force: false
+- contact:
+    token1: [A, 52]
+    token2: [A, 53]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 52]
+    token2: [A, 54]
+    max_distance: 7.160000
+    force: false
+- contact:
+    token1: [A, 52]
+    token2: [A, 55]
+    max_distance: 5.700000
+    force: false
+- contact:
+    token1: [A, 53]
+    token2: [A, 54]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 53]
+    token2: [A, 55]
+    max_distance: 7.160000
+    force: false
+- contact:
+    token1: [A, 53]
+    token2: [A, 56]
+    max_distance: 5.700000
+    force: false
+- contact:
+    token1: [A, 54]
+    token2: [A, 55]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 54]
+    token2: [A, 57]
+    max_distance: 5.700000
+    force: false
+- contact:
+    token1: [A, 55]
+    token2: [A, 56]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 55]
+    token2: [A, 58]
+    max_distance: 5.700000
+    force: false
+- contact:
+    token1: [A, 56]
+    token2: [A, 57]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 56]
+    token2: [A, 58]
+    max_distance: 7.160000
+    force: false
+- contact:
+    token1: [A, 56]
+    token2: [A, 59]
+    max_distance: 5.700000
+    force: false
+- contact:
+    token1: [A, 57]
+    token2: [A, 58]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 57]
+    token2: [A, 59]
+    max_distance: 7.200000
+    force: false
+- contact:
+    token1: [A, 57]
+    token2: [A, 60]
+    max_distance: 5.700000
+    force: false
+- contact:
+    token1: [A, 58]
+    token2: [A, 59]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 58]
+    token2: [A, 60]
+    max_distance: 7.160000
+    force: false
+- contact:
+    token1: [A, 58]
+    token2: [A, 61]
+    max_distance: 5.700000
+    force: false
+- contact:
+    token1: [A, 58]
+    token2: [A, 62]
+    max_distance: 7.200000
+    force: false
+- contact:
+    token1: [A, 59]
+    token2: [A, 60]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 59]
+    token2: [A, 62]
+    max_distance: 5.700000
+    force: false
+- contact:
+    token1: [A, 60]
+    token2: [A, 61]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 60]
+    token2: [A, 62]
+    max_distance: 7.160000
+    force: false
+- contact:
+    token1: [A, 60]
+    token2: [A, 63]
+    max_distance: 5.700000
+    force: false
+- contact:
+    token1: [A, 60]
+    token2: [B, 10]
+    max_distance: 7.840000
+    force: false
+- contact:
+    token1: [A, 60]
+    token2: [B, 11]
+    max_distance: 6.160000
+    force: false
+- contact:
+    token1: [A, 60]
+    token2: [B, 12]
+    max_distance: 7.840000
+    force: false
+- contact:
+    token1: [A, 61]
+    token2: [A, 62]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 61]
+    token2: [A, 63]
+    max_distance: 7.160000
+    force: false
+- contact:
+    token1: [A, 61]
+    token2: [A, 64]
+    max_distance: 5.700000
+    force: false
+- contact:
+    token1: [A, 62]
+    token2: [A, 63]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 62]
+    token2: [A, 64]
+    max_distance: 7.840000
+    force: false
+- contact:
+    token1: [A, 62]
+    token2: [A, 65]
+    max_distance: 5.700000
+    force: false
+- contact:
+    token1: [A, 62]
+    token2: [A, 66]
+    max_distance: 7.200000
+    force: false
+- contact:
+    token1: [A, 63]
+    token2: [A, 64]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 63]
+    token2: [A, 65]
+    max_distance: 7.160000
+    force: false
+- contact:
+    token1: [A, 63]
+    token2: [A, 66]
+    max_distance: 5.700000
+    force: false
+- contact:
+    token1: [A, 63]
+    token2: [A, 67]
+    max_distance: 7.200000
+    force: false
+- contact:
+    token1: [A, 63]
+    token2: [B, 11]
+    max_distance: 6.160000
+    force: false
+- contact:
+    token1: [A, 63]
+    token2: [B, 12]
+    max_distance: 6.160000
+    force: false
+- contact:
+    token1: [A, 64]
+    token2: [A, 65]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 64]
+    token2: [A, 66]
+    max_distance: 7.160000
+    force: false
+- contact:
+    token1: [A, 64]
+    token2: [A, 67]
+    max_distance: 5.700000
+    force: false
+- contact:
+    token1: [A, 65]
+    token2: [A, 66]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 65]
+    token2: [A, 67]
+    max_distance: 7.160000
+    force: false
+- contact:
+    token1: [A, 65]
+    token2: [A, 68]
+    max_distance: 5.700000
+    force: false
+- contact:
+    token1: [A, 66]
+    token2: [A, 67]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 66]
+    token2: [A, 68]
+    max_distance: 7.160000
+    force: false
+- contact:
+    token1: [A, 66]
+    token2: [A, 69]
+    max_distance: 5.700000
+    force: false
+- contact:
+    token1: [A, 66]
+    token2: [A, 70]
+    max_distance: 7.200000
+    force: false
+- contact:
+    token1: [A, 67]
+    token2: [A, 68]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 67]
+    token2: [A, 69]
+    max_distance: 7.160000
+    force: false
+- contact:
+    token1: [A, 67]
+    token2: [A, 70]
+    max_distance: 5.700000
+    force: false
+- contact:
+    token1: [A, 67]
+    token2: [A, 71]
+    max_distance: 7.200000
+    force: false
+- contact:
+    token1: [A, 68]
+    token2: [A, 69]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 68]
+    token2: [A, 70]
+    max_distance: 7.160000
+    force: false
+- contact:
+    token1: [A, 68]
+    token2: [A, 71]
+    max_distance: 5.700000
+    force: false
+- contact:
+    token1: [A, 68]
+    token2: [A, 72]
+    max_distance: 7.200000
+    force: false
+- contact:
+    token1: [A, 69]
+    token2: [A, 70]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 69]
+    token2: [A, 72]
+    max_distance: 5.700000
+    force: false
+- contact:
+    token1: [A, 69]
+    token2: [A, 73]
+    max_distance: 6.120000
+    force: false
+- contact:
+    token1: [A, 70]
+    token2: [A, 71]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 70]
+    token2: [A, 72]
+    max_distance: 7.800000
+    force: false
+- contact:
+    token1: [A, 70]
+    token2: [A, 73]
+    max_distance: 5.700000
+    force: false
+- contact:
+    token1: [A, 71]
+    token2: [A, 72]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 71]
+    token2: [A, 73]
+    max_distance: 7.160000
+    force: false
+- contact:
+    token1: [A, 71]
+    token2: [A, 74]
+    max_distance: 5.700000
+    force: false
+- contact:
+    token1: [A, 72]
+    token2: [A, 73]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [A, 72]
+    token2: [A, 74]
+    max_distance: 8.200000
+    force: false
+- contact:
+    token1: [A, 73]
+    token2: [A, 74]
+    max_distance: 5.060001
+    force: false
+- contact:
+    token1: [B, 2]
+    token2: [B, 3]
+    max_distance: 6.160000
+    force: false
+- contact:
+    token1: [B, 2]
+    token2: [C, 11]
+    max_distance: 4.000000
+    force: false
+- contact:
+    token1: [B, 3]
+    token2: [B, 4]
+    max_distance: 7.200000
+    force: false
+- contact:
+    token1: [B, 3]
+    token2: [C, 10]
+    max_distance: 4.000000
+    force: false
+- contact:
+    token1: [B, 4]
+    token2: [B, 5]
+    max_distance: 7.240000
+    force: false
+- contact:
+    token1: [B, 4]
+    token2: [C, 9]
+    max_distance: 4.000000
+    force: false
+- contact:
+    token1: [B, 5]
+    token2: [B, 6]
+    max_distance: 6.160000
+    force: false
+- contact:
+    token1: [B, 5]
+    token2: [C, 8]
+    max_distance: 4.000000
+    force: false
+- contact:
+    token1: [B, 6]
+    token2: [B, 7]
+    max_distance: 7.240000
+    force: false
+- contact:
+    token1: [B, 6]
+    token2: [C, 7]
+    max_distance: 4.000000
+    force: false
+- contact:
+    token1: [B, 7]
+    token2: [B, 8]
+    max_distance: 7.240000
+    force: false
+- contact:
+    token1: [B, 7]
+    token2: [C, 6]
+    max_distance: 4.000000
+    force: false
+- contact:
+    token1: [B, 8]
+    token2: [B, 9]
+    max_distance: 7.240000
+    force: false
+- contact:
+    token1: [B, 9]
+    token2: [B, 10]
+    max_distance: 7.240000
+    force: false
+- contact:
+    token1: [B, 10]
+    token2: [B, 11]
+    max_distance: 7.240000
+    force: false
+- contact:
+    token1: [B, 10]
+    token2: [C, 5]
+    max_distance: 4.000000
+    force: false
+- contact:
+    token1: [B, 11]
+    token2: [B, 12]
+    max_distance: 5.740000
+    force: false
+- contact:
+    token1: [B, 11]
+    token2: [C, 4]
+    max_distance: 4.000000
+    force: false
+- contact:
+    token1: [B, 12]
+    token2: [B, 13]
+    max_distance: 7.240000
+    force: false
+- contact:
+    token1: [B, 12]
+    token2: [C, 3]
+    max_distance: 4.000000
+    force: false
+- contact:
+    token1: [B, 13]
+    token2: [C, 2]
+    max_distance: 4.000000
+    force: false
+- contact:
+    token1: [C, 2]
+    token2: [C, 3]
+    max_distance: 5.740000
+    force: false
+- contact:
+    token1: [C, 3]
+    token2: [C, 4]
+    max_distance: 6.160000
+    force: false
+- contact:
+    token1: [C, 4]
+    token2: [C, 5]
+    max_distance: 6.160000
+    force: false
+- contact:
+    token1: [C, 5]
+    token2: [C, 6]
+    max_distance: 7.240000
+    force: false
+- contact:
+    token1: [C, 6]
+    token2: [C, 7]
+    max_distance: 5.740000
+    force: false
+- contact:
+    token1: [C, 7]
+    token2: [C, 8]
+    max_distance: 7.240000
+    force: false
+- contact:
+    token1: [C, 8]
+    token2: [C, 9]
+    max_distance: 6.160000
+    force: false
+- contact:
+    token1: [C, 9]
+    token2: [C, 10]
+    max_distance: 7.240000
+    force: false
+- contact:
+    token1: [C, 10]
+    token2: [C, 11]
+    max_distance: 7.200000
+    force: false

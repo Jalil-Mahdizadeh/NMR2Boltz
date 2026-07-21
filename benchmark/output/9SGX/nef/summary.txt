@@ -7,15 +7,28 @@ Source alternatives read: 4926
 Safe groups before pair deduplication: 1954
 Exact atom constraints emitted: 1578
 Atom-contact union groups emitted: 766
+Token candidates: 1862
+Unique token constraints emitted: 399
+Collapsed-union token candidates: 655
+Self-token omissions: 481
+Multi-token-union omissions: 1
+Token bounds raised to 4 A: 0
+Union alternatives raised to the Boltz minimum: 0
+Union groups quarantined above the Boltz maximum: 0
 Inter-chain-only filter enabled: no
 Intrachain restraint groups filtered: 0
 Projected alternatives removed by intrachain filtering: 0
 Mixed intrachain/inter-chain OR groups filtered in full: 0
+Intraresidue restraint groups filtered: 0
+Projected alternatives removed by intraresidue filtering: 0
+Mixed intraresidue/inter-residue OR groups filtered in full: 0
 Rejection records: 0
 
 Important:
 - atom_constraints_exact.yaml contains only non-ambiguous contacts.
 - atom_constraints_union.yaml contains only ambiguous OR groups with per-alternative bounds.
+- token_constraints.yaml is a standalone coarse-grained token-contact alternative.
+- token_constraints.tsv and conversion_report.json contain token projection audit/provenance.
 - ambiguous_groups.tsv preserves the full audit metadata for those OR alternatives.
 - conversion_report.json is the lossless audit/provenance record.
 - sequences.fasta contains polymer-only sequences extracted from the source sequence map.

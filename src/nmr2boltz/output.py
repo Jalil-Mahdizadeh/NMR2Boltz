@@ -19,15 +19,18 @@ import gemmi
 from .model import (
     AmbiguousGroup,
     BoltzAtom,
+    BoltzToken,
     ConversionReport,
     EmittedConstraint,
     ProjectedAlternative,
+    TokenConstraint,
 )
 from .project import (
     require_valid_interchain_output,
     require_valid_intraresidue_output,
 )
 from .topology import require_valid_output_atom_topology
+from .token import require_valid_token_projection
 
 
 class FlowList(list):
@@ -63,6 +66,10 @@ BoltzYamlDumper.add_representer(SixDecimalFloat, _six_decimal_float_representer)
 
 def _atom_list(atom: BoltzAtom) -> FlowList:
     return FlowList([atom.chain, atom.residue_index, atom.atom_name])
+
+
+def _token_list(token: BoltzToken) -> FlowList:
+    return FlowList([token.chain, token.residue_index])
 
 
 def _outward_decimal(value: float) -> Decimal:
@@ -139,6 +146,24 @@ def _constraint_payload(constraints: Iterable[EmittedConstraint]) -> dict[str, A
     }
 
 
+def _token_constraint_payload(
+    constraints: Iterable[TokenConstraint],
+) -> dict[str, Any]:
+    return {
+        "constraints": [
+            {
+                "contact": {
+                    "token1": _token_list(item.token1),
+                    "token2": _token_list(item.token2),
+                    "max_distance": _yaml_distance(item.max_distance),
+                    "force": False,
+                }
+            }
+            for item in constraints
+        ]
+    }
+
+
 def _dump_yaml(payload: Any) -> str:
     return yaml.dump(
         payload,
@@ -163,6 +188,7 @@ def write_outputs(
     require_valid_output_atom_topology(report)
     require_valid_interchain_output(report)
     require_valid_intraresidue_output(report)
+    require_valid_token_projection(report)
     output = Path(output_dir)
     if output.is_symlink():
         raise OutputBundleError(
@@ -254,6 +280,57 @@ def _write_output_bundle(
         encoding="utf-8",
     )
     written.append(yaml_path)
+
+    token_yaml_path = output / "token_constraints.yaml"
+    token_yaml_path.write_text(
+        _dump_yaml(_token_constraint_payload(report.token_constraints)),
+        encoding="utf-8",
+    )
+    written.append(token_yaml_path)
+
+    token_tsv_path = output / "token_constraints.tsv"
+    token_rows: list[list[Any]] = []
+    for item in report.token_constraints:
+        for contribution in item.contributions:
+            token_rows.append(
+                [
+                    item.token1.chain,
+                    item.token1.residue_index,
+                    item.token2.chain,
+                    item.token2.residue_index,
+                    f"{_rounded(item.max_distance):.6f}",
+                    f"{_rounded(contribution.raw_bound):.6f}",
+                    f"{_rounded(contribution.candidate_bound):.6f}",
+                    ";".join(contribution.source_groups),
+                    contribution.source_kind,
+                    ";".join(
+                        dict.fromkeys(item.adjustments + contribution.adjustments)
+                    ),
+                    json.dumps(
+                        contribution.provenance,
+                        sort_keys=True,
+                        ensure_ascii=False,
+                    ),
+                ]
+            )
+    _write_tsv(
+        token_tsv_path,
+        [
+            "chain_1",
+            "residue_index_1",
+            "chain_2",
+            "residue_index_2",
+            "final_max_distance_A",
+            "raw_bound_A",
+            "candidate_bound_A",
+            "contributing_source_groups",
+            "source_kind",
+            "adjustments",
+            "provenance_json",
+        ],
+        token_rows,
+    )
+    written.append(token_tsv_path)
 
     text_path = output / "heavy_atom_constraints.txt"
     with text_path.open("w", encoding="utf-8") as handle:
@@ -665,6 +742,30 @@ def _summary_text(report: ConversionReport) -> str:
         f"Exact atom constraints emitted: {stats.get('emitted_unique_heavy_atom_constraints', 0)}",
         f"Atom-contact union groups emitted: {stats.get('ambiguous_or_groups_not_emitted', 0)}",
         (
+            "Token candidates: "
+            f"{report.token_projection_statistics.get('token_candidates', 0)}"
+        ),
+        (
+            "Unique token constraints emitted: "
+            f"{report.token_projection_statistics.get('unique_token_constraints_emitted', 0)}"
+        ),
+        (
+            "Collapsed-union token candidates: "
+            f"{report.token_projection_statistics.get('collapsed_union_candidates', 0)}"
+        ),
+        (
+            "Self-token omissions: "
+            f"{report.token_projection_statistics.get('same_token_omissions', 0)}"
+        ),
+        (
+            "Multi-token-union omissions: "
+            f"{report.token_projection_statistics.get('multi_token_union_omissions', 0)}"
+        ),
+        (
+            "Token bounds raised to 4 A: "
+            f"{report.token_projection_statistics.get('subminimum_adjustments', 0)}"
+        ),
+        (
             "Union alternatives raised to the Boltz minimum: "
             f"{stats.get('union_alternatives_raised_to_boltz_minimum', 0)}"
         ),
@@ -702,6 +803,8 @@ def _summary_text(report: ConversionReport) -> str:
         "Important:",
         "- atom_constraints_exact.yaml contains only non-ambiguous contacts.",
         "- atom_constraints_union.yaml contains only ambiguous OR groups with per-alternative bounds.",
+        "- token_constraints.yaml is a standalone coarse-grained token-contact alternative.",
+        "- token_constraints.tsv and conversion_report.json contain token projection audit/provenance.",
         "- ambiguous_groups.tsv preserves the full audit metadata for those OR alternatives.",
         "- conversion_report.json is the lossless audit/provenance record.",
         "- sequences.fasta contains polymer-only sequences extracted from the source sequence map.",

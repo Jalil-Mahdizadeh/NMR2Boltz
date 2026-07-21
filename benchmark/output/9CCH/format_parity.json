@@ -6,5 +6,13 @@
   "star_only_atom_pairs": 166,
   "common_pairs_with_different_bounds": 1754,
   "maximum_common_bound_delta_angstrom": 2.786172292936673,
-  "exact_pair_and_bound_parity": false
+  "exact_pair_and_bound_parity": false,
+  "nef_token_constraints": 678,
+  "star_token_constraints": 678,
+  "common_token_pairs": 678,
+  "nef_only_token_pairs": 0,
+  "star_only_token_pairs": 0,
+  "common_token_pairs_with_different_bounds": 271,
+  "maximum_common_token_bound_delta_angstrom": 2.1924387739628504,
+  "token_pair_and_bound_parity": false
 }

@@ -33,6 +33,48 @@ sub-minimum union alternative is raised to the minimum, which weakens it. If
 any alternative exceeds the maximum, NMR2Boltz quarantines the complete union
 group rather than dropping one branch and strengthening the source OR.
 
+## Standalone token-contact schema
+
+Every successful conversion also writes `token_constraints.yaml` as a
+coarse-grained, standalone alternative:
+
+```yaml
+constraints:
+- contact:
+    token1: [A, 12]
+    token2: [B, 44]
+    max_distance: 6.720000
+    force: false
+```
+
+The projector operates on the same resolved exact constraints and OR groups as
+the atom outputs; it does not parse the source again or read either generated
+YAML file. An exact heavy-atom pair becomes its unordered residue-token pair.
+A union is collapsed only when every alternative maps to the same non-self
+token pair, using the maximum alternative bound. A union spanning several
+token pairs, or containing any self-token alternative, is omitted in full so
+OR is never converted into AND. Independent exact and collapsed-union
+candidates for one token pair are then merged with the minimum bound.
+
+Native token contacts require finite bounds in 4-20 Å. Sub-4 Å values are
+raised to 4 Å and audited; over-20 Å semantic units are omitted rather than
+clipped. This means native token contacts cannot exactly reproduce sub-4 Å
+token thresholds that exact atom constraints can induce internally in the
+patched BoltzUI. `force: false` deliberately avoids an additional forced
+token-contact potential.
+
+Exact atom constraints already activate token conditioning in the patched
+BoltzUI, so loading `atom_constraints_exact.yaml` and `token_constraints.yaml`
+together is partly redundant. Collapsed union contacts are the important
+difference: they add token conditioning that `atom_constraints_union.yaml`
+intentionally does not add. Treat token-only, atom-only, and hybrid runs as
+distinct experimental arms and report which files were loaded.
+
+`token_constraints.tsv` and the `token_constraints`,
+`token_projection_omissions`, and `token_projection_statistics` sections of
+`conversion_report.json` contain review provenance. Executable token YAML stays
+minimal and metadata-free.
+
 `hypotheses/`, when requested, provides one or more ordinary current-schema YAML files. Each file chooses one branch per ambiguous group. These are alternative calculations, not restraints to combine in one run. Rank or filter the resulting structures against the original proton-level restraints after adding hydrogens.
 
 ## Residue numbering
@@ -64,7 +106,8 @@ constraints.
 
 ## Recommended run protocol
 
-1. Convert with strict defaults and inspect all rejected and ambiguous groups.
+1. Convert with strict defaults and inspect all rejected, ambiguous, and
+   token-projection-omission records.
 2. Confirm sequence mapping and non-standard component topology. Every emitted
    atom is checked against the mapped component dictionary; do not substitute a
    coordinate-presence check for this topology invariant.
@@ -73,7 +116,8 @@ constraints.
    For an intraresidue-excluded run, confirm that no exact pair or union
    alternative has identical mapped chain and residue-index endpoints.
 3. Ask an NMR expert to confirm the atom-set averaging convention used to calibrate each restraint list.
-4. Run multiple Boltz diffusion samples per safe or hypothesis input.
+4. Select a documented token-only, atom-only, or hybrid experimental arm, then
+   run multiple Boltz diffusion samples per safe or hypothesis input.
 5. Add hydrogens to generated structures using an appropriate protonation model.
 6. Re-evaluate the original NMR restraint logic at the proton or atom-set level; do not validate only the projected heavy-atom inequalities.
 7. Compare unconstrained and guided ensembles to detect over-steering.

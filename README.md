@@ -1,6 +1,6 @@
 # nmr2boltz
 
-`nmr2boltz` converts proton-containing distance restraints in **NEF** and **NMR-STAR** into conservative heavy-atom upper-bound contacts suitable for the `atom_contact` extension in BoltzUI/Boltz-2.
+`nmr2boltz` converts proton-containing distance restraints in **NEF** and **NMR-STAR** into conservative heavy-atom upper-bound contacts suitable for the `atom_contact` extension in BoltzUI/Boltz-2. Every successful conversion also projects the same resolved in-memory restraints into an audited, standalone native token-contact alternative.
 
 It is deliberately not a blind text converter. The program separates four different operations that are often conflated:
 
@@ -8,7 +8,8 @@ It is deliberately not a blind text converter. The program separates four differ
 2. mapping source chain/sequence identifiers onto the exact Boltz input sequence;
 3. resolving each proton to its directly bonded heavy atom from chemical topology;
 4. projecting an upper bound with an explicit mathematical policy and quarantining unresolved OR ambiguity;
-5. proving both projected atoms belong to their mapped component before executable YAML is written.
+5. proving both projected atoms belong to their mapped component before executable YAML is written;
+6. projecting safe exact contacts and collapsible OR groups onto unordered polymer-token pairs without turning OR into AND.
 
 The default output contains only contacts that can be imposed **simultaneously** without changing the logical meaning of the source restraints.
 
@@ -167,7 +168,8 @@ python validation/benchmark_corpus.py benchmark/input \
 
 Each PDB ID is written under `benchmark/output/<PDB-ID>/{nef,star}`. The root
 `BENCHMARK_REPORT.md` and `benchmark_summary.json` record coordinate
-satisfaction, conservative implication checks, and exact atom-pair/bound parity.
+satisfaction, conservative implication checks, exact atom-pair/bound parity,
+and token-pair/bound parity with token projection and omission totals.
 `FORMAT_DISCREPANCY_AUDIT.tsv` contains one traceable row for every NEF-only,
 STAR-only, or different-bound contact, including source rows, expressions,
 canonical expansions, resolved proton sets, pseudoatom handling, pair count,
@@ -196,7 +198,7 @@ The reviewed scientific interpretation of the current corpus is documented in
 
 The corpus command is also a fail-closed CI gate. It exits nonzero for any
 emitted atom-topology violation, projection implication failure, unresolved format discrepancy,
-parser/projection bug, changed discrepancy digest, changed scientific metric,
+parser/projection bug, changed discrepancy digest, changed atom or token metric,
 or changed reviewed missing-coordinate set. Known coordinate limitations are
 pinned by every contact identity, bound, source provenance, and a digest; they
 are not count-only waivers.
@@ -226,15 +228,35 @@ alternatives are not flattened into independent rows. Current results and
 artifact digests are in
 [`benchmark/distance_check/README.md`](benchmark/distance_check/README.md).
 
+For the analogous residue-level analysis of ordinary token contacts, run the
+generator through the production image:
+
+```bash
+mkdir -p benchmark/distance_check_token
+docker run --rm --network none --read-only \
+  -v "$PWD:/work:ro" \
+  -v "$PWD/benchmark/distance_check_token:/output" \
+  --entrypoint python -w /work nmr2boltz:latest \
+  validation/distance_check_token.py benchmark/input \
+  --conversion-output benchmark/output --output-directory /output
+```
+
+The 12 CSV files retain separate NEF and NMR-STAR bounds and report, for every
+PDB model, the minimum distance between any heavy atoms of the two residues.
+Current counts and digests are in
+[`benchmark/distance_check_token/README.md`](benchmark/distance_check_token/README.md).
+
 ## Output files
 
 | File | Purpose |
 |---|---|
 | `atom_constraints_exact.yaml` | Non-ambiguous `atom_contact` constraints only. |
 | `atom_constraints_union.yaml` | Ambiguous OR groups only, as metadata-free `atom_contact_union` constraints with one bound per alternative. |
+| `token_constraints.yaml` | Standalone coarse-grained native `contact` constraints, with `force: false`; provenance is intentionally excluded. |
+| `token_constraints.tsv` | One review row per contribution to an emitted token pair, including final/raw bounds, source groups/kind, adjustments, and JSON provenance. |
 | `heavy_atom_constraints.tsv` | Tabular `[X-Y: d]` result with Boltz chain, residue index, atom name, and bound. |
 | `heavy_atom_constraints.txt` | Compact human-readable `[A:17:N -- A:42:CB : 6.20]` form. |
-| `conversion_report.json` | Full machine-readable provenance, component-topology snapshot, formula terms, settings, warnings, ambiguity, and rejections. |
+| `conversion_report.json` | Full machine-readable provenance, component-topology snapshot, formula terms, settings, warnings, ambiguity, general rejections, and separate token results/omissions/statistics. |
 | `sequence_map.tsv` | Source identifier to Boltz residue-index mapping. This should be manually checked. |
 | `sequences.fasta` | Clean polymer-only sequences extracted from the source mapping; caps, ions, and other non-polymers are omitted. |
 | `ambiguous_groups.tsv` | Full audit metadata for the OR alternatives emitted in the union file, including any raw-to-Boltz minimum-bound adjustment. |
@@ -271,6 +293,34 @@ distances only in the interval 2–20 Å. The converter therefore:
 - rejects an over-20 Å exact contact and quarantines a complete union group if
   any alternative exceeds 20 Å; it never strengthens an OR by dropping only
   the incompatible alternative.
+
+`token_constraints.yaml` instead uses Boltz's ordinary token-contact schema:
+
+```yaml
+constraints:
+- contact:
+    token1: [A, 12]
+    token2: [B, 44]
+    max_distance: 6.720000
+    force: false
+```
+
+This file is a coarse-grained, standalone alternative, not an atom-constraint
+replacement with identical information. Exact atom constraints in the patched
+BoltzUI already activate token conditioning as well as their atom-level
+potential, so loading exact and token constraints together is partly redundant.
+Conversely, a union whose alternatives all project to one token pair can add
+token conditioning: `atom_constraints_union.yaml` intentionally does not add
+that token contact, while the collapsed candidate appears in
+`token_constraints.yaml` with the maximum alternative bound.
+
+Native token contacts accept only finite bounds in 4-20 Å. The converter raises
+smaller values to 4 Å and audits `raised_to_token_minimum`; it never lowers a
+value above 20 Å. Therefore a native token contact cannot exactly reproduce a
+sub-4 Å token threshold induced internally by an exact atom constraint in the
+patched BoltzUI. `force: false` avoids adding the separate forced token-contact
+potential. Treat token-only, atom-only, and hybrid runs as distinct experimental
+arms rather than interchangeable input encodings.
 
 ## Projection policies
 
@@ -337,12 +387,15 @@ filtered output bundle.
 ## Safe workflow for structure generation
 
 1. Run the converter with default policies and inspect `sequence_map.tsv` first.
-2. Use `atom_constraints_exact.yaml` as the high-confidence guidance set.
-3. Run multiple Boltz diffusion samples rather than relying on one structure.
-4. For ambiguous data, use `atom_constraints_union.yaml` only with a union-aware parser/potential, or generate several assignment hypotheses with `--hypotheses`.
-5. Reconstruct hydrogens on candidate structures using an NMR-aware protonation/geometry tool.
-6. Re-evaluate the original NEF/NMR-STAR restraints, including atom-set averaging and ensemble behavior, and rank/filter structures by violations.
-7. Compare restrained and unrestrained predictions to detect over-guidance or numbering mistakes.
+2. Choose and record an experimental arm: atom-only, token-only, or hybrid.
+   `token_constraints.yaml` is standalone; combining it with exact atom
+   constraints is partly redundant.
+3. Use `atom_constraints_exact.yaml` as the high-confidence atom-guidance set.
+4. Run multiple Boltz diffusion samples rather than relying on one structure.
+5. For ambiguous data, use `atom_constraints_union.yaml` only with a union-aware parser/potential, or generate several assignment hypotheses with `--hypotheses`.
+6. Reconstruct hydrogens on candidate structures using an NMR-aware protonation/geometry tool.
+7. Re-evaluate the original NEF/NMR-STAR restraints, including atom-set averaging and ensemble behavior, and rank/filter structures by violations.
+8. Compare restrained and unrestrained predictions to detect over-guidance or numbering mistakes.
 
 ## Important limitations
 
@@ -351,6 +404,13 @@ filtered output bundle.
 - Exchangeable protons depend on protonation, tautomer, solvent, pH, and temperature.
 - The built-in topology covers standard protein and common RNA/DNA atom inventories. Modified components, ligands, and ions require embedded NMR-STAR chemistry or a local CCD file; unknown topology fails closed.
 - A consumer must implement `atom_contact_union` as one disjunction. Marking every OR alternative as an independent contact would overconstrain the model.
+- Native token contacts discard atom identity and omit multi-token OR groups;
+  they are a coarse-grained experimental arm, not an information-equivalent
+  rendering of the exact and union atom files.
+- A native token contact cannot encode a threshold below 4 Å. Exact atom
+  constraints in the patched BoltzUI can induce such token conditioning
+  internally, so token-only and atom-only runs may differ even before atom-level
+  potentials are considered.
 - A soft Boltz potential encourages a contact but does not guarantee restraint satisfaction. Post-prediction validation remains mandatory.
 - Paired NEF and NMR-STAR exports can still encode genuinely different wildcard,
   stereospecific-assignment, or geometric-pseudoatom semantics; inspect
@@ -363,8 +423,10 @@ filtered output bundle.
 - `docs/SCIENTIFIC_METHOD.md`: derivation, format interpretation, assumptions, and validation plan for NMR experts.
 - `benchmark/output/BENCHMARK_REPORT.md`: current 12-structure paired-format benchmark and coordinate audit.
 - `benchmark/distance_check/README.md`: exact-contact NEF/STAR bounds beside every deposited PDB-model distance.
+- `benchmark/distance_check_token/README.md`: token-contact NEF/STAR bounds beside minimum inter-residue heavy-atom distances for every PDB model.
 - `docs/BOLTZUI_UNION_EXTENSION.md`: proposed representation and implementation path for ambiguity-aware atom contacts.
 - `docs/EXPERT_REVIEW_CHECKLIST.md`: decisions that should be reviewed before production use.
+- `examples/token_constraints.yaml`: minimal standalone native token-contact example.
 
 ## Primary references and specifications
 
