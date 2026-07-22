@@ -166,8 +166,8 @@ def _yaml_bounds(path: Path) -> dict[TokenPair, float]:
             "force",
         }:
             raise ValueError(f"Unexpected token-contact schema in {path}.")
-        if contact["force"] is not False:
-            raise ValueError(f"Token contact is forced in {path}.")
+        if contact["force"] is not True:
+            raise ValueError(f"Token contact is not forced in {path}.")
         token1 = _yaml_token(contact["token1"], path)
         token2 = _yaml_token(contact["token2"], path)
         pair = tuple(sorted((token1, token2)))
@@ -453,7 +453,7 @@ def _write_readme(
         f"{mapping_tolerance:g} A",
         "or if only one format resolves the coordinate. Token YAML is cross-checked",
         "against conversion-report provenance, including canonical unique pairs,",
-        "4-20 A bounds, conservative six-decimal outward rounding, and `force: false`.",
+        "4-20 A bounds, conservative six-decimal outward rounding, and `force: true`.",
         "Geometric PDB distances are reported to six decimals.",
         "",
         "The satisfaction columns below are descriptive comparisons using",
@@ -537,6 +537,7 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
         "method": {
             "scope": "all emitted ordinary token contacts",
             "source_kinds": ["exact", "collapsed_union"],
+            "force": True,
             "bound_serialization": "conservative outward rounding to six decimals",
             "distance_definition": (
                 "minimum Euclidean distance between non-hydrogen atoms in each "

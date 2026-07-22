@@ -513,16 +513,17 @@ constraints:
     token1: [A, 12]
     token2: [B, 44]
     max_distance: 6.720000
-    force: false
+    force: true
 ```
 
-`force: false` avoids introducing an additional forced token-contact potential.
+`force: true` activates the forced token-contact potential.
 Exact atom constraints already activate token conditioning in the patched
 BoltzUI, so loading the exact and token files together is partly redundant.
 Collapsed unions are the exception of interest: they add token conditioning
-that union atom constraints intentionally do not add. Token-only, atom-only,
-and hybrid calculations must therefore be treated as distinct experimental
-arms.
+that union atom constraints intentionally do not add. In hybrid calculations,
+the forced token-contact potential is additional to the token conditioning
+induced by exact atom constraints. Token-only, atom-only, and hybrid
+calculations must therefore be treated as distinct experimental arms.
 
 ---
 

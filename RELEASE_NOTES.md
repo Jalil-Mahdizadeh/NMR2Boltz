@@ -5,12 +5,14 @@
 - Added token-level contact projection from the canonical topology-validated
   exact/union representation. Every conversion now atomically writes minimal
   `token_constraints.yaml` (`contact`, fixed 4-20 Å range, outward six-decimal
-  bounds, `force: false`) and provenance-rich `token_constraints.tsv` alongside
+  bounds, `force: true`) and provenance-rich `token_constraints.tsv` alongside
   unchanged exact and union atom YAML. Same-token candidates and unsafe OR
   groups are omitted only from the token projection; same-pair OR alternatives
   collapse with their maximum bound, while independent exact/collapsed-union
   candidates merge with their minimum. JSON and summary audits report token
   results, omissions, range adjustments, and duplicate merges separately.
+- Token contacts now default to `force: true`, activating the forced
+  token-contact potential in token-only and hybrid runs.
 - Extended the 12-entry paired-format benchmark to report and fail-closed pin
   token contacts, candidates, collapsible unions, projection omissions, range
   adjustments, duplicate-pair merges, and NEF/NMR-STAR token parity. The

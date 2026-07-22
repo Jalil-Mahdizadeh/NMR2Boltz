@@ -3,269 +3,269 @@ constraints:
     token1: [A, 2]
     token2: [A, 6]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 3]
     token2: [A, 7]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 9]
     token2: [A, 65]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 11]
     token2: [A, 15]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 12]
     token2: [A, 16]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 13]
     token2: [A, 17]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 14]
     token2: [A, 18]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 14]
     token2: [A, 65]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 15]
     token2: [A, 19]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 15]
     token2: [A, 56]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 15]
     token2: [A, 57]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 16]
     token2: [A, 20]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 17]
     token2: [A, 21]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 18]
     token2: [A, 22]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 19]
     token2: [A, 23]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 20]
     token2: [A, 24]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 21]
     token2: [A, 25]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 23]
     token2: [B, 7]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 26]
     token2: [A, 30]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 27]
     token2: [A, 31]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 28]
     token2: [A, 32]
     max_distance: 4.100000
-    force: false
+    force: true
 - contact:
     token1: [A, 29]
     token2: [A, 33]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 29]
     token2: [A, 70]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 30]
     token2: [A, 34]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 31]
     token2: [A, 35]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 32]
     token2: [A, 36]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 33]
     token2: [A, 37]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 34]
     token2: [A, 38]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 35]
     token2: [A, 39]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 36]
     token2: [A, 40]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 37]
     token2: [A, 41]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 40]
     token2: [A, 60]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 40]
     token2: [A, 66]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 41]
     token2: [A, 60]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 41]
     token2: [A, 63]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 50]
     token2: [B, 10]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 51]
     token2: [B, 9]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 52]
     token2: [B, 8]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 53]
     token2: [B, 7]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 54]
     token2: [B, 6]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 55]
     token2: [A, 59]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 60]
     token2: [A, 64]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 61]
     token2: [A, 65]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 62]
     token2: [A, 66]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 63]
     token2: [A, 67]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 64]
     token2: [A, 68]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 65]
     token2: [A, 69]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 66]
     token2: [A, 70]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 67]
     token2: [A, 71]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 68]
     token2: [A, 72]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 69]
     token2: [A, 73]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 70]
     token2: [A, 74]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 71]
     token2: [A, 75]
     max_distance: 4.000000
-    force: false
+    force: true
 - contact:
     token1: [A, 72]
     token2: [A, 76]
     max_distance: 4.000000
-    force: false
+    force: true

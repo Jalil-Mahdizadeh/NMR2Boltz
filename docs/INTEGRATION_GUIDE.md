@@ -44,7 +44,7 @@ constraints:
     token1: [A, 12]
     token2: [B, 44]
     max_distance: 6.720000
-    force: false
+    force: true
 ```
 
 The projector operates on the same resolved exact constraints and OR groups as
@@ -60,15 +60,16 @@ Native token contacts require finite bounds in 4-20 Å. Sub-4 Å values are
 raised to 4 Å and audited; over-20 Å semantic units are omitted rather than
 clipped. This means native token contacts cannot exactly reproduce sub-4 Å
 token thresholds that exact atom constraints can induce internally in the
-patched BoltzUI. `force: false` deliberately avoids an additional forced
-token-contact potential.
+patched BoltzUI. `force: true` activates the forced token-contact potential.
 
 Exact atom constraints already activate token conditioning in the patched
 BoltzUI, so loading `atom_constraints_exact.yaml` and `token_constraints.yaml`
 together is partly redundant. Collapsed union contacts are the important
 difference: they add token conditioning that `atom_constraints_union.yaml`
-intentionally does not add. Treat token-only, atom-only, and hybrid runs as
-distinct experimental arms and report which files were loaded.
+intentionally does not add. In hybrid runs the forced token-contact potential
+is additional to the token conditioning induced by exact atom constraints.
+Treat token-only, atom-only, and hybrid runs as distinct experimental arms and
+report which files were loaded.
 
 `token_constraints.tsv` and the `token_constraints`,
 `token_projection_omissions`, and `token_projection_statistics` sections of

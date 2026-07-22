@@ -3,14 +3,14 @@ constraints:
     token1: [A, 85]
     token2: [B, 12]
     max_distance: 5.640001
-    force: false
+    force: true
 - contact:
     token1: [A, 144]
     token2: [B, 8]
     max_distance: 7.540000
-    force: false
+    force: true
 - contact:
     token1: [A, 144]
     token2: [B, 12]
     max_distance: 8.240000
-    force: false
+    force: true

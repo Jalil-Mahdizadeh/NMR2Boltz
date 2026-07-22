@@ -6,6 +6,7 @@
       "exact",
       "collapsed_union"
     ],
+    "force": true,
     "bound_serialization": "conservative outward rounding to six decimals",
     "distance_definition": "minimum Euclidean distance between non-hydrogen atoms in each residue, per PDB model",
     "distance_serialization": "PDB-model distance to six decimals",

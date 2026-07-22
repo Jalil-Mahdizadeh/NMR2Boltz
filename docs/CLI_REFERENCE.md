@@ -82,7 +82,7 @@ files:
 |---|---|
 | `atom_constraints_exact.yaml` | Non-ambiguous heavy-atom `atom_contact` constraints. |
 | `atom_constraints_union.yaml` | Complete heavy-atom `atom_contact_union` disjunctions. |
-| `token_constraints.yaml` | Standalone coarse-grained ordinary `contact` constraints with `force: false`. |
+| `token_constraints.yaml` | Standalone coarse-grained ordinary `contact` constraints with `force: true`. |
 
 `token_constraints.tsv` records final and raw token bounds, contributing source
 groups, source kind (`exact` or `collapsed_union`), adjustments, and provenance.

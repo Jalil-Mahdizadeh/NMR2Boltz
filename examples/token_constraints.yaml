@@ -3,4 +3,4 @@ constraints:
     token1: [A, 12]
     token2: [B, 44]
     max_distance: 6.720000
-    force: false
+    force: true

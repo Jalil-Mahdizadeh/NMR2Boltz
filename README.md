@@ -252,7 +252,7 @@ Current counts and digests are in
 |---|---|
 | `atom_constraints_exact.yaml` | Non-ambiguous `atom_contact` constraints only. |
 | `atom_constraints_union.yaml` | Ambiguous OR groups only, as metadata-free `atom_contact_union` constraints with one bound per alternative. |
-| `token_constraints.yaml` | Standalone coarse-grained native `contact` constraints, with `force: false`; provenance is intentionally excluded. |
+| `token_constraints.yaml` | Standalone coarse-grained native `contact` constraints, with `force: true`; provenance is intentionally excluded. |
 | `token_constraints.tsv` | One review row per contribution to an emitted token pair, including final/raw bounds, source groups/kind, adjustments, and JSON provenance. |
 | `heavy_atom_constraints.tsv` | Tabular `[X-Y: d]` result with Boltz chain, residue index, atom name, and bound. |
 | `heavy_atom_constraints.txt` | Compact human-readable `[A:17:N -- A:42:CB : 6.20]` form. |
@@ -302,7 +302,7 @@ constraints:
     token1: [A, 12]
     token2: [B, 44]
     max_distance: 6.720000
-    force: false
+    force: true
 ```
 
 This file is a coarse-grained, standalone alternative, not an atom-constraint
@@ -318,9 +318,10 @@ Native token contacts accept only finite bounds in 4-20 Å. The converter raises
 smaller values to 4 Å and audits `raised_to_token_minimum`; it never lowers a
 value above 20 Å. Therefore a native token contact cannot exactly reproduce a
 sub-4 Å token threshold induced internally by an exact atom constraint in the
-patched BoltzUI. `force: false` avoids adding the separate forced token-contact
-potential. Treat token-only, atom-only, and hybrid runs as distinct experimental
-arms rather than interchangeable input encodings.
+patched BoltzUI. `force: true` activates the forced token-contact potential.
+In hybrid runs this is additional to the token conditioning already induced by
+exact atom constraints. Treat token-only, atom-only, and hybrid runs as distinct
+experimental arms rather than interchangeable input encodings.
 
 ## Projection policies
 

@@ -49,7 +49,7 @@ def _write_format(root: Path, format_name: str, contacts: list[Contact]) -> None
                 "token1": list(token1),
                 "token2": list(token2),
                 "max_distance": float(_outward_decimal(bound)),
-                "force": False,
+                "force": True,
             }
         }
         for token1, token2, bound in contacts
@@ -179,20 +179,20 @@ def test_token_yaml_and_report_must_match(tmp_path: Path) -> None:
         raise AssertionError("stale or tightened executable token YAML was accepted")
 
 
-def test_token_yaml_must_use_force_false(tmp_path: Path) -> None:
+def test_token_yaml_must_use_force_true(tmp_path: Path) -> None:
     contact = (("A", 1), ("A", 2), 5.0)
     _write_format(tmp_path, "nef", [contact])
     yaml_path = tmp_path / "nef" / "token_constraints.yaml"
     payload = yaml.safe_load(yaml_path.read_text(encoding="utf-8"))
-    payload["constraints"][0]["contact"]["force"] = True
+    payload["constraints"][0]["contact"]["force"] = False
     yaml_path.write_text(yaml.safe_dump(payload), encoding="utf-8")
 
     try:
         load_token_bounds(tmp_path / "nef")
     except ValueError as exc:
-        assert "Token contact is forced" in str(exc)
+        assert "Token contact is not forced" in str(exc)
     else:
-        raise AssertionError("forced token contact was accepted")
+        raise AssertionError("unforced token contact was accepted")
 
 
 def test_run_requires_exact_expected_corpus_size(tmp_path: Path) -> None:

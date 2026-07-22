@@ -410,7 +410,7 @@ def test_projection_is_side_effect_free_for_exact_and_union_atom_outputs():
     assert _union_payload(report.ambiguous_groups[0]) == union_before
 
 
-def test_token_yaml_is_deterministic_outward_rounded_and_force_false():
+def test_token_yaml_is_deterministic_outward_rounded_and_force_true():
     first_report = _report(
         exact=[
             _exact(
@@ -434,7 +434,7 @@ def test_token_yaml_is_deterministic_outward_rounded_and_force_false():
     assert first_text == second_text
     assert "max_distance: 6.720001" in first_text
     assert re.findall(r"max_distance: (\d+\.\d{6})", first_text)
-    assert all(item["contact"]["force"] is False for item in payload["constraints"])
+    assert all(item["contact"]["force"] is True for item in payload["constraints"])
     assert payload["constraints"][0]["contact"]["token1"] == ["A", 1]
 
 

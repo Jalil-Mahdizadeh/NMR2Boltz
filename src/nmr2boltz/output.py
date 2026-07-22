@@ -156,7 +156,7 @@ def _token_constraint_payload(
                     "token1": _token_list(item.token1),
                     "token2": _token_list(item.token2),
                     "max_distance": _yaml_distance(item.max_distance),
-                    "force": False,
+                    "force": True,
                 }
             }
             for item in constraints

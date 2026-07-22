@@ -16,7 +16,7 @@ sequence map to Boltz one-based residue indices. For common pairs, generation
 fails if NEF- and STAR-driven distances differ by more than 1e-06 A
 or if only one format resolves the coordinate. Token YAML is cross-checked
 against conversion-report provenance, including canonical unique pairs,
-4-20 A bounds, conservative six-decimal outward rounding, and `force: false`.
+4-20 A bounds, conservative six-decimal outward rounding, and `force: true`.
 Geometric PDB distances are reported to six decimals.
 
 The satisfaction columns below are descriptive comparisons using
